@@ -8,4 +8,9 @@ project is to use Hopper (https://www.hopperapp.com/) and various
 features of clang to expose some of the underlying functionality that
 facilitates the object model in C++.
 
+The profiling sub-project is dependent on Google benchmark (https://github.com/google/benchmark).
+
+Run `git clone https://github.com/google/benchmark.git` in the root
+directory of the project to add this dependency.
+
 This project is currently under construction.
