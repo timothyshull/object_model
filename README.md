@@ -1,4 +1,4 @@
-# Understanding C++ using the AST and the Object Model
+# Understanding C++ Using the AST and the Object Model
 This repo contains the example code for the corresponding Bay Area ACCU
 talk. The majority of the examples and the general outline for the
 project is based on Stanley Lippman's "Inside the C++ Object Model",
