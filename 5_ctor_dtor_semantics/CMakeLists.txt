@@ -1,0 +1,1 @@
+project(ctor_dtor_semantics)
