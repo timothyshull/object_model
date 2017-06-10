@@ -1,1 +1,29 @@
 project(runtime_semantics)
+
+add_executable(1_object_construction_and_destruction 01_object_construction_and_destruction.cpp)
+target_compile_options(1_object_construction_and_destruction PUBLIC ${NO_OPT})
+
+add_executable(2_global_objects 02_global_objects.cpp)
+target_compile_options(2_global_objects PUBLIC ${NO_OPT})
+
+add_executable(3_local_static_objects 03_local_static_objects.cpp)
+target_compile_options(3_local_static_objects PUBLIC ${NO_OPT})
+
+add_executable(4_arrays_of_objects 04_arrays_of_objects.cpp)
+target_compile_options(4_arrays_of_objects PUBLIC ${NO_OPT})
+
+add_executable(5_default_constructors_and_arrays 05_default_constructors_and_arrays.cpp)
+target_compile_options(5_default_constructors_and_arrays PUBLIC ${NO_OPT})
+
+add_executable(6_operators_new_and_delete 06_operators_new_and_delete.cpp)
+target_compile_options(6_operators_new_and_delete PUBLIC ${NO_OPT})
+
+add_executable(7_the_semantics_of_new_arrays 07_the_semantics_of_new_arrays.cpp)
+target_compile_options(7_the_semantics_of_new_arrays PUBLIC ${NO_OPT})
+
+add_executable(8_the_semantics_of_placement_operator_new 08_the_semantics_of_placement_operator_new.cpp)
+target_compile_options(8_the_semantics_of_placement_operator_new PUBLIC ${NO_OPT})
+
+add_executable(9_temporary_objects 09_temporary_objects.cpp)
+target_compile_options(9_temporary_objects PUBLIC ${NO_OPT})
+

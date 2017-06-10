@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.8)
 project(object_model_refined)
 
 set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_VERBOSE_MAKEFILE ON)
 
 if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang" OR "${CMAKE_CXX_COMPILER_ID}" STREQUAL "AppleClang")
     set(USING_CLANG true)
@@ -24,7 +25,7 @@ include_directories(benchmark/include)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-set(NO_OPT -O0 -cl-opt-disable -disable-llvm-optzns -fstrict-vtable-pointers)
+set(NO_OPT -O0 -fstrict-vtable-pointers)
 set(MAX_OPT -O3)
 set(FAST_OPT -Ofast)
 
