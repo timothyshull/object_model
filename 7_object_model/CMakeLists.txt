@@ -4,7 +4,10 @@ add_executable(01_templates 01_templates.cpp)
 target_compile_options(01_templates PUBLIC ${NO_OPT})
 
 add_executable(02_exceptions 02_exceptions.cpp)
-target_compile_options(02_exceptions PUBLIC ${NO_OPT})
+target_compile_options(02_exceptions PUBLIC ${NO_OPT} -DUSE_EXCEPTIONS)
+
+add_executable(02_exceptions_no_except 02_exceptions.cpp)
+target_compile_options(02_exceptions_no_except PUBLIC ${NO_OPT})
 
 add_executable(03_runtime_type_identification 03_runtime_type_identification.cpp)
 target_compile_options(03_runtime_type_identification PUBLIC ${NO_OPT})

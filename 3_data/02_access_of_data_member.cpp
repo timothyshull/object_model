@@ -2,6 +2,8 @@ struct S1 {
     static int s;
 };
 
+int S1::s = 0;
+
 struct S2 {
     int m;
 

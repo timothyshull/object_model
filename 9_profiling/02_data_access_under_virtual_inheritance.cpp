@@ -255,8 +255,8 @@ static void single_inheritance_public_members(benchmark::State &state)
 
     while (state.KeepRunning()) {
         p_b.x = p_a.x - p_b.z;
-        p_b._y = p_a._y + p_b.x;
-        p_b.z = p_a.z + p_b._y;
+        p_b.y = p_a.y + p_b.x;
+        p_b.z = p_a.z + p_b.y;
     }
 }
 

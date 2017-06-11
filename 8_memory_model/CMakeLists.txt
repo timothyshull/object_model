@@ -6,12 +6,8 @@ target_compile_options(01_objects_and_memory_locations PUBLIC ${NO_OPT})
 add_executable(02_objects_memory_locations_and_concurrency 02_objects_memory_locations_and_concurrency.cpp)
 target_compile_options(02_objects_memory_locations_and_concurrency PUBLIC ${NO_OPT})
 
-add_executable(03_modification_orders 03_modification_orders.cpp)
-target_compile_options(03_modification_orders PUBLIC ${NO_OPT})
+add_executable(03_atomic_operations_and_types 03_atomic_operations_and_types.cpp)
+target_compile_options(03_atomic_operations_and_types PUBLIC ${NO_OPT})
 
-add_executable(04_atomic_operations_and_types 04_atomic_operations_and_types.cpp)
-target_compile_options(04_atomic_operations_and_types PUBLIC ${NO_OPT})
-
-add_executable(05_synchronizing_operations_and_enforcing_ordering 05_synchronizing_operations_and_enforcing_ordering.cpp)
-target_compile_options(05_synchronizing_operations_and_enforcing_ordering PUBLIC ${NO_OPT})
-
+add_executable(04_synchronizing_operations_and_enforcing_ordering 04_synchronizing_operations_and_enforcing_ordering.cpp)
+target_compile_options(04_synchronizing_operations_and_enforcing_ordering PUBLIC ${NO_OPT})

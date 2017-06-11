@@ -1,52 +1,38 @@
-
-
-#include <iostream>
-
+// cppreference.com
 struct V {
-    virtual void f() {};  // must be polymorphic to use runtime-checked dynamic_cast
+    virtual void m() {};
 };
 
 struct A : virtual V {};
 
-struct B : virtual V {
-    B(V *v, A *a)
-    {
-        // casts during construction (see the call in the constructor of D below)
-        dynamic_cast<B *>(v); // well-defined: v of type V*, V base of B, results in B*
-        dynamic_cast<B *>(a); // undefined behavior: a has type A*, A not a base of B
-    }
+struct B : virtual V {};
+
+struct D : A, B {};
+
+struct B2 {
+    virtual ~B2() {}
 };
 
-struct D : A, B {
-    D() : B((A *) this, this) {}
-};
-
-struct Base {
-    virtual ~Base() {}
-};
-
-struct Derived : Base {
-    virtual void name() {}
+struct D2 : B2 {
+    virtual void m() {}
 };
 
 int main()
 {
-    D d; // the most derived object
-    A &a = d; // upcast, dynamic_cast may be used, but unnecessary
-    D &new_d = dynamic_cast<D &>(a); // downcast
-    B &new_b = dynamic_cast<B &>(a); // sidecast
+    D d{};
+    A &a = d;
+    D &dr = dynamic_cast<D &>(a); // downcast
+    B &br = dynamic_cast<B &>(a); // sidecast
 
 
-    Base *b1 = new Base;
-    if (Derived *d = dynamic_cast<Derived *>(b1)) {
-        std::cout << "downcast from b1 to d successful\n";
-        d->name(); // safe to call
+    B2 *b1 = new B2;
+    if (auto dp = dynamic_cast<D2 *>(b1)) {
+        dp->m();
     }
 
-    Base *b2 = new Derived;
-    if (Derived *d = dynamic_cast<Derived *>(b2)) {
-        std::cout << "downcast from b2 to d successful\n";
-        d->name(); // safe to call
+    B2 *b2 = new D2;
+    if (auto dp = dynamic_cast<D2 *>(b2)) {
+        dp->m();
     }
 
     delete b1;

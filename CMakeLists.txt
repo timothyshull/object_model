@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 3.8)
 project(object_model_refined)
 
+# for benchmarking in profiling sub-project
+add_subdirectory(benchmark)
+include_directories(benchmark/include)
+
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_VERBOSE_MAKEFILE ON)
 
@@ -18,10 +22,6 @@ endif ()
 #            "any incompatible compiler arguments and this warning."
 #            )
 #endif ()
-
-# for benchmarking in profiling sub-project
-add_subdirectory(benchmark)
-include_directories(benchmark/include)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 

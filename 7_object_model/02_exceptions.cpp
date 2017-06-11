@@ -1,7 +1,7 @@
 #include <exception>
 #include <iostream>
 
-#define USE_EXCEPTIONS
+// #define USE_EXCEPTIONS
 
 int func1(bool b);
 
