@@ -56,9 +56,8 @@ function build_exes () {
 
     mkdir ${build_dir_name}
     cd ${build_dir_name}
-    echo "Calling cmake and make"
-#    cmake -DCMAKE_BUILD_TYPE=Release ..
-#    make
+    cmake -DCMAKE_BUILD_TYPE=Release ..
+    make
 }
 
 function generate_hop_file () {
@@ -66,38 +65,39 @@ function generate_hop_file () {
     local in_file=$1
     local out_dir=$(dirname ${in_file})
     local out_file=$(basename ${in_file})
-#    osascript <<EOF
-#        tell application "Hopper Disassembler v4"
-#        	open "${in_file}"
-#        end tell
-#        delay ${default_delay}
-#        tell application "System Events"
-#        	tell process "Hopper Disassembler v4"
-#        		set frontmost to true
-#        		keystroke return
-#        		delay ${default_delay}
-#        		click menu item "Save As…" of menu 1 of menu bar item "File" of menu bar 1
-#        		delay ${default_delay}
-#        		keystroke "G" using {shift down, command down}
-#        		delay ${default_delay}
-#        		keystroke "${out_dir}"
-#        		delay ${default_delay}
-#        		keystroke return
-#        		# Already has proper filename by default
-#        		# delay ${default_delay}
-#        		# keystroke "${out_file}"
-#        		delay ${default_delay}
-#        		keystroke return
-#        		delay ${default_delay}
-#        	end tell
-#        end tell
-#        tell application "Hopper Disassembler v4"
-#            quit
-#        end tell
-#EOF
+    osascript <<EOF
+        tell application "Hopper Disassembler v4"
+        	open "${in_file}"
+        end tell
+        delay ${default_delay}
+        tell application "System Events"
+        	tell process "Hopper Disassembler v4"
+        		set frontmost to true
+        		keystroke return
+        		delay ${default_delay}
+        		click menu item "Generate Pseudo Code" of menu 1 of menu bar item "Scripts" of menu bar 1
+        		delay ${default_delay}
+        		click menu item "Save As…" of menu 1 of menu bar item "File" of menu bar 1
+        		delay ${default_delay}
+        		keystroke "G" using {shift down, command down}
+        		delay ${default_delay}
+        		keystroke "${out_dir}"
+        		delay ${default_delay}
+        		keystroke return
+        		# Already has proper filename by default
+        		# delay ${default_delay}
+        		# keystroke "${out_file}"
+        		delay ${default_delay}
+        		keystroke return
+        		delay ${default_delay}
+        	end tell
+        end tell
+        tell application "Hopper Disassembler v4"
+            quit
+        end tell
+EOF
 
-    echo ${in_file}
-    echo ${out_file}
+    printf 'Saved the file %s.hop from the input executable %s\n' "${in_file}" "${out_file}"
 
     sleep 1
 }
@@ -135,11 +135,9 @@ function generate_ast_file () {
     local dir="$1"
     local in_file="$2"
     local out_file="${in_file%.*}_ast.txt"
-#    clang-check -p ${compile_commands_dir} -ast-dump ${in_file} --extra-arg -I${benchmark_include_dir} --extra-arg \
-#        --std=c++14 --extra-arg -fno-color-diagnostics -- > ${out_file}
-    echo ${dir}
-    echo ${in_file}
-    echo ${out_file}
+    clang-check -p ${compile_commands_dir} -ast-dump ${in_file} --extra-arg -I${benchmark_include_dir} --extra-arg \
+        --std=c++14 --extra-arg -fno-color-diagnostics -- > ${out_file}
+    printf 'Generated the AST file %s from the source file %s\n' "${in_file}" "${out_file}"
 }
 
 function generate_all_ast_files () {
@@ -162,6 +160,22 @@ function print_usage () {
         "    -h - generate Hopper files" \
         "    -b - clone Google benchmark" \
         "    -p - specify the path to clang-check" >&2
+}
+
+function copy_py_script () {
+    local default="n"
+    local prompt="Update the \"Generate Pseudo Code.py\" script for Hopper? (y/N): "
+    local answer
+
+    read -p "$prompt" answer
+
+    case "$answer" in
+        [yY1] ) cp "${root_dir}/Generate Pseudo Code.py" "~/Library/Application Support/Hopper/Scripts/"
+            ;;
+        [nN0] ) printf "Not updating the script."
+            ;;
+        *     ) printf "%b" "Invalid answer '$answer'." >&2 ;;
+    esac
 }
 
 function parse_args () {
@@ -229,6 +243,7 @@ function perform_actions () {
     if [ ${h_flag} ]
     then
         printf 'Option -h specified...generating Hopper files\n' ${p_val}
+        copy_py_script
         generate_all_hop_files
     fi
 
