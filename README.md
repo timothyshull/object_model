@@ -10,7 +10,9 @@ facilitates the object model in C++.
 
 The profiling sub-project is dependent on Google benchmark (https://github.com/google/benchmark).
 
-Run `git clone https://github.com/google/benchmark.git` in the root
-directory of the project to add this dependency.
+Run `./build.sh -b` in the root directory of the project to add this dependency.
+
+Run `./build.sh` in the root directory of the project for automated file generation and
+project setup options.
 
 This project is currently under construction.

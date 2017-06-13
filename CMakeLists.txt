@@ -5,8 +5,10 @@ project(object_model_refined)
 add_subdirectory(benchmark)
 include_directories(benchmark/include)
 
-set(CMAKE_CXX_STANDARD 14)
-set(CMAKE_VERBOSE_MAKEFILE ON)
+# set(CMAKE_CXX_STANDARD 14)
+# defaults to -O3 -> remove
+set(CMAKE_CXX_FLAGS "--std=c++14")
+# set(CMAKE_VERBOSE_MAKEFILE ON)
 
 if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang" OR "${CMAKE_CXX_COMPILER_ID}" STREQUAL "AppleClang")
     set(USING_CLANG true)
