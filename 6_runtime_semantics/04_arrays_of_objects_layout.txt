@@ -7,7 +7,7 @@
            |  nvsize=16, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fe162867258 </Users/tskull/Documents/Programming/Cpp/object_model_refined/6_runtime_semantics/04_arrays_of_objects.cpp:1:1, line:4:1> line:1:8 referenced struct P definition
+Record: CXXRecordDecl 0x7fe162867258 <object_model_refined/6_runtime_semantics/04_arrays_of_objects.cpp:1:1, line:4:1> line:1:8 referenced struct P definition
 |-CXXRecordDecl 0x7fe162867378 <col:1, col:8> col:8 implicit struct P
 |-FieldDecl 0x7fe162867428 <line:2:5, col:12> col:12 referenced x 'double'
 |-FieldDecl 0x7fe162867488 <line:3:5, col:12> col:12 referenced y 'double'

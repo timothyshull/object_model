@@ -1962,7 +1962,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7ff4eea15bd0 </Users/tskull/Documents/Programming/Cpp/object_model_refined/8_memory_model/01_objects_and_memory_locations.cpp:3:1, line:14:1> line:3:8 referenced struct D definition
+Record: CXXRecordDecl 0x7ff4eea15bd0 <object_model_refined/8_memory_model/01_objects_and_memory_locations.cpp:3:1, line:14:1> line:3:8 referenced struct D definition
 |-CXXRecordDecl 0x7ff4eea15cf8 <col:1, col:8> col:8 implicit struct D
 |-FieldDecl 0x7ff4eea15da8 <line:4:5, col:9> col:9 i 'int'
 |-FieldDecl 0x7ff4eea15e08 <line:5:5, col:12> col:12 d 'double'

@@ -29,7 +29,7 @@
            |  nvsize=16, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fd65a067a58 </Users/tskull/Documents/Programming/Cpp/object_model_refined/5_ctor_dtor_semantics/04_virtual_inheritance.cpp:2:1, line:6:1> line:2:8 referenced struct B1 definition
+Record: CXXRecordDecl 0x7fd65a067a58 <object_model_refined/5_ctor_dtor_semantics/04_virtual_inheritance.cpp:2:1, line:6:1> line:2:8 referenced struct B1 definition
 |-CXXRecordDecl 0x7fd65a067b78 <col:1, col:8> col:8 implicit referenced struct B1
 |-CXXConstructorDecl 0x7fd65a067cb0 <line:3:5, col:11> col:5 used B1 'void (void)'
 | `-CompoundStmt 0x7fd65a068068 <col:10, col:11>
@@ -48,7 +48,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fd65a0686a8 </Users/tskull/Documents/Programming/Cpp/object_model_refined/5_ctor_dtor_semantics/04_virtual_inheritance.cpp:8:1, line:12:1> line:8:8 referenced struct B2 definition
+Record: CXXRecordDecl 0x7fd65a0686a8 <object_model_refined/5_ctor_dtor_semantics/04_virtual_inheritance.cpp:8:1, line:12:1> line:8:8 referenced struct B2 definition
 |-virtual public 'struct B1'
 |-CXXRecordDecl 0x7fd65a068820 <col:1, col:8> col:8 implicit referenced struct B2
 |-CXXConstructorDecl 0x7fd65a068928 <line:9:5, col:11> col:5 used B2 'void (void)'
@@ -70,7 +70,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fd65a092b08 </Users/tskull/Documents/Programming/Cpp/object_model_refined/5_ctor_dtor_semantics/04_virtual_inheritance.cpp:14:1, line:18:1> line:14:8 referenced struct B3 definition
+Record: CXXRecordDecl 0x7fd65a092b08 <object_model_refined/5_ctor_dtor_semantics/04_virtual_inheritance.cpp:14:1, line:18:1> line:14:8 referenced struct B3 definition
 |-virtual public 'struct B1'
 |-CXXRecordDecl 0x7fd65a092c80 <col:1, col:8> col:8 implicit referenced struct B3
 |-CXXConstructorDecl 0x7fd65a092d88 <line:15:5, col:11> col:5 used B3 'void (void)'
@@ -92,7 +92,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fd65a0931d8 </Users/tskull/Documents/Programming/Cpp/object_model_refined/5_ctor_dtor_semantics/04_virtual_inheritance.cpp:20:1, line:24:1> line:20:8 referenced struct D2 definition
+Record: CXXRecordDecl 0x7fd65a0931d8 <object_model_refined/5_ctor_dtor_semantics/04_virtual_inheritance.cpp:20:1, line:24:1> line:20:8 referenced struct D2 definition
 |-public 'struct B2'
 |-public 'struct B3'
 |-CXXRecordDecl 0x7fd65a093390 <col:1, col:8> col:8 implicit referenced struct D2
@@ -177,7 +177,7 @@ Layout: <CGRecordLayout
            |  nvsize=24, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fd65a095168 </Users/tskull/Documents/Programming/Cpp/object_model_refined/5_ctor_dtor_semantics/04_virtual_inheritance.cpp:27:1, line:50:1> line:27:7 referenced class P definition
+Record: CXXRecordDecl 0x7fd65a095168 <object_model_refined/5_ctor_dtor_semantics/04_virtual_inheritance.cpp:27:1, line:50:1> line:27:7 referenced class P definition
 |-CXXRecordDecl 0x7fd65a095288 <col:1, col:7> col:7 implicit referenced class P
 |-AccessSpecDecl 0x7fd65a095320 <line:28:1, col:7> col:1 public
 |-CXXConstructorDecl 0x7fd65a0953b8 <line:29:5, col:10> col:5 used P 'void (void)'
@@ -258,7 +258,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fd65a096d70 </Users/tskull/Documents/Programming/Cpp/object_model_refined/5_ctor_dtor_semantics/04_virtual_inheritance.cpp:52:1, line:76:1> line:52:7 referenced class P3 definition
+Record: CXXRecordDecl 0x7fd65a096d70 <object_model_refined/5_ctor_dtor_semantics/04_virtual_inheritance.cpp:52:1, line:76:1> line:52:7 referenced class P3 definition
 |-virtual public 'class P'
 |-CXXRecordDecl 0x7fd65a096ef0 <col:1, col:7> col:7 implicit referenced class P3
 |-AccessSpecDecl 0x7fd65a096f88 <line:53:1, col:7> col:1 public
@@ -345,7 +345,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fd65b0025c8 </Users/tskull/Documents/Programming/Cpp/object_model_refined/5_ctor_dtor_semantics/04_virtual_inheritance.cpp:78:1, line:83:1> line:78:7 referenced class V definition
+Record: CXXRecordDecl 0x7fd65b0025c8 <object_model_refined/5_ctor_dtor_semantics/04_virtual_inheritance.cpp:78:1, line:83:1> line:78:7 referenced class V definition
 |-virtual public 'class P'
 |-CXXRecordDecl 0x7fd65b002740 <col:1, col:7> col:7 implicit referenced class V
 |-AccessSpecDecl 0x7fd65b0027d8 <line:79:1, col:7> col:1 public
@@ -368,7 +368,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fd65b002cb8 </Users/tskull/Documents/Programming/Cpp/object_model_refined/5_ctor_dtor_semantics/04_virtual_inheritance.cpp:85:1, line:90:1> line:85:7 referenced class V3 definition
+Record: CXXRecordDecl 0x7fd65b002cb8 <object_model_refined/5_ctor_dtor_semantics/04_virtual_inheritance.cpp:85:1, line:90:1> line:85:7 referenced class V3 definition
 |-public 'class P3'
 |-public 'class V'
 |-CXXRecordDecl 0x7fd65b002e70 <col:1, col:7> col:7 implicit referenced class V3
@@ -396,7 +396,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fd65b004a78 </Users/tskull/Documents/Programming/Cpp/object_model_refined/5_ctor_dtor_semantics/04_virtual_inheritance.cpp:92:1, line:97:1> line:92:7 referenced class PV definition
+Record: CXXRecordDecl 0x7fd65b004a78 <object_model_refined/5_ctor_dtor_semantics/04_virtual_inheritance.cpp:92:1, line:97:1> line:92:7 referenced class PV definition
 |-public 'class V3'
 |-CXXRecordDecl 0x7fd65b004bf0 <col:1, col:7> col:7 implicit referenced class PV
 |-AccessSpecDecl 0x7fd65b004c88 <line:93:1, col:7> col:1 public

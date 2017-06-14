@@ -6,7 +6,7 @@
            |  nvsize=4, nvalign=4]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fdaed84f250 </Users/tskull/Documents/Programming/Cpp/object_model_refined/3_data/08_pointer_to_data_members.cpp:12:1, line:14:1> line:12:8 referenced struct B1 definition
+Record: CXXRecordDecl 0x7fdaed84f250 <object_model_refined/3_data/08_pointer_to_data_members.cpp:12:1, line:14:1> line:12:8 referenced struct B1 definition
 |-CXXRecordDecl 0x7fdaed877800 <col:1, col:8> col:8 implicit struct B1
 `-FieldDecl 0x7fdaed8778b0 <line:13:5, col:9> col:9 v1 'int'
 
@@ -24,7 +24,7 @@ Layout: <CGRecordLayout
            |  nvsize=4, nvalign=4]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fdaed877918 </Users/tskull/Documents/Programming/Cpp/object_model_refined/3_data/08_pointer_to_data_members.cpp:16:1, line:18:1> line:16:8 referenced struct B2 definition
+Record: CXXRecordDecl 0x7fdaed877918 <object_model_refined/3_data/08_pointer_to_data_members.cpp:16:1, line:18:1> line:16:8 referenced struct B2 definition
 |-CXXRecordDecl 0x7fdaed877a38 <col:1, col:8> col:8 implicit struct B2
 `-FieldDecl 0x7fdaed877ae8 <line:17:5, col:9> col:9 v2 'int'
 
@@ -45,7 +45,7 @@ Layout: <CGRecordLayout
            |  nvsize=8, nvalign=4]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fdaed877b50 </Users/tskull/Documents/Programming/Cpp/object_model_refined/3_data/08_pointer_to_data_members.cpp:20:1, col:20> col:8 referenced struct D definition
+Record: CXXRecordDecl 0x7fdaed877b50 <object_model_refined/3_data/08_pointer_to_data_members.cpp:20:1, col:20> col:8 referenced struct D definition
 |-public 'struct B1'
 |-public 'struct B2'
 `-CXXRecordDecl 0x7fdaed877cf8 <col:1, col:8> col:8 implicit struct D

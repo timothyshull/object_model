@@ -6499,7 +6499,7 @@ TranslationUnitDecl 0x7f8367030ad0 <<invalid sloc>> <invalid sloc>
 |     |-CompoundStmt 0x7f836992c0c0 <line:273:1, line:274:1>
 |     |-AlwaysInlineAttr 0x7f836992c068 </usr/local/Cellar/llvm/5.0.0/bin/../include/c++/v1/__config:709:77> always_inline
 |     `-VisibilityAttr 0x7f836992c0b0 <col:51, col:74> Hidden
-|-FunctionDecl 0x7f836992c1b8 </Users/tskull/Documents/Programming/Cpp/object_model_refined/7_object_model/02_exceptions.cpp:5:1, col:17> col:5 used func1 'int (_Bool)'
+|-FunctionDecl 0x7f836992c1b8 <object_model_refined/7_object_model/02_exceptions.cpp:5:1, col:17> col:5 used func1 'int (_Bool)'
 | `-ParmVarDecl 0x7f836992c0e8 <col:11, col:16> col:16 b '_Bool'
 |-CXXRecordDecl 0x7f836992c258 <line:7:1, line:9:1> line:7:8 struct Error_t definition
 | |-public 'std::exception':'class std::exception'

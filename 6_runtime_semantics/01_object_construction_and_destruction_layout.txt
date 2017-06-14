@@ -5,7 +5,7 @@
            |  nvsize=0, nvalign=1]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fc053867258 </Users/tskull/Documents/Programming/Cpp/object_model_refined/6_runtime_semantics/01_object_construction_and_destruction.cpp:1:1, line:5:1> line:1:8 referenced struct A definition
+Record: CXXRecordDecl 0x7fc053867258 <object_model_refined/6_runtime_semantics/01_object_construction_and_destruction.cpp:1:1, line:5:1> line:1:8 referenced struct A definition
 |-CXXRecordDecl 0x7fc053867378 <col:1, col:8> col:8 implicit referenced struct A
 |-CXXConstructorDecl 0x7fc0538674b0 <line:2:5, col:10> col:5 used A 'void (void)'
 | `-CompoundStmt 0x7fc053867688 <col:9, col:10>

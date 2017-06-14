@@ -17,7 +17,7 @@
            |  nvsize=16, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fe5ca066858 </Users/tskull/Documents/Programming/Cpp/object_model_refined/3_data/07_virtual_inheritance.cpp:1:1, line:4:1> line:1:8 referenced struct P2 definition
+Record: CXXRecordDecl 0x7fe5ca066858 <object_model_refined/3_data/07_virtual_inheritance.cpp:1:1, line:4:1> line:1:8 referenced struct P2 definition
 |-CXXRecordDecl 0x7fe5ca066978 <col:1, col:8> col:8 implicit struct P2
 |-FieldDecl 0x7fe5ca066a28 <line:2:5, col:12> col:12 referenced x 'double'
 |-FieldDecl 0x7fe5ca066a88 <line:3:5, col:12> col:12 referenced y 'double'
@@ -35,7 +35,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fe5ca0676b8 </Users/tskull/Documents/Programming/Cpp/object_model_refined/3_data/07_virtual_inheritance.cpp:10:1, line:14:1> line:10:8 referenced struct P3 definition
+Record: CXXRecordDecl 0x7fe5ca0676b8 <object_model_refined/3_data/07_virtual_inheritance.cpp:10:1, line:14:1> line:10:8 referenced struct P3 definition
 |-virtual public 'struct P2'
 |-CXXRecordDecl 0x7fe5ca090430 <col:1, col:8> col:8 implicit referenced struct P3
 |-FieldDecl 0x7fe5ca0904e0 <line:11:5, col:12> col:12 referenced z 'double'
@@ -80,7 +80,7 @@ Layout: <CGRecordLayout
            |  nvsize=40, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fe5ca066af0 </Users/tskull/Documents/Programming/Cpp/object_model_refined/3_data/07_virtual_inheritance.cpp:6:1, line:8:1> line:6:8 referenced struct V definition
+Record: CXXRecordDecl 0x7fe5ca066af0 <object_model_refined/3_data/07_virtual_inheritance.cpp:6:1, line:8:1> line:6:8 referenced struct V definition
 |-virtual public 'struct P2'
 |-CXXRecordDecl 0x7fe5ca066c70 <col:1, col:8> col:8 implicit referenced struct V
 |-FieldDecl 0x7fe5ca066d48 <line:7:5, col:8> col:8 n 'struct V *'
@@ -106,7 +106,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fe5ca090b58 </Users/tskull/Documents/Programming/Cpp/object_model_refined/3_data/07_virtual_inheritance.cpp:16:1, line:18:1> line:16:7 referenced class V3 definition
+Record: CXXRecordDecl 0x7fe5ca090b58 <object_model_refined/3_data/07_virtual_inheritance.cpp:16:1, line:18:1> line:16:7 referenced class V3 definition
 |-public 'struct P3'
 |-public 'struct V'
 |-CXXRecordDecl 0x7fe5ca090d10 <col:1, col:7> col:7 implicit class V3

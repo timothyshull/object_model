@@ -37,7 +37,7 @@
            |  nvsize=32, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fd3df861058 </Users/tskull/Documents/Programming/Cpp/object_model_refined/5_ctor_dtor_semantics/03_object_construction_under_inheritance.cpp:1:1, line:5:1> line:1:8 referenced struct B1 definition
+Record: CXXRecordDecl 0x7fd3df861058 <object_model_refined/5_ctor_dtor_semantics/03_object_construction_under_inheritance.cpp:1:1, line:5:1> line:1:8 referenced struct B1 definition
 |-CXXRecordDecl 0x7fd3df861178 <col:1, col:8> col:8 implicit referenced struct B1
 |-CXXConstructorDecl 0x7fd3df8612b0 <line:2:5, col:11> col:5 used B1 'void (void)'
 | `-CompoundStmt 0x7fd3df861668 <col:10, col:11>
@@ -56,7 +56,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fd3df861ca8 </Users/tskull/Documents/Programming/Cpp/object_model_refined/5_ctor_dtor_semantics/03_object_construction_under_inheritance.cpp:7:1, line:11:1> line:7:8 referenced struct B2 definition
+Record: CXXRecordDecl 0x7fd3df861ca8 <object_model_refined/5_ctor_dtor_semantics/03_object_construction_under_inheritance.cpp:7:1, line:11:1> line:7:8 referenced struct B2 definition
 |-CXXRecordDecl 0x7fd3df861dc8 <col:1, col:8> col:8 implicit referenced struct B2
 |-CXXConstructorDecl 0x7fd3df861ec8 <line:8:5, col:11> col:5 used B2 'void (void)'
 | `-CompoundStmt 0x7fd3df88beb8 <col:10, col:11>
@@ -75,7 +75,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fd3df88bee8 </Users/tskull/Documents/Programming/Cpp/object_model_refined/5_ctor_dtor_semantics/03_object_construction_under_inheritance.cpp:13:1, line:17:1> line:13:8 referenced struct X definition
+Record: CXXRecordDecl 0x7fd3df88bee8 <object_model_refined/5_ctor_dtor_semantics/03_object_construction_under_inheritance.cpp:13:1, line:17:1> line:13:8 referenced struct X definition
 |-CXXRecordDecl 0x7fd3df88c008 <col:1, col:8> col:8 implicit referenced struct X
 |-CXXConstructorDecl 0x7fd3df88c108 <line:14:5, col:10> col:5 used X 'void (void)'
 | `-CompoundStmt 0x7fd3df88c4b8 <col:9, col:10>
@@ -94,7 +94,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fd3df88c4e8 </Users/tskull/Documents/Programming/Cpp/object_model_refined/5_ctor_dtor_semantics/03_object_construction_under_inheritance.cpp:19:1, line:23:1> line:19:8 referenced struct Y definition
+Record: CXXRecordDecl 0x7fd3df88c4e8 <object_model_refined/5_ctor_dtor_semantics/03_object_construction_under_inheritance.cpp:19:1, line:23:1> line:19:8 referenced struct Y definition
 |-CXXRecordDecl 0x7fd3df88c608 <col:1, col:8> col:8 implicit referenced struct Y
 |-CXXConstructorDecl 0x7fd3df88c708 <line:20:5, col:10> col:5 used Y 'void (void)'
 | `-CompoundStmt 0x7fd3df88cab8 <col:9, col:10>
@@ -113,7 +113,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fd3df88cae8 </Users/tskull/Documents/Programming/Cpp/object_model_refined/5_ctor_dtor_semantics/03_object_construction_under_inheritance.cpp:25:1, line:32:1> line:25:8 referenced struct D1 definition
+Record: CXXRecordDecl 0x7fd3df88cae8 <object_model_refined/5_ctor_dtor_semantics/03_object_construction_under_inheritance.cpp:25:1, line:32:1> line:25:8 referenced struct D1 definition
 |-public 'struct B1'
 |-public 'struct B2'
 |-CXXRecordDecl 0x7fd3e0000ce8 <col:1, col:8> col:8 implicit referenced struct D1
@@ -167,7 +167,7 @@ Layout: <CGRecordLayout
            |  nvsize=16, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fd3e0001a70 </Users/tskull/Documents/Programming/Cpp/object_model_refined/5_ctor_dtor_semantics/03_object_construction_under_inheritance.cpp:34:1, line:38:1> line:34:8 referenced struct B3 definition
+Record: CXXRecordDecl 0x7fd3e0001a70 <object_model_refined/5_ctor_dtor_semantics/03_object_construction_under_inheritance.cpp:34:1, line:38:1> line:34:8 referenced struct B3 definition
 |-virtual public 'struct B1'
 |-CXXRecordDecl 0x7fd3e0002400 <col:1, col:8> col:8 implicit referenced struct B3
 |-CXXConstructorDecl 0x7fd3e0002508 <line:35:5, col:11> col:5 used B3 'void (void)'
@@ -189,7 +189,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fd3e0002958 </Users/tskull/Documents/Programming/Cpp/object_model_refined/5_ctor_dtor_semantics/03_object_construction_under_inheritance.cpp:40:1, line:44:1> line:40:8 referenced struct B4 definition
+Record: CXXRecordDecl 0x7fd3e0002958 <object_model_refined/5_ctor_dtor_semantics/03_object_construction_under_inheritance.cpp:40:1, line:44:1> line:40:8 referenced struct B4 definition
 |-virtual public 'struct B1'
 |-CXXRecordDecl 0x7fd3e0002ad0 <col:1, col:8> col:8 implicit referenced struct B4
 |-CXXConstructorDecl 0x7fd3e0002bd8 <line:41:5, col:11> col:5 used B4 'void (void)'
@@ -211,7 +211,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fd3e0003028 </Users/tskull/Documents/Programming/Cpp/object_model_refined/5_ctor_dtor_semantics/03_object_construction_under_inheritance.cpp:46:1, line:50:1> line:46:8 referenced struct D2 definition
+Record: CXXRecordDecl 0x7fd3e0003028 <object_model_refined/5_ctor_dtor_semantics/03_object_construction_under_inheritance.cpp:46:1, line:50:1> line:46:8 referenced struct D2 definition
 |-public 'struct B3'
 |-public 'struct B4'
 |-CXXRecordDecl 0x7fd3e00031e0 <col:1, col:8> col:8 implicit referenced struct D2

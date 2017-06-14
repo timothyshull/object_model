@@ -42,7 +42,7 @@
            |  nvsize=0, nvalign=1]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fda07016bf8 </Users/tskull/Documents/Programming/Cpp/object_model_refined/5_ctor_dtor_semantics/06_object_move_semantics.cpp:3:1, line:21:1> line:3:8 referenced struct A definition
+Record: CXXRecordDecl 0x7fda07016bf8 <object_model_refined/5_ctor_dtor_semantics/06_object_move_semantics.cpp:3:1, line:21:1> line:3:8 referenced struct A definition
 |-CXXRecordDecl 0x7fda07016d18 <col:1, col:8> col:8 implicit referenced struct A
 |-CXXConstructorDecl 0x7fda07016e18 <line:4:5, col:10> col:5 A 'void (void)'
 | `-CompoundStmt 0x7fda070176f8 <col:9, col:10>

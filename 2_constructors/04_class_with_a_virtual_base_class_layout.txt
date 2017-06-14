@@ -15,7 +15,7 @@
            |  nvsize=12, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fda6a867258 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/04_class_with_a_virtual_base_class.cpp:1:1, line:3:1> line:1:8 referenced struct X definition
+Record: CXXRecordDecl 0x7fda6a867258 <object_model_refined/2_constructors/04_class_with_a_virtual_base_class.cpp:1:1, line:3:1> line:1:8 referenced struct X definition
 |-CXXRecordDecl 0x7fda6a867378 <col:1, col:8> col:8 implicit struct X
 |-FieldDecl 0x7fda6a867428 <line:2:5, col:9> col:9 referenced i 'int'
 |-CXXMethodDecl 0x7fda6a867948 <line:1:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct X &(const struct X &)' inline default trivial noexcept-unevaluated 0x7fda6a867948
@@ -32,7 +32,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fda6a867490 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/04_class_with_a_virtual_base_class.cpp:5:1, line:7:1> line:5:8 referenced struct A definition
+Record: CXXRecordDecl 0x7fda6a867490 <object_model_refined/2_constructors/04_class_with_a_virtual_base_class.cpp:5:1, line:7:1> line:5:8 referenced struct A definition
 |-virtual public 'struct X'
 |-CXXRecordDecl 0x7fda6a867610 <col:1, col:8> col:8 implicit struct A
 |-FieldDecl 0x7fda6a8676c0 <line:6:5, col:9> col:9 j 'int'
@@ -73,7 +73,7 @@ Layout: <CGRecordLayout
            |  nvsize=36, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fda6a868038 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/04_class_with_a_virtual_base_class.cpp:9:1, line:11:1> line:9:8 referenced struct B definition
+Record: CXXRecordDecl 0x7fda6a868038 <object_model_refined/2_constructors/04_class_with_a_virtual_base_class.cpp:9:1, line:11:1> line:9:8 referenced struct B definition
 |-virtual public 'struct X'
 |-CXXRecordDecl 0x7fda6a890a00 <col:1, col:8> col:8 implicit struct B
 |-FieldDecl 0x7fda6a890ab0 <line:10:5, col:12> col:12 d 'double'
@@ -99,7 +99,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fda6a890f88 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/04_class_with_a_virtual_base_class.cpp:13:1, line:15:1> line:13:8 referenced struct C definition
+Record: CXXRecordDecl 0x7fda6a890f88 <object_model_refined/2_constructors/04_class_with_a_virtual_base_class.cpp:13:1, line:15:1> line:13:8 referenced struct C definition
 |-public 'struct A'
 |-public 'struct B'
 |-CXXRecordDecl 0x7fda6a891140 <col:1, col:8> col:8 implicit struct C

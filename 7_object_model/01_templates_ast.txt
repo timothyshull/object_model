@@ -4552,7 +4552,7 @@ TranslationUnitDecl 0x7fc6cb830ad0 <<invalid sloc>> <invalid sloc>
 |   |-ParmVarDecl 0x7fc6cb8a43f0 <<invalid sloc>> <invalid sloc> 'void &'
 |   |-NoThrowAttr 0x7fc6cb8a4458 <col:12> Implicit
 |   `-ConstAttr 0x7fc6cb8a44a0 <col:12> Implicit
-|-ClassTemplateDecl 0x7fc6cb9a9458 </Users/tskull/Documents/Programming/Cpp/object_model_refined/7_object_model/01_templates.cpp:3:1, line:7:1> line:4:7 A
+|-ClassTemplateDecl 0x7fc6cb9a9458 <object_model_refined/7_object_model/01_templates.cpp:3:1, line:7:1> line:4:7 A
 | |-TemplateTypeParmDecl 0x7fc6cb9a9338 <line:3:10, col:19> col:19 typename depth 0 index 0 T
 | |-CXXRecordDecl 0x7fc6cb9a93c0 <line:4:1, line:7:1> line:4:7 class A definition
 | | |-CXXRecordDecl 0x7fc6cb9a96d0 <col:1, col:7> col:7 implicit class A

@@ -2242,7 +2242,7 @@ TranslationUnitDecl 0x7f92f7817ad0 <<invalid sloc>> <invalid sloc>
 |   |-UsingShadowDecl 0x7f92f789b970 <col:9> col:9 implicit Function 0x7f92f8110a50 'strerror' 'char *(int)'
 |   |-UsingDecl 0x7f92f789b9c0 <line:93:1, col:9> col:9 ::strlen
 |   `-UsingShadowDecl 0x7f92f789ba10 <col:9> col:9 implicit Function 0x7f92f8110ca0 'strlen' 'size_t (const char *)'
-|-VarDecl 0x7f92f789ba70 </Users/tskull/Documents/Programming/Cpp/object_model_refined/6_runtime_semantics/02_global_objects.cpp:4:1, col:22> col:13 global 'const char *' cinit
+|-VarDecl 0x7f92f789ba70 <object_model_refined/6_runtime_semantics/02_global_objects.cpp:4:1, col:22> col:13 global 'const char *' cinit
 | `-ImplicitCastExpr 0x7f92f789bb80 <col:22> 'const char *' <ArrayToPointerDecay>
 |   `-StringLiteral 0x7f92f789bb48 <col:22> 'const char [15]' lvalue "string literal"
 |-VarDecl 0x7f92f789bbe8 <line:5:1, col:23> col:6 global_array 'char [15]' cinit

@@ -13,7 +13,7 @@ TranslationUnitDecl 0x7f982b030ad0 <<invalid sloc>> <invalid sloc>
 | `-ConstantArrayType 0x7f982b031790 'struct __va_list_tag [1]' 1 
 |   `-RecordType 0x7f982b0315a0 'struct __va_list_tag'
 |     `-CXXRecord 0x7f982b031508 '__va_list_tag'
-|-CXXRecordDecl 0x7f982b063858 </Users/tskull/Documents/Programming/Cpp/object_model_refined/5_ctor_dtor_semantics/01_presence_of_a_virtual_specification.cpp:1:1, line:29:1> line:1:8 referenced struct B1 definition
+|-CXXRecordDecl 0x7f982b063858 <object_model_refined/5_ctor_dtor_semantics/01_presence_of_a_virtual_specification.cpp:1:1, line:29:1> line:1:8 referenced struct B1 definition
 | |-CXXRecordDecl 0x7f982b063978 <col:1, col:8> col:8 implicit referenced struct B1
 | |-FieldDecl 0x7f982b063a28 <line:2:5, col:16> col:11 referenced cp 'char *'
 | | `-ImplicitCastExpr 0x7f982b064430 <col:16> 'char *' <NullToPointer>

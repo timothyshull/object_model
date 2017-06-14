@@ -2193,7 +2193,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fe8ead58dc8 </Users/tskull/Documents/Programming/Cpp/object_model_refined/5_ctor_dtor_semantics/05_object_copy_semantics.cpp:5:1, line:29:1> line:5:8 referenced struct A definition
+Record: CXXRecordDecl 0x7fe8ead58dc8 <object_model_refined/5_ctor_dtor_semantics/05_object_copy_semantics.cpp:5:1, line:29:1> line:5:8 referenced struct A definition
 |-CXXRecordDecl 0x7fe8ead58ee8 <col:1, col:8> col:8 implicit referenced struct A
 |-FieldDecl 0x7fe8ead59020 <line:6:5, col:17> col:17 referenced s1 'std::string':'class std::__1::basic_string<char>'
 |-CXXConstructorDecl 0x7fe8ead590d8 <line:8:5, col:23> col:5 A 'void (void)'
@@ -2352,7 +2352,7 @@ Layout: <CGRecordLayout
            |  nvsize=48, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fe8ead64358 </Users/tskull/Documents/Programming/Cpp/object_model_refined/5_ctor_dtor_semantics/05_object_copy_semantics.cpp:47:1, line:49:1> line:47:8 referenced struct B definition
+Record: CXXRecordDecl 0x7fe8ead64358 <object_model_refined/5_ctor_dtor_semantics/05_object_copy_semantics.cpp:47:1, line:49:1> line:47:8 referenced struct B definition
 |-public 'struct A'
 |-CXXRecordDecl 0x7fe8ead644b8 <col:1, col:8> col:8 implicit struct B
 |-FieldDecl 0x7fe8ead645a0 <line:48:5, col:17> col:17 referenced s2 'std::string':'class std::__1::basic_string<char>'
@@ -2398,7 +2398,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fe8ead64a78 </Users/tskull/Documents/Programming/Cpp/object_model_refined/5_ctor_dtor_semantics/05_object_copy_semantics.cpp:52:1, line:65:1> line:52:7 referenced class P definition
+Record: CXXRecordDecl 0x7fe8ead64a78 <object_model_refined/5_ctor_dtor_semantics/05_object_copy_semantics.cpp:52:1, line:65:1> line:52:7 referenced class P definition
 |-CXXRecordDecl 0x7fe8ead64b98 <col:1, col:7> col:7 implicit referenced class P
 |-AccessSpecDecl 0x7fe8ead64c30 <line:53:1, col:7> col:1 public
 |-CXXConstructorDecl 0x7fe8ead64e10 <line:54:5, col:43> col:5 used P 'void (double, double)'
@@ -2439,7 +2439,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fe8ead65b90 </Users/tskull/Documents/Programming/Cpp/object_model_refined/5_ctor_dtor_semantics/05_object_copy_semantics.cpp:78:1, line:88:1> line:78:7 referenced class P3 definition
+Record: CXXRecordDecl 0x7fe8ead65b90 <object_model_refined/5_ctor_dtor_semantics/05_object_copy_semantics.cpp:78:1, line:88:1> line:78:7 referenced class P3 definition
 |-virtual public 'class P'
 |-CXXRecordDecl 0x7fe8ead65d10 <col:1, col:7> col:7 implicit referenced class P3
 |-AccessSpecDecl 0x7fe8ead65da8 <line:79:1, col:7> col:1 public
@@ -2499,7 +2499,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fe8ead66998 </Users/tskull/Documents/Programming/Cpp/object_model_refined/5_ctor_dtor_semantics/05_object_copy_semantics.cpp:90:1, line:96:1> line:90:7 referenced class V definition
+Record: CXXRecordDecl 0x7fe8ead66998 <object_model_refined/5_ctor_dtor_semantics/05_object_copy_semantics.cpp:90:1, line:96:1> line:90:7 referenced class V definition
 |-virtual public 'class P'
 |-CXXRecordDecl 0x7fe8ead66b10 <col:1, col:7> col:7 implicit referenced class V
 |-AccessSpecDecl 0x7fe8ead66ba8 <line:91:1, col:7> col:1 public
@@ -2524,7 +2524,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fe8ead66f48 </Users/tskull/Documents/Programming/Cpp/object_model_refined/5_ctor_dtor_semantics/05_object_copy_semantics.cpp:98:1, line:104:1> line:98:7 referenced class V3 definition
+Record: CXXRecordDecl 0x7fe8ead66f48 <object_model_refined/5_ctor_dtor_semantics/05_object_copy_semantics.cpp:98:1, line:104:1> line:98:7 referenced class V3 definition
 |-public 'class P3'
 |-public 'class V'
 |-CXXRecordDecl 0x7fe8ead67100 <col:1, col:7> col:7 implicit referenced class V3

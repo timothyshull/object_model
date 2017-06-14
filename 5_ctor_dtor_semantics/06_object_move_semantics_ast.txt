@@ -12227,7 +12227,7 @@ TranslationUnitDecl 0x7fd095030ad0 <<invalid sloc>> <invalid sloc>
 |     `-TypeAliasDecl 0x7fd09586af48 <line:1586:1, col:30> col:7 __enable_hash_helper '_Type'
 |       `-TemplateTypeParmType 0x7fd09586ae80 '_Type' dependent depth 0 index 0
 |         `-TemplateTypeParm 0x7fd09586ae40 '_Type'
-|-CXXRecordDecl 0x7fd09586aff8 </Users/tskull/Documents/Programming/Cpp/object_model_refined/5_ctor_dtor_semantics/06_object_move_semantics.cpp:3:1, line:21:1> line:3:8 referenced struct A definition
+|-CXXRecordDecl 0x7fd09586aff8 <object_model_refined/5_ctor_dtor_semantics/06_object_move_semantics.cpp:3:1, line:21:1> line:3:8 referenced struct A definition
 | |-CXXRecordDecl 0x7fd09586b118 <col:1, col:8> col:8 implicit referenced struct A
 | |-CXXConstructorDecl 0x7fd09586b218 <line:4:5, col:10> col:5 used A 'void (void)'
 | | `-CompoundStmt 0x7fd09586baf8 <col:9, col:10>

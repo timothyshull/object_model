@@ -13,7 +13,7 @@ TranslationUnitDecl 0x7fba4681fad0 <<invalid sloc>> <invalid sloc>
 | `-ConstantArrayType 0x7fba46820790 'struct __va_list_tag [1]' 1 
 |   `-RecordType 0x7fba468205a0 'struct __va_list_tag'
 |     `-CXXRecord 0x7fba46820508 '__va_list_tag'
-|-CXXRecordDecl 0x7fba46003e58 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/01_default_constructor_construction.cpp:5:1, line:8:1> line:5:8 referenced struct X definition
+|-CXXRecordDecl 0x7fba46003e58 <object_model_refined/2_constructors/01_default_constructor_construction.cpp:5:1, line:8:1> line:5:8 referenced struct X definition
 | |-CXXRecordDecl 0x7fba46003f78 <col:1, col:8> col:8 implicit struct X
 | |-FieldDecl 0x7fba46004028 <line:6:5, col:12> col:12 x 'double'
 | `-FieldDecl 0x7fba46004088 <line:7:5, col:12> col:12 y 'double'

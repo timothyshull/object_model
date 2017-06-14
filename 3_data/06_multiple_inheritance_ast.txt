@@ -9473,7 +9473,7 @@ TranslationUnitDecl 0x7fc612030ad0 <<invalid sloc>> <invalid sloc>
 | `-FunctionDecl 0x7fc612862460 <col:12> col:12 implicit referenced __builtin_isfinite 'int (...) noexcept' extern
 |   |-NoThrowAttr 0x7fc6128624f8 <col:12> Implicit
 |   `-ConstAttr 0x7fc612862540 <col:12> Implicit
-|-CXXRecordDecl 0x7fc612862c38 </Users/tskull/Documents/Programming/Cpp/object_model_refined/3_data/06_multiple_inheritance.cpp:3:1, line:5:1> line:3:8 referenced struct P1 definition
+|-CXXRecordDecl 0x7fc612862c38 <object_model_refined/3_data/06_multiple_inheritance.cpp:3:1, line:5:1> line:3:8 referenced struct P1 definition
 | |-CXXRecordDecl 0x7fc612862d58 <col:1, col:8> col:8 implicit struct P1
 | |-FieldDecl 0x7fc612862e08 <line:4:5, col:12> col:12 referenced x 'double'
 | |-CXXConstructorDecl 0x7fc612864418 <line:3:8> col:8 implicit P1 'void (void) noexcept' inline default trivial

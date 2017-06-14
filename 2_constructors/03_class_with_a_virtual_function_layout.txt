@@ -6,7 +6,7 @@
            |  nvsize=8, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fc85984e458 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/03_class_with_a_virtual_function.cpp:1:1, line:3:1> line:1:8 referenced struct X definition
+Record: CXXRecordDecl 0x7fc85984e458 <object_model_refined/2_constructors/03_class_with_a_virtual_function.cpp:1:1, line:3:1> line:1:8 referenced struct X definition
 |-CXXRecordDecl 0x7fc85984e578 <col:1, col:8> col:8 implicit struct X
 |-CXXMethodDecl 0x7fc85984e690 <line:2:5, col:31> col:18 referenced m1 'void (void) const' virtual pure
 |-CXXMethodDecl 0x7fc85984e788 <line:1:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct X &(const struct X &)' inline default noexcept-unevaluated 0x7fc85984e788
@@ -30,7 +30,7 @@ Layout: <CGRecordLayout
            |  nvsize=8, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fc85984ef28 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/03_class_with_a_virtual_function.cpp:7:1, line:9:1> line:7:8 referenced struct Y definition
+Record: CXXRecordDecl 0x7fc85984ef28 <object_model_refined/2_constructors/03_class_with_a_virtual_function.cpp:7:1, line:9:1> line:7:8 referenced struct Y definition
 |-public 'struct X'
 |-CXXRecordDecl 0x7fc85984f088 <col:1, col:8> col:8 implicit struct Y
 |-CXXMethodDecl 0x7fc85984f168 <line:8:5, col:31> col:10 m1 'void (void) const'
@@ -65,7 +65,7 @@ Layout: <CGRecordLayout
            |  nvsize=8, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fc85a005d60 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/03_class_with_a_virtual_function.cpp:11:1, line:13:1> line:11:8 referenced struct Z definition
+Record: CXXRecordDecl 0x7fc85a005d60 <object_model_refined/2_constructors/03_class_with_a_virtual_function.cpp:11:1, line:13:1> line:11:8 referenced struct Z definition
 |-public 'struct X'
 |-CXXRecordDecl 0x7fc85a005ec8 <col:1, col:8> col:8 implicit struct Z
 |-CXXMethodDecl 0x7fc85a005fa8 <line:12:5, col:31> col:10 m1 'void (void) const'
