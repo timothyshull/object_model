@@ -1,7 +1,5 @@
-#include <iostream>
-
 struct P3 {
-    static P3 origin;
+    static P3 o;
     double x;
     double y;
     double z;
@@ -38,7 +36,8 @@ int main()
     double P3::*p2 = &P3::x;
 
     if (p1 == p2) {
-        std::cout << "p1 & p2 address the same member\n";
+        // noop
+        auto p3 = p2;
     }
 
     D d{};

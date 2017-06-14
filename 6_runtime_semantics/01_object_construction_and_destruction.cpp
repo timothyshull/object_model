@@ -1,15 +1,7 @@
-#include <iostream>
-
 struct A {
-    A()
-    {
-        std::cout << "A()\n";
-    }
+    A() {}
 
-    ~A()
-    {
-        std::cout << "~A()\n";
-    }
+    ~A() {}
 };
 
 enum class Selector { a, b, c };

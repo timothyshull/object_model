@@ -1,5 +1,5 @@
 #include <typeinfo>
-#include <iostream>
+#include <string>
 
 struct B {};
 struct Derived : B {};

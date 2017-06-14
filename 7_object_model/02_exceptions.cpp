@@ -1,5 +1,4 @@
 #include <exception>
-#include <iostream>
 
 // #define USE_EXCEPTIONS
 
@@ -15,11 +14,10 @@ void func2(bool b)
     try {
 #endif
         auto result = func1(b);
-        std::cout << result << "\n";
 #ifdef USE_EXCEPTIONS
     }
     catch (Error_t &e) {
-        std::cout << e.what();
+        const auto w = e.what();
     }
 #endif
 }

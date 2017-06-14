@@ -1,30 +1,19 @@
-#include <iostream>
+#include <utility>
 
 struct A {
-    A()
-    {
-        std::cout << "default ctor\n";
-    }
+    A() {}
 
-    A(const A &rhs)
-    {
-        std::cout << "copy ctor\n";
-    }
+    A(const A &rhs) {}
 
-    A(A &&o) noexcept
-    {
-        std::cout << "move ctor\n";
-    }
+    A(A &&o) noexcept {}
 
     A &operator=(const A &rhs)
     {
-        std::cout << "copy assignment operator\n";
         return *this;
     }
 
     A &operator=(A &&rhs) noexcept
     {
-        std::cout << "move assignment operator\n";
         return *this;
     }
 
@@ -34,21 +23,18 @@ struct A {
 // pass by value
 A func1(A a)
 {
-    std::cout << "func1(A a)\n";
     return a;
 }
 
 // pass by value and move return
 A func2(A &&a)
 {
-    std::cout << "func2(A &&a)\n";
     return std::move(a);
 }
 
 // pass by rvalue ref
 A func3(A &&a)
 {
-    std::cout << "func3(A &&a)\n";
     return a;
 }
 

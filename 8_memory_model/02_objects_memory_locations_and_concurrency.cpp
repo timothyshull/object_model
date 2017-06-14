@@ -1,8 +1,6 @@
 #include <atomic>
 #include <thread>
 #include <string>
-#include <vector>
-#include <iostream>
 
 struct D {
     int i;

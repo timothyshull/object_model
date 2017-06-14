@@ -8,8 +8,8 @@ struct X {
 };
 
 struct Y {
-    double value;
-    Y *next;
+    double v;
+    Y *n;
 };
 
 int main()

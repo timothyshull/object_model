@@ -1,21 +1,11 @@
-#include <iostream>
-
 struct T1 {
     int i;
 
-    T1()
-    {
-        std::cout << "T1()\n";
-    }
+    T1() {}
 
-    explicit T1(int j) : i{j} {
-        std::cout << "T1(int j)\n";
-    }
+    explicit T1(int j) : i{j} {}
 
-    ~T1()
-    {
-        std::cout << "~T1()\n";
-    }
+    ~T1() {}
 
 };
 

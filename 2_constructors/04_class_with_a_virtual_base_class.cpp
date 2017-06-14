@@ -1,5 +1,3 @@
-#include <iostream>
-
 struct X {
     int i;
 };

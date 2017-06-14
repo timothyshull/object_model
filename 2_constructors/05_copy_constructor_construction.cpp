@@ -5,36 +5,28 @@ struct A {
 
     A(int n = 1) : n{n} {}
 
-    A(const A &a) : n{a.n} {} // user-defined copy ctor
+    A(const A &a) : n{a.n} {}
 
     ~A() = default;
 };
 
-struct B : A {
-    // implicit default ctor B::B()
-    // implicit copy ctor B::B(const B&)
-};
+struct B : A {};
 
 struct C : B {
     C() : B{} {}
 
-    C(const C &) = delete; // prefer explicit deletion over C++98-style deletion below
-
-// private:
-//     C(const C &); // non-copyable, C++98 style
+    C(const C &) = delete;
 };
 
 int main()
 {
     A a1{7};
-    A a2{a1}; // calls the copy ctor
+    A a2{a1};
     B b;
     B b2 = b;
-    A a3 = b; // conversion to A& and copy ctor
+    A a3 = b;
     volatile A va{10};
-    // A a4 = va; // compile error
 
     C c;
-    // C c2 = c; // compile error
     return 0;
 }

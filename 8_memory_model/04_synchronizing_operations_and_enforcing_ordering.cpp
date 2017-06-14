@@ -2,7 +2,6 @@
 #include <thread>
 #include <string>
 #include <vector>
-#include <iostream>
 
 std::vector<int> data;
 std::atomic<bool> data_ready(false);
@@ -12,7 +11,7 @@ void reader()
     while (!data_ready.load()) {
         std::this_thread::sleep_for(std::chrono::milliseconds(1));
     }
-    std::cout << data[0] << "\n";
+    const auto m = data[0];
 }
 
 void writer()

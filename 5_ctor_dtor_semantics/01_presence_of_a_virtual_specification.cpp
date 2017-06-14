@@ -1,5 +1,3 @@
-#include <iostream>
-
 struct B1 {
     char *cp = nullptr;
 
@@ -14,7 +12,6 @@ struct B1 {
 
     virtual ~B1()
     {
-        std::cout << "~B1()\n";
         delete[] cp; // clean up resources
     }
 
@@ -28,10 +25,7 @@ struct B1 {
         return *this;
     }
 
-    virtual void m()
-    {
-        std::cout << "B1::m()\n";
-    }
+    virtual void m() {}
 };
 
 struct D1 : B1 {
@@ -48,7 +42,6 @@ struct D1 : B1 {
 
     virtual ~D1()
     {
-        std::cout << "~D1()\n";
         delete[] ip; // clean up resources
     }
 
@@ -62,10 +55,7 @@ struct D1 : B1 {
         return *this;
     }
 
-    void m() override
-    {
-        std::cout << "D1::m()\n";
-    }
+    void m() override {}
 };
 
 int main()

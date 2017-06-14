@@ -1,5 +1,3 @@
-#include <iostream>
-
 struct P {
     double x;
     double y;

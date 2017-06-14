@@ -1,48 +1,31 @@
-#include <iostream>
-
 // example 1 - basic pointer to member
 struct B1 {
-    void m()
-    {
-        std::cout << "B1::m()\n";
-    }
+    void m() {}
 };
 
 struct D1 : B1 {};
 
 // example 2 - pointer to virtual member
 struct B2 {
-    virtual void m()
-    {
-        std::cout << "B2::m()\n";
-    }
+    virtual void m() {}
 };
 
 struct D2 : B2 {};
 
 // example 3 - pointer to member under multiple inheritance
 struct B3 {
-    virtual void m()
-    {
-        std::cout << "B3::m()\n";
-    }
+    virtual void m() {}
 };
 
 struct B4 {
-    virtual void m()
-    {
-        std::cout << "B4::m()\n";
-    }
+    virtual void m() {}
 };
 
 struct D3 : B3, B4 {};
 
 // example 4 - pointer to member under virtual inheritance
 struct B5 {
-    virtual void m()
-    {
-        std::cout << "B5::m()\n";
-    }
+    virtual void m() {}
 };
 
 class X : public virtual B5 {};

@@ -1,99 +1,52 @@
-#include <iostream>
-
 struct B1 {
-    B1()
-    {
-        std::cout << "B1()\n";
-    }
+    B1() {}
 
-    virtual ~B1()
-    {
-        std::cout << "~B1()\n";
-    }
+    virtual ~B1() {}
 };
 
 struct B2 {
-    B2()
-    {
-        std::cout << "B2()\n";
-    }
+    B2() {}
 
-    virtual ~B2()
-    {
-        std::cout << "~B2()\n";
-    }
+    virtual ~B2() {}
 };
 
 struct X {
-    X()
-    {
-        std::cout << "X()\n";
-    }
+    X() {}
 
-    virtual ~X()
-    {
-        std::cout << "~X()\n";
-    }
+    virtual ~X() {}
 };
 
 struct Y {
-    Y()
-    {
-        std::cout << "Y()\n";
-    }
+    Y() {}
 
-    virtual ~Y()
-    {
-        std::cout << "~Y()\n";
-    }
+    virtual ~Y() {}
 };
 
 struct D1 : B1, B2 {
     X x;
     Y y;
 
-    D1()
-    {
-        std::cout << "D()\n";
-    }
+    D1() {}
 
-    ~D1()
-    {
-        std::cout << "~D()\n";
-    }
+    ~D1() {}
 };
 
 struct B3 : public virtual B1 {
-    B3() {
-        std::cout << "B3()\n";
-    }
+    B3() {}
 
-    virtual ~B3()
-    {
-        std::cout << "~B3()\n";
-    }
+    virtual ~B3() {}
 };
 
 struct B4 : public virtual B1 {
-    B4() {
-        std::cout << "B4()\n";
-    }
+    B4() {}
 
-    virtual ~B4()
-    {
-        std::cout << "~B4()\n";
-    }
+    virtual ~B4() {}
 };
 
 struct D2 : B3, B4 {
-    D2() {
-        std::cout << "D2()\n";
-    }
+    D2() {}
 
-    virtual ~D2()
-    {
-        std::cout << "~D2()\n";
-    }
+    virtual ~D2() {}
 };
 
 int main() {

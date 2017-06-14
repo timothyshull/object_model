@@ -1,6 +1,5 @@
 #include <memory>
 #include <string>
-#include <iostream>
 #include <thread>
 
 // example 1
@@ -14,9 +13,9 @@ void read1()
 {
     auto local = std::atomic_load(&p);
     if (local != nullptr) {
-        std::cout << local->s << "\n";
+        const auto s = local->s;
     } else {
-        std::cout << "p = nullptr\n";
+        const auto s = "";
     }
 }
 
@@ -39,9 +38,9 @@ void read2()
 {
     auto local = ad.load();
     if (local.i != 0) {
-        std::cout << local.i << "\n";
+        const auto i = local.i;
     } else {
-        std::cout << "ad.i not yet written to\n";
+        const auto i = 0;
     }
 }
 

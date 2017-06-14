@@ -1,5 +1,3 @@
-#include <iostream>
-
 struct X {
     virtual void m1() const = 0;
 };
@@ -7,17 +5,11 @@ struct X {
 void func(const X &x) { x.m1(); }
 
 struct Y : public X {
-    void m1() const override
-    {
-        std::cout << "Y::m1()\n";
-    }
+    void m1() const override {}
 };
 
 struct Z : public X {
-    void m1() const override
-    {
-        std::cout << "Z::m1()\n";
-    }
+    void m1() const override {}
 };
 
 int main()

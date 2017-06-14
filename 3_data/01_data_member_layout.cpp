@@ -1,7 +1,6 @@
 // portions adapted from https://jonasdevlieghere.com/order-your-members/
 #include <cstdint>
 #include <vector>
-#include <iostream>
 
 // example 1
 struct S1 {
@@ -74,26 +73,26 @@ private:
 
 int main() {
     // example 1
-    std::cout << "sizeof(S1) == " << sizeof(X) << "\n";
-    std::cout << "sizeof(S2) == " << sizeof(X) << "\n";
-    std::cout << "sizeof(S3) == " << sizeof(X) << "\n";
+    const auto s1 = sizeof(X);
+    const auto s2 = sizeof(X);
+    const auto s3 = sizeof(X);
 
     // example 2
-    std::cout << "sizeof(X) == " << sizeof(X) << "\n";
-    std::cout << "sizeof(Y) == " << sizeof(Y) << "\n";
-    std::cout << "sizeof(Z) == " << sizeof(Z) << "\n";
+    const auto s4 = sizeof(X);
+    const auto s5 = sizeof(Y);
+    const auto s6 = sizeof(Z);
 
     // example 3
-    std::cout << "sizeof(S64) == " << sizeof(S64) << "\n";
+    const auto s7 = sizeof(S64);
 
     // example 4
-    std::cout << "sizeof(A) == " << sizeof(A) << "\n";
-    std::cout << "sizeof(B) == " << sizeof(B) << "\n";
-    std::cout << "sizeof(C) == " << sizeof(C) << "\n";
-    std::cout << "sizeof(D) == " << sizeof(D) << "\n";
+    const auto s8 = sizeof(A);
+    const auto s9 = sizeof(B);
+    const auto s10 = sizeof(C);
+    const auto s11 = sizeof(D);
 
     // example 5
-    std::cout << "sizeof(P1) == " << sizeof(P1) << "\n";
-    std::cout << "sizeof(P2) == " << sizeof(P2) << "\n";
+    const auto s12 = sizeof(P1);
+    const auto s13 = sizeof(P2);
     return 0;
 }

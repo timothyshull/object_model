@@ -1,4 +1,4 @@
-#include <iostream>
+#include <type_traits>
 
 template<typename T>
 class A {
@@ -16,10 +16,7 @@ void f(T s);
 
 // function template instantiation
 template<typename T>
-void f(T s)
-{
-    std::cout << s << '\n';
-}
+void f(T s) {}
 
 template void f<double>(double); // instantiates f<double>(double)
 template void f(int); // instantiates f<int>(int), template argument deduced
@@ -28,10 +25,7 @@ template void f(int); // instantiates f<int>(int), template argument deduced
 struct B {
     // member template
     template<typename T>
-    void operator()(const T &obj)
-    {
-        std::cout << obj << "\n";
-    }
+    void operator()(const T &obj) {}
 };
 
 // template specialization
@@ -49,7 +43,7 @@ int main()
     b(1.0);
     b(1);
 
-    std::cout << is_void<char>::value << '\n';
-    std::cout << is_void<void>::value << '\n';
+    const auto iv1 = is_void<char>::value;
+    const auto iv2 = is_void<void>::value;
     return 0;
 }

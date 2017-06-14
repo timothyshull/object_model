@@ -1,5 +1,4 @@
 #include <typeinfo>
-#include <iostream>
 
 struct B {
     virtual void m() {}
@@ -15,7 +14,7 @@ int main()
         auto rd = dynamic_cast<D &>(br);
     }
     catch (std::bad_cast &bc) {
-        std::cerr << "bad_cast: " << bc.what() << '\n';
+        const auto w = bc.what();
     }
 
     try {
@@ -23,7 +22,7 @@ int main()
         auto rd = dynamic_cast<D &>(b);
     }
     catch (std::bad_cast &bc) {
-        std::cerr << "bad_cast: " << bc.what() << '\n';
+        const auto w = bc.what();
     }
     return 0;
 }
