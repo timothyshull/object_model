@@ -1,0 +1,803 @@
+
+*** Dumping AST Record Layout
+         0 | union (anonymous at /usr/include/math.h:232:5)
+         0 |   float __f
+         0 |   unsigned int __u
+           | [sizeof=4, dsize=4, align=4,
+           |  nvsize=4, nvalign=4]
+
+*** Dumping AST Record Layout
+         0 | union (anonymous at /usr/include/math.h:237:5)
+         0 |   double __f
+         0 |   unsigned long long __u
+           | [sizeof=8, dsize=8, align=8,
+           |  nvsize=8, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | struct (anonymous at /usr/include/math.h:245:9)
+         0 |   unsigned long long __m
+         8 |   unsigned short __sexp
+           | [sizeof=16, dsize=16, align=8,
+           |  nvsize=16, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | union (anonymous at /usr/include/math.h:243:5)
+         0 |   long double __ld
+         0 |   struct (anonymous at /usr/include/math.h:245:9) __p
+         0 |     unsigned long long __m
+         8 |     unsigned short __sexp
+           | [sizeof=16, dsize=16, align=16,
+           |  nvsize=16, nvalign=16]
+
+*** Dumping AST Record Layout
+         0 | struct __float2
+         0 |   float __sinval
+         4 |   float __cosval
+           | [sizeof=8, dsize=8, align=4,
+           |  nvsize=8, nvalign=4]
+
+*** Dumping AST Record Layout
+         0 | struct __double2
+         0 |   double __sinval
+         8 |   double __cosval
+           | [sizeof=16, dsize=16, align=8,
+           |  nvsize=16, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | _RuneRange
+         0 |   int __nranges
+         8 |   _RuneEntry * __ranges
+           | [sizeof=16, dsize=16, align=8,
+           |  nvsize=16, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | _RuneLocale
+         0 |   char [8] __magic
+         8 |   char [32] __encoding
+        40 |   __darwin_rune_t (*)(const char *, __darwin_size_t, const char **) __sgetrune
+        48 |   int (*)(__darwin_rune_t, char *, __darwin_size_t, char **) __sputrune
+        56 |   __darwin_rune_t __invalid_rune
+        60 |   __uint32_t [256] __runetype
+      1084 |   __darwin_rune_t [256] __maplower
+      2108 |   __darwin_rune_t [256] __mapupper
+      3136 |   _RuneRange __runetype_ext
+      3136 |     int __nranges
+      3144 |     _RuneEntry * __ranges
+      3152 |   _RuneRange __maplower_ext
+      3152 |     int __nranges
+      3160 |     _RuneEntry * __ranges
+      3168 |   _RuneRange __mapupper_ext
+      3168 |     int __nranges
+      3176 |     _RuneEntry * __ranges
+      3184 |   void * __variable
+      3192 |   int __variable_len
+      3196 |   int __ncharclasses
+      3200 |   _RuneCharClass * __charclasses
+           | [sizeof=3208, dsize=3208, align=8,
+           |  nvsize=3208, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::__libcpp_debug_info
+         0 |   const char * __file_
+         8 |   int __line_
+        16 |   const char * __pred_
+        24 |   const char * __msg_
+           | [sizeof=32, dsize=32, align=8,
+           |  nvsize=32, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::piecewise_construct_t (empty)
+           | [sizeof=1, dsize=1, align=1,
+           |  nvsize=1, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::_PairT
+         0 |   size_t first
+         8 |   size_t second
+           | [sizeof=16, dsize=16, align=8,
+           |  nvsize=16, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | struct (anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/utility:1507:13)
+         0 |   size_t __a
+         8 |   size_t __b
+           | [sizeof=16, dsize=16, align=8,
+           |  nvsize=16, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | union (anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/utility:1504:9)
+         0 |   long double __t
+         0 |   struct (anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/utility:1507:13) __s
+         0 |     size_t __a
+         8 |     size_t __b
+           | [sizeof=16, dsize=16, align=16,
+           |  nvsize=16, nvalign=16]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::allocator_arg_t (empty)
+           | [sizeof=1, dsize=1, align=1,
+           |  nvsize=1, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | class std::__1::tuple<> (empty)
+           | [sizeof=1, dsize=0, align=1,
+           |  nvsize=0, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::__ignore_t<unsigned char> (empty)
+           | [sizeof=1, dsize=1, align=1,
+           |  nvsize=1, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::__has_void_pointer<class std::__1::allocator<char> >::__two
+         0 |   char __lx
+         1 |   char __lxx
+           | [sizeof=2, dsize=2, align=1,
+           |  nvsize=2, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::__has_const_void_pointer<class std::__1::allocator<char> >::__two
+         0 |   char __lx
+         1 |   char __lxx
+           | [sizeof=2, dsize=2, align=1,
+           |  nvsize=2, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::__has_propagate_on_container_copy_assignment<class std::__1::allocator<char> >::__two
+         0 |   char __lx
+         1 |   char __lxx
+           | [sizeof=2, dsize=2, align=1,
+           |  nvsize=2, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::__has_propagate_on_container_swap<class std::__1::allocator<char> >::__two
+         0 |   char __lx
+         1 |   char __lxx
+           | [sizeof=2, dsize=2, align=1,
+           |  nvsize=2, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__long
+         0 |   std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::size_type __cap_
+         8 |   std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::size_type __size_
+        16 |   std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::pointer __data_
+           | [sizeof=24, dsize=24, align=8,
+           |  nvsize=24, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | union std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__short::(anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/string:719:9)
+         0 |   unsigned char __size_
+         0 |   std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::value_type __lx
+           | [sizeof=1, dsize=1, align=1,
+           |  nvsize=1, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__short
+         0 |   union std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__short::(anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/string:719:9) 
+         0 |     unsigned char __size_
+         0 |     std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::value_type __lx
+         1 |   std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::value_type [23] __data_
+           | [sizeof=24, dsize=24, align=1,
+           |  nvsize=24, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | union std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__ulx
+         0 |   struct std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__long __lx
+         0 |     std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::size_type __cap_
+         8 |     std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::size_type __size_
+        16 |     std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::pointer __data_
+         0 |   struct std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__short __lxx
+         0 |     union std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__short::(anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/string:719:9) 
+         0 |       unsigned char __size_
+         0 |       std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::value_type __lx
+         1 |     std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::value_type [23] __data_
+           | [sizeof=24, dsize=24, align=8,
+           |  nvsize=24, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::__has_void_pointer<class std::__1::allocator<wchar_t> >::__two
+         0 |   char __lx
+         1 |   char __lxx
+           | [sizeof=2, dsize=2, align=1,
+           |  nvsize=2, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::__has_const_void_pointer<class std::__1::allocator<wchar_t> >::__two
+         0 |   char __lx
+         1 |   char __lxx
+           | [sizeof=2, dsize=2, align=1,
+           |  nvsize=2, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::__has_propagate_on_container_copy_assignment<class std::__1::allocator<wchar_t> >::__two
+         0 |   char __lx
+         1 |   char __lxx
+           | [sizeof=2, dsize=2, align=1,
+           |  nvsize=2, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::__has_propagate_on_container_swap<class std::__1::allocator<wchar_t> >::__two
+         0 |   char __lx
+         1 |   char __lxx
+           | [sizeof=2, dsize=2, align=1,
+           |  nvsize=2, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__long
+         0 |   std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::size_type __cap_
+         8 |   std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::size_type __size_
+        16 |   std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::pointer __data_
+           | [sizeof=24, dsize=24, align=8,
+           |  nvsize=24, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | union std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__short::(anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/string:719:9)
+         0 |   unsigned char __size_
+         0 |   std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::value_type __lx
+           | [sizeof=4, dsize=4, align=4,
+           |  nvsize=4, nvalign=4]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__short
+         0 |   union std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__short::(anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/string:719:9) 
+         0 |     unsigned char __size_
+         0 |     std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::value_type __lx
+         4 |   std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::value_type [5] __data_
+           | [sizeof=24, dsize=24, align=4,
+           |  nvsize=24, nvalign=4]
+
+*** Dumping AST Record Layout
+         0 | union std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__ulx
+         0 |   struct std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__long __lx
+         0 |     std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::size_type __cap_
+         8 |     std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::size_type __size_
+        16 |     std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::pointer __data_
+         0 |   struct std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__short __lxx
+         0 |     union std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__short::(anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/string:719:9) 
+         0 |       unsigned char __size_
+         0 |       std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::value_type __lx
+         4 |     std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::value_type [5] __data_
+           | [sizeof=24, dsize=24, align=8,
+           |  nvsize=24, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::__has_void_pointer<class std::__1::allocator<char16_t> >::__two
+         0 |   char __lx
+         1 |   char __lxx
+           | [sizeof=2, dsize=2, align=1,
+           |  nvsize=2, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::__has_const_void_pointer<class std::__1::allocator<char16_t> >::__two
+         0 |   char __lx
+         1 |   char __lxx
+           | [sizeof=2, dsize=2, align=1,
+           |  nvsize=2, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::__has_propagate_on_container_copy_assignment<class std::__1::allocator<char16_t> >::__two
+         0 |   char __lx
+         1 |   char __lxx
+           | [sizeof=2, dsize=2, align=1,
+           |  nvsize=2, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::__has_propagate_on_container_swap<class std::__1::allocator<char16_t> >::__two
+         0 |   char __lx
+         1 |   char __lxx
+           | [sizeof=2, dsize=2, align=1,
+           |  nvsize=2, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::basic_string<char16_t, struct std::__1::char_traits<char16_t>, class std::__1::allocator<char16_t> >::__long
+         0 |   std::__1::basic_string<char16_t, struct std::__1::char_traits<char16_t>, class std::__1::allocator<char16_t> >::size_type __cap_
+         8 |   std::__1::basic_string<char16_t, struct std::__1::char_traits<char16_t>, class std::__1::allocator<char16_t> >::size_type __size_
+        16 |   std::__1::basic_string<char16_t, struct std::__1::char_traits<char16_t>, class std::__1::allocator<char16_t> >::pointer __data_
+           | [sizeof=24, dsize=24, align=8,
+           |  nvsize=24, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | union std::__1::basic_string<char16_t, struct std::__1::char_traits<char16_t>, class std::__1::allocator<char16_t> >::__short::(anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/string:719:9)
+         0 |   unsigned char __size_
+         0 |   std::__1::basic_string<char16_t, struct std::__1::char_traits<char16_t>, class std::__1::allocator<char16_t> >::value_type __lx
+           | [sizeof=2, dsize=2, align=2,
+           |  nvsize=2, nvalign=2]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::basic_string<char16_t, struct std::__1::char_traits<char16_t>, class std::__1::allocator<char16_t> >::__short
+         0 |   union std::__1::basic_string<char16_t, struct std::__1::char_traits<char16_t>, class std::__1::allocator<char16_t> >::__short::(anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/string:719:9) 
+         0 |     unsigned char __size_
+         0 |     std::__1::basic_string<char16_t, struct std::__1::char_traits<char16_t>, class std::__1::allocator<char16_t> >::value_type __lx
+         2 |   std::__1::basic_string<char16_t, struct std::__1::char_traits<char16_t>, class std::__1::allocator<char16_t> >::value_type [11] __data_
+           | [sizeof=24, dsize=24, align=2,
+           |  nvsize=24, nvalign=2]
+
+*** Dumping AST Record Layout
+         0 | union std::__1::basic_string<char16_t, struct std::__1::char_traits<char16_t>, class std::__1::allocator<char16_t> >::__ulx
+         0 |   struct std::__1::basic_string<char16_t, struct std::__1::char_traits<char16_t>, class std::__1::allocator<char16_t> >::__long __lx
+         0 |     std::__1::basic_string<char16_t, struct std::__1::char_traits<char16_t>, class std::__1::allocator<char16_t> >::size_type __cap_
+         8 |     std::__1::basic_string<char16_t, struct std::__1::char_traits<char16_t>, class std::__1::allocator<char16_t> >::size_type __size_
+        16 |     std::__1::basic_string<char16_t, struct std::__1::char_traits<char16_t>, class std::__1::allocator<char16_t> >::pointer __data_
+         0 |   struct std::__1::basic_string<char16_t, struct std::__1::char_traits<char16_t>, class std::__1::allocator<char16_t> >::__short __lxx
+         0 |     union std::__1::basic_string<char16_t, struct std::__1::char_traits<char16_t>, class std::__1::allocator<char16_t> >::__short::(anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/string:719:9) 
+         0 |       unsigned char __size_
+         0 |       std::__1::basic_string<char16_t, struct std::__1::char_traits<char16_t>, class std::__1::allocator<char16_t> >::value_type __lx
+         2 |     std::__1::basic_string<char16_t, struct std::__1::char_traits<char16_t>, class std::__1::allocator<char16_t> >::value_type [11] __data_
+           | [sizeof=24, dsize=24, align=8,
+           |  nvsize=24, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::__has_void_pointer<class std::__1::allocator<char32_t> >::__two
+         0 |   char __lx
+         1 |   char __lxx
+           | [sizeof=2, dsize=2, align=1,
+           |  nvsize=2, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::__has_const_void_pointer<class std::__1::allocator<char32_t> >::__two
+         0 |   char __lx
+         1 |   char __lxx
+           | [sizeof=2, dsize=2, align=1,
+           |  nvsize=2, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::__has_propagate_on_container_copy_assignment<class std::__1::allocator<char32_t> >::__two
+         0 |   char __lx
+         1 |   char __lxx
+           | [sizeof=2, dsize=2, align=1,
+           |  nvsize=2, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::__has_propagate_on_container_swap<class std::__1::allocator<char32_t> >::__two
+         0 |   char __lx
+         1 |   char __lxx
+           | [sizeof=2, dsize=2, align=1,
+           |  nvsize=2, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::basic_string<char32_t, struct std::__1::char_traits<char32_t>, class std::__1::allocator<char32_t> >::__long
+         0 |   std::__1::basic_string<char32_t, struct std::__1::char_traits<char32_t>, class std::__1::allocator<char32_t> >::size_type __cap_
+         8 |   std::__1::basic_string<char32_t, struct std::__1::char_traits<char32_t>, class std::__1::allocator<char32_t> >::size_type __size_
+        16 |   std::__1::basic_string<char32_t, struct std::__1::char_traits<char32_t>, class std::__1::allocator<char32_t> >::pointer __data_
+           | [sizeof=24, dsize=24, align=8,
+           |  nvsize=24, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | union std::__1::basic_string<char32_t, struct std::__1::char_traits<char32_t>, class std::__1::allocator<char32_t> >::__short::(anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/string:719:9)
+         0 |   unsigned char __size_
+         0 |   std::__1::basic_string<char32_t, struct std::__1::char_traits<char32_t>, class std::__1::allocator<char32_t> >::value_type __lx
+           | [sizeof=4, dsize=4, align=4,
+           |  nvsize=4, nvalign=4]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::basic_string<char32_t, struct std::__1::char_traits<char32_t>, class std::__1::allocator<char32_t> >::__short
+         0 |   union std::__1::basic_string<char32_t, struct std::__1::char_traits<char32_t>, class std::__1::allocator<char32_t> >::__short::(anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/string:719:9) 
+         0 |     unsigned char __size_
+         0 |     std::__1::basic_string<char32_t, struct std::__1::char_traits<char32_t>, class std::__1::allocator<char32_t> >::value_type __lx
+         4 |   std::__1::basic_string<char32_t, struct std::__1::char_traits<char32_t>, class std::__1::allocator<char32_t> >::value_type [5] __data_
+           | [sizeof=24, dsize=24, align=4,
+           |  nvsize=24, nvalign=4]
+
+*** Dumping AST Record Layout
+         0 | union std::__1::basic_string<char32_t, struct std::__1::char_traits<char32_t>, class std::__1::allocator<char32_t> >::__ulx
+         0 |   struct std::__1::basic_string<char32_t, struct std::__1::char_traits<char32_t>, class std::__1::allocator<char32_t> >::__long __lx
+         0 |     std::__1::basic_string<char32_t, struct std::__1::char_traits<char32_t>, class std::__1::allocator<char32_t> >::size_type __cap_
+         8 |     std::__1::basic_string<char32_t, struct std::__1::char_traits<char32_t>, class std::__1::allocator<char32_t> >::size_type __size_
+        16 |     std::__1::basic_string<char32_t, struct std::__1::char_traits<char32_t>, class std::__1::allocator<char32_t> >::pointer __data_
+         0 |   struct std::__1::basic_string<char32_t, struct std::__1::char_traits<char32_t>, class std::__1::allocator<char32_t> >::__short __lxx
+         0 |     union std::__1::basic_string<char32_t, struct std::__1::char_traits<char32_t>, class std::__1::allocator<char32_t> >::__short::(anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/string:719:9) 
+         0 |       unsigned char __size_
+         0 |       std::__1::basic_string<char32_t, struct std::__1::char_traits<char32_t>, class std::__1::allocator<char32_t> >::value_type __lx
+         4 |     std::__1::basic_string<char32_t, struct std::__1::char_traits<char32_t>, class std::__1::allocator<char32_t> >::value_type [5] __data_
+           | [sizeof=24, dsize=24, align=8,
+           |  nvsize=24, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::__two
+         0 |   char [2] __lx
+           | [sizeof=2, dsize=2, align=1,
+           |  nvsize=2, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | class std::__1::chrono::duration<long long, class std::__1::ratio<1, 1> >
+         0 |   std::__1::chrono::duration<long long, class std::__1::ratio<1, 1> >::rep __rep_
+           | [sizeof=8, dsize=8, align=8,
+           |  nvsize=8, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | struct timespec
+         0 |   __darwin_time_t tv_sec
+         8 |   long tv_nsec
+           | [sizeof=16, dsize=16, align=8,
+           |  nvsize=16, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::defer_lock_t (empty)
+           | [sizeof=1, dsize=1, align=1,
+           |  nvsize=1, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::try_to_lock_t (empty)
+           | [sizeof=1, dsize=1, align=1,
+           |  nvsize=1, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::adopt_lock_t (empty)
+           | [sizeof=1, dsize=1, align=1,
+           |  nvsize=1, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::__struct_double
+         0 |   long double __lx
+           | [sizeof=16, dsize=16, align=16,
+           |  nvsize=16, nvalign=16]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::__struct_double4
+         0 |   double [4] __lx
+           | [sizeof=32, dsize=32, align=8,
+           |  nvsize=32, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::aligned_storage<24, 16>::type
+         0 |   unsigned char [32] __lx
+           | [sizeof=32, dsize=32, align=16,
+           |  nvsize=32, nvalign=16]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::placeholders::__ph<1> (empty)
+           | [sizeof=1, dsize=1, align=1,
+           |  nvsize=1, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::placeholders::__ph<2> (empty)
+           | [sizeof=1, dsize=1, align=1,
+           |  nvsize=1, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::placeholders::__ph<3> (empty)
+           | [sizeof=1, dsize=1, align=1,
+           |  nvsize=1, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::placeholders::__ph<4> (empty)
+           | [sizeof=1, dsize=1, align=1,
+           |  nvsize=1, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::placeholders::__ph<5> (empty)
+           | [sizeof=1, dsize=1, align=1,
+           |  nvsize=1, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::placeholders::__ph<6> (empty)
+           | [sizeof=1, dsize=1, align=1,
+           |  nvsize=1, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::placeholders::__ph<7> (empty)
+           | [sizeof=1, dsize=1, align=1,
+           |  nvsize=1, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::placeholders::__ph<8> (empty)
+           | [sizeof=1, dsize=1, align=1,
+           |  nvsize=1, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::placeholders::__ph<9> (empty)
+           | [sizeof=1, dsize=1, align=1,
+           |  nvsize=1, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::placeholders::__ph<10> (empty)
+           | [sizeof=1, dsize=1, align=1,
+           |  nvsize=1, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::once_flag
+         0 |   unsigned long __state_
+           | [sizeof=8, dsize=8, align=8,
+           |  nvsize=8, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | class std::__1::locale::id
+         0 |   struct std::__1::once_flag __flag_
+         0 |     unsigned long __state_
+         8 |   int32_t __id_
+           | [sizeof=16, dsize=12, align=8,
+           |  nvsize=12, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | class std::__1::__basic_string_common<true> (empty)
+           | [sizeof=1, dsize=1, align=1,
+           |  nvsize=1, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | class std::__1::allocator<char> (empty)
+           | [sizeof=1, dsize=0, align=1,
+           |  nvsize=0, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__raw
+         0 |   std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::size_type [3] __words
+           | [sizeof=24, dsize=24, align=8,
+           |  nvsize=24, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | union std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__rep::(anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/string:740:9)
+         0 |   struct std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__long __l
+         0 |     std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::size_type __cap_
+         8 |     std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::size_type __size_
+        16 |     std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::pointer __data_
+         0 |   struct std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__short __s
+         0 |     union std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__short::(anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/string:719:9) 
+         0 |       unsigned char __size_
+         0 |       std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::value_type __lx
+         1 |     std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::value_type [23] __data_
+         0 |   struct std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__raw __r
+         0 |     std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::size_type [3] __words
+           | [sizeof=24, dsize=24, align=8,
+           |  nvsize=24, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__rep
+         0 |   union std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__rep::(anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/string:740:9) 
+         0 |     struct std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__long __l
+         0 |       std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::size_type __cap_
+         8 |       std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::size_type __size_
+        16 |       std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::pointer __data_
+         0 |     struct std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__short __s
+         0 |       union std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__short::(anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/string:719:9) 
+         0 |         unsigned char __size_
+         0 |         std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::value_type __lx
+         1 |       std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::value_type [23] __data_
+         0 |     struct std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__raw __r
+         0 |       std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::size_type [3] __words
+           | [sizeof=24, dsize=24, align=8,
+           |  nvsize=24, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | class std::__1::__libcpp_compressed_pair_imp<struct std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__rep, class std::__1::allocator<char>, 2>
+         0 |   class std::__1::allocator<char> (base) (empty)
+         0 |   struct std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__rep __first_
+         0 |     union std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__rep::(anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/string:740:9) 
+         0 |       struct std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__long __l
+         0 |         std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::size_type __cap_
+         8 |         std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::size_type __size_
+        16 |         std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::pointer __data_
+         0 |       struct std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__short __s
+         0 |         union std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__short::(anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/string:719:9) 
+         0 |           unsigned char __size_
+         0 |           std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::value_type __lx
+         1 |         std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::value_type [23] __data_
+         0 |       struct std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__raw __r
+         0 |         std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::size_type [3] __words
+           | [sizeof=24, dsize=24, align=8,
+           |  nvsize=24, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | class std::__1::__compressed_pair<struct std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__rep, class std::__1::allocator<char> >
+         0 |   class std::__1::__libcpp_compressed_pair_imp<struct std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__rep, class std::__1::allocator<char>, 2> (base)
+         0 |     class std::__1::allocator<char> (base) (empty)
+         0 |     struct std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__rep __first_
+         0 |       union std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__rep::(anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/string:740:9) 
+         0 |         struct std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__long __l
+         0 |           std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::size_type __cap_
+         8 |           std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::size_type __size_
+        16 |           std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::pointer __data_
+         0 |         struct std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__short __s
+         0 |           union std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__short::(anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/string:719:9) 
+         0 |             unsigned char __size_
+         0 |             std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::value_type __lx
+         1 |           std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::value_type [23] __data_
+         0 |         struct std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__raw __r
+         0 |           std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::size_type [3] __words
+           | [sizeof=24, dsize=24, align=8,
+           |  nvsize=24, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | class std::__1::basic_string<char>
+         0 |   class std::__1::__basic_string_common<true> (base) (empty)
+         0 |   class std::__1::__compressed_pair<struct std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__rep, class std::__1::allocator<char> > __r_
+         0 |     class std::__1::__libcpp_compressed_pair_imp<struct std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__rep, class std::__1::allocator<char>, 2> (base)
+         0 |       class std::__1::allocator<char> (base) (empty)
+         0 |       struct std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__rep __first_
+         0 |         union std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__rep::(anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/string:740:9) 
+         0 |           struct std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__long __l
+         0 |             std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::size_type __cap_
+         8 |             std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::size_type __size_
+        16 |             std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::pointer __data_
+         0 |           struct std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__short __s
+         0 |             union std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__short::(anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/string:719:9) 
+         0 |               unsigned char __size_
+         0 |               std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::value_type __lx
+         1 |             std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::value_type [23] __data_
+         0 |           struct std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::__raw __r
+         0 |             std::__1::basic_string<char, struct std::__1::char_traits<char>, class std::__1::allocator<char> >::size_type [3] __words
+           | [sizeof=24, dsize=24, align=8,
+           |  nvsize=24, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | class std::__1::allocator<wchar_t> (empty)
+           | [sizeof=1, dsize=0, align=1,
+           |  nvsize=0, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__raw
+         0 |   std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::size_type [3] __words
+           | [sizeof=24, dsize=24, align=8,
+           |  nvsize=24, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | union std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__rep::(anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/string:740:9)
+         0 |   struct std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__long __l
+         0 |     std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::size_type __cap_
+         8 |     std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::size_type __size_
+        16 |     std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::pointer __data_
+         0 |   struct std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__short __s
+         0 |     union std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__short::(anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/string:719:9) 
+         0 |       unsigned char __size_
+         0 |       std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::value_type __lx
+         4 |     std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::value_type [5] __data_
+         0 |   struct std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__raw __r
+         0 |     std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::size_type [3] __words
+           | [sizeof=24, dsize=24, align=8,
+           |  nvsize=24, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__rep
+         0 |   union std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__rep::(anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/string:740:9) 
+         0 |     struct std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__long __l
+         0 |       std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::size_type __cap_
+         8 |       std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::size_type __size_
+        16 |       std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::pointer __data_
+         0 |     struct std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__short __s
+         0 |       union std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__short::(anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/string:719:9) 
+         0 |         unsigned char __size_
+         0 |         std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::value_type __lx
+         4 |       std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::value_type [5] __data_
+         0 |     struct std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__raw __r
+         0 |       std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::size_type [3] __words
+           | [sizeof=24, dsize=24, align=8,
+           |  nvsize=24, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | class std::__1::__libcpp_compressed_pair_imp<struct std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__rep, class std::__1::allocator<wchar_t>, 2>
+         0 |   class std::__1::allocator<wchar_t> (base) (empty)
+         0 |   struct std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__rep __first_
+         0 |     union std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__rep::(anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/string:740:9) 
+         0 |       struct std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__long __l
+         0 |         std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::size_type __cap_
+         8 |         std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::size_type __size_
+        16 |         std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::pointer __data_
+         0 |       struct std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__short __s
+         0 |         union std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__short::(anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/string:719:9) 
+         0 |           unsigned char __size_
+         0 |           std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::value_type __lx
+         4 |         std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::value_type [5] __data_
+         0 |       struct std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__raw __r
+         0 |         std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::size_type [3] __words
+           | [sizeof=24, dsize=24, align=8,
+           |  nvsize=24, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | class std::__1::__compressed_pair<struct std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__rep, class std::__1::allocator<wchar_t> >
+         0 |   class std::__1::__libcpp_compressed_pair_imp<struct std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__rep, class std::__1::allocator<wchar_t>, 2> (base)
+         0 |     class std::__1::allocator<wchar_t> (base) (empty)
+         0 |     struct std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__rep __first_
+         0 |       union std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__rep::(anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/string:740:9) 
+         0 |         struct std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__long __l
+         0 |           std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::size_type __cap_
+         8 |           std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::size_type __size_
+        16 |           std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::pointer __data_
+         0 |         struct std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__short __s
+         0 |           union std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__short::(anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/string:719:9) 
+         0 |             unsigned char __size_
+         0 |             std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::value_type __lx
+         4 |           std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::value_type [5] __data_
+         0 |         struct std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__raw __r
+         0 |           std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::size_type [3] __words
+           | [sizeof=24, dsize=24, align=8,
+           |  nvsize=24, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | class std::__1::basic_string<wchar_t>
+         0 |   class std::__1::__basic_string_common<true> (base) (empty)
+         0 |   class std::__1::__compressed_pair<struct std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__rep, class std::__1::allocator<wchar_t> > __r_
+         0 |     class std::__1::__libcpp_compressed_pair_imp<struct std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__rep, class std::__1::allocator<wchar_t>, 2> (base)
+         0 |       class std::__1::allocator<wchar_t> (base) (empty)
+         0 |       struct std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__rep __first_
+         0 |         union std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__rep::(anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/string:740:9) 
+         0 |           struct std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__long __l
+         0 |             std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::size_type __cap_
+         8 |             std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::size_type __size_
+        16 |             std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::pointer __data_
+         0 |           struct std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__short __s
+         0 |             union std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__short::(anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/string:719:9) 
+         0 |               unsigned char __size_
+         0 |               std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::value_type __lx
+         4 |             std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::value_type [5] __data_
+         0 |           struct std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::__raw __r
+         0 |             std::__1::basic_string<wchar_t, struct std::__1::char_traits<wchar_t>, class std::__1::allocator<wchar_t> >::size_type [3] __words
+           | [sizeof=24, dsize=24, align=8,
+           |  nvsize=24, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::money_base::pattern
+         0 |   char [4] field
+           | [sizeof=4, dsize=4, align=1,
+           |  nvsize=4, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | class std::__1::__bitset<0, 0> (empty)
+           | [sizeof=1, dsize=0, align=1,
+           |  nvsize=0, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | class P3
+         0 |   double _x
+         8 |   double _y
+        16 |   double _z
+           | [sizeof=24, dsize=24, align=8,
+           |  nvsize=24, nvalign=8]
+
+*** Dumping IRgen Record Layout
+Record: CXXRecordDecl 0x7fbf44486fc8 <object_model_refined/4_functions/01_nonstatic_member_functions.cpp:4:1, line:21:1> line:4:7 class P3 definition
+|-CXXRecordDecl 0x7fbf444870e8 <col:1, col:7> col:7 implicit referenced class P3
+|-AccessSpecDecl 0x7fbf44487180 <line:5:1, col:7> col:1 public
+|-CXXConstructorDecl 0x7fbf44487218 <line:6:5, col:18> col:5 P3 'void (void)' default trivial noexcept-unevaluated 0x7fbf44487218
+|-CXXConstructorDecl 0x7fbf444874b0 <line:8:5, col:61> col:5 P3 'void (double, double, double)'
+| |-ParmVarDecl 0x7fbf444872d8 <col:8, col:15> col:15 used x 'double'
+| |-ParmVarDecl 0x7fbf44487350 <col:18, col:25> col:25 used y 'double'
+| |-ParmVarDecl 0x7fbf444873c8 <col:28, col:35> col:35 used z 'double'
+| |-CXXCtorInitializer Field 0x7fbf444877c0 '_x' 'double'
+| | `-InitListExpr 0x7fbf44487b78 <col:42, col:44> 'double'
+| |   `-ImplicitCastExpr 0x7fbf44487bb8 <col:43> 'double' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fbf44487b08 <col:43> 'double' lvalue ParmVar 0x7fbf444872d8 'x' 'double'
+| |-CXXCtorInitializer Field 0x7fbf44487820 '_y' 'double'
+| | `-InitListExpr 0x7fbf44487c70 <col:49, col:51> 'double'
+| |   `-ImplicitCastExpr 0x7fbf44487cb0 <col:50> 'double' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fbf44487c00 <col:50> 'double' lvalue ParmVar 0x7fbf44487350 'y' 'double'
+| |-CXXCtorInitializer Field 0x7fbf44487880 '_z' 'double'
+| | `-InitListExpr 0x7fbf44487d68 <col:56, col:58> 'double'
+| |   `-ImplicitCastExpr 0x7fbf44487da8 <col:57> 'double' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fbf44487cf8 <col:57> 'double' lvalue ParmVar 0x7fbf444873c8 'z' 'double'
+| `-CompoundStmt 0x7fbf44487e08 <col:60, col:61>
+|-CXXDestructorDecl 0x7fbf444875c0 <line:10:5, col:19> col:5 ~P3 'void (void) noexcept' default trivial
+|-CXXMethodDecl 0x7fbf444876e8 <line:12:5, col:17> col:12 m1 'double (void) const'
+|-AccessSpecDecl 0x7fbf44487780 <line:14:1, col:8> col:1 private
+|-FieldDecl 0x7fbf444877c0 <line:15:5, col:12> col:12 referenced _x 'double'
+|-FieldDecl 0x7fbf44487820 <line:16:5, col:12> col:12 referenced _y 'double'
+|-FieldDecl 0x7fbf44487880 <line:17:5, col:12> col:12 referenced _z 'double'
+`-FriendDecl 0x7fbf44487a58 <line:19:5, line:20:30> col:12
+  `-FunctionDecl 0x7fbf444879a8 parent 0x7fbf44828cd0 <line:19:5, line:20:30> col:12 nm1 'double (const class P3 *)'
+    `-ParmVarDecl 0x7fbf444878d8 <col:16, col:26> col:26 self 'const class P3 *'
+
+Layout: <CGRecordLayout
+  LLVMType:%class.P3 = type { double, double, double }
+  NonVirtualBaseLLVMType:%class.P3 = type { double, double, double }
+  IsZeroInitializable:1
+  BitFields:[
+]>
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::pair<unsigned long, unsigned long>
+         0 |   unsigned long first
+         8 |   unsigned long second
+           | [sizeof=16, dsize=16, align=8,
+           |  nvsize=16, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | union (anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/utility:1185:9)
+         0 |   float __t
+         0 |   size_t __a
+           | [sizeof=8, dsize=8, align=8,
+           |  nvsize=8, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | union (anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/utility:1203:9)
+         0 |   double __t
+         0 |   size_t __a
+           | [sizeof=8, dsize=8, align=8,
+           |  nvsize=8, nvalign=8]

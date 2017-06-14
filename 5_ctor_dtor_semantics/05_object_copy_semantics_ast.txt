@@ -1,0 +1,17 @@
+TranslationUnitDecl 0x7ff8448196d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff844819c60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff844819940 '__int128'
+|-TypedefDecl 0x7ff844819cd0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff844819960 'unsigned __int128'
+|-TypedefDecl 0x7ff84481a018 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff844819dc0 'struct __NSConstantString_tag'
+|   `-CXXRecord 0x7ff844819d28 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff84481a0b0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff84481a070 'char *'
+|   `-BuiltinType 0x7ff844819760 'char'
+|-TypedefDecl 0x7ff844045c00 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff84481a390 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff84481a1a0 'struct __va_list_tag'
+|     `-CXXRecord 0x7ff84481a108 '__va_list_tag'
+`-FunctionDecl 0x7ff844045d48 <object_model_refined/5_ctor_dtor_semantics/05_object_copy_semantics.cpp:260:1, col:13> col:5 main 'int (void)'
+  `-CompoundStmt 0x7ff844045e48 <col:12, col:13>

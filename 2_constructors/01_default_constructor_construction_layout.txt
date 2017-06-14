@@ -1,0 +1,40 @@
+
+*** Dumping AST Record Layout
+         0 | struct X
+         0 |   double x
+         8 |   double y
+           | [sizeof=16, dsize=16, align=8,
+           |  nvsize=16, nvalign=8]
+
+*** Dumping IRgen Record Layout
+Record: CXXRecordDecl 0x7f9126067258 <object_model_refined/2_constructors/01_default_constructor_construction.cpp:5:1, line:8:1> line:5:8 referenced struct X definition
+|-CXXRecordDecl 0x7f9126067378 <col:1, col:8> col:8 implicit struct X
+|-FieldDecl 0x7f9126067428 <line:6:5, col:12> col:12 x 'double'
+`-FieldDecl 0x7f9126067488 <line:7:5, col:12> col:12 y 'double'
+
+Layout: <CGRecordLayout
+  LLVMType:%struct.X = type { double, double }
+  NonVirtualBaseLLVMType:%struct.X = type { double, double }
+  IsZeroInitializable:1
+  BitFields:[
+]>
+
+*** Dumping AST Record Layout
+         0 | struct Y
+         0 |   double value
+         8 |   struct Y * next
+           | [sizeof=16, dsize=16, align=8,
+           |  nvsize=16, nvalign=8]
+
+*** Dumping IRgen Record Layout
+Record: CXXRecordDecl 0x7f91260674f0 <object_model_refined/2_constructors/01_default_constructor_construction.cpp:10:1, line:13:1> line:10:8 referenced struct Y definition
+|-CXXRecordDecl 0x7f9126067618 <col:1, col:8> col:8 implicit referenced struct Y
+|-FieldDecl 0x7f91260676c8 <line:11:5, col:12> col:12 value 'double'
+`-FieldDecl 0x7f9126067748 <line:12:5, col:8> col:8 next 'struct Y *'
+
+Layout: <CGRecordLayout
+  LLVMType:%struct.Y = type { double, %struct.Y* }
+  NonVirtualBaseLLVMType:%struct.Y = type { double, %struct.Y* }
+  IsZeroInitializable:1
+  BitFields:[
+]>

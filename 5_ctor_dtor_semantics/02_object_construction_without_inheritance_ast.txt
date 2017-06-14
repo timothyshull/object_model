@@ -1,0 +1,122 @@
+TranslationUnitDecl 0x7fbdde030ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbdde031060 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbdde030d40 '__int128'
+|-TypedefDecl 0x7fbdde0310d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbdde030d60 'unsigned __int128'
+|-TypedefDecl 0x7fbdde031418 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbdde0311c0 'struct __NSConstantString_tag'
+|   `-CXXRecord 0x7fbdde031128 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbdde0314b0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbdde031470 'char *'
+|   `-BuiltinType 0x7fbdde030b60 'char'
+|-TypedefDecl 0x7fbdde063200 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbdde031790 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbdde0315a0 'struct __va_list_tag'
+|     `-CXXRecord 0x7fbdde031508 '__va_list_tag'
+|-CXXRecordDecl 0x7fbdde063258 <object_model_refined/5_ctor_dtor_semantics/02_object_construction_without_inheritance.cpp:1:1, line:5:1> line:1:8 referenced struct Point definition
+| |-CXXRecordDecl 0x7fbdde063378 <col:1, col:8> col:8 implicit struct Point
+| |-FieldDecl 0x7fbdde063428 <line:2:5, col:12> col:12 referenced x 'double'
+| |-FieldDecl 0x7fbdde063488 <line:3:5, col:12> col:12 referenced y 'double'
+| |-FieldDecl 0x7fbdde0634e8 <line:4:5, col:12> col:12 referenced z 'double'
+| |-CXXMethodDecl 0x7fbdde071ae8 <line:1:8> col:8 implicit used constexpr operator= 'struct Point &(const struct Point &) noexcept' inline default trivial
+| | |-ParmVarDecl 0x7fbdde071c00 <col:8> col:8 used 'const struct Point &'
+| | `-CompoundStmt 0x7fbdde0721b0 <col:8>
+| |   |-BinaryOperator 0x7fbdde071f58 <col:8> 'double' lvalue '='
+| |   | |-MemberExpr 0x7fbdde071ea8 <col:8> 'double' lvalue ->x 0x7fbdde063428
+| |   | | `-CXXThisExpr 0x7fbdde071e90 <col:8> 'struct Point *' this
+| |   | `-ImplicitCastExpr 0x7fbdde071f40 <col:8> 'double' <LValueToRValue>
+| |   |   `-MemberExpr 0x7fbdde071f08 <col:8> 'const double' lvalue .x 0x7fbdde063428
+| |   |     `-DeclRefExpr 0x7fbdde071ee0 <col:8> 'const struct Point' lvalue ParmVar 0x7fbdde071c00 '' 'const struct Point &'
+| |   |-BinaryOperator 0x7fbdde072048 <col:8> 'double' lvalue '='
+| |   | |-MemberExpr 0x7fbdde071f98 <col:8> 'double' lvalue ->y 0x7fbdde063488
+| |   | | `-CXXThisExpr 0x7fbdde071f80 <col:8> 'struct Point *' this
+| |   | `-ImplicitCastExpr 0x7fbdde072030 <col:8> 'double' <LValueToRValue>
+| |   |   `-MemberExpr 0x7fbdde071ff8 <col:8> 'const double' lvalue .y 0x7fbdde063488
+| |   |     `-DeclRefExpr 0x7fbdde071fd0 <col:8> 'const struct Point' lvalue ParmVar 0x7fbdde071c00 '' 'const struct Point &'
+| |   |-BinaryOperator 0x7fbdde072138 <col:8> 'double' lvalue '='
+| |   | |-MemberExpr 0x7fbdde072088 <col:8> 'double' lvalue ->z 0x7fbdde0634e8
+| |   | | `-CXXThisExpr 0x7fbdde072070 <col:8> 'struct Point *' this
+| |   | `-ImplicitCastExpr 0x7fbdde072120 <col:8> 'double' <LValueToRValue>
+| |   |   `-MemberExpr 0x7fbdde0720e8 <col:8> 'const double' lvalue .z 0x7fbdde0634e8
+| |   |     `-DeclRefExpr 0x7fbdde0720c0 <col:8> 'const struct Point' lvalue ParmVar 0x7fbdde071c00 '' 'const struct Point &'
+| |   `-ReturnStmt 0x7fbdde072198 <col:8>
+| |     `-UnaryOperator 0x7fbdde072178 <col:8> 'struct Point' lvalue prefix '*'
+| |       `-CXXThisExpr 0x7fbdde072160 <col:8> 'struct Point *' this
+| |-CXXMethodDecl 0x7fbdde071c98 <col:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct Point &(struct Point &&)' inline default trivial noexcept-unevaluated 0x7fbdde071c98
+| | `-ParmVarDecl 0x7fbdde071db0 <col:8> col:8 'struct Point &&'
+| |-CXXDestructorDecl 0x7fbdde0722e8 <col:8> col:8 implicit referenced ~Point 'void (void) noexcept' inline default trivial
+| |-CXXConstructorDecl 0x7fbdde072468 <col:8> col:8 implicit Point 'void (void)' inline default trivial noexcept-unevaluated 0x7fbdde072468
+| |-CXXConstructorDecl 0x7fbdde072548 <col:8> col:8 implicit constexpr Point 'void (const struct Point &)' inline default trivial noexcept-unevaluated 0x7fbdde072548
+| | `-ParmVarDecl 0x7fbdde072670 <col:8> col:8 'const struct Point &'
+| `-CXXConstructorDecl 0x7fbdde0726d8 <col:8> col:8 implicit used constexpr Point 'void (struct Point &&) noexcept' inline default trivial
+|   |-ParmVarDecl 0x7fbdde072800 <col:8> col:8 used 'struct Point &&'
+|   |-CXXCtorInitializer Field 0x7fbdde063428 'x' 'double'
+|   | `-ImplicitCastExpr 0x7fbdde072958 <col:8> 'double' <LValueToRValue>
+|   |   `-MemberExpr 0x7fbdde072920 <col:8> 'double' xvalue .x 0x7fbdde063428
+|   |     `-CXXStaticCastExpr 0x7fbdde0728f0 <col:8> 'struct Point' xvalue static_cast<struct Point &&> <NoOp>
+|   |       `-DeclRefExpr 0x7fbdde0728b8 <col:8> 'struct Point' lvalue ParmVar 0x7fbdde072800 '' 'struct Point &&'
+|   |-CXXCtorInitializer Field 0x7fbdde063488 'y' 'double'
+|   | `-ImplicitCastExpr 0x7fbdde08d638 <col:8> 'double' <LValueToRValue>
+|   |   `-MemberExpr 0x7fbdde08d600 <col:8> 'double' xvalue .y 0x7fbdde063488
+|   |     `-CXXStaticCastExpr 0x7fbdde0729d0 <col:8> 'struct Point' xvalue static_cast<struct Point &&> <NoOp>
+|   |       `-DeclRefExpr 0x7fbdde072998 <col:8> 'struct Point' lvalue ParmVar 0x7fbdde072800 '' 'struct Point &&'
+|   |-CXXCtorInitializer Field 0x7fbdde0634e8 'z' 'double'
+|   | `-ImplicitCastExpr 0x7fbdde08d718 <col:8> 'double' <LValueToRValue>
+|   |   `-MemberExpr 0x7fbdde08d6e0 <col:8> 'double' xvalue .z 0x7fbdde0634e8
+|   |     `-CXXStaticCastExpr 0x7fbdde08d6b0 <col:8> 'struct Point' xvalue static_cast<struct Point &&> <NoOp>
+|   |       `-DeclRefExpr 0x7fbdde08d678 <col:8> 'struct Point' lvalue ParmVar 0x7fbdde072800 '' 'struct Point &&'
+|   `-CompoundStmt 0x7fbdde08d770 <col:8>
+|-VarDecl 0x7fbdde063560 <line:7:1, col:14> col:7 global 'struct Point' listinit
+| `-InitListExpr 0x7fbdde063640 <col:13, col:14> 'struct Point'
+|   |-ImplicitValueInitExpr 0x7fbdde063698 <<invalid sloc>> 'double'
+|   |-ImplicitValueInitExpr 0x7fbdde0636a8 <<invalid sloc>> 'double'
+|   `-ImplicitValueInitExpr 0x7fbdde0636b8 <<invalid sloc>> 'double'
+|-FunctionDecl 0x7fbdde063720 <line:9:1, line:16:1> line:9:7 used func1 'struct Point (void)'
+| `-CompoundStmt 0x7fbdde08d7d8 <line:10:1, line:16:1>
+|   |-DeclStmt 0x7fbdde063938 <line:11:5, col:31>
+|   | `-VarDecl 0x7fbdde0637c8 <col:5, col:30> col:11 used local 'struct Point' nrvo listinit
+|   |   `-InitListExpr 0x7fbdde0638e0 <col:16, col:30> 'struct Point'
+|   |     |-FloatingLiteral 0x7fbdde063828 <col:17> 'double' 0.000000e+00
+|   |     |-FloatingLiteral 0x7fbdde063848 <col:22> 'double' 1.000000e+00
+|   |     `-FloatingLiteral 0x7fbdde063868 <col:27> 'double' 2.000000e+00
+|   |-DeclStmt 0x7fbdde0641c8 <line:12:5, col:30>
+|   | `-VarDecl 0x7fbdde063988 <col:5, col:29> col:12 used heap 'struct Point *' cinit
+|   |   `-CXXNewExpr 0x7fbdde064170 <col:19, col:29> 'struct Point *' Function 0x7fbdde063b48 'operator new' 'void *(unsigned long)'
+|   |     `-InitListExpr 0x7fbdde0640e8 <col:28, col:29> 'struct Point'
+|   |       |-ImplicitValueInitExpr 0x7fbdde064140 <<invalid sloc>> 'double'
+|   |       |-ImplicitValueInitExpr 0x7fbdde064150 <<invalid sloc>> 'double'
+|   |       `-ImplicitValueInitExpr 0x7fbdde064160 <<invalid sloc>> 'double'
+|   |-CXXOperatorCallExpr 0x7fbdde072260 <line:13:5, col:13> 'struct Point' lvalue
+|   | |-ImplicitCastExpr 0x7fbdde072248 <col:11> 'struct Point &(*)(const struct Point &) noexcept' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fbdde071e68 <col:11> 'struct Point &(const struct Point &) noexcept' lvalue CXXMethod 0x7fbdde071ae8 'operator=' 'struct Point &(const struct Point &) noexcept'
+|   | |-UnaryOperator 0x7fbdde071a40 <col:5, col:6> 'struct Point' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7fbdde071a28 <col:6> 'struct Point *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fbdde071a00 <col:6> 'struct Point *' lvalue Var 0x7fbdde063988 'heap' 'struct Point *'
+|   | `-ImplicitCastExpr 0x7fbdde071e18 <col:13> 'const struct Point' lvalue <NoOp>
+|   |   `-DeclRefExpr 0x7fbdde071a60 <col:13> 'struct Point' lvalue Var 0x7fbdde0637c8 'local' 'struct Point'
+|   |-CXXDeleteExpr 0x7fbdde0723f8 <line:14:5, col:12> 'void' Function 0x7fbdde063e58 'operator delete' 'void (void *) noexcept'
+|   | `-ImplicitCastExpr 0x7fbdde0722d0 <col:12> 'struct Point *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fbdde0722a8 <col:12> 'struct Point *' lvalue Var 0x7fbdde063988 'heap' 'struct Point *'
+|   `-ReturnStmt 0x7fbdde08d7c0 <line:15:5, col:12>
+|     `-CXXConstructExpr 0x7fbdde08d788 <col:12> 'struct Point' 'void (struct Point &&) noexcept' elidable
+|       `-ImplicitCastExpr 0x7fbdde072868 <col:12> 'struct Point' xvalue <NoOp>
+|         `-DeclRefExpr 0x7fbdde072420 <col:12> 'struct Point' lvalue Var 0x7fbdde0637c8 'local' 'struct Point'
+|-FunctionDecl 0x7fbdde063b48 <<invalid sloc>> <invalid sloc> implicit used operator new 'void *(unsigned long)'
+| |-ParmVarDecl 0x7fbdde063c28 <<invalid sloc>> <invalid sloc> implicit 'unsigned long'
+| `-VisibilityAttr 0x7fbdde063be0 <<invalid sloc>> Implicit Default
+|-FunctionDecl 0x7fbdde063c90 <<invalid sloc>> <invalid sloc> implicit operator new[] 'void *(unsigned long)'
+| |-ParmVarDecl 0x7fbdde063d70 <<invalid sloc>> <invalid sloc> implicit 'unsigned long'
+| `-VisibilityAttr 0x7fbdde063d28 <<invalid sloc>> Implicit Default
+|-FunctionDecl 0x7fbdde063e58 <<invalid sloc>> <invalid sloc> implicit used operator delete 'void (void *) noexcept'
+| |-ParmVarDecl 0x7fbdde063f38 <<invalid sloc>> <invalid sloc> implicit 'void *'
+| `-VisibilityAttr 0x7fbdde063ef0 <<invalid sloc>> Implicit Default
+|-FunctionDecl 0x7fbdde063fa0 <<invalid sloc>> <invalid sloc> implicit operator delete[] 'void (void *) noexcept'
+| |-ParmVarDecl 0x7fbdde064080 <<invalid sloc>> <invalid sloc> implicit 'void *'
+| `-VisibilityAttr 0x7fbdde064038 <<invalid sloc>> Implicit Default
+`-FunctionDecl 0x7fbdde08d878 <line:18:1, line:22:1> line:18:5 main 'int (void)'
+  `-CompoundStmt 0x7fbdde08da98 <line:19:1, line:22:1>
+    |-CallExpr 0x7fbdde08da00 <line:20:5, col:11> 'struct Point'
+    | `-ImplicitCastExpr 0x7fbdde08d9e8 <col:5> 'struct Point (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fbdde08d990 <col:5> 'struct Point (void)' lvalue Function 0x7fbdde063720 'func1' 'struct Point (void)'
+    `-ReturnStmt 0x7fbdde08da80 <line:21:5, col:12>
+      `-IntegerLiteral 0x7fbdde08da60 <col:12> 'int' 0

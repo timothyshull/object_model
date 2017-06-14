@@ -1,0 +1,42 @@
+
+*** Dumping AST Record Layout
+         0 | struct P1
+         0 |   double x
+         8 |   double y
+           | [sizeof=16, dsize=16, align=8,
+           |  nvsize=16, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | struct P2
+         0 |   double x
+         8 |   double y
+        16 |   double z
+           | [sizeof=24, dsize=24, align=8,
+           |  nvsize=24, nvalign=8]
+
+*** Dumping IRgen Record Layout
+Record: CXXRecordDecl 0x7fc2df867258 <object_model_refined/3_data/03_inheritance_and_the_data_members.cpp:2:1, line:5:1> line:2:8 referenced struct P1 definition
+|-CXXRecordDecl 0x7fc2df867378 <col:1, col:8> col:8 implicit struct P1
+|-FieldDecl 0x7fc2df867428 <line:3:5, col:12> col:12 referenced x 'double'
+`-FieldDecl 0x7fc2df867488 <line:4:5, col:12> col:12 referenced y 'double'
+
+Layout: <CGRecordLayout
+  LLVMType:%struct.P1 = type { double, double }
+  NonVirtualBaseLLVMType:%struct.P1 = type { double, double }
+  IsZeroInitializable:1
+  BitFields:[
+]>
+
+*** Dumping IRgen Record Layout
+Record: CXXRecordDecl 0x7fc2df8674f0 <object_model_refined/3_data/03_inheritance_and_the_data_members.cpp:7:1, line:11:1> line:7:8 referenced struct P2 definition
+|-CXXRecordDecl 0x7fc2df867618 <col:1, col:8> col:8 implicit struct P2
+|-FieldDecl 0x7fc2df8676c8 <line:8:5, col:12> col:12 referenced x 'double'
+|-FieldDecl 0x7fc2df867728 <line:9:5, col:12> col:12 referenced y 'double'
+`-FieldDecl 0x7fc2df867788 <line:10:5, col:12> col:12 referenced z 'double'
+
+Layout: <CGRecordLayout
+  LLVMType:%struct.P2 = type { double, double, double }
+  NonVirtualBaseLLVMType:%struct.P2 = type { double, double, double }
+  IsZeroInitializable:1
+  BitFields:[
+]>

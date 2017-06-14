@@ -1,0 +1,17 @@
+TranslationUnitDecl 0x7f9ce10196d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9ce1019c60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9ce1019940 '__int128'
+|-TypedefDecl 0x7f9ce1019cd0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9ce1019960 'unsigned __int128'
+|-TypedefDecl 0x7f9ce101a018 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9ce1019dc0 'struct __NSConstantString_tag'
+|   `-CXXRecord 0x7f9ce1019d28 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9ce101a0b0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9ce101a070 'char *'
+|   `-BuiltinType 0x7f9ce1019760 'char'
+|-TypedefDecl 0x7f9ce104be00 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9ce101a390 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9ce101a1a0 'struct __va_list_tag'
+|     `-CXXRecord 0x7f9ce101a108 '__va_list_tag'
+`-FunctionDecl 0x7f9ce104beb8 <object_model_refined/2_constructors/11_member_initialization_list.cpp:1:1, col:13> col:5 main 'int (void)'
+  `-CompoundStmt 0x7f9ce104bfb8 <col:12, col:13>

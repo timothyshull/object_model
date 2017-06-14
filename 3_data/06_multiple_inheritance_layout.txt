@@ -1,0 +1,104 @@
+
+*** Dumping AST Record Layout
+         0 | union (anonymous at /usr/include/math.h:232:5)
+         0 |   float __f
+         0 |   unsigned int __u
+           | [sizeof=4, dsize=4, align=4,
+           |  nvsize=4, nvalign=4]
+
+*** Dumping AST Record Layout
+         0 | union (anonymous at /usr/include/math.h:237:5)
+         0 |   double __f
+         0 |   unsigned long long __u
+           | [sizeof=8, dsize=8, align=8,
+           |  nvsize=8, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | struct (anonymous at /usr/include/math.h:245:9)
+         0 |   unsigned long long __m
+         8 |   unsigned short __sexp
+           | [sizeof=16, dsize=16, align=8,
+           |  nvsize=16, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | union (anonymous at /usr/include/math.h:243:5)
+         0 |   long double __ld
+         0 |   struct (anonymous at /usr/include/math.h:245:9) __p
+         0 |     unsigned long long __m
+         8 |     unsigned short __sexp
+           | [sizeof=16, dsize=16, align=16,
+           |  nvsize=16, nvalign=16]
+
+*** Dumping AST Record Layout
+         0 | struct __float2
+         0 |   float __sinval
+         4 |   float __cosval
+           | [sizeof=8, dsize=8, align=4,
+           |  nvsize=8, nvalign=4]
+
+*** Dumping AST Record Layout
+         0 | struct __double2
+         0 |   double __sinval
+         8 |   double __cosval
+           | [sizeof=16, dsize=16, align=8,
+           |  nvsize=16, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | struct P1
+         0 |   double x
+           | [sizeof=8, dsize=8, align=8,
+           |  nvsize=8, nvalign=8]
+
+*** Dumping IRgen Record Layout
+Record: CXXRecordDecl 0x7fecd5811a38 <object_model_refined/3_data/06_multiple_inheritance.cpp:3:1, line:5:1> line:3:8 referenced struct P1 definition
+|-CXXRecordDecl 0x7fecd5811b58 <col:1, col:8> col:8 implicit struct P1
+`-FieldDecl 0x7fecd5811c08 <line:4:5, col:12> col:12 referenced x 'double'
+
+Layout: <CGRecordLayout
+  LLVMType:%struct.P1 = type { double }
+  NonVirtualBaseLLVMType:%struct.P1 = type { double }
+  IsZeroInitializable:1
+  BitFields:[
+]>
+
+*** Dumping AST Record Layout
+         0 | struct P2
+         0 |   double y
+           | [sizeof=8, dsize=8, align=8,
+           |  nvsize=8, nvalign=8]
+
+*** Dumping IRgen Record Layout
+Record: CXXRecordDecl 0x7fecd5811c70 <object_model_refined/3_data/06_multiple_inheritance.cpp:7:1, line:9:1> line:7:8 referenced struct P2 definition
+|-CXXRecordDecl 0x7fecd5811d98 <col:1, col:8> col:8 implicit struct P2
+`-FieldDecl 0x7fecd5811e48 <line:8:5, col:12> col:12 referenced y 'double'
+
+Layout: <CGRecordLayout
+  LLVMType:%struct.P2 = type { double }
+  NonVirtualBaseLLVMType:%struct.P2 = type { double }
+  IsZeroInitializable:1
+  BitFields:[
+]>
+
+*** Dumping AST Record Layout
+         0 | struct P3
+         0 |   struct P1 (base)
+         0 |     double x
+         8 |   struct P2 (base)
+         8 |     double y
+        16 |   double z
+           | [sizeof=24, dsize=24, align=8,
+           |  nvsize=24, nvalign=8]
+
+*** Dumping IRgen Record Layout
+Record: CXXRecordDecl 0x7fecd5811eb0 <object_model_refined/3_data/06_multiple_inheritance.cpp:11:1, line:13:1> line:11:8 referenced struct P3 definition
+|-public 'struct P1'
+|-public 'struct P2'
+|-CXXRecordDecl 0x7fecd5877e58 <col:1, col:8> col:8 implicit struct P3
+`-FieldDecl 0x7fecd5877f08 <line:12:5, col:12> col:12 z 'double'
+
+Layout: <CGRecordLayout
+  LLVMType:%struct.P3 = type { %struct.P1, %struct.P2, double }
+  NonVirtualBaseLLVMType:%struct.P3 = type { %struct.P1, %struct.P2, double }
+  IsZeroInitializable:1
+  BitFields:[
+]>

@@ -1,0 +1,22 @@
+
+*** Dumping AST Record Layout
+         0 | struct Point
+         0 |   double x
+         8 |   double y
+        16 |   double z
+           | [sizeof=24, dsize=24, align=8,
+           |  nvsize=24, nvalign=8]
+
+*** Dumping IRgen Record Layout
+Record: CXXRecordDecl 0x7fa292867258 <object_model_refined/5_ctor_dtor_semantics/02_object_construction_without_inheritance.cpp:1:1, line:5:1> line:1:8 referenced struct Point definition
+|-CXXRecordDecl 0x7fa292867378 <col:1, col:8> col:8 implicit struct Point
+|-FieldDecl 0x7fa292867428 <line:2:5, col:12> col:12 x 'double'
+|-FieldDecl 0x7fa292867488 <line:3:5, col:12> col:12 y 'double'
+`-FieldDecl 0x7fa2928674e8 <line:4:5, col:12> col:12 z 'double'
+
+Layout: <CGRecordLayout
+  LLVMType:%struct.Point = type { double, double, double }
+  NonVirtualBaseLLVMType:%struct.Point = type { double, double, double }
+  IsZeroInitializable:1
+  BitFields:[
+]>

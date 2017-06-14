@@ -1,24 +1,32 @@
 #!/usr/bin/env bash
 
+# TODO: add check for rc before printing confirmations
+
 script_file=$(realpath $0)
 root_dir=$(dirname ${script_file})
 build_dir_name=cmake-build-release
 build_dir="${root_dir}/${build_dir_name}"
 compile_commands_dir=${build_dir}
 benchmark_include_dir="${root_dir}/benchmark/include"
+# Ignore the profiling dir for file generation
+ignore_dir=9_profiling
 default_delay=1
 
 # CLI arg flags
+a_flag=
 h_flag=
 e_flag=
-a_flag=
+t_flag=
+l_flag=
 b_flag=
 c_flag=
 p_flag=
 p_val=
 
 # Be sure to set for your system or call with -p
-clang_check_path=/usr/local/Cellar/llvm/5.0.0/bin
+llvm_path=/usr/local/Cellar/llvm/5.0.0
+clang_path="${llvm_path}/bin"
+CXX_FLAGS="-I${llvm_path}/include/c++/v1 -L${llvm_path}/lib -lc++"
 
 function clean_build_dir () {
     cd ${root_dir}
@@ -33,15 +41,22 @@ function clean_hop_files () {
 function clean_ast_files () {
     cd ${root_dir}
     for dir in $(ls -d */ | grep "\d") ; do
-        for in_file in $(find $(realpath "$dir") -name '*ast.txt' | grep -v 'CMakeLists.txt'); do
+        for in_file in $(find $(realpath "$dir") -name '*.txt' | grep -v 'CMakeLists.txt' | grep -e ast -e layout); do
             $1 ${in_file}
         done
     done
 }
 
+function clean_pseudo_code_files () {
+    cd ${root_dir}
+    find . -name '*.pseudo.c' -exec rm -f {} \;
+}
+
 function clean_all () {
     clean_build_dir
+    clean_hop_files
     clean_ast_files rm
+    clean_pseudo_code_files
 }
 
 function build_exes () {
@@ -61,10 +76,11 @@ function build_exes () {
 }
 
 function generate_hop_file () {
-    local in_dir=$0
-    local in_file=$1
+    local in_dir=$1
+    local in_file=$2
     local out_dir=$(dirname ${in_file})
     local out_file=$(basename ${in_file})
+
     osascript <<EOF
         tell application "Hopper Disassembler v4"
         	open "${in_file}"
@@ -97,13 +113,21 @@ function generate_hop_file () {
         end tell
 EOF
 
-    printf 'Saved the file %s.hop from the input executable %s\n' "${in_file}" "${out_file}"
+    local source_hop_file="${in_file}.hop"
+    local source_pseudo_file="${in_file}.pseudo.c"
+    local dest_dir="${root_dir}/$(basename ${in_dir})"
+
+    mv ${source_hop_file} ${dest_dir}
+    mv ${source_pseudo_file} ${dest_dir}
+
+    printf 'Saved the file %s.hop from the input executable %s\n' "${dest_dir}/${out_file}" "${in_file}"
+    printf 'Wrote the pseudo-code file %s.pseudo.c\n' "${dest_dir}/${out_file}"
 
     sleep 1
 }
 
 function iterate_executables () {
-    for dir in $(ls -d */ | grep "\d") ; do
+    for dir in $(ls -d */ | grep "\d" | grep -v "${ignore_dir}") ; do
         for in_file in $(find $(realpath "$dir") -perm 0755 -type f); do
             $1 ${dir} ${in_file}
         done
@@ -122,7 +146,7 @@ function generate_all_hop_files () {
 }
 
 function iterate_source_files () {
-    for dir in $(ls -d */ | grep "\d") ; do
+    for dir in $(ls -d */ | grep "\d" | grep -v "${ignore_dir}") ; do
         for in_file in $(find $(realpath "${dir}") -name '*.cpp'); do
             $1 ${dir} ${in_file}
         done
@@ -141,25 +165,44 @@ function generate_ast_file () {
 }
 
 function generate_all_ast_files () {
-    export PATH="${clang_check_path}:$PATH"
+    export PATH="${clang_path}:$PATH"
     cd "${root_dir}"
     iterate_source_files generate_ast_file
 }
 
+function generate_object_layout_file () {
+    # clang -cc1 -fdump-record-layouts myfile.cpp -> requires -Xclang rather than -cc1
+    local clang_exe="${clang_path}/clang"
+    local dir="$1"
+    local in_file="$2"
+    local out_file="${in_file%.*}_layout.txt"
+    ${clang_exe} -Xclang -fdump-record-layouts -fno-color-diagnostics --std=c++14 ${CXX_FLAGS} ${in_file} > ${out_file}
+    printf 'Generated the object layout file %s from the source file %s\n' "${in_file}" "${out_file}"
+}
+
+function generate_all_layout_files () {
+    export PATH="${clang_path}:$PATH"
+    cd "${root_dir}"
+    iterate_source_files generate_object_layout_file
+}
+
 function clone_benchmark () {
     cd ${root_dir}
-    git clone https://github.com/google/benchmark.git
+    if [ ! -d "${root_dir}/benchmark" ]; then
+        git clone https://github.com/google/benchmark.git
+    fi
 }
 
 function print_usage () {
     printf '%s\n' \
-        "Usage: $(basename $0) [-ecah] [-p clang-check path]" \
+        "Usage: $(basename $0) [-aecth] [-p clang-check path]" \
         "    -e - build executables" \
         "    -c - clean all generated files" \
-        "    -a - generate AST files" \
+        "    -t - generate AST files" \
+        "    -l - generate object layout files" \
         "    -h - generate Hopper files" \
         "    -b - clone Google benchmark" \
-        "    -p - specify the path to clang-check" >&2
+        "    -p - specify the path to clang & clang-check" >&2
 }
 
 function copy_py_script () {
@@ -170,7 +213,7 @@ function copy_py_script () {
     read -p "$prompt" answer
 
     case "$answer" in
-        [yY1] ) cp "${root_dir}/Generate Pseudo Code.py" "~/Library/Application Support/Hopper/Scripts/"
+        [yY1] ) cp "${root_dir}/Generate Pseudo Code.py" "${HOME}/Library/Application Support/Hopper/Scripts/"
             ;;
         [nN0] ) printf "Not updating the script."
             ;;
@@ -179,14 +222,18 @@ function copy_py_script () {
 }
 
 function parse_args () {
-    while getopts :heabcp: FOUND
+    while getopts :ahetlbcp: FOUND
     do
         case $FOUND in
+            a)  a_flag=1
+                ;;
             h)  h_flag=1
                 ;;
             e)  e_flag=1
                 ;;
-            a)  a_flag=1
+            t)  t_flag=1
+                ;;
+            l)  l_flag=1
                 ;;
             b)  b_flag=1
                 ;;
@@ -215,6 +262,16 @@ function perform_actions () {
         print_usage
         exit 0
     fi
+    # run all actions
+    if [ ${a_flag} ]
+    then
+        c_flag=1
+        b_flag=1
+        e_flag=1
+        h_flag=1
+        t_flag=1
+        l_flag=1
+    fi
 
     if [ ${c_flag} ]
     then
@@ -225,7 +282,7 @@ function perform_actions () {
     if [ ${p_flag} ]
     then
         printf 'Option -p specified...appending "%s" to path for clang-check\n' ${p_val}
-        clang_check_path=${p_val}
+        clang_path=${p_val}
     fi
 
     if [ ${b_flag} ]
@@ -247,12 +304,17 @@ function perform_actions () {
         generate_all_hop_files
     fi
 
-    if [ ${a_flag} ]
+    if [ ${t_flag} ]
     then
-        printf 'Option -a specified...generating AST files\n' ${p_val}
+        printf 'Option -t specified...generating AST files\n' ${p_val}
         generate_all_ast_files
     fi
-    # printf "Remaining arguments are: %s\n" "$*"
+
+    if [ ${l_flag} ]
+    then
+        printf 'Option -l specified...generating object layout files\n' ${p_val}
+        generate_all_layout_files
+    fi
 }
 
 function main () {
