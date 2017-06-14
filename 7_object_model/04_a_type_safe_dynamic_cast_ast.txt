@@ -1,190 +1,190 @@
-TranslationUnitDecl 0x7fc990819ad0 <<invalid sloc>> <invalid sloc>
-|-TypedefDecl 0x7fc99081a060 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
-| `-BuiltinType 0x7fc990819d40 '__int128'
-|-TypedefDecl 0x7fc99081a0d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
-| `-BuiltinType 0x7fc990819d60 'unsigned __int128'
-|-TypedefDecl 0x7fc99081a418 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
-| `-RecordType 0x7fc99081a1c0 'struct __NSConstantString_tag'
-|   `-CXXRecord 0x7fc99081a128 '__NSConstantString_tag'
-|-TypedefDecl 0x7fc99081a4b0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
-| `-PointerType 0x7fc99081a470 'char *'
-|   `-BuiltinType 0x7fc990819b60 'char'
-|-TypedefDecl 0x7fc99084c200 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
-| `-ConstantArrayType 0x7fc99081a790 'struct __va_list_tag [1]' 1 
-|   `-RecordType 0x7fc99081a5a0 'struct __va_list_tag'
-|     `-CXXRecord 0x7fc99081a508 '__va_list_tag'
-|-CXXRecordDecl 0x7fc99084c258 <object_model_refined/7_object_model/04_a_type_safe_dynamic_cast.cpp:2:1, line:4:1> line:2:8 referenced struct V definition
-| |-CXXRecordDecl 0x7fc99084c378 <col:1, col:8> col:8 implicit struct V
-| |-CXXMethodDecl 0x7fc99084c490 <line:3:5, col:23> col:18 used m 'void (void)' virtual
-| | `-CompoundStmt 0x7fc99084c9b8 <col:22, col:23>
-| |-CXXMethodDecl 0x7fc99084c588 <line:2:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct V &(const struct V &)' inline default noexcept-unevaluated 0x7fc99084c588
-| | `-ParmVarDecl 0x7fc99084c6a0 <col:8> col:8 'const struct V &'
-| |-CXXMethodDecl 0x7fc99084c738 <col:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct V &(struct V &&)' inline default noexcept-unevaluated 0x7fc99084c738
-| | `-ParmVarDecl 0x7fc99084c850 <col:8> col:8 'struct V &&'
-| |-CXXDestructorDecl 0x7fc99084c8d8 <col:8> col:8 implicit ~V 'void (void)' inline default trivial noexcept-unevaluated 0x7fc99084c8d8
-| |-CXXConstructorDecl 0x7fc9908794c8 <col:8> col:8 implicit used constexpr V 'void (void) noexcept' inline default
-| | `-CompoundStmt 0x7fc99087a358 <col:8>
-| |-CXXConstructorDecl 0x7fc9908799c8 <col:8> col:8 implicit constexpr V 'void (const struct V &)' inline default noexcept-unevaluated 0x7fc9908799c8
-| | `-ParmVarDecl 0x7fc990879af0 <col:8> col:8 'const struct V &'
-| `-CXXConstructorDecl 0x7fc990879b58 <col:8> col:8 implicit constexpr V 'void (struct V &&)' inline default noexcept-unevaluated 0x7fc990879b58
-|   `-ParmVarDecl 0x7fc990879c80 <col:8> col:8 'struct V &&'
-|-CXXRecordDecl 0x7fc99084c9d0 <line:6:1, col:23> col:8 referenced struct A definition
+TranslationUnitDecl 0x7fb0ab0300d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb0ab030660 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb0ab030340 '__int128'
+|-TypedefDecl 0x7fb0ab0306d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb0ab030360 'unsigned __int128'
+|-TypedefDecl 0x7fb0ab030a18 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb0ab0307c0 'struct __NSConstantString_tag'
+|   `-CXXRecord 0x7fb0ab030728 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb0ab030ab0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb0ab030a70 'char *'
+|   `-BuiltinType 0x7fb0ab030160 'char'
+|-TypedefDecl 0x7fb0ab062800 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb0ab030d90 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb0ab030ba0 'struct __va_list_tag'
+|     `-CXXRecord 0x7fb0ab030b08 '__va_list_tag'
+|-CXXRecordDecl 0x7fb0ab062858 </Users/tskull/Documents/Programming/Cpp/object_model_refined/7_object_model/04_a_type_safe_dynamic_cast.cpp:2:1, line:4:1> line:2:8 referenced struct V definition
+| |-CXXRecordDecl 0x7fb0ab062978 <col:1, col:8> col:8 implicit struct V
+| |-CXXMethodDecl 0x7fb0ab062a90 <line:3:5, col:23> col:18 used m 'void (void)' virtual
+| | `-CompoundStmt 0x7fb0ab062fb8 <col:22, col:23>
+| |-CXXMethodDecl 0x7fb0ab062b88 <line:2:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct V &(const struct V &)' inline default noexcept-unevaluated 0x7fb0ab062b88
+| | `-ParmVarDecl 0x7fb0ab062ca0 <col:8> col:8 'const struct V &'
+| |-CXXMethodDecl 0x7fb0ab062d38 <col:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct V &(struct V &&)' inline default noexcept-unevaluated 0x7fb0ab062d38
+| | `-ParmVarDecl 0x7fb0ab062e50 <col:8> col:8 'struct V &&'
+| |-CXXDestructorDecl 0x7fb0ab062ed8 <col:8> col:8 implicit ~V 'void (void)' inline default trivial noexcept-unevaluated 0x7fb0ab062ed8
+| |-CXXConstructorDecl 0x7fb0ab08fac8 <col:8> col:8 implicit used constexpr V 'void (void) noexcept' inline default
+| | `-CompoundStmt 0x7fb0ab090958 <col:8>
+| |-CXXConstructorDecl 0x7fb0ab08ffc8 <col:8> col:8 implicit constexpr V 'void (const struct V &)' inline default noexcept-unevaluated 0x7fb0ab08ffc8
+| | `-ParmVarDecl 0x7fb0ab0900f0 <col:8> col:8 'const struct V &'
+| `-CXXConstructorDecl 0x7fb0ab090158 <col:8> col:8 implicit constexpr V 'void (struct V &&)' inline default noexcept-unevaluated 0x7fb0ab090158
+|   `-ParmVarDecl 0x7fb0ab090280 <col:8> col:8 'struct V &&'
+|-CXXRecordDecl 0x7fb0ab062fd0 <line:6:1, col:23> col:8 referenced struct A definition
 | |-virtual public 'struct V'
-| |-CXXRecordDecl 0x7fc99084cb50 <col:1, col:8> col:8 implicit struct A
-| |-CXXMethodDecl 0x7fc99084cc48 <col:8, <invalid sloc>> col:8 implicit operator= 'struct A &(const struct A &)' inline default noexcept-unevaluated 0x7fc99084cc48
-| | `-ParmVarDecl 0x7fc99084cd60 <col:8> col:8 'const struct A &'
-| |-CXXMethodDecl 0x7fc99084cdf8 <col:8, <invalid sloc>> col:8 implicit operator= 'struct A &(struct A &&)' inline default noexcept-unevaluated 0x7fc99084cdf8
-| | `-ParmVarDecl 0x7fc99084cf10 <col:8> col:8 'struct A &&'
-| |-CXXDestructorDecl 0x7fc99084cf98 <col:8> col:8 implicit ~A 'void (void)' inline default trivial noexcept-unevaluated 0x7fc99084cf98
-| |-CXXConstructorDecl 0x7fc9908793c8 <col:8> col:8 implicit used A 'void (void) noexcept' inline default
+| |-CXXRecordDecl 0x7fb0ab063150 <col:1, col:8> col:8 implicit struct A
+| |-CXXMethodDecl 0x7fb0ab063248 <col:8, <invalid sloc>> col:8 implicit operator= 'struct A &(const struct A &)' inline default noexcept-unevaluated 0x7fb0ab063248
+| | `-ParmVarDecl 0x7fb0ab063360 <col:8> col:8 'const struct A &'
+| |-CXXMethodDecl 0x7fb0ab0633f8 <col:8, <invalid sloc>> col:8 implicit operator= 'struct A &(struct A &&)' inline default noexcept-unevaluated 0x7fb0ab0633f8
+| | `-ParmVarDecl 0x7fb0ab063510 <col:8> col:8 'struct A &&'
+| |-CXXDestructorDecl 0x7fb0ab063598 <col:8> col:8 implicit ~A 'void (void)' inline default trivial noexcept-unevaluated 0x7fb0ab063598
+| |-CXXConstructorDecl 0x7fb0ab08f9c8 <col:8> col:8 implicit used A 'void (void) noexcept' inline default
 | | |-CXXCtorInitializer 'struct V'
-| | | `-CXXConstructExpr 0x7fc99087a3d8 <col:8> 'struct V' 'void (void) noexcept'
-| | `-CompoundStmt 0x7fc99087a448 <col:8>
-| |-CXXConstructorDecl 0x7fc990879838 <col:8> col:8 implicit A 'void (const struct A &)' inline default noexcept-unevaluated 0x7fc990879838
-| | `-ParmVarDecl 0x7fc990879960 <col:8> col:8 'const struct A &'
-| `-CXXConstructorDecl 0x7fc990879ce8 <col:8> col:8 implicit A 'void (struct A &&)' inline default noexcept-unevaluated 0x7fc990879ce8
-|   `-ParmVarDecl 0x7fc990879e40 <col:8> col:8 'struct A &&'
-|-CXXRecordDecl 0x7fc99084d078 <line:8:1, col:23> col:8 referenced struct B definition
+| | | `-CXXConstructExpr 0x7fb0ab0909d8 <col:8> 'struct V' 'void (void) noexcept'
+| | `-CompoundStmt 0x7fb0ab090a48 <col:8>
+| |-CXXConstructorDecl 0x7fb0ab08fe38 <col:8> col:8 implicit A 'void (const struct A &)' inline default noexcept-unevaluated 0x7fb0ab08fe38
+| | `-ParmVarDecl 0x7fb0ab08ff60 <col:8> col:8 'const struct A &'
+| `-CXXConstructorDecl 0x7fb0ab0902e8 <col:8> col:8 implicit A 'void (struct A &&)' inline default noexcept-unevaluated 0x7fb0ab0902e8
+|   `-ParmVarDecl 0x7fb0ab090440 <col:8> col:8 'struct A &&'
+|-CXXRecordDecl 0x7fb0ab063678 <line:8:1, col:23> col:8 referenced struct B definition
 | |-virtual public 'struct V'
-| |-CXXRecordDecl 0x7fc990876a00 <col:1, col:8> col:8 implicit struct B
-| |-CXXMethodDecl 0x7fc990876af8 <col:8, <invalid sloc>> col:8 implicit operator= 'struct B &(const struct B &)' inline default noexcept-unevaluated 0x7fc990876af8
-| | `-ParmVarDecl 0x7fc990876c10 <col:8> col:8 'const struct B &'
-| |-CXXMethodDecl 0x7fc990876ca8 <col:8, <invalid sloc>> col:8 implicit operator= 'struct B &(struct B &&)' inline default noexcept-unevaluated 0x7fc990876ca8
-| | `-ParmVarDecl 0x7fc990876dc0 <col:8> col:8 'struct B &&'
-| |-CXXDestructorDecl 0x7fc990876e48 <col:8> col:8 implicit ~B 'void (void)' inline default trivial noexcept-unevaluated 0x7fc990876e48
-| |-CXXConstructorDecl 0x7fc9908795c8 <col:8> col:8 implicit used B 'void (void) noexcept' inline default
+| |-CXXRecordDecl 0x7fb0ab08d000 <col:1, col:8> col:8 implicit struct B
+| |-CXXMethodDecl 0x7fb0ab08d0f8 <col:8, <invalid sloc>> col:8 implicit operator= 'struct B &(const struct B &)' inline default noexcept-unevaluated 0x7fb0ab08d0f8
+| | `-ParmVarDecl 0x7fb0ab08d210 <col:8> col:8 'const struct B &'
+| |-CXXMethodDecl 0x7fb0ab08d2a8 <col:8, <invalid sloc>> col:8 implicit operator= 'struct B &(struct B &&)' inline default noexcept-unevaluated 0x7fb0ab08d2a8
+| | `-ParmVarDecl 0x7fb0ab08d3c0 <col:8> col:8 'struct B &&'
+| |-CXXDestructorDecl 0x7fb0ab08d448 <col:8> col:8 implicit ~B 'void (void)' inline default trivial noexcept-unevaluated 0x7fb0ab08d448
+| |-CXXConstructorDecl 0x7fb0ab08fbc8 <col:8> col:8 implicit used B 'void (void) noexcept' inline default
 | | |-CXXCtorInitializer 'struct V'
-| | | `-CXXConstructExpr 0x7fc99087a4c8 <col:8> 'struct V' 'void (void) noexcept'
-| | `-CompoundStmt 0x7fc99087a538 <col:8>
-| |-CXXConstructorDecl 0x7fc990879ea8 <col:8> col:8 implicit B 'void (const struct B &)' inline default noexcept-unevaluated 0x7fc990879ea8
-| | `-ParmVarDecl 0x7fc990879fd0 <col:8> col:8 'const struct B &'
-| `-CXXConstructorDecl 0x7fc99087a038 <col:8> col:8 implicit B 'void (struct B &&)' inline default noexcept-unevaluated 0x7fc99087a038
-|   `-ParmVarDecl 0x7fc99087a160 <col:8> col:8 'struct B &&'
-|-CXXRecordDecl 0x7fc990876f28 <line:10:1, col:18> col:8 referenced struct D definition
+| | | `-CXXConstructExpr 0x7fb0ab090ac8 <col:8> 'struct V' 'void (void) noexcept'
+| | `-CompoundStmt 0x7fb0ab090b38 <col:8>
+| |-CXXConstructorDecl 0x7fb0ab0904a8 <col:8> col:8 implicit B 'void (const struct B &)' inline default noexcept-unevaluated 0x7fb0ab0904a8
+| | `-ParmVarDecl 0x7fb0ab0905d0 <col:8> col:8 'const struct B &'
+| `-CXXConstructorDecl 0x7fb0ab090638 <col:8> col:8 implicit B 'void (struct B &&)' inline default noexcept-unevaluated 0x7fb0ab090638
+|   `-ParmVarDecl 0x7fb0ab090760 <col:8> col:8 'struct B &&'
+|-CXXRecordDecl 0x7fb0ab08d528 <line:10:1, col:18> col:8 referenced struct D definition
 | |-public 'struct A'
 | |-public 'struct B'
-| |-CXXRecordDecl 0x7fc9908770e0 <col:1, col:8> col:8 implicit struct D
-| |-CXXMethodDecl 0x7fc9908771d8 <col:8, <invalid sloc>> col:8 implicit operator= 'struct D &(const struct D &)' inline default noexcept-unevaluated 0x7fc9908771d8
-| | `-ParmVarDecl 0x7fc9908772f0 <col:8> col:8 'const struct D &'
-| |-CXXMethodDecl 0x7fc990877388 <col:8, <invalid sloc>> col:8 implicit operator= 'struct D &(struct D &&)' inline default noexcept-unevaluated 0x7fc990877388
-| | `-ParmVarDecl 0x7fc9908774a0 <col:8> col:8 'struct D &&'
-| |-CXXDestructorDecl 0x7fc990877528 <col:8> col:8 implicit ~D 'void (void)' inline default trivial noexcept-unevaluated 0x7fc990877528
-| |-CXXConstructorDecl 0x7fc9908792c8 <col:8> col:8 implicit used D 'void (void) noexcept' inline default
+| |-CXXRecordDecl 0x7fb0ab08d6e0 <col:1, col:8> col:8 implicit struct D
+| |-CXXMethodDecl 0x7fb0ab08d7d8 <col:8, <invalid sloc>> col:8 implicit operator= 'struct D &(const struct D &)' inline default noexcept-unevaluated 0x7fb0ab08d7d8
+| | `-ParmVarDecl 0x7fb0ab08d8f0 <col:8> col:8 'const struct D &'
+| |-CXXMethodDecl 0x7fb0ab08d988 <col:8, <invalid sloc>> col:8 implicit operator= 'struct D &(struct D &&)' inline default noexcept-unevaluated 0x7fb0ab08d988
+| | `-ParmVarDecl 0x7fb0ab08daa0 <col:8> col:8 'struct D &&'
+| |-CXXDestructorDecl 0x7fb0ab08db28 <col:8> col:8 implicit ~D 'void (void)' inline default trivial noexcept-unevaluated 0x7fb0ab08db28
+| |-CXXConstructorDecl 0x7fb0ab08f8c8 <col:8> col:8 implicit used D 'void (void) noexcept' inline default
 | | |-CXXCtorInitializer 'struct V'
-| | | `-CXXConstructExpr 0x7fc99087a370 <col:8> 'struct V' 'void (void) noexcept'
+| | | `-CXXConstructExpr 0x7fb0ab090970 <col:8> 'struct V' 'void (void) noexcept'
 | | |-CXXCtorInitializer 'struct A'
-| | | `-CXXConstructExpr 0x7fc99087a460 <col:8> 'struct A' 'void (void) noexcept'
+| | | `-CXXConstructExpr 0x7fb0ab090a60 <col:8> 'struct A' 'void (void) noexcept'
 | | |-CXXCtorInitializer 'struct B'
-| | | `-CXXConstructExpr 0x7fc99087a550 <col:8> 'struct B' 'void (void) noexcept'
-| | `-CompoundStmt 0x7fc99087a5d0 <col:8>
-| |-CXXConstructorDecl 0x7fc9908796a8 <col:8> col:8 implicit D 'void (const struct D &)' inline default noexcept-unevaluated 0x7fc9908796a8
-| | `-ParmVarDecl 0x7fc9908797d0 <col:8> col:8 'const struct D &'
-| `-CXXConstructorDecl 0x7fc99087a1c8 <col:8> col:8 implicit D 'void (struct D &&)' inline default noexcept-unevaluated 0x7fc99087a1c8
-|   `-ParmVarDecl 0x7fc99087a2f0 <col:8> col:8 'struct D &&'
-|-CXXRecordDecl 0x7fc990877608 <line:12:1, line:14:1> line:12:8 referenced struct B2 definition
-| |-CXXRecordDecl 0x7fc990877728 <col:1, col:8> col:8 implicit referenced struct B2
-| |-CXXDestructorDecl 0x7fc990877838 <line:13:5, col:20> col:13 used ~B2 'void (void) noexcept' virtual
-| | `-CompoundStmt 0x7fc990877fc0 <col:19, col:20>
-| |-CXXMethodDecl 0x7fc990877e00 <line:12:8, <invalid sloc>> col:8 implicit operator= 'struct B2 &(const struct B2 &)' inline default noexcept-unevaluated 0x7fc990877e00
-| | `-ParmVarDecl 0x7fc990877f20 <col:8> col:8 'const struct B2 &'
-| |-CXXConstructorDecl 0x7fc9908788d8 <col:8> col:8 implicit constexpr B2 'void (const struct B2 &)' inline default noexcept-unevaluated 0x7fc9908788d8
-| | `-ParmVarDecl 0x7fc990878a00 <col:8> col:8 'const struct B2 &'
-| `-CXXConstructorDecl 0x7fc99087c200 <col:8> col:8 implicit used constexpr B2 'void (void) noexcept' inline default
-|   `-CompoundStmt 0x7fc99087c2e8 <col:8>
-|-FunctionDecl 0x7fc990878018 <<invalid sloc>> <invalid sloc> implicit used operator new 'void *(unsigned long)'
-| |-ParmVarDecl 0x7fc9908780f8 <<invalid sloc>> <invalid sloc> implicit 'unsigned long'
-| `-VisibilityAttr 0x7fc9908780b0 <<invalid sloc>> Implicit Default
-|-FunctionDecl 0x7fc990878160 <<invalid sloc>> <invalid sloc> implicit operator new[] 'void *(unsigned long)'
-| |-ParmVarDecl 0x7fc990878240 <<invalid sloc>> <invalid sloc> implicit 'unsigned long'
-| `-VisibilityAttr 0x7fc9908781f8 <<invalid sloc>> Implicit Default
-|-FunctionDecl 0x7fc990878328 <<invalid sloc>> <invalid sloc> implicit used operator delete 'void (void *) noexcept'
-| |-ParmVarDecl 0x7fc990878408 <<invalid sloc>> <invalid sloc> implicit 'void *'
-| `-VisibilityAttr 0x7fc9908783c0 <<invalid sloc>> Implicit Default
-|-FunctionDecl 0x7fc990878470 <<invalid sloc>> <invalid sloc> implicit operator delete[] 'void (void *) noexcept'
-| |-ParmVarDecl 0x7fc990878550 <<invalid sloc>> <invalid sloc> implicit 'void *'
-| `-VisibilityAttr 0x7fc990878508 <<invalid sloc>> Implicit Default
-|-CXXRecordDecl 0x7fc9908785b8 <line:16:1, line:18:1> line:16:8 referenced struct D2 definition
+| | | `-CXXConstructExpr 0x7fb0ab090b50 <col:8> 'struct B' 'void (void) noexcept'
+| | `-CompoundStmt 0x7fb0ab090bd0 <col:8>
+| |-CXXConstructorDecl 0x7fb0ab08fca8 <col:8> col:8 implicit D 'void (const struct D &)' inline default noexcept-unevaluated 0x7fb0ab08fca8
+| | `-ParmVarDecl 0x7fb0ab08fdd0 <col:8> col:8 'const struct D &'
+| `-CXXConstructorDecl 0x7fb0ab0907c8 <col:8> col:8 implicit D 'void (struct D &&)' inline default noexcept-unevaluated 0x7fb0ab0907c8
+|   `-ParmVarDecl 0x7fb0ab0908f0 <col:8> col:8 'struct D &&'
+|-CXXRecordDecl 0x7fb0ab08dc08 <line:12:1, line:14:1> line:12:8 referenced struct B2 definition
+| |-CXXRecordDecl 0x7fb0ab08dd28 <col:1, col:8> col:8 implicit referenced struct B2
+| |-CXXDestructorDecl 0x7fb0ab08de38 <line:13:5, col:20> col:13 used ~B2 'void (void) noexcept' virtual
+| | `-CompoundStmt 0x7fb0ab08e5c0 <col:19, col:20>
+| |-CXXMethodDecl 0x7fb0ab08e400 <line:12:8, <invalid sloc>> col:8 implicit operator= 'struct B2 &(const struct B2 &)' inline default noexcept-unevaluated 0x7fb0ab08e400
+| | `-ParmVarDecl 0x7fb0ab08e520 <col:8> col:8 'const struct B2 &'
+| |-CXXConstructorDecl 0x7fb0ab08eed8 <col:8> col:8 implicit constexpr B2 'void (const struct B2 &)' inline default noexcept-unevaluated 0x7fb0ab08eed8
+| | `-ParmVarDecl 0x7fb0ab08f000 <col:8> col:8 'const struct B2 &'
+| `-CXXConstructorDecl 0x7fb0ab092800 <col:8> col:8 implicit used constexpr B2 'void (void) noexcept' inline default
+|   `-CompoundStmt 0x7fb0ab0928e8 <col:8>
+|-FunctionDecl 0x7fb0ab08e618 <<invalid sloc>> <invalid sloc> implicit used operator new 'void *(unsigned long)'
+| |-ParmVarDecl 0x7fb0ab08e6f8 <<invalid sloc>> <invalid sloc> implicit 'unsigned long'
+| `-VisibilityAttr 0x7fb0ab08e6b0 <<invalid sloc>> Implicit Default
+|-FunctionDecl 0x7fb0ab08e760 <<invalid sloc>> <invalid sloc> implicit operator new[] 'void *(unsigned long)'
+| |-ParmVarDecl 0x7fb0ab08e840 <<invalid sloc>> <invalid sloc> implicit 'unsigned long'
+| `-VisibilityAttr 0x7fb0ab08e7f8 <<invalid sloc>> Implicit Default
+|-FunctionDecl 0x7fb0ab08e928 <<invalid sloc>> <invalid sloc> implicit used operator delete 'void (void *) noexcept'
+| |-ParmVarDecl 0x7fb0ab08ea08 <<invalid sloc>> <invalid sloc> implicit 'void *'
+| `-VisibilityAttr 0x7fb0ab08e9c0 <<invalid sloc>> Implicit Default
+|-FunctionDecl 0x7fb0ab08ea70 <<invalid sloc>> <invalid sloc> implicit operator delete[] 'void (void *) noexcept'
+| |-ParmVarDecl 0x7fb0ab08eb50 <<invalid sloc>> <invalid sloc> implicit 'void *'
+| `-VisibilityAttr 0x7fb0ab08eb08 <<invalid sloc>> Implicit Default
+|-CXXRecordDecl 0x7fb0ab08ebb8 <line:16:1, line:18:1> line:16:8 referenced struct D2 definition
 | |-public 'struct B2'
-| |-CXXRecordDecl 0x7fc990878718 <col:1, col:8> col:8 implicit struct D2
-| |-CXXMethodDecl 0x7fc9908787f8 <line:17:5, col:23> col:18 used m 'void (void)' virtual
-| | `-CompoundStmt 0x7fc990879088 <col:22, col:23>
-| |-CXXConstructorDecl 0x7fc990878a88 <line:16:8> col:8 implicit constexpr D2 'void (struct D2 &&)' inline default noexcept-unevaluated 0x7fc990878a88
-| | `-ParmVarDecl 0x7fc990878bb0 <col:8> col:8 'struct D2 &&'
-| |-CXXMethodDecl 0x7fc990878c78 <col:8, <invalid sloc>> col:8 implicit operator= 'struct D2 &(const struct D2 &)' inline default noexcept-unevaluated 0x7fc990878c78
-| | `-ParmVarDecl 0x7fc990878d90 <col:8> col:8 'const struct D2 &'
-| |-CXXMethodDecl 0x7fc990878e00 <col:8, <invalid sloc>> col:8 implicit operator= 'struct D2 &(struct D2 &&)' inline default noexcept-unevaluated 0x7fc990878e00
-| | `-ParmVarDecl 0x7fc990878f20 <col:8> col:8 'struct D2 &&'
-| |-CXXDestructorDecl 0x7fc990878fa8 <col:8> col:8 implicit used ~D2 'void (void) noexcept' inline default
-| | `-CompoundStmt 0x7fc99087d008 <col:8>
-| |-CXXConstructorDecl 0x7fc99087c810 <col:8> col:8 implicit used constexpr D2 'void (void) noexcept' inline default
+| |-CXXRecordDecl 0x7fb0ab08ed18 <col:1, col:8> col:8 implicit struct D2
+| |-CXXMethodDecl 0x7fb0ab08edf8 <line:17:5, col:23> col:18 used m 'void (void)' virtual
+| | `-CompoundStmt 0x7fb0ab08f688 <col:22, col:23>
+| |-CXXConstructorDecl 0x7fb0ab08f088 <line:16:8> col:8 implicit constexpr D2 'void (struct D2 &&)' inline default noexcept-unevaluated 0x7fb0ab08f088
+| | `-ParmVarDecl 0x7fb0ab08f1b0 <col:8> col:8 'struct D2 &&'
+| |-CXXMethodDecl 0x7fb0ab08f278 <col:8, <invalid sloc>> col:8 implicit operator= 'struct D2 &(const struct D2 &)' inline default noexcept-unevaluated 0x7fb0ab08f278
+| | `-ParmVarDecl 0x7fb0ab08f390 <col:8> col:8 'const struct D2 &'
+| |-CXXMethodDecl 0x7fb0ab08f400 <col:8, <invalid sloc>> col:8 implicit operator= 'struct D2 &(struct D2 &&)' inline default noexcept-unevaluated 0x7fb0ab08f400
+| | `-ParmVarDecl 0x7fb0ab08f520 <col:8> col:8 'struct D2 &&'
+| |-CXXDestructorDecl 0x7fb0ab08f5a8 <col:8> col:8 implicit used ~D2 'void (void) noexcept' inline default
+| | `-CompoundStmt 0x7fb0ab093608 <col:8>
+| |-CXXConstructorDecl 0x7fb0ab092e10 <col:8> col:8 implicit used constexpr D2 'void (void) noexcept' inline default
 | | |-CXXCtorInitializer 'struct B2'
-| | | `-CXXConstructExpr 0x7fc99087ca88 <col:8> 'struct B2' 'void (void) noexcept'
-| | `-CompoundStmt 0x7fc99087caf8 <col:8>
-| `-CXXConstructorDecl 0x7fc99087c8f8 <col:8> col:8 implicit constexpr D2 'void (const struct D2 &)' inline default noexcept-unevaluated 0x7fc99087c8f8
-|   `-ParmVarDecl 0x7fc99087ca20 <col:8> col:8 'const struct D2 &'
-`-FunctionDecl 0x7fc9908790f8 <line:20:1, line:41:1> line:20:5 main 'int (void)'
-  `-CompoundStmt 0x7fc99087cf98 <line:21:1, line:41:1>
-    |-DeclStmt 0x7fc99087a618 <line:22:5, col:10>
-    | `-VarDecl 0x7fc990879208 <col:5, col:9> col:7 used d 'struct D' listinit
-    |   `-CXXConstructExpr 0x7fc99087a5e8 <col:7, col:9> 'struct D' 'void (void) noexcept' zeroing
-    |-DeclStmt 0x7fc99087aa20 <line:23:5, col:13>
-    | `-VarDecl 0x7fc99087a640 <col:5, col:12> col:8 used a 'struct A &' cinit
-    |   `-ImplicitCastExpr 0x7fc99087a6c8 <col:12> 'struct A' lvalue <DerivedToBase (A)>
-    |     `-DeclRefExpr 0x7fc99087a6a0 <col:12> 'struct D' lvalue Var 0x7fc990879208 'd' 'struct D'
-    |-DeclStmt 0x7fc99087ab68 <line:24:5, col:33>
-    | `-VarDecl 0x7fc99087aa48 <col:5, col:32> col:8 dr 'struct D &' cinit
-    |   `-CXXDynamicCastExpr 0x7fc99087aae0 <col:13, col:32> 'struct D' lvalue dynamic_cast<struct D &> <Dynamic>
-    |     `-DeclRefExpr 0x7fc99087aaa8 <col:31> 'struct A' lvalue Var 0x7fc99087a640 'a' 'struct A &'
-    |-DeclStmt 0x7fc99087acb0 <line:25:5, col:33>
-    | `-VarDecl 0x7fc99087ab90 <col:5, col:32> col:8 br 'struct B &' cinit
-    |   `-CXXDynamicCastExpr 0x7fc99087ac28 <col:13, col:32> 'struct B' lvalue dynamic_cast<struct B &> <Dynamic>
-    |     `-DeclRefExpr 0x7fc99087abf0 <col:31> 'struct A' lvalue Var 0x7fc99087a640 'a' 'struct A &'
-    |-DeclStmt 0x7fc99087c388 <line:28:5, col:20>
-    | `-VarDecl 0x7fc99087acd8 <col:5, col:18> col:9 used b1 'struct B2 *' cinit
-    |   `-CXXNewExpr 0x7fc99087c330 <col:14, col:18> 'struct B2 *' Function 0x7fc990878018 'operator new' 'void *(unsigned long)'
-    |     `-CXXConstructExpr 0x7fc99087c300 <col:18> 'struct B2' 'void (void) noexcept'
-    |-IfStmt 0x7fc99087c688 <line:29:5, line:31:5>
+| | | `-CXXConstructExpr 0x7fb0ab093088 <col:8> 'struct B2' 'void (void) noexcept'
+| | `-CompoundStmt 0x7fb0ab0930f8 <col:8>
+| `-CXXConstructorDecl 0x7fb0ab092ef8 <col:8> col:8 implicit constexpr D2 'void (const struct D2 &)' inline default noexcept-unevaluated 0x7fb0ab092ef8
+|   `-ParmVarDecl 0x7fb0ab093020 <col:8> col:8 'const struct D2 &'
+`-FunctionDecl 0x7fb0ab08f6f8 <line:20:1, line:41:1> line:20:5 main 'int (void)'
+  `-CompoundStmt 0x7fb0ab093598 <line:21:1, line:41:1>
+    |-DeclStmt 0x7fb0ab090c18 <line:22:5, col:10>
+    | `-VarDecl 0x7fb0ab08f808 <col:5, col:9> col:7 used d 'struct D' listinit
+    |   `-CXXConstructExpr 0x7fb0ab090be8 <col:7, col:9> 'struct D' 'void (void) noexcept' zeroing
+    |-DeclStmt 0x7fb0ab091020 <line:23:5, col:13>
+    | `-VarDecl 0x7fb0ab090c40 <col:5, col:12> col:8 used a 'struct A &' cinit
+    |   `-ImplicitCastExpr 0x7fb0ab090cc8 <col:12> 'struct A' lvalue <DerivedToBase (A)>
+    |     `-DeclRefExpr 0x7fb0ab090ca0 <col:12> 'struct D' lvalue Var 0x7fb0ab08f808 'd' 'struct D'
+    |-DeclStmt 0x7fb0ab091168 <line:24:5, col:33>
+    | `-VarDecl 0x7fb0ab091048 <col:5, col:32> col:8 dr 'struct D &' cinit
+    |   `-CXXDynamicCastExpr 0x7fb0ab0910e0 <col:13, col:32> 'struct D' lvalue dynamic_cast<struct D &> <Dynamic>
+    |     `-DeclRefExpr 0x7fb0ab0910a8 <col:31> 'struct A' lvalue Var 0x7fb0ab090c40 'a' 'struct A &'
+    |-DeclStmt 0x7fb0ab0912b0 <line:25:5, col:33>
+    | `-VarDecl 0x7fb0ab091190 <col:5, col:32> col:8 br 'struct B &' cinit
+    |   `-CXXDynamicCastExpr 0x7fb0ab091228 <col:13, col:32> 'struct B' lvalue dynamic_cast<struct B &> <Dynamic>
+    |     `-DeclRefExpr 0x7fb0ab0911f0 <col:31> 'struct A' lvalue Var 0x7fb0ab090c40 'a' 'struct A &'
+    |-DeclStmt 0x7fb0ab092988 <line:28:5, col:20>
+    | `-VarDecl 0x7fb0ab0912d8 <col:5, col:18> col:9 used b1 'struct B2 *' cinit
+    |   `-CXXNewExpr 0x7fb0ab092930 <col:14, col:18> 'struct B2 *' Function 0x7fb0ab08e618 'operator new' 'void *(unsigned long)'
+    |     `-CXXConstructExpr 0x7fb0ab092900 <col:18> 'struct B2' 'void (void) noexcept'
+    |-IfStmt 0x7fb0ab092c88 <line:29:5, line:31:5>
     | |-<<<NULL>>>
-    | |-DeclStmt 0x7fc99087c6c0 <line:29:9, col:40>
-    | | `-VarDecl 0x7fc99087c3d0 <col:9, col:40> col:14 used dp 'struct D2 *':'struct D2 *' cinit
-    | |   `-CXXDynamicCastExpr 0x7fc99087c480 <col:19, col:40> 'struct D2 *' dynamic_cast<struct D2 *> <Dynamic>
-    | |     `-ImplicitCastExpr 0x7fc99087c468 <col:38> 'struct B2 *' <LValueToRValue>
-    | |       `-DeclRefExpr 0x7fc99087c430 <col:38> 'struct B2 *' lvalue Var 0x7fc99087acd8 'b1' 'struct B2 *'
-    | |-ImplicitCastExpr 0x7fc99087c5b0 <col:14> '_Bool' <PointerToBoolean>
-    | | `-ImplicitCastExpr 0x7fc99087c598 <col:14> 'struct D2 *':'struct D2 *' <LValueToRValue>
-    | |   `-DeclRefExpr 0x7fc99087c570 <col:14> 'struct D2 *':'struct D2 *' lvalue Var 0x7fc99087c3d0 'dp' 'struct D2 *':'struct D2 *'
-    | |-CompoundStmt 0x7fc99087c668 <col:43, line:31:5>
-    | | `-CXXMemberCallExpr 0x7fc99087c640 <line:30:9, col:15> 'void'
-    | |   `-MemberExpr 0x7fc99087c608 <col:9, col:13> '<bound member function type>' ->m 0x7fc9908787f8
-    | |     `-ImplicitCastExpr 0x7fc99087c5f0 <col:9> 'struct D2 *':'struct D2 *' <LValueToRValue>
-    | |       `-DeclRefExpr 0x7fc99087c5c8 <col:9> 'struct D2 *':'struct D2 *' lvalue Var 0x7fc99087c3d0 'dp' 'struct D2 *':'struct D2 *'
+    | |-DeclStmt 0x7fb0ab092cc0 <line:29:9, col:40>
+    | | `-VarDecl 0x7fb0ab0929d0 <col:9, col:40> col:14 used dp 'struct D2 *':'struct D2 *' cinit
+    | |   `-CXXDynamicCastExpr 0x7fb0ab092a80 <col:19, col:40> 'struct D2 *' dynamic_cast<struct D2 *> <Dynamic>
+    | |     `-ImplicitCastExpr 0x7fb0ab092a68 <col:38> 'struct B2 *' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7fb0ab092a30 <col:38> 'struct B2 *' lvalue Var 0x7fb0ab0912d8 'b1' 'struct B2 *'
+    | |-ImplicitCastExpr 0x7fb0ab092bb0 <col:14> '_Bool' <PointerToBoolean>
+    | | `-ImplicitCastExpr 0x7fb0ab092b98 <col:14> 'struct D2 *':'struct D2 *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fb0ab092b70 <col:14> 'struct D2 *':'struct D2 *' lvalue Var 0x7fb0ab0929d0 'dp' 'struct D2 *':'struct D2 *'
+    | |-CompoundStmt 0x7fb0ab092c68 <col:43, line:31:5>
+    | | `-CXXMemberCallExpr 0x7fb0ab092c40 <line:30:9, col:15> 'void'
+    | |   `-MemberExpr 0x7fb0ab092c08 <col:9, col:13> '<bound member function type>' ->m 0x7fb0ab08edf8
+    | |     `-ImplicitCastExpr 0x7fb0ab092bf0 <col:9> 'struct D2 *':'struct D2 *' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7fb0ab092bc8 <col:9> 'struct D2 *':'struct D2 *' lvalue Var 0x7fb0ab0929d0 'dp' 'struct D2 *':'struct D2 *'
     | `-<<<NULL>>>
-    |-DeclStmt 0x7fc99087cbb8 <line:33:5, col:20>
-    | `-VarDecl 0x7fc99087c6e8 <col:5, col:18> col:9 used b2 'struct B2 *' cinit
-    |   `-ImplicitCastExpr 0x7fc99087cb98 <col:14, col:18> 'struct B2 *' <DerivedToBase (B2)>
-    |     `-CXXNewExpr 0x7fc99087cb40 <col:14, col:18> 'struct D2 *' Function 0x7fc990878018 'operator new' 'void *(unsigned long)'
-    |       `-CXXConstructExpr 0x7fc99087cb10 <col:18> 'struct D2' 'void (void) noexcept'
-    |-IfStmt 0x7fc99087ce40 <line:34:5, line:36:5>
+    |-DeclStmt 0x7fb0ab0931b8 <line:33:5, col:20>
+    | `-VarDecl 0x7fb0ab092ce8 <col:5, col:18> col:9 used b2 'struct B2 *' cinit
+    |   `-ImplicitCastExpr 0x7fb0ab093198 <col:14, col:18> 'struct B2 *' <DerivedToBase (B2)>
+    |     `-CXXNewExpr 0x7fb0ab093140 <col:14, col:18> 'struct D2 *' Function 0x7fb0ab08e618 'operator new' 'void *(unsigned long)'
+    |       `-CXXConstructExpr 0x7fb0ab093110 <col:18> 'struct D2' 'void (void) noexcept'
+    |-IfStmt 0x7fb0ab093440 <line:34:5, line:36:5>
     | |-<<<NULL>>>
-    | |-DeclStmt 0x7fc99087ce78 <line:34:9, col:40>
-    | | `-VarDecl 0x7fc99087cbe0 <col:9, col:40> col:14 used dp 'struct D2 *':'struct D2 *' cinit
-    | |   `-CXXDynamicCastExpr 0x7fc99087cc90 <col:19, col:40> 'struct D2 *' dynamic_cast<struct D2 *> <Dynamic>
-    | |     `-ImplicitCastExpr 0x7fc99087cc78 <col:38> 'struct B2 *' <LValueToRValue>
-    | |       `-DeclRefExpr 0x7fc99087cc40 <col:38> 'struct B2 *' lvalue Var 0x7fc99087c6e8 'b2' 'struct B2 *'
-    | |-ImplicitCastExpr 0x7fc99087cd68 <col:14> '_Bool' <PointerToBoolean>
-    | | `-ImplicitCastExpr 0x7fc99087cd50 <col:14> 'struct D2 *':'struct D2 *' <LValueToRValue>
-    | |   `-DeclRefExpr 0x7fc99087cd28 <col:14> 'struct D2 *':'struct D2 *' lvalue Var 0x7fc99087cbe0 'dp' 'struct D2 *':'struct D2 *'
-    | |-CompoundStmt 0x7fc99087ce20 <col:43, line:36:5>
-    | | `-CXXMemberCallExpr 0x7fc99087cdf8 <line:35:9, col:15> 'void'
-    | |   `-MemberExpr 0x7fc99087cdc0 <col:9, col:13> '<bound member function type>' ->m 0x7fc9908787f8
-    | |     `-ImplicitCastExpr 0x7fc99087cda8 <col:9> 'struct D2 *':'struct D2 *' <LValueToRValue>
-    | |       `-DeclRefExpr 0x7fc99087cd80 <col:9> 'struct D2 *':'struct D2 *' lvalue Var 0x7fc99087cbe0 'dp' 'struct D2 *':'struct D2 *'
+    | |-DeclStmt 0x7fb0ab093478 <line:34:9, col:40>
+    | | `-VarDecl 0x7fb0ab0931e0 <col:9, col:40> col:14 used dp 'struct D2 *':'struct D2 *' cinit
+    | |   `-CXXDynamicCastExpr 0x7fb0ab093290 <col:19, col:40> 'struct D2 *' dynamic_cast<struct D2 *> <Dynamic>
+    | |     `-ImplicitCastExpr 0x7fb0ab093278 <col:38> 'struct B2 *' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7fb0ab093240 <col:38> 'struct B2 *' lvalue Var 0x7fb0ab092ce8 'b2' 'struct B2 *'
+    | |-ImplicitCastExpr 0x7fb0ab093368 <col:14> '_Bool' <PointerToBoolean>
+    | | `-ImplicitCastExpr 0x7fb0ab093350 <col:14> 'struct D2 *':'struct D2 *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fb0ab093328 <col:14> 'struct D2 *':'struct D2 *' lvalue Var 0x7fb0ab0931e0 'dp' 'struct D2 *':'struct D2 *'
+    | |-CompoundStmt 0x7fb0ab093420 <col:43, line:36:5>
+    | | `-CXXMemberCallExpr 0x7fb0ab0933f8 <line:35:9, col:15> 'void'
+    | |   `-MemberExpr 0x7fb0ab0933c0 <col:9, col:13> '<bound member function type>' ->m 0x7fb0ab08edf8
+    | |     `-ImplicitCastExpr 0x7fb0ab0933a8 <col:9> 'struct D2 *':'struct D2 *' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7fb0ab093380 <col:9> 'struct D2 *':'struct D2 *' lvalue Var 0x7fb0ab0931e0 'dp' 'struct D2 *':'struct D2 *'
     | `-<<<NULL>>>
-    |-CXXDeleteExpr 0x7fc99087ced0 <line:38:5, col:12> 'void' Function 0x7fc990878328 'operator delete' 'void (void *) noexcept'
-    | `-ImplicitCastExpr 0x7fc99087ceb8 <col:12> 'struct B2 *' <LValueToRValue>
-    |   `-DeclRefExpr 0x7fc99087ce90 <col:12> 'struct B2 *' lvalue Var 0x7fc99087acd8 'b1' 'struct B2 *'
-    |-CXXDeleteExpr 0x7fc99087cf38 <line:39:5, col:12> 'void' Function 0x7fc990878328 'operator delete' 'void (void *) noexcept'
-    | `-ImplicitCastExpr 0x7fc99087cf20 <col:12> 'struct B2 *' <LValueToRValue>
-    |   `-DeclRefExpr 0x7fc99087cef8 <col:12> 'struct B2 *' lvalue Var 0x7fc99087c6e8 'b2' 'struct B2 *'
-    `-ReturnStmt 0x7fc99087cf80 <line:40:5, col:12>
-      `-IntegerLiteral 0x7fc99087cf60 <col:12> 'int' 0
+    |-CXXDeleteExpr 0x7fb0ab0934d0 <line:38:5, col:12> 'void' Function 0x7fb0ab08e928 'operator delete' 'void (void *) noexcept'
+    | `-ImplicitCastExpr 0x7fb0ab0934b8 <col:12> 'struct B2 *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fb0ab093490 <col:12> 'struct B2 *' lvalue Var 0x7fb0ab0912d8 'b1' 'struct B2 *'
+    |-CXXDeleteExpr 0x7fb0ab093538 <line:39:5, col:12> 'void' Function 0x7fb0ab08e928 'operator delete' 'void (void *) noexcept'
+    | `-ImplicitCastExpr 0x7fb0ab093520 <col:12> 'struct B2 *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fb0ab0934f8 <col:12> 'struct B2 *' lvalue Var 0x7fb0ab092ce8 'b2' 'struct B2 *'
+    `-ReturnStmt 0x7fb0ab093580 <line:40:5, col:12>
+      `-IntegerLiteral 0x7fb0ab093560 <col:12> 'int' 0

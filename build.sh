@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# TODO: add check for rc before printing confirmations
+# TODO: add check for rc before printing confirmations -> fail task on error
 
 script_file=$(realpath $0)
 root_dir=$(dirname ${script_file})

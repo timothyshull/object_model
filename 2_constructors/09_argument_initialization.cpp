@@ -10,7 +10,7 @@ struct X {
 
 void func(X x)
 {
-    std::cout << x.x << "\n";
+    auto y = x.x;
 }
 
 int main()

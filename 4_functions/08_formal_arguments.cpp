@@ -30,7 +30,7 @@ int main()
     // example 4 - side-effects and introduction of temporaries
     int t1;
     int t2;
-    min_val = (t1 = foo()), (t2 = bar1() + 1), t1 < t2 ? t1 : t2;
+    min_val = (t1 = foo()), (t2 = bar1() + 1), t1 < t2 ? t1 : t2; // warning: expression result unused -> ignore
     return 0;
 }
 

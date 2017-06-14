@@ -1,52 +1,52 @@
-TranslationUnitDecl 0x7fbae3030ad0 <<invalid sloc>> <invalid sloc>
-|-TypedefDecl 0x7fbae3031060 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
-| `-BuiltinType 0x7fbae3030d40 '__int128'
-|-TypedefDecl 0x7fbae30310d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
-| `-BuiltinType 0x7fbae3030d60 'unsigned __int128'
-|-TypedefDecl 0x7fbae3031418 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
-| `-RecordType 0x7fbae30311c0 'struct __NSConstantString_tag'
-|   `-CXXRecord 0x7fbae3031128 '__NSConstantString_tag'
-|-TypedefDecl 0x7fbae30314b0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
-| `-PointerType 0x7fbae3031470 'char *'
-|   `-BuiltinType 0x7fbae3030b60 'char'
-|-TypedefDecl 0x7fbae3063200 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
-| `-ConstantArrayType 0x7fbae3031790 'struct __va_list_tag [1]' 1 
-|   `-RecordType 0x7fbae30315a0 'struct __va_list_tag'
-|     `-CXXRecord 0x7fbae3031508 '__va_list_tag'
-|-CXXRecordDecl 0x7fbae3063258 <object_model_refined/3_data/02_access_of_data_member.cpp:1:1, line:3:1> line:1:8 struct S1 definition
-| |-CXXRecordDecl 0x7fbae3063378 <col:1, col:8> col:8 implicit struct S1
-| `-VarDecl 0x7fbae3063428 <line:2:5, col:16> col:16 used s 'int' static
-|-VarDecl 0x7fbae30634e0 parent 0x7fbae3063258 prev 0x7fbae3063428 <line:5:1, col:13> col:9 used s 'int' cinit
-| `-IntegerLiteral 0x7fbae3063588 <col:13> 'int' 0
-|-CXXRecordDecl 0x7fbae30635a8 <line:7:1, line:14:1> line:7:8 referenced struct S2 definition
-| |-CXXRecordDecl 0x7fbae30636c8 <col:1, col:8> col:8 implicit referenced struct S2
-| |-FieldDecl 0x7fbae3063778 <line:8:5, col:9> col:9 referenced m 'int'
-| `-CXXMethodDecl 0x7fbae30638f0 <line:10:5, line:13:5> line:10:10 used add 'void (const struct S2 &)'
-|   |-ParmVarDecl 0x7fbae30637f8 <col:14, col:24> col:24 used s 'const struct S2 &'
-|   `-CompoundStmt 0x7fbae3063ab0 <line:11:5, line:13:5>
-|     `-CompoundAssignOperator 0x7fbae3063a78 <line:12:9, col:16> 'int' lvalue '+=' ComputeLHSTy='int' ComputeResultTy='int'
-|       |-MemberExpr 0x7fbae30639c8 <col:9> 'int' lvalue ->m 0x7fbae3063778
-|       | `-CXXThisExpr 0x7fbae30639b0 <col:9> 'struct S2 *' this
-|       `-ImplicitCastExpr 0x7fbae3063a60 <col:14, col:16> 'int' <LValueToRValue>
-|         `-MemberExpr 0x7fbae3063a28 <col:14, col:16> 'const int' lvalue .m 0x7fbae3063778
-|           `-DeclRefExpr 0x7fbae3063a00 <col:14> 'const struct S2' lvalue ParmVar 0x7fbae30637f8 's' 'const struct S2 &'
-`-FunctionDecl 0x7fbae3063b28 <line:16:1, line:24:1> line:16:5 main 'int (void)'
-  `-CompoundStmt 0x7fbae3064058 <line:17:1, line:24:1>
-    |-BinaryOperator 0x7fbae3063cb8 <line:18:5, col:13> 'int' lvalue '='
-    | |-DeclRefExpr 0x7fbae3063c60 <col:5, col:9> 'int' lvalue Var 0x7fbae30634e0 's' 'int'
-    | `-IntegerLiteral 0x7fbae3063c98 <col:13> 'int' 1
-    |-DeclStmt 0x7fbae3063e00 <line:20:5, col:15>
-    | `-VarDecl 0x7fbae3063cf0 <col:5, col:14> col:8 used s2_1 'struct S2' listinit
-    |   `-InitListExpr 0x7fbae3063db8 <col:12, col:14> 'struct S2'
-    |     `-IntegerLiteral 0x7fbae3063d50 <col:13> 'int' 1
-    |-DeclStmt 0x7fbae3063f38 <line:21:5, col:15>
-    | `-VarDecl 0x7fbae3063e28 <col:5, col:14> col:8 used s2_2 'struct S2' listinit
-    |   `-InitListExpr 0x7fbae3063ef0 <col:12, col:14> 'struct S2'
-    |     `-IntegerLiteral 0x7fbae3063e88 <col:13> 'int' 2
-    |-CXXMemberCallExpr 0x7fbae3063fd8 <line:22:5, col:18> 'void'
-    | |-MemberExpr 0x7fbae3063f78 <col:5, col:10> '<bound member function type>' .add 0x7fbae30638f0
-    | | `-DeclRefExpr 0x7fbae3063f50 <col:5> 'struct S2' lvalue Var 0x7fbae3063cf0 's2_1' 'struct S2'
-    | `-ImplicitCastExpr 0x7fbae3064008 <col:14> 'const struct S2' lvalue <NoOp>
-    |   `-DeclRefExpr 0x7fbae3063fb0 <col:14> 'struct S2' lvalue Var 0x7fbae3063e28 's2_2' 'struct S2'
-    `-ReturnStmt 0x7fbae3064040 <line:23:5, col:12>
-      `-IntegerLiteral 0x7fbae3064020 <col:12> 'int' 0
+TranslationUnitDecl 0x7fb7788186d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb778818c60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb778818940 '__int128'
+|-TypedefDecl 0x7fb778818cd0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb778818960 'unsigned __int128'
+|-TypedefDecl 0x7fb778819018 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb778818dc0 'struct __NSConstantString_tag'
+|   `-CXXRecord 0x7fb778818d28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb7788190b0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb778819070 'char *'
+|   `-BuiltinType 0x7fb778818760 'char'
+|-TypedefDecl 0x7fb77884ae00 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb778819390 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb7788191a0 'struct __va_list_tag'
+|     `-CXXRecord 0x7fb778819108 '__va_list_tag'
+|-CXXRecordDecl 0x7fb77884ae58 </Users/tskull/Documents/Programming/Cpp/object_model_refined/3_data/02_access_of_data_member.cpp:1:1, line:3:1> line:1:8 struct S1 definition
+| |-CXXRecordDecl 0x7fb77884af78 <col:1, col:8> col:8 implicit struct S1
+| `-VarDecl 0x7fb77884b028 <line:2:5, col:16> col:16 used s 'int' static
+|-VarDecl 0x7fb77884b0e0 parent 0x7fb77884ae58 prev 0x7fb77884b028 <line:5:1, col:13> col:9 used s 'int' cinit
+| `-IntegerLiteral 0x7fb77884b188 <col:13> 'int' 0
+|-CXXRecordDecl 0x7fb77884b1a8 <line:7:1, line:14:1> line:7:8 referenced struct S2 definition
+| |-CXXRecordDecl 0x7fb77884b2c8 <col:1, col:8> col:8 implicit referenced struct S2
+| |-FieldDecl 0x7fb77884b378 <line:8:5, col:9> col:9 referenced m 'int'
+| `-CXXMethodDecl 0x7fb77884b4f0 <line:10:5, line:13:5> line:10:10 used add 'void (const struct S2 &)'
+|   |-ParmVarDecl 0x7fb77884b3f8 <col:14, col:24> col:24 used s 'const struct S2 &'
+|   `-CompoundStmt 0x7fb77884b6b0 <line:11:5, line:13:5>
+|     `-CompoundAssignOperator 0x7fb77884b678 <line:12:9, col:16> 'int' lvalue '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|       |-MemberExpr 0x7fb77884b5c8 <col:9> 'int' lvalue ->m 0x7fb77884b378
+|       | `-CXXThisExpr 0x7fb77884b5b0 <col:9> 'struct S2 *' this
+|       `-ImplicitCastExpr 0x7fb77884b660 <col:14, col:16> 'int' <LValueToRValue>
+|         `-MemberExpr 0x7fb77884b628 <col:14, col:16> 'const int' lvalue .m 0x7fb77884b378
+|           `-DeclRefExpr 0x7fb77884b600 <col:14> 'const struct S2' lvalue ParmVar 0x7fb77884b3f8 's' 'const struct S2 &'
+`-FunctionDecl 0x7fb77884b728 <line:16:1, line:24:1> line:16:5 main 'int (void)'
+  `-CompoundStmt 0x7fb77884bc58 <line:17:1, line:24:1>
+    |-BinaryOperator 0x7fb77884b8b8 <line:18:5, col:13> 'int' lvalue '='
+    | |-DeclRefExpr 0x7fb77884b860 <col:5, col:9> 'int' lvalue Var 0x7fb77884b0e0 's' 'int'
+    | `-IntegerLiteral 0x7fb77884b898 <col:13> 'int' 1
+    |-DeclStmt 0x7fb77884ba00 <line:20:5, col:15>
+    | `-VarDecl 0x7fb77884b8f0 <col:5, col:14> col:8 used s2_1 'struct S2' listinit
+    |   `-InitListExpr 0x7fb77884b9b8 <col:12, col:14> 'struct S2'
+    |     `-IntegerLiteral 0x7fb77884b950 <col:13> 'int' 1
+    |-DeclStmt 0x7fb77884bb38 <line:21:5, col:15>
+    | `-VarDecl 0x7fb77884ba28 <col:5, col:14> col:8 used s2_2 'struct S2' listinit
+    |   `-InitListExpr 0x7fb77884baf0 <col:12, col:14> 'struct S2'
+    |     `-IntegerLiteral 0x7fb77884ba88 <col:13> 'int' 2
+    |-CXXMemberCallExpr 0x7fb77884bbd8 <line:22:5, col:18> 'void'
+    | |-MemberExpr 0x7fb77884bb78 <col:5, col:10> '<bound member function type>' .add 0x7fb77884b4f0
+    | | `-DeclRefExpr 0x7fb77884bb50 <col:5> 'struct S2' lvalue Var 0x7fb77884b8f0 's2_1' 'struct S2'
+    | `-ImplicitCastExpr 0x7fb77884bc08 <col:14> 'const struct S2' lvalue <NoOp>
+    |   `-DeclRefExpr 0x7fb77884bbb0 <col:14> 'struct S2' lvalue Var 0x7fb77884ba28 's2_2' 'struct S2'
+    `-ReturnStmt 0x7fb77884bc40 <line:23:5, col:12>
+      `-IntegerLiteral 0x7fb77884bc20 <col:12> 'int' 0

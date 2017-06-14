@@ -1,100 +1,100 @@
-TranslationUnitDecl 0x7f8ff40178d0 <<invalid sloc>> <invalid sloc>
-|-TypedefDecl 0x7f8ff4017e60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
-| `-BuiltinType 0x7f8ff4017b40 '__int128'
-|-TypedefDecl 0x7f8ff4017ed0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
-| `-BuiltinType 0x7f8ff4017b60 'unsigned __int128'
-|-TypedefDecl 0x7f8ff4018218 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
-| `-RecordType 0x7f8ff4017fc0 'struct __NSConstantString_tag'
-|   `-CXXRecord 0x7f8ff4017f28 '__NSConstantString_tag'
-|-TypedefDecl 0x7f8ff40182b0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
-| `-PointerType 0x7f8ff4018270 'char *'
-|   `-BuiltinType 0x7f8ff4017960 'char'
-|-TypedefDecl 0x7f8ff404a000 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
-| `-ConstantArrayType 0x7f8ff4018590 'struct __va_list_tag [1]' 1 
-|   `-RecordType 0x7f8ff40183a0 'struct __va_list_tag'
-|     `-CXXRecord 0x7f8ff4018308 '__va_list_tag'
-|-CXXRecordDecl 0x7f8ff404a058 <object_model_refined/2_constructors/05_copy_constructor_construction.cpp:3:1, line:11:1> line:3:8 referenced struct A definition
-| |-CXXRecordDecl 0x7f8ff404a178 <col:1, col:8> col:8 implicit referenced struct A
-| |-FieldDecl 0x7f8ff404a228 <line:4:5, col:9> col:9 referenced n 'int'
-| |-CXXConstructorDecl 0x7f8ff404a3a0 <line:6:5, col:26> col:5 used A 'void (int)'
-| | |-ParmVarDecl 0x7f8ff404a288 <col:7, col:15> col:11 used n 'int' cinit
-| | | `-IntegerLiteral 0x7f8ff404a758 <col:15> 'int' 1
-| | |-CXXCtorInitializer Field 0x7f8ff404a228 'n' 'int'
-| | | `-InitListExpr 0x7f8ff404a820 <col:21, col:23> 'int'
-| | |   `-ImplicitCastExpr 0x7f8ff404a860 <col:22> 'int' <LValueToRValue>
-| | |     `-DeclRefExpr 0x7f8ff404a7b0 <col:22> 'int' lvalue ParmVar 0x7f8ff404a288 'n' 'int'
-| | `-CompoundStmt 0x7f8ff404a8b0 <col:25, col:26>
-| |-CXXConstructorDecl 0x7f8ff404a550 <line:8:5, col:29> col:5 used A 'void (const struct A &)'
-| | |-ParmVarDecl 0x7f8ff404a488 <col:7, col:16> col:16 used a 'const struct A &'
-| | |-CXXCtorInitializer Field 0x7f8ff404a228 'n' 'int'
-| | | `-InitListExpr 0x7f8ff404a970 <col:22, col:26> 'int'
-| | |   `-ImplicitCastExpr 0x7f8ff404a9b0 <col:23, col:25> 'int' <LValueToRValue>
-| | |     `-MemberExpr 0x7f8ff404a8f0 <col:23, col:25> 'const int' lvalue .n 0x7f8ff404a228
-| | |       `-DeclRefExpr 0x7f8ff404a8c8 <col:23> 'const struct A' lvalue ParmVar 0x7f8ff404a488 'a' 'const struct A &'
-| | `-CompoundStmt 0x7f8ff404aa00 <col:28, col:29>
-| |-CXXDestructorDecl 0x7f8ff404a680 <line:10:5, col:18> col:5 ~A 'void (void) noexcept' default trivial
-| `-CXXMethodDecl 0x7f8ff4073800 <line:3:8, <invalid sloc>> col:8 implicit operator= 'struct A &(const struct A &)' inline default trivial noexcept-unevaluated 0x7f8ff4073800
-|   `-ParmVarDecl 0x7f8ff4073920 <col:8> col:8 'const struct A &'
-|-CXXRecordDecl 0x7f8ff404aa18 <line:13:1, line:16:1> line:13:8 referenced struct B definition
+TranslationUnitDecl 0x7ff37d830ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff37d831060 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff37d830d40 '__int128'
+|-TypedefDecl 0x7ff37d8310d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff37d830d60 'unsigned __int128'
+|-TypedefDecl 0x7ff37d831418 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff37d8311c0 'struct __NSConstantString_tag'
+|   `-CXXRecord 0x7ff37d831128 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff37d8314b0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff37d831470 'char *'
+|   `-BuiltinType 0x7ff37d830b60 'char'
+|-TypedefDecl 0x7ff37d863200 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff37d831790 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff37d8315a0 'struct __va_list_tag'
+|     `-CXXRecord 0x7ff37d831508 '__va_list_tag'
+|-CXXRecordDecl 0x7ff37d863258 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/05_copy_constructor_construction.cpp:3:1, line:11:1> line:3:8 referenced struct A definition
+| |-CXXRecordDecl 0x7ff37d863378 <col:1, col:8> col:8 implicit referenced struct A
+| |-FieldDecl 0x7ff37d863428 <line:4:5, col:9> col:9 referenced n 'int'
+| |-CXXConstructorDecl 0x7ff37d8635a0 <line:6:5, col:26> col:5 used A 'void (int)'
+| | |-ParmVarDecl 0x7ff37d863488 <col:7, col:15> col:11 used n 'int' cinit
+| | | `-IntegerLiteral 0x7ff37d863958 <col:15> 'int' 1
+| | |-CXXCtorInitializer Field 0x7ff37d863428 'n' 'int'
+| | | `-InitListExpr 0x7ff37d863a20 <col:21, col:23> 'int'
+| | |   `-ImplicitCastExpr 0x7ff37d863a60 <col:22> 'int' <LValueToRValue>
+| | |     `-DeclRefExpr 0x7ff37d8639b0 <col:22> 'int' lvalue ParmVar 0x7ff37d863488 'n' 'int'
+| | `-CompoundStmt 0x7ff37d863ab0 <col:25, col:26>
+| |-CXXConstructorDecl 0x7ff37d863750 <line:8:5, col:29> col:5 used A 'void (const struct A &)'
+| | |-ParmVarDecl 0x7ff37d863688 <col:7, col:16> col:16 used a 'const struct A &'
+| | |-CXXCtorInitializer Field 0x7ff37d863428 'n' 'int'
+| | | `-InitListExpr 0x7ff37d863b70 <col:22, col:26> 'int'
+| | |   `-ImplicitCastExpr 0x7ff37d863bb0 <col:23, col:25> 'int' <LValueToRValue>
+| | |     `-MemberExpr 0x7ff37d863af0 <col:23, col:25> 'const int' lvalue .n 0x7ff37d863428
+| | |       `-DeclRefExpr 0x7ff37d863ac8 <col:23> 'const struct A' lvalue ParmVar 0x7ff37d863688 'a' 'const struct A &'
+| | `-CompoundStmt 0x7ff37d863c00 <col:28, col:29>
+| |-CXXDestructorDecl 0x7ff37d863880 <line:10:5, col:18> col:5 ~A 'void (void) noexcept' default trivial
+| `-CXXMethodDecl 0x7ff37d88ca00 <line:3:8, <invalid sloc>> col:8 implicit operator= 'struct A &(const struct A &)' inline default trivial noexcept-unevaluated 0x7ff37d88ca00
+|   `-ParmVarDecl 0x7ff37d88cb20 <col:8> col:8 'const struct A &'
+|-CXXRecordDecl 0x7ff37d863c18 <line:13:1, col:15> col:8 referenced struct B definition
 | |-public 'struct A'
-| |-CXXRecordDecl 0x7f8ff404ab78 <col:1, col:8> col:8 implicit referenced struct B
-| |-CXXConstructorDecl 0x7f8ff404ac58 <col:8> col:8 implicit B 'void (struct B &&)' inline default noexcept-unevaluated 0x7f8ff404ac58
-| | `-ParmVarDecl 0x7f8ff404ad80 <col:8> col:8 'struct B &&'
-| |-CXXMethodDecl 0x7f8ff404ae18 <col:8, <invalid sloc>> col:8 implicit operator= 'struct B &(struct B &&)' inline default trivial noexcept-unevaluated 0x7f8ff404ae18
-| | `-ParmVarDecl 0x7f8ff404af30 <col:8> col:8 'struct B &&'
-| |-CXXDestructorDecl 0x7f8ff40739a8 <col:8> col:8 implicit ~B 'void (void)' inline default trivial noexcept-unevaluated 0x7f8ff40739a8
-| |-CXXConstructorDecl 0x7f8ff4073fb0 <col:8> col:8 implicit used B 'void (void) noexcept(false)' inline default
+| |-CXXRecordDecl 0x7ff37d863d78 <col:1, col:8> col:8 implicit referenced struct B
+| |-CXXConstructorDecl 0x7ff37d863e58 <col:8> col:8 implicit B 'void (struct B &&)' inline default noexcept-unevaluated 0x7ff37d863e58
+| | `-ParmVarDecl 0x7ff37d863f80 <col:8> col:8 'struct B &&'
+| |-CXXMethodDecl 0x7ff37d864018 <col:8, <invalid sloc>> col:8 implicit operator= 'struct B &(struct B &&)' inline default trivial noexcept-unevaluated 0x7ff37d864018
+| | `-ParmVarDecl 0x7ff37d864130 <col:8> col:8 'struct B &&'
+| |-CXXDestructorDecl 0x7ff37d88cba8 <col:8> col:8 implicit ~B 'void (void)' inline default trivial noexcept-unevaluated 0x7ff37d88cba8
+| |-CXXConstructorDecl 0x7ff37d88d1b0 <col:8> col:8 implicit used B 'void (void) noexcept(false)' inline default
 | | |-CXXCtorInitializer 'struct A'
-| | | `-CXXConstructExpr 0x7f8ff40742c8 <col:8> 'struct A' 'void (int)'
-| | |   `-CXXDefaultArgExpr 0x7f8ff40742a8 <<invalid sloc>> 'int'
-| | `-CompoundStmt 0x7f8ff4074340 <col:8>
-| `-CXXConstructorDecl 0x7f8ff40740c8 <col:8> col:8 implicit used B 'void (const struct B &) noexcept(false)' inline default
-|   |-ParmVarDecl 0x7f8ff40741f0 <col:8> col:8 used 'const struct B &'
+| | | `-CXXConstructExpr 0x7ff37d88d4c8 <col:8> 'struct A' 'void (int)'
+| | |   `-CXXDefaultArgExpr 0x7ff37d88d4a8 <<invalid sloc>> 'int'
+| | `-CompoundStmt 0x7ff37d88d540 <col:8>
+| `-CXXConstructorDecl 0x7ff37d88d2c8 <col:8> col:8 implicit used B 'void (const struct B &) noexcept(false)' inline default
+|   |-ParmVarDecl 0x7ff37d88d3f0 <col:8> col:8 used 'const struct B &'
 |   |-CXXCtorInitializer 'struct A'
-|   | `-CXXConstructExpr 0x7f8ff40751f8 <col:8> 'struct A' 'void (const struct A &)'
-|   |   `-ImplicitCastExpr 0x7f8ff40751d8 <col:8> 'const struct A' lvalue <UncheckedDerivedToBase (A)>
-|   |     `-DeclRefExpr 0x7f8ff40751b0 <col:8> 'const struct B' lvalue ParmVar 0x7f8ff40741f0 '' 'const struct B &'
-|   `-CompoundStmt 0x7f8ff4075270 <col:8>
-|-CXXRecordDecl 0x7f8ff4073a88 <line:18:1, line:25:1> line:18:8 referenced struct C definition
+|   | `-CXXConstructExpr 0x7ff37e0001f8 <col:8> 'struct A' 'void (const struct A &)'
+|   |   `-ImplicitCastExpr 0x7ff37e0001d8 <col:8> 'const struct A' lvalue <UncheckedDerivedToBase (A)>
+|   |     `-DeclRefExpr 0x7ff37e0001b0 <col:8> 'const struct B' lvalue ParmVar 0x7ff37d88d3f0 '' 'const struct B &'
+|   `-CompoundStmt 0x7ff37e000270 <col:8>
+|-CXXRecordDecl 0x7ff37d88cc88 <line:15:1, line:19:1> line:15:8 referenced struct C definition
 | |-public 'struct B'
-| |-CXXRecordDecl 0x7f8ff4073be8 <col:1, col:8> col:8 implicit referenced struct C
-| |-CXXConstructorDecl 0x7f8ff4073ce8 <line:19:5, col:16> col:5 used C 'void (void)'
+| |-CXXRecordDecl 0x7ff37d88cde8 <col:1, col:8> col:8 implicit referenced struct C
+| |-CXXConstructorDecl 0x7ff37d88cee8 <line:16:5, col:16> col:5 used C 'void (void)'
 | | |-CXXCtorInitializer 'struct B'
-| | | `-CXXConstructExpr 0x7f8ff4074358 <col:11, col:13> 'struct B' 'void (void) noexcept(false)' zeroing
-| | `-CompoundStmt 0x7f8ff40743b8 <col:15, col:16>
-| `-CXXConstructorDecl 0x7f8ff4073e90 <line:21:5, col:25> col:5 C 'void (const struct C &)' delete
-|   `-ParmVarDecl 0x7f8ff4073dc8 <col:7, col:15> col:16 'const struct C &'
-`-FunctionDecl 0x7f8ff4074428 <line:27:1, line:40:1> line:27:5 main 'int (void)'
-  `-CompoundStmt 0x7f8ff4075610 <line:28:1, line:40:1>
-    |-DeclStmt 0x7f8ff4074638 <line:29:5, col:12>
-    | `-VarDecl 0x7f8ff4074538 <col:5, col:11> col:7 used a1 'struct A' listinit
-    |   `-CXXConstructExpr 0x7f8ff4074600 <col:7, col:11> 'struct A' 'void (int)'
-    |     `-IntegerLiteral 0x7f8ff4074598 <col:10> 'int' 7
-    |-DeclStmt 0x7f8ff4074780 <line:30:5, col:13>
-    | `-VarDecl 0x7f8ff4074660 <col:5, col:12> col:7 a2 'struct A' listinit
-    |   `-CXXConstructExpr 0x7f8ff4074748 <col:7, col:12> 'struct A' 'void (const struct A &)'
-    |     `-ImplicitCastExpr 0x7f8ff4074730 <col:10> 'const struct A' lvalue <NoOp>
-    |       `-DeclRefExpr 0x7f8ff40746c0 <col:10> 'struct A' lvalue Var 0x7f8ff4074538 'a1' 'struct A'
-    |-DeclStmt 0x7f8ff4075090 <line:31:5, col:8>
-    | `-VarDecl 0x7f8ff4075000 <col:5, col:7> col:7 used b 'struct B' callinit
-    |   `-CXXConstructExpr 0x7f8ff4075060 <col:7> 'struct B' 'void (void) noexcept(false)'
-    |-DeclStmt 0x7f8ff40752c0 <line:32:5, col:13>
-    | `-VarDecl 0x7f8ff40750b8 <col:5, col:12> col:7 b2 'struct B' cinit
-    |   `-CXXConstructExpr 0x7f8ff4075288 <col:12> 'struct B' 'void (const struct B &) noexcept(false)'
-    |     `-ImplicitCastExpr 0x7f8ff4075140 <col:12> 'const struct B' lvalue <NoOp>
-    |       `-DeclRefExpr 0x7f8ff4075118 <col:12> 'struct B' lvalue Var 0x7f8ff4075000 'b' 'struct B'
-    |-DeclStmt 0x7f8ff40753e0 <line:33:5, col:13>
-    | `-VarDecl 0x7f8ff40752e8 <col:5, col:12> col:7 a3 'struct A' cinit
-    |   `-CXXConstructExpr 0x7f8ff40753a8 <col:12> 'struct A' 'void (const struct A &)'
-    |     `-ImplicitCastExpr 0x7f8ff4075388 <col:12> 'const struct A' lvalue <DerivedToBase (A)>
-    |       `-ImplicitCastExpr 0x7f8ff4075370 <col:12> 'const struct B' lvalue <NoOp>
-    |         `-DeclRefExpr 0x7f8ff4075348 <col:12> 'struct B' lvalue Var 0x7f8ff4075000 'b' 'struct B'
-    |-DeclStmt 0x7f8ff4075508 <line:34:5, col:22>
-    | `-VarDecl 0x7f8ff4075408 <col:5, col:21> col:16 va 'volatile struct A' listinit
-    |   `-CXXConstructExpr 0x7f8ff40754d0 <col:16, col:21> 'volatile struct A' 'void (int)'
-    |     `-IntegerLiteral 0x7f8ff4075468 <col:19> 'int' 10
-    |-DeclStmt 0x7f8ff40755c0 <line:37:5, col:8>
-    | `-VarDecl 0x7f8ff4075530 <col:5, col:7> col:7 c 'struct C' callinit
-    |   `-CXXConstructExpr 0x7f8ff4075590 <col:7> 'struct C' 'void (void)'
-    `-ReturnStmt 0x7f8ff40755f8 <line:39:5, col:12>
-      `-IntegerLiteral 0x7f8ff40755d8 <col:12> 'int' 0
+| | | `-CXXConstructExpr 0x7ff37d88d558 <col:11, col:13> 'struct B' 'void (void) noexcept(false)' zeroing
+| | `-CompoundStmt 0x7ff37d88d5b8 <col:15, col:16>
+| `-CXXConstructorDecl 0x7ff37d88d090 <line:18:5, col:25> col:5 C 'void (const struct C &)' delete
+|   `-ParmVarDecl 0x7ff37d88cfc8 <col:7, col:15> col:16 'const struct C &'
+`-FunctionDecl 0x7ff37d88d628 <line:21:1, line:32:1> line:21:5 main 'int (void)'
+  `-CompoundStmt 0x7ff37e000610 <line:22:1, line:32:1>
+    |-DeclStmt 0x7ff37d88d838 <line:23:5, col:12>
+    | `-VarDecl 0x7ff37d88d738 <col:5, col:11> col:7 used a1 'struct A' listinit
+    |   `-CXXConstructExpr 0x7ff37d88d800 <col:7, col:11> 'struct A' 'void (int)'
+    |     `-IntegerLiteral 0x7ff37d88d798 <col:10> 'int' 7
+    |-DeclStmt 0x7ff37d88d980 <line:24:5, col:13>
+    | `-VarDecl 0x7ff37d88d860 <col:5, col:12> col:7 a2 'struct A' listinit
+    |   `-CXXConstructExpr 0x7ff37d88d948 <col:7, col:12> 'struct A' 'void (const struct A &)'
+    |     `-ImplicitCastExpr 0x7ff37d88d930 <col:10> 'const struct A' lvalue <NoOp>
+    |       `-DeclRefExpr 0x7ff37d88d8c0 <col:10> 'struct A' lvalue Var 0x7ff37d88d738 'a1' 'struct A'
+    |-DeclStmt 0x7ff37e000090 <line:25:5, col:8>
+    | `-VarDecl 0x7ff37e000000 <col:5, col:7> col:7 used b 'struct B' callinit
+    |   `-CXXConstructExpr 0x7ff37e000060 <col:7> 'struct B' 'void (void) noexcept(false)'
+    |-DeclStmt 0x7ff37e0002c0 <line:26:5, col:13>
+    | `-VarDecl 0x7ff37e0000b8 <col:5, col:12> col:7 b2 'struct B' cinit
+    |   `-CXXConstructExpr 0x7ff37e000288 <col:12> 'struct B' 'void (const struct B &) noexcept(false)'
+    |     `-ImplicitCastExpr 0x7ff37e000140 <col:12> 'const struct B' lvalue <NoOp>
+    |       `-DeclRefExpr 0x7ff37e000118 <col:12> 'struct B' lvalue Var 0x7ff37e000000 'b' 'struct B'
+    |-DeclStmt 0x7ff37e0003e0 <line:27:5, col:13>
+    | `-VarDecl 0x7ff37e0002e8 <col:5, col:12> col:7 a3 'struct A' cinit
+    |   `-CXXConstructExpr 0x7ff37e0003a8 <col:12> 'struct A' 'void (const struct A &)'
+    |     `-ImplicitCastExpr 0x7ff37e000388 <col:12> 'const struct A' lvalue <DerivedToBase (A)>
+    |       `-ImplicitCastExpr 0x7ff37e000370 <col:12> 'const struct B' lvalue <NoOp>
+    |         `-DeclRefExpr 0x7ff37e000348 <col:12> 'struct B' lvalue Var 0x7ff37e000000 'b' 'struct B'
+    |-DeclStmt 0x7ff37e000508 <line:28:5, col:22>
+    | `-VarDecl 0x7ff37e000408 <col:5, col:21> col:16 va 'volatile struct A' listinit
+    |   `-CXXConstructExpr 0x7ff37e0004d0 <col:16, col:21> 'volatile struct A' 'void (int)'
+    |     `-IntegerLiteral 0x7ff37e000468 <col:19> 'int' 10
+    |-DeclStmt 0x7ff37e0005c0 <line:30:5, col:8>
+    | `-VarDecl 0x7ff37e000530 <col:5, col:7> col:7 c 'struct C' callinit
+    |   `-CXXConstructExpr 0x7ff37e000590 <col:7> 'struct C' 'void (void)'
+    `-ReturnStmt 0x7ff37e0005f8 <line:31:5, col:12>
+      `-IntegerLiteral 0x7ff37e0005d8 <col:12> 'int' 0
