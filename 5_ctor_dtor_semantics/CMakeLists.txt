@@ -1,19 +1,10 @@
 project(ctor_dtor_semantics)
 
+add_compile_options(${NO_OPT})
+
 add_executable(01_presence_of_a_virtual_specification 01_presence_of_a_virtual_specification.cpp)
-target_compile_options(01_presence_of_a_virtual_specification PUBLIC ${NO_OPT})
-
 add_executable(02_object_construction_without_inheritance 02_object_construction_without_inheritance.cpp)
-target_compile_options(02_object_construction_without_inheritance PUBLIC ${NO_OPT})
-
 add_executable(03_object_construction_under_inheritance 03_object_construction_under_inheritance.cpp)
-target_compile_options(03_object_construction_under_inheritance PUBLIC ${NO_OPT})
-
 add_executable(04_virtual_inheritance 04_virtual_inheritance.cpp)
-target_compile_options(04_virtual_inheritance PUBLIC ${NO_OPT})
-
 add_executable(05_object_copy_semantics 05_object_copy_semantics.cpp)
-target_compile_options(05_object_copy_semantics PUBLIC ${NO_OPT})
-
 add_executable(06_object_move_semantics 06_object_move_semantics.cpp)
-target_compile_options(06_object_move_semantics PUBLIC ${NO_OPT})

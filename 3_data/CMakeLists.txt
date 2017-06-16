@@ -1,25 +1,12 @@
 project(data)
 
+add_compile_options(${NO_OPT})
+
 add_executable(01_data_member_layout 01_data_member_layout.cpp)
-target_compile_options(01_data_member_layout PUBLIC ${NO_OPT})
-
 add_executable(02_access_of_data_member 02_access_of_data_member.cpp)
-target_compile_options(02_access_of_data_member PUBLIC ${NO_OPT})
-
 add_executable(03_inheritance_and_the_data_members 03_inheritance_and_the_data_members.cpp)
-target_compile_options(03_inheritance_and_the_data_members PUBLIC ${NO_OPT})
-
 add_executable(04_inheritance_without_polymorphism 04_inheritance_without_polymorphism.cpp)
-target_compile_options(04_inheritance_without_polymorphism PUBLIC ${NO_OPT})
-
-add_executable(05_adding_polymoprhism 05_adding_polymoprhism.cpp)
-target_compile_options(05_adding_polymoprhism PUBLIC ${NO_OPT})
-
+add_executable(05_adding_polymoprhism 05_adding_polymorphism.cpp)
 add_executable(06_multiple_inheritance 06_multiple_inheritance.cpp)
-target_compile_options(06_multiple_inheritance PUBLIC ${NO_OPT})
-
 add_executable(07_virtual_inheritance 07_virtual_inheritance.cpp)
-target_compile_options(07_virtual_inheritance PUBLIC ${NO_OPT})
-
 add_executable(08_pointer_to_data_members 08_pointer_to_data_members.cpp)
-target_compile_options(08_pointer_to_data_members PUBLIC ${NO_OPT})

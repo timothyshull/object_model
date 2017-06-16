@@ -1,5 +1,9 @@
 project(profiling)
 
+
+
+include_directories(../benchmark/include)
+
 add_executable(01_data_access1_no_opt 01_data_access_under_increasing_abstraction.cpp)
 target_link_libraries(01_data_access1_no_opt benchmark)
 target_compile_options(01_data_access1_no_opt PUBLIC ${NO_OPT})

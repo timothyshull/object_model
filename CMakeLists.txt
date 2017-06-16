@@ -1,13 +1,7 @@
 cmake_minimum_required(VERSION 3.8)
 project(object_model_refined)
 
-# for benchmarking in profiling sub-project
-add_subdirectory(benchmark)
-include_directories(benchmark/include)
-
 # set(CMAKE_CXX_STANDARD 14)
-# defaults to -O3 -> remove
-set(CMAKE_CXX_FLAGS "--std=c++14")
 # set(CMAKE_VERBOSE_MAKEFILE ON)
 
 if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang" OR "${CMAKE_CXX_COMPILER_ID}" STREQUAL "AppleClang")
@@ -31,6 +25,8 @@ set(NO_OPT -O0 -fstrict-vtable-pointers)
 set(MAX_OPT -O3)
 set(FAST_OPT -Ofast)
 
+add_compile_options(--std=c++14)
+
 add_subdirectory(1_objects)
 add_subdirectory(2_constructors)
 add_subdirectory(3_data)
@@ -39,4 +35,8 @@ add_subdirectory(5_ctor_dtor_semantics)
 add_subdirectory(6_runtime_semantics)
 add_subdirectory(7_object_model)
 add_subdirectory(8_memory_model)
+
+# for benchmarking in profiling sub-project
+add_subdirectory(benchmark)
+
 add_subdirectory(9_profiling)

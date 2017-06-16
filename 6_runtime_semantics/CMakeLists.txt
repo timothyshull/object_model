@@ -1,29 +1,13 @@
 project(runtime_semantics)
 
+add_compile_options(${NO_OPT})
+
 add_executable(01_object_construction_and_destruction 01_object_construction_and_destruction.cpp)
-target_compile_options(01_object_construction_and_destruction PUBLIC ${NO_OPT})
-
 add_executable(02_global_objects 02_global_objects.cpp)
-target_compile_options(02_global_objects PUBLIC ${NO_OPT})
-
 add_executable(03_local_static_objects 03_local_static_objects.cpp)
-target_compile_options(03_local_static_objects PUBLIC ${NO_OPT})
-
 add_executable(04_arrays_of_objects 04_arrays_of_objects.cpp)
-target_compile_options(04_arrays_of_objects PUBLIC ${NO_OPT})
-
 add_executable(05_default_constructors_and_arrays 05_default_constructors_and_arrays.cpp)
-target_compile_options(05_default_constructors_and_arrays PUBLIC ${NO_OPT})
-
 add_executable(06_operators_new_and_delete 06_operators_new_and_delete.cpp)
-target_compile_options(06_operators_new_and_delete PUBLIC ${NO_OPT})
-
 add_executable(07_the_semantics_of_new_arrays 07_the_semantics_of_new_arrays.cpp)
-target_compile_options(07_the_semantics_of_new_arrays PUBLIC ${NO_OPT})
-
 add_executable(08_temporary_objects 08_temporary_objects.cpp)
-target_compile_options(08_temporary_objects PUBLIC ${NO_OPT})
-
 add_executable(08_temporary_objects_no_elision 08_temporary_objects.cpp)
-target_compile_options(08_temporary_objects_no_elision PUBLIC ${NO_OPT} -fno-elide-constructors)
-

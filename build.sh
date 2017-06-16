@@ -7,19 +7,20 @@ root_dir=$(dirname ${script_file})
 build_dir_name=cmake-build-release
 build_dir="${root_dir}/${build_dir_name}"
 compile_commands_dir=${build_dir}
-benchmark_include_dir="${root_dir}/benchmark/include"
 # Ignore the profiling dir for file generation
 ignore_dir=9_profiling
 default_delay=1
 
 # CLI arg flags
+aectlshbp
 a_flag=
-h_flag=
 e_flag=
+c_flag=
 t_flag=
 l_flag=
+s_flag=
+h_flag=
 b_flag=
-c_flag=
 p_flag=
 p_val=
 
@@ -72,7 +73,18 @@ function build_exes () {
     mkdir ${build_dir_name}
     cd ${build_dir_name}
     cmake -DCMAKE_BUILD_TYPE=Release ..
+    if [ $? -ne 0 ]
+    then
+        printf "An error occurred while running cmake...not running make" >&2
+        exit 2
+    fi
+
     make
+    if [ $? -ne 0 ]
+    then
+        printf "An error occurred while running make...exiting" >&2
+        exit 2
+    fi
 }
 
 function generate_hop_file () {
@@ -112,6 +124,12 @@ function generate_hop_file () {
             quit
         end tell
 EOF
+
+    if [ $? -ne 0 ]
+    then
+        printf 'An error occurred while attempting to create the file %s.hop...exiting' "${out_file}" >&2
+        exit 2
+    fi
 
     local source_hop_file="${in_file}.hop"
     local source_pseudo_file="${in_file}.pseudo.c"
@@ -159,9 +177,16 @@ function generate_ast_file () {
     local dir="$1"
     local in_file="$2"
     local out_file="${in_file%.*}_ast.txt"
-    clang-check -p ${compile_commands_dir} -ast-dump ${in_file} --extra-arg -I${benchmark_include_dir} --extra-arg \
-        --std=c++14 --extra-arg -fno-color-diagnostics -- > ${out_file}
-    printf 'Generated the AST file %s from the source file %s\n' "${in_file}" "${out_file}"
+    clang-check -p ${compile_commands_dir} -ast-dump ${in_file} --extra-arg --std=c++14 --extra-arg -fno-color-diagnostics -- > ${out_file}
+
+    if [ $? -eq 0 ]
+    then
+        printf 'Generated the AST file %s from the source file %s\n' "${in_file}" "${out_file}"
+    else
+        printf 'Unable to generate the AST file %s from the source file %s...exiting\n' "${in_file}" "${out_file}" >&2
+        exit 2
+    fi
+
 }
 
 function generate_all_ast_files () {
@@ -177,7 +202,14 @@ function generate_object_layout_file () {
     local in_file="$2"
     local out_file="${in_file%.*}_layout.txt"
     ${clang_exe} -Xclang -fdump-record-layouts -fno-color-diagnostics --std=c++14 ${CXX_FLAGS} ${in_file} > ${out_file}
-    printf 'Generated the object layout file %s from the source file %s\n' "${in_file}" "${out_file}"
+
+    if [ $? -eq 0 ]
+    then
+        printf 'Generated the object layout file %s from the source file %s\n' "${in_file}" "${out_file}"
+    else
+        printf 'Unable to generate the object layout file %s from the source file %s...exiting\n' "${in_file}" "${out_file}" >&2
+        exit 2
+    fi
 }
 
 function generate_all_layout_files () {
@@ -186,20 +218,39 @@ function generate_all_layout_files () {
     iterate_source_files generate_object_layout_file
 }
 
+function generate_assembly_file () {
+    local clang_exe="${clang_path}/clang++"
+    local dir="$1"
+    local in_file="$2"
+    local intermediate_file="${in_file%.*}.i"
+    local assembly_file="${in_file%.*}.cpp.s"
+    ${clang_exe} -DNDEBUG --std=c++14 -O0 -fstrict-vtable-pointers -E ${in_file} > ${intermediate_file}
+    ${clang_exe} -S ${intermediate_file}
+}
+
+function generate_all_assembly_files () {
+    export PATH="${clang_path}:$PATH"
+    cd "${root_dir}"
+    iterate_source_files generate_assembly_file
+}
+
 function clone_benchmark () {
     cd ${root_dir}
-    if [ ! -d "${root_dir}/benchmark" ]; then
+    if [ ! -d "${root_dir}/benchmark" ];
+    then
         git clone https://github.com/google/benchmark.git
     fi
 }
 
 function print_usage () {
     printf '%s\n' \
-        "Usage: $(basename $0) [-aecth] [-p clang-check path]" \
+        "Usage: $(basename $0) [-aectlshb] [-p clang-check path]" \
+        "    -a - generate all targets" \
         "    -e - build executables" \
         "    -c - clean all generated files" \
         "    -t - generate AST files" \
         "    -l - generate object layout files" \
+        "    -s - generate assembly files" \
         "    -h - generate Hopper files" \
         "    -b - clone Google benchmark" \
         "    -p - specify the path to clang & clang-check" >&2
@@ -222,22 +273,24 @@ function copy_py_script () {
 }
 
 function parse_args () {
-    while getopts :ahetlbcp: FOUND
+    while getopts :aectlshbp: FOUND
     do
         case $FOUND in
             a)  a_flag=1
                 ;;
-            h)  h_flag=1
-                ;;
             e)  e_flag=1
+                ;;
+            c)  c_flag=1
                 ;;
             t)  t_flag=1
                 ;;
             l)  l_flag=1
                 ;;
-            b)  b_flag=1
+            s)  s_flag=1
                 ;;
-            c)  c_flag=1
+            h)  h_flag=1
+                ;;
+            b)  b_flag=1
                 ;;
             p)  p_flag=1
                 p_val="$OPTARG"
@@ -265,12 +318,14 @@ function perform_actions () {
     # run all actions
     if [ ${a_flag} ]
     then
-        c_flag=1
-        b_flag=1
+        ectlsh
         e_flag=1
-        h_flag=1
+        c_flag=1
         t_flag=1
         l_flag=1
+        s_flag=1
+        h_flag=1
+        b_flag=1
     fi
 
     if [ ${c_flag} ]
@@ -314,6 +369,12 @@ function perform_actions () {
     then
         printf 'Option -l specified...generating object layout files\n' ${p_val}
         generate_all_layout_files
+    fi
+
+    if [ ${s_flag} ]
+    then
+        printf 'Option -s specified...generating assembly files\n' ${p_val}
+        generate_all_assembly_files
     fi
 }
 

@@ -1,28 +1,13 @@
 project(functions)
 
+add_compile_options(${NO_OPT})
+
 add_executable(01_nonstatic_member_functions 01_nonstatic_member_functions.cpp)
-target_compile_options(01_nonstatic_member_functions PUBLIC ${NO_OPT})
-
 add_executable(02_virtual_member_functions 02_virtual_member_functions.cpp)
-target_compile_options(02_virtual_member_functions PUBLIC ${NO_OPT})
-
 add_executable(03_static_member_functions 03_static_member_functions.cpp)
-target_compile_options(03_static_member_functions PUBLIC ${NO_OPT})
-
 add_executable(04_virtual_functions_under_multiple_inheritance 04_virtual_functions_under_multiple_inheritance.cpp)
-target_compile_options(04_virtual_functions_under_multiple_inheritance PUBLIC ${NO_OPT})
-
 add_executable(05_virtual_functions_under_virtual_inheritance 05_virtual_functions_under_virtual_inheritance.cpp)
-target_compile_options(05_virtual_functions_under_virtual_inheritance PUBLIC ${NO_OPT})
-
 add_executable(06_pointer_to_member_functions 06_pointer_to_member_functions.cpp)
-target_compile_options(06_pointer_to_member_functions PUBLIC ${NO_OPT})
-
 add_executable(07_inline_functions 07_inline_functions.cpp)
-target_compile_options(07_inline_functions PUBLIC ${NO_OPT})
-
 add_executable(08_formal_arguments 08_formal_arguments.cpp)
-target_compile_options(08_formal_arguments PUBLIC ${NO_OPT})
-
 add_executable(09_local_variables 09_local_variables.cpp)
-target_compile_options(09_local_variables PUBLIC ${NO_OPT})

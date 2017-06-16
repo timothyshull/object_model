@@ -1,37 +1,16 @@
 project(constructors)
 
+add_compile_options(${NO_OPT})
+
 add_executable(01_default_constructor_construction 01_default_constructor_construction.cpp)
-target_compile_options(01_default_constructor_construction PUBLIC ${NO_OPT})
-
 add_executable(02_member_class_object_with_default_constructor 02_member_class_object_with_default_constructor.cpp)
-target_compile_options(02_member_class_object_with_default_constructor PUBLIC ${NO_OPT})
-
 add_executable(03_class_with_a_virtual_function 03_class_with_a_virtual_function.cpp)
-target_compile_options(03_class_with_a_virtual_function PUBLIC ${NO_OPT})
-
 add_executable(04_class_with_a_virtual_base_class 04_class_with_a_virtual_base_class.cpp)
-target_compile_options(04_class_with_a_virtual_base_class PUBLIC ${NO_OPT})
-
 add_executable(05_copy_constructor_construction 05_copy_constructor_construction.cpp)
-target_compile_options(05_copy_constructor_construction PUBLIC ${NO_OPT})
-
 add_executable(06_default_memberwise_initialization 06_default_memberwise_initialization.cpp)
-target_compile_options(06_default_memberwise_initialization PUBLIC ${NO_OPT})
-
 add_executable(07_bitwise_copy_semantics 07_bitwise_copy_semantics.cpp)
-target_compile_options(07_bitwise_copy_semantics PUBLIC ${NO_OPT})
-
 add_executable(08_explicit_initialization 08_explicit_initialization.cpp)
-target_compile_options(08_explicit_initialization PUBLIC ${NO_OPT})
-
 add_executable(09_argument_initialization 09_argument_initialization.cpp)
-target_compile_options(09_argument_initialization PUBLIC ${NO_OPT})
-
 add_executable(10_return_value_initialization 10_return_value_initialization.cpp)
-target_compile_options(10_return_value_initialization PUBLIC ${NO_OPT})
-
 add_executable(11_member_initialization_list 11_member_initialization_list.cpp)
-target_compile_options(11_member_initialization_list PUBLIC ${NO_OPT})
-
 add_executable(12_move_constructor 12_move_constructor.cpp)
-target_compile_options(12_move_constructor PUBLIC ${NO_OPT})
