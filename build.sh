@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-# TODO: add check for rc before printing confirmations -> fail task on error
-
 script_file=$(realpath $0)
 root_dir=$(dirname ${script_file})
 build_dir_name=cmake-build-release
@@ -222,10 +220,19 @@ function generate_assembly_file () {
     local clang_exe="${clang_path}/clang++"
     local dir="$1"
     local in_file="$2"
-    local intermediate_file="${in_file%.*}.i"
     local assembly_file="${in_file%.*}.cpp.s"
-    ${clang_exe} -DNDEBUG --std=c++14 -O0 -fstrict-vtable-pointers -E ${in_file} > ${intermediate_file}
-    ${clang_exe} -S ${intermediate_file}
+    cd ${dir}
+    ${clang_exe} -DNDEBUG --std=c++14 -O0 -fstrict-vtable-pointers -S ${in_file}
+
+    if [ $? -eq 0 ]
+    then
+        printf 'Generated the assembly file %s from the source file %s\n' "${assembly_file}" "${in_file}"
+    else
+        printf 'Unable to generate the assembly file %s from the source file %s...exiting\n' "${assembly_file}" "${in_file}" >&2
+        exit 2
+    fi
+
+    cd ${root_dir}
 }
 
 function generate_all_assembly_files () {

@@ -27,7 +27,7 @@ struct C : public B {
     C(double a)
             : B{0},
               y{static_cast<unsigned char>(a + 1)},
-              x{y},
+              x{y}, // ignore compiler warning: field 'y' is uninitialized when used here
               lg{m} {}
 
     C()
