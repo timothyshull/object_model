@@ -16,10 +16,9 @@ void func(X x)
 int main()
 {
     // the following examples would not compile if X(int) were explicit
-    auto arg = 10;
-    X x1 = arg;
+    X x1 = 10;
     func(x1);
-    func(arg);
+    func(10);
 
     X x2{};
     func(x2);

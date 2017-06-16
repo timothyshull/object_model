@@ -9,7 +9,8 @@ std::atomic<bool> data_ready(false);
 void reader()
 {
     while (!data_ready.load()) {
-        std::this_thread::sleep_for(std::chrono::milliseconds(1));
+        std::this_thread::yield();
+        // std::this_thread::sleep_for(std::chrono::milliseconds(1));
     }
     const auto m = data[0];
 }

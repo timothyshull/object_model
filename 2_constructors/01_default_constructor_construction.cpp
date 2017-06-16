@@ -1,7 +1,3 @@
-// In both cases here, we get trivial default constructors that
-// use memset to zero the object that is allocated on the stack
-// TODO: compare description in book with standard
-
 struct X {
     double x;
     double y;
@@ -14,7 +10,12 @@ struct Y {
 
 int main()
 {
-    X p{};
-    Y n{};
+    // trivial default-initialization
+    X x1;
+    Y y1;
+
+    // value initialization
+    X x2{};
+    Y y2{};
     return 0;
 }

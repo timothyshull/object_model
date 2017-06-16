@@ -15,17 +15,17 @@ public:
 
     inline void inline_member_cross_product(const Point_3d &p_a, const Point_3d &p_b)
     {
-        _x = p_a._y * p_b._z - p_a._z * p_b._y;
-        _y = p_a._z * p_b._x - p_a._x * p_b._z;
-        _z = p_a._x * p_b._y - p_a._y * p_b._x;
+        benchmark::DoNotOptimize(_x = p_a._y * p_b._z - p_a._z * p_b._y);
+        benchmark::DoNotOptimize(_y = p_a._z * p_b._x - p_a._x * p_b._z);
+        benchmark::DoNotOptimize(_z = p_a._x * p_b._y - p_a._y * p_b._x);
     }
 
     static void static_cross_product(const Point_3d &p_a, const Point_3d &p_b)
     {
         Point_3d p_c;
-        p_c._x = p_a._y * p_b._z - p_a._z * p_b._y;
-        p_c._y = p_a._z * p_b._x - p_a._x * p_b._z;
-        p_c._z = p_a._x * p_b._y - p_a._y * p_b._x;
+        benchmark::DoNotOptimize(p_c._x = p_a._y * p_b._z - p_a._z * p_b._y);
+        benchmark::DoNotOptimize(p_c._y = p_a._z * p_b._x - p_a._x * p_b._z);
+        benchmark::DoNotOptimize(p_c._z = p_a._x * p_b._y - p_a._y * p_b._x);
     }
 
     void nonstatic_member_cross_product(const Point_3d &p_a, const Point_3d &p_b);
@@ -36,17 +36,17 @@ private:
 
 void Point_3d::nonstatic_member_cross_product(const Point_3d &p_a, const Point_3d &p_b)
 {
-    _x = p_a._y * p_b._z - p_a._z * p_b._y;
-    _y = p_a._z * p_b._x - p_a._x * p_b._z;
-    _z = p_a._x * p_b._y - p_a._y * p_b._x;
+    benchmark::DoNotOptimize(_x = p_a._y * p_b._z - p_a._z * p_b._y);
+    benchmark::DoNotOptimize(_y = p_a._z * p_b._x - p_a._x * p_b._z);
+    benchmark::DoNotOptimize(_z = p_a._x * p_b._y - p_a._y * p_b._x);
 }
 
 void cross_product(const Point_3d &p_a, const Point_3d &p_b)
 {
     Point_3d p_c;
-    p_c._x = p_a._y * p_b._z - p_a._z * p_b._y;
-    p_c._y = p_a._z * p_b._x - p_a._x * p_b._z;
-    p_c._z = p_a._x * p_b._y - p_a._y * p_b._x;
+    benchmark::DoNotOptimize(p_c._x = p_a._y * p_b._z - p_a._z * p_b._y);
+    benchmark::DoNotOptimize(p_c._y = p_a._z * p_b._x - p_a._x * p_b._z);
+    benchmark::DoNotOptimize(p_c._z = p_a._x * p_b._y - p_a._y * p_b._x);
 }
 
 /**
@@ -76,7 +76,7 @@ struct Point_2d_single : public Point_1d_single {
 struct Point_3d_single : public Point_2d_single {
     double z;
 
-    Point_3d_single(float xx = 0.0, float yy = 0.0, float zz = 0.0) : Point_2d_single{xx, yy}, z{zz} {}
+    Point_3d_single(double xx = 0.0, double yy = 0.0, double zz = 0.0) : Point_2d_single{xx, yy}, z{zz} {}
 
     ~Point_3d_single() = default;
 
@@ -85,9 +85,9 @@ struct Point_3d_single : public Point_2d_single {
 
 void Point_3d_single::virtual_member_cross_product(const Point_3d_single &p_a, const Point_3d_single &p_b)
 {
-    x = p_a.y * p_b.z - p_a.z * p_b.y;
-    y = p_a.z * p_b.x - p_a.x * p_b.z;
-    z = p_a.x * p_b.y - p_a.y * p_b.x;
+    benchmark::DoNotOptimize(x = p_a.y * p_b.z - p_a.z * p_b.y);
+    benchmark::DoNotOptimize(y = p_a.z * p_b.x - p_a.x * p_b.z);
+    benchmark::DoNotOptimize(z = p_a.x * p_b.y - p_a.y * p_b.x);
 }
 
 /**
@@ -117,7 +117,7 @@ struct Point_2d_vi1 : virtual public Point_1d_vi1 {
 struct Point_3d_vi1 : public Point_2d_vi1 {
     double z;
 
-    Point_3d_vi1(float xx = 0.0, float yy = 0.0, float zz = 0.0) : Point_2d_vi1{xx, yy}, z{zz} {}
+    Point_3d_vi1(double xx = 0.0, double yy = 0.0, double zz = 0.0) : Point_2d_vi1{xx, yy}, z{zz} {}
 
     ~Point_3d_vi1() = default;
 };
@@ -149,7 +149,7 @@ struct Point_2d_vi2 : virtual public Point_1d_vi2 {
 struct Point_3d_vi2 : virtual public Point_2d_vi2 {
     double z;
 
-    Point_3d_vi2(float xx = 0.0, float yy = 0.0, float zz = 0.0) : Point_2d_vi2{xx, yy}, z{zz} {}
+    Point_3d_vi2(double xx = 0.0, double yy = 0.0, double zz = 0.0) : Point_2d_vi2{xx, yy}, z{zz} {}
 
     ~Point_3d_vi2() = default;
 };
@@ -162,6 +162,7 @@ static void inline_member(benchmark::State &state)
 
     while (state.KeepRunning()) {
         p_c.inline_member_cross_product(p_a, p_b);
+        benchmark::ClobberMemory();
     }
 }
 
@@ -174,6 +175,7 @@ static void nonmember_function(benchmark::State &state)
 
     while (state.KeepRunning()) {
         cross_product(p_a, p_b);
+        benchmark::ClobberMemory();
     }
 }
 
@@ -186,6 +188,7 @@ static void static_member(benchmark::State &state)
 
     while (state.KeepRunning()) {
         Point_3d::static_cross_product(p_a, p_b);
+        benchmark::ClobberMemory();
     }
 }
 
@@ -199,6 +202,7 @@ static void nonstatic_member(benchmark::State &state)
 
     while (state.KeepRunning()) {
         p_c.nonstatic_member_cross_product(p_a, p_b);
+        benchmark::ClobberMemory();
     }
 }
 
@@ -212,6 +216,7 @@ static void virtual_member(benchmark::State &state)
 
     while (state.KeepRunning()) {
         p_c.virtual_member_cross_product(p_a, p_b);
+        benchmark::ClobberMemory();
     }
 }
 

@@ -10,7 +10,6 @@ ignore_dir=9_profiling
 default_delay=1
 
 # CLI arg flags
-aectlshbp
 a_flag=
 e_flag=
 c_flag=
@@ -325,7 +324,6 @@ function perform_actions () {
     # run all actions
     if [ ${a_flag} ]
     then
-        ectlsh
         e_flag=1
         c_flag=1
         t_flag=1

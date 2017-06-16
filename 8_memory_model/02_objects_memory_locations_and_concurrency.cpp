@@ -26,7 +26,9 @@ void producer()
 void consumer()
 {
     D *p2 = nullptr;
-    while (!(p2 = ptr.load(std::memory_order_acquire))) {}
+    while (!(p2 = ptr.load(std::memory_order_acquire))) {
+        std::this_thread::yield();
+    }
 }
 
 int main()

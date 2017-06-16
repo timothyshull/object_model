@@ -118,9 +118,10 @@ static void individual_local_variables(benchmark::State &state)
     auto p_b_z = 0.838;
 
     while (state.KeepRunning()) {
-        p_b_x = p_a_x - p_b_z;
-        p_b_y = p_a_y + p_b_x;
-        p_b_z = p_a_z + p_b_y;
+        benchmark::DoNotOptimize(p_b_x = p_a_x - p_b_z);
+        benchmark::DoNotOptimize(p_b_y = p_a_y + p_b_x);
+        benchmark::DoNotOptimize(p_b_z = p_a_z + p_b_y);
+        benchmark::ClobberMemory();
     }
 }
 
@@ -138,9 +139,10 @@ static void local_array(benchmark::State &state)
     };
 
     while (state.KeepRunning()) {
-        p_b[x] = p_a[x] - p_b[z];
-        p_b[y] = p_a[y] + p_b[x];
-        p_b[z] = p_a[z] + p_b[y];
+        benchmark::DoNotOptimize(p_b[x] = p_a[x] - p_b[z]);
+        benchmark::DoNotOptimize(p_b[y] = p_a[y] + p_b[x]);
+        benchmark::DoNotOptimize(p_b[z] = p_a[z] + p_b[y]);
+        benchmark::ClobberMemory();
     }
 }
 
@@ -152,9 +154,10 @@ static void struct_with_public_members(benchmark::State &state)
     auto p_b = Point_struct{0.315, 0.317, 0.838};
 
     while (state.KeepRunning()) {
-        p_b.x = p_a.x - p_b.z;
-        p_b.y = p_a.y + p_b.x;
-        p_b.z = p_a.z + p_b.y;
+        benchmark::DoNotOptimize(p_b.x = p_a.x - p_b.z);
+        benchmark::DoNotOptimize(p_b.y = p_a.y + p_b.x);
+        benchmark::DoNotOptimize(p_b.z = p_a.z + p_b.y);
+        benchmark::ClobberMemory();
     }
 }
 
@@ -166,9 +169,10 @@ static void class_inline_get(benchmark::State &state)
     auto p_b = Point_inline_get{0.315, 0.317, 0.838};
 
     while (state.KeepRunning()) {
-        p_b.x() = p_a.x() - p_b.z();
-        p_b.y() = p_a.y() + p_b.x();
-        p_b.z() = p_a.z() + p_b.y();
+        benchmark::DoNotOptimize(p_b.x() = p_a.x() - p_b.z());
+        benchmark::DoNotOptimize(p_b.y() = p_a.y() + p_b.x());
+        benchmark::DoNotOptimize(p_b.z() = p_a.z() + p_b.y());
+        benchmark::ClobberMemory();
     }
 }
 
@@ -183,6 +187,7 @@ static void class_inline_get_set(benchmark::State &state)
         p_b.x(p_a.x() - p_b.z());
         p_b.y(p_a.y() + p_b.x());
         p_b.z(p_a.z() + p_b.y());
+        benchmark::ClobberMemory();
     }
 }
 
@@ -194,9 +199,10 @@ static void class_non_inline_get(benchmark::State &state)
     auto p_b = Point_non_inline_get{0.315, 0.317, 0.838};
 
     while (state.KeepRunning()) {
-        p_b.x() = p_a.x() - p_b.z();
-        p_b.y() = p_a.y() + p_b.x();
-        p_b.z() = p_a.z() + p_b.y();
+        benchmark::DoNotOptimize(p_b.x() = p_a.x() - p_b.z());
+        benchmark::DoNotOptimize(p_b.y() = p_a.y() + p_b.x());
+        benchmark::DoNotOptimize(p_b.z() = p_a.z() + p_b.y());
+        benchmark::ClobberMemory();
     }
 }
 
@@ -211,6 +217,7 @@ static void class_non_inline_get_set(benchmark::State &state)
         p_b.x(p_a.x() - p_b.z());
         p_b.y(p_a.y() + p_b.x());
         p_b.z(p_a.z() + p_b.y());
+        benchmark::ClobberMemory();
     }
 }
 

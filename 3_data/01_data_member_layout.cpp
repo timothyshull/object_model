@@ -59,7 +59,8 @@ private:
     float _z;
 };
 
-// TODO: check if this can still be reordered
+// can be reordered -> most likely won't be to adhere to ABI
+// requirements
 class P2 {
 private:
     float _x;

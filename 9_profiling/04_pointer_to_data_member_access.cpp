@@ -37,7 +37,7 @@ struct Point_2d_single : public Point_1d_single {
 struct Point_3d_single : public Point_2d_single {
     double z;
 
-    Point_3d_single(float xx = 0.0, float yy = 0.0, float zz = 0.0) : Point_2d_single{xx, yy}, z{zz} {}
+    Point_3d_single(double xx = 0.0, double yy = 0.0, double zz = 0.0) : Point_2d_single{xx, yy}, z{zz} {}
 
     ~Point_3d_single() = default;
 };
@@ -69,7 +69,7 @@ struct Point_2d_vi1 : virtual public Point_1d_vi1 {
 struct Point_3d_vi1 : public Point_2d_vi1 {
     double z;
 
-    Point_3d_vi1(float xx = 0.0, float yy = 0.0, float zz = 0.0) : Point_2d_vi1{xx, yy}, z{zz} {}
+    Point_3d_vi1(double xx = 0.0, double yy = 0.0, double zz = 0.0) : Point_2d_vi1{xx, yy}, z{zz} {}
 
     ~Point_3d_vi1() = default;
 };
@@ -101,7 +101,7 @@ struct Point_2d_vi2 : virtual public Point_1d_vi2 {
 struct Point_3d_vi2 : virtual public Point_2d_vi2 {
     double z;
 
-    Point_3d_vi2(float xx = 0.0, float yy = 0.0, float zz = 0.0) : Point_2d_vi2{xx, yy}, z{zz} {}
+    Point_3d_vi2(double xx = 0.0, double yy = 0.0, double zz = 0.0) : Point_2d_vi2{xx, yy}, z{zz} {}
 
     ~Point_3d_vi2() = default;
 };
@@ -119,9 +119,10 @@ static void pointer_to_data_member_no_inheritance(benchmark::State &state)
     double Point_struct::*bz = &Point_struct::z;
 
     while (state.KeepRunning()) {
-        p_b.*bx = p_a.*ax - p_b.*bz;
-        p_b.*by = p_a.*ay + p_b.*bx;
-        p_b.*bz = p_a.*az + p_b.*by;
+        benchmark::DoNotOptimize(p_b.*bx = p_a.*ax - p_b.*bz);
+        benchmark::DoNotOptimize(p_b.*by = p_a.*ay + p_b.*bx);
+        benchmark::DoNotOptimize(p_b.*bz = p_a.*az + p_b.*by);
+        benchmark::ClobberMemory();
     }
 }
 
@@ -140,9 +141,10 @@ static void pointer_to_data_member_single_inheritance(benchmark::State &state)
     double Point_3d_single::*bz = &Point_3d_single::z;
 
     while (state.KeepRunning()) {
-        p_b.*bx = p_a.*ax - p_b.*bz;
-        p_b.*by = p_a.*ay + p_b.*bx;
-        p_b.*bz = p_a.*az + p_b.*by;
+        benchmark::DoNotOptimize(p_b.*bx = p_a.*ax - p_b.*bz);
+        benchmark::DoNotOptimize(p_b.*by = p_a.*ay + p_b.*bx);
+        benchmark::DoNotOptimize(p_b.*bz = p_a.*az + p_b.*by);
+        benchmark::ClobberMemory();
     }
 }
 
@@ -161,9 +163,10 @@ static void pointer_to_data_member_vi1(benchmark::State &state)
     double Point_3d_vi1::*bz = &Point_3d_vi1::z;
 
     while (state.KeepRunning()) {
-        p_b.*bx = p_a.*ax - p_b.*bz;
-        p_b.*by = p_a.*ay + p_b.*bx;
-        p_b.*bz = p_a.*az + p_b.*by;
+        benchmark::DoNotOptimize(p_b.*bx = p_a.*ax - p_b.*bz);
+        benchmark::DoNotOptimize(p_b.*by = p_a.*ay + p_b.*bx);
+        benchmark::DoNotOptimize(p_b.*bz = p_a.*az + p_b.*by);
+        benchmark::ClobberMemory();
     }
 }
 
@@ -182,9 +185,10 @@ static void pointer_to_data_member_vi2(benchmark::State &state)
     double Point_3d_vi2::*bz = &Point_3d_vi2::z;
 
     while (state.KeepRunning()) {
-        p_b.*bx = p_a.*ax - p_b.*bz;
-        p_b.*by = p_a.*ay + p_b.*bx;
-        p_b.*bz = p_a.*az + p_b.*by;
+        benchmark::DoNotOptimize(p_b.*bx = p_a.*ax - p_b.*bz);
+        benchmark::DoNotOptimize(p_b.*by = p_a.*ay + p_b.*bx);
+        benchmark::DoNotOptimize(p_b.*bz = p_a.*az + p_b.*by);
+        benchmark::ClobberMemory();
     }
 }
 

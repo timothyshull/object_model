@@ -12,9 +12,10 @@ static void direct_access(benchmark::State &state)
     auto p_b = Point_struct{0.315, 0.317, 0.838};
 
     while (state.KeepRunning()) {
-        p_b.x = p_a.x - p_b.z;
-        p_b.y = p_a.y + p_b.x;
-        p_b.z = p_a.z + p_b.y;
+        benchmark::DoNotOptimize(p_b.x = p_a.x - p_b.z);
+        benchmark::DoNotOptimize(p_b.y = p_a.y + p_b.x);
+        benchmark::DoNotOptimize(p_b.z = p_a.z + p_b.y);
+        benchmark::ClobberMemory();
     }
 }
 
@@ -33,9 +34,10 @@ static void bound_access(benchmark::State &state)
     auto bz = &p_b.z;
 
     while (state.KeepRunning()) {
-        *bx = *ax - *bz;
-        *by = *ay + *bx;
-        *bz = *az + *by;
+        benchmark::DoNotOptimize(*bx = *ax - *bz);
+        benchmark::DoNotOptimize(*by = *ay + *bx);
+        benchmark::DoNotOptimize(*bz = *az + *by);
+        benchmark::ClobberMemory();
     }
 }
 
@@ -54,9 +56,10 @@ static void pointer_to_data_member(benchmark::State &state)
     double Point_struct::*bz = &Point_struct::z;
 
     while (state.KeepRunning()) {
-        p_b.*bx = p_a.*ax - p_b.*bz;
-        p_b.*by = p_a.*ay + p_b.*bx;
-        p_b.*bz = p_a.*az + p_b.*by;
+        benchmark::DoNotOptimize(p_b.*bx = p_a.*ax - p_b.*bz);
+        benchmark::DoNotOptimize(p_b.*by = p_a.*ay + p_b.*bx);
+        benchmark::DoNotOptimize(p_b.*bz = p_a.*az + p_b.*by);
+        benchmark::ClobberMemory();
     }
 }
 
