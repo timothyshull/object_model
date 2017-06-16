@@ -14,7 +14,8 @@ int _main() {
     S2::~S2();
     S1::~S1();
     S1::~S1();
-    return 0x0;
+    rax = 0x0;
+    return rax;
 }
 
 function __ZN2S1C1EPKc() {

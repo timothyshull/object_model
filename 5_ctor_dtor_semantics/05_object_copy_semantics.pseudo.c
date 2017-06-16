@@ -49,7 +49,8 @@ int _main() {
     A::~A();
     A::~A();
     A::~A();
-    return 0x0;
+    rax = 0x0;
+    return rax;
 }
 
 function __Z13pass_by_value1A() {

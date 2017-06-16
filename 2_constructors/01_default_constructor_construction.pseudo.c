@@ -1,7 +1,8 @@
 int _main() {
-    memset(&var_18, 0x0, 0x10);
-    memset(&var_28, 0x0, 0x10);
-    return 0x0;
+    memset(&var_38, 0x0, 0x10);
+    memset(&var_48, 0x0, 0x10);
+    rax = 0x0;
+    return rax;
 }
 
 function imp___stubs__memset() {

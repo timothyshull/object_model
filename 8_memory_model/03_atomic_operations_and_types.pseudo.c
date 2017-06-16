@@ -29,7 +29,8 @@ int _main() {
     std::__1::thread::~thread(&var_30);
     std::__1::thread::~thread(&var_18);
     std::__1::thread::~thread(&var_10);
-    return 0x0;
+    rax = 0x0;
+    return rax;
 }
 
 function __GLOBAL__sub_I_03_atomic_operations_and_types.cpp() {

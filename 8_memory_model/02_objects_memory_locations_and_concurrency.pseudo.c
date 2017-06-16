@@ -5,14 +5,15 @@ int _main() {
     std::__1::thread::join(&var_18);
     std::__1::thread::~thread(&var_18);
     std::__1::thread::~thread(&var_10);
-    return 0x0;
+    rax = 0x0;
+    return rax;
 }
 
 function __Z8producerv() {
     var_40 = operator new(0x40);
     D::D();
-    var_20 = var_40;
     std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::assign(var_40 + 0x28, "Hello");
+    var_20 = var_40;
     var_58 = &var_20;
     if (0x1 == 0x0) {
             rax = 0xfffffffffffffffe;
@@ -53,7 +54,11 @@ function __Z8consumerv() {
                     *var_30 = *_ptr;
             }
             rax = var_18;
-    } while ((((rax != 0x0 ? 0x1 : 0x0) ^ 0xff) & 0x1) != 0x0);
+            if ((((rax != 0x0 ? 0x1 : 0x0) ^ 0xff) & 0x1) == 0x0) {
+                break;
+            }
+            sched_yield();
+    } while (true);
     return rax;
 }
 
@@ -216,7 +221,18 @@ function imp___stubs__pthread_setspecific() {
     return rax;
 }
 
-function sub_1000013f0() {
+function imp___stubs__sched_yield() {
+    rax = _sched_yield();
+    return rax;
+}
+
+function sub_100001310() {
+    *(int32_t *)(rbp + 0xffffffffffffffc0) = rdx;
+    ___clang_call_terminate();
+    return;
+}
+
+function sub_1000013b0() {
     *(rbp + 0xffffffffffffffe0) = rax;
     *(int32_t *)(rbp + 0xffffffffffffffdc) = rdx;
     std::__1::thread::~thread(rbp + 0xffffffffffffffe8);
@@ -230,9 +246,14 @@ function imp___stubs___Unwind_Resume() {
     return rax;
 }
 
-function sub_100001e70() {
+function sub_100001e10() {
     rsp = rsp - 0x8;
     dyld_stub_binder();
+    return;
+}
+
+function sub_100001e60() {
+    loc_100001dd8();
     return;
 }
 

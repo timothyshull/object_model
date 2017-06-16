@@ -13,7 +13,8 @@ int _main() {
     T1::~T1();
     T1::~T1();
     T1::~T1();
-    return 0x0;
+    rax = 0x0;
+    return rax;
 }
 
 function __ZplRK2T1S1_() {

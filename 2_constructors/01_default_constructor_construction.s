@@ -13,25 +13,25 @@ Lcfi1:
 	movq	%rsp, %rbp
 Lcfi2:
 	.cfi_def_cfa_register %rbp
-	subq	$64, %rsp
+	subq	$96, %rsp
 	xorl	%eax, %eax
 	movl	$16, %ecx
 	movl	%ecx, %edx
-	leaq	-40(%rbp), %rsi
-	leaq	-24(%rbp), %rdi
+	leaq	-72(%rbp), %rsi
+	leaq	-56(%rbp), %rdi
 	movl	$0, -4(%rbp)
-	movq	%rsi, -48(%rbp)         ## 8-byte Spill
+	movq	%rsi, -80(%rbp)         ## 8-byte Spill
 	movl	%eax, %esi
-	movq	%rdx, -56(%rbp)         ## 8-byte Spill
-	movl	%eax, -60(%rbp)         ## 4-byte Spill
+	movq	%rdx, -88(%rbp)         ## 8-byte Spill
+	movl	%eax, -92(%rbp)         ## 4-byte Spill
 	callq	_memset
-	movq	-48(%rbp), %rdx         ## 8-byte Reload
+	movq	-80(%rbp), %rdx         ## 8-byte Reload
 	movq	%rdx, %rdi
-	movl	-60(%rbp), %esi         ## 4-byte Reload
-	movq	-56(%rbp), %rdx         ## 8-byte Reload
+	movl	-92(%rbp), %esi         ## 4-byte Reload
+	movq	-88(%rbp), %rdx         ## 8-byte Reload
 	callq	_memset
-	movl	-60(%rbp), %eax         ## 4-byte Reload
-	addq	$64, %rsp
+	movl	-92(%rbp), %eax         ## 4-byte Reload
+	addq	$96, %rsp
 	popq	%rbp
 	retq
 	.cfi_endproc

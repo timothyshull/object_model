@@ -1,14 +1,14 @@
 int _main() {
-    X::X(&var_10);
-    func(var_10);
-    X::X(&var_20);
+    X::X(&var_8);
+    func(var_8);
+    X::X(&var_18);
+    func(var_18);
+    memset(&var_20, 0x0, 0x4);
+    X::X();
     func(var_20);
-    memset(&var_28, 0x0, 0x4);
+    memset(&var_30, 0x0, 0x4);
     X::X();
-    func(var_28);
-    memset(&var_38, 0x0, 0x4);
-    X::X();
-    func(var_38);
+    func(var_30);
     return 0x0;
 }
 

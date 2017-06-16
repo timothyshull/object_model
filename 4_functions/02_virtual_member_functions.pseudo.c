@@ -13,7 +13,8 @@ int _main() {
     var_70 = intrinsic_movsd(var_70, xmm0);
     intrinsic_movsd(var_50, intrinsic_movsd(xmm0, var_70));
     P3::~P3();
-    return 0x0;
+    rax = 0x0;
+    return rax;
 }
 
 function __ZN2P3C1Eddd() {

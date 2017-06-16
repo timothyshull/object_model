@@ -5,7 +5,8 @@ int _main() {
     std::__1::thread::join(&var_18);
     std::__1::thread::~thread(&var_18);
     std::__1::thread::~thread(&var_10);
-    return 0x0;
+    rax = 0x0;
+    return rax;
 }
 
 function __GLOBAL__sub_I_04_synchronizing_operations_and_enforcing_ordering.cpp() {
@@ -23,86 +24,30 @@ function __Z6readerv() {
             if (0x0 == 0x0) {
                     rax = 0x0;
                     if (rax != 0x0) {
-                            var_4D = *(int8_t *)_data_ready;
+                            var_1D = *(int8_t *)_data_ready;
                     }
                     else {
-                            var_4D = *(int8_t *)_data_ready;
+                            var_1D = *(int8_t *)_data_ready;
                     }
             }
             else {
-                    var_4D = *(int8_t *)_data_ready;
+                    var_1D = *(int8_t *)_data_ready;
             }
-            if (((var_4D ^ 0xff) & 0x1) == 0x0) {
+            if (((var_1D ^ 0xff) & 0x1) == 0x0) {
                 break;
             }
-            var_5C = 0x1;
-            rdx = sign_extend_64(var_5C);
-            var_58 = rdx;
-            void std::__1::this_thread::sleep_for<long long, std::__1::ratio<1l, 1000l> >(&var_58, 0x0, rdx, &var_58);
+            sched_yield();
     } while (true);
     return *_data;
 }
 
-function __ZNSt3__111this_thread9sleep_forIxNS_5ratioILl1ELl1000EEEEEvRKNS_6chrono8durationIT_T0_EE() {
-    var_478 = arg0;
-    var_468 = var_470;
-    if (var_480 < *var_478) {
-            var_240 = void std::__1::this_thread::sleep_for<long long, std::__1::ratio<1l, 1000l> >(std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000l> > const&)::_Max;
-            rax = &var_250;
-            asm { fild       qword [rbp+var_4A0] };
-            asm { fstp       tword [rbp+var_1C0] };
-            rdx = &var_1A0;
-            asm { fld        tword [rsi] };
-            asm { fstp       tword [rdx] };
-            asm { fld        tword [rbp+var_1A0] };
-            asm { fld        st0 };
-            asm { fstp       tword [rbp+var_1D0] };
-            asm { fstp       tword [rbp+var_210] };
-            asm { fld        tword [rbp+var_210] };
-            asm { fstp       tword [rax] };
-            asm { fld        tword [rbp+var_250] };
-            rax = &var_260;
-            asm { fld        tword [rdx] };
-            asm { fld        dword [0x100003e40] };
-            asm { fmulp      st1 };
-            asm { fstp       tword [rbp+var_E0] };
-            rdx = &var_C0;
-            asm { fld        tword [rsi] };
-            asm { fstp       tword [rdx] };
-            asm { fld        tword [rbp+var_C0] };
-            asm { fld        st0 };
-            asm { fstp       tword [rbp+var_F0] };
-            asm { fstp       tword [rbp+var_130] };
-            asm { fld        tword [rbp+var_130] };
-            asm { fstp       tword [rax] };
-            asm { fld        tword [rbp+var_260] };
-            asm { fucompi    st1 };
-            asm { fstp       st0 };
-            if (!CPU_FLAGS & BE) {
-                    var_2B8 = var_2D0;
-                    var_488 = var_2B8;
-                    var_330 = var_348;
-                    var_3D0 = var_380;
-                    if (var_3C8 < var_3D0) {
-                            var_488 = var_488 + 0x1;
-                    }
-            }
-            else {
-                    var_428 = var_430;
-                    var_488 = var_428;
-            }
-            std::__1::this_thread::sleep_for(&var_488);
-    }
-    return;
-}
-
 function __Z6writerv() {
     var_F8 = &var_104;
-    if (*0x100004110 < *0x100004118) {
+    if (*0x100003108 < *0x100003110) {
             std::__1::vector<int, std::__1::allocator<int> >::__RAII_IncreaseAnnotator::__RAII_IncreaseAnnotator(&var_100, _data);
-            *(int32_t *)*0x100004110 = *(int32_t *)var_F8;
-            std::__1::vector<int, std::__1::allocator<int> >::__RAII_IncreaseAnnotator::__done(&var_100, _data, var_F8, *0x100004110, var_F8);
-            *0x100004110 = *0x100004110 + 0x4;
+            *(int32_t *)*0x100003108 = *(int32_t *)var_F8;
+            std::__1::vector<int, std::__1::allocator<int> >::__RAII_IncreaseAnnotator::__done(&var_100, _data, var_F8, *0x100003108, var_F8);
+            *0x100003108 = *0x100003108 + 0x4;
     }
     else {
             void std::__1::vector<int, std::__1::allocator<int> >::__push_back_slow_path<int>(_data, var_F8);
@@ -361,9 +306,9 @@ function __ZNSt3__121__thread_specific_ptrINS_15__thread_structEE5resetEPS1_() {
 
 function ___cxx_global_var_init() {
     *_data = 0x0;
-    *0x100004110 = 0x0;
-    *0x100004118 = var_20;
-    rax = __cxa_atexit(std::__1::vector<int, std::__1::allocator<int> >::~vector(), _data, __mh_execute_header, 0x100004118, 0x100004118, 0x0);
+    *0x100003108 = 0x0;
+    *0x100003110 = var_20;
+    rax = __cxa_atexit(std::__1::vector<int, std::__1::allocator<int> >::~vector(), _data, __mh_execute_header, 0x100003110, 0x100003110, 0x0);
     return rax;
 }
 
@@ -389,16 +334,6 @@ function imp___stubs___ZNKSt3__16vectorIiNS_9allocatorIiEEE31__annotate_contiguo
 
 function imp___stubs___ZNKSt3__16vectorIiNS_9allocatorIiEEE8max_sizeEv() {
     rax = std::__1::vector<int, std::__1::allocator<int> >::max_size();
-    return rax;
-}
-
-function imp___stubs___ZNSt3__111this_thread9sleep_forERKNS_6chrono8durationIxNS_5ratioILl1ELl1000000000EEEEE() {
-    rax = std::__1::this_thread::sleep_for();
-    return rax;
-}
-
-function imp___stubs___ZNSt3__111this_thread9sleep_forIxNS_5ratioILl1ELl1000EEEEEvRKNS_6chrono8durationIT_T0_EE() {
-    rax = void std::__1::this_thread::sleep_for<long long, std::__1::ratio<1l, 1000l> >(rdi);
     return rax;
 }
 
@@ -497,7 +432,12 @@ function imp___stubs__pthread_setspecific() {
     return rax;
 }
 
-function sub_1000022c0() {
+function imp___stubs__sched_yield() {
+    rax = _sched_yield();
+    return rax;
+}
+
+function sub_1000012d0() {
     *(rbp + 0xffffffffffffffe0) = rax;
     *(int32_t *)(rbp + 0xffffffffffffffdc) = rdx;
     std::__1::thread::~thread(rbp + 0xffffffffffffffe8);
@@ -511,9 +451,14 @@ function imp___stubs___Unwind_Resume() {
     return rax;
 }
 
-function sub_100003df0() {
+function sub_100002dd0() {
     rsp = rsp - 0x8;
     dyld_stub_binder();
+    return;
+}
+
+function sub_100002e20() {
+    loc_100002d98();
     return;
 }
 

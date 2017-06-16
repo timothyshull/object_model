@@ -4,7 +4,8 @@ int _main() {
     memset(&var_B8, 0x0, 0x8);
     Derived2::Derived2();
     std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_string(&var_70);
-    return 0x0;
+    rax = 0x0;
+    return rax;
 }
 
 function __ZN8Derived2C1Ev() {

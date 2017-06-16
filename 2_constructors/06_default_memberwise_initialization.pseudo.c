@@ -8,7 +8,8 @@ int _main() {
     S::S(&var_B0);
     S::~S();
     S::~S();
-    return 0x0;
+    rax = 0x0;
+    return rax;
 }
 
 function __ZN1SC1ERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE() {

@@ -6,7 +6,8 @@ int _main() {
             *(var_20 + var_24 * 0x8) = 0x0;
     }
     D::~D();
-    return 0x0;
+    rax = 0x0;
+    return rax;
 }
 
 function __ZN1DD1Ev() {

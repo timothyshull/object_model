@@ -105,7 +105,10 @@ Lcfi5:
 	.globl	__Z8consumerv           ## -- Begin function _Z8consumerv
 	.p2align	4, 0x90
 __Z8consumerv:                          ## @_Z8consumerv
+Lfunc_begin0:
 	.cfi_startproc
+	.cfi_personality 155, ___gxx_personality_v0
+	.cfi_lsda 16, Lexception0
 ## BB#0:
 	pushq	%rbp
 Lcfi6:
@@ -115,6 +118,7 @@ Lcfi7:
 	movq	%rsp, %rbp
 Lcfi8:
 	.cfi_def_cfa_register %rbp
+	subq	$80, %rsp
 	movq	$0, -32(%rbp)
 LBB2_1:                                 ## =>This Inner Loop Header: Depth=1
 	leaq	_ptr(%rip), %rax
@@ -131,8 +135,8 @@ LBB2_1:                                 ## =>This Inner Loop Header: Depth=1
 	movq	%rdx, -56(%rbp)         ## 8-byte Spill
 	movl	%esi, -60(%rbp)         ## 4-byte Spill
 	jb	LBB2_3
-	jmp	LBB2_8
-LBB2_8:                                 ##   in Loop: Header=BB2_1 Depth=1
+	jmp	LBB2_10
+LBB2_10:                                ##   in Loop: Header=BB2_1 Depth=1
 	movl	-44(%rbp), %eax         ## 4-byte Reload
 	subl	$5, %eax
 	movl	%eax, -64(%rbp)         ## 4-byte Spill
@@ -163,21 +167,58 @@ LBB2_5:                                 ##   in Loop: Header=BB2_1 Depth=1
 	xorb	$-1, %cl
 	testb	$1, %cl
 	jne	LBB2_6
-	jmp	LBB2_7
+	jmp	LBB2_9
 LBB2_6:                                 ##   in Loop: Header=BB2_1 Depth=1
-	jmp	LBB2_1
+Ltmp0:
+	callq	_sched_yield
+Ltmp1:
+	movl	%eax, -68(%rbp)         ## 4-byte Spill
+	jmp	LBB2_8
 LBB2_7:
+Ltmp2:
+	movl	%edx, %ecx
+	movq	%rax, %rdi
+	movl	%ecx, -72(%rbp)         ## 4-byte Spill
+	callq	___clang_call_terminate
+LBB2_8:                                 ##   in Loop: Header=BB2_1 Depth=1
+	jmp	LBB2_1
+LBB2_9:
+	addq	$80, %rsp
 	popq	%rbp
 	retq
+Lfunc_end0:
 	.cfi_endproc
+	.section	__TEXT,__gcc_except_tab
+	.p2align	2
+GCC_except_table2:
+Lexception0:
+	.byte	255                     ## @LPStart Encoding = omit
+	.byte	155                     ## @TType Encoding = indirect pcrel sdata4
+	.byte	21                      ## @TType base offset
+	.byte	3                       ## Call site Encoding = udata4
+	.byte	13                      ## Call site table length
+Lset0 = Ltmp0-Lfunc_begin0              ## >> Call Site 1 <<
+	.long	Lset0
+Lset1 = Ltmp1-Ltmp0                     ##   Call between Ltmp0 and Ltmp1
+	.long	Lset1
+Lset2 = Ltmp2-Lfunc_begin0              ##     jumps to Ltmp2
+	.long	Lset2
+	.byte	1                       ##   On action: 1
+	.byte	1                       ## >> Action Record 1 <<
+                                        ##   Catch TypeInfo 1
+	.byte	0                       ##   No further actions
+                                        ## >> Catch TypeInfos <<
+	.long	0                       ## TypeInfo 1
+	.p2align	2
                                         ## -- End function
+	.section	__TEXT,__text,regular,pure_instructions
 	.globl	_main                   ## -- Begin function main
 	.p2align	4, 0x90
 _main:                                  ## @main
-Lfunc_begin0:
+Lfunc_begin1:
 	.cfi_startproc
 	.cfi_personality 155, ___gxx_personality_v0
-	.cfi_lsda 16, Lexception0
+	.cfi_lsda 16, Lexception1
 ## BB#0:
 	pushq	%rbp
 Lcfi9:
@@ -192,23 +233,23 @@ Lcfi11:
 	leaq	__Z8producerv(%rip), %rsi
 	leaq	-16(%rbp), %rdi
 	callq	__ZNSt3__16threadC1IRFvvEJEvEEOT_DpOT0_
-Ltmp0:
+Ltmp3:
 	leaq	__Z8consumerv(%rip), %rsi
 	leaq	-24(%rbp), %rdi
 	callq	__ZNSt3__16threadC1IRFvvEJEvEEOT_DpOT0_
-Ltmp1:
+Ltmp4:
 	jmp	LBB3_1
 LBB3_1:
-Ltmp3:
+Ltmp6:
 	leaq	-16(%rbp), %rdi
 	callq	__ZNSt3__16thread4joinEv
-Ltmp4:
+Ltmp7:
 	jmp	LBB3_2
 LBB3_2:
-Ltmp5:
+Ltmp8:
 	leaq	-24(%rbp), %rdi
 	callq	__ZNSt3__16thread4joinEv
-Ltmp6:
+Ltmp9:
 	jmp	LBB3_3
 LBB3_3:
 	leaq	-24(%rbp), %rdi
@@ -221,13 +262,13 @@ LBB3_3:
 	popq	%rbp
 	retq
 LBB3_4:
-Ltmp2:
+Ltmp5:
 	movl	%edx, %ecx
 	movq	%rax, -32(%rbp)
 	movl	%ecx, -36(%rbp)
 	jmp	LBB3_6
 LBB3_5:
-Ltmp7:
+Ltmp10:
 	leaq	-24(%rbp), %rdi
 	movl	%edx, %ecx
 	movq	%rax, -32(%rbp)
@@ -239,41 +280,41 @@ LBB3_6:
 ## BB#7:
 	movq	-32(%rbp), %rdi
 	callq	__Unwind_Resume
-Lfunc_end0:
+Lfunc_end1:
 	.cfi_endproc
 	.section	__TEXT,__gcc_except_tab
 	.p2align	2
 GCC_except_table3:
-Lexception0:
+Lexception1:
 	.byte	255                     ## @LPStart Encoding = omit
 	.byte	155                     ## @TType Encoding = indirect pcrel sdata4
 	.asciz	"\266\200\200"          ## @TType base offset
 	.byte	3                       ## Call site Encoding = udata4
 	.byte	52                      ## Call site table length
-Lset0 = Lfunc_begin0-Lfunc_begin0       ## >> Call Site 1 <<
-	.long	Lset0
-Lset1 = Ltmp0-Lfunc_begin0              ##   Call between Lfunc_begin0 and Ltmp0
-	.long	Lset1
+Lset3 = Lfunc_begin1-Lfunc_begin1       ## >> Call Site 1 <<
+	.long	Lset3
+Lset4 = Ltmp3-Lfunc_begin1              ##   Call between Lfunc_begin1 and Ltmp3
+	.long	Lset4
 	.long	0                       ##     has no landing pad
 	.byte	0                       ##   On action: cleanup
-Lset2 = Ltmp0-Lfunc_begin0              ## >> Call Site 2 <<
-	.long	Lset2
-Lset3 = Ltmp1-Ltmp0                     ##   Call between Ltmp0 and Ltmp1
-	.long	Lset3
-Lset4 = Ltmp2-Lfunc_begin0              ##     jumps to Ltmp2
-	.long	Lset4
-	.byte	0                       ##   On action: cleanup
-Lset5 = Ltmp3-Lfunc_begin0              ## >> Call Site 3 <<
+Lset5 = Ltmp3-Lfunc_begin1              ## >> Call Site 2 <<
 	.long	Lset5
-Lset6 = Ltmp6-Ltmp3                     ##   Call between Ltmp3 and Ltmp6
+Lset6 = Ltmp4-Ltmp3                     ##   Call between Ltmp3 and Ltmp4
 	.long	Lset6
-Lset7 = Ltmp7-Lfunc_begin0              ##     jumps to Ltmp7
+Lset7 = Ltmp5-Lfunc_begin1              ##     jumps to Ltmp5
 	.long	Lset7
 	.byte	0                       ##   On action: cleanup
-Lset8 = Ltmp6-Lfunc_begin0              ## >> Call Site 4 <<
+Lset8 = Ltmp6-Lfunc_begin1              ## >> Call Site 3 <<
 	.long	Lset8
-Lset9 = Lfunc_end0-Ltmp6                ##   Call between Ltmp6 and Lfunc_end0
+Lset9 = Ltmp9-Ltmp6                     ##   Call between Ltmp6 and Ltmp9
 	.long	Lset9
+Lset10 = Ltmp10-Lfunc_begin1            ##     jumps to Ltmp10
+	.long	Lset10
+	.byte	0                       ##   On action: cleanup
+Lset11 = Ltmp9-Lfunc_begin1             ## >> Call Site 4 <<
+	.long	Lset11
+Lset12 = Lfunc_end1-Ltmp9               ##   Call between Ltmp9 and Lfunc_end1
+	.long	Lset12
 	.long	0                       ##     has no landing pad
 	.byte	0                       ##   On action: cleanup
 	.p2align	2
@@ -449,10 +490,10 @@ Lcfi26:
 	.weak_def_can_be_hidden	__ZNSt3__16threadC2IRFvvEJEvEEOT_DpOT0_
 	.p2align	4, 0x90
 __ZNSt3__16threadC2IRFvvEJEvEEOT_DpOT0_: ## @_ZNSt3__16threadC2IRFvvEJEvEEOT_DpOT0_
-Lfunc_begin1:
+Lfunc_begin2:
 	.cfi_startproc
 	.cfi_personality 155, ___gxx_personality_v0
-	.cfi_lsda 16, Lexception1
+	.cfi_lsda 16, Lexception2
 ## BB#0:
 	pushq	%rbp
 Lcfi27:
@@ -472,12 +513,12 @@ Lcfi29:
 	callq	__Znwm
 	movq	%rax, %rsi
 	movq	%rax, %rdi
-Ltmp8:
+Ltmp11:
 	movq	%rdi, -1080(%rbp)       ## 8-byte Spill
 	movq	%rax, %rdi
 	movq	%rsi, -1088(%rbp)       ## 8-byte Spill
 	callq	__ZNSt3__115__thread_structC1Ev
-Ltmp9:
+Ltmp12:
 	jmp	LBB10_1
 LBB10_1:
 	leaq	-1024(%rbp), %rax
@@ -501,11 +542,11 @@ LBB10_1:
 	movq	%rcx, -936(%rbp)
 	movq	-936(%rbp), %rsi
 	callq	__ZNSt3__122__compressed_pair_elemIPNS_15__thread_structELi0ELb0EEC2IRS2_vEEOT_
-Ltmp11:
+Ltmp14:
 	movl	$16, %r8d
 	movl	%r8d, %edi
 	callq	__Znwm
-Ltmp12:
+Ltmp15:
 	movq	%rax, -1096(%rbp)       ## 8-byte Spill
 	jmp	LBB10_2
 LBB10_2:
@@ -671,11 +712,11 @@ LBB10_2:
 	movq	-280(%rbp), %rdi
 	movq	-288(%rbp), %rdx
 	movq	-296(%rbp), %rcx
-Ltmp14:
+Ltmp17:
 	xorl	%r10d, %r10d
 	movl	%r10d, %esi
 	callq	_pthread_create
-Ltmp15:
+Ltmp18:
 	movl	%eax, -1164(%rbp)       ## 4-byte Spill
 	jmp	LBB10_4
 LBB10_4:
@@ -704,7 +745,7 @@ LBB10_5:
 	movq	$0, (%rax)
 	jmp	LBB10_16
 LBB10_7:
-Ltmp10:
+Ltmp13:
 	movl	%edx, %ecx
 	movq	%rax, -1032(%rbp)
 	movl	%ecx, -1036(%rbp)
@@ -712,13 +753,13 @@ Ltmp10:
 	callq	__ZdlPv
 	jmp	LBB10_30
 LBB10_8:
-Ltmp13:
+Ltmp16:
 	movl	%edx, %ecx
 	movq	%rax, -1032(%rbp)
 	movl	%ecx, -1036(%rbp)
 	jmp	LBB10_25
 LBB10_9:
-Ltmp18:
+Ltmp21:
 	leaq	-1048(%rbp), %rcx
 	movl	%edx, %esi
 	movq	%rax, -1032(%rbp)
@@ -772,10 +813,10 @@ LBB10_13:
 	jmp	LBB10_25
 LBB10_14:
 	movl	-1060(%rbp), %edi
-Ltmp16:
+Ltmp19:
 	leaq	L_.str.1(%rip), %rsi
 	callq	__ZNSt3__120__throw_system_errorEiPKc
-Ltmp17:
+Ltmp20:
 	jmp	LBB10_15
 LBB10_15:
 LBB10_16:
@@ -925,48 +966,48 @@ LBB10_29:
 LBB10_30:
 	movq	-1032(%rbp), %rdi
 	callq	__Unwind_Resume
-Lfunc_end1:
+Lfunc_end2:
 	.cfi_endproc
 	.section	__TEXT,__gcc_except_tab
 	.p2align	2
 GCC_except_table10:
-Lexception1:
+Lexception2:
 	.byte	255                     ## @LPStart Encoding = omit
 	.byte	155                     ## @TType Encoding = indirect pcrel sdata4
 	.asciz	"\303\200"              ## @TType base offset
 	.byte	3                       ## Call site Encoding = udata4
 	.byte	65                      ## Call site table length
-Lset10 = Lfunc_begin1-Lfunc_begin1      ## >> Call Site 1 <<
-	.long	Lset10
-Lset11 = Ltmp8-Lfunc_begin1             ##   Call between Lfunc_begin1 and Ltmp8
-	.long	Lset11
+Lset13 = Lfunc_begin2-Lfunc_begin2      ## >> Call Site 1 <<
+	.long	Lset13
+Lset14 = Ltmp11-Lfunc_begin2            ##   Call between Lfunc_begin2 and Ltmp11
+	.long	Lset14
 	.long	0                       ##     has no landing pad
 	.byte	0                       ##   On action: cleanup
-Lset12 = Ltmp8-Lfunc_begin1             ## >> Call Site 2 <<
-	.long	Lset12
-Lset13 = Ltmp9-Ltmp8                    ##   Call between Ltmp8 and Ltmp9
-	.long	Lset13
-Lset14 = Ltmp10-Lfunc_begin1            ##     jumps to Ltmp10
-	.long	Lset14
-	.byte	0                       ##   On action: cleanup
-Lset15 = Ltmp11-Lfunc_begin1            ## >> Call Site 3 <<
+Lset15 = Ltmp11-Lfunc_begin2            ## >> Call Site 2 <<
 	.long	Lset15
 Lset16 = Ltmp12-Ltmp11                  ##   Call between Ltmp11 and Ltmp12
 	.long	Lset16
-Lset17 = Ltmp13-Lfunc_begin1            ##     jumps to Ltmp13
+Lset17 = Ltmp13-Lfunc_begin2            ##     jumps to Ltmp13
 	.long	Lset17
 	.byte	0                       ##   On action: cleanup
-Lset18 = Ltmp14-Lfunc_begin1            ## >> Call Site 4 <<
+Lset18 = Ltmp14-Lfunc_begin2            ## >> Call Site 3 <<
 	.long	Lset18
-Lset19 = Ltmp17-Ltmp14                  ##   Call between Ltmp14 and Ltmp17
+Lset19 = Ltmp15-Ltmp14                  ##   Call between Ltmp14 and Ltmp15
 	.long	Lset19
-Lset20 = Ltmp18-Lfunc_begin1            ##     jumps to Ltmp18
+Lset20 = Ltmp16-Lfunc_begin2            ##     jumps to Ltmp16
 	.long	Lset20
 	.byte	0                       ##   On action: cleanup
-Lset21 = Ltmp17-Lfunc_begin1            ## >> Call Site 5 <<
+Lset21 = Ltmp17-Lfunc_begin2            ## >> Call Site 4 <<
 	.long	Lset21
-Lset22 = Lfunc_end1-Ltmp17              ##   Call between Ltmp17 and Lfunc_end1
+Lset22 = Ltmp20-Ltmp17                  ##   Call between Ltmp17 and Ltmp20
 	.long	Lset22
+Lset23 = Ltmp21-Lfunc_begin2            ##     jumps to Ltmp21
+	.long	Lset23
+	.byte	0                       ##   On action: cleanup
+Lset24 = Ltmp20-Lfunc_begin2            ## >> Call Site 5 <<
+	.long	Lset24
+Lset25 = Lfunc_end2-Ltmp20              ##   Call between Ltmp20 and Lfunc_end2
+	.long	Lset25
 	.long	0                       ##     has no landing pad
 	.byte	0                       ##   On action: cleanup
 	.p2align	2
@@ -976,10 +1017,10 @@ Lset22 = Lfunc_end1-Ltmp17              ##   Call between Ltmp17 and Lfunc_end1
 	.weak_definition	__ZNSt3__114__thread_proxyINS_5tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS3_EEEEPFvvEEEEEEPvSA_
 	.p2align	4, 0x90
 __ZNSt3__114__thread_proxyINS_5tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS3_EEEEPFvvEEEEEEPvSA_: ## @_ZNSt3__114__thread_proxyINS_5tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS3_EEEEPFvvEEEEEEPvSA_
-Lfunc_begin2:
+Lfunc_begin3:
 	.cfi_startproc
 	.cfi_personality 155, ___gxx_personality_v0
-	.cfi_lsda 16, Lexception2
+	.cfi_lsda 16, Lexception3
 ## BB#0:
 	pushq	%rbp
 Lcfi30:
@@ -1012,9 +1053,9 @@ Lcfi32:
 	movq	%rax, -304(%rbp)
 	movq	-304(%rbp), %rsi
 	callq	__ZNSt3__122__compressed_pair_elemIPNS_5tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS3_EEEEPFvvEEEELi0ELb0EEC2IRSA_vEEOT_
-Ltmp19:
+Ltmp22:
 	callq	__ZNSt3__119__thread_local_dataEv
-Ltmp20:
+Ltmp23:
 	movq	%rax, -408(%rbp)        ## 8-byte Spill
 	jmp	LBB11_1
 LBB11_1:
@@ -1047,10 +1088,10 @@ LBB11_1:
 	callq	__ZNSt3__122__compressed_pair_elemIPNS_15__thread_structELi0ELb0EE5__getEv
 	movq	$0, (%rax)
 	movq	-184(%rbp), %rsi
-Ltmp21:
+Ltmp24:
 	movq	-408(%rbp), %rdi        ## 8-byte Reload
 	callq	__ZNSt3__121__thread_specific_ptrINS_15__thread_structEE11set_pointerEPS1_
-Ltmp22:
+Ltmp25:
 	jmp	LBB11_3
 LBB11_3:
 	leaq	-384(%rbp), %rax
@@ -1078,9 +1119,9 @@ LBB11_3:
 	movq	%rcx, -96(%rbp)
 	movq	-96(%rbp), %rcx
 	movq	(%rcx), %rcx
-Ltmp23:
+Ltmp26:
 	callq	*%rcx
-Ltmp24:
+Ltmp27:
 	jmp	LBB11_5
 LBB11_5:
 	jmp	LBB11_6
@@ -1137,7 +1178,7 @@ LBB11_10:
 	popq	%rbp
 	retq
 LBB11_11:
-Ltmp25:
+Ltmp28:
 	leaq	-384(%rbp), %rcx
 	movl	%edx, %esi
 	movq	%rax, -392(%rbp)
@@ -1192,28 +1233,28 @@ LBB11_15:
 LBB11_16:
 	movq	-392(%rbp), %rdi
 	callq	__Unwind_Resume
-Lfunc_end2:
+Lfunc_end3:
 	.cfi_endproc
 	.section	__TEXT,__gcc_except_tab
 	.p2align	2
 GCC_except_table11:
-Lexception2:
+Lexception3:
 	.byte	255                     ## @LPStart Encoding = omit
 	.byte	155                     ## @TType Encoding = indirect pcrel sdata4
 	.asciz	"\234"                  ## @TType base offset
 	.byte	3                       ## Call site Encoding = udata4
 	.byte	26                      ## Call site table length
-Lset23 = Ltmp19-Lfunc_begin2            ## >> Call Site 1 <<
-	.long	Lset23
-Lset24 = Ltmp24-Ltmp19                  ##   Call between Ltmp19 and Ltmp24
-	.long	Lset24
-Lset25 = Ltmp25-Lfunc_begin2            ##     jumps to Ltmp25
-	.long	Lset25
-	.byte	0                       ##   On action: cleanup
-Lset26 = Ltmp24-Lfunc_begin2            ## >> Call Site 2 <<
+Lset26 = Ltmp22-Lfunc_begin3            ## >> Call Site 1 <<
 	.long	Lset26
-Lset27 = Lfunc_end2-Ltmp24              ##   Call between Ltmp24 and Lfunc_end2
+Lset27 = Ltmp27-Ltmp22                  ##   Call between Ltmp22 and Ltmp27
 	.long	Lset27
+Lset28 = Ltmp28-Lfunc_begin3            ##     jumps to Ltmp28
+	.long	Lset28
+	.byte	0                       ##   On action: cleanup
+Lset29 = Ltmp27-Lfunc_begin3            ## >> Call Site 2 <<
+	.long	Lset29
+Lset30 = Lfunc_end3-Ltmp27              ##   Call between Ltmp27 and Lfunc_end3
+	.long	Lset30
 	.long	0                       ##     has no landing pad
 	.byte	0                       ##   On action: cleanup
 	.p2align	2

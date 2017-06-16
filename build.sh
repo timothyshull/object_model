@@ -31,9 +31,10 @@ function clean_build_dir () {
     rm -rf ${build_dir_name}
 }
 
-function clean_hop_files () {
+function find_and_remove () {
+    local pattern=$1
     cd ${root_dir}
-    find . -name '*.hop' -exec rm -f {} \;
+    find . -name "${pattern}" -exec rm -f {} \;
 }
 
 function clean_ast_files () {
@@ -45,16 +46,21 @@ function clean_ast_files () {
     done
 }
 
-function clean_pseudo_code_files () {
-    cd ${root_dir}
-    find . -name '*.pseudo.c' -exec rm -f {} \;
-}
-
 function clean_all () {
+    # remove all executables and cmake-build-release dir
     clean_build_dir
-    clean_hop_files
+
+    # clean hopper .hop files
+    find_and_remove '*.hop'
+
+    # remove all ast and layout files
     clean_ast_files rm
-    clean_pseudo_code_files
+
+    # clean pseudo-code files
+    find_and_remove '*.pseudo.c'
+
+    # clean assembly files
+    find_and_remove '*.s'
 }
 
 function build_exes () {
@@ -278,6 +284,14 @@ function copy_py_script () {
     esac
 }
 
+function remove_a_out () {
+    cd ${root_dir}
+    if [ -e a.out ];
+    then
+        rm a.out
+    fi
+}
+
 function parse_args () {
     while getopts :aectlshbp: FOUND
     do
@@ -381,6 +395,10 @@ function perform_actions () {
         printf 'Option -s specified...generating assembly files\n' ${p_val}
         generate_all_assembly_files
     fi
+
+    remove_a_out
+
+    printf "Successfully completed the file generation"
 }
 
 function main () {

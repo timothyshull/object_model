@@ -5,8 +5,9 @@ int _main() {
     C::~C();
     C::~C();
     C::~C();
+    var_EC0 = 0x0;
     if (*___stack_chk_guard == *___stack_chk_guard) {
-            rax = 0x0;
+            rax = var_EC0;
     }
     else {
             rax = __stack_chk_fail();
@@ -201,10 +202,10 @@ function __ZNSt3__113basic_filebufIcNS_11char_traitsIcEEE5imbueERKNS_6localeE() 
     var_70 = arg0;
     (*(*arg0 + 0x30))(arg0, arg0);
     *(var_70 + 0x80) = std::__1::locale::use_facet(rsi, std::__1::codecvt<char, char, __mbstate_t>::id);
-    rcx = *(int8_t *)(var_70 + 0x192) & 0x1;
+    var_59 = *(int8_t *)(var_70 + 0x192) & 0x1;
     *(int8_t *)(var_70 + 0x192) = (*(**(var_70 + 0x80) + 0x38))(*(var_70 + 0x80), var_70) & 0x1;
     rax = *(int8_t *)(var_70 + 0x192) & 0x1;
-    if ((rcx & 0x1 & 0xff) != (rax & 0xff)) {
+    if ((var_59 & 0x1 & 0xff) != (rax & 0xff)) {
             *(var_70 + 0x10) = 0x0;
             *(var_70 + 0x18) = 0x0;
             *(var_70 + 0x20) = 0x0;
@@ -468,8 +469,8 @@ loc_1000028ac:
 
 loc_1000028c5:
     var_164 = (*(**(var_198 + 0x80) + 0x28))(*(var_198 + 0x80), var_198 + 0x88, *(var_198 + 0x40), *(var_198 + 0x40) + *(var_198 + 0x60), &var_170, *(**(var_198 + 0x80) + 0x28));
-    rcx = var_170 - *(var_198 + 0x40);
-    if (fwrite(*(var_198 + 0x40), 0x1, rcx, *(var_198 + 0x78)) == rcx) goto loc_1000029c8;
+    var_178 = var_170 - *(var_198 + 0x40);
+    if (fwrite(*(var_198 + 0x40), 0x1, var_178, *(var_198 + 0x78)) == var_178) goto loc_1000029c8;
 
 loc_1000029b9:
     var_154 = 0xffffffff;
@@ -716,8 +717,8 @@ loc_100003a63:
     if ((*(int8_t *)(var_198 + 0x192) & 0x1) == 0x0) goto loc_100003afa;
 
 loc_100003a77:
-    rcx = *(var_198 + 0x30) - *(var_198 + 0x28);
-    if (fwrite(*(var_198 + 0x28), 0x1, rcx, *(var_198 + 0x78)) == rcx) goto loc_100003e89;
+    var_168 = *(var_198 + 0x30) - *(var_198 + 0x28);
+    if (fwrite(*(var_198 + 0x28), 0x1, var_168, *(var_198 + 0x78)) == var_168) goto loc_100003e89;
 
 loc_100003ae5:
     var_13C = std::__1::char_traits<char>::eof();
@@ -758,8 +759,8 @@ loc_100003c71:
     if (var_174 != 0x3) goto loc_100003d13;
 
 loc_100003c7e:
-    rcx = *(var_198 + 0x30) - *(var_198 + 0x28);
-    if (fwrite(*(var_198 + 0x28), 0x1, rcx, *(var_198 + 0x78)) == rcx) goto loc_100003e77;
+    var_188 = *(var_198 + 0x30) - *(var_198 + 0x28);
+    if (fwrite(*(var_198 + 0x28), 0x1, var_188, *(var_198 + 0x78)) == var_188) goto loc_100003e77;
 
 loc_100003cfe:
     var_13C = std::__1::char_traits<char>::eof();
@@ -777,8 +778,8 @@ loc_100003e5d:
     goto loc_100003ee5;
 
 loc_100003d2d:
-    rcx = var_170 - *(var_198 + 0x40);
-    if (fwrite(*(var_198 + 0x40), 0x1, rcx, *(var_198 + 0x78)) == rcx) goto loc_100003d88;
+    var_190 = var_170 - *(var_198 + 0x40);
+    if (fwrite(*(var_198 + 0x40), 0x1, var_190, *(var_198 + 0x78)) == var_190) goto loc_100003d88;
 
 loc_100003d78:
     var_13C = std::__1::char_traits<char>::eof();

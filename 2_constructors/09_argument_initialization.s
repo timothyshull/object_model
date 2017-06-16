@@ -33,22 +33,35 @@ Lcfi4:
 	movq	%rsp, %rbp
 Lcfi5:
 	.cfi_def_cfa_register %rbp
-	subq	$80, %rsp
-	leaq	-16(%rbp), %rdi
+	subq	$64, %rsp
+	leaq	-8(%rbp), %rdi
+	movl	$10, %esi
 	movl	$0, -4(%rbp)
-	movl	$10, -8(%rbp)
-	movl	-8(%rbp), %esi
 	callq	__ZN1XC1Ei
-	movl	-16(%rbp), %esi
-	movl	%esi, -24(%rbp)
+	movl	-8(%rbp), %esi
+	movl	%esi, -16(%rbp)
+	movl	-16(%rbp), %edi
+	callq	__Z4func1X
+	leaq	-24(%rbp), %rdi
+	movl	$10, %esi
+	callq	__ZN1XC1Ei
 	movl	-24(%rbp), %edi
 	callq	__Z4func1X
-	leaq	-32(%rbp), %rdi
-	movl	-8(%rbp), %esi
-	callq	__ZN1XC1Ei
-	movl	-32(%rbp), %edi
+	leaq	-32(%rbp), %rax
+	xorl	%esi, %esi
+	movl	$4, %edi
+	movl	%edi, %edx
+	movq	%rax, %rcx
+	movq	%rcx, %rdi
+	movq	%rax, -56(%rbp)         ## 8-byte Spill
+	callq	_memset
+	movq	-56(%rbp), %rdi         ## 8-byte Reload
+	callq	__ZN1XC1Ev
+	movl	-32(%rbp), %esi
+	movl	%esi, -40(%rbp)
+	movl	-40(%rbp), %edi
 	callq	__Z4func1X
-	leaq	-40(%rbp), %rax
+	leaq	-48(%rbp), %rax
 	xorl	%esi, %esi
 	movl	$4, %edi
 	movl	%edi, %edx
@@ -58,24 +71,10 @@ Lcfi5:
 	callq	_memset
 	movq	-64(%rbp), %rdi         ## 8-byte Reload
 	callq	__ZN1XC1Ev
-	movl	-40(%rbp), %esi
-	movl	%esi, -48(%rbp)
 	movl	-48(%rbp), %edi
 	callq	__Z4func1X
-	leaq	-56(%rbp), %rax
-	xorl	%esi, %esi
-	movl	$4, %edi
-	movl	%edi, %edx
-	movq	%rax, %rcx
-	movq	%rcx, %rdi
-	movq	%rax, -72(%rbp)         ## 8-byte Spill
-	callq	_memset
-	movq	-72(%rbp), %rdi         ## 8-byte Reload
-	callq	__ZN1XC1Ev
-	movl	-56(%rbp), %edi
-	callq	__Z4func1X
 	xorl	%eax, %eax
-	addq	$80, %rsp
+	addq	$64, %rsp
 	popq	%rbp
 	retq
 	.cfi_endproc

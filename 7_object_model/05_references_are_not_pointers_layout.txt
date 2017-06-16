@@ -13,22 +13,22 @@
            |  nvsize=8, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f921c088308 <object_model_refined/7_object_model/05_references_are_not_pointers.cpp:3:1, line:5:1> line:3:8 referenced struct B definition
-|-CXXRecordDecl 0x7f921c088428 <col:1, col:8> col:8 implicit struct B
-|-CXXMethodDecl 0x7f921c088508 <line:4:5, col:23> col:18 m 'void (void)' virtual
-| `-CompoundStmt 0x7f921c088a38 <col:22, col:23>
-|-CXXMethodDecl 0x7f921c088600 <line:3:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct B &(const struct B &)' inline default noexcept-unevaluated 0x7f921c088600
-| `-ParmVarDecl 0x7f921c088720 <col:8> col:8 'const struct B &'
-|-CXXMethodDecl 0x7f921c0887b8 <col:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct B &(struct B &&)' inline default noexcept-unevaluated 0x7f921c0887b8
-| `-ParmVarDecl 0x7f921c0888d0 <col:8> col:8 'struct B &&'
-|-CXXDestructorDecl 0x7f921c088958 <col:8> col:8 implicit ~B 'void (void)' inline default trivial noexcept-unevaluated 0x7f921c088958
-|-CXXConstructorDecl 0x7f921c089368 <col:8> col:8 implicit used constexpr B 'void (void) noexcept' inline default
-| `-CompoundStmt 0x7f921c089a88 <col:8>
-|-CXXConstructorDecl 0x7f921c089448 <col:8> col:8 implicit used constexpr B 'void (const struct B &) noexcept' inline default
-| |-ParmVarDecl 0x7f921c089570 <col:8> col:8 'const struct B &'
-| `-CompoundStmt 0x7f921c08a050 <col:8>
-`-CXXConstructorDecl 0x7f921c0895d8 <col:8> col:8 implicit constexpr B 'void (struct B &&)' inline default noexcept-unevaluated 0x7f921c0895d8
-  `-ParmVarDecl 0x7f921c089700 <col:8> col:8 'struct B &&'
+Record: CXXRecordDecl 0x7fbd8a9a17e8 <object_model_refined/7_object_model/05_references_are_not_pointers.cpp:3:1, line:5:1> line:3:8 referenced struct B definition
+|-CXXRecordDecl 0x7fbd8a9a1908 <col:1, col:8> col:8 implicit struct B
+|-CXXMethodDecl 0x7fbd8a9a19e8 <line:4:5, col:23> col:18 m 'void (void)' virtual
+| `-CompoundStmt 0x7fbd8a9a1f08 <col:22, col:23>
+|-CXXMethodDecl 0x7fbd8a9a1ad8 <line:3:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct B &(const struct B &)' inline default noexcept-unevaluated 0x7fbd8a9a1ad8
+| `-ParmVarDecl 0x7fbd8a9a1bf0 <col:8> col:8 'const struct B &'
+|-CXXMethodDecl 0x7fbd8a9a1c88 <col:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct B &(struct B &&)' inline default noexcept-unevaluated 0x7fbd8a9a1c88
+| `-ParmVarDecl 0x7fbd8a9a1da0 <col:8> col:8 'struct B &&'
+|-CXXDestructorDecl 0x7fbd8a9a1e28 <col:8> col:8 implicit ~B 'void (void)' inline default trivial noexcept-unevaluated 0x7fbd8a9a1e28
+|-CXXConstructorDecl 0x7fbd8a9a2838 <col:8> col:8 implicit used constexpr B 'void (void) noexcept' inline default
+| `-CompoundStmt 0x7fbd8a9a4f98 <col:8>
+|-CXXConstructorDecl 0x7fbd8a9a2918 <col:8> col:8 implicit used constexpr B 'void (const struct B &) noexcept' inline default
+| |-ParmVarDecl 0x7fbd8a9a2a40 <col:8> col:8 'const struct B &'
+| `-CompoundStmt 0x7fbd8a9a5540 <col:8>
+`-CXXConstructorDecl 0x7fbd8a9a2aa8 <col:8> col:8 implicit constexpr B 'void (struct B &&)' inline default noexcept-unevaluated 0x7fbd8a9a2aa8
+  `-ParmVarDecl 0x7fbd8a9a2bd0 <col:8> col:8 'struct B &&'
 
 Layout: <CGRecordLayout
   LLVMType:%struct.B = type { i32 (...)** }
@@ -38,27 +38,27 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f921c088a50 <object_model_refined/7_object_model/05_references_are_not_pointers.cpp:7:1, col:15> col:8 referenced struct D definition
+Record: CXXRecordDecl 0x7fbd8a9a1f20 <object_model_refined/7_object_model/05_references_are_not_pointers.cpp:7:1, col:15> col:8 referenced struct D definition
 |-public 'struct B'
-|-CXXRecordDecl 0x7f921c088bb8 <col:1, col:8> col:8 implicit struct D
-|-CXXMethodDecl 0x7f921c088ca8 <col:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct D &(const struct D &)' inline default noexcept-unevaluated 0x7f921c088ca8
-| `-ParmVarDecl 0x7f921c088dc0 <col:8> col:8 'const struct D &'
-|-CXXMethodDecl 0x7f921c088e58 <col:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct D &(struct D &&)' inline default noexcept-unevaluated 0x7f921c088e58
-| `-ParmVarDecl 0x7f921c088f70 <col:8> col:8 'struct D &&'
-|-CXXDestructorDecl 0x7f921c088ff8 <col:8> col:8 implicit ~D 'void (void)' inline default trivial noexcept-unevaluated 0x7f921c088ff8
-|-CXXConstructorDecl 0x7f921c089268 <col:8> col:8 implicit used constexpr D 'void (void) noexcept' inline default
+|-CXXRecordDecl 0x7fbd8a9a2088 <col:1, col:8> col:8 implicit struct D
+|-CXXMethodDecl 0x7fbd8a9a2178 <col:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct D &(const struct D &)' inline default noexcept-unevaluated 0x7fbd8a9a2178
+| `-ParmVarDecl 0x7fbd8a9a2290 <col:8> col:8 'const struct D &'
+|-CXXMethodDecl 0x7fbd8a9a2328 <col:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct D &(struct D &&)' inline default noexcept-unevaluated 0x7fbd8a9a2328
+| `-ParmVarDecl 0x7fbd8a9a2440 <col:8> col:8 'struct D &&'
+|-CXXDestructorDecl 0x7fbd8a9a24c8 <col:8> col:8 implicit ~D 'void (void)' inline default trivial noexcept-unevaluated 0x7fbd8a9a24c8
+|-CXXConstructorDecl 0x7fbd8a9a2738 <col:8> col:8 implicit used constexpr D 'void (void) noexcept' inline default
 | |-CXXCtorInitializer 'struct B'
-| | `-CXXConstructExpr 0x7f921c089aa0 <col:8> 'struct B' 'void (void) noexcept'
-| `-CompoundStmt 0x7f921c089b10 <col:8>
-|-CXXConstructorDecl 0x7f921c089768 <col:8> col:8 implicit used constexpr D 'void (const struct D &) noexcept' inline default
-| |-ParmVarDecl 0x7f921c089890 <col:8> col:8 used 'const struct D &'
+| | `-CXXConstructExpr 0x7fbd8a9a4fb0 <col:8> 'struct B' 'void (void) noexcept'
+| `-CompoundStmt 0x7fbd8a9a5020 <col:8>
+|-CXXConstructorDecl 0x7fbd8a9a2c38 <col:8> col:8 implicit used constexpr D 'void (const struct D &) noexcept' inline default
+| |-ParmVarDecl 0x7fbd8a9a2d60 <col:8> col:8 used 'const struct D &'
 | |-CXXCtorInitializer 'struct B'
-| | `-CXXConstructExpr 0x7f921c08a068 <col:8> 'struct B' 'void (const struct B &) noexcept'
-| |   `-ImplicitCastExpr 0x7f921c08a030 <col:8> 'const struct B' lvalue <UncheckedDerivedToBase (B)>
-| |     `-DeclRefExpr 0x7f921c08a008 <col:8> 'const struct D' lvalue ParmVar 0x7f921c089890 '' 'const struct D &'
-| `-CompoundStmt 0x7f921c08a0e0 <col:8>
-`-CXXConstructorDecl 0x7f921c0898f8 <col:8> col:8 implicit constexpr D 'void (struct D &&)' inline default noexcept-unevaluated 0x7f921c0898f8
-  `-ParmVarDecl 0x7f921c089a20 <col:8> col:8 'struct D &&'
+| | `-CXXConstructExpr 0x7fbd8a9a5558 <col:8> 'struct B' 'void (const struct B &) noexcept'
+| |   `-ImplicitCastExpr 0x7fbd8a9a5520 <col:8> 'const struct B' lvalue <UncheckedDerivedToBase (B)>
+| |     `-DeclRefExpr 0x7fbd8a9a54f8 <col:8> 'const struct D' lvalue ParmVar 0x7fbd8a9a2d60 '' 'const struct D &'
+| `-CompoundStmt 0x7fbd8a9a55d0 <col:8>
+`-CXXConstructorDecl 0x7fbd8a9a4e00 <col:8> col:8 implicit constexpr D 'void (struct D &&)' inline default noexcept-unevaluated 0x7fbd8a9a4e00
+  `-ParmVarDecl 0x7fbd8a9a4f30 <col:8> col:8 'struct D &&'
 
 Layout: <CGRecordLayout
   LLVMType:%struct.D = type { %struct.B }
@@ -74,21 +74,21 @@ Layout: <CGRecordLayout
            |  nvsize=8, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f921b06fbf0 </usr/local/Cellar/llvm/5.0.0/include/c++/v1/exception:97:1, line:103:1> line:97:29 referenced class exception definition
-|-VisibilityAttr 0x7f921b06fd18 </usr/local/Cellar/llvm/5.0.0/include/c++/v1/__config:681:47, col:71> Default
-|-CXXRecordDecl 0x7f921b06fd60 </usr/local/Cellar/llvm/5.0.0/include/c++/v1/exception:97:1, col:29> col:29 implicit referenced class exception
-|-AccessSpecDecl 0x7f921b06fdf8 <line:99:1, col:7> col:1 public
-|-CXXConstructorDecl 0x7f921b06fec0 </usr/local/Cellar/llvm/5.0.0/include/c++/v1/__config:709:35, /usr/local/Cellar/llvm/5.0.0/include/c++/v1/exception:100:54> col:31 used exception 'void (void) noexcept'
-| |-CompoundStmt 0x7f921b0703f8 <col:53, col:54>
-| |-AlwaysInlineAttr 0x7f921b06ff68 </usr/local/Cellar/llvm/5.0.0/include/c++/v1/__config:709:77> always_inline
-| `-VisibilityAttr 0x7f921b06ffb0 <col:51, col:74> Hidden
-|-CXXDestructorDecl 0x7f921b070018 </usr/local/Cellar/llvm/5.0.0/include/c++/v1/exception:101:5, /usr/local/Cellar/llvm/5.0.0/include/c++/v1/__config:738:21> /usr/local/Cellar/llvm/5.0.0/include/c++/v1/exception:101:13 used ~exception 'void (void) noexcept' virtual
-|-CXXMethodDecl 0x7f921b070180 <line:102:5, /usr/local/Cellar/llvm/5.0.0/include/c++/v1/__config:738:21> /usr/local/Cellar/llvm/5.0.0/include/c++/v1/exception:102:25 what 'const char *(void) const noexcept' virtual
-|-CXXMethodDecl 0x7f921b070278 <line:97:29, <invalid sloc>> col:29 implicit operator= 'class std::exception &(const class std::exception &)' inline default noexcept-unevaluated 0x7f921b070278
-| `-ParmVarDecl 0x7f921b070390 <col:29> col:29 'const class std::exception &'
-`-CXXConstructorDecl 0x7f921b070c18 <col:29> col:29 implicit used constexpr exception 'void (const class std::exception &) noexcept' inline default
-  |-ParmVarDecl 0x7f921b070d40 <col:29> col:29 'const class std::exception &'
-  `-CompoundStmt 0x7f921c0881d0 <col:29>
+Record: CXXRecordDecl 0x7fbd8a997df0 </usr/local/Cellar/llvm/5.0.0/include/c++/v1/exception:97:1, line:103:1> line:97:29 referenced class exception definition
+|-VisibilityAttr 0x7fbd8a997f18 </usr/local/Cellar/llvm/5.0.0/include/c++/v1/__config:701:47, col:71> Default
+|-CXXRecordDecl 0x7fbd8a997f60 </usr/local/Cellar/llvm/5.0.0/include/c++/v1/exception:97:1, col:29> col:29 implicit referenced class exception
+|-AccessSpecDecl 0x7fbd8a997ff8 <line:99:1, col:7> col:1 public
+|-CXXConstructorDecl 0x7fbd8a9980c0 </usr/local/Cellar/llvm/5.0.0/include/c++/v1/__config:729:35, /usr/local/Cellar/llvm/5.0.0/include/c++/v1/exception:100:54> col:31 used exception 'void (void) noexcept'
+| |-CompoundStmt 0x7fbd8a9985f8 <col:53, col:54>
+| |-AlwaysInlineAttr 0x7fbd8a998168 </usr/local/Cellar/llvm/5.0.0/include/c++/v1/__config:729:77> always_inline
+| `-VisibilityAttr 0x7fbd8a9981b0 <col:51, col:74> Hidden
+|-CXXDestructorDecl 0x7fbd8a998218 </usr/local/Cellar/llvm/5.0.0/include/c++/v1/exception:101:5, /usr/local/Cellar/llvm/5.0.0/include/c++/v1/__config:758:21> /usr/local/Cellar/llvm/5.0.0/include/c++/v1/exception:101:13 used ~exception 'void (void) noexcept' virtual
+|-CXXMethodDecl 0x7fbd8a998380 <line:102:5, /usr/local/Cellar/llvm/5.0.0/include/c++/v1/__config:758:21> /usr/local/Cellar/llvm/5.0.0/include/c++/v1/exception:102:25 what 'const char *(void) const noexcept' virtual
+|-CXXMethodDecl 0x7fbd8a998478 <line:97:29, <invalid sloc>> col:29 implicit operator= 'class std::exception &(const class std::exception &)' inline default noexcept-unevaluated 0x7fbd8a998478
+| `-ParmVarDecl 0x7fbd8a998590 <col:29> col:29 'const class std::exception &'
+`-CXXConstructorDecl 0x7fbd8a998e18 <col:29> col:29 implicit used constexpr exception 'void (const class std::exception &) noexcept' inline default
+  |-ParmVarDecl 0x7fbd8a998f40 <col:29> col:29 'const class std::exception &'
+  `-CompoundStmt 0x7fbd8a9a16b0 <col:29>
 
 Layout: <CGRecordLayout
   LLVMType:%"class.std::exception" = type { i32 (...)** }
@@ -105,23 +105,23 @@ Layout: <CGRecordLayout
            |  nvsize=8, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f921c086e00 </usr/local/Cellar/llvm/5.0.0/include/c++/v1/typeinfo:175:1, line:182:1> line:175:29 referenced class bad_cast definition
+Record: CXXRecordDecl 0x7fbd8a99fac0 </usr/local/Cellar/llvm/5.0.0/include/c++/v1/typeinfo:176:1, line:183:1> line:176:29 referenced class bad_cast definition
 |-public 'class std::exception'
-|-VisibilityAttr 0x7f921c086f28 </usr/local/Cellar/llvm/5.0.0/include/c++/v1/__config:681:47, col:71> Default
-|-CXXRecordDecl 0x7f921c086fb0 </usr/local/Cellar/llvm/5.0.0/include/c++/v1/typeinfo:175:1, col:29> col:29 implicit referenced class bad_cast
-|-AccessSpecDecl 0x7f921c087048 <line:178:1, col:7> col:1 public
-|-CXXConstructorDecl 0x7f921c0870e0 <line:179:5, /usr/local/Cellar/llvm/5.0.0/include/c++/v1/__config:738:21> /usr/local/Cellar/llvm/5.0.0/include/c++/v1/typeinfo:179:5 used bad_cast 'void (void) noexcept'
-|-CXXDestructorDecl 0x7f921c0871e0 <line:180:5, /usr/local/Cellar/llvm/5.0.0/include/c++/v1/__config:738:21> /usr/local/Cellar/llvm/5.0.0/include/c++/v1/typeinfo:180:13 used ~bad_cast 'void (void) noexcept' virtual
-|-CXXMethodDecl 0x7f921c0872d8 <line:181:5, /usr/local/Cellar/llvm/5.0.0/include/c++/v1/__config:738:21> /usr/local/Cellar/llvm/5.0.0/include/c++/v1/typeinfo:181:25 used what 'const char *(void) const noexcept' virtual
-|-CXXMethodDecl 0x7f921c0873c8 <line:175:29, <invalid sloc>> col:29 implicit operator= 'class std::bad_cast &(const class std::bad_cast &)' inline default noexcept-unevaluated 0x7f921c0873c8
-| `-ParmVarDecl 0x7f921c0874e0 <col:29> col:29 'const class std::bad_cast &'
-`-CXXConstructorDecl 0x7f921c087ee8 <col:29> col:29 implicit used constexpr bad_cast 'void (const class std::bad_cast &) noexcept' inline default
-  |-ParmVarDecl 0x7f921c088010 <col:29> col:29 used 'const class std::bad_cast &'
+|-VisibilityAttr 0x7fbd8a99fbe8 </usr/local/Cellar/llvm/5.0.0/include/c++/v1/__config:701:47, col:71> Default
+|-CXXRecordDecl 0x7fbd8a99fc70 </usr/local/Cellar/llvm/5.0.0/include/c++/v1/typeinfo:176:1, col:29> col:29 implicit referenced class bad_cast
+|-AccessSpecDecl 0x7fbd8a99fd08 <line:179:1, col:7> col:1 public
+|-CXXConstructorDecl 0x7fbd8a99fda0 <line:180:5, /usr/local/Cellar/llvm/5.0.0/include/c++/v1/__config:758:21> /usr/local/Cellar/llvm/5.0.0/include/c++/v1/typeinfo:180:5 used bad_cast 'void (void) noexcept'
+|-CXXDestructorDecl 0x7fbd8a99fea0 <line:181:5, /usr/local/Cellar/llvm/5.0.0/include/c++/v1/__config:758:21> /usr/local/Cellar/llvm/5.0.0/include/c++/v1/typeinfo:181:13 used ~bad_cast 'void (void) noexcept' virtual
+|-CXXMethodDecl 0x7fbd8a99ff98 <line:182:5, /usr/local/Cellar/llvm/5.0.0/include/c++/v1/__config:758:21> /usr/local/Cellar/llvm/5.0.0/include/c++/v1/typeinfo:182:25 used what 'const char *(void) const noexcept' virtual
+|-CXXMethodDecl 0x7fbd8a9a0088 <line:176:29, <invalid sloc>> col:29 implicit operator= 'class std::bad_cast &(const class std::bad_cast &)' inline default noexcept-unevaluated 0x7fbd8a9a0088
+| `-ParmVarDecl 0x7fbd8a9a01a0 <col:29> col:29 'const class std::bad_cast &'
+`-CXXConstructorDecl 0x7fbd8a9a13c8 <col:29> col:29 implicit used constexpr bad_cast 'void (const class std::bad_cast &) noexcept' inline default
+  |-ParmVarDecl 0x7fbd8a9a14f0 <col:29> col:29 used 'const class std::bad_cast &'
   |-CXXCtorInitializer 'class std::exception'
-  | `-CXXConstructExpr 0x7f921c0881e8 <col:29> 'class std::exception' 'void (const class std::exception &) noexcept'
-  |   `-ImplicitCastExpr 0x7f921c0881b0 <col:29> 'const class std::exception' lvalue <UncheckedDerivedToBase (exception)>
-  |     `-DeclRefExpr 0x7f921c088188 <col:29> 'const class std::bad_cast' lvalue ParmVar 0x7f921c088010 '' 'const class std::bad_cast &'
-  `-CompoundStmt 0x7f921c088260 <col:29>
+  | `-CXXConstructExpr 0x7fbd8a9a16c8 <col:29> 'class std::exception' 'void (const class std::exception &) noexcept'
+  |   `-ImplicitCastExpr 0x7fbd8a9a1690 <col:29> 'const class std::exception' lvalue <UncheckedDerivedToBase (exception)>
+  |     `-DeclRefExpr 0x7fbd8a9a1668 <col:29> 'const class std::bad_cast' lvalue ParmVar 0x7fbd8a9a14f0 '' 'const class std::bad_cast &'
+  `-CompoundStmt 0x7fbd8a9a1740 <col:29>
 
 Layout: <CGRecordLayout
   LLVMType:%"class.std::bad_cast" = type { %"class.std::exception" }

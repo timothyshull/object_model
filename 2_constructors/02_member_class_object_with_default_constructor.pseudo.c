@@ -2,7 +2,8 @@ int _main() {
     B::B();
     Xyz::Xyz();
     Xyz::~Xyz();
-    return 0x0;
+    rax = 0x0;
+    return rax;
 }
 
 function __ZN1BC1Ev() {

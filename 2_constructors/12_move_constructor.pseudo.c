@@ -23,7 +23,8 @@ int _main() {
     D::~D();
     A::~A();
     A::~A();
-    return 0x0;
+    rax = 0x0;
+    return rax;
 }
 
 function __Z1f1A() {

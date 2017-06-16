@@ -21,16 +21,27 @@
            |  nvsize=16, nvalign=8]
 
 *** Dumping AST Record Layout
-         0 | struct (anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/utility:1507:13)
+         0 | struct std::__1::unary_function<struct std::__1::_PairT, unsigned long> (empty)
+           | [sizeof=1, dsize=1, align=1,
+           |  nvsize=1, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::__scalar_hash<struct std::__1::_PairT, 2> (empty)
+         0 |   struct std::__1::unary_function<struct std::__1::_PairT, unsigned long> (base) (empty)
+           | [sizeof=1, dsize=0, align=1,
+           |  nvsize=1, nvalign=1]
+
+*** Dumping AST Record Layout
+         0 | struct (anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/utility:1512:13)
          0 |   size_t __a
          8 |   size_t __b
            | [sizeof=16, dsize=16, align=8,
            |  nvsize=16, nvalign=8]
 
 *** Dumping AST Record Layout
-         0 | union (anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/utility:1504:9)
+         0 | union (anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/utility:1509:9)
          0 |   long double __t
-         0 |   struct (anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/utility:1507:13) __s
+         0 |   struct (anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/utility:1512:13) __s
          0 |     size_t __a
          8 |     size_t __b
            | [sizeof=16, dsize=16, align=16,
@@ -42,29 +53,29 @@
            |  nvsize=0, nvalign=1]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fda07016bf8 <object_model_refined/5_ctor_dtor_semantics/06_object_move_semantics.cpp:3:1, line:21:1> line:3:8 referenced struct A definition
-|-CXXRecordDecl 0x7fda07016d18 <col:1, col:8> col:8 implicit referenced struct A
-|-CXXConstructorDecl 0x7fda07016e18 <line:4:5, col:10> col:5 A 'void (void)'
-| `-CompoundStmt 0x7fda070176f8 <col:9, col:10>
-|-CXXConstructorDecl 0x7fda07016fc0 <line:6:5, col:22> col:5 A 'void (const struct A &)'
-| |-ParmVarDecl 0x7fda07016ef8 <col:7, col:16> col:16 rhs 'const struct A &'
-| `-CompoundStmt 0x7fda07017710 <col:21, col:22>
-|-CXXConstructorDecl 0x7fda070171b8 <line:8:5, col:24> col:5 used A 'void (struct A &&) noexcept'
-| |-ParmVarDecl 0x7fda070170a8 <col:7, col:11> col:11 o 'struct A &&'
-| `-CompoundStmt 0x7fda07017728 <col:23, col:24>
-|-CXXMethodDecl 0x7fda07017370 <line:10:5, line:13:5> line:10:8 operator= 'struct A &(const struct A &)'
-| |-ParmVarDecl 0x7fda07017278 <col:18, col:27> col:27 rhs 'const struct A &'
-| `-CompoundStmt 0x7fda07017790 <line:11:5, line:13:5>
-|   `-ReturnStmt 0x7fda07017778 <line:12:9, col:17>
-|     `-UnaryOperator 0x7fda07017758 <col:16, col:17> 'struct A' lvalue prefix '*'
-|       `-CXXThisExpr 0x7fda07017740 <col:17> 'struct A *' this
-|-CXXMethodDecl 0x7fda07017528 <line:15:5, line:18:5> line:15:8 operator= 'struct A &(struct A &&) noexcept'
-| |-ParmVarDecl 0x7fda07017420 <col:18, col:22> col:22 rhs 'struct A &&'
-| `-CompoundStmt 0x7fda0701a400 <line:16:5, line:18:5>
-|   `-ReturnStmt 0x7fda070177e8 <line:17:9, col:17>
-|     `-UnaryOperator 0x7fda070177c8 <col:16, col:17> 'struct A' lvalue prefix '*'
-|       `-CXXThisExpr 0x7fda070177b0 <col:17> 'struct A *' this
-`-CXXDestructorDecl 0x7fda07017618 <line:20:5, col:18> col:5 ~A 'void (void) noexcept' default trivial
+Record: CXXRecordDecl 0x7fad67214cb0 <object_model_refined/5_ctor_dtor_semantics/06_object_move_semantics.cpp:3:1, line:21:1> line:3:8 referenced struct A definition
+|-CXXRecordDecl 0x7fad67214dd8 <col:1, col:8> col:8 implicit referenced struct A
+|-CXXConstructorDecl 0x7fad67214ed8 <line:4:5, col:10> col:5 A 'void (void)'
+| `-CompoundStmt 0x7fad672157b8 <col:9, col:10>
+|-CXXConstructorDecl 0x7fad67215080 <line:6:5, col:22> col:5 A 'void (const struct A &)'
+| |-ParmVarDecl 0x7fad67214fb8 <col:7, col:16> col:16 rhs 'const struct A &'
+| `-CompoundStmt 0x7fad672157d0 <col:21, col:22>
+|-CXXConstructorDecl 0x7fad67215278 <line:8:5, col:24> col:5 used A 'void (struct A &&) noexcept'
+| |-ParmVarDecl 0x7fad67215168 <col:7, col:11> col:11 o 'struct A &&'
+| `-CompoundStmt 0x7fad672157e8 <col:23, col:24>
+|-CXXMethodDecl 0x7fad67215430 <line:10:5, line:13:5> line:10:8 operator= 'struct A &(const struct A &)'
+| |-ParmVarDecl 0x7fad67215338 <col:18, col:27> col:27 rhs 'const struct A &'
+| `-CompoundStmt 0x7fad67215850 <line:11:5, line:13:5>
+|   `-ReturnStmt 0x7fad67215838 <line:12:9, col:17>
+|     `-UnaryOperator 0x7fad67215818 <col:16, col:17> 'struct A' lvalue prefix '*'
+|       `-CXXThisExpr 0x7fad67215800 <col:17> 'struct A *' this
+|-CXXMethodDecl 0x7fad672155e8 <line:15:5, line:18:5> line:15:8 operator= 'struct A &(struct A &&) noexcept'
+| |-ParmVarDecl 0x7fad672154e0 <col:18, col:22> col:22 rhs 'struct A &&'
+| `-CompoundStmt 0x7fad672158c0 <line:16:5, line:18:5>
+|   `-ReturnStmt 0x7fad672158a8 <line:17:9, col:17>
+|     `-UnaryOperator 0x7fad67215888 <col:16, col:17> 'struct A' lvalue prefix '*'
+|       `-CXXThisExpr 0x7fad67215870 <col:17> 'struct A *' this
+`-CXXDestructorDecl 0x7fad672156d8 <line:20:5, col:18> col:5 ~A 'void (void) noexcept' default trivial
 
 Layout: <CGRecordLayout
   LLVMType:%struct.A = type { i8 }
@@ -72,6 +83,29 @@ Layout: <CGRecordLayout
   IsZeroInitializable:1
   BitFields:[
 ]>
+
+*** Dumping AST Record Layout
+         0 | struct (anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/utility:1228:13)
+         0 |   size_t __a
+         8 |   size_t __b
+           | [sizeof=16, dsize=16, align=8,
+           |  nvsize=16, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | union (anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/utility:1225:9)
+         0 |   struct std::__1::_PairT __t
+         0 |     size_t first
+         8 |     size_t second
+         0 |   struct (anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/utility:1228:13) __s
+         0 |     size_t __a
+         8 |     size_t __b
+           | [sizeof=16, dsize=16, align=8,
+           |  nvsize=16, nvalign=8]
+
+*** Dumping AST Record Layout
+         0 | struct std::__1::__murmur2_or_cityhash<unsigned long, 64> (empty)
+           | [sizeof=1, dsize=1, align=1,
+           |  nvsize=1, nvalign=1]
 
 *** Dumping AST Record Layout
          0 | struct std::__1::__two
@@ -87,14 +121,14 @@ Layout: <CGRecordLayout
            |  nvsize=16, nvalign=8]
 
 *** Dumping AST Record Layout
-         0 | union (anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/utility:1185:9)
+         0 | union (anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/utility:1190:9)
          0 |   float __t
          0 |   size_t __a
            | [sizeof=8, dsize=8, align=8,
            |  nvsize=8, nvalign=8]
 
 *** Dumping AST Record Layout
-         0 | union (anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/utility:1203:9)
+         0 | union (anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/utility:1208:9)
          0 |   double __t
          0 |   size_t __a
            | [sizeof=8, dsize=8, align=8,

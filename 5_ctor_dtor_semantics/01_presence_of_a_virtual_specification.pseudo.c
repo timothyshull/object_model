@@ -14,7 +14,8 @@ int _main() {
     (*(*var_50 + 0x10))(var_50);
     D1::~D1();
     B1::~B1();
-    return 0x0;
+    rax = 0x0;
+    return rax;
 }
 
 function __ZN2B1C1Ev() {
