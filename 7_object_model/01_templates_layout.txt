@@ -5,12 +5,12 @@
            |  nvsize=1, nvalign=1]
 
 *** Dumping IRgen Record Layout
-Record: ClassTemplateSpecializationDecl 0x7fe19a9ddcc0 <object_model_refined/7_object_model/01_templates.cpp:9:1, line:10:12> col:7 class A definition
+Record: ClassTemplateSpecializationDecl 0x7fa6711ddcc0 </Users/tskull/Documents/Programming/Cpp/object_model_refined/7_object_model/01_templates.cpp:9:1, line:10:12> col:7 class A definition
 |-TemplateArgument type 'int'
-|-CXXRecordDecl 0x7fe19a9ddec0 prev 0x7fe19a9ddcc0 <line:4:1, col:7> col:7 implicit class A
-|-AccessSpecDecl 0x7fe19a9ddf58 <line:5:1, col:7> col:1 public
-`-CXXMethodDecl 0x7fe19a9ddf80 <line:6:5, col:15> col:10 m 'void (void)'
-  `-CompoundStmt 0x7fe19a9ddc90 <col:14, col:15>
+|-CXXRecordDecl 0x7fa6711ddec0 prev 0x7fa6711ddcc0 <line:4:1, col:7> col:7 implicit class A
+|-AccessSpecDecl 0x7fa6711ddf58 <line:5:1, col:7> col:1 public
+`-CXXMethodDecl 0x7fa6711ddf80 <line:6:5, col:15> col:10 m 'void (void)'
+  `-CompoundStmt 0x7fa6711ddc90 <col:14, col:15>
 
 Layout: <CGRecordLayout
   LLVMType:%class.A = type { i8 }
@@ -25,12 +25,12 @@ Layout: <CGRecordLayout
            |  nvsize=1, nvalign=1]
 
 *** Dumping IRgen Record Layout
-Record: ClassTemplateSpecializationDecl 0x7fe19a9de198 <object_model_refined/7_object_model/01_templates.cpp:3:1, line:7:1> line:4:7 class A definition
+Record: ClassTemplateSpecializationDecl 0x7fa6711de198 </Users/tskull/Documents/Programming/Cpp/object_model_refined/7_object_model/01_templates.cpp:3:1, line:7:1> line:4:7 class A definition
 |-TemplateArgument type 'double'
-|-CXXRecordDecl 0x7fe19a9e2800 prev 0x7fe19a9de198 <col:1, col:7> col:7 implicit class A
-|-AccessSpecDecl 0x7fe19a9e2898 <line:5:1, col:7> col:1 public
-`-CXXMethodDecl 0x7fe19a9e28c0 <line:6:5, col:15> col:10 m 'void (void)'
-  `-CompoundStmt 0x7fe19a9ddc90 <col:14, col:15>
+|-CXXRecordDecl 0x7fa6711e2800 prev 0x7fa6711de198 <col:1, col:7> col:7 implicit class A
+|-AccessSpecDecl 0x7fa6711e2898 <line:5:1, col:7> col:1 public
+`-CXXMethodDecl 0x7fa6711e28c0 <line:6:5, col:15> col:10 m 'void (void)'
+  `-CompoundStmt 0x7fa6711ddc90 <col:14, col:15>
 
 Layout: <CGRecordLayout
   LLVMType:%class.A.0 = type { i8 }
@@ -45,19 +45,19 @@ Layout: <CGRecordLayout
            |  nvsize=1, nvalign=1]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fe19a9e36c8 <object_model_refined/7_object_model/01_templates.cpp:25:1, line:29:1> line:25:8 referenced struct B definition
-|-CXXRecordDecl 0x7fe19a9e37e8 <col:1, col:8> col:8 implicit struct B
-`-FunctionTemplateDecl 0x7fe19a9e3b38 <line:27:5, line:28:36> col:10 operator()
-  |-TemplateTypeParmDecl 0x7fe19a9e3880 <line:27:14, col:23> col:23 referenced typename depth 0 index 0 T
-  |-CXXMethodDecl 0x7fe19a9e3aa0 <line:28:5, col:36> col:10 operator() 'void (const T &)'
-  | |-ParmVarDecl 0x7fe19a9e3968 <col:21, col:30> col:30 obj 'const T &'
-  | `-CompoundStmt 0x7fe19a9e3bb0 <col:35, col:36>
-  |-CXXMethodDecl 0x7fe19a9e4bb0 <col:5, col:36> col:10 used operator() 'void (const double &)'
+Record: CXXRecordDecl 0x7fa6711e36c8 </Users/tskull/Documents/Programming/Cpp/object_model_refined/7_object_model/01_templates.cpp:25:1, line:29:1> line:25:8 referenced struct B definition
+|-CXXRecordDecl 0x7fa6711e37e8 <col:1, col:8> col:8 implicit struct B
+`-FunctionTemplateDecl 0x7fa6711e3b38 <line:27:5, line:28:36> col:10 operator()
+  |-TemplateTypeParmDecl 0x7fa6711e3880 <line:27:14, col:23> col:23 referenced typename depth 0 index 0 T
+  |-CXXMethodDecl 0x7fa6711e3aa0 <line:28:5, col:36> col:10 operator() 'void (const T &)'
+  | |-ParmVarDecl 0x7fa6711e3968 <col:21, col:30> col:30 obj 'const T &'
+  | `-CompoundStmt 0x7fa6711e3bb0 <col:35, col:36>
+  |-CXXMethodDecl 0x7fa6711e4bb0 <col:5, col:36> col:10 used operator() 'void (const double &)'
   | |-TemplateArgument type 'double'
-  | `-ParmVarDecl 0x7fe19a9e4aa8 <col:21, col:30> col:30 obj 'const double &'
-  `-CXXMethodDecl 0x7fe19a9e4fe0 <col:5, col:36> col:10 used operator() 'void (const int &)'
+  | `-ParmVarDecl 0x7fa6711e4aa8 <col:21, col:30> col:30 obj 'const double &'
+  `-CXXMethodDecl 0x7fa6711e4fe0 <col:5, col:36> col:10 used operator() 'void (const int &)'
     |-TemplateArgument type 'int'
-    `-ParmVarDecl 0x7fe19a9e4ed8 <col:21, col:30> col:30 obj 'const int &'
+    `-ParmVarDecl 0x7fa6711e4ed8 <col:21, col:30> col:30 obj 'const int &'
 
 Layout: <CGRecordLayout
   LLVMType:%struct.B = type { i8 }

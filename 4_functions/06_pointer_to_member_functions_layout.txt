@@ -74,16 +74,16 @@
            |  nvsize=16, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f9aa9068c58 <object_model_refined/4_functions/06_pointer_to_member_functions.cpp:2:1, line:4:1> line:2:8 referenced struct B1 definition
-|-CXXRecordDecl 0x7f9aa9068d78 <col:1, col:8> col:8 implicit struct B1
-|-CXXMethodDecl 0x7f9aa9068e90 <line:3:5, col:15> col:10 used m 'void (void)'
-| `-CompoundStmt 0x7f9aa9068f48 <col:14, col:15>
-|-CXXConstructorDecl 0x7f9aa909b188 <line:2:8> col:8 implicit constexpr B1 'void (void) noexcept' inline default trivial
-|-CXXDestructorDecl 0x7f9aa909b268 <col:8> col:8 implicit ~B1 'void (void)' inline default trivial noexcept-unevaluated 0x7f9aa909b268
-|-CXXConstructorDecl 0x7f9aa909b3a8 <col:8> col:8 implicit constexpr B1 'void (const struct B1 &)' inline default trivial noexcept-unevaluated 0x7f9aa909b3a8
-| `-ParmVarDecl 0x7f9aa909b4d0 <col:8> col:8 'const struct B1 &'
-`-CXXConstructorDecl 0x7f9aa909b568 <col:8> col:8 implicit constexpr B1 'void (struct B1 &&)' inline default trivial noexcept-unevaluated 0x7f9aa909b568
-  `-ParmVarDecl 0x7f9aa909b690 <col:8> col:8 'struct B1 &&'
+Record: CXXRecordDecl 0x7fcc3c068c58 </Users/tskull/Documents/Programming/Cpp/object_model_refined/4_functions/06_pointer_to_member_functions.cpp:2:1, line:4:1> line:2:8 referenced struct B1 definition
+|-CXXRecordDecl 0x7fcc3c068d78 <col:1, col:8> col:8 implicit struct B1
+|-CXXMethodDecl 0x7fcc3c068e90 <line:3:5, col:15> col:10 used m 'void (void)'
+| `-CompoundStmt 0x7fcc3c068f48 <col:14, col:15>
+|-CXXConstructorDecl 0x7fcc3d009188 <line:2:8> col:8 implicit constexpr B1 'void (void) noexcept' inline default trivial
+|-CXXDestructorDecl 0x7fcc3d009268 <col:8> col:8 implicit ~B1 'void (void)' inline default trivial noexcept-unevaluated 0x7fcc3d009268
+|-CXXConstructorDecl 0x7fcc3d0093a8 <col:8> col:8 implicit constexpr B1 'void (const struct B1 &)' inline default trivial noexcept-unevaluated 0x7fcc3d0093a8
+| `-ParmVarDecl 0x7fcc3d0094d0 <col:8> col:8 'const struct B1 &'
+`-CXXConstructorDecl 0x7fcc3d009568 <col:8> col:8 implicit constexpr B1 'void (struct B1 &&)' inline default trivial noexcept-unevaluated 0x7fcc3d009568
+  `-ParmVarDecl 0x7fcc3d009690 <col:8> col:8 'struct B1 &&'
 
 Layout: <CGRecordLayout
   LLVMType:%struct.B1 = type { i8 }
@@ -93,14 +93,14 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f9aa9068f60 <object_model_refined/4_functions/06_pointer_to_member_functions.cpp:6:1, col:17> col:8 referenced struct D1 definition
+Record: CXXRecordDecl 0x7fcc3c068f60 </Users/tskull/Documents/Programming/Cpp/object_model_refined/4_functions/06_pointer_to_member_functions.cpp:6:1, col:17> col:8 referenced struct D1 definition
 |-public 'struct B1'
-|-CXXRecordDecl 0x7f9aa90690c8 <col:1, col:8> col:8 implicit struct D1
-|-CXXConstructorDecl 0x7f9aa909b080 <col:8> col:8 implicit referenced constexpr D1 'void (void) noexcept' inline default trivial
-|-CXXConstructorDecl 0x7f9aa909b6f8 <col:8> col:8 implicit constexpr D1 'void (const struct D1 &)' inline default trivial noexcept-unevaluated 0x7f9aa909b6f8
-| `-ParmVarDecl 0x7f9aa909c440 <col:8> col:8 'const struct D1 &'
-`-CXXConstructorDecl 0x7f9aa909c4d8 <col:8> col:8 implicit constexpr D1 'void (struct D1 &&)' inline default trivial noexcept-unevaluated 0x7f9aa909c4d8
-  `-ParmVarDecl 0x7f9aa909c600 <col:8> col:8 'struct D1 &&'
+|-CXXRecordDecl 0x7fcc3c0690c8 <col:1, col:8> col:8 implicit struct D1
+|-CXXConstructorDecl 0x7fcc3d009080 <col:8> col:8 implicit referenced constexpr D1 'void (void) noexcept' inline default trivial
+|-CXXConstructorDecl 0x7fcc3d0096f8 <col:8> col:8 implicit constexpr D1 'void (const struct D1 &)' inline default trivial noexcept-unevaluated 0x7fcc3d0096f8
+| `-ParmVarDecl 0x7fcc3d00a440 <col:8> col:8 'const struct D1 &'
+`-CXXConstructorDecl 0x7fcc3d00a4d8 <col:8> col:8 implicit constexpr D1 'void (struct D1 &&)' inline default trivial noexcept-unevaluated 0x7fcc3d00a4d8
+  `-ParmVarDecl 0x7fcc3d00a600 <col:8> col:8 'struct D1 &&'
 
 Layout: <CGRecordLayout
   LLVMType:%struct.D1 = type { i8 }
@@ -110,21 +110,21 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f9aa9069180 <object_model_refined/4_functions/06_pointer_to_member_functions.cpp:9:1, line:11:1> line:9:8 referenced struct B2 definition
-|-CXXRecordDecl 0x7f9aa90692a8 <col:1, col:8> col:8 implicit struct B2
-|-CXXMethodDecl 0x7f9aa9069388 <line:10:5, col:23> col:18 referenced m 'void (void)' virtual
-| `-CompoundStmt 0x7f9aa90698a8 <col:22, col:23>
-|-CXXMethodDecl 0x7f9aa9069478 <line:9:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct B2 &(const struct B2 &)' inline default noexcept-unevaluated 0x7f9aa9069478
-| `-ParmVarDecl 0x7f9aa9069590 <col:8> col:8 'const struct B2 &'
-|-CXXMethodDecl 0x7f9aa9069628 <col:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct B2 &(struct B2 &&)' inline default noexcept-unevaluated 0x7f9aa9069628
-| `-ParmVarDecl 0x7f9aa9069740 <col:8> col:8 'struct B2 &&'
-|-CXXDestructorDecl 0x7f9aa90697c8 <col:8> col:8 implicit ~B2 'void (void)' inline default trivial noexcept-unevaluated 0x7f9aa90697c8
-|-CXXConstructorDecl 0x7f9aa909ccf8 <col:8> col:8 implicit used constexpr B2 'void (void) noexcept' inline default
-| `-CompoundStmt 0x7f9aa909f468 <col:8>
-|-CXXConstructorDecl 0x7f9aa909cdd8 <col:8> col:8 implicit constexpr B2 'void (const struct B2 &)' inline default noexcept-unevaluated 0x7f9aa909cdd8
-| `-ParmVarDecl 0x7f9aa909cf00 <col:8> col:8 'const struct B2 &'
-`-CXXConstructorDecl 0x7f9aa909cf68 <col:8> col:8 implicit constexpr B2 'void (struct B2 &&)' inline default noexcept-unevaluated 0x7f9aa909cf68
-  `-ParmVarDecl 0x7f9aa909d090 <col:8> col:8 'struct B2 &&'
+Record: CXXRecordDecl 0x7fcc3c069180 </Users/tskull/Documents/Programming/Cpp/object_model_refined/4_functions/06_pointer_to_member_functions.cpp:9:1, line:11:1> line:9:8 referenced struct B2 definition
+|-CXXRecordDecl 0x7fcc3c0692a8 <col:1, col:8> col:8 implicit struct B2
+|-CXXMethodDecl 0x7fcc3c069388 <line:10:5, col:23> col:18 referenced m 'void (void)' virtual
+| `-CompoundStmt 0x7fcc3c0698a8 <col:22, col:23>
+|-CXXMethodDecl 0x7fcc3c069478 <line:9:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct B2 &(const struct B2 &)' inline default noexcept-unevaluated 0x7fcc3c069478
+| `-ParmVarDecl 0x7fcc3c069590 <col:8> col:8 'const struct B2 &'
+|-CXXMethodDecl 0x7fcc3c069628 <col:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct B2 &(struct B2 &&)' inline default noexcept-unevaluated 0x7fcc3c069628
+| `-ParmVarDecl 0x7fcc3c069740 <col:8> col:8 'struct B2 &&'
+|-CXXDestructorDecl 0x7fcc3c0697c8 <col:8> col:8 implicit ~B2 'void (void)' inline default trivial noexcept-unevaluated 0x7fcc3c0697c8
+|-CXXConstructorDecl 0x7fcc3d00acf8 <col:8> col:8 implicit used constexpr B2 'void (void) noexcept' inline default
+| `-CompoundStmt 0x7fcc3d00d468 <col:8>
+|-CXXConstructorDecl 0x7fcc3d00add8 <col:8> col:8 implicit constexpr B2 'void (const struct B2 &)' inline default noexcept-unevaluated 0x7fcc3d00add8
+| `-ParmVarDecl 0x7fcc3d00af00 <col:8> col:8 'const struct B2 &'
+`-CXXConstructorDecl 0x7fcc3d00af68 <col:8> col:8 implicit constexpr B2 'void (struct B2 &&)' inline default noexcept-unevaluated 0x7fcc3d00af68
+  `-ParmVarDecl 0x7fcc3d00b090 <col:8> col:8 'struct B2 &&'
 
 Layout: <CGRecordLayout
   LLVMType:%struct.B2 = type { i32 (...)** }
@@ -134,22 +134,22 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f9aa90698c0 <object_model_refined/4_functions/06_pointer_to_member_functions.cpp:13:1, col:17> col:8 referenced struct D2 definition
+Record: CXXRecordDecl 0x7fcc3c0698c0 </Users/tskull/Documents/Programming/Cpp/object_model_refined/4_functions/06_pointer_to_member_functions.cpp:13:1, col:17> col:8 referenced struct D2 definition
 |-public 'struct B2'
-|-CXXRecordDecl 0x7f9aa9069a28 <col:1, col:8> col:8 implicit struct D2
-|-CXXMethodDecl 0x7f9aa9069b18 <col:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct D2 &(const struct D2 &)' inline default noexcept-unevaluated 0x7f9aa9069b18
-| `-ParmVarDecl 0x7f9aa9095040 <col:8> col:8 'const struct D2 &'
-|-CXXMethodDecl 0x7f9aa90950d8 <col:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct D2 &(struct D2 &&)' inline default noexcept-unevaluated 0x7f9aa90950d8
-| `-ParmVarDecl 0x7f9aa90951f0 <col:8> col:8 'struct D2 &&'
-|-CXXDestructorDecl 0x7f9aa9095278 <col:8> col:8 implicit ~D2 'void (void)' inline default trivial noexcept-unevaluated 0x7f9aa9095278
-|-CXXConstructorDecl 0x7f9aa909cbf0 <col:8> col:8 implicit used constexpr D2 'void (void) noexcept' inline default
+|-CXXRecordDecl 0x7fcc3c069a28 <col:1, col:8> col:8 implicit struct D2
+|-CXXMethodDecl 0x7fcc3c069b18 <col:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct D2 &(const struct D2 &)' inline default noexcept-unevaluated 0x7fcc3c069b18
+| `-ParmVarDecl 0x7fcc3d002c40 <col:8> col:8 'const struct D2 &'
+|-CXXMethodDecl 0x7fcc3d002cd8 <col:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct D2 &(struct D2 &&)' inline default noexcept-unevaluated 0x7fcc3d002cd8
+| `-ParmVarDecl 0x7fcc3d002df0 <col:8> col:8 'struct D2 &&'
+|-CXXDestructorDecl 0x7fcc3d002e78 <col:8> col:8 implicit ~D2 'void (void)' inline default trivial noexcept-unevaluated 0x7fcc3d002e78
+|-CXXConstructorDecl 0x7fcc3d00abf0 <col:8> col:8 implicit used constexpr D2 'void (void) noexcept' inline default
 | |-CXXCtorInitializer 'struct B2'
-| | `-CXXConstructExpr 0x7f9aa909f480 <col:8> 'struct B2' 'void (void) noexcept'
-| `-CompoundStmt 0x7f9aa909f4f0 <col:8>
-|-CXXConstructorDecl 0x7f9aa909d0f8 <col:8> col:8 implicit constexpr D2 'void (const struct D2 &)' inline default noexcept-unevaluated 0x7f9aa909d0f8
-| `-ParmVarDecl 0x7f9aa909d220 <col:8> col:8 'const struct D2 &'
-`-CXXConstructorDecl 0x7f9aa909d288 <col:8> col:8 implicit constexpr D2 'void (struct D2 &&)' inline default noexcept-unevaluated 0x7f9aa909d288
-  `-ParmVarDecl 0x7f9aa909f400 <col:8> col:8 'struct D2 &&'
+| | `-CXXConstructExpr 0x7fcc3d00d480 <col:8> 'struct B2' 'void (void) noexcept'
+| `-CompoundStmt 0x7fcc3d00d4f0 <col:8>
+|-CXXConstructorDecl 0x7fcc3d00b0f8 <col:8> col:8 implicit constexpr D2 'void (const struct D2 &)' inline default noexcept-unevaluated 0x7fcc3d00b0f8
+| `-ParmVarDecl 0x7fcc3d00b220 <col:8> col:8 'const struct D2 &'
+`-CXXConstructorDecl 0x7fcc3d00b288 <col:8> col:8 implicit constexpr D2 'void (struct D2 &&)' inline default noexcept-unevaluated 0x7fcc3d00b288
+  `-ParmVarDecl 0x7fcc3d00d400 <col:8> col:8 'struct D2 &&'
 
 Layout: <CGRecordLayout
   LLVMType:%struct.D2 = type { %struct.B2 }
@@ -159,21 +159,21 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f9aa9095358 <object_model_refined/4_functions/06_pointer_to_member_functions.cpp:16:1, line:18:1> line:16:8 referenced struct B3 definition
-|-CXXRecordDecl 0x7f9aa9095478 <col:1, col:8> col:8 implicit struct B3
-|-CXXMethodDecl 0x7f9aa9095558 <line:17:5, col:23> col:18 referenced m 'void (void)' virtual
-| `-CompoundStmt 0x7f9aa9095a78 <col:22, col:23>
-|-CXXMethodDecl 0x7f9aa9095648 <line:16:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct B3 &(const struct B3 &)' inline default noexcept-unevaluated 0x7f9aa9095648
-| `-ParmVarDecl 0x7f9aa9095760 <col:8> col:8 'const struct B3 &'
-|-CXXMethodDecl 0x7f9aa90957f8 <col:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct B3 &(struct B3 &&)' inline default noexcept-unevaluated 0x7f9aa90957f8
-| `-ParmVarDecl 0x7f9aa9095910 <col:8> col:8 'struct B3 &&'
-|-CXXDestructorDecl 0x7f9aa9095998 <col:8> col:8 implicit ~B3 'void (void)' inline default trivial noexcept-unevaluated 0x7f9aa9095998
-|-CXXConstructorDecl 0x7f9aa909fd48 <col:8> col:8 implicit used constexpr B3 'void (void) noexcept' inline default
-| `-CompoundStmt 0x7f9aa90a16b8 <col:8>
-|-CXXConstructorDecl 0x7f9aa909ff28 <col:8> col:8 implicit constexpr B3 'void (const struct B3 &)' inline default noexcept-unevaluated 0x7f9aa909ff28
-| `-ParmVarDecl 0x7f9aa90a0050 <col:8> col:8 'const struct B3 &'
-`-CXXConstructorDecl 0x7f9aa90a00b8 <col:8> col:8 implicit constexpr B3 'void (struct B3 &&)' inline default noexcept-unevaluated 0x7f9aa90a00b8
-  `-ParmVarDecl 0x7f9aa90a01e0 <col:8> col:8 'struct B3 &&'
+Record: CXXRecordDecl 0x7fcc3d002f58 </Users/tskull/Documents/Programming/Cpp/object_model_refined/4_functions/06_pointer_to_member_functions.cpp:16:1, line:18:1> line:16:8 referenced struct B3 definition
+|-CXXRecordDecl 0x7fcc3d003078 <col:1, col:8> col:8 implicit struct B3
+|-CXXMethodDecl 0x7fcc3d003158 <line:17:5, col:23> col:18 referenced m 'void (void)' virtual
+| `-CompoundStmt 0x7fcc3d003678 <col:22, col:23>
+|-CXXMethodDecl 0x7fcc3d003248 <line:16:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct B3 &(const struct B3 &)' inline default noexcept-unevaluated 0x7fcc3d003248
+| `-ParmVarDecl 0x7fcc3d003360 <col:8> col:8 'const struct B3 &'
+|-CXXMethodDecl 0x7fcc3d0033f8 <col:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct B3 &(struct B3 &&)' inline default noexcept-unevaluated 0x7fcc3d0033f8
+| `-ParmVarDecl 0x7fcc3d003510 <col:8> col:8 'struct B3 &&'
+|-CXXDestructorDecl 0x7fcc3d003598 <col:8> col:8 implicit ~B3 'void (void)' inline default trivial noexcept-unevaluated 0x7fcc3d003598
+|-CXXConstructorDecl 0x7fcc3d00dd48 <col:8> col:8 implicit used constexpr B3 'void (void) noexcept' inline default
+| `-CompoundStmt 0x7fcc3d00f6b8 <col:8>
+|-CXXConstructorDecl 0x7fcc3d00df28 <col:8> col:8 implicit constexpr B3 'void (const struct B3 &)' inline default noexcept-unevaluated 0x7fcc3d00df28
+| `-ParmVarDecl 0x7fcc3d00e050 <col:8> col:8 'const struct B3 &'
+`-CXXConstructorDecl 0x7fcc3d00e0b8 <col:8> col:8 implicit constexpr B3 'void (struct B3 &&)' inline default noexcept-unevaluated 0x7fcc3d00e0b8
+  `-ParmVarDecl 0x7fcc3d00e1e0 <col:8> col:8 'struct B3 &&'
 
 Layout: <CGRecordLayout
   LLVMType:%struct.B3 = type { i32 (...)** }
@@ -183,21 +183,21 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f9aa9095a90 <object_model_refined/4_functions/06_pointer_to_member_functions.cpp:20:1, line:22:1> line:20:8 referenced struct B4 definition
-|-CXXRecordDecl 0x7f9aa9095bb8 <col:1, col:8> col:8 implicit struct B4
-|-CXXMethodDecl 0x7f9aa9095c98 <line:21:5, col:23> col:18 referenced m 'void (void)' virtual
-| `-CompoundStmt 0x7f9aa90969e8 <col:22, col:23>
-|-CXXMethodDecl 0x7f9aa9095d88 <line:20:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct B4 &(const struct B4 &)' inline default noexcept-unevaluated 0x7f9aa9095d88
-| `-ParmVarDecl 0x7f9aa9095ea0 <col:8> col:8 'const struct B4 &'
-|-CXXMethodDecl 0x7f9aa9095f38 <col:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct B4 &(struct B4 &&)' inline default noexcept-unevaluated 0x7f9aa9095f38
-| `-ParmVarDecl 0x7f9aa9096880 <col:8> col:8 'struct B4 &&'
-|-CXXDestructorDecl 0x7f9aa9096908 <col:8> col:8 implicit ~B4 'void (void)' inline default trivial noexcept-unevaluated 0x7f9aa9096908
-|-CXXConstructorDecl 0x7f9aa909fe48 <col:8> col:8 implicit used constexpr B4 'void (void) noexcept' inline default
-| `-CompoundStmt 0x7f9aa90a1738 <col:8>
-|-CXXConstructorDecl 0x7f9aa90a0248 <col:8> col:8 implicit constexpr B4 'void (const struct B4 &)' inline default noexcept-unevaluated 0x7f9aa90a0248
-| `-ParmVarDecl 0x7f9aa90a0370 <col:8> col:8 'const struct B4 &'
-`-CXXConstructorDecl 0x7f9aa90a1200 <col:8> col:8 implicit constexpr B4 'void (struct B4 &&)' inline default noexcept-unevaluated 0x7f9aa90a1200
-  `-ParmVarDecl 0x7f9aa90a1330 <col:8> col:8 'struct B4 &&'
+Record: CXXRecordDecl 0x7fcc3d003690 </Users/tskull/Documents/Programming/Cpp/object_model_refined/4_functions/06_pointer_to_member_functions.cpp:20:1, line:22:1> line:20:8 referenced struct B4 definition
+|-CXXRecordDecl 0x7fcc3d0037b8 <col:1, col:8> col:8 implicit struct B4
+|-CXXMethodDecl 0x7fcc3d003898 <line:21:5, col:23> col:18 referenced m 'void (void)' virtual
+| `-CompoundStmt 0x7fcc3d0049e8 <col:22, col:23>
+|-CXXMethodDecl 0x7fcc3d003988 <line:20:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct B4 &(const struct B4 &)' inline default noexcept-unevaluated 0x7fcc3d003988
+| `-ParmVarDecl 0x7fcc3d003aa0 <col:8> col:8 'const struct B4 &'
+|-CXXMethodDecl 0x7fcc3d003b38 <col:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct B4 &(struct B4 &&)' inline default noexcept-unevaluated 0x7fcc3d003b38
+| `-ParmVarDecl 0x7fcc3d004880 <col:8> col:8 'struct B4 &&'
+|-CXXDestructorDecl 0x7fcc3d004908 <col:8> col:8 implicit ~B4 'void (void)' inline default trivial noexcept-unevaluated 0x7fcc3d004908
+|-CXXConstructorDecl 0x7fcc3d00de48 <col:8> col:8 implicit used constexpr B4 'void (void) noexcept' inline default
+| `-CompoundStmt 0x7fcc3d00f738 <col:8>
+|-CXXConstructorDecl 0x7fcc3d00e248 <col:8> col:8 implicit constexpr B4 'void (const struct B4 &)' inline default noexcept-unevaluated 0x7fcc3d00e248
+| `-ParmVarDecl 0x7fcc3d00e370 <col:8> col:8 'const struct B4 &'
+`-CXXConstructorDecl 0x7fcc3d00f200 <col:8> col:8 implicit constexpr B4 'void (struct B4 &&)' inline default noexcept-unevaluated 0x7fcc3d00f200
+  `-ParmVarDecl 0x7fcc3d00f330 <col:8> col:8 'struct B4 &&'
 
 Layout: <CGRecordLayout
   LLVMType:%struct.B4 = type { i32 (...)** }
@@ -207,25 +207,25 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f9aa9096a00 <object_model_refined/4_functions/06_pointer_to_member_functions.cpp:24:1, col:21> col:8 referenced struct D3 definition
+Record: CXXRecordDecl 0x7fcc3d004a00 </Users/tskull/Documents/Programming/Cpp/object_model_refined/4_functions/06_pointer_to_member_functions.cpp:24:1, col:21> col:8 referenced struct D3 definition
 |-public 'struct B3'
 |-public 'struct B4'
-|-CXXRecordDecl 0x7f9aa9096ba8 <col:1, col:8> col:8 implicit struct D3
-|-CXXMethodDecl 0x7f9aa9096c98 <col:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct D3 &(const struct D3 &)' inline default noexcept-unevaluated 0x7f9aa9096c98
-| `-ParmVarDecl 0x7f9aa9096db0 <col:8> col:8 'const struct D3 &'
-|-CXXMethodDecl 0x7f9aa9096e48 <col:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct D3 &(struct D3 &&)' inline default noexcept-unevaluated 0x7f9aa9096e48
-| `-ParmVarDecl 0x7f9aa9096f60 <col:8> col:8 'struct D3 &&'
-|-CXXDestructorDecl 0x7f9aa9096fe8 <col:8> col:8 implicit ~D3 'void (void)' inline default trivial noexcept-unevaluated 0x7f9aa9096fe8
-|-CXXConstructorDecl 0x7f9aa909fc40 <col:8> col:8 implicit used constexpr D3 'void (void) noexcept' inline default
+|-CXXRecordDecl 0x7fcc3d004ba8 <col:1, col:8> col:8 implicit struct D3
+|-CXXMethodDecl 0x7fcc3d004c98 <col:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct D3 &(const struct D3 &)' inline default noexcept-unevaluated 0x7fcc3d004c98
+| `-ParmVarDecl 0x7fcc3d004db0 <col:8> col:8 'const struct D3 &'
+|-CXXMethodDecl 0x7fcc3d004e48 <col:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct D3 &(struct D3 &&)' inline default noexcept-unevaluated 0x7fcc3d004e48
+| `-ParmVarDecl 0x7fcc3d004f60 <col:8> col:8 'struct D3 &&'
+|-CXXDestructorDecl 0x7fcc3d004fe8 <col:8> col:8 implicit ~D3 'void (void)' inline default trivial noexcept-unevaluated 0x7fcc3d004fe8
+|-CXXConstructorDecl 0x7fcc3d00dc40 <col:8> col:8 implicit used constexpr D3 'void (void) noexcept' inline default
 | |-CXXCtorInitializer 'struct B3'
-| | `-CXXConstructExpr 0x7f9aa90a16d0 <col:8> 'struct B3' 'void (void) noexcept'
+| | `-CXXConstructExpr 0x7fcc3d00f6d0 <col:8> 'struct B3' 'void (void) noexcept'
 | |-CXXCtorInitializer 'struct B4'
-| | `-CXXConstructExpr 0x7f9aa90a1750 <col:8> 'struct B4' 'void (void) noexcept'
-| `-CompoundStmt 0x7f9aa90a17c8 <col:8>
-|-CXXConstructorDecl 0x7f9aa90a1398 <col:8> col:8 implicit constexpr D3 'void (const struct D3 &)' inline default noexcept-unevaluated 0x7f9aa90a1398
-| `-ParmVarDecl 0x7f9aa90a14c0 <col:8> col:8 'const struct D3 &'
-`-CXXConstructorDecl 0x7f9aa90a1528 <col:8> col:8 implicit constexpr D3 'void (struct D3 &&)' inline default noexcept-unevaluated 0x7f9aa90a1528
-  `-ParmVarDecl 0x7f9aa90a1650 <col:8> col:8 'struct D3 &&'
+| | `-CXXConstructExpr 0x7fcc3d00f750 <col:8> 'struct B4' 'void (void) noexcept'
+| `-CompoundStmt 0x7fcc3d00f7c8 <col:8>
+|-CXXConstructorDecl 0x7fcc3d00f398 <col:8> col:8 implicit constexpr D3 'void (const struct D3 &)' inline default noexcept-unevaluated 0x7fcc3d00f398
+| `-ParmVarDecl 0x7fcc3d00f4c0 <col:8> col:8 'const struct D3 &'
+`-CXXConstructorDecl 0x7fcc3d00f528 <col:8> col:8 implicit constexpr D3 'void (struct D3 &&)' inline default noexcept-unevaluated 0x7fcc3d00f528
+  `-ParmVarDecl 0x7fcc3d00f650 <col:8> col:8 'struct D3 &&'
 
 Layout: <CGRecordLayout
   LLVMType:%struct.D3 = type { %struct.B3, %struct.B4 }
@@ -235,21 +235,21 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f9aa90970c8 <object_model_refined/4_functions/06_pointer_to_member_functions.cpp:27:1, line:29:1> line:27:8 referenced struct B5 definition
-|-CXXRecordDecl 0x7f9aa90971e8 <col:1, col:8> col:8 implicit struct B5
-|-CXXMethodDecl 0x7f9aa90972c8 <line:28:5, col:23> col:18 referenced m 'void (void)' virtual
-| `-CompoundStmt 0x7f9aa90977e8 <col:22, col:23>
-|-CXXMethodDecl 0x7f9aa90973b8 <line:27:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct B5 &(const struct B5 &)' inline default noexcept-unevaluated 0x7f9aa90973b8
-| `-ParmVarDecl 0x7f9aa90974d0 <col:8> col:8 'const struct B5 &'
-|-CXXMethodDecl 0x7f9aa9097568 <col:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct B5 &(struct B5 &&)' inline default noexcept-unevaluated 0x7f9aa9097568
-| `-ParmVarDecl 0x7f9aa9097680 <col:8> col:8 'struct B5 &&'
-|-CXXDestructorDecl 0x7f9aa9097708 <col:8> col:8 implicit ~B5 'void (void)' inline default trivial noexcept-unevaluated 0x7f9aa9097708
-|-CXXConstructorDecl 0x7f9aa90a20d8 <col:8> col:8 implicit used constexpr B5 'void (void) noexcept' inline default
-| `-CompoundStmt 0x7f9aa90a3368 <col:8>
-|-CXXConstructorDecl 0x7f9aa90a2a08 <col:8> col:8 implicit constexpr B5 'void (const struct B5 &)' inline default noexcept-unevaluated 0x7f9aa90a2a08
-| `-ParmVarDecl 0x7f9aa90a2b30 <col:8> col:8 'const struct B5 &'
-`-CXXConstructorDecl 0x7f9aa90a2b98 <col:8> col:8 implicit constexpr B5 'void (struct B5 &&)' inline default noexcept-unevaluated 0x7f9aa90a2b98
-  `-ParmVarDecl 0x7f9aa90a2cc0 <col:8> col:8 'struct B5 &&'
+Record: CXXRecordDecl 0x7fcc3d0050c8 </Users/tskull/Documents/Programming/Cpp/object_model_refined/4_functions/06_pointer_to_member_functions.cpp:27:1, line:29:1> line:27:8 referenced struct B5 definition
+|-CXXRecordDecl 0x7fcc3d0051e8 <col:1, col:8> col:8 implicit struct B5
+|-CXXMethodDecl 0x7fcc3d0052c8 <line:28:5, col:23> col:18 referenced m 'void (void)' virtual
+| `-CompoundStmt 0x7fcc3d0057e8 <col:22, col:23>
+|-CXXMethodDecl 0x7fcc3d0053b8 <line:27:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct B5 &(const struct B5 &)' inline default noexcept-unevaluated 0x7fcc3d0053b8
+| `-ParmVarDecl 0x7fcc3d0054d0 <col:8> col:8 'const struct B5 &'
+|-CXXMethodDecl 0x7fcc3d005568 <col:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct B5 &(struct B5 &&)' inline default noexcept-unevaluated 0x7fcc3d005568
+| `-ParmVarDecl 0x7fcc3d005680 <col:8> col:8 'struct B5 &&'
+|-CXXDestructorDecl 0x7fcc3d005708 <col:8> col:8 implicit ~B5 'void (void)' inline default trivial noexcept-unevaluated 0x7fcc3d005708
+|-CXXConstructorDecl 0x7fcc3d0100d8 <col:8> col:8 implicit used constexpr B5 'void (void) noexcept' inline default
+| `-CompoundStmt 0x7fcc3d011368 <col:8>
+|-CXXConstructorDecl 0x7fcc3d010a08 <col:8> col:8 implicit constexpr B5 'void (const struct B5 &)' inline default noexcept-unevaluated 0x7fcc3d010a08
+| `-ParmVarDecl 0x7fcc3d010b30 <col:8> col:8 'const struct B5 &'
+`-CXXConstructorDecl 0x7fcc3d010b98 <col:8> col:8 implicit constexpr B5 'void (struct B5 &&)' inline default noexcept-unevaluated 0x7fcc3d010b98
+  `-ParmVarDecl 0x7fcc3d010cc0 <col:8> col:8 'struct B5 &&'
 
 Layout: <CGRecordLayout
   LLVMType:%struct.B5 = type { i32 (...)** }
@@ -259,22 +259,22 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f9aa9098400 <object_model_refined/4_functions/06_pointer_to_member_functions.cpp:31:1, col:30> col:7 referenced class X definition
+Record: CXXRecordDecl 0x7fcc3d006400 </Users/tskull/Documents/Programming/Cpp/object_model_refined/4_functions/06_pointer_to_member_functions.cpp:31:1, col:30> col:7 referenced class X definition
 |-virtual public 'struct B5'
-|-CXXRecordDecl 0x7f9aa9098580 <col:1, col:7> col:7 implicit class X
-|-CXXMethodDecl 0x7f9aa9098678 <col:7, <invalid sloc>> col:7 implicit operator= 'class X &(const class X &)' inline default noexcept-unevaluated 0x7f9aa9098678
-| `-ParmVarDecl 0x7f9aa9098790 <col:7> col:7 'const class X &'
-|-CXXMethodDecl 0x7f9aa9098828 <col:7, <invalid sloc>> col:7 implicit operator= 'class X &(class X &&)' inline default noexcept-unevaluated 0x7f9aa9098828
-| `-ParmVarDecl 0x7f9aa9098940 <col:7> col:7 'class X &&'
-|-CXXDestructorDecl 0x7f9aa90989c8 <col:7> col:7 implicit ~X 'void (void)' inline default trivial noexcept-unevaluated 0x7f9aa90989c8
-|-CXXConstructorDecl 0x7f9aa90a1fd8 <col:7> col:7 implicit used X 'void (void) noexcept' inline default
+|-CXXRecordDecl 0x7fcc3d006580 <col:1, col:7> col:7 implicit class X
+|-CXXMethodDecl 0x7fcc3d006678 <col:7, <invalid sloc>> col:7 implicit operator= 'class X &(const class X &)' inline default noexcept-unevaluated 0x7fcc3d006678
+| `-ParmVarDecl 0x7fcc3d006790 <col:7> col:7 'const class X &'
+|-CXXMethodDecl 0x7fcc3d006828 <col:7, <invalid sloc>> col:7 implicit operator= 'class X &(class X &&)' inline default noexcept-unevaluated 0x7fcc3d006828
+| `-ParmVarDecl 0x7fcc3d006940 <col:7> col:7 'class X &&'
+|-CXXDestructorDecl 0x7fcc3d0069c8 <col:7> col:7 implicit ~X 'void (void)' inline default trivial noexcept-unevaluated 0x7fcc3d0069c8
+|-CXXConstructorDecl 0x7fcc3d00ffd8 <col:7> col:7 implicit used X 'void (void) noexcept' inline default
 | |-CXXCtorInitializer 'struct B5'
-| | `-CXXConstructExpr 0x7f9aa90a33e8 <col:7> 'struct B5' 'void (void) noexcept'
-| `-CompoundStmt 0x7f9aa90a3458 <col:7>
-|-CXXConstructorDecl 0x7f9aa90a2878 <col:7> col:7 implicit X 'void (const class X &)' inline default noexcept-unevaluated 0x7f9aa90a2878
-| `-ParmVarDecl 0x7f9aa90a29a0 <col:7> col:7 'const class X &'
-`-CXXConstructorDecl 0x7f9aa90a2d28 <col:7> col:7 implicit X 'void (class X &&)' inline default noexcept-unevaluated 0x7f9aa90a2d28
-  `-ParmVarDecl 0x7f9aa90a2e50 <col:7> col:7 'class X &&'
+| | `-CXXConstructExpr 0x7fcc3d0113e8 <col:7> 'struct B5' 'void (void) noexcept'
+| `-CompoundStmt 0x7fcc3d011458 <col:7>
+|-CXXConstructorDecl 0x7fcc3d010878 <col:7> col:7 implicit X 'void (const class X &)' inline default noexcept-unevaluated 0x7fcc3d010878
+| `-ParmVarDecl 0x7fcc3d0109a0 <col:7> col:7 'const class X &'
+`-CXXConstructorDecl 0x7fcc3d010d28 <col:7> col:7 implicit X 'void (class X &&)' inline default noexcept-unevaluated 0x7fcc3d010d28
+  `-ParmVarDecl 0x7fcc3d010e50 <col:7> col:7 'class X &&'
 
 Layout: <CGRecordLayout
   LLVMType:%class.X = type { %struct.B5 }
@@ -284,22 +284,22 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f9aa9098aa8 <object_model_refined/4_functions/06_pointer_to_member_functions.cpp:33:1, col:30> col:7 referenced class Y definition
+Record: CXXRecordDecl 0x7fcc3d006aa8 </Users/tskull/Documents/Programming/Cpp/object_model_refined/4_functions/06_pointer_to_member_functions.cpp:33:1, col:30> col:7 referenced class Y definition
 |-virtual public 'struct B5'
-|-CXXRecordDecl 0x7f9aa9098c20 <col:1, col:7> col:7 implicit class Y
-|-CXXMethodDecl 0x7f9aa9098d18 <col:7, <invalid sloc>> col:7 implicit operator= 'class Y &(const class Y &)' inline default noexcept-unevaluated 0x7f9aa9098d18
-| `-ParmVarDecl 0x7f9aa9098e30 <col:7> col:7 'const class Y &'
-|-CXXMethodDecl 0x7f9aa9098ec8 <col:7, <invalid sloc>> col:7 implicit operator= 'class Y &(class Y &&)' inline default noexcept-unevaluated 0x7f9aa9098ec8
-| `-ParmVarDecl 0x7f9aa9098fe0 <col:7> col:7 'class Y &&'
-|-CXXDestructorDecl 0x7f9aa9099068 <col:7> col:7 implicit ~Y 'void (void)' inline default trivial noexcept-unevaluated 0x7f9aa9099068
-|-CXXConstructorDecl 0x7f9aa90a2600 <col:7> col:7 implicit used Y 'void (void) noexcept' inline default
+|-CXXRecordDecl 0x7fcc3d006c20 <col:1, col:7> col:7 implicit class Y
+|-CXXMethodDecl 0x7fcc3d006d18 <col:7, <invalid sloc>> col:7 implicit operator= 'class Y &(const class Y &)' inline default noexcept-unevaluated 0x7fcc3d006d18
+| `-ParmVarDecl 0x7fcc3d006e30 <col:7> col:7 'const class Y &'
+|-CXXMethodDecl 0x7fcc3d006ec8 <col:7, <invalid sloc>> col:7 implicit operator= 'class Y &(class Y &&)' inline default noexcept-unevaluated 0x7fcc3d006ec8
+| `-ParmVarDecl 0x7fcc3d006fe0 <col:7> col:7 'class Y &&'
+|-CXXDestructorDecl 0x7fcc3d007068 <col:7> col:7 implicit ~Y 'void (void)' inline default trivial noexcept-unevaluated 0x7fcc3d007068
+|-CXXConstructorDecl 0x7fcc3d010600 <col:7> col:7 implicit used Y 'void (void) noexcept' inline default
 | |-CXXCtorInitializer 'struct B5'
-| | `-CXXConstructExpr 0x7f9aa90a34d8 <col:7> 'struct B5' 'void (void) noexcept'
-| `-CompoundStmt 0x7f9aa90a3548 <col:7>
-|-CXXConstructorDecl 0x7f9aa90a2eb8 <col:7> col:7 implicit Y 'void (const class Y &)' inline default noexcept-unevaluated 0x7f9aa90a2eb8
-| `-ParmVarDecl 0x7f9aa90a2fe0 <col:7> col:7 'const class Y &'
-`-CXXConstructorDecl 0x7f9aa90a3048 <col:7> col:7 implicit Y 'void (class Y &&)' inline default noexcept-unevaluated 0x7f9aa90a3048
-  `-ParmVarDecl 0x7f9aa90a3170 <col:7> col:7 'class Y &&'
+| | `-CXXConstructExpr 0x7fcc3d0114d8 <col:7> 'struct B5' 'void (void) noexcept'
+| `-CompoundStmt 0x7fcc3d011548 <col:7>
+|-CXXConstructorDecl 0x7fcc3d010eb8 <col:7> col:7 implicit Y 'void (const class Y &)' inline default noexcept-unevaluated 0x7fcc3d010eb8
+| `-ParmVarDecl 0x7fcc3d010fe0 <col:7> col:7 'const class Y &'
+`-CXXConstructorDecl 0x7fcc3d011048 <col:7> col:7 implicit Y 'void (class Y &&)' inline default noexcept-unevaluated 0x7fcc3d011048
+  `-ParmVarDecl 0x7fcc3d011170 <col:7> col:7 'class Y &&'
 
 Layout: <CGRecordLayout
   LLVMType:%class.Y = type { %struct.B5 }
@@ -309,27 +309,27 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f9aa9099148 <object_model_refined/4_functions/06_pointer_to_member_functions.cpp:35:1, col:19> col:8 referenced struct D4 definition
+Record: CXXRecordDecl 0x7fcc3d007148 </Users/tskull/Documents/Programming/Cpp/object_model_refined/4_functions/06_pointer_to_member_functions.cpp:35:1, col:19> col:8 referenced struct D4 definition
 |-public 'class X'
 |-public 'class Y'
-|-CXXRecordDecl 0x7f9aa9099300 <col:1, col:8> col:8 implicit struct D4
-|-CXXMethodDecl 0x7f9aa909a800 <col:8, <invalid sloc>> col:8 implicit operator= 'struct D4 &(const struct D4 &)' inline default noexcept-unevaluated 0x7f9aa909a800
-| `-ParmVarDecl 0x7f9aa909a920 <col:8> col:8 'const struct D4 &'
-|-CXXMethodDecl 0x7f9aa909a9b8 <col:8, <invalid sloc>> col:8 implicit operator= 'struct D4 &(struct D4 &&)' inline default noexcept-unevaluated 0x7f9aa909a9b8
-| `-ParmVarDecl 0x7f9aa909aad0 <col:8> col:8 'struct D4 &&'
-|-CXXDestructorDecl 0x7f9aa909ab58 <col:8> col:8 implicit ~D4 'void (void)' inline default trivial noexcept-unevaluated 0x7f9aa909ab58
-|-CXXConstructorDecl 0x7f9aa90a1ed0 <col:8> col:8 implicit used D4 'void (void) noexcept' inline default
+|-CXXRecordDecl 0x7fcc3d007300 <col:1, col:8> col:8 implicit struct D4
+|-CXXMethodDecl 0x7fcc3d008800 <col:8, <invalid sloc>> col:8 implicit operator= 'struct D4 &(const struct D4 &)' inline default noexcept-unevaluated 0x7fcc3d008800
+| `-ParmVarDecl 0x7fcc3d008920 <col:8> col:8 'const struct D4 &'
+|-CXXMethodDecl 0x7fcc3d0089b8 <col:8, <invalid sloc>> col:8 implicit operator= 'struct D4 &(struct D4 &&)' inline default noexcept-unevaluated 0x7fcc3d0089b8
+| `-ParmVarDecl 0x7fcc3d008ad0 <col:8> col:8 'struct D4 &&'
+|-CXXDestructorDecl 0x7fcc3d008b58 <col:8> col:8 implicit ~D4 'void (void)' inline default trivial noexcept-unevaluated 0x7fcc3d008b58
+|-CXXConstructorDecl 0x7fcc3d00fed0 <col:8> col:8 implicit used D4 'void (void) noexcept' inline default
 | |-CXXCtorInitializer 'struct B5'
-| | `-CXXConstructExpr 0x7f9aa90a3380 <col:8> 'struct B5' 'void (void) noexcept'
+| | `-CXXConstructExpr 0x7fcc3d011380 <col:8> 'struct B5' 'void (void) noexcept'
 | |-CXXCtorInitializer 'class X'
-| | `-CXXConstructExpr 0x7f9aa90a3470 <col:8> 'class X' 'void (void) noexcept'
+| | `-CXXConstructExpr 0x7fcc3d011470 <col:8> 'class X' 'void (void) noexcept'
 | |-CXXCtorInitializer 'class Y'
-| | `-CXXConstructExpr 0x7f9aa90a3560 <col:8> 'class Y' 'void (void) noexcept'
-| `-CompoundStmt 0x7f9aa90a35e0 <col:8>
-|-CXXConstructorDecl 0x7f9aa90a26e8 <col:8> col:8 implicit D4 'void (const struct D4 &)' inline default noexcept-unevaluated 0x7f9aa90a26e8
-| `-ParmVarDecl 0x7f9aa90a2810 <col:8> col:8 'const struct D4 &'
-`-CXXConstructorDecl 0x7f9aa90a31d8 <col:8> col:8 implicit D4 'void (struct D4 &&)' inline default noexcept-unevaluated 0x7f9aa90a31d8
-  `-ParmVarDecl 0x7f9aa90a3300 <col:8> col:8 'struct D4 &&'
+| | `-CXXConstructExpr 0x7fcc3d011560 <col:8> 'class Y' 'void (void) noexcept'
+| `-CompoundStmt 0x7fcc3d0115e0 <col:8>
+|-CXXConstructorDecl 0x7fcc3d0106e8 <col:8> col:8 implicit D4 'void (const struct D4 &)' inline default noexcept-unevaluated 0x7fcc3d0106e8
+| `-ParmVarDecl 0x7fcc3d010810 <col:8> col:8 'const struct D4 &'
+`-CXXConstructorDecl 0x7fcc3d0111d8 <col:8> col:8 implicit D4 'void (struct D4 &&)' inline default noexcept-unevaluated 0x7fcc3d0111d8
+  `-ParmVarDecl 0x7fcc3d011300 <col:8> col:8 'struct D4 &&'
 
 Layout: <CGRecordLayout
   LLVMType:%struct.D4 = type { %class.X, %class.Y }

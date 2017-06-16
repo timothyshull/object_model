@@ -3,8 +3,12 @@ project(object_model)
 add_compile_options(${NO_OPT})
 
 add_executable(01_templates 01_templates.cpp)
+
 add_executable(02_exceptions 02_exceptions.cpp)
+target_compile_definitions(02_exceptions PUBLIC USE_EXCEPTIONS=1)
+
 add_executable(02_exceptions_no_except 02_exceptions.cpp)
+
 add_executable(03_runtime_type_identification 03_runtime_type_identification.cpp)
 add_executable(04_a_type_safe_dynamic_cast 04_a_type_safe_dynamic_cast.cpp)
 add_executable(05_references_are_not_pointers 05_references_are_not_pointers.cpp)

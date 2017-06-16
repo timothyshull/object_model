@@ -1,70 +1,70 @@
-TranslationUnitDecl 0x7ff91d0324d0 <<invalid sloc>> <invalid sloc>
-|-TypedefDecl 0x7ff91d032a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
-| `-BuiltinType 0x7ff91d032740 '__int128'
-|-TypedefDecl 0x7ff91d032ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
-| `-BuiltinType 0x7ff91d032760 'unsigned __int128'
-|-TypedefDecl 0x7ff91d032e18 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
-| `-RecordType 0x7ff91d032bc0 'struct __NSConstantString_tag'
-|   `-CXXRecord 0x7ff91d032b28 '__NSConstantString_tag'
-|-TypedefDecl 0x7ff91d032eb0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
-| `-PointerType 0x7ff91d032e70 'char *'
-|   `-BuiltinType 0x7ff91d032560 'char'
-|-TypedefDecl 0x7ff91d065600 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
-| `-ConstantArrayType 0x7ff91d033190 'struct __va_list_tag [1]' 1 
-|   `-RecordType 0x7ff91d032fa0 'struct __va_list_tag'
-|     `-CXXRecord 0x7ff91d032f08 '__va_list_tag'
-|-CXXRecordDecl 0x7ff91d065658 <object_model_refined/4_functions/03_static_member_functions.cpp:1:1, line:15:1> line:1:7 referenced class P3 definition
-| |-CXXRecordDecl 0x7ff91d065778 <col:1, col:7> col:7 implicit referenced class P3
-| |-AccessSpecDecl 0x7ff91d065810 <line:2:1, col:7> col:1 public
-| |-CXXConstructorDecl 0x7ff91d0658e0 <line:3:5, line:6:5> line:3:5 used P3 'void (void)'
-| | |-CXXCtorInitializer Field 0x7ff91d065ac0 '_x' 'float'
-| | | `-InitListExpr 0x7ff91d065cc8 <col:14, col:18> 'float'
-| | |   `-ImplicitCastExpr 0x7ff91d065d08 <col:15> 'float' <FloatingCast>
-| | |     `-FloatingLiteral 0x7ff91d065c60 <col:15> 'double' 0.000000e+00
-| | |-CXXCtorInitializer Field 0x7ff91d065b20 '_y' 'float'
-| | | `-InitListExpr 0x7ff91d065db8 <col:23, col:27> 'float'
-| | |   `-ImplicitCastExpr 0x7ff91d065df8 <col:24> 'float' <FloatingCast>
-| | |     `-FloatingLiteral 0x7ff91d065d50 <col:24> 'double' 0.000000e+00
-| | |-CXXCtorInitializer Field 0x7ff91d065b80 '_z' 'float'
-| | | `-InitListExpr 0x7ff91d065ea8 <col:32, col:36> 'float'
-| | |   `-ImplicitCastExpr 0x7ff91d065ee8 <col:33> 'float' <FloatingCast>
-| | |     `-FloatingLiteral 0x7ff91d065e40 <col:33> 'double' 0.000000e+00
-| | `-CompoundStmt 0x7ff91d065f90 <line:4:5, line:6:5>
-| |   `-UnaryOperator 0x7ff91d065f70 <line:5:9, col:11> 'unsigned long' lvalue prefix '++'
-| |     `-DeclRefExpr 0x7ff91d065f48 <col:11> 'unsigned long' lvalue Var 0x7ff91d065be0 '_object_count' 'unsigned long'
-| |-CXXMethodDecl 0x7ff91d0659e8 <line:8:5, col:39> col:26 used object_count 'unsigned long (void)' static
-| |-AccessSpecDecl 0x7ff91d065a80 <line:10:1, col:8> col:1 private
-| |-FieldDecl 0x7ff91d065ac0 <line:11:5, col:11> col:11 _x 'float'
-| |-FieldDecl 0x7ff91d065b20 <line:12:5, col:11> col:11 _y 'float'
-| |-FieldDecl 0x7ff91d065b80 <line:13:5, col:11> col:11 _z 'float'
-| |-VarDecl 0x7ff91d065be0 <line:14:5, col:26> col:26 used _object_count 'unsigned long' static
-| |-CXXConstructorDecl 0x7ff91d066488 <line:1:7> col:7 implicit constexpr P3 'void (const class P3 &)' inline default trivial noexcept-unevaluated 0x7ff91d066488
-| | `-ParmVarDecl 0x7ff91d090a00 <col:7> col:7 'const class P3 &'
-| `-CXXConstructorDecl 0x7ff91d090a98 <col:7> col:7 implicit constexpr P3 'void (class P3 &&)' inline default trivial noexcept-unevaluated 0x7ff91d090a98
-|   `-ParmVarDecl 0x7ff91d090bc0 <col:7> col:7 'class P3 &&'
-|-VarDecl 0x7ff91d065fe8 parent 0x7ff91d065658 prev 0x7ff91d065be0 <line:17:1, col:35> col:19 used _object_count 'unsigned long' cinit
-| `-ImplicitCastExpr 0x7ff91d0660b0 <col:35> 'unsigned long' <IntegralCast>
-|   `-IntegerLiteral 0x7ff91d066090 <col:35> 'int' 0
-|-CXXMethodDecl 0x7ff91d0660f8 parent 0x7ff91d065658 prev 0x7ff91d0659e8 <line:19:1, line:22:1> line:19:19 used object_count 'unsigned long (void)'
-| `-CompoundStmt 0x7ff91d066230 <line:20:1, line:22:1>
-|   `-ReturnStmt 0x7ff91d066218 <line:21:5, col:12>
-|     `-ImplicitCastExpr 0x7ff91d066200 <col:12> 'unsigned long' <LValueToRValue>
-|       `-DeclRefExpr 0x7ff91d0661d8 <col:12> 'unsigned long' lvalue Var 0x7ff91d065fe8 '_object_count' 'unsigned long'
-`-FunctionDecl 0x7ff91d0662a8 <line:24:1, line:32:1> line:24:5 main 'int (void)'
-  `-CompoundStmt 0x7ff91d091138 <line:25:1, line:32:1>
-    |-DeclStmt 0x7ff91d090c58 <line:26:5, col:14>
-    | `-VarDecl 0x7ff91d0663b8 <col:5, col:13> col:8 p3_1 'class P3' listinit
-    |   `-CXXConstructExpr 0x7ff91d090c28 <col:8, col:13> 'class P3' 'void (void)'
-    |-DeclStmt 0x7ff91d090d50 <line:27:5, col:14>
-    | `-VarDecl 0x7ff91d090c80 <col:5, col:13> col:8 p3_2 'class P3' listinit
-    |   `-CXXConstructExpr 0x7ff91d090d20 <col:8, col:13> 'class P3' 'void (void)'
-    |-DeclStmt 0x7ff91d090e48 <line:28:5, col:14>
-    | `-VarDecl 0x7ff91d090d78 <col:5, col:13> col:8 p3_3 'class P3' listinit
-    |   `-CXXConstructExpr 0x7ff91d090e18 <col:8, col:13> 'class P3' 'void (void)'
-    |-DeclStmt 0x7ff91d0910e8 <line:30:5, col:39>
-    | `-VarDecl 0x7ff91d090e90 <col:5, col:38> col:16 oc 'const unsigned long':'const unsigned long' cinit
-    |   `-CallExpr 0x7ff91d090fa0 <col:21, col:38> 'unsigned long'
-    |     `-ImplicitCastExpr 0x7ff91d090f88 <col:21, col:25> 'unsigned long (*)(void)' <FunctionToPointerDecay>
-    |       `-DeclRefExpr 0x7ff91d090f28 <col:21, col:25> 'unsigned long (void)' lvalue CXXMethod 0x7ff91d0660f8 'object_count' 'unsigned long (void)'
-    `-ReturnStmt 0x7ff91d091120 <line:31:5, col:12>
-      `-IntegerLiteral 0x7ff91d091100 <col:12> 'int' 0
+TranslationUnitDecl 0x7f988e8324d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f988e832a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f988e832740 '__int128'
+|-TypedefDecl 0x7f988e832ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f988e832760 'unsigned __int128'
+|-TypedefDecl 0x7f988e832e18 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f988e832bc0 'struct __NSConstantString_tag'
+|   `-CXXRecord 0x7f988e832b28 '__NSConstantString_tag'
+|-TypedefDecl 0x7f988e832eb0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f988e832e70 'char *'
+|   `-BuiltinType 0x7f988e832560 'char'
+|-TypedefDecl 0x7f988e865600 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f988e833190 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f988e832fa0 'struct __va_list_tag'
+|     `-CXXRecord 0x7f988e832f08 '__va_list_tag'
+|-CXXRecordDecl 0x7f988e865658 </Users/tskull/Documents/Programming/Cpp/object_model_refined/4_functions/03_static_member_functions.cpp:1:1, line:15:1> line:1:7 referenced class P3 definition
+| |-CXXRecordDecl 0x7f988e865778 <col:1, col:7> col:7 implicit referenced class P3
+| |-AccessSpecDecl 0x7f988e865810 <line:2:1, col:7> col:1 public
+| |-CXXConstructorDecl 0x7f988e8658e0 <line:3:5, line:6:5> line:3:5 used P3 'void (void)'
+| | |-CXXCtorInitializer Field 0x7f988e865ac0 '_x' 'float'
+| | | `-InitListExpr 0x7f988e865cc8 <col:14, col:18> 'float'
+| | |   `-ImplicitCastExpr 0x7f988e865d08 <col:15> 'float' <FloatingCast>
+| | |     `-FloatingLiteral 0x7f988e865c60 <col:15> 'double' 0.000000e+00
+| | |-CXXCtorInitializer Field 0x7f988e865b20 '_y' 'float'
+| | | `-InitListExpr 0x7f988e865db8 <col:23, col:27> 'float'
+| | |   `-ImplicitCastExpr 0x7f988e865df8 <col:24> 'float' <FloatingCast>
+| | |     `-FloatingLiteral 0x7f988e865d50 <col:24> 'double' 0.000000e+00
+| | |-CXXCtorInitializer Field 0x7f988e865b80 '_z' 'float'
+| | | `-InitListExpr 0x7f988e865ea8 <col:32, col:36> 'float'
+| | |   `-ImplicitCastExpr 0x7f988e865ee8 <col:33> 'float' <FloatingCast>
+| | |     `-FloatingLiteral 0x7f988e865e40 <col:33> 'double' 0.000000e+00
+| | `-CompoundStmt 0x7f988e865f90 <line:4:5, line:6:5>
+| |   `-UnaryOperator 0x7f988e865f70 <line:5:9, col:11> 'unsigned long' lvalue prefix '++'
+| |     `-DeclRefExpr 0x7f988e865f48 <col:11> 'unsigned long' lvalue Var 0x7f988e865be0 '_object_count' 'unsigned long'
+| |-CXXMethodDecl 0x7f988e8659e8 <line:8:5, col:39> col:26 used object_count 'unsigned long (void)' static
+| |-AccessSpecDecl 0x7f988e865a80 <line:10:1, col:8> col:1 private
+| |-FieldDecl 0x7f988e865ac0 <line:11:5, col:11> col:11 _x 'float'
+| |-FieldDecl 0x7f988e865b20 <line:12:5, col:11> col:11 _y 'float'
+| |-FieldDecl 0x7f988e865b80 <line:13:5, col:11> col:11 _z 'float'
+| |-VarDecl 0x7f988e865be0 <line:14:5, col:26> col:26 used _object_count 'unsigned long' static
+| |-CXXConstructorDecl 0x7f988e866488 <line:1:7> col:7 implicit constexpr P3 'void (const class P3 &)' inline default trivial noexcept-unevaluated 0x7f988e866488
+| | `-ParmVarDecl 0x7f988e890a00 <col:7> col:7 'const class P3 &'
+| `-CXXConstructorDecl 0x7f988e890a98 <col:7> col:7 implicit constexpr P3 'void (class P3 &&)' inline default trivial noexcept-unevaluated 0x7f988e890a98
+|   `-ParmVarDecl 0x7f988e890bc0 <col:7> col:7 'class P3 &&'
+|-VarDecl 0x7f988e865fe8 parent 0x7f988e865658 prev 0x7f988e865be0 <line:17:1, col:35> col:19 used _object_count 'unsigned long' cinit
+| `-ImplicitCastExpr 0x7f988e8660b0 <col:35> 'unsigned long' <IntegralCast>
+|   `-IntegerLiteral 0x7f988e866090 <col:35> 'int' 0
+|-CXXMethodDecl 0x7f988e8660f8 parent 0x7f988e865658 prev 0x7f988e8659e8 <line:19:1, line:22:1> line:19:19 used object_count 'unsigned long (void)'
+| `-CompoundStmt 0x7f988e866230 <line:20:1, line:22:1>
+|   `-ReturnStmt 0x7f988e866218 <line:21:5, col:12>
+|     `-ImplicitCastExpr 0x7f988e866200 <col:12> 'unsigned long' <LValueToRValue>
+|       `-DeclRefExpr 0x7f988e8661d8 <col:12> 'unsigned long' lvalue Var 0x7f988e865fe8 '_object_count' 'unsigned long'
+`-FunctionDecl 0x7f988e8662a8 <line:24:1, line:32:1> line:24:5 main 'int (void)'
+  `-CompoundStmt 0x7f988e891138 <line:25:1, line:32:1>
+    |-DeclStmt 0x7f988e890c58 <line:26:5, col:14>
+    | `-VarDecl 0x7f988e8663b8 <col:5, col:13> col:8 p3_1 'class P3' listinit
+    |   `-CXXConstructExpr 0x7f988e890c28 <col:8, col:13> 'class P3' 'void (void)'
+    |-DeclStmt 0x7f988e890d50 <line:27:5, col:14>
+    | `-VarDecl 0x7f988e890c80 <col:5, col:13> col:8 p3_2 'class P3' listinit
+    |   `-CXXConstructExpr 0x7f988e890d20 <col:8, col:13> 'class P3' 'void (void)'
+    |-DeclStmt 0x7f988e890e48 <line:28:5, col:14>
+    | `-VarDecl 0x7f988e890d78 <col:5, col:13> col:8 p3_3 'class P3' listinit
+    |   `-CXXConstructExpr 0x7f988e890e18 <col:8, col:13> 'class P3' 'void (void)'
+    |-DeclStmt 0x7f988e8910e8 <line:30:5, col:39>
+    | `-VarDecl 0x7f988e890e90 <col:5, col:38> col:16 oc 'const unsigned long':'const unsigned long' cinit
+    |   `-CallExpr 0x7f988e890fa0 <col:21, col:38> 'unsigned long'
+    |     `-ImplicitCastExpr 0x7f988e890f88 <col:21, col:25> 'unsigned long (*)(void)' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x7f988e890f28 <col:21, col:25> 'unsigned long (void)' lvalue CXXMethod 0x7f988e8660f8 'object_count' 'unsigned long (void)'
+    `-ReturnStmt 0x7f988e891120 <line:31:5, col:12>
+      `-IntegerLiteral 0x7f988e891100 <col:12> 'int' 0

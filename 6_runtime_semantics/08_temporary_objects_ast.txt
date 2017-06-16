@@ -1,169 +1,169 @@
-TranslationUnitDecl 0x7fc3e98324d0 <<invalid sloc>> <invalid sloc>
-|-TypedefDecl 0x7fc3e9832a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
-| `-BuiltinType 0x7fc3e9832740 '__int128'
-|-TypedefDecl 0x7fc3e9832ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
-| `-BuiltinType 0x7fc3e9832760 'unsigned __int128'
-|-TypedefDecl 0x7fc3e9832e18 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
-| `-RecordType 0x7fc3e9832bc0 'struct __NSConstantString_tag'
-|   `-CXXRecord 0x7fc3e9832b28 '__NSConstantString_tag'
-|-TypedefDecl 0x7fc3e9832eb0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
-| `-PointerType 0x7fc3e9832e70 'char *'
-|   `-BuiltinType 0x7fc3e9832560 'char'
-|-TypedefDecl 0x7fc3e9865600 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
-| `-ConstantArrayType 0x7fc3e9833190 'struct __va_list_tag [1]' 1 
-|   `-RecordType 0x7fc3e9832fa0 'struct __va_list_tag'
-|     `-CXXRecord 0x7fc3e9832f08 '__va_list_tag'
-|-CXXRecordDecl 0x7fc3e9865658 <object_model_refined/6_runtime_semantics/08_temporary_objects.cpp:1:1, line:10:1> line:1:8 referenced struct T1 definition
-| |-CXXRecordDecl 0x7fc3e9865778 <col:1, col:8> col:8 implicit referenced struct T1
-| |-FieldDecl 0x7fc3e9865828 <line:2:5, col:9> col:9 referenced i 'int'
-| |-CXXConstructorDecl 0x7fc3e9865910 <line:4:5, col:11> col:5 used T1 'void (void)'
-| | `-CompoundStmt 0x7fc3e9865c68 <col:10, col:11>
-| |-CXXConstructorDecl 0x7fc3e9865a90 <line:6:5, col:32> col:14 used T1 'void (int)'
-| | |-ParmVarDecl 0x7fc3e98659d0 <col:17, col:21> col:21 used j 'int'
-| | |-CXXCtorInitializer Field 0x7fc3e9865828 'i' 'int'
-| | | `-InitListExpr 0x7fc3e9865cf0 <col:27, col:29> 'int'
-| | |   `-ImplicitCastExpr 0x7fc3e9865d30 <col:28> 'int' <LValueToRValue>
-| | |     `-DeclRefExpr 0x7fc3e9865c80 <col:28> 'int' lvalue ParmVar 0x7fc3e98659d0 'j' 'int'
-| | `-CompoundStmt 0x7fc3e9865d80 <col:31, col:32>
-| |-CXXDestructorDecl 0x7fc3e9865b90 <line:8:5, col:12> col:5 used ~T1 'void (void) noexcept'
-| | `-CompoundStmt 0x7fc3e9865dd0 <col:11, col:12>
-| |-CXXConstructorDecl 0x7fc3e9866108 <line:1:8> col:8 implicit used constexpr T1 'void (const struct T1 &) noexcept' inline default trivial
-| | |-ParmVarDecl 0x7fc3e9866230 <col:8> col:8 used 'const struct T1 &'
-| | |-CXXCtorInitializer Field 0x7fc3e9865828 'i' 'int'
-| | | `-ImplicitCastExpr 0x7fc3e9890a38 <col:8> 'int' <LValueToRValue>
-| | |   `-MemberExpr 0x7fc3e9890a00 <col:8> 'const int' lvalue .i 0x7fc3e9865828
-| | |     `-DeclRefExpr 0x7fc3e98665a8 <col:8> 'const struct T1' lvalue ParmVar 0x7fc3e9866230 '' 'const struct T1 &'
-| | `-CompoundStmt 0x7fc3e9890a80 <col:8>
-| `-CXXMethodDecl 0x7fc3e9891e10 <col:8> col:8 implicit used operator= 'struct T1 &(const struct T1 &) noexcept' inline default trivial
-|   |-ParmVarDecl 0x7fc3e9891f30 <col:8> col:8 used 'const struct T1 &'
-|   `-CompoundStmt 0x7fc3e9892170 <col:8>
-|     |-BinaryOperator 0x7fc3e98920f8 <col:8> 'int' lvalue '='
-|     | |-MemberExpr 0x7fc3e9892048 <col:8> 'int' lvalue ->i 0x7fc3e9865828
-|     | | `-CXXThisExpr 0x7fc3e9892030 <col:8> 'struct T1 *' this
-|     | `-ImplicitCastExpr 0x7fc3e98920e0 <col:8> 'int' <LValueToRValue>
-|     |   `-MemberExpr 0x7fc3e98920a8 <col:8> 'const int' lvalue .i 0x7fc3e9865828
-|     |     `-DeclRefExpr 0x7fc3e9892080 <col:8> 'const struct T1' lvalue ParmVar 0x7fc3e9891f30 '' 'const struct T1 &'
-|     `-ReturnStmt 0x7fc3e9892158 <col:8>
-|       `-UnaryOperator 0x7fc3e9892138 <col:8> 'struct T1' lvalue prefix '*'
-|         `-CXXThisExpr 0x7fc3e9892120 <col:8> 'struct T1 *' this
-|-FunctionDecl 0x7fc3e9865f70 <line:12:1, line:17:1> line:12:4 used operator+ 'struct T1 (const struct T1 &, const struct T1 &)'
-| |-ParmVarDecl 0x7fc3e9865e28 <col:14, col:24> col:24 used lhs 'const struct T1 &'
-| |-ParmVarDecl 0x7fc3e9865e98 <col:29, col:39> col:39 used rhs 'const struct T1 &'
-| `-CompoundStmt 0x7fc3e9890ae8 <line:13:1, line:17:1>
-|   |-DeclStmt 0x7fc3e98662c8 <line:14:5, col:11>
-|   | `-VarDecl 0x7fc3e9866068 <col:5, col:10> col:8 used t 'struct T1' nrvo listinit
-|   |   `-CXXConstructExpr 0x7fc3e9866298 <col:8, col:10> 'struct T1' 'void (void)'
-|   |-BinaryOperator 0x7fc3e9866458 <line:15:5, col:23> 'int' lvalue '='
-|   | |-MemberExpr 0x7fc3e9866308 <col:5, col:7> 'int' lvalue .i 0x7fc3e9865828
-|   | | `-DeclRefExpr 0x7fc3e98662e0 <col:5> 'struct T1' lvalue Var 0x7fc3e9866068 't' 'struct T1'
-|   | `-BinaryOperator 0x7fc3e9866430 <col:11, col:23> 'int' '+'
-|   |   |-ImplicitCastExpr 0x7fc3e9866400 <col:11, col:15> 'int' <LValueToRValue>
-|   |   | `-MemberExpr 0x7fc3e9866368 <col:11, col:15> 'const int' lvalue .i 0x7fc3e9865828
-|   |   |   `-DeclRefExpr 0x7fc3e9866340 <col:11> 'const struct T1' lvalue ParmVar 0x7fc3e9865e28 'lhs' 'const struct T1 &'
-|   |   `-ImplicitCastExpr 0x7fc3e9866418 <col:19, col:23> 'int' <LValueToRValue>
-|   |     `-MemberExpr 0x7fc3e98663c8 <col:19, col:23> 'const int' lvalue .i 0x7fc3e9865828
-|   |       `-DeclRefExpr 0x7fc3e98663a0 <col:19> 'const struct T1' lvalue ParmVar 0x7fc3e9865e98 'rhs' 'const struct T1 &'
-|   `-ReturnStmt 0x7fc3e9890ad0 <line:16:5, col:12>
-|     `-CXXConstructExpr 0x7fc3e9890a98 <col:12> 'struct T1' 'void (const struct T1 &) noexcept' elidable
-|       `-ImplicitCastExpr 0x7fc3e9866558 <col:12> 'const struct T1' lvalue <NoOp>
-|         `-DeclRefExpr 0x7fc3e9866530 <col:12> 'struct T1' lvalue Var 0x7fc3e9866068 't' 'struct T1'
-|-FunctionDecl 0x7fc3e9890ca0 <line:19:1, line:24:1> line:19:4 used operator- 'struct T1 (struct T1 &, struct T1 &)'
-| |-ParmVarDecl 0x7fc3e9890b58 <col:14, col:18> col:18 used lhs 'struct T1 &'
-| |-ParmVarDecl 0x7fc3e9890bc8 <col:23, col:27> col:27 used rhs 'struct T1 &'
-| `-CompoundStmt 0x7fc3e9891070 <line:20:1, line:24:1>
-|   |-DeclStmt 0x7fc3e9890e28 <line:21:5, col:11>
-|   | `-VarDecl 0x7fc3e9890d58 <col:5, col:10> col:8 used t 'struct T1' nrvo listinit
-|   |   `-CXXConstructExpr 0x7fc3e9890df8 <col:8, col:10> 'struct T1' 'void (void)'
-|   |-BinaryOperator 0x7fc3e9890fb8 <line:22:5, col:23> 'int' lvalue '='
-|   | |-MemberExpr 0x7fc3e9890e68 <col:5, col:7> 'int' lvalue .i 0x7fc3e9865828
-|   | | `-DeclRefExpr 0x7fc3e9890e40 <col:5> 'struct T1' lvalue Var 0x7fc3e9890d58 't' 'struct T1'
-|   | `-BinaryOperator 0x7fc3e9890f90 <col:11, col:23> 'int' '-'
-|   |   |-ImplicitCastExpr 0x7fc3e9890f60 <col:11, col:15> 'int' <LValueToRValue>
-|   |   | `-MemberExpr 0x7fc3e9890ec8 <col:11, col:15> 'int' lvalue .i 0x7fc3e9865828
-|   |   |   `-DeclRefExpr 0x7fc3e9890ea0 <col:11> 'struct T1' lvalue ParmVar 0x7fc3e9890b58 'lhs' 'struct T1 &'
-|   |   `-ImplicitCastExpr 0x7fc3e9890f78 <col:19, col:23> 'int' <LValueToRValue>
-|   |     `-MemberExpr 0x7fc3e9890f28 <col:19, col:23> 'int' lvalue .i 0x7fc3e9865828
-|   |       `-DeclRefExpr 0x7fc3e9890f00 <col:19> 'struct T1' lvalue ParmVar 0x7fc3e9890bc8 'rhs' 'struct T1 &'
-|   `-ReturnStmt 0x7fc3e9891058 <line:23:5, col:12>
-|     `-CXXConstructExpr 0x7fc3e9891020 <col:12> 'struct T1' 'void (const struct T1 &) noexcept' elidable
-|       `-ImplicitCastExpr 0x7fc3e9891008 <col:12> 'const struct T1' lvalue <NoOp>
-|         `-DeclRefExpr 0x7fc3e9890fe0 <col:12> 'struct T1' lvalue Var 0x7fc3e9890d58 't' 'struct T1'
-|-FunctionDecl 0x7fc3e98911f0 <line:26:1, line:31:1> line:26:4 used operator* 'struct T1 (struct T1, struct T1)'
-| |-ParmVarDecl 0x7fc3e98910b0 <col:14, col:17> col:17 used lhs 'struct T1'
-| |-ParmVarDecl 0x7fc3e9891120 <col:22, col:25> col:25 used rhs 'struct T1'
-| `-CompoundStmt 0x7fc3e98915c0 <line:27:1, line:31:1>
-|   |-DeclStmt 0x7fc3e9891378 <line:28:5, col:11>
-|   | `-VarDecl 0x7fc3e98912a8 <col:5, col:10> col:8 used t 'struct T1' nrvo listinit
-|   |   `-CXXConstructExpr 0x7fc3e9891348 <col:8, col:10> 'struct T1' 'void (void)'
-|   |-BinaryOperator 0x7fc3e9891508 <line:29:5, col:23> 'int' lvalue '='
-|   | |-MemberExpr 0x7fc3e98913b8 <col:5, col:7> 'int' lvalue .i 0x7fc3e9865828
-|   | | `-DeclRefExpr 0x7fc3e9891390 <col:5> 'struct T1' lvalue Var 0x7fc3e98912a8 't' 'struct T1'
-|   | `-BinaryOperator 0x7fc3e98914e0 <col:11, col:23> 'int' '*'
-|   |   |-ImplicitCastExpr 0x7fc3e98914b0 <col:11, col:15> 'int' <LValueToRValue>
-|   |   | `-MemberExpr 0x7fc3e9891418 <col:11, col:15> 'int' lvalue .i 0x7fc3e9865828
-|   |   |   `-DeclRefExpr 0x7fc3e98913f0 <col:11> 'struct T1' lvalue ParmVar 0x7fc3e98910b0 'lhs' 'struct T1'
-|   |   `-ImplicitCastExpr 0x7fc3e98914c8 <col:19, col:23> 'int' <LValueToRValue>
-|   |     `-MemberExpr 0x7fc3e9891478 <col:19, col:23> 'int' lvalue .i 0x7fc3e9865828
-|   |       `-DeclRefExpr 0x7fc3e9891450 <col:19> 'struct T1' lvalue ParmVar 0x7fc3e9891120 'rhs' 'struct T1'
-|   `-ReturnStmt 0x7fc3e98915a8 <line:30:5, col:12>
-|     `-CXXConstructExpr 0x7fc3e9891570 <col:12> 'struct T1' 'void (const struct T1 &) noexcept' elidable
-|       `-ImplicitCastExpr 0x7fc3e9891558 <col:12> 'const struct T1' lvalue <NoOp>
-|         `-DeclRefExpr 0x7fc3e9891530 <col:12> 'struct T1' lvalue Var 0x7fc3e98912a8 't' 'struct T1'
-`-FunctionDecl 0x7fc3e9891648 <line:33:1, line:40:1> line:33:5 main 'int (void)'
-  `-CompoundStmt 0x7fc3e98925b8 <col:12, line:40:1>
-    |-DeclStmt 0x7fc3e9891818 <line:34:5, col:15>
-    | `-VarDecl 0x7fc3e9891718 <col:5, col:14> col:8 used t1_1 'struct T1' listinit
-    |   `-CXXConstructExpr 0x7fc3e98917e0 <col:8, col:14> 'struct T1' 'void (int)'
-    |     `-IntegerLiteral 0x7fc3e9891778 <col:13> 'int' 1
-    |-DeclStmt 0x7fc3e9891940 <line:35:5, col:15>
-    | `-VarDecl 0x7fc3e9891840 <col:5, col:14> col:8 used t1_2 'struct T1' listinit
-    |   `-CXXConstructExpr 0x7fc3e9891908 <col:8, col:14> 'struct T1' 'void (int)'
-    |     `-IntegerLiteral 0x7fc3e98918a0 <col:13> 'int' 2
-    |-DeclStmt 0x7fc3e9891ca0 <line:36:5, col:25>
-    | `-VarDecl 0x7fc3e9891990 <col:5, col:21> col:10 used t 'struct T1':'struct T1' cinit
-    |   `-ExprWithCleanups 0x7fc3e9891c88 <col:14, col:21> 'struct T1':'struct T1'
-    |     `-CXXConstructExpr 0x7fc3e9891c50 <col:14, col:21> 'struct T1':'struct T1' 'void (const struct T1 &) noexcept' elidable
-    |       `-MaterializeTemporaryExpr 0x7fc3e9891c38 <col:14, col:21> 'const struct T1' lvalue
-    |         `-ImplicitCastExpr 0x7fc3e9891c20 <col:14, col:21> 'const struct T1' <NoOp>
-    |           `-CXXBindTemporaryExpr 0x7fc3e9891b40 <col:14, col:21> 'struct T1' (CXXTemporary 0x7fc3e9891b38)
-    |             `-CXXOperatorCallExpr 0x7fc3e9891af0 <col:14, col:21> 'struct T1'
-    |               |-ImplicitCastExpr 0x7fc3e9891ad8 <col:19> 'struct T1 (*)(const struct T1 &, const struct T1 &)' <FunctionToPointerDecay>
-    |               | `-DeclRefExpr 0x7fc3e9891a80 <col:19> 'struct T1 (const struct T1 &, const struct T1 &)' lvalue Function 0x7fc3e9865f70 'operator+' 'struct T1 (const struct T1 &, const struct T1 &)'
-    |               |-ImplicitCastExpr 0x7fc3e9891a50 <col:14> 'const struct T1' lvalue <NoOp>
-    |               | `-DeclRefExpr 0x7fc3e9891a00 <col:14> 'struct T1' lvalue Var 0x7fc3e9891718 't1_1' 'struct T1'
-    |               `-ImplicitCastExpr 0x7fc3e9891a68 <col:21> 'const struct T1' lvalue <NoOp>
-    |                 `-DeclRefExpr 0x7fc3e9891a28 <col:21> 'struct T1' lvalue Var 0x7fc3e9891840 't1_2' 'struct T1'
-    |-ExprWithCleanups 0x7fc3e9892258 <line:37:5, col:16> 'struct T1' lvalue
-    | `-CXXOperatorCallExpr 0x7fc3e9892210 <col:5, col:16> 'struct T1' lvalue
-    |   |-ImplicitCastExpr 0x7fc3e98921f8 <col:7> 'struct T1 &(*)(const struct T1 &) noexcept' <FunctionToPointerDecay>
-    |   | `-DeclRefExpr 0x7fc3e9892008 <col:7> 'struct T1 &(const struct T1 &) noexcept' lvalue CXXMethod 0x7fc3e9891e10 'operator=' 'struct T1 &(const struct T1 &) noexcept'
-    |   |-DeclRefExpr 0x7fc3e9891cb8 <col:5> 'struct T1':'struct T1' lvalue Var 0x7fc3e9891990 't' 'struct T1':'struct T1'
-    |   `-MaterializeTemporaryExpr 0x7fc3e9891fb0 <col:9, col:16> 'const struct T1' lvalue
-    |     `-ImplicitCastExpr 0x7fc3e9891f98 <col:9, col:16> 'const struct T1' <NoOp>
-    |       `-CXXBindTemporaryExpr 0x7fc3e9891df0 <col:9, col:16> 'struct T1' (CXXTemporary 0x7fc3e9891de8)
-    |         `-CXXOperatorCallExpr 0x7fc3e9891da0 <col:9, col:16> 'struct T1'
-    |           |-ImplicitCastExpr 0x7fc3e9891d88 <col:14> 'struct T1 (*)(struct T1 &, struct T1 &)' <FunctionToPointerDecay>
-    |           | `-DeclRefExpr 0x7fc3e9891d30 <col:14> 'struct T1 (struct T1 &, struct T1 &)' lvalue Function 0x7fc3e9890ca0 'operator-' 'struct T1 (struct T1 &, struct T1 &)'
-    |           |-DeclRefExpr 0x7fc3e9891ce0 <col:9> 'struct T1' lvalue Var 0x7fc3e9891718 't1_1' 'struct T1'
-    |           `-DeclRefExpr 0x7fc3e9891d08 <col:16> 'struct T1' lvalue Var 0x7fc3e9891840 't1_2' 'struct T1'
-    |-ExprWithCleanups 0x7fc3e9892568 <line:38:5, col:16> 'struct T1' lvalue
-    | `-CXXOperatorCallExpr 0x7fc3e9892520 <col:5, col:16> 'struct T1' lvalue
-    |   |-ImplicitCastExpr 0x7fc3e9892508 <col:7> 'struct T1 &(*)(const struct T1 &) noexcept' <FunctionToPointerDecay>
-    |   | `-DeclRefExpr 0x7fc3e98924e0 <col:7> 'struct T1 &(const struct T1 &) noexcept' lvalue CXXMethod 0x7fc3e9891e10 'operator=' 'struct T1 &(const struct T1 &) noexcept'
-    |   |-DeclRefExpr 0x7fc3e9892270 <col:5> 'struct T1':'struct T1' lvalue Var 0x7fc3e9891990 't' 'struct T1':'struct T1'
-    |   `-MaterializeTemporaryExpr 0x7fc3e98924c8 <col:9, col:16> 'const struct T1' lvalue
-    |     `-ImplicitCastExpr 0x7fc3e98924b0 <col:9, col:16> 'const struct T1' <NoOp>
-    |       `-CXXBindTemporaryExpr 0x7fc3e9892490 <col:9, col:16> 'struct T1' (CXXTemporary 0x7fc3e9892488)
-    |         `-CXXOperatorCallExpr 0x7fc3e9892440 <col:9, col:16> 'struct T1'
-    |           |-ImplicitCastExpr 0x7fc3e9892428 <col:14> 'struct T1 (*)(struct T1, struct T1)' <FunctionToPointerDecay>
-    |           | `-DeclRefExpr 0x7fc3e98923d8 <col:14> 'struct T1 (struct T1, struct T1)' lvalue Function 0x7fc3e98911f0 'operator*' 'struct T1 (struct T1, struct T1)'
-    |           |-CXXBindTemporaryExpr 0x7fc3e9892340 <col:9> 'struct T1' (CXXTemporary 0x7fc3e9892338)
-    |           | `-CXXConstructExpr 0x7fc3e9892300 <col:9> 'struct T1' 'void (const struct T1 &) noexcept'
-    |           |   `-ImplicitCastExpr 0x7fc3e98922e8 <col:9> 'const struct T1' lvalue <NoOp>
-    |           |     `-DeclRefExpr 0x7fc3e9892298 <col:9> 'struct T1' lvalue Var 0x7fc3e9891718 't1_1' 'struct T1'
-    |           `-CXXBindTemporaryExpr 0x7fc3e98923b8 <col:16> 'struct T1' (CXXTemporary 0x7fc3e98923b0)
-    |             `-CXXConstructExpr 0x7fc3e9892378 <col:16> 'struct T1' 'void (const struct T1 &) noexcept'
-    |               `-ImplicitCastExpr 0x7fc3e9892360 <col:16> 'const struct T1' lvalue <NoOp>
-    |                 `-DeclRefExpr 0x7fc3e98922c0 <col:16> 'struct T1' lvalue Var 0x7fc3e9891840 't1_2' 'struct T1'
-    `-ReturnStmt 0x7fc3e98925a0 <line:39:5, col:12>
-      `-IntegerLiteral 0x7fc3e9892580 <col:12> 'int' 0
+TranslationUnitDecl 0x7fc2ea017cd0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc2ea018260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc2ea017f40 '__int128'
+|-TypedefDecl 0x7fc2ea0182d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc2ea017f60 'unsigned __int128'
+|-TypedefDecl 0x7fc2ea018618 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc2ea0183c0 'struct __NSConstantString_tag'
+|   `-CXXRecord 0x7fc2ea018328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc2ea0186b0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc2ea018670 'char *'
+|   `-BuiltinType 0x7fc2ea017d60 'char'
+|-TypedefDecl 0x7fc2ea04ae00 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc2ea018990 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc2ea0187a0 'struct __va_list_tag'
+|     `-CXXRecord 0x7fc2ea018708 '__va_list_tag'
+|-CXXRecordDecl 0x7fc2ea04ae58 </Users/tskull/Documents/Programming/Cpp/object_model_refined/6_runtime_semantics/08_temporary_objects.cpp:1:1, line:10:1> line:1:8 referenced struct T1 definition
+| |-CXXRecordDecl 0x7fc2ea04af78 <col:1, col:8> col:8 implicit referenced struct T1
+| |-FieldDecl 0x7fc2ea04b028 <line:2:5, col:9> col:9 referenced i 'int'
+| |-CXXConstructorDecl 0x7fc2ea04b110 <line:4:5, col:11> col:5 used T1 'void (void)'
+| | `-CompoundStmt 0x7fc2ea04b468 <col:10, col:11>
+| |-CXXConstructorDecl 0x7fc2ea04b290 <line:6:5, col:32> col:14 used T1 'void (int)'
+| | |-ParmVarDecl 0x7fc2ea04b1d0 <col:17, col:21> col:21 used j 'int'
+| | |-CXXCtorInitializer Field 0x7fc2ea04b028 'i' 'int'
+| | | `-InitListExpr 0x7fc2ea04b4f0 <col:27, col:29> 'int'
+| | |   `-ImplicitCastExpr 0x7fc2ea04b530 <col:28> 'int' <LValueToRValue>
+| | |     `-DeclRefExpr 0x7fc2ea04b480 <col:28> 'int' lvalue ParmVar 0x7fc2ea04b1d0 'j' 'int'
+| | `-CompoundStmt 0x7fc2ea04b580 <col:31, col:32>
+| |-CXXDestructorDecl 0x7fc2ea04b390 <line:8:5, col:12> col:5 used ~T1 'void (void) noexcept'
+| | `-CompoundStmt 0x7fc2ea04b5d0 <col:11, col:12>
+| |-CXXConstructorDecl 0x7fc2ea04b908 <line:1:8> col:8 implicit used constexpr T1 'void (const struct T1 &) noexcept' inline default trivial
+| | |-ParmVarDecl 0x7fc2ea04ba30 <col:8> col:8 used 'const struct T1 &'
+| | |-CXXCtorInitializer Field 0x7fc2ea04b028 'i' 'int'
+| | | `-ImplicitCastExpr 0x7fc2ea076238 <col:8> 'int' <LValueToRValue>
+| | |   `-MemberExpr 0x7fc2ea076200 <col:8> 'const int' lvalue .i 0x7fc2ea04b028
+| | |     `-DeclRefExpr 0x7fc2ea04bda8 <col:8> 'const struct T1' lvalue ParmVar 0x7fc2ea04ba30 '' 'const struct T1 &'
+| | `-CompoundStmt 0x7fc2ea076280 <col:8>
+| `-CXXMethodDecl 0x7fc2ea077610 <col:8> col:8 implicit used operator= 'struct T1 &(const struct T1 &) noexcept' inline default trivial
+|   |-ParmVarDecl 0x7fc2ea077730 <col:8> col:8 used 'const struct T1 &'
+|   `-CompoundStmt 0x7fc2ea077970 <col:8>
+|     |-BinaryOperator 0x7fc2ea0778f8 <col:8> 'int' lvalue '='
+|     | |-MemberExpr 0x7fc2ea077848 <col:8> 'int' lvalue ->i 0x7fc2ea04b028
+|     | | `-CXXThisExpr 0x7fc2ea077830 <col:8> 'struct T1 *' this
+|     | `-ImplicitCastExpr 0x7fc2ea0778e0 <col:8> 'int' <LValueToRValue>
+|     |   `-MemberExpr 0x7fc2ea0778a8 <col:8> 'const int' lvalue .i 0x7fc2ea04b028
+|     |     `-DeclRefExpr 0x7fc2ea077880 <col:8> 'const struct T1' lvalue ParmVar 0x7fc2ea077730 '' 'const struct T1 &'
+|     `-ReturnStmt 0x7fc2ea077958 <col:8>
+|       `-UnaryOperator 0x7fc2ea077938 <col:8> 'struct T1' lvalue prefix '*'
+|         `-CXXThisExpr 0x7fc2ea077920 <col:8> 'struct T1 *' this
+|-FunctionDecl 0x7fc2ea04b770 <line:12:1, line:17:1> line:12:4 used operator+ 'struct T1 (const struct T1 &, const struct T1 &)'
+| |-ParmVarDecl 0x7fc2ea04b628 <col:14, col:24> col:24 used lhs 'const struct T1 &'
+| |-ParmVarDecl 0x7fc2ea04b698 <col:29, col:39> col:39 used rhs 'const struct T1 &'
+| `-CompoundStmt 0x7fc2ea0762e8 <line:13:1, line:17:1>
+|   |-DeclStmt 0x7fc2ea04bac8 <line:14:5, col:11>
+|   | `-VarDecl 0x7fc2ea04b868 <col:5, col:10> col:8 used t 'struct T1' nrvo listinit
+|   |   `-CXXConstructExpr 0x7fc2ea04ba98 <col:8, col:10> 'struct T1' 'void (void)'
+|   |-BinaryOperator 0x7fc2ea04bc58 <line:15:5, col:23> 'int' lvalue '='
+|   | |-MemberExpr 0x7fc2ea04bb08 <col:5, col:7> 'int' lvalue .i 0x7fc2ea04b028
+|   | | `-DeclRefExpr 0x7fc2ea04bae0 <col:5> 'struct T1' lvalue Var 0x7fc2ea04b868 't' 'struct T1'
+|   | `-BinaryOperator 0x7fc2ea04bc30 <col:11, col:23> 'int' '+'
+|   |   |-ImplicitCastExpr 0x7fc2ea04bc00 <col:11, col:15> 'int' <LValueToRValue>
+|   |   | `-MemberExpr 0x7fc2ea04bb68 <col:11, col:15> 'const int' lvalue .i 0x7fc2ea04b028
+|   |   |   `-DeclRefExpr 0x7fc2ea04bb40 <col:11> 'const struct T1' lvalue ParmVar 0x7fc2ea04b628 'lhs' 'const struct T1 &'
+|   |   `-ImplicitCastExpr 0x7fc2ea04bc18 <col:19, col:23> 'int' <LValueToRValue>
+|   |     `-MemberExpr 0x7fc2ea04bbc8 <col:19, col:23> 'const int' lvalue .i 0x7fc2ea04b028
+|   |       `-DeclRefExpr 0x7fc2ea04bba0 <col:19> 'const struct T1' lvalue ParmVar 0x7fc2ea04b698 'rhs' 'const struct T1 &'
+|   `-ReturnStmt 0x7fc2ea0762d0 <line:16:5, col:12>
+|     `-CXXConstructExpr 0x7fc2ea076298 <col:12> 'struct T1' 'void (const struct T1 &) noexcept' elidable
+|       `-ImplicitCastExpr 0x7fc2ea04bd58 <col:12> 'const struct T1' lvalue <NoOp>
+|         `-DeclRefExpr 0x7fc2ea04bd30 <col:12> 'struct T1' lvalue Var 0x7fc2ea04b868 't' 'struct T1'
+|-FunctionDecl 0x7fc2ea0764a0 <line:19:1, line:24:1> line:19:4 used operator- 'struct T1 (struct T1 &, struct T1 &)'
+| |-ParmVarDecl 0x7fc2ea076358 <col:14, col:18> col:18 used lhs 'struct T1 &'
+| |-ParmVarDecl 0x7fc2ea0763c8 <col:23, col:27> col:27 used rhs 'struct T1 &'
+| `-CompoundStmt 0x7fc2ea076870 <line:20:1, line:24:1>
+|   |-DeclStmt 0x7fc2ea076628 <line:21:5, col:11>
+|   | `-VarDecl 0x7fc2ea076558 <col:5, col:10> col:8 used t 'struct T1' nrvo listinit
+|   |   `-CXXConstructExpr 0x7fc2ea0765f8 <col:8, col:10> 'struct T1' 'void (void)'
+|   |-BinaryOperator 0x7fc2ea0767b8 <line:22:5, col:23> 'int' lvalue '='
+|   | |-MemberExpr 0x7fc2ea076668 <col:5, col:7> 'int' lvalue .i 0x7fc2ea04b028
+|   | | `-DeclRefExpr 0x7fc2ea076640 <col:5> 'struct T1' lvalue Var 0x7fc2ea076558 't' 'struct T1'
+|   | `-BinaryOperator 0x7fc2ea076790 <col:11, col:23> 'int' '-'
+|   |   |-ImplicitCastExpr 0x7fc2ea076760 <col:11, col:15> 'int' <LValueToRValue>
+|   |   | `-MemberExpr 0x7fc2ea0766c8 <col:11, col:15> 'int' lvalue .i 0x7fc2ea04b028
+|   |   |   `-DeclRefExpr 0x7fc2ea0766a0 <col:11> 'struct T1' lvalue ParmVar 0x7fc2ea076358 'lhs' 'struct T1 &'
+|   |   `-ImplicitCastExpr 0x7fc2ea076778 <col:19, col:23> 'int' <LValueToRValue>
+|   |     `-MemberExpr 0x7fc2ea076728 <col:19, col:23> 'int' lvalue .i 0x7fc2ea04b028
+|   |       `-DeclRefExpr 0x7fc2ea076700 <col:19> 'struct T1' lvalue ParmVar 0x7fc2ea0763c8 'rhs' 'struct T1 &'
+|   `-ReturnStmt 0x7fc2ea076858 <line:23:5, col:12>
+|     `-CXXConstructExpr 0x7fc2ea076820 <col:12> 'struct T1' 'void (const struct T1 &) noexcept' elidable
+|       `-ImplicitCastExpr 0x7fc2ea076808 <col:12> 'const struct T1' lvalue <NoOp>
+|         `-DeclRefExpr 0x7fc2ea0767e0 <col:12> 'struct T1' lvalue Var 0x7fc2ea076558 't' 'struct T1'
+|-FunctionDecl 0x7fc2ea0769f0 <line:26:1, line:31:1> line:26:4 used operator* 'struct T1 (struct T1, struct T1)'
+| |-ParmVarDecl 0x7fc2ea0768b0 <col:14, col:17> col:17 used lhs 'struct T1'
+| |-ParmVarDecl 0x7fc2ea076920 <col:22, col:25> col:25 used rhs 'struct T1'
+| `-CompoundStmt 0x7fc2ea076dc0 <line:27:1, line:31:1>
+|   |-DeclStmt 0x7fc2ea076b78 <line:28:5, col:11>
+|   | `-VarDecl 0x7fc2ea076aa8 <col:5, col:10> col:8 used t 'struct T1' nrvo listinit
+|   |   `-CXXConstructExpr 0x7fc2ea076b48 <col:8, col:10> 'struct T1' 'void (void)'
+|   |-BinaryOperator 0x7fc2ea076d08 <line:29:5, col:23> 'int' lvalue '='
+|   | |-MemberExpr 0x7fc2ea076bb8 <col:5, col:7> 'int' lvalue .i 0x7fc2ea04b028
+|   | | `-DeclRefExpr 0x7fc2ea076b90 <col:5> 'struct T1' lvalue Var 0x7fc2ea076aa8 't' 'struct T1'
+|   | `-BinaryOperator 0x7fc2ea076ce0 <col:11, col:23> 'int' '*'
+|   |   |-ImplicitCastExpr 0x7fc2ea076cb0 <col:11, col:15> 'int' <LValueToRValue>
+|   |   | `-MemberExpr 0x7fc2ea076c18 <col:11, col:15> 'int' lvalue .i 0x7fc2ea04b028
+|   |   |   `-DeclRefExpr 0x7fc2ea076bf0 <col:11> 'struct T1' lvalue ParmVar 0x7fc2ea0768b0 'lhs' 'struct T1'
+|   |   `-ImplicitCastExpr 0x7fc2ea076cc8 <col:19, col:23> 'int' <LValueToRValue>
+|   |     `-MemberExpr 0x7fc2ea076c78 <col:19, col:23> 'int' lvalue .i 0x7fc2ea04b028
+|   |       `-DeclRefExpr 0x7fc2ea076c50 <col:19> 'struct T1' lvalue ParmVar 0x7fc2ea076920 'rhs' 'struct T1'
+|   `-ReturnStmt 0x7fc2ea076da8 <line:30:5, col:12>
+|     `-CXXConstructExpr 0x7fc2ea076d70 <col:12> 'struct T1' 'void (const struct T1 &) noexcept' elidable
+|       `-ImplicitCastExpr 0x7fc2ea076d58 <col:12> 'const struct T1' lvalue <NoOp>
+|         `-DeclRefExpr 0x7fc2ea076d30 <col:12> 'struct T1' lvalue Var 0x7fc2ea076aa8 't' 'struct T1'
+`-FunctionDecl 0x7fc2ea076e48 <line:33:1, line:40:1> line:33:5 main 'int (void)'
+  `-CompoundStmt 0x7fc2ea077db8 <col:12, line:40:1>
+    |-DeclStmt 0x7fc2ea077018 <line:34:5, col:15>
+    | `-VarDecl 0x7fc2ea076f18 <col:5, col:14> col:8 used t1_1 'struct T1' listinit
+    |   `-CXXConstructExpr 0x7fc2ea076fe0 <col:8, col:14> 'struct T1' 'void (int)'
+    |     `-IntegerLiteral 0x7fc2ea076f78 <col:13> 'int' 1
+    |-DeclStmt 0x7fc2ea077140 <line:35:5, col:15>
+    | `-VarDecl 0x7fc2ea077040 <col:5, col:14> col:8 used t1_2 'struct T1' listinit
+    |   `-CXXConstructExpr 0x7fc2ea077108 <col:8, col:14> 'struct T1' 'void (int)'
+    |     `-IntegerLiteral 0x7fc2ea0770a0 <col:13> 'int' 2
+    |-DeclStmt 0x7fc2ea0774a0 <line:36:5, col:25>
+    | `-VarDecl 0x7fc2ea077190 <col:5, col:21> col:10 used t 'struct T1':'struct T1' cinit
+    |   `-ExprWithCleanups 0x7fc2ea077488 <col:14, col:21> 'struct T1':'struct T1'
+    |     `-CXXConstructExpr 0x7fc2ea077450 <col:14, col:21> 'struct T1':'struct T1' 'void (const struct T1 &) noexcept' elidable
+    |       `-MaterializeTemporaryExpr 0x7fc2ea077438 <col:14, col:21> 'const struct T1' lvalue
+    |         `-ImplicitCastExpr 0x7fc2ea077420 <col:14, col:21> 'const struct T1' <NoOp>
+    |           `-CXXBindTemporaryExpr 0x7fc2ea077340 <col:14, col:21> 'struct T1' (CXXTemporary 0x7fc2ea077338)
+    |             `-CXXOperatorCallExpr 0x7fc2ea0772f0 <col:14, col:21> 'struct T1'
+    |               |-ImplicitCastExpr 0x7fc2ea0772d8 <col:19> 'struct T1 (*)(const struct T1 &, const struct T1 &)' <FunctionToPointerDecay>
+    |               | `-DeclRefExpr 0x7fc2ea077280 <col:19> 'struct T1 (const struct T1 &, const struct T1 &)' lvalue Function 0x7fc2ea04b770 'operator+' 'struct T1 (const struct T1 &, const struct T1 &)'
+    |               |-ImplicitCastExpr 0x7fc2ea077250 <col:14> 'const struct T1' lvalue <NoOp>
+    |               | `-DeclRefExpr 0x7fc2ea077200 <col:14> 'struct T1' lvalue Var 0x7fc2ea076f18 't1_1' 'struct T1'
+    |               `-ImplicitCastExpr 0x7fc2ea077268 <col:21> 'const struct T1' lvalue <NoOp>
+    |                 `-DeclRefExpr 0x7fc2ea077228 <col:21> 'struct T1' lvalue Var 0x7fc2ea077040 't1_2' 'struct T1'
+    |-ExprWithCleanups 0x7fc2ea077a58 <line:37:5, col:16> 'struct T1' lvalue
+    | `-CXXOperatorCallExpr 0x7fc2ea077a10 <col:5, col:16> 'struct T1' lvalue
+    |   |-ImplicitCastExpr 0x7fc2ea0779f8 <col:7> 'struct T1 &(*)(const struct T1 &) noexcept' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fc2ea077808 <col:7> 'struct T1 &(const struct T1 &) noexcept' lvalue CXXMethod 0x7fc2ea077610 'operator=' 'struct T1 &(const struct T1 &) noexcept'
+    |   |-DeclRefExpr 0x7fc2ea0774b8 <col:5> 'struct T1':'struct T1' lvalue Var 0x7fc2ea077190 't' 'struct T1':'struct T1'
+    |   `-MaterializeTemporaryExpr 0x7fc2ea0777b0 <col:9, col:16> 'const struct T1' lvalue
+    |     `-ImplicitCastExpr 0x7fc2ea077798 <col:9, col:16> 'const struct T1' <NoOp>
+    |       `-CXXBindTemporaryExpr 0x7fc2ea0775f0 <col:9, col:16> 'struct T1' (CXXTemporary 0x7fc2ea0775e8)
+    |         `-CXXOperatorCallExpr 0x7fc2ea0775a0 <col:9, col:16> 'struct T1'
+    |           |-ImplicitCastExpr 0x7fc2ea077588 <col:14> 'struct T1 (*)(struct T1 &, struct T1 &)' <FunctionToPointerDecay>
+    |           | `-DeclRefExpr 0x7fc2ea077530 <col:14> 'struct T1 (struct T1 &, struct T1 &)' lvalue Function 0x7fc2ea0764a0 'operator-' 'struct T1 (struct T1 &, struct T1 &)'
+    |           |-DeclRefExpr 0x7fc2ea0774e0 <col:9> 'struct T1' lvalue Var 0x7fc2ea076f18 't1_1' 'struct T1'
+    |           `-DeclRefExpr 0x7fc2ea077508 <col:16> 'struct T1' lvalue Var 0x7fc2ea077040 't1_2' 'struct T1'
+    |-ExprWithCleanups 0x7fc2ea077d68 <line:38:5, col:16> 'struct T1' lvalue
+    | `-CXXOperatorCallExpr 0x7fc2ea077d20 <col:5, col:16> 'struct T1' lvalue
+    |   |-ImplicitCastExpr 0x7fc2ea077d08 <col:7> 'struct T1 &(*)(const struct T1 &) noexcept' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fc2ea077ce0 <col:7> 'struct T1 &(const struct T1 &) noexcept' lvalue CXXMethod 0x7fc2ea077610 'operator=' 'struct T1 &(const struct T1 &) noexcept'
+    |   |-DeclRefExpr 0x7fc2ea077a70 <col:5> 'struct T1':'struct T1' lvalue Var 0x7fc2ea077190 't' 'struct T1':'struct T1'
+    |   `-MaterializeTemporaryExpr 0x7fc2ea077cc8 <col:9, col:16> 'const struct T1' lvalue
+    |     `-ImplicitCastExpr 0x7fc2ea077cb0 <col:9, col:16> 'const struct T1' <NoOp>
+    |       `-CXXBindTemporaryExpr 0x7fc2ea077c90 <col:9, col:16> 'struct T1' (CXXTemporary 0x7fc2ea077c88)
+    |         `-CXXOperatorCallExpr 0x7fc2ea077c40 <col:9, col:16> 'struct T1'
+    |           |-ImplicitCastExpr 0x7fc2ea077c28 <col:14> 'struct T1 (*)(struct T1, struct T1)' <FunctionToPointerDecay>
+    |           | `-DeclRefExpr 0x7fc2ea077bd8 <col:14> 'struct T1 (struct T1, struct T1)' lvalue Function 0x7fc2ea0769f0 'operator*' 'struct T1 (struct T1, struct T1)'
+    |           |-CXXBindTemporaryExpr 0x7fc2ea077b40 <col:9> 'struct T1' (CXXTemporary 0x7fc2ea077b38)
+    |           | `-CXXConstructExpr 0x7fc2ea077b00 <col:9> 'struct T1' 'void (const struct T1 &) noexcept'
+    |           |   `-ImplicitCastExpr 0x7fc2ea077ae8 <col:9> 'const struct T1' lvalue <NoOp>
+    |           |     `-DeclRefExpr 0x7fc2ea077a98 <col:9> 'struct T1' lvalue Var 0x7fc2ea076f18 't1_1' 'struct T1'
+    |           `-CXXBindTemporaryExpr 0x7fc2ea077bb8 <col:16> 'struct T1' (CXXTemporary 0x7fc2ea077bb0)
+    |             `-CXXConstructExpr 0x7fc2ea077b78 <col:16> 'struct T1' 'void (const struct T1 &) noexcept'
+    |               `-ImplicitCastExpr 0x7fc2ea077b60 <col:16> 'const struct T1' lvalue <NoOp>
+    |                 `-DeclRefExpr 0x7fc2ea077ac0 <col:16> 'struct T1' lvalue Var 0x7fc2ea077040 't1_2' 'struct T1'
+    `-ReturnStmt 0x7fc2ea077da0 <line:39:5, col:12>
+      `-IntegerLiteral 0x7fc2ea077d80 <col:12> 'int' 0

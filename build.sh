@@ -398,7 +398,7 @@ function perform_actions () {
 
     remove_a_out
 
-    printf "Successfully completed the file generation"
+    printf "Successfully completed the file generation\n"
 }
 
 function main () {
