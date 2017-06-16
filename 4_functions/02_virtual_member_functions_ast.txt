@@ -13,7 +13,7 @@ TranslationUnitDecl 0x7fad4d8324d0 <<invalid sloc>> <invalid sloc>
 | `-ConstantArrayType 0x7fad4d833190 'struct __va_list_tag [1]' 1 
 |   `-RecordType 0x7fad4d832fa0 'struct __va_list_tag'
 |     `-CXXRecord 0x7fad4d832f08 '__va_list_tag'
-|-CXXRecordDecl 0x7fad4d865658 </Users/tskull/Documents/Programming/Cpp/object_model_refined/4_functions/02_virtual_member_functions.cpp:1:1, line:15:1> line:1:7 referenced class P1 definition
+|-CXXRecordDecl 0x7fad4d865658 <object_model_refined/4_functions/02_virtual_member_functions.cpp:1:1, line:15:1> line:1:7 referenced class P1 definition
 | |-CXXRecordDecl 0x7fad4d865778 <col:1, col:7> col:7 implicit referenced class P1
 | |-AccessSpecDecl 0x7fad4d865810 <line:2:1, col:7> col:1 public
 | |-CXXDestructorDecl 0x7fad4d8658f0 <line:3:5, col:27> col:13 used ~P1 'void (void) noexcept' virtual default

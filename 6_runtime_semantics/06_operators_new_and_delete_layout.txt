@@ -8,7 +8,7 @@
            |  nvsize=24, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f828e868658 </Users/tskull/Documents/Programming/Cpp/object_model_refined/6_runtime_semantics/06_operators_new_and_delete.cpp:1:1, line:5:1> line:1:8 referenced struct P3 definition
+Record: CXXRecordDecl 0x7f828e868658 <object_model_refined/6_runtime_semantics/06_operators_new_and_delete.cpp:1:1, line:5:1> line:1:8 referenced struct P3 definition
 |-CXXRecordDecl 0x7f828e868778 <col:1, col:8> col:8 implicit struct P3
 |-FieldDecl 0x7f828e868828 <line:2:5, col:12> col:12 _x 'double'
 |-FieldDecl 0x7f828e868888 <line:3:5, col:12> col:12 _y 'double'

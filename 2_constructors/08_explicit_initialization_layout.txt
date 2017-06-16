@@ -6,7 +6,7 @@
            |  nvsize=4, nvalign=4]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fd669068c88 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/08_explicit_initialization.cpp:15:1, line:23:1> line:15:8 referenced struct X definition
+Record: CXXRecordDecl 0x7fd669068c88 <object_model_refined/2_constructors/08_explicit_initialization.cpp:15:1, line:23:1> line:15:8 referenced struct X definition
 |-FullComment 0x7fd6690960a0 <line:2:3, line:12:81>
 | |-ParagraphComment 0x7fd669095ee0 <line:2:3, col:24>
 | | `-TextComment 0x7fd669095eb0 <col:3, col:24> Text=" from cppreference.com"
@@ -54,7 +54,7 @@ Layout: <CGRecordLayout
            |  nvsize=4, nvalign=4]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fd669069458 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/08_explicit_initialization.cpp:25:1, line:33:1> line:25:8 referenced struct Y definition
+Record: CXXRecordDecl 0x7fd669069458 <object_model_refined/2_constructors/08_explicit_initialization.cpp:25:1, line:33:1> line:25:8 referenced struct Y definition
 |-CXXRecordDecl 0x7fd669069578 <col:1, col:8> col:8 implicit referenced struct Y
 |-FieldDecl 0x7fd669069628 <line:26:5, col:13> col:9 y 'int'
 | `-IntegerLiteral 0x7fd669069a48 <col:13> 'int' 0

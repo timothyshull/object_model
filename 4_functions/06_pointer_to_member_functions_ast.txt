@@ -13,7 +13,7 @@ TranslationUnitDecl 0x7fe1230324d0 <<invalid sloc>> <invalid sloc>
 | `-ConstantArrayType 0x7fe123033190 'struct __va_list_tag [1]' 1 
 |   `-RecordType 0x7fe123032fa0 'struct __va_list_tag'
 |     `-CXXRecord 0x7fe123032f08 '__va_list_tag'
-|-CXXRecordDecl 0x7fe123065c58 </Users/tskull/Documents/Programming/Cpp/object_model_refined/4_functions/06_pointer_to_member_functions.cpp:2:1, line:4:1> line:2:8 referenced struct B1 definition
+|-CXXRecordDecl 0x7fe123065c58 <object_model_refined/4_functions/06_pointer_to_member_functions.cpp:2:1, line:4:1> line:2:8 referenced struct B1 definition
 | |-CXXRecordDecl 0x7fe123065d78 <col:1, col:8> col:8 implicit struct B1
 | |-CXXMethodDecl 0x7fe123065e90 <line:3:5, col:15> col:10 used m 'void (void)'
 | | `-CompoundStmt 0x7fe123065f48 <col:14, col:15>

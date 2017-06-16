@@ -15,7 +15,7 @@
            |  nvsize=24, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f9576868658 </Users/tskull/Documents/Programming/Cpp/object_model_refined/3_data/03_inheritance_and_the_data_members.cpp:2:1, line:5:1> line:2:8 referenced struct P1 definition
+Record: CXXRecordDecl 0x7f9576868658 <object_model_refined/3_data/03_inheritance_and_the_data_members.cpp:2:1, line:5:1> line:2:8 referenced struct P1 definition
 |-CXXRecordDecl 0x7f9576868778 <col:1, col:8> col:8 implicit struct P1
 |-FieldDecl 0x7f9576868828 <line:3:5, col:12> col:12 referenced x 'double'
 `-FieldDecl 0x7f9576868888 <line:4:5, col:12> col:12 referenced y 'double'
@@ -28,7 +28,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f95768688f0 </Users/tskull/Documents/Programming/Cpp/object_model_refined/3_data/03_inheritance_and_the_data_members.cpp:7:1, line:11:1> line:7:8 referenced struct P2 definition
+Record: CXXRecordDecl 0x7f95768688f0 <object_model_refined/3_data/03_inheritance_and_the_data_members.cpp:7:1, line:11:1> line:7:8 referenced struct P2 definition
 |-CXXRecordDecl 0x7f9576868a18 <col:1, col:8> col:8 implicit struct P2
 |-FieldDecl 0x7f9576868ac8 <line:8:5, col:12> col:12 referenced x 'double'
 |-FieldDecl 0x7f9576868b28 <line:9:5, col:12> col:12 referenced y 'double'

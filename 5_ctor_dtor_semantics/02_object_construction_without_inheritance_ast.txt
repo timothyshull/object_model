@@ -13,7 +13,7 @@ TranslationUnitDecl 0x7fcaa90324d0 <<invalid sloc>> <invalid sloc>
 | `-ConstantArrayType 0x7fcaa9033190 'struct __va_list_tag [1]' 1 
 |   `-RecordType 0x7fcaa9032fa0 'struct __va_list_tag'
 |     `-CXXRecord 0x7fcaa9032f08 '__va_list_tag'
-|-CXXRecordDecl 0x7fcaa9065658 </Users/tskull/Documents/Programming/Cpp/object_model_refined/5_ctor_dtor_semantics/02_object_construction_without_inheritance.cpp:1:1, line:5:1> line:1:8 referenced struct Point definition
+|-CXXRecordDecl 0x7fcaa9065658 <object_model_refined/5_ctor_dtor_semantics/02_object_construction_without_inheritance.cpp:1:1, line:5:1> line:1:8 referenced struct Point definition
 | |-CXXRecordDecl 0x7fcaa9065778 <col:1, col:8> col:8 implicit struct Point
 | |-FieldDecl 0x7fcaa9065828 <line:2:5, col:12> col:12 referenced x 'double'
 | |-FieldDecl 0x7fcaa9065888 <line:3:5, col:12> col:12 referenced y 'double'

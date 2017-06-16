@@ -8,6 +8,7 @@ add_executable(02_exceptions 02_exceptions.cpp)
 target_compile_definitions(02_exceptions PUBLIC USE_EXCEPTIONS=1)
 
 add_executable(02_exceptions_no_except 02_exceptions.cpp)
+target_compile_options(02_exceptions_no_except PUBLIC -fno-exceptions)
 
 add_executable(03_runtime_type_identification 03_runtime_type_identification.cpp)
 add_executable(04_a_type_safe_dynamic_cast 04_a_type_safe_dynamic_cast.cpp)

@@ -1125,7 +1125,7 @@
            |  nvsize=1248, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f9fba6f3be8 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/11_member_initialization_list.cpp:5:1, line:9:1> line:5:8 referenced struct B definition
+Record: CXXRecordDecl 0x7f9fba6f3be8 <object_model_refined/2_constructors/11_member_initialization_list.cpp:5:1, line:9:1> line:5:8 referenced struct B definition
 |-CXXRecordDecl 0x7f9fba6f3d08 <col:1, col:8> col:8 implicit referenced struct B
 |-FieldDecl 0x7f9fba6f3db8 <line:6:5, col:9> col:9 n 'int'
 |-CXXConstructorDecl 0x7f9fba6f3ef0 <line:8:5, col:22> col:5 used B 'void (int)'
@@ -3100,7 +3100,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f9fba6f4078 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/11_member_initialization_list.cpp:11:1, line:40:1> line:11:8 referenced struct C definition
+Record: CXXRecordDecl 0x7f9fba6f4078 <object_model_refined/2_constructors/11_member_initialization_list.cpp:11:1, line:40:1> line:11:8 referenced struct C definition
 |-public 'struct B'
 |-CXXRecordDecl 0x7f9fba6f41d8 <col:1, col:8> col:8 implicit referenced struct C
 |-FieldDecl 0x7f9fba6f4288 <line:12:5, col:19> col:19 x 'unsigned char'

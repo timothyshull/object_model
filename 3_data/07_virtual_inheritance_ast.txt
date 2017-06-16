@@ -13,7 +13,7 @@ TranslationUnitDecl 0x7fd4bb0324d0 <<invalid sloc>> <invalid sloc>
 | `-ConstantArrayType 0x7fd4bb033190 'struct __va_list_tag [1]' 1 
 |   `-RecordType 0x7fd4bb032fa0 'struct __va_list_tag'
 |     `-CXXRecord 0x7fd4bb032f08 '__va_list_tag'
-|-CXXRecordDecl 0x7fd4bb065658 </Users/tskull/Documents/Programming/Cpp/object_model_refined/3_data/07_virtual_inheritance.cpp:1:1, line:4:1> line:1:8 referenced struct P2 definition
+|-CXXRecordDecl 0x7fd4bb065658 <object_model_refined/3_data/07_virtual_inheritance.cpp:1:1, line:4:1> line:1:8 referenced struct P2 definition
 | |-CXXRecordDecl 0x7fd4bb065778 <col:1, col:8> col:8 implicit struct P2
 | |-FieldDecl 0x7fd4bb065828 <line:2:5, col:12> col:12 referenced x 'double'
 | |-FieldDecl 0x7fd4bb065888 <line:3:5, col:12> col:12 referenced y 'double'

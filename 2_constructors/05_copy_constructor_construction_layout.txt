@@ -6,7 +6,7 @@
            |  nvsize=4, nvalign=4]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fa011867658 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/05_copy_constructor_construction.cpp:3:1, line:11:1> line:3:8 referenced struct A definition
+Record: CXXRecordDecl 0x7fa011867658 <object_model_refined/2_constructors/05_copy_constructor_construction.cpp:3:1, line:11:1> line:3:8 referenced struct A definition
 |-CXXRecordDecl 0x7fa011867778 <col:1, col:8> col:8 implicit referenced struct A
 |-FieldDecl 0x7fa011867828 <line:4:5, col:9> col:9 referenced n 'int'
 |-CXXConstructorDecl 0x7fa0118679a0 <line:6:5, col:26> col:5 used A 'void (int)'
@@ -44,7 +44,7 @@ Layout: <CGRecordLayout
            |  nvsize=4, nvalign=4]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fa011868018 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/05_copy_constructor_construction.cpp:13:1, col:15> col:8 referenced struct B definition
+Record: CXXRecordDecl 0x7fa011868018 <object_model_refined/2_constructors/05_copy_constructor_construction.cpp:13:1, col:15> col:8 referenced struct B definition
 |-public 'struct A'
 |-CXXRecordDecl 0x7fa011868178 <col:1, col:8> col:8 implicit referenced struct B
 |-CXXConstructorDecl 0x7fa011868258 <col:8> col:8 implicit B 'void (struct B &&)' inline default noexcept-unevaluated 0x7fa011868258
@@ -81,7 +81,7 @@ Layout: <CGRecordLayout
            |  nvsize=4, nvalign=4]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fa011894088 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/05_copy_constructor_construction.cpp:15:1, line:19:1> line:15:8 referenced struct C definition
+Record: CXXRecordDecl 0x7fa011894088 <object_model_refined/2_constructors/05_copy_constructor_construction.cpp:15:1, line:19:1> line:15:8 referenced struct C definition
 |-public 'struct B'
 |-CXXRecordDecl 0x7fa0118941e8 <col:1, col:8> col:8 implicit referenced struct C
 |-CXXConstructorDecl 0x7fa0118942e8 <line:16:5, col:16> col:5 used C 'void (void)'

@@ -16,7 +16,7 @@
            |  nvsize=9, nvalign=4]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fcd00095c78 </Users/tskull/Documents/Programming/Cpp/object_model_refined/3_data/04_inheritance_without_polymorphism.cpp:37:1, line:40:1> line:37:8 referenced struct C1 definition
+Record: CXXRecordDecl 0x7fcd00095c78 <object_model_refined/3_data/04_inheritance_without_polymorphism.cpp:37:1, line:40:1> line:37:8 referenced struct C1 definition
 |-CXXRecordDecl 0x7fcd00096200 <col:1, col:8> col:8 implicit struct C1
 |-FieldDecl 0x7fcd000962b0 <line:38:5, col:9> col:9 referenced v 'int'
 |-FieldDecl 0x7fcd00096308 <line:39:5, col:10> col:10 referenced b1 'char'
@@ -56,7 +56,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fcd00096370 </Users/tskull/Documents/Programming/Cpp/object_model_refined/3_data/04_inheritance_without_polymorphism.cpp:42:1, line:44:1> line:42:8 referenced struct C2 definition
+Record: CXXRecordDecl 0x7fcd00096370 <object_model_refined/3_data/04_inheritance_without_polymorphism.cpp:42:1, line:44:1> line:42:8 referenced struct C2 definition
 |-public 'struct C1'
 |-CXXRecordDecl 0x7fcd000964d8 <col:1, col:8> col:8 implicit struct C2
 |-FieldDecl 0x7fcd00096580 <line:43:5, col:10> col:10 b2 'char'

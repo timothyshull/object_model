@@ -13,7 +13,7 @@ TranslationUnitDecl 0x7fac990324d0 <<invalid sloc>> <invalid sloc>
 | `-ConstantArrayType 0x7fac99033190 'struct __va_list_tag [1]' 1 
 |   `-RecordType 0x7fac99032fa0 'struct __va_list_tag'
 |     `-CXXRecord 0x7fac99032f08 '__va_list_tag'
-|-CXXRecordDecl 0x7fac99065e58 </Users/tskull/Documents/Programming/Cpp/object_model_refined/5_ctor_dtor_semantics/04_virtual_inheritance.cpp:2:1, line:6:1> line:2:8 referenced struct B1 definition
+|-CXXRecordDecl 0x7fac99065e58 <object_model_refined/5_ctor_dtor_semantics/04_virtual_inheritance.cpp:2:1, line:6:1> line:2:8 referenced struct B1 definition
 | |-CXXRecordDecl 0x7fac99065f78 <col:1, col:8> col:8 implicit referenced struct B1
 | |-CXXConstructorDecl 0x7fac990660b0 <line:3:5, col:11> col:5 used B1 'void (void)'
 | | `-CompoundStmt 0x7fac99066468 <col:10, col:11>

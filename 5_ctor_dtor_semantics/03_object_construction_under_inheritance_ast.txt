@@ -13,7 +13,7 @@ TranslationUnitDecl 0x7f93af0324d0 <<invalid sloc>> <invalid sloc>
 | `-ConstantArrayType 0x7f93af033190 'struct __va_list_tag [1]' 1 
 |   `-RecordType 0x7f93af032fa0 'struct __va_list_tag'
 |     `-CXXRecord 0x7f93af032f08 '__va_list_tag'
-|-CXXRecordDecl 0x7f93af065658 </Users/tskull/Documents/Programming/Cpp/object_model_refined/5_ctor_dtor_semantics/03_object_construction_under_inheritance.cpp:1:1, line:5:1> line:1:8 referenced struct B1 definition
+|-CXXRecordDecl 0x7f93af065658 <object_model_refined/5_ctor_dtor_semantics/03_object_construction_under_inheritance.cpp:1:1, line:5:1> line:1:8 referenced struct B1 definition
 | |-CXXRecordDecl 0x7f93af065778 <col:1, col:8> col:8 implicit referenced struct B1
 | |-CXXConstructorDecl 0x7f93af0658b0 <line:2:5, col:11> col:5 used B1 'void (void)'
 | | `-CompoundStmt 0x7f93af065c68 <col:10, col:11>

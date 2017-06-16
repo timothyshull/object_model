@@ -1,12 +1,16 @@
+#ifdef USE_EXCEPTIONS
 #include <exception>
+#endif
 
 // #define USE_EXCEPTIONS
 
 int func1(bool b);
 
+#ifdef USE_EXCEPTIONS
 struct Error_t : public std::exception {
     const char *what() const noexcept { return "Error_t\n"; };
 };
+#endif
 
 void func2(bool b)
 {

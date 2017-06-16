@@ -1935,7 +1935,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f8e65187ae0 </Users/tskull/Documents/Programming/Cpp/object_model_refined/7_object_model/03_runtime_type_identification.cpp:4:1, col:11> col:8 referenced struct B definition
+Record: CXXRecordDecl 0x7f8e65187ae0 <object_model_refined/7_object_model/03_runtime_type_identification.cpp:4:1, col:11> col:8 referenced struct B definition
 |-CXXRecordDecl 0x7f8e65187c08 <col:1, col:8> col:8 implicit struct B
 |-CXXConstructorDecl 0x7f8e651899b8 <col:8> col:8 implicit constexpr B 'void (void) noexcept' inline default trivial
 |-CXXDestructorDecl 0x7f8e65189a98 <col:8> col:8 implicit ~B 'void (void)' inline default trivial noexcept-unevaluated 0x7f8e65189a98
@@ -1952,7 +1952,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f8e65187cc0 </Users/tskull/Documents/Programming/Cpp/object_model_refined/7_object_model/03_runtime_type_identification.cpp:5:1, col:21> col:8 referenced struct Derived definition
+Record: CXXRecordDecl 0x7f8e65187cc0 <object_model_refined/7_object_model/03_runtime_type_identification.cpp:5:1, col:21> col:8 referenced struct Derived definition
 |-public 'struct B'
 |-CXXRecordDecl 0x7f8e65187e28 <col:1, col:8> col:8 implicit struct Derived
 |-CXXConstructorDecl 0x7f8e651898b0 <col:8> col:8 implicit referenced constexpr Derived 'void (void) noexcept' inline default trivial
@@ -1969,7 +1969,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f8e65187ee0 </Users/tskull/Documents/Programming/Cpp/object_model_refined/7_object_model/03_runtime_type_identification.cpp:7:1, line:9:1> line:7:8 referenced struct B2 definition
+Record: CXXRecordDecl 0x7f8e65187ee0 <object_model_refined/7_object_model/03_runtime_type_identification.cpp:7:1, line:9:1> line:7:8 referenced struct B2 definition
 |-CXXRecordDecl 0x7f8e65188008 <col:1, col:8> col:8 implicit struct B2
 |-CXXMethodDecl 0x7f8e651880e8 <line:8:5, col:25> col:18 foo 'void (void)' virtual
 | `-CompoundStmt 0x7f8e65188608 <col:24, col:25>
@@ -1993,7 +1993,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f8e65188620 </Users/tskull/Documents/Programming/Cpp/object_model_refined/7_object_model/03_runtime_type_identification.cpp:11:1, col:23> col:8 referenced struct Derived2 definition
+Record: CXXRecordDecl 0x7f8e65188620 <object_model_refined/7_object_model/03_runtime_type_identification.cpp:11:1, col:23> col:8 referenced struct Derived2 definition
 |-public 'struct B2'
 |-CXXRecordDecl 0x7f8e65188788 <col:1, col:8> col:8 implicit struct Derived2
 |-CXXMethodDecl 0x7f8e65188878 <col:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct Derived2 &(const struct Derived2 &)' inline default noexcept-unevaluated 0x7f8e65188878

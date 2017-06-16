@@ -49,7 +49,7 @@
            |  nvsize=28, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fafc1867c58 </Users/tskull/Documents/Programming/Cpp/object_model_refined/4_functions/05_virtual_functions_under_virtual_inheritance.cpp:1:1, line:7:1> line:1:8 referenced struct B definition
+Record: CXXRecordDecl 0x7fafc1867c58 <object_model_refined/4_functions/05_virtual_functions_under_virtual_inheritance.cpp:1:1, line:7:1> line:1:8 referenced struct B definition
 |-CXXRecordDecl 0x7fafc1867d78 <col:1, col:8> col:8 implicit struct B
 |-FieldDecl 0x7fafc1867e28 <line:2:5, col:9> col:9 referenced n 'int'
 |-CXXMethodDecl 0x7fafc1867ef0 <line:4:5, line:6:5> line:4:18 m 'void (void)' virtual
@@ -78,7 +78,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fafc18684d0 </Users/tskull/Documents/Programming/Cpp/object_model_refined/4_functions/05_virtual_functions_under_virtual_inheritance.cpp:9:1, line:13:1> line:9:7 referenced class X definition
+Record: CXXRecordDecl 0x7fafc18684d0 <object_model_refined/4_functions/05_virtual_functions_under_virtual_inheritance.cpp:9:1, line:13:1> line:9:7 referenced class X definition
 |-virtual public 'struct B'
 |-CXXRecordDecl 0x7fafc1868650 <col:1, col:7> col:7 implicit class X
 |-CXXMethodDecl 0x7fafc1868738 <line:10:5, line:12:5> line:10:18 m 'void (void)' virtual
@@ -111,7 +111,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fafc1895218 </Users/tskull/Documents/Programming/Cpp/object_model_refined/4_functions/05_virtual_functions_under_virtual_inheritance.cpp:15:1, line:19:1> line:15:7 referenced class Y definition
+Record: CXXRecordDecl 0x7fafc1895218 <object_model_refined/4_functions/05_virtual_functions_under_virtual_inheritance.cpp:15:1, line:19:1> line:15:7 referenced class Y definition
 |-virtual public 'struct B'
 |-CXXRecordDecl 0x7fafc1895390 <col:1, col:7> col:7 implicit class Y
 |-CXXMethodDecl 0x7fafc1895478 <line:16:5, line:18:5> line:16:18 m 'void (void)' virtual
@@ -144,7 +144,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fafc1895b10 </Users/tskull/Documents/Programming/Cpp/object_model_refined/4_functions/05_virtual_functions_under_virtual_inheritance.cpp:21:1, line:25:1> line:21:7 referenced class Z definition
+Record: CXXRecordDecl 0x7fafc1895b10 <object_model_refined/4_functions/05_virtual_functions_under_virtual_inheritance.cpp:21:1, line:25:1> line:21:7 referenced class Z definition
 |-public 'struct B'
 |-CXXRecordDecl 0x7fafc1895c78 <col:1, col:7> col:7 implicit class Z
 |-CXXMethodDecl 0x7fafc1895d58 <line:22:5, line:24:5> line:22:18 m 'void (void)' virtual
@@ -177,7 +177,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fafc1896c40 </Users/tskull/Documents/Programming/Cpp/object_model_refined/4_functions/05_virtual_functions_under_virtual_inheritance.cpp:27:1, line:34:1> line:27:8 referenced struct AA definition
+Record: CXXRecordDecl 0x7fafc1896c40 <object_model_refined/4_functions/05_virtual_functions_under_virtual_inheritance.cpp:27:1, line:34:1> line:27:8 referenced struct AA definition
 |-public 'class X'
 |-public 'class Y'
 |-public 'class Z'

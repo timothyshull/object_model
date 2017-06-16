@@ -8,7 +8,7 @@
            |  nvsize=24, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fca76812a58 </Users/tskull/Documents/Programming/Cpp/object_model_refined/3_data/05_adding_polymorphism.cpp:1:1, line:42:1> line:1:7 referenced class P2 definition
+Record: CXXRecordDecl 0x7fca76812a58 <object_model_refined/3_data/05_adding_polymorphism.cpp:1:1, line:42:1> line:1:7 referenced class P2 definition
 |-CXXRecordDecl 0x7fca76812b78 <col:1, col:7> col:7 implicit referenced class P2
 |-AccessSpecDecl 0x7fca76812c10 <line:2:1, col:7> col:1 public
 |-CXXConstructorDecl 0x7fca76812df0 <line:3:5, col:44> col:5 P2 'void (double, double)'
@@ -109,7 +109,7 @@ Layout: <CGRecordLayout
            |  nvsize=20, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fca7684aa28 </Users/tskull/Documents/Programming/Cpp/object_model_refined/3_data/05_adding_polymorphism.cpp:73:1, line:76:1> line:73:8 referenced struct C definition
+Record: CXXRecordDecl 0x7fca7684aa28 <object_model_refined/3_data/05_adding_polymorphism.cpp:73:1, line:76:1> line:73:8 referenced struct C definition
 |-CXXRecordDecl 0x7fca7684ab48 <col:1, col:8> col:8 implicit struct C
 |-FieldDecl 0x7fca7684abf8 <line:74:5, col:9> col:9 d1 'int'
 |-FieldDecl 0x7fca7684ac58 <line:75:5, col:9> col:9 d2 'int'
@@ -133,7 +133,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fca7684acc0 </Users/tskull/Documents/Programming/Cpp/object_model_refined/3_data/05_adding_polymorphism.cpp:78:1, line:84:1> line:78:7 referenced class V definition
+Record: CXXRecordDecl 0x7fca7684acc0 <object_model_refined/3_data/05_adding_polymorphism.cpp:78:1, line:84:1> line:78:7 referenced class V definition
 |-public 'struct C'
 |-CXXRecordDecl 0x7fca7684ae28 <col:1, col:7> col:7 implicit class V
 |-AccessSpecDecl 0x7fca7684aec0 <line:79:1, col:7> col:1 public

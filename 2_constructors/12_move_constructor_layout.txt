@@ -1844,7 +1844,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7ff55d9e6700 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/12_move_constructor.cpp:5:1, line:13:1> line:5:8 referenced struct A definition
+Record: CXXRecordDecl 0x7ff55d9e6700 <object_model_refined/2_constructors/12_move_constructor.cpp:5:1, line:13:1> line:5:8 referenced struct A definition
 |-CXXRecordDecl 0x7ff55d9e6828 <col:1, col:8> col:8 implicit referenced struct A
 |-FieldDecl 0x7ff55d9e6940 <line:6:5, col:17> col:17 referenced s 'std::string':'class std::__1::basic_string<char>'
 |-CXXConstructorDecl 0x7ff55d9e69f8 <line:8:5, col:22> col:5 A 'void (void)'
@@ -1925,7 +1925,7 @@ Layout: <CGRecordLayout
            |  nvsize=52, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7ff55d9e8910 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/12_move_constructor.cpp:20:1, line:23:1> line:20:8 referenced struct B definition
+Record: CXXRecordDecl 0x7ff55d9e8910 <object_model_refined/2_constructors/12_move_constructor.cpp:20:1, line:23:1> line:20:8 referenced struct B definition
 |-public 'struct A'
 |-CXXRecordDecl 0x7ff55d9e8a78 <col:1, col:8> col:8 implicit struct B
 |-FieldDecl 0x7ff55d9e8b60 <line:21:5, col:17> col:17 referenced s2 'std::string':'class std::__1::basic_string<char>'
@@ -2028,7 +2028,7 @@ Layout: <CGRecordLayout
            |  nvsize=52, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7ff55d9e9248 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/12_move_constructor.cpp:25:1, line:27:1> line:25:8 referenced struct C definition
+Record: CXXRecordDecl 0x7ff55d9e9248 <object_model_refined/2_constructors/12_move_constructor.cpp:25:1, line:27:1> line:25:8 referenced struct C definition
 |-public 'struct B'
 |-CXXRecordDecl 0x7ff55d9e93a8 <col:1, col:8> col:8 implicit referenced struct C
 |-CXXDestructorDecl 0x7ff55d9e94b8 <line:26:5, col:11> col:5 used ~C 'void (void) noexcept'
@@ -2099,7 +2099,7 @@ Layout: <CGRecordLayout
            |  nvsize=52, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7ff55d9e95e0 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/12_move_constructor.cpp:29:1, line:35:1> line:29:8 referenced struct D definition
+Record: CXXRecordDecl 0x7ff55d9e95e0 <object_model_refined/2_constructors/12_move_constructor.cpp:29:1, line:35:1> line:29:8 referenced struct D definition
 |-public 'struct B'
 |-CXXRecordDecl 0x7ff55d9e9748 <col:1, col:8> col:8 implicit referenced struct D
 |-CXXConstructorDecl 0x7ff55d9e9848 <line:30:5, col:10> col:5 used D 'void (void)'

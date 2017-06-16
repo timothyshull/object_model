@@ -260,7 +260,7 @@
            |  nvsize=16, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fbbe1858900 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/07_bitwise_copy_semantics.cpp:4:1, line:18:1> line:4:8 referenced struct S1 definition
+Record: CXXRecordDecl 0x7fbbe1858900 <object_model_refined/2_constructors/07_bitwise_copy_semantics.cpp:4:1, line:18:1> line:4:8 referenced struct S1 definition
 |-CXXRecordDecl 0x7fbbe1858a28 <col:1, col:8> col:8 implicit referenced struct S1
 |-FieldDecl 0x7fbbe1858b40 <line:5:5, col:17> col:17 referenced n 'std::size_t':'unsigned long'
 |-FieldDecl 0x7fbbe1858ba0 <line:6:5, col:15> col:11 referenced s 'char *'
@@ -1923,7 +1923,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fbbe18596a0 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/07_bitwise_copy_semantics.cpp:21:1, line:28:1> line:21:8 referenced struct S2 definition
+Record: CXXRecordDecl 0x7fbbe18596a0 <object_model_refined/2_constructors/07_bitwise_copy_semantics.cpp:21:1, line:28:1> line:21:8 referenced struct S2 definition
 |-CXXRecordDecl 0x7fbbe18597c8 <col:1, col:8> col:8 implicit referenced struct S2
 |-FieldDecl 0x7fbbe18598b0 <line:22:5, col:17> col:17 referenced n 'std::size_t':'unsigned long'
 |-FieldDecl 0x7fbbe1859980 <line:23:5, col:17> col:17 referenced s 'std::string':'class std::__1::basic_string<char>'
