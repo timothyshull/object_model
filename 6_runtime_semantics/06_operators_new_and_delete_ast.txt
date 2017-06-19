@@ -1,55 +1,55 @@
-TranslationUnitDecl 0x7ff8738324d0 <<invalid sloc>> <invalid sloc>
-|-TypedefDecl 0x7ff873832a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
-| `-BuiltinType 0x7ff873832740 '__int128'
-|-TypedefDecl 0x7ff873832ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
-| `-BuiltinType 0x7ff873832760 'unsigned __int128'
-|-TypedefDecl 0x7ff873832e18 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
-| `-RecordType 0x7ff873832bc0 'struct __NSConstantString_tag'
-|   `-CXXRecord 0x7ff873832b28 '__NSConstantString_tag'
-|-TypedefDecl 0x7ff873832eb0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
-| `-PointerType 0x7ff873832e70 'char *'
-|   `-BuiltinType 0x7ff873832560 'char'
-|-TypedefDecl 0x7ff873865600 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
-| `-ConstantArrayType 0x7ff873833190 'struct __va_list_tag [1]' 1 
-|   `-RecordType 0x7ff873832fa0 'struct __va_list_tag'
-|     `-CXXRecord 0x7ff873832f08 '__va_list_tag'
-|-CXXRecordDecl 0x7ff873865658 <object_model_refined/6_runtime_semantics/06_operators_new_and_delete.cpp:1:1, line:5:1> line:1:8 referenced struct P3 definition
-| |-CXXRecordDecl 0x7ff873865778 <col:1, col:8> col:8 implicit struct P3
-| |-FieldDecl 0x7ff873865828 <line:2:5, col:12> col:12 _x 'double'
-| |-FieldDecl 0x7ff873865888 <line:3:5, col:12> col:12 _y 'double'
-| |-FieldDecl 0x7ff8738658e8 <line:4:5, col:12> col:12 _z 'double'
-| `-CXXDestructorDecl 0x7ff873873f48 <line:1:8> col:8 implicit ~P3 'void (void)' inline default trivial noexcept-unevaluated 0x7ff873873f48
-|-FunctionDecl 0x7ff8738659a8 <line:7:1, line:16:1> line:7:5 main 'int (void)'
-| `-CompoundStmt 0x7ff8738740b8 <line:8:1, line:16:1>
-|   |-DeclStmt 0x7ff873866330 <line:9:5, col:25>
-|   | `-VarDecl 0x7ff873865ae0 <col:5, col:24> col:10 used pi 'int *':'int *' cinit
-|   |   `-CXXNewExpr 0x7ff873866210 <col:15, col:24> 'int *' Function 0x7ff873865c28 'operator new' 'void *(unsigned long)'
-|   |     `-InitListExpr 0x7ff8738661c8 <col:22, col:24> 'int'
-|   |       `-IntegerLiteral 0x7ff873865b40 <col:23> 'int' 5
-|   |-CXXDeleteExpr 0x7ff873866388 <line:10:5, col:12> 'void' Function 0x7ff873865f38 'operator delete' 'void (void *) noexcept'
-|   | `-ImplicitCastExpr 0x7ff873866370 <col:12> 'int *':'int *' <LValueToRValue>
-|   |   `-DeclRefExpr 0x7ff873866348 <col:12> 'int *':'int *' lvalue Var 0x7ff873865ae0 'pi' 'int *':'int *'
-|   |-DeclStmt 0x7ff873873ef0 <line:12:5, col:23>
-|   | `-VarDecl 0x7ff8738663c0 <col:5, col:22> col:10 used pp 'struct P3 *':'struct P3 *' cinit
-|   |   `-CXXNewExpr 0x7ff873873e00 <col:15, col:22> 'struct P3 *' Function 0x7ff873865c28 'operator new' 'void *(unsigned long)'
-|   |     `-InitListExpr 0x7ff873866558 <col:21, col:22> 'struct P3'
-|   |       |-ImplicitValueInitExpr 0x7ff8738665b0 <<invalid sloc>> 'double'
-|   |       |-ImplicitValueInitExpr 0x7ff8738665c0 <<invalid sloc>> 'double'
-|   |       `-ImplicitValueInitExpr 0x7ff8738665d0 <<invalid sloc>> 'double'
-|   |-CXXDeleteExpr 0x7ff873874058 <line:13:5, col:12> 'void' Function 0x7ff873865f38 'operator delete' 'void (void *) noexcept'
-|   | `-ImplicitCastExpr 0x7ff873873f30 <col:12> 'struct P3 *':'struct P3 *' <LValueToRValue>
-|   |   `-DeclRefExpr 0x7ff873873f08 <col:12> 'struct P3 *':'struct P3 *' lvalue Var 0x7ff8738663c0 'pp' 'struct P3 *':'struct P3 *'
-|   `-ReturnStmt 0x7ff8738740a0 <line:15:5, col:12>
-|     `-IntegerLiteral 0x7ff873874080 <col:12> 'int' 0
-|-FunctionDecl 0x7ff873865c28 <<invalid sloc>> <invalid sloc> implicit used operator new 'void *(unsigned long)'
-| |-ParmVarDecl 0x7ff873865d08 <<invalid sloc>> <invalid sloc> implicit 'unsigned long'
-| `-VisibilityAttr 0x7ff873865cc0 <<invalid sloc>> Implicit Default
-|-FunctionDecl 0x7ff873865d70 <<invalid sloc>> <invalid sloc> implicit operator new[] 'void *(unsigned long)'
-| |-ParmVarDecl 0x7ff873865e50 <<invalid sloc>> <invalid sloc> implicit 'unsigned long'
-| `-VisibilityAttr 0x7ff873865e08 <<invalid sloc>> Implicit Default
-|-FunctionDecl 0x7ff873865f38 <<invalid sloc>> <invalid sloc> implicit used operator delete 'void (void *) noexcept'
-| |-ParmVarDecl 0x7ff873866018 <<invalid sloc>> <invalid sloc> implicit 'void *'
-| `-VisibilityAttr 0x7ff873865fd0 <<invalid sloc>> Implicit Default
-`-FunctionDecl 0x7ff873866080 <<invalid sloc>> <invalid sloc> implicit operator delete[] 'void (void *) noexcept'
-  |-ParmVarDecl 0x7ff873866160 <<invalid sloc>> <invalid sloc> implicit 'void *'
-  `-VisibilityAttr 0x7ff873866118 <<invalid sloc>> Implicit Default
+TranslationUnitDecl 0x7fa2070326d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa207032c60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa207032940 '__int128'
+|-TypedefDecl 0x7fa207032cd0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa207032960 'unsigned __int128'
+|-TypedefDecl 0x7fa207033018 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa207032dc0 'struct __NSConstantString_tag'
+|   `-CXXRecord 0x7fa207032d28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa2070330b0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa207033070 'char *'
+|   `-BuiltinType 0x7fa207032760 'char'
+|-TypedefDecl 0x7fa207803c00 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa207033390 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa2070331a0 'struct __va_list_tag'
+|     `-CXXRecord 0x7fa207033108 '__va_list_tag'
+|-CXXRecordDecl 0x7fa207803c58 </Users/tskull/Documents/Programming/Cpp/object_model_refined/6_runtime_semantics/06_operators_new_and_delete.cpp:1:1, line:5:1> line:1:8 referenced struct P3 definition
+| |-CXXRecordDecl 0x7fa207803d78 <col:1, col:8> col:8 implicit struct P3
+| |-FieldDecl 0x7fa207803e28 <line:2:5, col:12> col:12 _x 'double'
+| |-FieldDecl 0x7fa207803e88 <line:3:5, col:12> col:12 _y 'double'
+| |-FieldDecl 0x7fa207803ee8 <line:4:5, col:12> col:12 _z 'double'
+| `-CXXDestructorDecl 0x7fa207833148 <line:1:8> col:8 implicit ~P3 'void (void)' inline default trivial noexcept-unevaluated 0x7fa207833148
+|-FunctionDecl 0x7fa207803fa8 <line:7:1, line:16:1> line:7:5 main 'int (void)'
+| `-CompoundStmt 0x7fa2078332b8 <line:8:1, line:16:1>
+|   |-DeclStmt 0x7fa207804930 <line:9:5, col:25>
+|   | `-VarDecl 0x7fa2078040e0 <col:5, col:24> col:10 used pi 'int *':'int *' cinit
+|   |   `-CXXNewExpr 0x7fa207804810 <col:15, col:24> 'int *' Function 0x7fa207804228 'operator new' 'void *(unsigned long)'
+|   |     `-InitListExpr 0x7fa2078047c8 <col:22, col:24> 'int'
+|   |       `-IntegerLiteral 0x7fa207804140 <col:23> 'int' 5
+|   |-CXXDeleteExpr 0x7fa207804988 <line:10:5, col:12> 'void' Function 0x7fa207804538 'operator delete' 'void (void *) noexcept'
+|   | `-ImplicitCastExpr 0x7fa207804970 <col:12> 'int *':'int *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fa207804948 <col:12> 'int *':'int *' lvalue Var 0x7fa2078040e0 'pi' 'int *':'int *'
+|   |-DeclStmt 0x7fa2078330f0 <line:12:5, col:23>
+|   | `-VarDecl 0x7fa2078049c0 <col:5, col:22> col:10 used pp 'struct P3 *':'struct P3 *' cinit
+|   |   `-CXXNewExpr 0x7fa207833000 <col:15, col:22> 'struct P3 *' Function 0x7fa207804228 'operator new' 'void *(unsigned long)'
+|   |     `-InitListExpr 0x7fa207804b68 <col:21, col:22> 'struct P3'
+|   |       |-ImplicitValueInitExpr 0x7fa207804bc0 <<invalid sloc>> 'double'
+|   |       |-ImplicitValueInitExpr 0x7fa207804bd0 <<invalid sloc>> 'double'
+|   |       `-ImplicitValueInitExpr 0x7fa207804be0 <<invalid sloc>> 'double'
+|   |-CXXDeleteExpr 0x7fa207833258 <line:13:5, col:12> 'void' Function 0x7fa207804538 'operator delete' 'void (void *) noexcept'
+|   | `-ImplicitCastExpr 0x7fa207833130 <col:12> 'struct P3 *':'struct P3 *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fa207833108 <col:12> 'struct P3 *':'struct P3 *' lvalue Var 0x7fa2078049c0 'pp' 'struct P3 *':'struct P3 *'
+|   `-ReturnStmt 0x7fa2078332a0 <line:15:5, col:12>
+|     `-IntegerLiteral 0x7fa207833280 <col:12> 'int' 0
+|-FunctionDecl 0x7fa207804228 <<invalid sloc>> <invalid sloc> implicit used operator new 'void *(unsigned long)'
+| |-ParmVarDecl 0x7fa207804308 <<invalid sloc>> <invalid sloc> implicit 'unsigned long'
+| `-VisibilityAttr 0x7fa2078042c0 <<invalid sloc>> Implicit Default
+|-FunctionDecl 0x7fa207804370 <<invalid sloc>> <invalid sloc> implicit operator new[] 'void *(unsigned long)'
+| |-ParmVarDecl 0x7fa207804450 <<invalid sloc>> <invalid sloc> implicit 'unsigned long'
+| `-VisibilityAttr 0x7fa207804408 <<invalid sloc>> Implicit Default
+|-FunctionDecl 0x7fa207804538 <<invalid sloc>> <invalid sloc> implicit used operator delete 'void (void *) noexcept'
+| |-ParmVarDecl 0x7fa207804618 <<invalid sloc>> <invalid sloc> implicit 'void *'
+| `-VisibilityAttr 0x7fa2078045d0 <<invalid sloc>> Implicit Default
+`-FunctionDecl 0x7fa207804680 <<invalid sloc>> <invalid sloc> implicit operator delete[] 'void (void *) noexcept'
+  |-ParmVarDecl 0x7fa207804760 <<invalid sloc>> <invalid sloc> implicit 'void *'
+  `-VisibilityAttr 0x7fa207804718 <<invalid sloc>> Implicit Default

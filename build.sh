@@ -174,7 +174,35 @@ function iterate_source_files () {
     done
 }
 
-function generate_ast_file () {
+# NOTE: this requires graphviz to be installed and a debug build of clang
+function generate_ast_pdf_file () {
+    local clang_exe="${clang_path}/clang"
+    local dir="$1"
+    local in_file="$2"
+    local out_file="${in_file%.*}_ast.pdf"
+
+    # had to do this because of issue with command
+    ${clang_exe} -fsyntax-only -Xclang -ast-view --std=c++14 ${CXX_FLAGS} ${in_file} &> tmp.txt &
+    sleep 5
+    tmp_file=$(cat tmp.txt | grep file: | awk '{print $NF}')
+    rm -f tmp.txt
+    # command automatically attempts to open .dot file with Pages.app
+    kill $(ps -ax | grep Pages.app | grep -v grep | sed -E "s/([0-9]*).*Pages\.app.*/\\1/")
+    sleep 1
+    dot -Tpdf ${tmp_file} -o ${out_file}
+    sleep 5
+    rm -f ${tmp_file}
+
+    if [ $? -eq 0 ]
+    then
+        printf 'Generated the PDF AST file %s from the source file %s\n' "${out_file}" "${in_file}"
+    else
+        printf 'Unable to generate the PDF AST file %s from the source file %s...exiting\n' "${out_file}" "${in_file}" >&2
+        exit 2
+    fi
+}
+
+function generate_ast_text_file () {
     # General command
     # clang-check -p ${root_dir} -ast-dump file --extra-arg"-fno-color-diagnostics" -- > out
     local dir="$1"
@@ -184,18 +212,18 @@ function generate_ast_file () {
 
     if [ $? -eq 0 ]
     then
-        printf 'Generated the AST file %s from the source file %s\n' "${in_file}" "${out_file}"
+        printf 'Generated the AST file %s from the source file %s\n' "${out_file}" "${in_file}"
     else
-        printf 'Unable to generate the AST file %s from the source file %s...exiting\n' "${in_file}" "${out_file}" >&2
+        printf 'Unable to generate the AST file %s from the source file %s...exiting\n' "${out_file}" "${in_file}" >&2
         exit 2
     fi
-
 }
 
 function generate_all_ast_files () {
     export PATH="${clang_path}:$PATH"
     cd "${root_dir}"
-    iterate_source_files generate_ast_file
+    iterate_source_files generate_ast_text_file
+    # iterate_source_files generate_ast_pdf_file
 }
 
 function generate_object_layout_file () {
@@ -208,9 +236,9 @@ function generate_object_layout_file () {
 
     if [ $? -eq 0 ]
     then
-        printf 'Generated the object layout file %s from the source file %s\n' "${in_file}" "${out_file}"
+        printf 'Generated the object layout file %s from the source file %s\n' "${out_file}" "${in_file}"
     else
-        printf 'Unable to generate the object layout file %s from the source file %s...exiting\n' "${in_file}" "${out_file}" >&2
+        printf 'Unable to generate the object layout file %s from the source file %s...exiting\n' "${out_file}" "${in_file}" >&2
         exit 2
     fi
 }

@@ -1,59 +1,59 @@
-TranslationUnitDecl 0x7faf5301f4d0 <<invalid sloc>> <invalid sloc>
-|-TypedefDecl 0x7faf5301fa60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
-| `-BuiltinType 0x7faf5301f740 '__int128'
-|-TypedefDecl 0x7faf5301fad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
-| `-BuiltinType 0x7faf5301f760 'unsigned __int128'
-|-TypedefDecl 0x7faf5301fe18 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
-| `-RecordType 0x7faf5301fbc0 'struct __NSConstantString_tag'
-|   `-CXXRecord 0x7faf5301fb28 '__NSConstantString_tag'
-|-TypedefDecl 0x7faf5301feb0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
-| `-PointerType 0x7faf5301fe70 'char *'
-|   `-BuiltinType 0x7faf5301f560 'char'
-|-TypedefDecl 0x7faf53052600 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
-| `-ConstantArrayType 0x7faf53020190 'struct __va_list_tag [1]' 1 
-|   `-RecordType 0x7faf5301ffa0 'struct __va_list_tag'
-|     `-CXXRecord 0x7faf5301ff08 '__va_list_tag'
-|-CXXRecordDecl 0x7faf53052658 <object_model_refined/3_data/03_inheritance_and_the_data_members.cpp:2:1, line:5:1> line:2:8 referenced struct P1 definition
-| |-CXXRecordDecl 0x7faf53052778 <col:1, col:8> col:8 implicit struct P1
-| |-FieldDecl 0x7faf53052828 <line:3:5, col:12> col:12 referenced x 'double'
-| `-FieldDecl 0x7faf53052888 <line:4:5, col:12> col:12 referenced y 'double'
-|-CXXRecordDecl 0x7faf530528f0 <line:7:1, line:11:1> line:7:8 referenced struct P2 definition
-| |-CXXRecordDecl 0x7faf53052a18 <col:1, col:8> col:8 implicit struct P2
-| |-FieldDecl 0x7faf53052ac8 <line:8:5, col:12> col:12 referenced x 'double'
-| |-FieldDecl 0x7faf53052b28 <line:9:5, col:12> col:12 referenced y 'double'
-| `-FieldDecl 0x7faf53052b88 <line:10:5, col:12> col:12 referenced z 'double'
-`-FunctionDecl 0x7faf53052c48 <line:13:1, line:25:1> line:13:5 main 'int (void)'
-  `-CompoundStmt 0x7faf530534c8 <line:14:1, line:25:1>
-    |-DeclStmt 0x7faf53052f20 <line:15:5, col:12>
-    | `-VarDecl 0x7faf53052d58 <col:5, col:11> col:8 used p1 'struct P1' listinit
-    |   `-InitListExpr 0x7faf53052df8 <col:10, col:11> 'struct P1'
-    |     |-ImplicitValueInitExpr 0x7faf53052e48 <<invalid sloc>> 'double'
-    |     `-ImplicitValueInitExpr 0x7faf53052e58 <<invalid sloc>> 'double'
-    |-BinaryOperator 0x7faf53052fb8 <line:16:5, col:12> 'double' lvalue '='
-    | |-MemberExpr 0x7faf53052f60 <col:5, col:8> 'double' lvalue .x 0x7faf53052828
-    | | `-DeclRefExpr 0x7faf53052f38 <col:5> 'struct P1' lvalue Var 0x7faf53052d58 'p1' 'struct P1'
-    | `-FloatingLiteral 0x7faf53052f98 <col:12> 'double' 1.000000e+00
-    |-BinaryOperator 0x7faf53053060 <line:17:5, col:12> 'double' lvalue '='
-    | |-MemberExpr 0x7faf53053008 <col:5, col:8> 'double' lvalue .y 0x7faf53052888
-    | | `-DeclRefExpr 0x7faf53052fe0 <col:5> 'struct P1' lvalue Var 0x7faf53052d58 'p1' 'struct P1'
-    | `-FloatingLiteral 0x7faf53053040 <col:12> 'double' 2.000000e+00
-    |-DeclStmt 0x7faf53053280 <line:19:5, col:12>
-    | `-VarDecl 0x7faf53053098 <col:5, col:11> col:8 used p2 'struct P2' listinit
-    |   `-InitListExpr 0x7faf53053138 <col:10, col:11> 'struct P2'
-    |     |-ImplicitValueInitExpr 0x7faf53053190 <<invalid sloc>> 'double'
-    |     |-ImplicitValueInitExpr 0x7faf530531a0 <<invalid sloc>> 'double'
-    |     `-ImplicitValueInitExpr 0x7faf530531b0 <<invalid sloc>> 'double'
-    |-BinaryOperator 0x7faf53053318 <line:20:5, col:12> 'double' lvalue '='
-    | |-MemberExpr 0x7faf530532c0 <col:5, col:8> 'double' lvalue .x 0x7faf53052ac8
-    | | `-DeclRefExpr 0x7faf53053298 <col:5> 'struct P2' lvalue Var 0x7faf53053098 'p2' 'struct P2'
-    | `-FloatingLiteral 0x7faf530532f8 <col:12> 'double' 1.000000e+00
-    |-BinaryOperator 0x7faf530533c0 <line:21:5, col:12> 'double' lvalue '='
-    | |-MemberExpr 0x7faf53053368 <col:5, col:8> 'double' lvalue .y 0x7faf53052b28
-    | | `-DeclRefExpr 0x7faf53053340 <col:5> 'struct P2' lvalue Var 0x7faf53053098 'p2' 'struct P2'
-    | `-FloatingLiteral 0x7faf530533a0 <col:12> 'double' 2.000000e+00
-    |-BinaryOperator 0x7faf53053468 <line:22:5, col:12> 'double' lvalue '='
-    | |-MemberExpr 0x7faf53053410 <col:5, col:8> 'double' lvalue .z 0x7faf53052b88
-    | | `-DeclRefExpr 0x7faf530533e8 <col:5> 'struct P2' lvalue Var 0x7faf53053098 'p2' 'struct P2'
-    | `-FloatingLiteral 0x7faf53053448 <col:12> 'double' 3.000000e+00
-    `-ReturnStmt 0x7faf530534b0 <line:24:5, col:12>
-      `-IntegerLiteral 0x7faf53053490 <col:12> 'int' 0
+TranslationUnitDecl 0x7f959d019cd0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f959d01a260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f959d019f40 '__int128'
+|-TypedefDecl 0x7f959d01a2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f959d019f60 'unsigned __int128'
+|-TypedefDecl 0x7f959d01a618 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f959d01a3c0 'struct __NSConstantString_tag'
+|   `-CXXRecord 0x7f959d01a328 '__NSConstantString_tag'
+|-TypedefDecl 0x7f959d01a6b0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f959d01a670 'char *'
+|   `-BuiltinType 0x7f959d019d60 'char'
+|-TypedefDecl 0x7f959d04d200 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f959d01a990 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f959d01a7a0 'struct __va_list_tag'
+|     `-CXXRecord 0x7f959d01a708 '__va_list_tag'
+|-CXXRecordDecl 0x7f959d04d258 </Users/tskull/Documents/Programming/Cpp/object_model_refined/3_data/03_inheritance_and_the_data_members.cpp:2:1, line:5:1> line:2:8 referenced struct P1 definition
+| |-CXXRecordDecl 0x7f959d04d378 <col:1, col:8> col:8 implicit struct P1
+| |-FieldDecl 0x7f959d04d428 <line:3:5, col:12> col:12 referenced x 'double'
+| `-FieldDecl 0x7f959d04d488 <line:4:5, col:12> col:12 referenced y 'double'
+|-CXXRecordDecl 0x7f959d04d4f0 <line:7:1, line:11:1> line:7:8 referenced struct P2 definition
+| |-CXXRecordDecl 0x7f959d04d618 <col:1, col:8> col:8 implicit struct P2
+| |-FieldDecl 0x7f959d04d6c8 <line:8:5, col:12> col:12 referenced x 'double'
+| |-FieldDecl 0x7f959d04d728 <line:9:5, col:12> col:12 referenced y 'double'
+| `-FieldDecl 0x7f959d04d788 <line:10:5, col:12> col:12 referenced z 'double'
+`-FunctionDecl 0x7f959d04d848 <line:13:1, line:25:1> line:13:5 main 'int (void)'
+  `-CompoundStmt 0x7f959d04e0e8 <line:14:1, line:25:1>
+    |-DeclStmt 0x7f959d04db30 <line:15:5, col:12>
+    | `-VarDecl 0x7f959d04d958 <col:5, col:11> col:8 used p1 'struct P1' listinit
+    |   `-InitListExpr 0x7f959d04d9f8 <col:10, col:11> 'struct P1'
+    |     |-ImplicitValueInitExpr 0x7f959d04da48 <<invalid sloc>> 'double'
+    |     `-ImplicitValueInitExpr 0x7f959d04da58 <<invalid sloc>> 'double'
+    |-BinaryOperator 0x7f959d04dbc8 <line:16:5, col:12> 'double' lvalue '='
+    | |-MemberExpr 0x7f959d04db70 <col:5, col:8> 'double' lvalue .x 0x7f959d04d428
+    | | `-DeclRefExpr 0x7f959d04db48 <col:5> 'struct P1' lvalue Var 0x7f959d04d958 'p1' 'struct P1'
+    | `-FloatingLiteral 0x7f959d04dba8 <col:12> 'double' 1.000000e+00
+    |-BinaryOperator 0x7f959d04dc70 <line:17:5, col:12> 'double' lvalue '='
+    | |-MemberExpr 0x7f959d04dc18 <col:5, col:8> 'double' lvalue .y 0x7f959d04d488
+    | | `-DeclRefExpr 0x7f959d04dbf0 <col:5> 'struct P1' lvalue Var 0x7f959d04d958 'p1' 'struct P1'
+    | `-FloatingLiteral 0x7f959d04dc50 <col:12> 'double' 2.000000e+00
+    |-DeclStmt 0x7f959d04dea0 <line:19:5, col:12>
+    | `-VarDecl 0x7f959d04dca8 <col:5, col:11> col:8 used p2 'struct P2' listinit
+    |   `-InitListExpr 0x7f959d04dd48 <col:10, col:11> 'struct P2'
+    |     |-ImplicitValueInitExpr 0x7f959d04dda0 <<invalid sloc>> 'double'
+    |     |-ImplicitValueInitExpr 0x7f959d04ddb0 <<invalid sloc>> 'double'
+    |     `-ImplicitValueInitExpr 0x7f959d04ddc0 <<invalid sloc>> 'double'
+    |-BinaryOperator 0x7f959d04df38 <line:20:5, col:12> 'double' lvalue '='
+    | |-MemberExpr 0x7f959d04dee0 <col:5, col:8> 'double' lvalue .x 0x7f959d04d6c8
+    | | `-DeclRefExpr 0x7f959d04deb8 <col:5> 'struct P2' lvalue Var 0x7f959d04dca8 'p2' 'struct P2'
+    | `-FloatingLiteral 0x7f959d04df18 <col:12> 'double' 1.000000e+00
+    |-BinaryOperator 0x7f959d04dfe0 <line:21:5, col:12> 'double' lvalue '='
+    | |-MemberExpr 0x7f959d04df88 <col:5, col:8> 'double' lvalue .y 0x7f959d04d728
+    | | `-DeclRefExpr 0x7f959d04df60 <col:5> 'struct P2' lvalue Var 0x7f959d04dca8 'p2' 'struct P2'
+    | `-FloatingLiteral 0x7f959d04dfc0 <col:12> 'double' 2.000000e+00
+    |-BinaryOperator 0x7f959d04e088 <line:22:5, col:12> 'double' lvalue '='
+    | |-MemberExpr 0x7f959d04e030 <col:5, col:8> 'double' lvalue .z 0x7f959d04d788
+    | | `-DeclRefExpr 0x7f959d04e008 <col:5> 'struct P2' lvalue Var 0x7f959d04dca8 'p2' 'struct P2'
+    | `-FloatingLiteral 0x7f959d04e068 <col:12> 'double' 3.000000e+00
+    `-ReturnStmt 0x7f959d04e0d0 <line:24:5, col:12>
+      `-IntegerLiteral 0x7f959d04e0b0 <col:12> 'int' 0
