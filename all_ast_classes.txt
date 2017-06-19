@@ -1,159 +1,964 @@
 AccessSpecDecl
+Description:
+    Represents an access specifier followed by colon ':'. 
+    An objects of this class represents sugar for the syntactic occurrence of an access specifier followed by a colon in the list of member specifiers of a C++ class definition.
+    Note that they do not represent other uses of access specifiers, such as those occurring in a list of base specifiers. Also note that this class has nothing to do with so-called "access declarations" (C++98 11.3 [class.access.dcl]). 
+    Definition at line 103 of file DeclCXX.h.
+
+
 AlignedAttr
+
 AlwaysInlineAttr
+
 ArrayInitIndexExpr
+Description:
+    Represents the index of the current element of an array being initialized by an ArrayInitLoopExpr. 
+    This can only appear within the subexpression of an ArrayInitLoopExpr. 
+    Definition at line 4514 of file Expr.h.
+
+
 ArrayInitLoopExpr
+Description:
+    Represents a loop initializing the elements of an array. 
+    The need to initialize the elements of an array occurs in a number of contexts:
+    
+    in the implicit copy/move constructor for a class with an array member
+    when a lambda-expression captures an array by value
+    when a decomposition declaration decomposes an array
+    
+    There are two subexpressions: a common expression (the source array) that is evaluated once up-front, and a per-element initializer that runs once for each array element.
+    Within the per-element initializer, the common expression may be referenced via an OpaqueValueExpr, and the current index may be obtained via an ArrayInitIndexExpr. 
+    Definition at line 4459 of file Expr.h.
+
+
 ArraySubscriptExpr
+Description:
+    ArraySubscriptExpr - [C99 6.5.2.1] Array Subscripting. 
+    Definition at line 2118 of file Expr.h.
+
+
 AsmLabelAttr
+
 AtomicExpr
+Description:
+    AtomicExpr - Variadic atomic builtins: __atomic_exchange, __atomic_fetch_*, __atomic_load, __atomic_store, and __atomic_compare_exchange_*, for the similarly-named C++11 instructions, and __c11 variants for <stdatomic.h>. 
+    All of these instructions take one primary pointer and at least one memory order. 
+    Definition at line 5070 of file Expr.h.
+
+
 AvailabilityAttr
+
 BinaryOperator
+Description:
+    A builtin binary operation expression such as "x + y" or "x <= y". 
+    This expression node kind describes a builtin binary operation, such as "x + y" for integer values "x" and "y". The operands will already have been converted to appropriate types (e.g., by performing promotions or conversions).
+    In C++, where operators may be overloaded, a different kind of expression node (CXXOperatorCallExpr) is used to express the invocation of an overloaded operator with operator syntax. Within a C++ template, whether BinaryOperator or CXXOperatorCallExpr is used to store an expression "x + y" depends on the subexpressions for x and y. If neither x or y is type-dependent, and the "+" operator resolves to a built-in operation, BinaryOperator will be used to express the computation (x and y may still be value-dependent). If either x or y is type-dependent, or if the "+" resolves to an overloaded operator, CXXOperatorCallExpr will be used to express the computation. 
+    Definition at line 2967 of file Expr.h.
+
+
 BreakStmt
+Description:
+    BreakStmt - This represents a break. 
+    Definition at line 1354 of file Stmt.h.
+
+
 BuiltinTemplateDecl
+Description:
+    Represents the builtin template declaration which is used to implement __make_integer_seq and other builtin templates. 
+    It serves no real purpose beyond existing as a place to hold template parameters. 
+    Definition at line 1591 of file DeclTemplate.h.
+
+
 BuiltinType
+Description:
+    This class is used for builtin types like 'int'. 
+    Builtin types are always canonical and have a literal name field. 
+    Definition at line 2083 of file Type.h.
+
+
 CStyleCastExpr
+Description:
+    CStyleCastExpr - An explicit cast in C (C99 6.5.4) or a C-style cast in C++ (C++ [expr.cast]), which uses the syntax (Type)expr. 
+    For example: (int)f. 
+    Definition at line 2904 of file Expr.h.
+
+
 CXX11NoReturnAttr
+
 CXXBindTemporaryExpr
+Description:
+    Represents binding an expression to a temporary. 
+    This ensures the destructor is called for the temporary. It should only be needed for non-POD, non-trivially destructable class types. For example:
+    struct S {  S() { }  // User defined constructor makes S non-POD.  ~S() { } // User defined destructor makes it non-trivial.};void test() { const S &s_ref = S(); // Requires a CXXBindTemporaryExpr.}
+    Definition at line 1134 of file ExprCXX.h.
+
+
 CXXBoolLiteralExpr
+Description:
+    A boolean literal, per ([C++ lex.bool] Boolean literals). 
+    Definition at line 486 of file ExprCXX.h.
+
+
 CXXCatchStmt
+Description:
+    CXXCatchStmt - This represents a C++ catch block. 
+    Definition at line 29 of file StmtCXX.h.
+
+
 CXXConstCastExpr
+Description:
+    A C++ const_cast expression (C++ [expr.const.cast]). 
+    This expression node represents a const cast, e.g., const_cast<char*>(PtrToConstChar).
+    A const_cast can remove type qualifiers but does not change the underlying value. 
+    Definition at line 387 of file ExprCXX.h.
+
+
 CXXConstructExpr
+Description:
+    Represents a call to a C++ constructor. 
+    Definition at line 1177 of file ExprCXX.h.
+
+
 CXXConstructor
+
 CXXConstructorDecl
+Description:
+    Represents a C++ constructor within a class. 
+    For example:
+    class X {public: explicit X(int); // represented by a CXXConstructorDecl.};
+    Definition at line 2243 of file DeclCXX.h.
+
+
 CXXConversionDecl
+Description:
+    Represents a C++ conversion function within a class. 
+    For example:
+    class X {public: operator bool();};
+    Definition at line 2519 of file DeclCXX.h.
+
+
 CXXCtorInitializer
+Description:
+    Represents a C++ base or member initializer. 
+    This is part of a constructor initializer that initializes one non-static member variable or one base class. For example, in the following, both 'A(a)' and 'f(3.14159)' are member initializers:
+    class A { };class B : public A { float f;public:  B(A& a) : A(a), f(3.14159) { }};
+    Definition at line 2019 of file DeclCXX.h.
+
+
 CXXDefaultArgExpr
+Description:
+    A default argument (C++ [dcl.fct.default]). 
+    This wraps up a function call argument that was created from the corresponding parameter's default argument, when the call did not explicitly supply arguments for all of the parameters. 
+    Definition at line 982 of file ExprCXX.h.
+
+
 CXXDefaultInitExpr
+Description:
+    A use of a default initializer in a constructor or in aggregate initialization. 
+    This wraps a use of a C++ default initializer (technically, a brace-or-equal-initializer for a non-static data member) when it is implicitly used in a mem-initializer-list in a constructor (C++11 [class.base.init]p8) or in aggregate initialization (C++1y [dcl.init.aggr]p7). 
+    Definition at line 1052 of file ExprCXX.h.
+
+
 CXXDeleteExpr
+Description:
+    Represents a delete expression for memory deallocation and destructor calls, e.g. 
+    "delete[] pArray". 
+    Definition at line 1992 of file ExprCXX.h.
+
+
 CXXDependentScopeMemberExpr
+Description:
+    Represents a C++ member access expression where the actual member referenced could not be resolved because the base expression or the member name was dependent. 
+    Like UnresolvedMemberExprs, these can be either implicit or explicit accesses. It is only possible to get one of these with an implicit access if a qualifier is provided. 
+    Definition at line 3112 of file ExprCXX.h.
+
+
 CXXDestructorDecl
+Description:
+    Represents a C++ destructor within a class. 
+    For example:
+    class X {public:  ~X(); // represented by a CXXDestructorDecl.};
+    Definition at line 2465 of file DeclCXX.h.
+
+
 CXXDynamicCastExpr
+Description:
+    A C++ dynamic_cast expression (C++ [expr.dynamic.cast]). 
+    This expression node represents a dynamic cast, e.g., dynamic_cast<Derived*>(BasePtr). Such a cast may perform a run-time check to determine how to perform the type conversion. 
+    Definition at line 305 of file ExprCXX.h.
+
+
 CXXFunctionalCastExpr
+Description:
+    Represents an explicit C++ type conversion that uses "functional" notation (C++ [expr.type.conv]). 
+    Example: x = int(0.5);
+    Definition at line 1410 of file ExprCXX.h.
+
+
 CXXMemberCallExpr
+Description:
+    Represents a call to a member function that may be written either with member call syntax (e.g., "obj.func()" or "objptr->func()") or with normal function-call syntax ("func()") within a member function that ends up calling a member function. 
+    The callee in either case is a MemberExpr that contains both the object argument and the member function, while the arguments are the arguments within the parentheses (not including the object argument). 
+    Definition at line 136 of file ExprCXX.h.
+
+
 CXXMethodDecl
+Description:
+    Represents a static or instance method of a struct/union/class. 
+    In the terminology of the C++ Standard, these are the (static and non-static) member functions, whether virtual or not. 
+    Definition at line 1833 of file DeclCXX.h.
+
+
 CXXNewExpr
+Description:
+    Represents a new-expression for memory allocation and constructor calls, e.g: "new CXXNewExpr(foo)". 
+    Definition at line 1780 of file ExprCXX.h.
+
+
 CXXNoexceptExpr
+Description:
+    Represents a C++11 noexcept expression (C++ [expr.unary.noexcept]). 
+    The noexcept expression tests whether a given expression might throw. Its result is a boolean constant. 
+    Definition at line 3510 of file ExprCXX.h.
+
+
 CXXNullPtrLiteralExpr
+Description:
+    The null pointer literal (C++11 [lex.nullptr]) 
+    Introduced in C++11, the only literal of type nullptr_t is nullptr. 
+    Definition at line 520 of file ExprCXX.h.
+
+
 CXXOperatorCallExpr
+Description:
+    A call to an overloaded operator written using operator syntax. 
+    Represents a call to an overloaded operator written using operator syntax, e.g., "x + y" or "*p". While semantically equivalent to a normal call, this AST node provides better information about the syntactic representation of the call.
+    In a C++ template, this expression node kind will be used whenever any of the arguments are type-dependent. In this case, the function itself will be a (possibly empty) set of functions and function templates that were found by name lookup at template definition time. 
+    Definition at line 52 of file ExprCXX.h.
+
+
 CXXPseudoDestructorExpr
+Description:
+    Represents a C++ pseudo-destructor (C++ [expr.pseudo]). 
+    A pseudo-destructor is an expression that looks like a member access to a destructor of a scalar type, except that scalar types don't have destructors. For example:
+    typedef int T;void f(int *p) {  p->T::~T();}Pseudo-destructors typically occur when instantiating templates such as:
+    template<typename T>void destroy(T* ptr) {  ptr->T::~T();}for scalar types. A pseudo-destructor expression has no run-time semantics beyond evaluating the base expression. 
+    Definition at line 2113 of file ExprCXX.h.
+
+
 CXXRecord
+
 CXXRecordDecl
+Description:
+    Represents a C++ struct/union/class. 
+    Definition at line 267 of file DeclCXX.h.
+
+
 CXXReinterpretCastExpr
+Description:
+    A C++ reinterpret_cast expression (C++ [expr.reinterpret.cast]). 
+    This expression node represents a reinterpret cast, e.g., reinterpret_cast<int>(VoidPtr).
+    A reinterpret_cast provides a differently-typed view of a value but (in Clang, as in most C++ implementations) performs no actual work at run time. 
+    Definition at line 347 of file ExprCXX.h.
+
+
 CXXScalarValueInitExpr
+Description:
+    An expression "T()" which creates a value-initialized rvalue of type T, which is a non-class type. 
+    See (C++98 [5.2.3p2]). 
+    Definition at line 1740 of file ExprCXX.h.
+
+
 CXXStaticCastExpr
+Description:
+    A C++ static_cast expression (C++ [expr.static.cast]). 
+    This expression node represents a C++ static cast, e.g., static_cast<int>(1.0). 
+    Definition at line 269 of file ExprCXX.h.
+
+
 CXXTemporaryObjectExpr
+Description:
+    Represents a C++ functional cast expression that builds a temporary object. 
+    This expression type represents a C++ "functional" cast (C++[expr.type.conv]) with N != 1 arguments that invokes a constructor to build a temporary object. With N == 1 arguments the functional cast expression will be represented by CXXFunctionalCastExpr. Example: struct X { X(int, float); }X create_X() { return X(1, 3.14f); // creates a CXXTemporaryObjectExpr};
+    Definition at line 1469 of file ExprCXX.h.
+
+
 CXXThisExpr
+Description:
+    Represents the this expression in C++. 
+    This is a pointer to the object on which the current member function is executing (C++ [expr.prim]p3). Example:
+    class Foo {public: void bar(); void test() { this->bar(); }};
+    Definition at line 888 of file ExprCXX.h.
+
+
 CXXThrowExpr
+Description:
+    A C++ throw-expression (C++ [except.throw]). 
+    This handles 'throw' (for re-throwing the current exception) and 'throw' assignment-expression. When assignment-expression isn't present, Op will be null. 
+    Definition at line 928 of file ExprCXX.h.
+
+
 CXXTryStmt
+Description:
+    CXXTryStmt - A C++ try block, including all handlers. 
+    Definition at line 65 of file StmtCXX.h.
+
+
 CXXTypeidExpr
+Description:
+    A C++ typeid expression (C++ [expr.typeid]), which gets the type_info that corresponds to the supplied type, or the (possibly dynamic) type of the supplied expression. 
+    This represents code like typeid(int) or typeid(*objPtr) 
+    Definition at line 590 of file ExprCXX.h.
+
+
 CXXUnresolvedConstructExpr
+Description:
+    Describes an explicit type conversion that uses functional notion but could not be resolved because one or more arguments are type-dependent. 
+    The explicit type conversions expressed by CXXUnresolvedConstructExpr have the form T(a1, a2, ..., aN), where T is some type and a1, a2, ..., aN are values, and either T is a dependent type or one or more of the a's is type-dependent. For example, this would occur in a template such as:
+    template<typename T, typename A1>inline T make_a(const A1& a1) { return T(a1);}When the returned expression is instantiated, it may resolve to a constructor call, conversion function call, or some kind of type conversion. 
+    Definition at line 3005 of file ExprCXX.h.
+
+
 CallExpr
+Description:
+    CallExpr - Represents a function call (C99 6.5.2.2, C++ [expr.call]). 
+    CallExpr itself represents a normal function call, e.g., "f(x, 2)", while its subclasses may represent alternative syntax that (semantically) results in a function call. For example, CXXOperatorCallExpr is a subclass for overloaded operator calls that use operator syntax, e.g., "str1 + str2" to resolve to a function call. 
+    Definition at line 2206 of file Expr.h.
+
+
 CaseStmt
+Description:
+    
+    Definition at line 713 of file Stmt.h.
+
+
 CharacterLiteral
+Description:
+    
+    Definition at line 1335 of file Expr.h.
+
+
 ClassTemplateDecl
+Description:
+    Declaration of a class template. 
+    Definition at line 2036 of file DeclTemplate.h.
+
+
 ClassTemplatePartialSpecialization
+
 ClassTemplatePartialSpecializationDecl
+Description:
+    
+    Definition at line 1883 of file DeclTemplate.h.
+
+
 ClassTemplateSpecialization
+
 ClassTemplateSpecializationDecl
+Description:
+    Represents a class template specialization, which refers to a class template with a given set of template arguments. 
+    Class template specializations represent both explicit specialization of class templates, as in the example below, and implicit instantiations of class templates.
+    template<typename T> class array;template<>class array<bool> { }; // class template specialization array<bool>
+    Definition at line 1630 of file DeclTemplate.h.
+
+
 CompoundAssignOperator
+Description:
+    CompoundAssignOperator - For compound assignments (e.g. 
+    +=), we keep track of the type the operation is performed in. Due to the semantics of these operators, the operands are promoted, the arithmetic performed, an implicit conversion back to the result type done, then the assignment takes place. This captures the intermediate type which the computation is done in. 
+    Definition at line 3167 of file Expr.h.
+
+
 CompoundStmt
+Description:
+    CompoundStmt - This represents a group of statements like { stmt stmt }. 
+    Definition at line 575 of file Stmt.h.
+
+
 ConditionalOperator
+Description:
+    ConditionalOperator - The ?: ternary operator. 
+    The GNU "missing
+    middle" extension is a BinaryConditionalOperator. 
+    Definition at line 3245 of file Expr.h.
+
+
 ConstAttr
+
 ConstantArrayType
+Description:
+    Represents the canonical version of C arrays with a specified constant size. 
+    For example, the canonical type for 'int A[4 + 4*100]' is a ConstantArrayType where the element type is 'int' and the size is 404. 
+    Definition at line 2552 of file Type.h.
+
+
 ContinueStmt
+Description:
+    ContinueStmt - This represents a continue. 
+    Definition at line 1328 of file Stmt.h.
+
+
 DeclRefExpr
+Description:
+    A reference to a declared variable, function, enum, etc. 
+    [C99 6.5.1p2]
+    This encodes all the information about how a declaration is referenced within an expression.
+    There are several optional constructs attached to DeclRefExprs only when they apply in order to conserve memory. These are laid out past the end of the object, and flags in the DeclRefExprBitfield track whether they exist:
+    DeclRefExprBits.HasQualifier: Specifies when this declaration reference expression has a C++ nested-name-specifier. DeclRefExprBits.HasFoundDecl: Specifies when this declaration reference expression has a record of a NamedDecl (different from the referenced ValueDecl) which was found during name lookup and/or overload resolution. DeclRefExprBits.HasTemplateKWAndArgsInfo: Specifies when this declaration reference expression has an explicit C++ template keyword and/or template argument list. DeclRefExprBits.RefersToEnclosingVariableOrCapture Specifies when this declaration reference expression (validly) refers to an enclosed local or a captured variable. 
+    Definition at line 953 of file Expr.h.
+
+
 DeclStmt
+Description:
+    DeclStmt - Adaptor class for mixing declarations with statements and expressions. 
+    For example, CompoundStmt mixes statements, expressions and declarations (variables, types). Another example is ForStmt, where the first statement can be an expression or a declaration. 
+    Definition at line 467 of file Stmt.h.
+
+
 DecltypeType
+Description:
+    Represents the type decltype(expr) (C++11). 
+    Definition at line 3666 of file Type.h.
+
+
 DefaultStmt
+Description:
+    
+    Definition at line 774 of file Stmt.h.
+
+
 DependentNameType
+Description:
+    Represents a qualified type name for which the type name is dependent. 
+    DependentNameType represents a class of dependent types that involve a possibly dependent nested-name-specifier (e.g., "T::") followed by a name of a type. The DependentNameType may start with a "typename" (for a typename-specifier), "class", "struct", "union", or "enum" (for a dependent elaborated-type-specifier), or nothing (in contexts where we know that we must be referring to a type, e.g., in a base class specifier). Typically the nested-name-specifier is dependent, but in MSVC compatibility mode, this type is used with non-dependent names to delay name lookup until instantiation. 
+    Definition at line 4640 of file Type.h.
+
+
 DependentScopeDeclRefExpr
+Description:
+    A qualified reference to a name whose declaration cannot yet be resolved. 
+    DependentScopeDeclRefExpr is similar to DeclRefExpr in that it expresses a reference to a declaration such as X<T>::value. The difference, however, is that an DependentScopeDeclRefExpr node is used only within C++ templates when the qualification (e.g., X<T>::) refers to a dependent type. In this case, X<T>::value cannot resolve to a declaration because the declaration will differ from one instantiation of X<T> to the next. Therefore, DependentScopeDeclRefExpr keeps track of the qualifier (X<T>::) and the name of the entity being referenced ("value"). Such expressions will instantiate to a DeclRefExpr once the declaration can be found. 
+    Definition at line 2775 of file ExprCXX.h.
+
+
 DependentTemplateSpecializationType
+Description:
+    Represents a template specialization type whose template cannot be resolved, e.g. 
+    A<T>::template B<T> 
+    Definition at line 4693 of file Type.h.
+
+
 DeprecatedAttr
+
 DiagnoseIfAttr
+
 DoStmt
+Description:
+    DoStmt - This represents a 'do/while' stmt. 
+    Definition at line 1128 of file Stmt.h.
+
+
 ElaboratedType
+Description:
+    Represents a type that was referred to using an elaborated type keyword, e.g., struct S, or via a qualified name, e.g., N::M::type, or both. 
+    This type is used to keep track of a type name as written in the source code, including tag keywords and any nested-name-specifiers. The type itself is always "sugar", used to express what was written in the source code but containing no additional semantic information. 
+    Definition at line 4574 of file Type.h.
+
+
 EmptyDecl
+Description:
+    Represents an empty-declaration. 
+    Definition at line 3925 of file Decl.h.
+
+
 EnableIfAttr
+
 Enum
+
 EnumConstantDecl
+Description:
+    EnumConstantDecl - An instance of this object exists for each enum constant that is defined. 
+    For example, in "enum X {a,b}", each of a/b are EnumConstantDecl's, X is an instance of EnumDecl, and the type of a/b is a TagType for the X EnumDecl. 
+    Definition at line 2541 of file Decl.h.
+
+
 EnumDecl
+Description:
+    EnumDecl - Represents an enum. 
+    In C++11, enums can be forward-declared with a fixed underlying type, and in C we allow them to be forward-declared with no underlying type as an extension. 
+    Definition at line 3089 of file Decl.h.
+
+
 EnumType
+Description:
+    A helper class that allows the use of isa/cast/dyncast to detect TagType objects of enums. 
+    Definition at line 3809 of file Type.h.
+
+
 ExprWithCleanups
+Description:
+    Represents an expression – generally a full-expression – that introduces cleanups to be run at the end of the sub-expression's evaluation. 
+    The most common source of expression-introduced cleanups is temporary objects in C++, but several other kinds of expressions can create cleanups, including basically every call in ARC that returns an Objective-C pointer.
+    This expression also tracks whether the sub-expression contains a potentially-evaluated block literal. The lifetime of a block literal is the extent of the enclosing scope. 
+    Definition at line 2920 of file ExprCXX.h.
+
+
 Field
+
 FieldDecl
+Description:
+    FieldDecl - An instance of this class is created by Sema::ActOnField to represent a member of a struct/union/class. 
+    Definition at line 2353 of file Decl.h.
+
+
 FloatingLiteral
+Description:
+    
+    Definition at line 1388 of file Expr.h.
+
+
 ForStmt
+Description:
+    ForStmt - This represents a 'for (init;cond;inc)' stmt. 
+    Note that any of the init/cond/inc parts of the ForStmt will be null if they were not specified in the source. 
+    Definition at line 1179 of file Stmt.h.
+
+
 FormatArgAttr
+
 FormatAttr
+
 FriendDecl
+Description:
+    FriendDecl - Represents the declaration of a friend entity, which can be a function, a type, or a templated function or type. 
+    template <typename T> class A { friend int foo(T); friend class B; friend T; // only in C++0x template <typename U> friend class C; template <typename U> friend A& operator+=(A&, const U&) { ... }};The semantic context of a friend decl is its declaring class. 
+    Definition at line 40 of file DeclFriend.h.
+
+
 FullComment
+
 Function
+
 FunctionDecl
+Description:
+    FunctionDecl - An instance of this class is created to represent a function declaration or definition. 
+    Since a given function can be declared several times in a program, there may be several FunctionDecls that correspond to that function. Only one of those FunctionDecls will be found when traversing the list of declarations in the context of the FunctionDecl (e.g., the translation unit); this FunctionDecl contains all of the information known about the function. Other, previous declarations of the function are available via the getPreviousDecl() chain. 
+    Definition at line 1618 of file Decl.h.
+
+
 FunctionProtoType
+Description:
+    Represents a prototype with parameter type info, e.g. 
+    'int foo(int)' or 'int foo(void)'. 'void' is represented as having no parameters, not as having a single void parameter. Such a type can have an exception specification, but this specification is not part of the canonical type. 
+    Definition at line 3128 of file Type.h.
+
+
 FunctionTemplateDecl
+Description:
+    Declaration of a template function. 
+    Definition at line 939 of file DeclTemplate.h.
+
+
 GNUNullExpr
+Description:
+    GNUNullExpr - Implements the GNU __null extension, which is a name for a null pointer constant that has integral type (e.g., int or long) and is the same size and alignment as a pointer. 
+    The __null extension is typically only used by system headers, which define NULL as __null in C++ rather than using 0 (which is an integer that may not match the size of a pointer). 
+    Definition at line 3720 of file Expr.h.
+
+
 GotoStmt
+Description:
+    GotoStmt - This represents a direct goto. 
+    Definition at line 1250 of file Stmt.h.
+
+
 IfStmt
+Description:
+    IfStmt - This represents an if/then/else. 
+    Definition at line 905 of file Stmt.h.
+
+
 ImplicitCastExpr
+Description:
+    ImplicitCastExpr - Allows us to explicitly represent implicit type conversions, which have no direct representation in the original source code. 
+    For example: converting T[]->T*, void f()->void (*f)(), float->double, short->int, etc.
+    In C, implicit casts always produce rvalues. However, in C++, an implicit cast whose result is being bound to a reference will be an lvalue or xvalue. For example:
+    class Base { };class Derived : public Base { };Derived &&ref();void f(Derived d) { Base& b = d; // initializer is an ImplicitCastExpr // to an lvalue of type Base Base&& r = ref(); // initializer is an ImplicitCastExpr // to an xvalue of type Base}
+    Definition at line 2804 of file Expr.h.
+
+
 ImplicitValueInitExpr
+Description:
+    Represents an implicitly-generated value initialization of an object of a given type. 
+    Implicit value initializations occur within semantic initializer list expressions (InitListExpr) as placeholders for subobject initializations not explicitly specified by the user.
+    See alsoInitListExpr 
+    Definition at line 4549 of file Expr.h.
+
+
 IndirectFieldDecl
+Description:
+    IndirectFieldDecl - An instance of this class is created to represent a field injected from an anonymous union/struct into the parent scope. 
+    IndirectFieldDecl are always implicit. 
+    Definition at line 2581 of file Decl.h.
+
+
 InitListExpr
+Description:
+    Describes an C or C++ initializer list. 
+    InitListExpr describes an initializer list, which can be used to initialize objects of different types, including struct/class/union types, arrays, and vectors. For example:
+    struct foo x = { 1, { 2, 3 } };Prior to semantic analysis, an initializer list will represent the initializer list as written by the user, but will have the placeholder type "void". This initializer list is called the syntactic form of the initializer, and may contain C99 designated initializers (represented as DesignatedInitExprs), initializations of subobject members without explicit braces, and so on. Clients interested in the original syntax of the initializer list should use the syntactic form of the initializer list.
+    After semantic analysis, the initializer list will represent the semantic form of the initializer, where the initializations of all subobjects are made explicit with nested InitListExpr nodes and C99 designators have been eliminated by placing the designated initializations into the subobject they initialize. Additionally, any "holes" in the initialization, where no initializer has been specified for a particular subobject, will be replaced with implicitly-generated ImplicitValueInitExpr expressions that value-initialize the subobjects. Note, however, that the initializer lists may still have fewer initializers than there are elements to initialize within the object.
+    After semantic analysis has completed, given an initializer list, method isSemanticForm() returns true if and only if this is the semantic form of the initializer list (note: the same AST node may at the same time be the syntactic form). Given the semantic form of the initializer list, one can retrieve the syntactic form of that initializer list (when different) using method getSyntacticForm(); the method returns null if applied to a initializer list which is already in syntactic form. Similarly, given the syntactic form (i.e., an initializer list such that isSemanticForm() returns false), one can retrieve the semantic form using method getSemanticForm(). Since many initializer lists have the same syntactic and semantic forms, getSyntacticForm() may return NULL, indicating that the current semantic initializer list also serves as its syntactic form. 
+    Definition at line 3848 of file Expr.h.
+
+
 InjectedClassNameType
+Description:
+    The injected class name of a C++ class template or class template partial specialization. 
+    Used to record that a type was spelled with a bare identifier rather than as a template-id; the equivalent for non-templated classes is just RecordType.
+    Injected class name types are always dependent. Template instantiation turns these into RecordTypes.
+    Injected class name types are always canonical. This works because it is impossible to compare an injected class name type with the corresponding non-injected template type, for the same reason that it is impossible to directly compare template parameters from different dependent contexts: injected class name types can only occur within the scope of a particular templated declaration, and within that scope every template specialization will canonicalize to the injected class name (when appropriate according to the rules of the language). 
+    Definition at line 4435 of file Type.h.
+
+
 IntegerLiteral
+Description:
+    
+    Definition at line 1292 of file Expr.h.
+
+
 LValueReferenceType
+Description:
+    An lvalue reference type, per C++11 [dcl.ref]. 
+    Definition at line 2406 of file Type.h.
+
+
 LabelStmt
+Description:
+    LabelStmt - Represents a label, which has a substatement. 
+    For example: foo: return; 
+    Definition at line 813 of file Stmt.h.
+
+
 LinkageSpecDecl
+Description:
+    Represents a linkage specification. 
+    For example: extern "C" void foo();
+    Definition at line 2580 of file DeclCXX.h.
+
+
 MaterializeTemporaryExpr
+Description:
+    Represents a prvalue temporary that is written into memory so that a reference can bind to it. 
+    Prvalue expressions are materialized when they need to have an address in memory for a reference to bind to. This happens when binding a reference to the result of a conversion, e.g.,
+    const int &r = 1.0;Here, 1.0 is implicitly converted to an int. That resulting int is then materialized via a MaterializeTemporaryExpr, and the reference binds to the temporary. MaterializeTemporaryExprs are always glvalues (either an lvalue or an xvalue, depending on the kind of reference binding to it), maintaining the invariant that references always bind to glvalues.
+    Reference binding and copy-elision can both extend the lifetime of a temporary. When either happens, the expression will also track the declaration which is responsible for the lifetime extension. 
+    Definition at line 3946 of file ExprCXX.h.
+
+
 MemberExpr
+Description:
+    MemberExpr - [C99 6.5.2.3] Structure and Union Members. 
+    X->F and X.F. 
+    Definition at line 2378 of file Expr.h.
+
+
 NamespaceDecl
+Description:
+    NamespaceDecl - Represent a C++ namespace. 
+    Definition at line 461 of file Decl.h.
+
+
 NoSanitizeAttr
+
 NoThrowAttr
+
 NonTypeTemplateParmDecl
+Description:
+    NonTypeTemplateParmDecl - Declares a non-type template parameter, e.g., "Size" in. 
+    template<int Size> class array { };
+    Definition at line 1239 of file DeclTemplate.h.
+
+
 NullStmt
+Description:
+    NullStmt - This is the null statement ";": C99 6.8.3p3. 
+    Definition at line 535 of file Stmt.h.
+
+
 OpaqueValueExpr
+Description:
+    OpaqueValueExpr - An expression referring to an opaque object of a fixed type and value class. 
+    These don't correspond to concrete syntax; instead they're used to express operations (usually copy operations) on values whose source is generally obvious from context. 
+    Definition at line 865 of file Expr.h.
+
+
 OverrideAttr
+
 PackExpansionExpr
+Description:
+    Represents a C++11 pack expansion that produces a sequence of expressions. 
+    A pack expansion expression contains a pattern (which itself is an expression) followed by an ellipsis. For example:
+    template<typename F, typename ...Types>void forward(F f, Types &&...args) {  f(static_cast<Types&&>(args)...);}Here, the argument to the function object f is a pack expansion whose pattern is static_cast<Types&&>(args). When the forward function template is instantiated, the pack expansion will instantiate to zero or or more function arguments to the function object f. 
+    Definition at line 3565 of file ExprCXX.h.
+
+
 PackExpansionType
+Description:
+    Represents a pack expansion of types. 
+    Pack expansions are part of C++11 variadic templates. A pack expansion contains a pattern, which itself contains one or more "unexpanded" parameter packs. When instantiated, a pack expansion produces a series of types, each instantiated from the pattern of the expansion, where the Ith instantiation of the pattern uses the Ith arguments bound to each of the unexpanded parameter packs. The pack expansion is considered to "expand" these unexpanded parameter packs.
+    template<typename ...Types> struct tuple;template<typename ...Types>struct tuple_of_references { typedef tuple<Types&...> type;};Here, the pack expansion Types&... is represented via a PackExpansionType whose pattern is Types&. 
+    Definition at line 4785 of file Type.h.
+
+
 ParagraphComment
+
 ParenExpr
+Description:
+    ParenExpr - This represents a parethesized expression, e.g. 
+    "(1)". This AST node is only formed if full location information is requested. 
+    Definition at line 1662 of file Expr.h.
+
+
 ParenListExpr
+Description:
+    
+    Definition at line 4575 of file Expr.h.
+
+
 ParenType
+Description:
+    Sugar for parentheses used when specifying types. 
+    Definition at line 2192 of file Type.h.
+
+
 ParmVarDecl
+Description:
+    ParmVarDecl - Represents a parameter to a function. 
+    Definition at line 1434 of file Decl.h.
+
+
 PointerType
+Description:
+    PointerType - C99 6.7.5.1 - Pointer Declarators. 
+    Definition at line 2223 of file Type.h.
+
+
 QualType
+Description:
+    A (possibly-)qualified type. 
+    For efficiency, we don't store CV-qualified types as nodes on their own: instead each reference to a type stores the qualifiers. This greatly reduces the number of nodes we need to allocate for types (for example we only need one for 'int', 'const int', 'volatile int', 'const volatile int', etc).
+    As an added efficiency bonus, instead of making this a pair, we just store the two bits we care about in the low bits of the pointer. To handle the packing/unpacking, we make QualType be a simple wrapper class that acts like a smart pointer. A third bit indicates whether there are extended qualifiers present, in which case the pointer points to a special structure. 
+    Definition at line 616 of file Type.h.
+
+
 RValueReferenceType
+Description:
+    An rvalue reference type, per C++11 [dcl.ref]. 
+    Definition at line 2423 of file Type.h.
+
+
 RecordType
+Description:
+    A helper class that allows the use of isa/cast/dyncast to detect TagType objects of structs/unions/classes. 
+    Definition at line 3783 of file Type.h.
+
+
 RestrictAttr
+
 ReturnStmt
+Description:
+    ReturnStmt - This represents a return, optionally of an expression: return; return 4;. 
+    Note that GCC allows return with no argument in a function declared to return a value, and it allows returning a value in functions declared to return void. We explicitly model this in the AST, which means you can't depend on the return type of the function and the presence of an argument. 
+    Definition at line 1392 of file Stmt.h.
+
+
 SizeOfPackExpr
+Description:
+    Represents an expression that computes the length of a parameter pack. 
+    template<typename ...Types>struct count { static const unsigned value = sizeof...(Types);};
+    Definition at line 3637 of file ExprCXX.h.
+
+
 StaticAssertDecl
+Description:
+    Represents a C++11 static_assert declaration. 
+    Definition at line 3490 of file DeclCXX.h.
+
+
 StringLiteral
+Description:
+    StringLiteral - This represents a string literal expression, e.g. 
+    "foo" or L"bar" (wide strings). The actual string is returned by getBytes() is NOT null-terminated, and the length of the string is determined by calling getByteLength(). The C type for a string is always a ConstantArrayType. In C++, the char type is const qualified, in C it is not.
+    Note that strings in C can be formed by concatenation of multiple string literal pptokens in translation phase #6. This keeps track of the locations of each of these pieces.
+    Strings in C can also be truncated and extended by assigning into arrays, e.g. with constructs like: char X[2] = "foobar"; In this case, getByteLength() will return 6, but the string literal will have type "char[2]". 
+    Definition at line 1506 of file Expr.h.
+
+
 SubstNonTypeTemplateParmExpr
+Description:
+    Represents a reference to a non-type template parameter that has been substituted with a template argument. 
+    Definition at line 3751 of file ExprCXX.h.
+
+
 SubstTemplateTypeParmType
+Description:
+    Represents the result of substituting a type for a template type parameter. 
+    Within an instantiated template, all template type parameters have been replaced with these. They are used solely to record that a type was originally written as a template type parameter; therefore they are never canonical. 
+    Definition at line 4060 of file Type.h.
+
+
 SwitchStmt
+Description:
+    SwitchStmt - This represents a 'switch' stmt. 
+    Definition at line 983 of file Stmt.h.
+
+
 TemplateArgument
+Description:
+    Represents a template argument. 
+    Definition at line 40 of file TemplateBase.h.
+
+
 TemplateSpecializationType
+Description:
+    Represents a type template specialization; the template must be a class template, a type alias template, or a template template parameter. 
+    A template which cannot be resolved to one of these, e.g. because it is written with a dependent scope specifier, is instead represented as a DependentTemplateSpecializationType.
+    A non-dependent template specialization type is always "sugar", typically for a RecordType. For example, a class template specialization type of vector<int> will refer to a tag type for the instantiation std::vector<int, std::allocator<int>>
+    Template specializations are dependent if either the template or any of the template arguments are dependent, in which case the type may also be canonical.
+    Instances of this type are allocated with a trailing array of TemplateArguments, followed by a QualType representing the non-canonical aliased type when the template is a type alias template. 
+    Definition at line 4295 of file Type.h.
+
+
 TemplateTemplateParmDecl
+Description:
+    TemplateTemplateParmDecl - Declares a template template parameter, e.g., "T" in. 
+    template <template <typename> class T> class container { }; A template template parameter is a TemplateDecl because it defines the name of a template and the template parameters allowable for substitution. 
+    Definition at line 1426 of file DeclTemplate.h.
+
+
 TemplateTypeParm
+
 TemplateTypeParmDecl
+Description:
+    Declaration of a template type parameter. 
+    For example, "T" in template<typename T> class vector;
+    Definition at line 1136 of file DeclTemplate.h.
+
+
 TemplateTypeParmType
+Description:
+    
+    Definition at line 3980 of file Type.h.
+
+
 TextComment
+
 TypeAliasDecl
+Description:
+    TypeAliasDecl - Represents the declaration of a typedef-name via a C++0x alias-declaration. 
+    Definition at line 2777 of file Decl.h.
+
+
 TypeAliasTemplateDecl
+Description:
+    Declaration of an alias template. 
+    For example: template \<typename T> using V = std::map<T*, int, MyCompare<T>>;
+    Definition at line 2329 of file DeclTemplate.h.
+
+
 TypeVisibilityAttr
+
 Typedef
+
 TypedefDecl
+Description:
+    TypedefDecl - Represents the declaration of a typedef-name via the 'typedef' type specifier. 
+    Definition at line 2757 of file Decl.h.
+
+
 TypedefType
+Description:
+    
+    Definition at line 3578 of file Type.h.
+
+
 UnaryExprOrTypeTraitExpr
+Description:
+    UnaryExprOrTypeTraitExpr - expression with either a type or (unevaluated) expression operand. 
+    Used for sizeof/alignof (C99 6.5.3.4) and vec_step (OpenCL 1.1 6.11.12). 
+    Definition at line 2028 of file Expr.h.
+
+
 UnaryOperator
+Description:
+    UnaryOperator - This represents the unary-expression's (except sizeof and alignof), the postinc/postdec operators from postfix-expression, and various extensions. 
+    Notes on various nodes:
+    Real/Imag - These return the real/imag part of a complex operand. If applied to a non-complex value, the former returns its operand and the later returns zero in the type of the operand. 
+    Definition at line 1714 of file Expr.h.
+
+
 UnaryTransformType
+Description:
+    A unary type transform, which is a type constructed from another. 
+    Definition at line 3707 of file Type.h.
+
+
 UnavailableAttr
+
 UnresolvedLookupExpr
+Description:
+    A reference to a name which we were able to look up during parsing but could not resolve to a specific declaration. 
+    This arises in several ways:
+    we might be waiting for argument-dependent lookup;
+    the name might resolve to an overloaded function; and eventually:
+    the lookup might have included a function template.
+    
+    These never include UnresolvedUsingValueDecls, which are always class members and therefore appear only in UnresolvedMemberLookupExprs. 
+    Definition at line 2655 of file ExprCXX.h.
+
+
 UnresolvedMemberExpr
+Description:
+    Represents a C++ member access expression for which lookup produced a set of overloaded functions. 
+    The member access may be explicit or implicit: struct A { int a, b; int explicitAccess() { return this->a + this->A::b; } int implicitAccess() { return a + A::b; }};In the final AST, an explicit access always becomes a MemberExpr. An implicit access may become either a MemberExpr or a DeclRefExpr, depending on whether the member is static. 
+    Definition at line 3350 of file ExprCXX.h.
+
+
 UsingDecl
+Description:
+    Represents a C++ using-declaration. 
+    For example: using someNameSpace::someIdentifier;
+    Definition at line 3097 of file DeclCXX.h.
+
+
 UsingDirectiveDecl
+Description:
+    Represents C++ using-directive. 
+    For example: using namespace std;NoteUsingDirectiveDecl should be Decl not NamedDecl, but we provide artificial names for all using-directives in order to store them in DeclContext effectively. 
+    Definition at line 2672 of file DeclCXX.h.
+
+
 UsingShadowDecl
+Description:
+    Represents a shadow declaration introduced into a scope by a (resolved) using declaration. 
+    For example, namespace A { void foo();}namespace B { using A::foo; // <- a UsingDecl // Also creates a UsingShadowDecl for A::foo() in B}
+    Definition at line 2892 of file DeclCXX.h.
+
+
 VarDecl
+Description:
+    VarDecl - An instance of this class is created to represent a variable declaration or definition. 
+    Definition at line 758 of file Decl.h.
+
+
 VisibilityAttr
+
 WarnUnusedResultAttr
+
 WhileStmt
+Description:
+    WhileStmt - This represents a 'while' stmt. 
+    Definition at line 1073 of file Stmt.h.
+
+
