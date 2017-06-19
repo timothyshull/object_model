@@ -13,7 +13,7 @@ TranslationUnitDecl 0x7fc0a68326d0 <<invalid sloc>> <invalid sloc>
 | `-ConstantArrayType 0x7fc0a6833390 'struct __va_list_tag [1]' 1 
 |   `-RecordType 0x7fc0a68331a0 'struct __va_list_tag'
 |     `-CXXRecord 0x7fc0a6833108 '__va_list_tag'
-|-CXXRecordDecl 0x7fc0a7003c58 </Users/tskull/Documents/Programming/Cpp/object_model_refined/4_functions/03_static_member_functions.cpp:1:1, line:15:1> line:1:7 referenced class P3 definition
+|-CXXRecordDecl 0x7fc0a7003c58 <object_model_refined/4_functions/03_static_member_functions.cpp:1:1, line:15:1> line:1:7 referenced class P3 definition
 | |-CXXRecordDecl 0x7fc0a7003d78 <col:1, col:7> col:7 implicit referenced class P3
 | |-AccessSpecDecl 0x7fc0a7003e10 <line:2:1, col:7> col:1 public
 | |-CXXConstructorDecl 0x7fc0a7003ee0 <line:3:5, line:6:5> line:3:5 used P3 'void (void)'

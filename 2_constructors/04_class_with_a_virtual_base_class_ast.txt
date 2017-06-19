@@ -13,7 +13,7 @@ TranslationUnitDecl 0x7f9c4e8326d0 <<invalid sloc>> <invalid sloc>
 | `-ConstantArrayType 0x7f9c4e833390 'struct __va_list_tag [1]' 1 
 |   `-RecordType 0x7f9c4e8331a0 'struct __va_list_tag'
 |     `-CXXRecord 0x7f9c4e833108 '__va_list_tag'
-|-CXXRecordDecl 0x7f9c4f003c58 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/04_class_with_a_virtual_base_class.cpp:1:1, line:3:1> line:1:8 referenced struct X definition
+|-CXXRecordDecl 0x7f9c4f003c58 <object_model_refined/2_constructors/04_class_with_a_virtual_base_class.cpp:1:1, line:3:1> line:1:8 referenced struct X definition
 | |-CXXRecordDecl 0x7f9c4f003d78 <col:1, col:8> col:8 implicit struct X
 | |-FieldDecl 0x7f9c4f003e28 <line:2:5, col:9> col:9 referenced i 'int'
 | |-CXXMethodDecl 0x7f9c4f004348 <line:1:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct X &(const struct X &)' inline default trivial noexcept-unevaluated 0x7f9c4f004348

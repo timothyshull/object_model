@@ -13,7 +13,7 @@ TranslationUnitDecl 0x7fdcaa0326d0 <<invalid sloc>> <invalid sloc>
 | `-ConstantArrayType 0x7fdcaa033390 'struct __va_list_tag [1]' 1 
 |   `-RecordType 0x7fdcaa0331a0 'struct __va_list_tag'
 |     `-CXXRecord 0x7fdcaa033108 '__va_list_tag'
-|-CXXRecordDecl 0x7fdcaa065c58 </Users/tskull/Documents/Programming/Cpp/object_model_refined/4_functions/05_virtual_functions_under_virtual_inheritance.cpp:1:1, line:7:1> line:1:8 referenced struct B definition
+|-CXXRecordDecl 0x7fdcaa065c58 <object_model_refined/4_functions/05_virtual_functions_under_virtual_inheritance.cpp:1:1, line:7:1> line:1:8 referenced struct B definition
 | |-CXXRecordDecl 0x7fdcaa065d78 <col:1, col:8> col:8 implicit struct B
 | |-FieldDecl 0x7fdcaa065e28 <line:2:5, col:9> col:9 referenced n 'int'
 | |-CXXMethodDecl 0x7fdcaa065ef0 <line:4:5, line:6:5> line:4:18 used m 'void (void)' virtual

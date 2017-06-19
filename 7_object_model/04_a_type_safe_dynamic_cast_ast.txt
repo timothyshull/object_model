@@ -13,7 +13,7 @@ TranslationUnitDecl 0x7fa277019cd0 <<invalid sloc>> <invalid sloc>
 | `-ConstantArrayType 0x7fa27701a990 'struct __va_list_tag [1]' 1 
 |   `-RecordType 0x7fa27701a7a0 'struct __va_list_tag'
 |     `-CXXRecord 0x7fa27701a708 '__va_list_tag'
-|-CXXRecordDecl 0x7fa27704d258 </Users/tskull/Documents/Programming/Cpp/object_model_refined/7_object_model/04_a_type_safe_dynamic_cast.cpp:2:1, line:4:1> line:2:8 referenced struct V definition
+|-CXXRecordDecl 0x7fa27704d258 <object_model_refined/7_object_model/04_a_type_safe_dynamic_cast.cpp:2:1, line:4:1> line:2:8 referenced struct V definition
 | |-CXXRecordDecl 0x7fa27704d378 <col:1, col:8> col:8 implicit struct V
 | |-CXXMethodDecl 0x7fa27704d490 <line:3:5, col:23> col:18 used m 'void (void)' virtual
 | | `-CompoundStmt 0x7fa27704d9b8 <col:22, col:23>

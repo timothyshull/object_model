@@ -13,7 +13,7 @@ TranslationUnitDecl 0x7fe1f40326d0 <<invalid sloc>> <invalid sloc>
 | `-ConstantArrayType 0x7fe1f4033390 'struct __va_list_tag [1]' 1 
 |   `-RecordType 0x7fe1f40331a0 'struct __va_list_tag'
 |     `-CXXRecord 0x7fe1f4033108 '__va_list_tag'
-|-CXXRecordDecl 0x7fe1f4065c58 </Users/tskull/Documents/Programming/Cpp/object_model_refined/6_runtime_semantics/08_temporary_objects.cpp:1:1, line:10:1> line:1:8 referenced struct T1 definition
+|-CXXRecordDecl 0x7fe1f4065c58 <object_model_refined/6_runtime_semantics/08_temporary_objects.cpp:1:1, line:10:1> line:1:8 referenced struct T1 definition
 | |-CXXRecordDecl 0x7fe1f4065d78 <col:1, col:8> col:8 implicit referenced struct T1
 | |-FieldDecl 0x7fe1f4065e28 <line:2:5, col:9> col:9 referenced i 'int'
 | |-CXXConstructorDecl 0x7fe1f4065f10 <line:4:5, col:11> col:5 used T1 'void (void)'
