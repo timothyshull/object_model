@@ -13,7 +13,7 @@ TranslationUnitDecl 0x7fff370326d0 <<invalid sloc>> <invalid sloc>
 | `-ConstantArrayType 0x7fff37033390 'struct __va_list_tag [1]' 1 
 |   `-RecordType 0x7fff370331a0 'struct __va_list_tag'
 |     `-CXXRecord 0x7fff37033108 '__va_list_tag'
-|-CXXRecordDecl 0x7fff37065c58 <object_model_refined/6_runtime_semantics/05_default_constructors_and_arrays.cpp:1:1, line:4:1> line:1:8 referenced struct C definition
+|-CXXRecordDecl 0x7fff37065c58 <object_model/6_runtime_semantics/05_default_constructors_and_arrays.cpp:1:1, line:4:1> line:1:8 referenced struct C definition
 | |-CXXRecordDecl 0x7fff37065d78 <col:1, col:8> col:8 implicit struct C
 | |-FieldDecl 0x7fff37065e28 <line:2:5, col:12> col:12 r 'double'
 | |-FieldDecl 0x7fff37065e88 <line:3:5, col:12> col:12 i 'double'

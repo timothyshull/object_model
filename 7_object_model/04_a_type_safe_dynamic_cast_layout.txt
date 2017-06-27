@@ -42,7 +42,7 @@
            |  nvsize=8, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7ff1f4068658 <object_model_refined/7_object_model/04_a_type_safe_dynamic_cast.cpp:2:1, line:4:1> line:2:8 referenced struct V definition
+Record: CXXRecordDecl 0x7ff1f4068658 <object_model/7_object_model/04_a_type_safe_dynamic_cast.cpp:2:1, line:4:1> line:2:8 referenced struct V definition
 |-CXXRecordDecl 0x7ff1f4068778 <col:1, col:8> col:8 implicit struct V
 |-CXXMethodDecl 0x7ff1f4068890 <line:3:5, col:23> col:18 m 'void (void)' virtual
 | `-CompoundStmt 0x7ff1f4068db8 <col:22, col:23>
@@ -66,7 +66,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7ff1f4068dd0 <object_model_refined/7_object_model/04_a_type_safe_dynamic_cast.cpp:6:1, col:23> col:8 referenced struct A definition
+Record: CXXRecordDecl 0x7ff1f4068dd0 <object_model/7_object_model/04_a_type_safe_dynamic_cast.cpp:6:1, col:23> col:8 referenced struct A definition
 |-virtual public 'struct V'
 |-CXXRecordDecl 0x7ff1f4068f50 <col:1, col:8> col:8 implicit struct A
 |-CXXMethodDecl 0x7ff1f4069048 <col:8, <invalid sloc>> col:8 implicit operator= 'struct A &(const struct A &)' inline default noexcept-unevaluated 0x7ff1f4069048
@@ -91,7 +91,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7ff1f4069478 <object_model_refined/7_object_model/04_a_type_safe_dynamic_cast.cpp:8:1, col:23> col:8 referenced struct B definition
+Record: CXXRecordDecl 0x7ff1f4069478 <object_model/7_object_model/04_a_type_safe_dynamic_cast.cpp:8:1, col:23> col:8 referenced struct B definition
 |-virtual public 'struct V'
 |-CXXRecordDecl 0x7ff1f4095a00 <col:1, col:8> col:8 implicit struct B
 |-CXXMethodDecl 0x7ff1f4095af8 <col:8, <invalid sloc>> col:8 implicit operator= 'struct B &(const struct B &)' inline default noexcept-unevaluated 0x7ff1f4095af8
@@ -116,7 +116,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7ff1f4095f28 <object_model_refined/7_object_model/04_a_type_safe_dynamic_cast.cpp:10:1, col:18> col:8 referenced struct D definition
+Record: CXXRecordDecl 0x7ff1f4095f28 <object_model/7_object_model/04_a_type_safe_dynamic_cast.cpp:10:1, col:18> col:8 referenced struct D definition
 |-public 'struct A'
 |-public 'struct B'
 |-CXXRecordDecl 0x7ff1f40960e0 <col:1, col:8> col:8 implicit struct D
@@ -146,7 +146,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7ff1f4096608 <object_model_refined/7_object_model/04_a_type_safe_dynamic_cast.cpp:12:1, line:14:1> line:12:8 referenced struct B2 definition
+Record: CXXRecordDecl 0x7ff1f4096608 <object_model/7_object_model/04_a_type_safe_dynamic_cast.cpp:12:1, line:14:1> line:12:8 referenced struct B2 definition
 |-CXXRecordDecl 0x7ff1f4096728 <col:1, col:8> col:8 implicit referenced struct B2
 |-CXXDestructorDecl 0x7ff1f4096838 <line:13:5, col:20> col:13 used ~B2 'void (void) noexcept' virtual
 | `-CompoundStmt 0x7ff1f40977c0 <col:19, col:20>
@@ -165,7 +165,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7ff1f4097db8 <object_model_refined/7_object_model/04_a_type_safe_dynamic_cast.cpp:16:1, line:18:1> line:16:8 referenced struct D2 definition
+Record: CXXRecordDecl 0x7ff1f4097db8 <object_model/7_object_model/04_a_type_safe_dynamic_cast.cpp:16:1, line:18:1> line:16:8 referenced struct D2 definition
 |-public 'struct B2'
 |-CXXRecordDecl 0x7ff1f4097f18 <col:1, col:8> col:8 implicit struct D2
 |-CXXMethodDecl 0x7ff1f4097ff8 <line:17:5, col:23> col:18 used m 'void (void)' virtual

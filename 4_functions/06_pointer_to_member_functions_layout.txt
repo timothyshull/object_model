@@ -74,7 +74,7 @@
            |  nvsize=16, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fcc3c068c58 <object_model_refined/4_functions/06_pointer_to_member_functions.cpp:2:1, line:4:1> line:2:8 referenced struct B1 definition
+Record: CXXRecordDecl 0x7fcc3c068c58 <object_model/4_functions/06_pointer_to_member_functions.cpp:2:1, line:4:1> line:2:8 referenced struct B1 definition
 |-CXXRecordDecl 0x7fcc3c068d78 <col:1, col:8> col:8 implicit struct B1
 |-CXXMethodDecl 0x7fcc3c068e90 <line:3:5, col:15> col:10 used m 'void (void)'
 | `-CompoundStmt 0x7fcc3c068f48 <col:14, col:15>
@@ -93,7 +93,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fcc3c068f60 <object_model_refined/4_functions/06_pointer_to_member_functions.cpp:6:1, col:17> col:8 referenced struct D1 definition
+Record: CXXRecordDecl 0x7fcc3c068f60 <object_model/4_functions/06_pointer_to_member_functions.cpp:6:1, col:17> col:8 referenced struct D1 definition
 |-public 'struct B1'
 |-CXXRecordDecl 0x7fcc3c0690c8 <col:1, col:8> col:8 implicit struct D1
 |-CXXConstructorDecl 0x7fcc3d009080 <col:8> col:8 implicit referenced constexpr D1 'void (void) noexcept' inline default trivial
@@ -110,7 +110,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fcc3c069180 <object_model_refined/4_functions/06_pointer_to_member_functions.cpp:9:1, line:11:1> line:9:8 referenced struct B2 definition
+Record: CXXRecordDecl 0x7fcc3c069180 <object_model/4_functions/06_pointer_to_member_functions.cpp:9:1, line:11:1> line:9:8 referenced struct B2 definition
 |-CXXRecordDecl 0x7fcc3c0692a8 <col:1, col:8> col:8 implicit struct B2
 |-CXXMethodDecl 0x7fcc3c069388 <line:10:5, col:23> col:18 referenced m 'void (void)' virtual
 | `-CompoundStmt 0x7fcc3c0698a8 <col:22, col:23>
@@ -134,7 +134,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fcc3c0698c0 <object_model_refined/4_functions/06_pointer_to_member_functions.cpp:13:1, col:17> col:8 referenced struct D2 definition
+Record: CXXRecordDecl 0x7fcc3c0698c0 <object_model/4_functions/06_pointer_to_member_functions.cpp:13:1, col:17> col:8 referenced struct D2 definition
 |-public 'struct B2'
 |-CXXRecordDecl 0x7fcc3c069a28 <col:1, col:8> col:8 implicit struct D2
 |-CXXMethodDecl 0x7fcc3c069b18 <col:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct D2 &(const struct D2 &)' inline default noexcept-unevaluated 0x7fcc3c069b18
@@ -159,7 +159,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fcc3d002f58 <object_model_refined/4_functions/06_pointer_to_member_functions.cpp:16:1, line:18:1> line:16:8 referenced struct B3 definition
+Record: CXXRecordDecl 0x7fcc3d002f58 <object_model/4_functions/06_pointer_to_member_functions.cpp:16:1, line:18:1> line:16:8 referenced struct B3 definition
 |-CXXRecordDecl 0x7fcc3d003078 <col:1, col:8> col:8 implicit struct B3
 |-CXXMethodDecl 0x7fcc3d003158 <line:17:5, col:23> col:18 referenced m 'void (void)' virtual
 | `-CompoundStmt 0x7fcc3d003678 <col:22, col:23>
@@ -183,7 +183,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fcc3d003690 <object_model_refined/4_functions/06_pointer_to_member_functions.cpp:20:1, line:22:1> line:20:8 referenced struct B4 definition
+Record: CXXRecordDecl 0x7fcc3d003690 <object_model/4_functions/06_pointer_to_member_functions.cpp:20:1, line:22:1> line:20:8 referenced struct B4 definition
 |-CXXRecordDecl 0x7fcc3d0037b8 <col:1, col:8> col:8 implicit struct B4
 |-CXXMethodDecl 0x7fcc3d003898 <line:21:5, col:23> col:18 referenced m 'void (void)' virtual
 | `-CompoundStmt 0x7fcc3d0049e8 <col:22, col:23>
@@ -207,7 +207,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fcc3d004a00 <object_model_refined/4_functions/06_pointer_to_member_functions.cpp:24:1, col:21> col:8 referenced struct D3 definition
+Record: CXXRecordDecl 0x7fcc3d004a00 <object_model/4_functions/06_pointer_to_member_functions.cpp:24:1, col:21> col:8 referenced struct D3 definition
 |-public 'struct B3'
 |-public 'struct B4'
 |-CXXRecordDecl 0x7fcc3d004ba8 <col:1, col:8> col:8 implicit struct D3
@@ -235,7 +235,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fcc3d0050c8 <object_model_refined/4_functions/06_pointer_to_member_functions.cpp:27:1, line:29:1> line:27:8 referenced struct B5 definition
+Record: CXXRecordDecl 0x7fcc3d0050c8 <object_model/4_functions/06_pointer_to_member_functions.cpp:27:1, line:29:1> line:27:8 referenced struct B5 definition
 |-CXXRecordDecl 0x7fcc3d0051e8 <col:1, col:8> col:8 implicit struct B5
 |-CXXMethodDecl 0x7fcc3d0052c8 <line:28:5, col:23> col:18 referenced m 'void (void)' virtual
 | `-CompoundStmt 0x7fcc3d0057e8 <col:22, col:23>
@@ -259,7 +259,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fcc3d006400 <object_model_refined/4_functions/06_pointer_to_member_functions.cpp:31:1, col:30> col:7 referenced class X definition
+Record: CXXRecordDecl 0x7fcc3d006400 <object_model/4_functions/06_pointer_to_member_functions.cpp:31:1, col:30> col:7 referenced class X definition
 |-virtual public 'struct B5'
 |-CXXRecordDecl 0x7fcc3d006580 <col:1, col:7> col:7 implicit class X
 |-CXXMethodDecl 0x7fcc3d006678 <col:7, <invalid sloc>> col:7 implicit operator= 'class X &(const class X &)' inline default noexcept-unevaluated 0x7fcc3d006678
@@ -284,7 +284,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fcc3d006aa8 <object_model_refined/4_functions/06_pointer_to_member_functions.cpp:33:1, col:30> col:7 referenced class Y definition
+Record: CXXRecordDecl 0x7fcc3d006aa8 <object_model/4_functions/06_pointer_to_member_functions.cpp:33:1, col:30> col:7 referenced class Y definition
 |-virtual public 'struct B5'
 |-CXXRecordDecl 0x7fcc3d006c20 <col:1, col:7> col:7 implicit class Y
 |-CXXMethodDecl 0x7fcc3d006d18 <col:7, <invalid sloc>> col:7 implicit operator= 'class Y &(const class Y &)' inline default noexcept-unevaluated 0x7fcc3d006d18
@@ -309,7 +309,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fcc3d007148 <object_model_refined/4_functions/06_pointer_to_member_functions.cpp:35:1, col:19> col:8 referenced struct D4 definition
+Record: CXXRecordDecl 0x7fcc3d007148 <object_model/4_functions/06_pointer_to_member_functions.cpp:35:1, col:19> col:8 referenced struct D4 definition
 |-public 'class X'
 |-public 'class Y'
 |-CXXRecordDecl 0x7fcc3d007300 <col:1, col:8> col:8 implicit struct D4

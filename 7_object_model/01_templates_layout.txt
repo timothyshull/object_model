@@ -5,7 +5,7 @@
            |  nvsize=1, nvalign=1]
 
 *** Dumping IRgen Record Layout
-Record: ClassTemplateSpecializationDecl 0x7fa6711ddcc0 <object_model_refined/7_object_model/01_templates.cpp:9:1, line:10:12> col:7 class A definition
+Record: ClassTemplateSpecializationDecl 0x7fa6711ddcc0 <object_model/7_object_model/01_templates.cpp:9:1, line:10:12> col:7 class A definition
 |-TemplateArgument type 'int'
 |-CXXRecordDecl 0x7fa6711ddec0 prev 0x7fa6711ddcc0 <line:4:1, col:7> col:7 implicit class A
 |-AccessSpecDecl 0x7fa6711ddf58 <line:5:1, col:7> col:1 public
@@ -25,7 +25,7 @@ Layout: <CGRecordLayout
            |  nvsize=1, nvalign=1]
 
 *** Dumping IRgen Record Layout
-Record: ClassTemplateSpecializationDecl 0x7fa6711de198 <object_model_refined/7_object_model/01_templates.cpp:3:1, line:7:1> line:4:7 class A definition
+Record: ClassTemplateSpecializationDecl 0x7fa6711de198 <object_model/7_object_model/01_templates.cpp:3:1, line:7:1> line:4:7 class A definition
 |-TemplateArgument type 'double'
 |-CXXRecordDecl 0x7fa6711e2800 prev 0x7fa6711de198 <col:1, col:7> col:7 implicit class A
 |-AccessSpecDecl 0x7fa6711e2898 <line:5:1, col:7> col:1 public
@@ -45,7 +45,7 @@ Layout: <CGRecordLayout
            |  nvsize=1, nvalign=1]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fa6711e36c8 <object_model_refined/7_object_model/01_templates.cpp:25:1, line:29:1> line:25:8 referenced struct B definition
+Record: CXXRecordDecl 0x7fa6711e36c8 <object_model/7_object_model/01_templates.cpp:25:1, line:29:1> line:25:8 referenced struct B definition
 |-CXXRecordDecl 0x7fa6711e37e8 <col:1, col:8> col:8 implicit struct B
 `-FunctionTemplateDecl 0x7fa6711e3b38 <line:27:5, line:28:36> col:10 operator()
   |-TemplateTypeParmDecl 0x7fa6711e3880 <line:27:14, col:23> col:23 referenced typename depth 0 index 0 T

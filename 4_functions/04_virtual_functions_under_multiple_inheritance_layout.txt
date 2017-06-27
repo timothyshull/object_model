@@ -26,7 +26,7 @@
            |  nvsize=40, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f9808068c58 <object_model_refined/4_functions/04_virtual_functions_under_multiple_inheritance.cpp:1:1, line:16:1> line:1:7 referenced class P1 definition
+Record: CXXRecordDecl 0x7f9808068c58 <object_model/4_functions/04_virtual_functions_under_multiple_inheritance.cpp:1:1, line:16:1> line:1:7 referenced class P1 definition
 |-CXXRecordDecl 0x7f9808068d78 <col:1, col:7> col:7 implicit referenced class P1
 |-AccessSpecDecl 0x7f9808068e10 <line:2:1, col:7> col:1 public
 |-CXXDestructorDecl 0x7f9808068ef0 <line:3:5, col:27> col:13 used ~P1 'void (void) noexcept' virtual default
@@ -63,7 +63,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f98080942c0 <object_model_refined/4_functions/04_virtual_functions_under_multiple_inheritance.cpp:18:1, line:33:1> line:18:7 referenced class P2 definition
+Record: CXXRecordDecl 0x7f98080942c0 <object_model/4_functions/04_virtual_functions_under_multiple_inheritance.cpp:18:1, line:33:1> line:18:7 referenced class P2 definition
 |-CXXRecordDecl 0x7f98080943e8 <col:1, col:7> col:7 implicit referenced class P2
 |-AccessSpecDecl 0x7f9808094480 <line:19:1, col:7> col:1 public
 |-CXXConstructorDecl 0x7f9808094660 <line:20:5, col:58> col:14 used P2 'void (double, double)'
@@ -101,7 +101,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f9808094eb8 <object_model_refined/4_functions/04_virtual_functions_under_multiple_inheritance.cpp:35:1, line:63:1> line:35:7 referenced class P3 definition
+Record: CXXRecordDecl 0x7f9808094eb8 <object_model/4_functions/04_virtual_functions_under_multiple_inheritance.cpp:35:1, line:63:1> line:35:7 referenced class P3 definition
 |-public 'class P1'
 |-public 'class P2'
 |-CXXRecordDecl 0x7f9808097058 <col:1, col:7> col:7 implicit referenced class P3

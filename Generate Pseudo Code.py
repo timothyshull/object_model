@@ -17,9 +17,7 @@ def write_procs_for_segment(segment):
 
             # decompile
             decompiled = proc.decompile()
-            output = '{0} {1}() {{\n{2}}}\n\n'.format(label, name, decompiled)
-
-            procs_str += output
+            procs_str += '{0} {1}() {{\n{2}}}\n\n'.format(label, name, decompiled)
 
     return procs_str
 

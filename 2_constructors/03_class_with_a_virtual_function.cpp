@@ -2,7 +2,9 @@ struct X {
     virtual void m1() const = 0;
 };
 
-void func(const X &x) { x.m1(); }
+void func(const X &x) {
+    x.m1();
+}
 
 struct Y : public X {
     void m1() const override {}

@@ -2060,7 +2060,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fbc16e77318 <object_model_refined/8_memory_model/03_atomic_operations_and_types.cpp:6:1, line:8:1> line:6:8 referenced struct D1 definition
+Record: CXXRecordDecl 0x7fbc16e77318 <object_model/8_memory_model/03_atomic_operations_and_types.cpp:6:1, line:8:1> line:6:8 referenced struct D1 definition
 |-CXXRecordDecl 0x7fbc16e77438 <col:1, col:8> col:8 implicit struct D1
 |-FieldDecl 0x7fbc16e77550 <line:7:5, col:17> col:17 s 'std::string':'class std::__1::basic_string<char>'
 |-CXXConstructorDecl 0x7fbc16e775e8 <line:6:8> col:8 implicit D1 'void (struct D1 &&)' inline default noexcept-unevaluated 0x7fbc16e775e8
@@ -2507,7 +2507,7 @@ Layout: <CGRecordLayout
            |  nvsize=4, nvalign=4]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fbc16e98098 <object_model_refined/8_memory_model/03_atomic_operations_and_types.cpp:30:1, line:32:1> line:30:8 referenced struct D2 definition
+Record: CXXRecordDecl 0x7fbc16e98098 <object_model/8_memory_model/03_atomic_operations_and_types.cpp:30:1, line:32:1> line:30:8 referenced struct D2 definition
 |-CXXRecordDecl 0x7fbc16e981b8 <col:1, col:8> col:8 implicit struct D2
 `-FieldDecl 0x7fbc16e98268 <line:31:5, col:13> col:9 i 'int'
   `-IntegerLiteral 0x7fbc16e982f8 <col:13> 'int' 0

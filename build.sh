@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# TODO: consolidate repeated code
+
 script_file=$(realpath $0)
 root_dir=$(dirname ${script_file})
 build_dir_name=cmake-build-release
@@ -14,11 +16,14 @@ a_flag=
 e_flag=
 c_flag=
 t_flag=
+f_flag=
 l_flag=
 s_flag=
 h_flag=
 b_flag=
+d_flag=
 p_flag=
+d_val=
 p_val=
 
 # Be sure to set for your system or call with -p
@@ -28,22 +33,40 @@ CXX_FLAGS="-I${llvm_path}/include/c++/v1 -L${llvm_path}/lib -lc++"
 
 function clean_build_dir () {
     cd ${root_dir}
-    rm -rf ${build_dir_name}
+    if [ d_flag ];
+    then
+        rm -rf "${build_dir_name}/${d_val}"
+    else
+        rm -rf ${build_dir_name}
+    fi
 }
 
 function find_and_remove () {
     local pattern=$1
     cd ${root_dir}
-    find . -name "${pattern}" -exec rm -f {} \;
+    if [ d_flag ];
+    then
+        find ${d_val} -name "${pattern}" -exec rm -f {} \;
+    else
+        find . -name "${pattern}" -exec rm -f {} \;
+    fi
 }
 
 function clean_ast_files () {
     cd ${root_dir}
-    for dir in $(ls -d */ | grep "\d") ; do
-        for in_file in $(find $(realpath "$dir") -name '*.txt' | grep -v 'CMakeLists.txt' | grep -e ast -e layout); do
+
+    if [ d_flag ];
+    then
+        for in_file in $(find $(realpath "$d_val") -name '*.txt' | grep -v 'CMakeLists.txt' | grep -e ast -e layout); do
             $1 ${in_file}
         done
-    done
+    else
+        for dir in $(ls -d */ | grep "\d") ; do
+            for in_file in $(find $(realpath "$dir") -name '*.txt' | grep -v 'CMakeLists.txt' | grep -e ast -e layout); do
+                $1 ${in_file}
+            done
+        done
+    fi
 }
 
 function clean_all () {
@@ -55,6 +78,7 @@ function clean_all () {
 
     # remove all ast and layout files
     clean_ast_files rm
+    find_and_remove '*.ast.pdf'
 
     # clean pseudo-code files
     find_and_remove '*.pseudo.c'
@@ -148,11 +172,19 @@ EOF
 }
 
 function iterate_executables () {
-    for dir in $(ls -d */ | grep "\d" | grep -v "${ignore_dir}") ; do
-        for in_file in $(find $(realpath "$dir") -perm 0755 -type f); do
+    if [ d_flag ];
+    then
+        dir=$(realpath "$d_val")
+        for in_file in $(find "$dir" -perm 0755 -type f); do
             $1 ${dir} ${in_file}
         done
-    done
+    else
+        for dir in $(ls -d */ | grep "\d" | grep -v "${ignore_dir}") ; do
+            for in_file in $(find $(realpath "$dir") -perm 0755 -type f); do
+                $1 ${dir} ${in_file}
+            done
+        done
+    fi
 }
 
 function generate_all_hop_files () {
@@ -167,11 +199,19 @@ function generate_all_hop_files () {
 }
 
 function iterate_source_files () {
-    for dir in $(ls -d */ | grep "\d" | grep -v "${ignore_dir}") ; do
-        for in_file in $(find $(realpath "${dir}") -name '*.cpp'); do
+    if [ d_flag ];
+    then
+        dir=$(realpath "${d_val}")
+        for in_file in $(find "${d_val}" -name '*.cpp'); do
             $1 ${dir} ${in_file}
         done
-    done
+    else
+        for dir in $(ls -d */ | grep "\d" | grep -v "${ignore_dir}") ; do
+            for in_file in $(find $(realpath "${dir}") -name '*.cpp'); do
+                $1 ${dir} ${in_file}
+            done
+        done
+    fi
 }
 
 # NOTE: this requires graphviz to be installed and a debug build of clang
@@ -223,7 +263,10 @@ function generate_all_ast_files () {
     export PATH="${clang_path}:$PATH"
     cd "${root_dir}"
     iterate_source_files generate_ast_text_file
-    # iterate_source_files generate_ast_pdf_file
+    if [ f_flag ];
+    then
+        iterate_source_files generate_ast_pdf_file
+    fi
 }
 
 function generate_object_layout_file () {
@@ -252,7 +295,7 @@ function generate_all_layout_files () {
 function generate_assembly_file () {
     local clang_exe="${clang_path}/clang++"
     local dir="$1"
-    local in_file="$2"
+    local in_file=$(basename "$2")
     local assembly_file="${in_file%.*}.cpp.s"
     cd ${dir}
     ${clang_exe} -DNDEBUG --std=c++14 -O0 -fstrict-vtable-pointers -S ${in_file}
@@ -289,10 +332,12 @@ function print_usage () {
         "    -e - build executables" \
         "    -c - clean all generated files" \
         "    -t - generate AST files" \
+        "    -f - generate AST .pdf files (with -t or -a)" \
         "    -l - generate object layout files" \
         "    -s - generate assembly files" \
         "    -h - generate Hopper files" \
         "    -b - clone Google benchmark" \
+        "    -d - specify a single directory for run actions" \
         "    -p - specify the path to clang & clang-check" >&2
 }
 
@@ -321,7 +366,7 @@ function remove_a_out () {
 }
 
 function parse_args () {
-    while getopts :aectlshbp: FOUND
+    while getopts :aectflshbd:p: FOUND
     do
         case $FOUND in
             a)  a_flag=1
@@ -332,6 +377,8 @@ function parse_args () {
                 ;;
             t)  t_flag=1
                 ;;
+            f)  f_flag=1
+                ;;
             l)  l_flag=1
                 ;;
             s)  s_flag=1
@@ -339,6 +386,9 @@ function parse_args () {
             h)  h_flag=1
                 ;;
             b)  b_flag=1
+                ;;
+            d)  d_flag=1
+                d_val="$OPTARG"
                 ;;
             p)  p_flag=1
                 p_val="$OPTARG"
@@ -375,16 +425,27 @@ function perform_actions () {
         b_flag=1
     fi
 
-    if [ ${c_flag} ]
+    if [ ${d_flag} ]
     then
-        printf "Option -c specified...cleaning generated files\n"
-        clean_all
+        if [ -d ${d_val} ];
+        then
+            printf 'Option -d specified...only running actions for "%s"\n' ${d_val}
+        else
+            printf 'The specified directory "%s" is not a valid path\n' ${d_val}
+            exit 2
+        fi
     fi
 
     if [ ${p_flag} ]
     then
         printf 'Option -p specified...appending "%s" to path for clang-check\n' ${p_val}
         clang_path=${p_val}
+    fi
+
+    if [ ${c_flag} ]
+    then
+        printf "Option -c specified...cleaning generated files\n"
+        clean_all
     fi
 
     if [ ${b_flag} ]
@@ -426,7 +487,7 @@ function perform_actions () {
 
     remove_a_out
 
-    printf "Successfully completed the file generation\n"
+    printf "Finished\n"
 }
 
 function main () {

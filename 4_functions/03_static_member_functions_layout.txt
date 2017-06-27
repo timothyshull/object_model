@@ -8,7 +8,7 @@
            |  nvsize=12, nvalign=4]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f8f1e068658 <object_model_refined/4_functions/03_static_member_functions.cpp:1:1, line:15:1> line:1:7 referenced class P3 definition
+Record: CXXRecordDecl 0x7f8f1e068658 <object_model/4_functions/03_static_member_functions.cpp:1:1, line:15:1> line:1:7 referenced class P3 definition
 |-CXXRecordDecl 0x7f8f1e068778 <col:1, col:7> col:7 implicit referenced class P3
 |-AccessSpecDecl 0x7f8f1e068810 <line:2:1, col:7> col:1 public
 |-CXXConstructorDecl 0x7f8f1e0688e0 <line:3:5, line:6:5> line:3:5 used P3 'void (void)'

@@ -3,6 +3,8 @@ project(constructors)
 add_compile_options(${NO_OPT})
 
 add_executable(01_default_constructor_construction 01_default_constructor_construction.cpp)
+target_compile_options(01_default_constructor_construction PUBLIC -fno-elide-constructors)
+
 add_executable(02_member_class_object_with_default_constructor 02_member_class_object_with_default_constructor.cpp)
 add_executable(03_class_with_a_virtual_function 03_class_with_a_virtual_function.cpp)
 add_executable(04_class_with_a_virtual_base_class 04_class_with_a_virtual_base_class.cpp)

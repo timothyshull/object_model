@@ -1,0 +1,32 @@
+project(manual_pseudo_code LANGUAGES C)
+
+add_compile_options(-O0)
+
+# Ch 2
+add_executable(02_member_class_object_with_default_constructor_manual 02_member_class_object_with_default_constructor.c)
+add_executable(03_class_with_a_virtual_function_manual 03_class_with_a_virtual_function.c)
+add_executable(09_argument_initialization_manual 09_argument_initialization.c)
+
+# Ch 3
+add_executable(05_adding_polymorphism_manual 05_adding_polymorphism.c)
+add_executable(06_multiple_inheritance_manual 06_multiple_inheritance.c)
+
+# Ch 4
+add_executable(01_nonstatic_member_functions_manual 01_nonstatic_member_functions.c)
+add_executable(03_static_member_functions_manual 03_static_member_functions.c)
+add_executable(05_virtual_functions_under_virtual_inheritance_manual 05_virtual_functions_under_virtual_inheritance.c)
+add_executable(07_inline_functions_manual 07_inline_functions.c)
+
+# Ch 5
+add_executable(05_object_copy_semantics_manual 05_object_copy_semantics.c)
+add_executable(06_object_move_semantics_manual 06_object_move_semantics.c)
+
+# Ch 6
+add_executable(01_object_construction_and_destruction_manual 01_object_construction_and_destruction.c)
+add_executable(04_arrays_of_objects_manual 04_arrays_of_objects.c)
+add_executable(06_operators_new_and_delete_manual 06_operators_new_and_delete.c)
+add_executable(08_temporary_objects_manual 08_temporary_objects.c)
+
+# memory model
+add_executable(02_objects_memory_locations_and_concurrency_manual 02_objects_memory_locations_and_concurrency.c)
+add_executable(03_atomic_operations_and_types_manual 03_atomic_operations_and_types.c)

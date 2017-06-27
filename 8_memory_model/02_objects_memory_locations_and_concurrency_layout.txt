@@ -2075,7 +2075,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fa04ed51540 <object_model_refined/8_memory_model/02_objects_memory_locations_and_concurrency.cpp:5:1, line:16:1> line:5:8 referenced struct D definition
+Record: CXXRecordDecl 0x7fa04ed51540 <object_model/8_memory_model/02_objects_memory_locations_and_concurrency.cpp:5:1, line:16:1> line:5:8 referenced struct D definition
 |-CXXRecordDecl 0x7fa04ed51668 <col:1, col:8> col:8 implicit struct D
 |-FieldDecl 0x7fa04ed51718 <line:6:5, col:9> col:9 i 'int'
 |-FieldDecl 0x7fa04ed51778 <line:7:5, col:12> col:12 d 'double'

@@ -6761,7 +6761,7 @@ TranslationUnitDecl 0x7f9513818cd0 <<invalid sloc>> <invalid sloc>
 |     |-CXX11NoReturnAttr 0x7f951315bf50 </usr/local/Cellar/llvm/5.0.0/bin/../include/c++/v1/__config:341:30>
 |     |-AlwaysInlineAttr 0x7f951315bf98 <line:737:74> always_inline
 |     `-VisibilityAttr 0x7f951315bfa8 <col:48, col:71> Hidden
-|-CXXRecordDecl 0x7f951315c3e8 <object_model_refined/7_object_model/05_references_are_not_pointers.cpp:3:1, line:5:1> line:3:8 referenced struct B definition
+|-CXXRecordDecl 0x7f951315c3e8 <object_model/7_object_model/05_references_are_not_pointers.cpp:3:1, line:5:1> line:3:8 referenced struct B definition
 | |-CXXRecordDecl 0x7f951315c508 <col:1, col:8> col:8 implicit struct B
 | |-CXXMethodDecl 0x7f951315c5e8 <line:4:5, col:23> col:18 used m 'void (void)' virtual
 | | `-CompoundStmt 0x7f951315cb08 <col:22, col:23>

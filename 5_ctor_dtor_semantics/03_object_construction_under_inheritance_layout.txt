@@ -37,7 +37,7 @@
            |  nvsize=32, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7faa95067658 <object_model_refined/5_ctor_dtor_semantics/03_object_construction_under_inheritance.cpp:1:1, line:5:1> line:1:8 referenced struct B1 definition
+Record: CXXRecordDecl 0x7faa95067658 <object_model/5_ctor_dtor_semantics/03_object_construction_under_inheritance.cpp:1:1, line:5:1> line:1:8 referenced struct B1 definition
 |-CXXRecordDecl 0x7faa95067778 <col:1, col:8> col:8 implicit referenced struct B1
 |-CXXConstructorDecl 0x7faa950678b0 <line:2:5, col:11> col:5 used B1 'void (void)'
 | `-CompoundStmt 0x7faa95067c68 <col:10, col:11>
@@ -56,7 +56,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7faa950682a8 <object_model_refined/5_ctor_dtor_semantics/03_object_construction_under_inheritance.cpp:7:1, line:11:1> line:7:8 referenced struct B2 definition
+Record: CXXRecordDecl 0x7faa950682a8 <object_model/5_ctor_dtor_semantics/03_object_construction_under_inheritance.cpp:7:1, line:11:1> line:7:8 referenced struct B2 definition
 |-CXXRecordDecl 0x7faa950683c8 <col:1, col:8> col:8 implicit referenced struct B2
 |-CXXConstructorDecl 0x7faa950684c8 <line:8:5, col:11> col:5 used B2 'void (void)'
 | `-CompoundStmt 0x7faa950944b8 <col:10, col:11>
@@ -75,7 +75,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7faa950944e8 <object_model_refined/5_ctor_dtor_semantics/03_object_construction_under_inheritance.cpp:13:1, line:17:1> line:13:8 referenced struct X definition
+Record: CXXRecordDecl 0x7faa950944e8 <object_model/5_ctor_dtor_semantics/03_object_construction_under_inheritance.cpp:13:1, line:17:1> line:13:8 referenced struct X definition
 |-CXXRecordDecl 0x7faa95094608 <col:1, col:8> col:8 implicit referenced struct X
 |-CXXConstructorDecl 0x7faa95094708 <line:14:5, col:10> col:5 used X 'void (void)'
 | `-CompoundStmt 0x7faa95094ab8 <col:9, col:10>
@@ -94,7 +94,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7faa95094ae8 <object_model_refined/5_ctor_dtor_semantics/03_object_construction_under_inheritance.cpp:19:1, line:23:1> line:19:8 referenced struct Y definition
+Record: CXXRecordDecl 0x7faa95094ae8 <object_model/5_ctor_dtor_semantics/03_object_construction_under_inheritance.cpp:19:1, line:23:1> line:19:8 referenced struct Y definition
 |-CXXRecordDecl 0x7faa95094c08 <col:1, col:8> col:8 implicit referenced struct Y
 |-CXXConstructorDecl 0x7faa95094d08 <line:20:5, col:10> col:5 used Y 'void (void)'
 | `-CompoundStmt 0x7faa950950b8 <col:9, col:10>
@@ -113,7 +113,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7faa950950e8 <object_model_refined/5_ctor_dtor_semantics/03_object_construction_under_inheritance.cpp:25:1, line:32:1> line:25:8 referenced struct D1 definition
+Record: CXXRecordDecl 0x7faa950950e8 <object_model/5_ctor_dtor_semantics/03_object_construction_under_inheritance.cpp:25:1, line:32:1> line:25:8 referenced struct D1 definition
 |-public 'struct B1'
 |-public 'struct B2'
 |-CXXRecordDecl 0x7faa95095ae8 <col:1, col:8> col:8 implicit referenced struct D1
@@ -167,7 +167,7 @@ Layout: <CGRecordLayout
            |  nvsize=16, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7faa95096870 <object_model_refined/5_ctor_dtor_semantics/03_object_construction_under_inheritance.cpp:34:1, line:38:1> line:34:8 referenced struct B3 definition
+Record: CXXRecordDecl 0x7faa95096870 <object_model/5_ctor_dtor_semantics/03_object_construction_under_inheritance.cpp:34:1, line:38:1> line:34:8 referenced struct B3 definition
 |-virtual public 'struct B1'
 |-CXXRecordDecl 0x7faa95097200 <col:1, col:8> col:8 implicit referenced struct B3
 |-CXXConstructorDecl 0x7faa95097308 <line:35:5, col:11> col:5 used B3 'void (void)'
@@ -189,7 +189,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7faa95097758 <object_model_refined/5_ctor_dtor_semantics/03_object_construction_under_inheritance.cpp:40:1, line:44:1> line:40:8 referenced struct B4 definition
+Record: CXXRecordDecl 0x7faa95097758 <object_model/5_ctor_dtor_semantics/03_object_construction_under_inheritance.cpp:40:1, line:44:1> line:40:8 referenced struct B4 definition
 |-virtual public 'struct B1'
 |-CXXRecordDecl 0x7faa950978d0 <col:1, col:8> col:8 implicit referenced struct B4
 |-CXXConstructorDecl 0x7faa950979d8 <line:41:5, col:11> col:5 used B4 'void (void)'
@@ -211,7 +211,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7faa95097e28 <object_model_refined/5_ctor_dtor_semantics/03_object_construction_under_inheritance.cpp:46:1, line:50:1> line:46:8 referenced struct D2 definition
+Record: CXXRecordDecl 0x7faa95097e28 <object_model/5_ctor_dtor_semantics/03_object_construction_under_inheritance.cpp:46:1, line:50:1> line:46:8 referenced struct D2 definition
 |-public 'struct B3'
 |-public 'struct B4'
 |-CXXRecordDecl 0x7faa95097fe0 <col:1, col:8> col:8 implicit referenced struct D2

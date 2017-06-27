@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(object_model_refined)
+project(object_model LANGUAGES C CXX)
 
 # set(CMAKE_CXX_STANDARD 14)
 # set(CMAKE_VERBOSE_MAKEFILE ON)
@@ -28,7 +28,8 @@ set(NO_OPT -O0 -fstrict-vtable-pointers)
 set(MAX_OPT -O3)
 set(FAST_OPT -Ofast)
 
-add_compile_options(--std=c++14)
+# add_compile_options(--std=c++14)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --std=c++14")
 
 add_subdirectory(2_constructors)
 add_subdirectory(3_data)
@@ -39,3 +40,5 @@ add_subdirectory(7_object_model)
 add_subdirectory(8_memory_model)
 
 add_subdirectory(9_profiling)
+
+add_subdirectory(manual_pseudo_code)

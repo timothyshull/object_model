@@ -13,7 +13,7 @@
            |  nvsize=8, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fb671b09de8 <object_model_refined/7_object_model/05_references_are_not_pointers.cpp:3:1, line:5:1> line:3:8 referenced struct B definition
+Record: CXXRecordDecl 0x7fb671b09de8 <object_model/7_object_model/05_references_are_not_pointers.cpp:3:1, line:5:1> line:3:8 referenced struct B definition
 |-CXXRecordDecl 0x7fb671b09f08 <col:1, col:8> col:8 implicit struct B
 |-CXXMethodDecl 0x7fb671b09fe8 <line:4:5, col:23> col:18 m 'void (void)' virtual
 | `-CompoundStmt 0x7fb671b0a508 <col:22, col:23>
@@ -38,7 +38,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fb671b0a520 <object_model_refined/7_object_model/05_references_are_not_pointers.cpp:7:1, col:15> col:8 referenced struct D definition
+Record: CXXRecordDecl 0x7fb671b0a520 <object_model/7_object_model/05_references_are_not_pointers.cpp:7:1, col:15> col:8 referenced struct D definition
 |-public 'struct B'
 |-CXXRecordDecl 0x7fb671b0a688 <col:1, col:8> col:8 implicit struct D
 |-CXXMethodDecl 0x7fb671b0a778 <col:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct D &(const struct D &)' inline default noexcept-unevaluated 0x7fb671b0a778

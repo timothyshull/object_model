@@ -7,7 +7,7 @@ Lfunc_begin0:
 	.cfi_startproc
 	.cfi_personality 155, ___gxx_personality_v0
 	.cfi_lsda 16, Lexception0
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi0:
 	.cfi_def_cfa_offset 16
@@ -52,7 +52,7 @@ Ltmp0:
 	callq	__ZN1SC1ERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE
 Ltmp1:
 	jmp	LBB0_1
-LBB0_1:
+LBB0_1:                                 ## %invoke.cont
 	leaq	-112(%rbp), %rdi
 	callq	__ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev
 Ltmp3:
@@ -61,7 +61,7 @@ Ltmp3:
 	callq	__ZN1SC1ERKS_
 Ltmp4:
 	jmp	LBB0_2
-LBB0_2:
+LBB0_2:                                 ## %invoke.cont2
 	leaq	-160(%rbp), %rdi
 	movl	$0, -52(%rbp)
 	callq	__ZN1SD1Ev
@@ -71,7 +71,7 @@ LBB0_2:
 	addq	$192, %rsp
 	popq	%rbp
 	retq
-LBB0_3:
+LBB0_3:                                 ## %lpad
 Ltmp2:
 	leaq	-112(%rbp), %rdi
 	movl	%edx, %ecx
@@ -79,14 +79,14 @@ Ltmp2:
 	movl	%ecx, -124(%rbp)
 	callq	__ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev
 	jmp	LBB0_5
-LBB0_4:
+LBB0_4:                                 ## %lpad1
 Ltmp5:
 	leaq	-88(%rbp), %rdi
 	movl	%edx, %ecx
 	movq	%rax, -120(%rbp)
 	movl	%ecx, -124(%rbp)
 	callq	__ZN1SD1Ev
-LBB0_5:
+LBB0_5:                                 ## %eh.resume
 	movq	-120(%rbp), %rdi
 	callq	__Unwind_Resume
 Lfunc_end0:
@@ -134,7 +134,7 @@ Lset9 = Lfunc_end0-Ltmp4                ##   Call between Ltmp4 and Lfunc_end0
 	.p2align	4, 0x90
 __ZN1SC1ERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE: ## @_ZN1SC1ERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi3:
 	.cfi_def_cfa_offset 16
@@ -159,7 +159,7 @@ Lcfi5:
 	.p2align	4, 0x90
 __ZN1SC1ERKS_:                          ## @_ZN1SC1ERKS_
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi6:
 	.cfi_def_cfa_offset 16
@@ -184,7 +184,7 @@ Lcfi8:
 	.p2align	4, 0x90
 __ZN1SD1Ev:                             ## @_ZN1SD1Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi9:
 	.cfi_def_cfa_offset 16
@@ -207,7 +207,7 @@ Lcfi11:
 	.p2align	4, 0x90
 __ZN1SC2ERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE: ## @_ZN1SC2ERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi12:
 	.cfi_def_cfa_offset 16
@@ -235,7 +235,7 @@ Lcfi14:
 	andl	$1, %ecx
 	cmpl	$0, %ecx
 	je	LBB4_2
-## BB#1:
+## BB#1:                                ## %cond.true.i
 	movq	-80(%rbp), %rax         ## 8-byte Reload
 	movq	%rax, -32(%rbp)
 	movq	-32(%rbp), %rcx
@@ -246,7 +246,7 @@ Lcfi14:
 	movq	8(%rax), %rax
 	movq	%rax, -96(%rbp)         ## 8-byte Spill
 	jmp	LBB4_3
-LBB4_2:
+LBB4_2:                                 ## %cond.false.i
 	movq	-80(%rbp), %rax         ## 8-byte Reload
 	movq	%rax, -16(%rbp)
 	movq	-16(%rbp), %rcx
@@ -258,7 +258,7 @@ LBB4_2:
 	sarl	$1, %edx
 	movslq	%edx, %rax
 	movq	%rax, -96(%rbp)         ## 8-byte Spill
-LBB4_3:
+LBB4_3:                                 ## %_ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE4sizeEv.exit
 	movq	-96(%rbp), %rax         ## 8-byte Reload
 	movq	-88(%rbp), %rcx         ## 8-byte Reload
 	movq	%rax, (%rcx)
@@ -276,7 +276,7 @@ LBB4_3:
 	.p2align	4, 0x90
 __ZNKSt3__122__compressed_pair_elemINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repELi0ELb0EE5__getEv: ## @_ZNKSt3__122__compressed_pair_elemINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repELi0ELb0EE5__getEv
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi15:
 	.cfi_def_cfa_offset 16
@@ -296,7 +296,7 @@ Lcfi17:
 	.p2align	4, 0x90
 __ZN1SC2ERKS_:                          ## @_ZN1SC2ERKS_
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi18:
 	.cfi_def_cfa_offset 16
@@ -329,7 +329,7 @@ Lcfi20:
 	.p2align	4, 0x90
 __ZN1SD2Ev:                             ## @_ZN1SD2Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi21:
 	.cfi_def_cfa_offset 16
@@ -353,7 +353,7 @@ Lcfi23:
 	.p2align	4, 0x90
 __ZNSt3__111char_traitsIcE6lengthEPKc:  ## @_ZNSt3__111char_traitsIcE6lengthEPKc
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi24:
 	.cfi_def_cfa_offset 16
@@ -376,7 +376,7 @@ Lcfi26:
 	.p2align	4, 0x90
 __ZNSt3__122__compressed_pair_elemINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repELi0ELb0EEC2Ev: ## @_ZNSt3__122__compressed_pair_elemINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repELi0ELb0EEC2Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi27:
 	.cfi_def_cfa_offset 16
@@ -402,7 +402,7 @@ Lcfi29:
 	.p2align	4, 0x90
 __ZNSt3__122__compressed_pair_elemINS_9allocatorIcEELi1ELb1EEC2Ev: ## @_ZNSt3__122__compressed_pair_elemINS_9allocatorIcEELi1ELb1EEC2Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi30:
 	.cfi_def_cfa_offset 16

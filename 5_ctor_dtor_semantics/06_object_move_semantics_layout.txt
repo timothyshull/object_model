@@ -53,7 +53,7 @@
            |  nvsize=0, nvalign=1]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fed5d90e6b0 <object_model_refined/5_ctor_dtor_semantics/06_object_move_semantics.cpp:3:1, line:21:1> line:3:8 referenced struct A definition
+Record: CXXRecordDecl 0x7fed5d90e6b0 <object_model/5_ctor_dtor_semantics/06_object_move_semantics.cpp:3:1, line:21:1> line:3:8 referenced struct A definition
 |-CXXRecordDecl 0x7fed5d90e7d8 <col:1, col:8> col:8 implicit referenced struct A
 |-CXXConstructorDecl 0x7fed5d90e8d8 <line:4:5, col:10> col:5 A 'void (void)'
 | `-CompoundStmt 0x7fed5d90f1b8 <col:9, col:10>

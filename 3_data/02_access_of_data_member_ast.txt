@@ -13,7 +13,7 @@ TranslationUnitDecl 0x7fa572018cd0 <<invalid sloc>> <invalid sloc>
 | `-ConstantArrayType 0x7fa572019990 'struct __va_list_tag [1]' 1 
 |   `-RecordType 0x7fa5720197a0 'struct __va_list_tag'
 |     `-CXXRecord 0x7fa572019708 '__va_list_tag'
-|-CXXRecordDecl 0x7fa572803c58 <object_model_refined/3_data/02_access_of_data_member.cpp:1:1, line:3:1> line:1:8 struct S1 definition
+|-CXXRecordDecl 0x7fa572803c58 <object_model/3_data/02_access_of_data_member.cpp:1:1, line:3:1> line:1:8 struct S1 definition
 | |-CXXRecordDecl 0x7fa572803d78 <col:1, col:8> col:8 implicit struct S1
 | `-VarDecl 0x7fa572803e28 <line:2:5, col:16> col:16 used s 'int' static
 |-VarDecl 0x7fa572803ee0 parent 0x7fa572803c58 prev 0x7fa572803e28 <line:5:1, col:13> col:9 used s 'int' cinit

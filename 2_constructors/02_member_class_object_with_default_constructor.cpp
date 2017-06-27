@@ -1,10 +1,3 @@
-// defaulting ctors here allowed for elision of function generation
-// the equivalence of the classes X, Y, and Z allowed for an optimization
-// which resulted in repeated calls to X::X() and subsequent assignment to
-// members y and z within Xyx::Xyz()
-// TODO: check to see if this optimization can be forcibly removed
-// required different member types to actually force unique ctor generation
-
 // Example 1
 struct A {
     int a;
@@ -38,7 +31,7 @@ struct Y {
 
     Y() : y{0} {}
 
-    explicit Y(int) {}
+    explicit Y(int i) : y{i} {}
 
     ~Y() = default;
 };
@@ -53,16 +46,14 @@ struct Z {
 
 class Xyz {
 private:
-    int _value;
+    int _v;
 
 public:
     X x;
     Y y;
     Z z;
 
-    Xyz() : _value{2048}, y{1024} {}
-
-    // Xyz() : _value{2048} {}
+    Xyz() : _v{2048}, y{1024} {}
 
     ~Xyz() {}
 };
