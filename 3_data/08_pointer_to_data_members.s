@@ -4,7 +4,7 @@
 	.p2align	4, 0x90
 __Z5func1M1DiPS_:                       ## @_Z5func1M1DiPS_
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi0:
 	.cfi_def_cfa_offset 16
@@ -26,7 +26,7 @@ Lcfi2:
 	.p2align	4, 0x90
 __Z5func2P1D:                           ## @_Z5func2P1D
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi3:
 	.cfi_def_cfa_offset 16
@@ -55,7 +55,7 @@ Lcfi5:
 	.p2align	4, 0x90
 _main:                                  ## @main
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi6:
 	.cfi_def_cfa_offset 16
@@ -71,10 +71,10 @@ Lcfi8:
 	movq	-16(%rbp), %rax
 	cmpq	-24(%rbp), %rax
 	jne	LBB2_2
-## BB#1:
+## BB#1:                                ## %if.then
 	movq	-24(%rbp), %rax
 	movq	%rax, -32(%rbp)
-LBB2_2:
+LBB2_2:                                 ## %if.end
 	leaq	-40(%rbp), %rax
 	xorl	%esi, %esi
 	movl	$8, %ecx

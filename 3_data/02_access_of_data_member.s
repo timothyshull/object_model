@@ -4,7 +4,7 @@
 	.p2align	4, 0x90
 _main:                                  ## @main
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi0:
 	.cfi_def_cfa_offset 16
@@ -34,7 +34,7 @@ Lcfi2:
 	.p2align	4, 0x90
 __ZN2S23addERKS_:                       ## @_ZN2S23addERKS_
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi3:
 	.cfi_def_cfa_offset 16

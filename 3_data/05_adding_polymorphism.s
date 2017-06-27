@@ -4,7 +4,7 @@
 	.p2align	4, 0x90
 __Z5func1R2P2S0_:                       ## @_Z5func1R2P2S0_
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi0:
 	.cfi_def_cfa_offset 16
@@ -29,7 +29,7 @@ Lcfi2:
 	.p2align	4, 0x90
 _main:                                  ## @main
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi3:
 	.cfi_def_cfa_offset 16
@@ -52,11 +52,11 @@ Lcfi5:
 	cmpq	$0, %rdi
 	movq	%rax, -32(%rbp)         ## 8-byte Spill
 	je	LBB1_2
-## BB#1:
+## BB#1:                                ## %cast.notnull
 	movq	-24(%rbp), %rax         ## 8-byte Reload
 	addq	$8, %rax
 	movq	%rax, -32(%rbp)         ## 8-byte Spill
-LBB1_2:
+LBB1_2:                                 ## %cast.end
 	movq	-32(%rbp), %rax         ## 8-byte Reload
 	xorl	%ecx, %ecx
 	movq	%rax, -16(%rbp)
@@ -71,7 +71,7 @@ LBB1_2:
 	.p2align	4, 0x90
 __ZN1VC1Ev:                             ## @_ZN1VC1Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi6:
 	.cfi_def_cfa_offset 16
@@ -94,7 +94,7 @@ Lcfi8:
 	.p2align	4, 0x90
 __ZN1VC2Ev:                             ## @_ZN1VC2Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi9:
 	.cfi_def_cfa_offset 16
@@ -117,7 +117,7 @@ Lcfi11:
 	.p2align	4, 0x90
 __ZN1V3fooEv:                           ## @_ZN1V3fooEv
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi12:
 	.cfi_def_cfa_offset 16

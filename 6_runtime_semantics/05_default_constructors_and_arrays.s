@@ -4,7 +4,7 @@
 	.p2align	4, 0x90
 _main:                                  ## @main
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi0:
 	.cfi_def_cfa_offset 16
@@ -23,12 +23,12 @@ Lcfi2:
 	movq	-8(%rbp), %rcx
 	cmpq	%rcx, %rax
 	jne	LBB0_2
-## BB#1:
+## BB#1:                                ## %SP_return
 	xorl	%eax, %eax
 	addq	$192, %rsp
 	popq	%rbp
 	retq
-LBB0_2:
+LBB0_2:                                 ## %CallStackCheckFailBlk
 	callq	___stack_chk_fail
 	.cfi_endproc
                                         ## -- End function

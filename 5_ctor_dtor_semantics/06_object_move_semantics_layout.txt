@@ -53,29 +53,29 @@
            |  nvsize=0, nvalign=1]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fed5d90e6b0 <object_model/5_ctor_dtor_semantics/06_object_move_semantics.cpp:3:1, line:21:1> line:3:8 referenced struct A definition
-|-CXXRecordDecl 0x7fed5d90e7d8 <col:1, col:8> col:8 implicit referenced struct A
-|-CXXConstructorDecl 0x7fed5d90e8d8 <line:4:5, col:10> col:5 A 'void (void)'
-| `-CompoundStmt 0x7fed5d90f1b8 <col:9, col:10>
-|-CXXConstructorDecl 0x7fed5d90ea80 <line:6:5, col:22> col:5 A 'void (const struct A &)'
-| |-ParmVarDecl 0x7fed5d90e9b8 <col:7, col:16> col:16 rhs 'const struct A &'
-| `-CompoundStmt 0x7fed5d90f1d0 <col:21, col:22>
-|-CXXConstructorDecl 0x7fed5d90ec78 <line:8:5, col:24> col:5 used A 'void (struct A &&) noexcept'
-| |-ParmVarDecl 0x7fed5d90eb68 <col:7, col:11> col:11 o 'struct A &&'
-| `-CompoundStmt 0x7fed5d90f1e8 <col:23, col:24>
-|-CXXMethodDecl 0x7fed5d90ee30 <line:10:5, line:13:5> line:10:8 operator= 'struct A &(const struct A &)'
-| |-ParmVarDecl 0x7fed5d90ed38 <col:18, col:27> col:27 rhs 'const struct A &'
-| `-CompoundStmt 0x7fed5d90f250 <line:11:5, line:13:5>
-|   `-ReturnStmt 0x7fed5d90f238 <line:12:9, col:17>
-|     `-UnaryOperator 0x7fed5d90f218 <col:16, col:17> 'struct A' lvalue prefix '*'
-|       `-CXXThisExpr 0x7fed5d90f200 <col:17> 'struct A *' this
-|-CXXMethodDecl 0x7fed5d90efe8 <line:15:5, line:18:5> line:15:8 operator= 'struct A &(struct A &&) noexcept'
-| |-ParmVarDecl 0x7fed5d90eee0 <col:18, col:22> col:22 rhs 'struct A &&'
-| `-CompoundStmt 0x7fed5d90f2c0 <line:16:5, line:18:5>
-|   `-ReturnStmt 0x7fed5d90f2a8 <line:17:9, col:17>
-|     `-UnaryOperator 0x7fed5d90f288 <col:16, col:17> 'struct A' lvalue prefix '*'
-|       `-CXXThisExpr 0x7fed5d90f270 <col:17> 'struct A *' this
-`-CXXDestructorDecl 0x7fed5d90f0d8 <line:20:5, col:18> col:5 ~A 'void (void) noexcept' default trivial
+Record: CXXRecordDecl 0x7fc6602314e0 <object_model_refined/5_ctor_dtor_semantics/06_object_move_semantics.cpp:3:1, line:21:1> line:3:8 referenced struct A definition
+|-CXXRecordDecl 0x7fc660231608 <col:1, col:8> col:8 implicit referenced struct A
+|-CXXConstructorDecl 0x7fc660231708 <line:4:5, col:10> col:5 A 'void (void)'
+| `-CompoundStmt 0x7fc660231fe8 <col:9, col:10>
+|-CXXConstructorDecl 0x7fc6602318b0 <line:6:5, col:22> col:5 A 'void (const struct A &)'
+| |-ParmVarDecl 0x7fc6602317e8 <col:7, col:16> col:16 rhs 'const struct A &'
+| `-CompoundStmt 0x7fc660232000 <col:21, col:22>
+|-CXXConstructorDecl 0x7fc660231aa8 <line:8:5, col:24> col:5 used A 'void (struct A &&) noexcept'
+| |-ParmVarDecl 0x7fc660231998 <col:7, col:11> col:11 o 'struct A &&'
+| `-CompoundStmt 0x7fc660232018 <col:23, col:24>
+|-CXXMethodDecl 0x7fc660231c60 <line:10:5, line:13:5> line:10:8 operator= 'struct A &(const struct A &)'
+| |-ParmVarDecl 0x7fc660231b68 <col:18, col:27> col:27 rhs 'const struct A &'
+| `-CompoundStmt 0x7fc660232080 <line:11:5, line:13:5>
+|   `-ReturnStmt 0x7fc660232068 <line:12:9, col:17>
+|     `-UnaryOperator 0x7fc660232048 <col:16, col:17> 'struct A' lvalue prefix '*'
+|       `-CXXThisExpr 0x7fc660232030 <col:17> 'struct A *' this
+|-CXXMethodDecl 0x7fc660231e18 <line:15:5, line:18:5> line:15:8 operator= 'struct A &(struct A &&) noexcept'
+| |-ParmVarDecl 0x7fc660231d10 <col:18, col:22> col:22 rhs 'struct A &&'
+| `-CompoundStmt 0x7fc6602320f0 <line:16:5, line:18:5>
+|   `-ReturnStmt 0x7fc6602320d8 <line:17:9, col:17>
+|     `-UnaryOperator 0x7fc6602320b8 <col:16, col:17> 'struct A' lvalue prefix '*'
+|       `-CXXThisExpr 0x7fc6602320a0 <col:17> 'struct A *' this
+`-CXXDestructorDecl 0x7fc660231f08 <line:20:5, col:18> col:5 ~A 'void (void) noexcept' default trivial
 
 Layout: <CGRecordLayout
   LLVMType:%struct.A = type { i8 }

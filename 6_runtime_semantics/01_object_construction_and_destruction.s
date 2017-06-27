@@ -4,7 +4,7 @@
 	.p2align	4, 0x90
 __Z5func18Selector:                     ## @_Z5func18Selector
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi0:
 	.cfi_def_cfa_offset 16
@@ -22,25 +22,25 @@ Lcfi2:
 	movl	%eax, -12(%rbp)         ## 4-byte Spill
 	je	LBB0_1
 	jmp	LBB0_5
-LBB0_5:
+LBB0_5:                                 ## %entry
 	movl	-12(%rbp), %eax         ## 4-byte Reload
 	subl	$1, %eax
 	movl	%eax, -16(%rbp)         ## 4-byte Spill
 	je	LBB0_2
 	jmp	LBB0_6
-LBB0_6:
+LBB0_6:                                 ## %entry
 	movl	-12(%rbp), %eax         ## 4-byte Reload
 	subl	$2, %eax
 	movl	%eax, -20(%rbp)         ## 4-byte Spill
 	je	LBB0_3
 	jmp	LBB0_4
-LBB0_1:
+LBB0_1:                                 ## %sw.bb
 	jmp	LBB0_2
-LBB0_2:
+LBB0_2:                                 ## %sw.bb1
 	jmp	LBB0_3
-LBB0_3:
+LBB0_3:                                 ## %sw.bb2
 	jmp	LBB0_4
-LBB0_4:
+LBB0_4:                                 ## %sw.epilog
 	leaq	-8(%rbp), %rdi
 	callq	__ZN1AD1Ev
 	addq	$32, %rsp
@@ -53,7 +53,7 @@ LBB0_4:
 	.p2align	4, 0x90
 __ZN1AC1Ev:                             ## @_ZN1AC1Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi3:
 	.cfi_def_cfa_offset 16
@@ -76,7 +76,7 @@ Lcfi5:
 	.p2align	4, 0x90
 __ZN1AD1Ev:                             ## @_ZN1AD1Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi6:
 	.cfi_def_cfa_offset 16
@@ -98,7 +98,7 @@ Lcfi8:
 	.p2align	4, 0x90
 _main:                                  ## @main
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi9:
 	.cfi_def_cfa_offset 16
@@ -130,7 +130,7 @@ Lcfi11:
 	.p2align	4, 0x90
 __ZN1AC2Ev:                             ## @_ZN1AC2Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi12:
 	.cfi_def_cfa_offset 16
@@ -149,7 +149,7 @@ Lcfi14:
 	.p2align	4, 0x90
 __ZN1AD2Ev:                             ## @_ZN1AD2Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi15:
 	.cfi_def_cfa_offset 16

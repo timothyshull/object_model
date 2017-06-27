@@ -33,7 +33,7 @@ CXX_FLAGS="-I${llvm_path}/include/c++/v1 -L${llvm_path}/lib -lc++"
 
 function clean_build_dir () {
     cd ${root_dir}
-    if [ d_flag ];
+    if [ ${d_flag} ];
     then
         rm -rf "${build_dir_name}/${d_val}"
     else
@@ -44,18 +44,18 @@ function clean_build_dir () {
 function find_and_remove () {
     local pattern=$1
     cd ${root_dir}
-    if [ d_flag ];
+    if [ ${d_flag} ];
     then
-        find ${d_val} -name "${pattern}" -exec rm -f {} \;
+        find ${d_val} -name "'${pattern}'" -exec rm -f {} \;
     else
-        find . -name "${pattern}" -exec rm -f {} \;
+        find . -name "'${pattern}'" -exec rm -f {} \;
     fi
 }
 
 function clean_ast_files () {
     cd ${root_dir}
 
-    if [ d_flag ];
+    if [ ${d_flag} ];
     then
         for in_file in $(find $(realpath "$d_val") -name '*.txt' | grep -v 'CMakeLists.txt' | grep -e ast -e layout); do
             $1 ${in_file}
@@ -172,7 +172,7 @@ EOF
 }
 
 function iterate_executables () {
-    if [ d_flag ];
+    if [ ${d_flag} ];
     then
         dir=$(realpath "$d_val")
         for in_file in $(find "$dir" -perm 0755 -type f); do
@@ -199,7 +199,7 @@ function generate_all_hop_files () {
 }
 
 function iterate_source_files () {
-    if [ d_flag ];
+    if [ ${d_flag} ];
     then
         dir=$(realpath "${d_val}")
         for in_file in $(find "${d_val}" -name '*.cpp'); do
@@ -263,7 +263,7 @@ function generate_all_ast_files () {
     export PATH="${clang_path}:$PATH"
     cd "${root_dir}"
     iterate_source_files generate_ast_text_file
-    if [ f_flag ];
+    if [ ! -z ${f_flag} ];
     then
         iterate_source_files generate_ast_pdf_file
     fi

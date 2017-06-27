@@ -4,7 +4,7 @@
 	.p2align	4, 0x90
 __ZN2P312object_countEv:                ## @_ZN2P312object_countEv
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi0:
 	.cfi_def_cfa_offset 16
@@ -22,7 +22,7 @@ Lcfi2:
 	.p2align	4, 0x90
 _main:                                  ## @main
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi3:
 	.cfi_def_cfa_offset 16
@@ -53,7 +53,7 @@ Lcfi5:
 	.p2align	4, 0x90
 __ZN2P3C1Ev:                            ## @_ZN2P3C1Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi6:
 	.cfi_def_cfa_offset 16
@@ -76,7 +76,7 @@ Lcfi8:
 	.p2align	4, 0x90
 __ZN2P3C2Ev:                            ## @_ZN2P3C2Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi9:
 	.cfi_def_cfa_offset 16

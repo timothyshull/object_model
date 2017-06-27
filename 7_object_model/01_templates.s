@@ -5,7 +5,7 @@
 	.p2align	4, 0x90
 __ZN1AIiE1mEv:                          ## @_ZN1AIiE1mEv
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi0:
 	.cfi_def_cfa_offset 16
@@ -24,7 +24,7 @@ Lcfi2:
 	.p2align	4, 0x90
 __ZN1AIdE1mEv:                          ## @_ZN1AIdE1mEv
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi3:
 	.cfi_def_cfa_offset 16
@@ -43,7 +43,7 @@ Lcfi5:
 	.p2align	4, 0x90
 __Z1fIdEvT_:                            ## @_Z1fIdEvT_
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi6:
 	.cfi_def_cfa_offset 16
@@ -62,7 +62,7 @@ Lcfi8:
 	.p2align	4, 0x90
 __Z1fIiEvT_:                            ## @_Z1fIiEvT_
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi9:
 	.cfi_def_cfa_offset 16
@@ -85,7 +85,7 @@ LCPI4_0:
 	.p2align	4, 0x90
 _main:                                  ## @main
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi12:
 	.cfi_def_cfa_offset 16
@@ -122,7 +122,7 @@ Lcfi14:
 	.p2align	4, 0x90
 __ZN1BclIdEEvRKT_:                      ## @_ZN1BclIdEEvRKT_
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi15:
 	.cfi_def_cfa_offset 16
@@ -142,7 +142,7 @@ Lcfi17:
 	.p2align	4, 0x90
 __ZN1BclIiEEvRKT_:                      ## @_ZN1BclIiEEvRKT_
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi18:
 	.cfi_def_cfa_offset 16

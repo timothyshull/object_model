@@ -4,7 +4,7 @@
 	.p2align	4, 0x90
 _main:                                  ## @main
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi0:
 	.cfi_def_cfa_offset 16
@@ -34,7 +34,7 @@ Lcfi2:
 	.p2align	4, 0x90
 __ZN2D1C1Ev:                            ## @_ZN2D1C1Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi3:
 	.cfi_def_cfa_offset 16
@@ -57,7 +57,7 @@ Lcfi5:
 	.p2align	4, 0x90
 __ZN2D1D1Ev:                            ## @_ZN2D1D1Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi6:
 	.cfi_def_cfa_offset 16
@@ -83,7 +83,7 @@ Lfunc_begin0:
 	.cfi_startproc
 	.cfi_personality 155, ___gxx_personality_v0
 	.cfi_lsda 16, Lexception0
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi9:
 	.cfi_def_cfa_offset 16
@@ -107,7 +107,7 @@ Ltmp0:
 	callq	__ZN2B3C2Ev
 Ltmp1:
 	jmp	LBB3_1
-LBB3_1:
+LBB3_1:                                 ## %invoke.cont
 	movq	-32(%rbp), %rax         ## 8-byte Reload
 	addq	$8, %rax
 Ltmp3:
@@ -118,7 +118,7 @@ Ltmp3:
 	callq	__ZN2B4C2Ev
 Ltmp4:
 	jmp	LBB3_2
-LBB3_2:
+LBB3_2:                                 ## %invoke.cont3
 	movq	__ZTV2D2@GOTPCREL(%rip), %rax
 	movq	%rax, %rcx
 	addq	$80, %rcx
@@ -130,13 +130,13 @@ LBB3_2:
 	addq	$48, %rsp
 	popq	%rbp
 	retq
-LBB3_3:
+LBB3_3:                                 ## %lpad
 Ltmp2:
 	movl	%edx, %ecx
 	movq	%rax, -16(%rbp)
 	movl	%ecx, -20(%rbp)
 	jmp	LBB3_5
-LBB3_4:
+LBB3_4:                                 ## %lpad2
 Ltmp5:
 	movq	__ZTT2D2@GOTPCREL(%rip), %rcx
 	addq	$8, %rcx
@@ -147,11 +147,11 @@ Ltmp5:
 	movq	%rax, %rdi
 	movq	%rcx, %rsi
 	callq	__ZN2B3D2Ev
-LBB3_5:
+LBB3_5:                                 ## %ehcleanup
 	movq	-32(%rbp), %rax         ## 8-byte Reload
 	movq	%rax, %rdi
 	callq	__ZN2B1D2Ev
-## BB#6:
+## BB#6:                                ## %eh.resume
 	movq	-16(%rbp), %rdi
 	callq	__Unwind_Resume
 Lfunc_end0:
@@ -193,7 +193,7 @@ Lset7 = Lfunc_end0-Ltmp4                ##   Call between Ltmp4 and Lfunc_end0
 	.p2align	4, 0x90
 __ZN2D2D1Ev:                            ## @_ZN2D2D1Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi12:
 	.cfi_def_cfa_offset 16
@@ -224,7 +224,7 @@ Lfunc_begin1:
 	.cfi_startproc
 	.cfi_personality 155, ___gxx_personality_v0
 	.cfi_lsda 16, Lexception1
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi15:
 	.cfi_def_cfa_offset 16
@@ -244,7 +244,7 @@ Ltmp6:
 	callq	__ZN2B2C2Ev
 Ltmp7:
 	jmp	LBB5_1
-LBB5_1:
+LBB5_1:                                 ## %invoke.cont
 	movq	__ZTV2D1@GOTPCREL(%rip), %rax
 	movq	%rax, %rcx
 	addq	$16, %rcx
@@ -259,7 +259,7 @@ Ltmp9:
 	callq	__ZN1XC1Ev
 Ltmp10:
 	jmp	LBB5_2
-LBB5_2:
+LBB5_2:                                 ## %invoke.cont3
 	movq	-32(%rbp), %rax         ## 8-byte Reload
 	addq	$24, %rax
 Ltmp12:
@@ -267,39 +267,39 @@ Ltmp12:
 	callq	__ZN1YC1Ev
 Ltmp13:
 	jmp	LBB5_3
-LBB5_3:
+LBB5_3:                                 ## %invoke.cont5
 	addq	$48, %rsp
 	popq	%rbp
 	retq
-LBB5_4:
+LBB5_4:                                 ## %lpad
 Ltmp8:
 	movl	%edx, %ecx
 	movq	%rax, -16(%rbp)
 	movl	%ecx, -20(%rbp)
 	jmp	LBB5_8
-LBB5_5:
+LBB5_5:                                 ## %lpad2
 Ltmp11:
 	movl	%edx, %ecx
 	movq	%rax, -16(%rbp)
 	movl	%ecx, -20(%rbp)
 	jmp	LBB5_7
-LBB5_6:
+LBB5_6:                                 ## %lpad4
 Ltmp14:
 	movl	%edx, %ecx
 	movq	%rax, -16(%rbp)
 	movl	%ecx, -20(%rbp)
 	movq	-40(%rbp), %rdi         ## 8-byte Reload
 	callq	__ZN1XD1Ev
-LBB5_7:
+LBB5_7:                                 ## %ehcleanup
 	movq	-32(%rbp), %rax         ## 8-byte Reload
 	addq	$8, %rax
 	movq	%rax, %rdi
 	callq	__ZN2B2D2Ev
-LBB5_8:
+LBB5_8:                                 ## %ehcleanup6
 	movq	-32(%rbp), %rax         ## 8-byte Reload
 	movq	%rax, %rdi
 	callq	__ZN2B1D2Ev
-## BB#9:
+## BB#9:                                ## %eh.resume
 	movq	-16(%rbp), %rdi
 	callq	__Unwind_Resume
 Lfunc_end1:
@@ -348,7 +348,7 @@ Lset18 = Lfunc_end1-Ltmp13              ##   Call between Ltmp13 and Lfunc_end1
 	.p2align	4, 0x90
 __ZN2B1C2Ev:                            ## @_ZN2B1C2Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi18:
 	.cfi_def_cfa_offset 16
@@ -371,7 +371,7 @@ Lcfi20:
 	.p2align	4, 0x90
 __ZN2B2C2Ev:                            ## @_ZN2B2C2Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi21:
 	.cfi_def_cfa_offset 16
@@ -394,7 +394,7 @@ Lcfi23:
 	.p2align	4, 0x90
 __ZN1XC1Ev:                             ## @_ZN1XC1Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi24:
 	.cfi_def_cfa_offset 16
@@ -417,7 +417,7 @@ Lcfi26:
 	.p2align	4, 0x90
 __ZN1YC1Ev:                             ## @_ZN1YC1Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi27:
 	.cfi_def_cfa_offset 16
@@ -440,7 +440,7 @@ Lcfi29:
 	.p2align	4, 0x90
 __ZN1XD1Ev:                             ## @_ZN1XD1Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi30:
 	.cfi_def_cfa_offset 16
@@ -463,7 +463,7 @@ Lcfi32:
 	.p2align	4, 0x90
 __ZN2B2D2Ev:                            ## @_ZN2B2D2Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi33:
 	.cfi_def_cfa_offset 16
@@ -482,7 +482,7 @@ Lcfi35:
 	.p2align	4, 0x90
 __ZN2B1D2Ev:                            ## @_ZN2B1D2Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi36:
 	.cfi_def_cfa_offset 16
@@ -501,7 +501,7 @@ Lcfi38:
 	.p2align	4, 0x90
 __ZN2D1D0Ev:                            ## @_ZN2D1D0Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi39:
 	.cfi_def_cfa_offset 16
@@ -527,7 +527,7 @@ Lcfi41:
 	.p2align	4, 0x90
 __ZThn8_N2D1D1Ev:                       ## @_ZThn8_N2D1D1Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi42:
 	.cfi_def_cfa_offset 16
@@ -548,7 +548,7 @@ Lcfi44:
 	.p2align	4, 0x90
 __ZThn8_N2D1D0Ev:                       ## @_ZThn8_N2D1D0Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi45:
 	.cfi_def_cfa_offset 16
@@ -569,7 +569,7 @@ Lcfi47:
 	.p2align	4, 0x90
 __ZN2B1D1Ev:                            ## @_ZN2B1D1Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi48:
 	.cfi_def_cfa_offset 16
@@ -592,7 +592,7 @@ Lcfi50:
 	.p2align	4, 0x90
 __ZN2B1D0Ev:                            ## @_ZN2B1D0Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi51:
 	.cfi_def_cfa_offset 16
@@ -618,7 +618,7 @@ Lcfi53:
 	.p2align	4, 0x90
 __ZN2B2D1Ev:                            ## @_ZN2B2D1Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi54:
 	.cfi_def_cfa_offset 16
@@ -641,7 +641,7 @@ Lcfi56:
 	.p2align	4, 0x90
 __ZN2B2D0Ev:                            ## @_ZN2B2D0Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi57:
 	.cfi_def_cfa_offset 16
@@ -667,7 +667,7 @@ Lcfi59:
 	.p2align	4, 0x90
 __ZN1XC2Ev:                             ## @_ZN1XC2Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi60:
 	.cfi_def_cfa_offset 16
@@ -690,7 +690,7 @@ Lcfi62:
 	.p2align	4, 0x90
 __ZN1XD0Ev:                             ## @_ZN1XD0Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi63:
 	.cfi_def_cfa_offset 16
@@ -716,7 +716,7 @@ Lcfi65:
 	.p2align	4, 0x90
 __ZN1YC2Ev:                             ## @_ZN1YC2Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi66:
 	.cfi_def_cfa_offset 16
@@ -739,7 +739,7 @@ Lcfi68:
 	.p2align	4, 0x90
 __ZN1YD1Ev:                             ## @_ZN1YD1Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi69:
 	.cfi_def_cfa_offset 16
@@ -762,7 +762,7 @@ Lcfi71:
 	.p2align	4, 0x90
 __ZN1YD0Ev:                             ## @_ZN1YD0Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi72:
 	.cfi_def_cfa_offset 16
@@ -788,7 +788,7 @@ Lcfi74:
 	.p2align	4, 0x90
 __ZN1YD2Ev:                             ## @_ZN1YD2Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi75:
 	.cfi_def_cfa_offset 16
@@ -807,7 +807,7 @@ Lcfi77:
 	.p2align	4, 0x90
 __ZN1XD2Ev:                             ## @_ZN1XD2Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi78:
 	.cfi_def_cfa_offset 16
@@ -826,7 +826,7 @@ Lcfi80:
 	.p2align	4, 0x90
 __ZN2D1D2Ev:                            ## @_ZN2D1D2Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi81:
 	.cfi_def_cfa_offset 16
@@ -864,7 +864,7 @@ Lcfi83:
 	.p2align	4, 0x90
 __ZN2B3C2Ev:                            ## @_ZN2B3C2Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi84:
 	.cfi_def_cfa_offset 16
@@ -892,7 +892,7 @@ Lcfi86:
 	.p2align	4, 0x90
 __ZN2B4C2Ev:                            ## @_ZN2B4C2Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi87:
 	.cfi_def_cfa_offset 16
@@ -920,7 +920,7 @@ Lcfi89:
 	.p2align	4, 0x90
 __ZN2B3D2Ev:                            ## @_ZN2B3D2Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi90:
 	.cfi_def_cfa_offset 16
@@ -940,7 +940,7 @@ Lcfi92:
 	.p2align	4, 0x90
 __ZN2B3D1Ev:                            ## @_ZN2B3D1Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi93:
 	.cfi_def_cfa_offset 16
@@ -968,7 +968,7 @@ Lcfi95:
 	.p2align	4, 0x90
 __ZN2B3D0Ev:                            ## @_ZN2B3D0Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi96:
 	.cfi_def_cfa_offset 16
@@ -994,7 +994,7 @@ Lcfi98:
 	.p2align	4, 0x90
 __ZN2B4D1Ev:                            ## @_ZN2B4D1Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi99:
 	.cfi_def_cfa_offset 16
@@ -1022,7 +1022,7 @@ Lcfi101:
 	.p2align	4, 0x90
 __ZN2B4D0Ev:                            ## @_ZN2B4D0Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi102:
 	.cfi_def_cfa_offset 16
@@ -1048,7 +1048,7 @@ Lcfi104:
 	.p2align	4, 0x90
 __ZTv0_n24_N2B4D1Ev:                    ## @_ZTv0_n24_N2B4D1Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi105:
 	.cfi_def_cfa_offset 16
@@ -1071,7 +1071,7 @@ Lcfi107:
 	.p2align	4, 0x90
 __ZTv0_n24_N2B4D0Ev:                    ## @_ZTv0_n24_N2B4D0Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi108:
 	.cfi_def_cfa_offset 16
@@ -1094,7 +1094,7 @@ Lcfi110:
 	.p2align	4, 0x90
 __ZN2D2D0Ev:                            ## @_ZN2D2D0Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi111:
 	.cfi_def_cfa_offset 16
@@ -1120,7 +1120,7 @@ Lcfi113:
 	.p2align	4, 0x90
 __ZThn8_N2D2D1Ev:                       ## @_ZThn8_N2D2D1Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi114:
 	.cfi_def_cfa_offset 16
@@ -1141,7 +1141,7 @@ Lcfi116:
 	.p2align	4, 0x90
 __ZThn8_N2D2D0Ev:                       ## @_ZThn8_N2D2D0Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi117:
 	.cfi_def_cfa_offset 16
@@ -1162,7 +1162,7 @@ Lcfi119:
 	.p2align	4, 0x90
 __ZTv0_n24_N2B3D1Ev:                    ## @_ZTv0_n24_N2B3D1Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi120:
 	.cfi_def_cfa_offset 16
@@ -1185,7 +1185,7 @@ Lcfi122:
 	.p2align	4, 0x90
 __ZTv0_n24_N2B3D0Ev:                    ## @_ZTv0_n24_N2B3D0Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi123:
 	.cfi_def_cfa_offset 16
@@ -1208,7 +1208,7 @@ Lcfi125:
 	.p2align	4, 0x90
 __ZN2B4D2Ev:                            ## @_ZN2B4D2Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi126:
 	.cfi_def_cfa_offset 16
@@ -1228,7 +1228,7 @@ Lcfi128:
 	.p2align	4, 0x90
 __ZTv0_n24_N2D2D0Ev:                    ## @_ZTv0_n24_N2D2D0Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi129:
 	.cfi_def_cfa_offset 16
@@ -1251,7 +1251,7 @@ Lcfi131:
 	.p2align	4, 0x90
 __ZN2D2D2Ev:                            ## @_ZN2D2D2Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi132:
 	.cfi_def_cfa_offset 16
@@ -1290,7 +1290,7 @@ Lcfi134:
 	.p2align	4, 0x90
 __ZTv0_n24_N2D2D1Ev:                    ## @_ZTv0_n24_N2D2D1Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi135:
 	.cfi_def_cfa_offset 16

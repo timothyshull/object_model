@@ -307,6 +307,9 @@ Lcfi38:
 	.cfi_def_cfa_register %rbp
 	movq	%rdi, -8(%rbp)
 	movl	%esi, -12(%rbp)
+	movq	-8(%rbp), %rdi
+	movl	-12(%rbp), %esi
+	movl	%esi, (%rdi)
 	popq	%rbp
 	retq
 	.cfi_endproc

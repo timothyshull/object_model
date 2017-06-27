@@ -5,14 +5,14 @@
            |  nvsize=0, nvalign=1]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fbad8868658 <object_model/6_runtime_semantics/01_object_construction_and_destruction.cpp:1:1, line:5:1> line:1:8 referenced struct A definition
-|-CXXRecordDecl 0x7fbad8868778 <col:1, col:8> col:8 implicit referenced struct A
-|-CXXConstructorDecl 0x7fbad88688b0 <line:2:5, col:10> col:5 used A 'void (void)'
-| `-CompoundStmt 0x7fbad8868a88 <col:9, col:10>
-|-CXXDestructorDecl 0x7fbad88689a8 <line:4:5, col:11> col:5 used ~A 'void (void) noexcept'
-| `-CompoundStmt 0x7fbad8868ad0 <col:10, col:11>
-`-CXXConstructorDecl 0x7fbad8868f08 <line:1:8> col:8 implicit constexpr A 'void (const struct A &)' inline default trivial noexcept-unevaluated 0x7fbad8868f08
-  `-ParmVarDecl 0x7fbad8869030 <col:8> col:8 'const struct A &'
+Record: CXXRecordDecl 0x7fcdcb069058 <object_model_refined/6_runtime_semantics/01_object_construction_and_destruction.cpp:1:1, line:5:1> line:1:8 referenced struct A definition
+|-CXXRecordDecl 0x7fcdcb069178 <col:1, col:8> col:8 implicit referenced struct A
+|-CXXConstructorDecl 0x7fcdcb0692b0 <line:2:5, col:10> col:5 used A 'void (void)'
+| `-CompoundStmt 0x7fcdcb069488 <col:9, col:10>
+|-CXXDestructorDecl 0x7fcdcb0693a8 <line:4:5, col:11> col:5 used ~A 'void (void) noexcept'
+| `-CompoundStmt 0x7fcdcb0694d0 <col:10, col:11>
+`-CXXConstructorDecl 0x7fcdcb069908 <line:1:8> col:8 implicit constexpr A 'void (const struct A &)' inline default trivial noexcept-unevaluated 0x7fcdcb069908
+  `-ParmVarDecl 0x7fcdcb069a30 <col:8> col:8 'const struct A &'
 
 Layout: <CGRecordLayout
   LLVMType:%struct.A = type { i8 }

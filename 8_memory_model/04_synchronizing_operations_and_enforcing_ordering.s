@@ -4,7 +4,7 @@
 	.p2align	4, 0x90         ## -- Begin function __cxx_global_var_init
 ___cxx_global_var_init:                 ## @__cxx_global_var_init
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi0:
 	.cfi_def_cfa_offset 16
@@ -63,7 +63,7 @@ Lcfi2:
 	.p2align	4, 0x90
 __ZNSt3__16vectorIiNS_9allocatorIiEEED1Ev: ## @_ZNSt3__16vectorIiNS_9allocatorIiEEED1Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi3:
 	.cfi_def_cfa_offset 16
@@ -88,7 +88,7 @@ Lfunc_begin0:
 	.cfi_startproc
 	.cfi_personality 155, ___gxx_personality_v0
 	.cfi_lsda 16, Lexception0
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi6:
 	.cfi_def_cfa_offset 16
@@ -98,7 +98,8 @@ Lcfi7:
 Lcfi8:
 	.cfi_def_cfa_register %rbp
 	subq	$80, %rsp
-LBB2_1:                                 ## =>This Inner Loop Header: Depth=1
+LBB2_1:                                 ## %while.cond
+                                        ## =>This Inner Loop Header: Depth=1
 	leaq	_data_ready(%rip), %rax
 	movq	%rax, -24(%rbp)
 	movl	$5, -28(%rbp)
@@ -112,47 +113,54 @@ LBB2_1:                                 ## =>This Inner Loop Header: Depth=1
 	movl	%edx, -56(%rbp)         ## 4-byte Spill
 	jb	LBB2_3
 	jmp	LBB2_10
-LBB2_10:                                ##   in Loop: Header=BB2_1 Depth=1
+LBB2_10:                                ## %while.cond
+                                        ##   in Loop: Header=BB2_1 Depth=1
 	movl	-52(%rbp), %eax         ## 4-byte Reload
 	subl	$5, %eax
 	movl	%eax, -60(%rbp)         ## 4-byte Spill
 	je	LBB2_4
 	jmp	LBB2_2
-LBB2_2:                                 ##   in Loop: Header=BB2_1 Depth=1
+LBB2_2:                                 ## %monotonic.i
+                                        ##   in Loop: Header=BB2_1 Depth=1
 	movq	-48(%rbp), %rax         ## 8-byte Reload
 	movb	(%rax), %cl
 	movb	%cl, -29(%rbp)
 	jmp	LBB2_5
-LBB2_3:                                 ##   in Loop: Header=BB2_1 Depth=1
+LBB2_3:                                 ## %acquire.i
+                                        ##   in Loop: Header=BB2_1 Depth=1
 	movq	-48(%rbp), %rax         ## 8-byte Reload
 	movb	(%rax), %cl
 	movb	%cl, -29(%rbp)
 	jmp	LBB2_5
-LBB2_4:                                 ##   in Loop: Header=BB2_1 Depth=1
+LBB2_4:                                 ## %seqcst.i
+                                        ##   in Loop: Header=BB2_1 Depth=1
 	movq	-48(%rbp), %rax         ## 8-byte Reload
 	movb	(%rax), %cl
 	movb	%cl, -29(%rbp)
-LBB2_5:                                 ##   in Loop: Header=BB2_1 Depth=1
+LBB2_5:                                 ## %_ZNKSt3__113__atomic_baseIbLb0EE4loadENS_12memory_orderE.exit
+                                        ##   in Loop: Header=BB2_1 Depth=1
 	movb	-29(%rbp), %al
 	xorb	$-1, %al
 	testb	$1, %al
 	jne	LBB2_6
 	jmp	LBB2_9
-LBB2_6:                                 ##   in Loop: Header=BB2_1 Depth=1
+LBB2_6:                                 ## %while.body
+                                        ##   in Loop: Header=BB2_1 Depth=1
 Ltmp0:
 	callq	_sched_yield
 Ltmp1:
 	movl	%eax, -64(%rbp)         ## 4-byte Spill
 	jmp	LBB2_8
-LBB2_7:
+LBB2_7:                                 ## %terminate.lpad.i
 Ltmp2:
 	movl	%edx, %ecx
 	movq	%rax, %rdi
 	movl	%ecx, -68(%rbp)         ## 4-byte Spill
 	callq	___clang_call_terminate
-LBB2_8:                                 ##   in Loop: Header=BB2_1 Depth=1
+LBB2_8:                                 ## %_ZNSt3__111this_thread5yieldEv.exit
+                                        ##   in Loop: Header=BB2_1 Depth=1
 	jmp	LBB2_1
-LBB2_9:
+LBB2_9:                                 ## %while.end
 	leaq	_data(%rip), %rax
 	movq	%rax, -8(%rbp)
 	movq	$0, -16(%rbp)
@@ -194,7 +202,7 @@ Lset2 = Ltmp2-Lfunc_begin0              ##     jumps to Ltmp2
 	.p2align	4, 0x90
 __Z6writerv:                            ## @_Z6writerv
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi9:
 	.cfi_def_cfa_offset 16
@@ -224,7 +232,7 @@ Lcfi11:
 	movq	-320(%rbp), %rcx        ## 8-byte Reload
 	cmpq	(%rax), %rcx
 	jae	LBB3_2
-## BB#1:
+## BB#1:                                ## %if.then.i
 	leaq	-296(%rbp), %rax
 	movq	%rax, -240(%rbp)
 	movq	-312(%rbp), %rax        ## 8-byte Reload
@@ -281,13 +289,13 @@ Lcfi11:
 	addq	$4, %rax
 	movq	%rax, 8(%rdx)
 	jmp	LBB3_3
-LBB3_2:
+LBB3_2:                                 ## %if.else.i
 	movq	-288(%rbp), %rax
 	movq	%rax, -184(%rbp)
 	movq	-184(%rbp), %rsi
 	movq	-312(%rbp), %rdi        ## 8-byte Reload
 	callq	__ZNSt3__16vectorIiNS_9allocatorIiEEE21__push_back_slow_pathIiEEvOT_
-LBB3_3:
+LBB3_3:                                 ## %_ZNSt3__16vectorIiNS_9allocatorIiEEE9push_backEOi.exit
 	leaq	_data_ready(%rip), %rax
 	movq	%rax, -32(%rbp)
 	movb	$1, -33(%rbp)
@@ -309,28 +317,28 @@ LBB3_3:
 	movl	%esi, -336(%rbp)        ## 4-byte Spill
 	je	LBB3_5
 	jmp	LBB3_8
-LBB3_8:
+LBB3_8:                                 ## %_ZNSt3__16vectorIiNS_9allocatorIiEEE9push_backEOi.exit
 	movl	-332(%rbp), %eax        ## 4-byte Reload
 	subl	$5, %eax
 	movl	%eax, -340(%rbp)        ## 4-byte Spill
 	je	LBB3_6
 	jmp	LBB3_4
-LBB3_4:
+LBB3_4:                                 ## %monotonic.i.i
 	movb	-17(%rbp), %al
 	movq	-328(%rbp), %rcx        ## 8-byte Reload
 	movb	%al, (%rcx)
 	jmp	LBB3_7
-LBB3_5:
+LBB3_5:                                 ## %release.i.i
 	movb	-17(%rbp), %al
 	movq	-328(%rbp), %rcx        ## 8-byte Reload
 	movb	%al, (%rcx)
 	jmp	LBB3_7
-LBB3_6:
+LBB3_6:                                 ## %seqcst.i.i
 	movb	-17(%rbp), %al
 	movq	-328(%rbp), %rcx        ## 8-byte Reload
 	xchgb	%al, (%rcx)
 	movb	%al, -341(%rbp)         ## 1-byte Spill
-LBB3_7:
+LBB3_7:                                 ## %_ZNSt3__16atomicIbEaSEb.exit
 	addq	$352, %rsp              ## imm = 0x160
 	popq	%rbp
 	retq
@@ -343,7 +351,7 @@ Lfunc_begin1:
 	.cfi_startproc
 	.cfi_personality 155, ___gxx_personality_v0
 	.cfi_lsda 16, Lexception1
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi12:
 	.cfi_def_cfa_offset 16
@@ -363,19 +371,19 @@ Ltmp3:
 	callq	__ZNSt3__16threadC1IRFvvEJEvEEOT_DpOT0_
 Ltmp4:
 	jmp	LBB4_1
-LBB4_1:
+LBB4_1:                                 ## %invoke.cont
 Ltmp6:
 	leaq	-16(%rbp), %rdi
 	callq	__ZNSt3__16thread4joinEv
 Ltmp7:
 	jmp	LBB4_2
-LBB4_2:
+LBB4_2:                                 ## %invoke.cont2
 Ltmp8:
 	leaq	-24(%rbp), %rdi
 	callq	__ZNSt3__16thread4joinEv
 Ltmp9:
 	jmp	LBB4_3
-LBB4_3:
+LBB4_3:                                 ## %invoke.cont3
 	leaq	-24(%rbp), %rdi
 	movl	$0, -4(%rbp)
 	callq	__ZNSt3__16threadD1Ev
@@ -385,23 +393,23 @@ LBB4_3:
 	addq	$48, %rsp
 	popq	%rbp
 	retq
-LBB4_4:
+LBB4_4:                                 ## %lpad
 Ltmp5:
 	movl	%edx, %ecx
 	movq	%rax, -32(%rbp)
 	movl	%ecx, -36(%rbp)
 	jmp	LBB4_6
-LBB4_5:
+LBB4_5:                                 ## %lpad1
 Ltmp10:
 	leaq	-24(%rbp), %rdi
 	movl	%edx, %ecx
 	movq	%rax, -32(%rbp)
 	movl	%ecx, -36(%rbp)
 	callq	__ZNSt3__16threadD1Ev
-LBB4_6:
+LBB4_6:                                 ## %ehcleanup
 	leaq	-16(%rbp), %rdi
 	callq	__ZNSt3__16threadD1Ev
-## BB#7:
+## BB#7:                                ## %eh.resume
 	movq	-32(%rbp), %rdi
 	callq	__Unwind_Resume
 Lfunc_end1:
@@ -450,7 +458,7 @@ Lset12 = Lfunc_end1-Ltmp9               ##   Call between Ltmp9 and Lfunc_end1
 	.p2align	4, 0x90
 __ZNSt3__16threadC1IRFvvEJEvEEOT_DpOT0_: ## @_ZNSt3__16threadC1IRFvvEJEvEEOT_DpOT0_
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi15:
 	.cfi_def_cfa_offset 16
@@ -475,7 +483,7 @@ Lcfi17:
 	.p2align	4, 0x90
 __ZNSt3__16vectorIiNS_9allocatorIiEEED2Ev: ## @_ZNSt3__16vectorIiNS_9allocatorIiEEED2Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi18:
 	.cfi_def_cfa_offset 16
@@ -498,7 +506,7 @@ Lcfi20:
 	.p2align	4, 0x90
 __ZNSt3__113__vector_baseIiNS_9allocatorIiEEED2Ev: ## @_ZNSt3__113__vector_baseIiNS_9allocatorIiEEED2Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi21:
 	.cfi_def_cfa_offset 16
@@ -513,7 +521,7 @@ Lcfi23:
 	cmpq	$0, (%rdi)
 	movq	%rdi, -240(%rbp)        ## 8-byte Spill
 	je	LBB7_5
-## BB#1:
+## BB#1:                                ## %if.then
 	movq	-240(%rbp), %rax        ## 8-byte Reload
 	movq	%rax, -224(%rbp)
 	movq	-224(%rbp), %rcx
@@ -524,11 +532,13 @@ Lcfi23:
 	movq	8(%rcx), %rdx
 	movq	%rdx, -216(%rbp)
 	movq	%rcx, -248(%rbp)        ## 8-byte Spill
-LBB7_2:                                 ## =>This Inner Loop Header: Depth=1
+LBB7_2:                                 ## %while.cond.i.i
+                                        ## =>This Inner Loop Header: Depth=1
 	movq	-208(%rbp), %rax
 	cmpq	-216(%rbp), %rax
 	je	LBB7_4
-## BB#3:                                ##   in Loop: Header=BB7_2 Depth=1
+## BB#3:                                ## %while.body.i.i
+                                        ##   in Loop: Header=BB7_2 Depth=1
 	movq	-248(%rbp), %rax        ## 8-byte Reload
 	movq	%rax, -192(%rbp)
 	movq	-192(%rbp), %rcx
@@ -553,7 +563,7 @@ LBB7_2:                                 ## =>This Inner Loop Header: Depth=1
 	movq	%rax, -104(%rbp)
 	movq	%rcx, -112(%rbp)
 	jmp	LBB7_2
-LBB7_4:
+LBB7_4:                                 ## %_ZNSt3__113__vector_baseIiNS_9allocatorIiEEE5clearEv.exit
 	movq	-208(%rbp), %rax
 	movq	-248(%rbp), %rcx        ## 8-byte Reload
 	movq	%rax, 8(%rcx)
@@ -599,7 +609,7 @@ LBB7_4:
 	movq	%rax, -8(%rbp)
 	movq	-8(%rbp), %rdi
 	callq	__ZdlPv
-LBB7_5:
+LBB7_5:                                 ## %if.end
 	addq	$272, %rsp              ## imm = 0x110
 	popq	%rbp
 	retq
@@ -621,7 +631,7 @@ ___clang_call_terminate:                ## @__clang_call_terminate
 	.p2align	4, 0x90
 __ZNSt3__122__compressed_pair_elemINS_9allocatorIiEELi1ELb1EE5__getEv: ## @_ZNSt3__122__compressed_pair_elemINS_9allocatorIiEELi1ELb1EE5__getEv
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi24:
 	.cfi_def_cfa_offset 16
@@ -642,7 +652,7 @@ Lcfi26:
 	.p2align	4, 0x90
 __ZNKSt3__122__compressed_pair_elemIPiLi0ELb0EE5__getEv: ## @_ZNKSt3__122__compressed_pair_elemIPiLi0ELb0EE5__getEv
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi27:
 	.cfi_def_cfa_offset 16
@@ -662,7 +672,7 @@ Lcfi29:
 	.p2align	4, 0x90
 __ZNSt3__122__compressed_pair_elemIPiLi0ELb0EEC2IDnvEEOT_: ## @_ZNSt3__122__compressed_pair_elemIPiLi0ELb0EEC2IDnvEEOT_
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi30:
 	.cfi_def_cfa_offset 16
@@ -686,7 +696,7 @@ Lcfi32:
 	.p2align	4, 0x90
 __ZNSt3__122__compressed_pair_elemINS_9allocatorIiEELi1ELb1EEC2Ev: ## @_ZNSt3__122__compressed_pair_elemINS_9allocatorIiEELi1ELb1EEC2Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi33:
 	.cfi_def_cfa_offset 16
@@ -710,7 +720,7 @@ Lfunc_begin2:
 	.cfi_startproc
 	.cfi_personality 155, ___gxx_personality_v0
 	.cfi_lsda 16, Lexception2
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi36:
 	.cfi_def_cfa_offset 16
@@ -750,11 +760,11 @@ Lcfi38:
 	movq	-272(%rbp), %rax
 	cmpq	-280(%rbp), %rax
 	jbe	LBB13_2
-## BB#1:
+## BB#1:                                ## %if.then.i
 	movq	-416(%rbp), %rax        ## 8-byte Reload
 	movq	%rax, %rdi
 	callq	__ZNKSt3__120__vector_base_commonILb1EE20__throw_length_errorEv
-LBB13_2:
+LBB13_2:                                ## %if.end.i
 	movq	-416(%rbp), %rax        ## 8-byte Reload
 	movq	%rax, -248(%rbp)
 	movq	-248(%rbp), %rcx
@@ -779,11 +789,11 @@ LBB13_2:
 	shrq	$1, %rdx
 	cmpq	%rdx, %rax
 	jb	LBB13_4
-## BB#3:
+## BB#3:                                ## %if.then4.i
 	movq	-280(%rbp), %rax
 	movq	%rax, -256(%rbp)
 	jmp	LBB13_8
-LBB13_4:
+LBB13_4:                                ## %if.end5.i
 	leaq	-176(%rbp), %rax
 	leaq	-272(%rbp), %rcx
 	leaq	-296(%rbp), %rdx
@@ -806,18 +816,18 @@ LBB13_4:
 	movq	-168(%rbp), %rcx
 	cmpq	(%rcx), %rax
 	jae	LBB13_6
-## BB#5:
+## BB#5:                                ## %cond.true.i.i.i
 	movq	-192(%rbp), %rax
 	movq	%rax, -432(%rbp)        ## 8-byte Spill
 	jmp	LBB13_7
-LBB13_6:
+LBB13_6:                                ## %cond.false.i.i.i
 	movq	-184(%rbp), %rax
 	movq	%rax, -432(%rbp)        ## 8-byte Spill
-LBB13_7:
+LBB13_7:                                ## %_ZNSt3__13maxImEERKT_S3_S3_.exit.i
 	movq	-432(%rbp), %rax        ## 8-byte Reload
 	movq	(%rax), %rax
 	movq	%rax, -256(%rbp)
-LBB13_8:
+LBB13_8:                                ## %_ZNKSt3__16vectorIiNS_9allocatorIiEEE11__recommendEm.exit
 	leaq	-384(%rbp), %rdi
 	movq	-256(%rbp), %rsi
 	movq	-408(%rbp), %rax        ## 8-byte Reload
@@ -861,7 +871,7 @@ LBB13_8:
 	movq	-8(%rbp), %rcx
 	movl	(%rcx), %r8d
 	movl	%r8d, (%rax)
-## BB#9:
+## BB#9:                                ## %invoke.cont
 	movq	-368(%rbp), %rax
 	addq	$4, %rax
 	movq	%rax, -368(%rbp)
@@ -871,20 +881,20 @@ Ltmp11:
 	callq	__ZNSt3__16vectorIiNS_9allocatorIiEEE26__swap_out_circular_bufferERNS_14__split_bufferIiRS2_EE
 Ltmp12:
 	jmp	LBB13_10
-LBB13_10:
+LBB13_10:                               ## %invoke.cont8
 	leaq	-384(%rbp), %rdi
 	callq	__ZNSt3__114__split_bufferIiRNS_9allocatorIiEEED1Ev
 	addq	$432, %rsp              ## imm = 0x1B0
 	popq	%rbp
 	retq
-LBB13_11:
+LBB13_11:                               ## %lpad
 Ltmp13:
 	leaq	-384(%rbp), %rdi
 	movl	%edx, %ecx
 	movq	%rax, -392(%rbp)
 	movl	%ecx, -396(%rbp)
 	callq	__ZNSt3__114__split_bufferIiRNS_9allocatorIiEEED1Ev
-## BB#12:
+## BB#12:                               ## %eh.resume
 	movq	-392(%rbp), %rdi
 	callq	__Unwind_Resume
 Lfunc_end2:
@@ -925,7 +935,7 @@ Lset19 = Lfunc_end2-Ltmp12              ##   Call between Ltmp12 and Lfunc_end2
 	.p2align	4, 0x90
 __ZNSt3__122__compressed_pair_elemIPiLi0ELb0EE5__getEv: ## @_ZNSt3__122__compressed_pair_elemIPiLi0ELb0EE5__getEv
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi39:
 	.cfi_def_cfa_offset 16
@@ -945,7 +955,7 @@ Lcfi41:
 	.p2align	4, 0x90
 __ZNSt3__114__split_bufferIiRNS_9allocatorIiEEEC1EmmS3_: ## @_ZNSt3__114__split_bufferIiRNS_9allocatorIiEEEC1EmmS3_
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi42:
 	.cfi_def_cfa_offset 16
@@ -974,7 +984,7 @@ Lcfi44:
 	.p2align	4, 0x90
 __ZNSt3__16vectorIiNS_9allocatorIiEEE26__swap_out_circular_bufferERNS_14__split_bufferIiRS2_EE: ## @_ZNSt3__16vectorIiNS_9allocatorIiEEE26__swap_out_circular_bufferERNS_14__split_bufferIiRS2_EE
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi45:
 	.cfi_def_cfa_offset 16
@@ -1107,7 +1117,7 @@ Lcfi47:
 	movq	%rdi, (%rsi)
 	cmpq	$0, -416(%rbp)
 	jle	LBB16_2
-## BB#1:
+## BB#1:                                ## %if.then.i
 	movq	-408(%rbp), %rax
 	movq	(%rax), %rax
 	movq	-392(%rbp), %rcx
@@ -1116,7 +1126,7 @@ Lcfi47:
 	movq	%rax, %rdi
 	movq	%rcx, %rsi
 	callq	_memcpy
-LBB16_2:
+LBB16_2:                                ## %_ZNSt3__116allocator_traitsINS_9allocatorIiEEE20__construct_backwardIiEENS_9enable_ifIXaaoosr7is_sameIS2_NS1_IT_EEEE5valuentsr15__has_constructIS2_PS6_S6_EE5valuesr31is_trivially_move_constructibleIS6_EE5valueEvE4typeERS2_S8_S8_RS8_.exit
 	leaq	-136(%rbp), %rax
 	leaq	-376(%rbp), %rcx
 	movq	-648(%rbp), %rdx        ## 8-byte Reload
@@ -1302,7 +1312,7 @@ LBB16_2:
 	.p2align	4, 0x90
 __ZNSt3__114__split_bufferIiRNS_9allocatorIiEEED1Ev: ## @_ZNSt3__114__split_bufferIiRNS_9allocatorIiEEED1Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi48:
 	.cfi_def_cfa_offset 16
@@ -1325,7 +1335,7 @@ Lcfi50:
 	.p2align	4, 0x90
 __ZNKSt3__16vectorIiNS_9allocatorIiEEE8max_sizeEv: ## @_ZNKSt3__16vectorIiNS_9allocatorIiEEE8max_sizeEv
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi51:
 	.cfi_def_cfa_offset 16
@@ -1371,17 +1381,17 @@ Lcfi53:
 	movq	-24(%rbp), %rcx
 	cmpq	(%rcx), %rax
 	jae	LBB18_2
-## BB#1:
+## BB#1:                                ## %cond.true.i.i
 	movq	-48(%rbp), %rax
 	movq	%rax, -168(%rbp)        ## 8-byte Spill
 	jmp	LBB18_3
-LBB18_2:
+LBB18_2:                                ## %cond.false.i.i
 	movq	-40(%rbp), %rax
 	movq	%rax, -168(%rbp)        ## 8-byte Spill
-LBB18_3:
+LBB18_3:                                ## %_ZNSt3__13minImEERKT_S3_S3_.exit
 	movq	-168(%rbp), %rax        ## 8-byte Reload
 	movq	%rax, -176(%rbp)        ## 8-byte Spill
-## BB#4:
+## BB#4:                                ## %invoke.cont
 	movq	-176(%rbp), %rax        ## 8-byte Reload
 	movq	(%rax), %rax
 	addq	$176, %rsp
@@ -1394,7 +1404,7 @@ LBB18_3:
 	.p2align	4, 0x90
 __ZNKSt3__122__compressed_pair_elemINS_9allocatorIiEELi1ELb1EE5__getEv: ## @_ZNKSt3__122__compressed_pair_elemINS_9allocatorIiEELi1ELb1EE5__getEv
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi54:
 	.cfi_def_cfa_offset 16
@@ -1418,7 +1428,7 @@ Lfunc_begin3:
 	.cfi_startproc
 	.cfi_personality 155, ___gxx_personality_v0
 	.cfi_lsda 16, Lexception3
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi57:
 	.cfi_def_cfa_offset 16
@@ -1465,7 +1475,7 @@ Lcfi59:
 	callq	__ZNSt3__122__compressed_pair_elemIRNS_9allocatorIiEELi1ELb0EEC2IS3_vEEOT_
 	cmpq	$0, -224(%rbp)
 	je	LBB20_6
-## BB#1:
+## BB#1:                                ## %cond.true
 	movq	-256(%rbp), %rax        ## 8-byte Reload
 	movq	%rax, -144(%rbp)
 	movq	-144(%rbp), %rcx
@@ -1489,7 +1499,7 @@ Lcfi59:
 	movq	%rax, -88(%rbp)
 	cmpq	%rcx, %rdi
 	jbe	LBB20_5
-## BB#2:
+## BB#2:                                ## %if.then.i.i
 	leaq	L_.str(%rip), %rax
 	movq	%rax, -56(%rbp)
 	movl	$16, %ecx
@@ -1512,7 +1522,7 @@ Ltmp14:
 	callq	__ZNSt11logic_errorC2EPKc
 Ltmp15:
 	jmp	LBB20_3
-LBB20_3:
+LBB20_3:                                ## %_ZNSt12length_errorC1EPKc.exit.i.i.i
 	movq	__ZTISt12length_error@GOTPCREL(%rip), %rax
 	movq	__ZNSt12length_errorD1Ev@GOTPCREL(%rip), %rcx
 	movq	__ZTVSt12length_error@GOTPCREL(%rip), %rdx
@@ -1523,7 +1533,7 @@ LBB20_3:
 	movq	%rax, %rsi
 	movq	%rcx, %rdx
 	callq	___cxa_throw
-LBB20_4:
+LBB20_4:                                ## %lpad.i.i.i
 Ltmp16:
 	movl	%edx, %ecx
 	movq	%rax, -64(%rbp)
@@ -1532,7 +1542,7 @@ Ltmp16:
 	callq	___cxa_free_exception
 	movq	-64(%rbp), %rdi
 	callq	__Unwind_Resume
-LBB20_5:
+LBB20_5:                                ## %_ZNSt3__116allocator_traitsINS_9allocatorIiEEE8allocateERS2_m.exit
 	movq	-104(%rbp), %rax
 	shlq	$2, %rax
 	movq	%rax, -80(%rbp)
@@ -1540,12 +1550,12 @@ LBB20_5:
 	callq	__Znwm
 	movq	%rax, -288(%rbp)        ## 8-byte Spill
 	jmp	LBB20_7
-LBB20_6:
+LBB20_6:                                ## %cond.false
 	xorl	%eax, %eax
 	movl	%eax, %ecx
 	movq	%rcx, -288(%rbp)        ## 8-byte Spill
 	jmp	LBB20_7
-LBB20_7:
+LBB20_7:                                ## %cond.end
 	movq	-288(%rbp), %rax        ## 8-byte Reload
 	movq	-256(%rbp), %rcx        ## 8-byte Reload
 	movq	%rax, (%rcx)
@@ -1610,7 +1620,7 @@ Lset26 = Lfunc_end3-Ltmp15              ##   Call between Ltmp15 and Lfunc_end3
 	.p2align	4, 0x90
 __ZNSt3__122__compressed_pair_elemIRNS_9allocatorIiEELi1ELb0EEC2IS3_vEEOT_: ## @_ZNSt3__122__compressed_pair_elemIRNS_9allocatorIiEELi1ELb0EEC2IS3_vEEOT_
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi60:
 	.cfi_def_cfa_offset 16
@@ -1635,7 +1645,7 @@ Lcfi62:
 	.p2align	4, 0x90
 __ZNSt3__122__compressed_pair_elemIRNS_9allocatorIiEELi1ELb0EE5__getEv: ## @_ZNSt3__122__compressed_pair_elemIRNS_9allocatorIiEELi1ELb0EE5__getEv
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi63:
 	.cfi_def_cfa_offset 16
@@ -1656,7 +1666,7 @@ Lcfi65:
 	.p2align	4, 0x90
 __ZNSt3__114__split_bufferIiRNS_9allocatorIiEEED2Ev: ## @_ZNSt3__114__split_bufferIiRNS_9allocatorIiEEED2Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi66:
 	.cfi_def_cfa_offset 16
@@ -1680,12 +1690,14 @@ Lcfi68:
 	movq	-208(%rbp), %rax
 	movq	%rdi, -264(%rbp)        ## 8-byte Spill
 	movq	%rax, -272(%rbp)        ## 8-byte Spill
-LBB23_1:                                ## =>This Inner Loop Header: Depth=1
+LBB23_1:                                ## %while.cond.i.i.i
+                                        ## =>This Inner Loop Header: Depth=1
 	movq	-216(%rbp), %rax
 	movq	-272(%rbp), %rcx        ## 8-byte Reload
 	cmpq	16(%rcx), %rax
 	je	LBB23_3
-## BB#2:                                ##   in Loop: Header=BB23_1 Depth=1
+## BB#2:                                ## %while.body.i.i.i
+                                        ##   in Loop: Header=BB23_1 Depth=1
 	movq	-272(%rbp), %rax        ## 8-byte Reload
 	movq	%rax, -192(%rbp)
 	movq	-192(%rbp), %rcx
@@ -1712,11 +1724,11 @@ LBB23_1:                                ## =>This Inner Loop Header: Depth=1
 	movq	%rax, -104(%rbp)
 	movq	%rdi, -112(%rbp)
 	jmp	LBB23_1
-LBB23_3:
+LBB23_3:                                ## %_ZNSt3__114__split_bufferIiRNS_9allocatorIiEEE5clearEv.exit
 	movq	-264(%rbp), %rax        ## 8-byte Reload
 	cmpq	$0, (%rax)
 	je	LBB23_6
-## BB#4:
+## BB#4:                                ## %if.then
 	movq	-264(%rbp), %rax        ## 8-byte Reload
 	movq	%rax, -96(%rbp)
 	movq	-96(%rbp), %rcx
@@ -1746,7 +1758,7 @@ LBB23_3:
 	subq	%rdx, %rax
 	sarq	$2, %rax
 	movq	%rax, -304(%rbp)        ## 8-byte Spill
-## BB#5:
+## BB#5:                                ## %invoke.cont
 	movq	-288(%rbp), %rax        ## 8-byte Reload
 	movq	%rax, -40(%rbp)
 	movq	-280(%rbp), %rcx        ## 8-byte Reload
@@ -1763,7 +1775,7 @@ LBB23_3:
 	movq	%rsi, -8(%rbp)
 	movq	-8(%rbp), %rdi
 	callq	__ZdlPv
-LBB23_6:
+LBB23_6:                                ## %if.end
 	addq	$304, %rsp              ## imm = 0x130
 	popq	%rbp
 	retq
@@ -1778,7 +1790,7 @@ Lfunc_begin4:
 	.cfi_startproc
 	.cfi_personality 155, ___gxx_personality_v0
 	.cfi_lsda 16, Lexception4
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi69:
 	.cfi_def_cfa_offset 16
@@ -1804,7 +1816,7 @@ Ltmp17:
 	callq	__ZNSt3__115__thread_structC1Ev
 Ltmp18:
 	jmp	LBB24_1
-LBB24_1:
+LBB24_1:                                ## %invoke.cont
 	leaq	-1024(%rbp), %rax
 	movq	%rax, -992(%rbp)
 	movq	-1080(%rbp), %rax       ## 8-byte Reload
@@ -1833,7 +1845,7 @@ Ltmp20:
 Ltmp21:
 	movq	%rax, -1096(%rbp)       ## 8-byte Spill
 	jmp	LBB24_2
-LBB24_2:
+LBB24_2:                                ## %invoke.cont3
 	leaq	-1024(%rbp), %rax
 	movq	-1096(%rbp), %rcx       ## 8-byte Reload
 	movq	%rax, -928(%rbp)
@@ -1848,7 +1860,7 @@ LBB24_2:
 	movq	%rcx, -1104(%rbp)       ## 8-byte Spill
 	movq	%rax, -1112(%rbp)       ## 8-byte Spill
 	movq	%rdx, -1120(%rbp)       ## 8-byte Spill
-## BB#3:
+## BB#3:                                ## %invoke.cont8
 	movq	-1120(%rbp), %rax       ## 8-byte Reload
 	movq	%rax, -1056(%rbp)
 	movq	-1104(%rbp), %rcx       ## 8-byte Reload
@@ -2003,14 +2015,14 @@ Ltmp23:
 Ltmp24:
 	movl	%eax, -1164(%rbp)       ## 4-byte Spill
 	jmp	LBB24_4
-LBB24_4:
+LBB24_4:                                ## %_ZNSt3__122__libcpp_thread_createEPP17_opaque_pthread_tPFPvS3_ES3_.exit
 	jmp	LBB24_5
-LBB24_5:
+LBB24_5:                                ## %invoke.cont12
 	movl	-1164(%rbp), %eax       ## 4-byte Reload
 	movl	%eax, -1060(%rbp)
 	cmpl	$0, -1060(%rbp)
 	jne	LBB24_14
-## BB#6:
+## BB#6:                                ## %if.then
 	leaq	-1048(%rbp), %rax
 	movq	%rax, -264(%rbp)
 	movq	-264(%rbp), %rax
@@ -2028,7 +2040,7 @@ LBB24_5:
 	callq	__ZNSt3__122__compressed_pair_elemIPNS_5tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS3_EEEEPFvvEEEELi0ELb0EE5__getEv
 	movq	$0, (%rax)
 	jmp	LBB24_16
-LBB24_7:
+LBB24_7:                                ## %lpad
 Ltmp19:
 	movl	%edx, %ecx
 	movq	%rax, -1032(%rbp)
@@ -2036,13 +2048,13 @@ Ltmp19:
 	movq	-1088(%rbp), %rdi       ## 8-byte Reload
 	callq	__ZdlPv
 	jmp	LBB24_30
-LBB24_8:
+LBB24_8:                                ## %lpad2
 Ltmp22:
 	movl	%edx, %ecx
 	movq	%rax, -1032(%rbp)
 	movl	%ecx, -1036(%rbp)
 	jmp	LBB24_25
-LBB24_9:
+LBB24_9:                                ## %lpad11
 Ltmp27:
 	leaq	-1048(%rbp), %rcx
 	movl	%edx, %esi
@@ -2073,7 +2085,7 @@ Ltmp27:
 	movq	%rcx, (%rax)
 	cmpq	$0, -224(%rbp)
 	je	LBB24_13
-## BB#10:
+## BB#10:                               ## %if.then.i.i.i84
 	movq	-1184(%rbp), %rax       ## 8-byte Reload
 	movq	%rax, -184(%rbp)
 	movq	-184(%rbp), %rcx
@@ -2086,24 +2098,24 @@ Ltmp27:
 	cmpq	$0, %rax
 	movq	%rax, -1200(%rbp)       ## 8-byte Spill
 	je	LBB24_12
-## BB#11:
+## BB#11:                               ## %delete.notnull.i.i.i.i85
 	movq	-1200(%rbp), %rdi       ## 8-byte Reload
 	callq	__ZNSt3__15tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS2_EEEEPFvvEEED1Ev
 	movq	-1200(%rbp), %rdi       ## 8-byte Reload
 	callq	__ZdlPv
-LBB24_12:
+LBB24_12:                               ## %_ZNKSt3__114default_deleteINS_5tupleIJNS_10unique_ptrINS_15__thread_structENS0_IS3_EEEEPFvvEEEEEclEPS8_.exit.i.i.i
 	jmp	LBB24_13
-LBB24_13:
+LBB24_13:                               ## %_ZNSt3__110unique_ptrINS_5tupleIJNS0_INS_15__thread_structENS_14default_deleteIS2_EEEEPFvvEEEENS3_IS8_EEED1Ev.exit
 	jmp	LBB24_25
-LBB24_14:
+LBB24_14:                               ## %if.else
 	movl	-1060(%rbp), %edi
 Ltmp25:
 	leaq	L_.str.1(%rip), %rsi
 	callq	__ZNSt3__120__throw_system_errorEiPKc
 Ltmp26:
 	jmp	LBB24_15
-LBB24_15:
-LBB24_16:
+LBB24_15:                               ## %invoke.cont15
+LBB24_16:                               ## %if.end
 	leaq	-1048(%rbp), %rax
 	movq	%rax, -160(%rbp)
 	movq	-160(%rbp), %rax
@@ -2129,7 +2141,7 @@ LBB24_16:
 	movq	%rcx, (%rax)
 	cmpq	$0, -144(%rbp)
 	je	LBB24_20
-## BB#17:
+## BB#17:                               ## %if.then.i.i.i111
 	movq	-1208(%rbp), %rax       ## 8-byte Reload
 	movq	%rax, -104(%rbp)
 	movq	-104(%rbp), %rcx
@@ -2142,14 +2154,14 @@ LBB24_16:
 	cmpq	$0, %rax
 	movq	%rax, -1224(%rbp)       ## 8-byte Spill
 	je	LBB24_19
-## BB#18:
+## BB#18:                               ## %delete.notnull.i.i.i.i112
 	movq	-1224(%rbp), %rdi       ## 8-byte Reload
 	callq	__ZNSt3__15tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS2_EEEEPFvvEEED1Ev
 	movq	-1224(%rbp), %rdi       ## 8-byte Reload
 	callq	__ZdlPv
-LBB24_19:
+LBB24_19:                               ## %_ZNKSt3__114default_deleteINS_5tupleIJNS_10unique_ptrINS_15__thread_structENS0_IS3_EEEEPFvvEEEEEclEPS8_.exit.i.i.i113
 	jmp	LBB24_20
-LBB24_20:
+LBB24_20:                               ## %_ZNSt3__110unique_ptrINS_5tupleIJNS0_INS_15__thread_structENS_14default_deleteIS2_EEEEPFvvEEEENS3_IS8_EEED1Ev.exit114
 	leaq	-1024(%rbp), %rax
 	movq	%rax, -80(%rbp)
 	movq	-80(%rbp), %rax
@@ -2175,7 +2187,7 @@ LBB24_20:
 	movq	%rcx, (%rax)
 	cmpq	$0, -64(%rbp)
 	je	LBB24_24
-## BB#21:
+## BB#21:                               ## %if.then.i.i.i140
 	movq	-1232(%rbp), %rax       ## 8-byte Reload
 	movq	%rax, -24(%rbp)
 	movq	-24(%rbp), %rcx
@@ -2188,18 +2200,18 @@ LBB24_20:
 	cmpq	$0, %rax
 	movq	%rax, -1248(%rbp)       ## 8-byte Spill
 	je	LBB24_23
-## BB#22:
+## BB#22:                               ## %delete.notnull.i.i.i.i141
 	movq	-1248(%rbp), %rdi       ## 8-byte Reload
 	callq	__ZNSt3__115__thread_structD1Ev
 	movq	-1248(%rbp), %rdi       ## 8-byte Reload
 	callq	__ZdlPv
-LBB24_23:
+LBB24_23:                               ## %_ZNKSt3__114default_deleteINS_15__thread_structEEclEPS1_.exit.i.i.i142
 	jmp	LBB24_24
-LBB24_24:
+LBB24_24:                               ## %_ZNSt3__110unique_ptrINS_15__thread_structENS_14default_deleteIS1_EEED1Ev.exit143
 	addq	$1280, %rsp             ## imm = 0x500
 	popq	%rbp
 	retq
-LBB24_25:
+LBB24_25:                               ## %ehcleanup
 	leaq	-1024(%rbp), %rax
 	movq	%rax, -920(%rbp)
 	movq	-920(%rbp), %rax
@@ -2225,7 +2237,7 @@ LBB24_25:
 	movq	%rcx, (%rax)
 	cmpq	$0, -904(%rbp)
 	je	LBB24_29
-## BB#26:
+## BB#26:                               ## %if.then.i.i.i
 	movq	-1256(%rbp), %rax       ## 8-byte Reload
 	movq	%rax, -864(%rbp)
 	movq	-864(%rbp), %rcx
@@ -2238,16 +2250,16 @@ LBB24_25:
 	cmpq	$0, %rax
 	movq	%rax, -1272(%rbp)       ## 8-byte Spill
 	je	LBB24_28
-## BB#27:
+## BB#27:                               ## %delete.notnull.i.i.i.i
 	movq	-1272(%rbp), %rdi       ## 8-byte Reload
 	callq	__ZNSt3__115__thread_structD1Ev
 	movq	-1272(%rbp), %rdi       ## 8-byte Reload
 	callq	__ZdlPv
-LBB24_28:
+LBB24_28:                               ## %_ZNKSt3__114default_deleteINS_15__thread_structEEclEPS1_.exit.i.i.i
 	jmp	LBB24_29
-LBB24_29:
+LBB24_29:                               ## %_ZNSt3__110unique_ptrINS_15__thread_structENS_14default_deleteIS1_EEED1Ev.exit
 	jmp	LBB24_30
-LBB24_30:
+LBB24_30:                               ## %eh.resume
 	movq	-1032(%rbp), %rdi
 	callq	__Unwind_Resume
 Lfunc_end4:
@@ -2305,7 +2317,7 @@ Lfunc_begin5:
 	.cfi_startproc
 	.cfi_personality 155, ___gxx_personality_v0
 	.cfi_lsda 16, Lexception5
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi72:
 	.cfi_def_cfa_offset 16
@@ -2342,7 +2354,7 @@ Ltmp28:
 Ltmp29:
 	movq	%rax, -408(%rbp)        ## 8-byte Spill
 	jmp	LBB25_1
-LBB25_1:
+LBB25_1:                                ## %invoke.cont
 	leaq	-384(%rbp), %rax
 	movq	%rax, -296(%rbp)
 	movq	-296(%rbp), %rax
@@ -2352,7 +2364,7 @@ LBB25_1:
 	callq	__ZNKSt3__122__compressed_pair_elemIPNS_5tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS3_EEEEPFvvEEEELi0ELb0EE5__getEv
 	movq	(%rax), %rax
 	movq	%rax, -416(%rbp)        ## 8-byte Spill
-## BB#2:
+## BB#2:                                ## %invoke.cont1
 	movq	-416(%rbp), %rax        ## 8-byte Reload
 	movq	%rax, -280(%rbp)
 	movq	-280(%rbp), %rcx
@@ -2377,7 +2389,7 @@ Ltmp30:
 	callq	__ZNSt3__121__thread_specific_ptrINS_15__thread_structEE11set_pointerEPS1_
 Ltmp31:
 	jmp	LBB25_3
-LBB25_3:
+LBB25_3:                                ## %invoke.cont5
 	leaq	-384(%rbp), %rax
 	movq	%rax, -152(%rbp)
 	movq	-152(%rbp), %rax
@@ -2387,7 +2399,7 @@ LBB25_3:
 	callq	__ZNKSt3__122__compressed_pair_elemIPNS_5tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS3_EEEEPFvvEEEELi0ELb0EE5__getEv
 	movq	(%rax), %rax
 	movq	%rax, -432(%rbp)        ## 8-byte Spill
-## BB#4:
+## BB#4:                                ## %invoke.cont6
 	movq	-432(%rbp), %rax        ## 8-byte Reload
 	movq	%rax, -136(%rbp)
 	movq	-136(%rbp), %rcx
@@ -2407,9 +2419,9 @@ Ltmp32:
 	callq	*%rcx
 Ltmp33:
 	jmp	LBB25_5
-LBB25_5:
+LBB25_5:                                ## %_ZNSt3__116__thread_executeINS_10unique_ptrINS_15__thread_structENS_14default_deleteIS2_EEEEPFvvEJEJEEEvRNS_5tupleIJT_T0_DpT1_EEENS_15__tuple_indicesIJXspT2_EEEE.exit
 	jmp	LBB25_6
-LBB25_6:
+LBB25_6:                                ## %invoke.cont8
 	leaq	-384(%rbp), %rax
 	movq	%rax, -80(%rbp)
 	movq	-80(%rbp), %rax
@@ -2435,7 +2447,7 @@ LBB25_6:
 	movq	%rcx, (%rax)
 	cmpq	$0, -64(%rbp)
 	je	LBB25_10
-## BB#7:
+## BB#7:                                ## %if.then.i.i.i65
 	movq	-440(%rbp), %rax        ## 8-byte Reload
 	movq	%rax, -24(%rbp)
 	movq	-24(%rbp), %rcx
@@ -2448,20 +2460,20 @@ LBB25_6:
 	cmpq	$0, %rax
 	movq	%rax, -456(%rbp)        ## 8-byte Spill
 	je	LBB25_9
-## BB#8:
+## BB#8:                                ## %delete.notnull.i.i.i.i66
 	movq	-456(%rbp), %rdi        ## 8-byte Reload
 	callq	__ZNSt3__15tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS2_EEEEPFvvEEED1Ev
 	movq	-456(%rbp), %rdi        ## 8-byte Reload
 	callq	__ZdlPv
-LBB25_9:
+LBB25_9:                                ## %_ZNKSt3__114default_deleteINS_5tupleIJNS_10unique_ptrINS_15__thread_structENS0_IS3_EEEEPFvvEEEEEclEPS8_.exit.i.i.i67
 	jmp	LBB25_10
-LBB25_10:
+LBB25_10:                               ## %_ZNSt3__110unique_ptrINS_5tupleIJNS0_INS_15__thread_structENS_14default_deleteIS2_EEEEPFvvEEEENS3_IS8_EEED1Ev.exit68
 	xorl	%eax, %eax
                                         ## kill: %RAX<def> %EAX<kill>
 	addq	$480, %rsp              ## imm = 0x1E0
 	popq	%rbp
 	retq
-LBB25_11:
+LBB25_11:                               ## %lpad
 Ltmp34:
 	leaq	-384(%rbp), %rcx
 	movl	%edx, %esi
@@ -2492,7 +2504,7 @@ Ltmp34:
 	movq	%rcx, (%rax)
 	cmpq	$0, -248(%rbp)
 	je	LBB25_15
-## BB#12:
+## BB#12:                               ## %if.then.i.i.i
 	movq	-464(%rbp), %rax        ## 8-byte Reload
 	movq	%rax, -208(%rbp)
 	movq	-208(%rbp), %rcx
@@ -2505,16 +2517,16 @@ Ltmp34:
 	cmpq	$0, %rax
 	movq	%rax, -480(%rbp)        ## 8-byte Spill
 	je	LBB25_14
-## BB#13:
+## BB#13:                               ## %delete.notnull.i.i.i.i
 	movq	-480(%rbp), %rdi        ## 8-byte Reload
 	callq	__ZNSt3__15tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS2_EEEEPFvvEEED1Ev
 	movq	-480(%rbp), %rdi        ## 8-byte Reload
 	callq	__ZdlPv
-LBB25_14:
+LBB25_14:                               ## %_ZNKSt3__114default_deleteINS_5tupleIJNS_10unique_ptrINS_15__thread_structENS0_IS3_EEEEPFvvEEEEEclEPS8_.exit.i.i.i
 	jmp	LBB25_15
-LBB25_15:
+LBB25_15:                               ## %_ZNSt3__110unique_ptrINS_5tupleIJNS0_INS_15__thread_structENS_14default_deleteIS2_EEEEPFvvEEEENS3_IS8_EEED1Ev.exit
 	jmp	LBB25_16
-LBB25_16:
+LBB25_16:                               ## %eh.resume
 	movq	-392(%rbp), %rdi
 	callq	__Unwind_Resume
 Lfunc_end5:
@@ -2549,7 +2561,7 @@ Lset44 = Lfunc_end5-Ltmp33              ##   Call between Ltmp33 and Lfunc_end5
 	.p2align	4, 0x90
 __ZNSt3__122__compressed_pair_elemIPNS_15__thread_structELi0ELb0EEC2IRS2_vEEOT_: ## @_ZNSt3__122__compressed_pair_elemIPNS_15__thread_structELi0ELb0EEC2IRS2_vEEOT_
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi75:
 	.cfi_def_cfa_offset 16
@@ -2575,7 +2587,7 @@ Lcfi77:
 	.p2align	4, 0x90
 __ZNSt3__122__compressed_pair_elemIPNS_15__thread_structELi0ELb0EE5__getEv: ## @_ZNSt3__122__compressed_pair_elemIPNS_15__thread_structELi0ELb0EE5__getEv
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi78:
 	.cfi_def_cfa_offset 16
@@ -2595,7 +2607,7 @@ Lcfi80:
 	.p2align	4, 0x90
 __ZNSt3__122__compressed_pair_elemINS_14default_deleteINS_15__thread_structEEELi1ELb1EE5__getEv: ## @_ZNSt3__122__compressed_pair_elemINS_14default_deleteINS_15__thread_structEEELi1ELb1EE5__getEv
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi81:
 	.cfi_def_cfa_offset 16
@@ -2616,7 +2628,7 @@ Lcfi83:
 	.p2align	4, 0x90
 __ZNSt3__122__compressed_pair_elemIPNS_15__thread_structELi0ELb0EEC2IS2_vEEOT_: ## @_ZNSt3__122__compressed_pair_elemIPNS_15__thread_structELi0ELb0EEC2IS2_vEEOT_
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi84:
 	.cfi_def_cfa_offset 16
@@ -2642,7 +2654,7 @@ Lcfi86:
 	.p2align	4, 0x90
 __ZNSt3__122__compressed_pair_elemINS_14default_deleteINS_15__thread_structEEELi1ELb1EEC2IS3_vEEOT_: ## @_ZNSt3__122__compressed_pair_elemINS_14default_deleteINS_15__thread_structEEELi1ELb1EEC2IS3_vEEOT_
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi87:
 	.cfi_def_cfa_offset 16
@@ -2664,7 +2676,7 @@ Lcfi89:
 	.p2align	4, 0x90
 __ZNSt3__122__compressed_pair_elemIPNS_5tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS3_EEEEPFvvEEEELi0ELb0EEC2IRSA_vEEOT_: ## @_ZNSt3__122__compressed_pair_elemIPNS_5tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS3_EEEEPFvvEEEELi0ELb0EEC2IRSA_vEEOT_
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi90:
 	.cfi_def_cfa_offset 16
@@ -2690,7 +2702,7 @@ Lcfi92:
 	.p2align	4, 0x90
 __ZNSt3__121__thread_specific_ptrINS_15__thread_structEE11set_pointerEPS1_: ## @_ZNSt3__121__thread_specific_ptrINS_15__thread_structEE11set_pointerEPS1_
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi93:
 	.cfi_def_cfa_offset 16
@@ -2721,7 +2733,7 @@ Lcfi95:
 	.p2align	4, 0x90
 __ZNKSt3__122__compressed_pair_elemIPNS_5tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS3_EEEEPFvvEEEELi0ELb0EE5__getEv: ## @_ZNKSt3__122__compressed_pair_elemIPNS_5tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS3_EEEEPFvvEEEELi0ELb0EE5__getEv
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi96:
 	.cfi_def_cfa_offset 16
@@ -2741,7 +2753,7 @@ Lcfi98:
 	.p2align	4, 0x90
 __ZNSt3__122__compressed_pair_elemIPNS_5tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS3_EEEEPFvvEEEELi0ELb0EE5__getEv: ## @_ZNSt3__122__compressed_pair_elemIPNS_5tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS3_EEEEPFvvEEEELi0ELb0EE5__getEv
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi99:
 	.cfi_def_cfa_offset 16
@@ -2761,7 +2773,7 @@ Lcfi101:
 	.p2align	4, 0x90
 __ZNSt3__122__compressed_pair_elemINS_14default_deleteINS_5tupleIJNS_10unique_ptrINS_15__thread_structENS1_IS4_EEEEPFvvEEEEEELi1ELb1EE5__getEv: ## @_ZNSt3__122__compressed_pair_elemINS_14default_deleteINS_5tupleIJNS_10unique_ptrINS_15__thread_structENS1_IS4_EEEEPFvvEEEEEELi1ELb1EE5__getEv
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi102:
 	.cfi_def_cfa_offset 16
@@ -2782,7 +2794,7 @@ Lcfi104:
 	.p2align	4, 0x90
 __ZNSt3__15tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS2_EEEEPFvvEEED1Ev: ## @_ZNSt3__15tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS2_EEEEPFvvEEED1Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi105:
 	.cfi_def_cfa_offset 16
@@ -2805,7 +2817,7 @@ Lcfi107:
 	.p2align	4, 0x90
 __ZNSt3__15tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS2_EEEEPFvvEEED2Ev: ## @_ZNSt3__15tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS2_EEEEPFvvEEED2Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi108:
 	.cfi_def_cfa_offset 16
@@ -2828,7 +2840,7 @@ Lcfi110:
 	.p2align	4, 0x90
 __ZNSt3__112__tuple_implINS_15__tuple_indicesIJLm0ELm1EEEEJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS4_EEEEPFvvEEED1Ev: ## @_ZNSt3__112__tuple_implINS_15__tuple_indicesIJLm0ELm1EEEEJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS4_EEEEPFvvEEED1Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi111:
 	.cfi_def_cfa_offset 16
@@ -2851,7 +2863,7 @@ Lcfi113:
 	.p2align	4, 0x90
 __ZNSt3__112__tuple_implINS_15__tuple_indicesIJLm0ELm1EEEEJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS4_EEEEPFvvEEED2Ev: ## @_ZNSt3__112__tuple_implINS_15__tuple_indicesIJLm0ELm1EEEEJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS4_EEEEPFvvEEED2Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi114:
 	.cfi_def_cfa_offset 16
@@ -2874,7 +2886,7 @@ Lcfi116:
 	.p2align	4, 0x90
 __ZNSt3__112__tuple_leafILm0ENS_10unique_ptrINS_15__thread_structENS_14default_deleteIS2_EEEELb0EED2Ev: ## @_ZNSt3__112__tuple_leafILm0ENS_10unique_ptrINS_15__thread_structENS_14default_deleteIS2_EEEELb0EED2Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi117:
 	.cfi_def_cfa_offset 16
@@ -2911,7 +2923,7 @@ Lcfi119:
 	movq	%rcx, (%rax)
 	cmpq	$0, -64(%rbp)
 	je	LBB40_4
-## BB#1:
+## BB#1:                                ## %if.then.i.i.i
 	movq	-96(%rbp), %rax         ## 8-byte Reload
 	movq	%rax, -24(%rbp)
 	movq	-24(%rbp), %rcx
@@ -2924,14 +2936,14 @@ Lcfi119:
 	cmpq	$0, %rax
 	movq	%rax, -112(%rbp)        ## 8-byte Spill
 	je	LBB40_3
-## BB#2:
+## BB#2:                                ## %delete.notnull.i.i.i.i
 	movq	-112(%rbp), %rdi        ## 8-byte Reload
 	callq	__ZNSt3__115__thread_structD1Ev
 	movq	-112(%rbp), %rdi        ## 8-byte Reload
 	callq	__ZdlPv
-LBB40_3:
+LBB40_3:                                ## %_ZNKSt3__114default_deleteINS_15__thread_structEEclEPS1_.exit.i.i.i
 	jmp	LBB40_4
-LBB40_4:
+LBB40_4:                                ## %_ZNSt3__110unique_ptrINS_15__thread_structENS_14default_deleteIS1_EEED1Ev.exit
 	addq	$112, %rsp
 	popq	%rbp
 	retq
@@ -2941,7 +2953,7 @@ LBB40_4:
 	.p2align	4, 0x90         ## -- Begin function _GLOBAL__sub_I_04_synchronizing_operations_and_enforcing_ordering.cpp
 __GLOBAL__sub_I_04_synchronizing_operations_and_enforcing_ordering.cpp: ## @_GLOBAL__sub_I_04_synchronizing_operations_and_enforcing_ordering.cpp
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi120:
 	.cfi_def_cfa_offset 16

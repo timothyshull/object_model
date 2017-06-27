@@ -4,7 +4,7 @@
 	.p2align	4, 0x90
 __Z3foov:                               ## @_Z3foov
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi0:
 	.cfi_def_cfa_offset 16
@@ -22,7 +22,7 @@ Lcfi2:
 	.p2align	4, 0x90
 __Z4bar1v:                              ## @_Z4bar1v
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi3:
 	.cfi_def_cfa_offset 16
@@ -40,7 +40,7 @@ Lcfi5:
 	.p2align	4, 0x90
 _main:                                  ## @main
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi6:
 	.cfi_def_cfa_offset 16
@@ -78,11 +78,11 @@ Lcfi8:
 	movl	-20(%rbp), %eax
 	cmpl	-24(%rbp), %eax
 	jge	LBB2_2
-## BB#1:
+## BB#1:                                ## %cond.true
 	jmp	LBB2_3
-LBB2_2:
+LBB2_2:                                 ## %cond.false
 	jmp	LBB2_3
-LBB2_3:
+LBB2_3:                                 ## %cond.end
 	xorl	%eax, %eax
 	addq	$32, %rsp
 	popq	%rbp
@@ -94,7 +94,7 @@ LBB2_3:
 	.p2align	4, 0x90
 __Z3minii:                              ## @_Z3minii
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi9:
 	.cfi_def_cfa_offset 16
@@ -108,14 +108,14 @@ Lcfi11:
 	movl	-4(%rbp), %esi
 	cmpl	-8(%rbp), %esi
 	jge	LBB3_2
-## BB#1:
+## BB#1:                                ## %cond.true
 	movl	-4(%rbp), %eax
 	movl	%eax, -12(%rbp)         ## 4-byte Spill
 	jmp	LBB3_3
-LBB3_2:
+LBB3_2:                                 ## %cond.false
 	movl	-8(%rbp), %eax
 	movl	%eax, -12(%rbp)         ## 4-byte Spill
-LBB3_3:
+LBB3_3:                                 ## %cond.end
 	movl	-12(%rbp), %eax         ## 4-byte Reload
 	popq	%rbp
 	retq

@@ -4,7 +4,7 @@
 	.p2align	4, 0x90
 _main:                                  ## @main
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi0:
 	.cfi_def_cfa_offset 16
@@ -98,7 +98,7 @@ Lcfi4:
 	.p2align	4, 0x90
 __ZN8Derived2C1Ev:                      ## @_ZN8Derived2C1Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi5:
 	.cfi_def_cfa_offset 16
@@ -121,7 +121,7 @@ Lcfi7:
 	.p2align	4, 0x90
 __ZN8Derived2C2Ev:                      ## @_ZN8Derived2C2Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi8:
 	.cfi_def_cfa_offset 16
@@ -151,7 +151,7 @@ Lcfi10:
 	.p2align	4, 0x90
 __ZN2B2C2Ev:                            ## @_ZN2B2C2Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi11:
 	.cfi_def_cfa_offset 16
@@ -174,7 +174,7 @@ Lcfi13:
 	.p2align	4, 0x90
 __ZN2B23fooEv:                          ## @_ZN2B23fooEv
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi14:
 	.cfi_def_cfa_offset 16
@@ -193,7 +193,7 @@ Lcfi16:
 	.p2align	4, 0x90
 __ZNSt3__111char_traitsIcE6lengthEPKc:  ## @_ZNSt3__111char_traitsIcE6lengthEPKc
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi17:
 	.cfi_def_cfa_offset 16
@@ -216,7 +216,7 @@ Lcfi19:
 	.p2align	4, 0x90
 __ZNSt3__122__compressed_pair_elemINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repELi0ELb0EEC2Ev: ## @_ZNSt3__122__compressed_pair_elemINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repELi0ELb0EEC2Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi20:
 	.cfi_def_cfa_offset 16
@@ -242,7 +242,7 @@ Lcfi22:
 	.p2align	4, 0x90
 __ZNSt3__122__compressed_pair_elemINS_9allocatorIcEELi1ELb1EEC2Ev: ## @_ZNSt3__122__compressed_pair_elemINS_9allocatorIcEELi1ELb1EEC2Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi23:
 	.cfi_def_cfa_offset 16

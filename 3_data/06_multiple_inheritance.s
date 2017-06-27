@@ -4,7 +4,7 @@
 	.p2align	4, 0x90
 __Z5func1RK2P1:                         ## @_Z5func1RK2P1
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi0:
 	.cfi_def_cfa_offset 16
@@ -26,7 +26,7 @@ Lcfi2:
 	.p2align	4, 0x90
 __Z5func2RK2P2:                         ## @_Z5func2RK2P2
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi3:
 	.cfi_def_cfa_offset 16
@@ -48,7 +48,7 @@ Lcfi5:
 	.p2align	4, 0x90
 __Z5func3RK2P3:                         ## @_Z5func3RK2P3
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi6:
 	.cfi_def_cfa_offset 16
@@ -78,7 +78,7 @@ Lcfi8:
 	.p2align	4, 0x90
 _main:                                  ## @main
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi9:
 	.cfi_def_cfa_offset 16
@@ -108,11 +108,11 @@ Lcfi11:
 	movq	-72(%rbp), %rdx         ## 8-byte Reload
 	movq	%rdx, -80(%rbp)         ## 8-byte Spill
 	je	LBB3_2
-## BB#1:
+## BB#1:                                ## %cast.notnull
 	leaq	-32(%rbp), %rax
 	addq	$8, %rax
 	movq	%rax, -80(%rbp)         ## 8-byte Spill
-LBB3_2:
+LBB3_2:                                 ## %cast.end
 	movq	-80(%rbp), %rax         ## 8-byte Reload
 	leaq	-32(%rbp), %rdi
 	movq	%rax, -40(%rbp)

@@ -7,7 +7,7 @@ Lfunc_begin0:
 	.cfi_startproc
 	.cfi_personality 155, ___gxx_personality_v0
 	.cfi_lsda 16, Lexception0
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi0:
 	.cfi_def_cfa_offset 16
@@ -25,7 +25,7 @@ Ltmp0:
 	callq	__ZN2D1C1Ev
 Ltmp1:
 	jmp	LBB0_1
-LBB0_1:
+LBB0_1:                                 ## %invoke.cont
 	leaq	-24(%rbp), %rax
 	movq	%rax, -72(%rbp)
 	leaq	-48(%rbp), %rax
@@ -38,7 +38,7 @@ Ltmp3:
 	callq	*%rcx
 Ltmp4:
 	jmp	LBB0_2
-LBB0_2:
+LBB0_2:                                 ## %invoke.cont2
 	movq	-80(%rbp), %rax
 	movq	(%rax), %rcx
 	movq	16(%rcx), %rcx
@@ -47,7 +47,7 @@ Ltmp5:
 	callq	*%rcx
 Ltmp6:
 	jmp	LBB0_3
-LBB0_3:
+LBB0_3:                                 ## %invoke.cont5
 	leaq	-24(%rbp), %rax
 	movq	%rax, -88(%rbp)
 	leaq	-48(%rbp), %rax
@@ -60,7 +60,7 @@ Ltmp7:
 	callq	*%rcx
 Ltmp8:
 	jmp	LBB0_4
-LBB0_4:
+LBB0_4:                                 ## %invoke.cont8
 	movq	-96(%rbp), %rax
 	movq	(%rax), %rcx
 	movq	16(%rcx), %rcx
@@ -69,13 +69,13 @@ Ltmp9:
 	callq	*%rcx
 Ltmp10:
 	jmp	LBB0_5
-LBB0_5:
+LBB0_5:                                 ## %invoke.cont11
 	movq	-72(%rbp), %rdi
 Ltmp11:
 	callq	__ZN2B11mEv
 Ltmp12:
 	jmp	LBB0_6
-LBB0_6:
+LBB0_6:                                 ## %invoke.cont12
 	movq	-72(%rbp), %rax
 	movq	(%rax), %rcx
 	movq	16(%rcx), %rcx
@@ -84,13 +84,13 @@ Ltmp13:
 	callq	*%rcx
 Ltmp14:
 	jmp	LBB0_7
-LBB0_7:
+LBB0_7:                                 ## %invoke.cont15
 	movq	-80(%rbp), %rdi
 Ltmp15:
 	callq	__ZN2B11mEv
 Ltmp16:
 	jmp	LBB0_8
-LBB0_8:
+LBB0_8:                                 ## %invoke.cont16
 	movq	-80(%rbp), %rax
 	movq	(%rax), %rcx
 	movq	16(%rcx), %rcx
@@ -99,7 +99,7 @@ Ltmp17:
 	callq	*%rcx
 Ltmp18:
 	jmp	LBB0_9
-LBB0_9:
+LBB0_9:                                 ## %invoke.cont19
 	leaq	-48(%rbp), %rdi
 	movl	$0, -4(%rbp)
 	callq	__ZN2D1D1Ev
@@ -109,23 +109,23 @@ LBB0_9:
 	addq	$96, %rsp
 	popq	%rbp
 	retq
-LBB0_10:
+LBB0_10:                                ## %lpad
 Ltmp2:
 	movl	%edx, %ecx
 	movq	%rax, -56(%rbp)
 	movl	%ecx, -60(%rbp)
 	jmp	LBB0_12
-LBB0_11:
+LBB0_11:                                ## %lpad1
 Ltmp19:
 	leaq	-48(%rbp), %rdi
 	movl	%edx, %ecx
 	movq	%rax, -56(%rbp)
 	movl	%ecx, -60(%rbp)
 	callq	__ZN2D1D1Ev
-LBB0_12:
+LBB0_12:                                ## %ehcleanup
 	leaq	-24(%rbp), %rdi
 	callq	__ZN2B1D1Ev
-## BB#13:
+## BB#13:                               ## %eh.resume
 	movq	-56(%rbp), %rdi
 	callq	__Unwind_Resume
 Lfunc_end0:
@@ -173,7 +173,7 @@ Lset9 = Lfunc_end0-Ltmp18               ##   Call between Ltmp18 and Lfunc_end0
 	.p2align	4, 0x90
 __ZN2B1C1Ev:                            ## @_ZN2B1C1Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi3:
 	.cfi_def_cfa_offset 16
@@ -196,7 +196,7 @@ Lcfi5:
 	.p2align	4, 0x90
 __ZN2D1C1Ev:                            ## @_ZN2D1C1Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi6:
 	.cfi_def_cfa_offset 16
@@ -219,7 +219,7 @@ Lcfi8:
 	.p2align	4, 0x90
 __ZN2B11mEv:                            ## @_ZN2B11mEv
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi9:
 	.cfi_def_cfa_offset 16
@@ -238,7 +238,7 @@ Lcfi11:
 	.p2align	4, 0x90
 __ZN2D1D1Ev:                            ## @_ZN2D1D1Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi12:
 	.cfi_def_cfa_offset 16
@@ -261,7 +261,7 @@ Lcfi14:
 	.p2align	4, 0x90
 __ZN2B1D1Ev:                            ## @_ZN2B1D1Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi15:
 	.cfi_def_cfa_offset 16
@@ -284,7 +284,7 @@ Lcfi17:
 	.p2align	4, 0x90
 __ZN2B1C2Ev:                            ## @_ZN2B1C2Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi18:
 	.cfi_def_cfa_offset 16
@@ -317,7 +317,7 @@ Lcfi20:
 	.p2align	4, 0x90
 __ZN2B1D0Ev:                            ## @_ZN2B1D0Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi21:
 	.cfi_def_cfa_offset 16
@@ -346,7 +346,7 @@ Lfunc_begin1:
 	.cfi_startproc
 	.cfi_personality 155, ___gxx_personality_v0
 	.cfi_lsda 16, Lexception1
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi24:
 	.cfi_def_cfa_offset 16
@@ -372,14 +372,14 @@ Ltmp20:
 Ltmp21:
 	movq	%rax, -40(%rbp)         ## 8-byte Spill
 	jmp	LBB8_1
-LBB8_1:
+LBB8_1:                                 ## %invoke.cont
 	movq	-40(%rbp), %rax         ## 8-byte Reload
 	movq	-32(%rbp), %rcx         ## 8-byte Reload
 	movq	%rax, 16(%rcx)
 	addq	$48, %rsp
 	popq	%rbp
 	retq
-LBB8_2:
+LBB8_2:                                 ## %lpad
 Ltmp22:
 	movl	%edx, %ecx
 	movq	%rax, -16(%rbp)
@@ -387,7 +387,7 @@ Ltmp22:
 	movq	-32(%rbp), %rax         ## 8-byte Reload
 	movq	%rax, %rdi
 	callq	__ZN2B1D2Ev
-## BB#3:
+## BB#3:                                ## %eh.resume
 	movq	-16(%rbp), %rdi
 	callq	__Unwind_Resume
 Lfunc_end1:
@@ -428,7 +428,7 @@ Lset16 = Lfunc_end1-Ltmp21              ##   Call between Ltmp21 and Lfunc_end1
 	.p2align	4, 0x90
 __ZN2B1D2Ev:                            ## @_ZN2B1D2Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi27:
 	.cfi_def_cfa_offset 16
@@ -447,10 +447,10 @@ Lcfi29:
 	cmpq	$0, %rax
 	movq	%rax, -16(%rbp)         ## 8-byte Spill
 	je	LBB9_2
-## BB#1:
+## BB#1:                                ## %delete.notnull
 	movq	-16(%rbp), %rdi         ## 8-byte Reload
 	callq	__ZdaPv
-LBB9_2:
+LBB9_2:                                 ## %delete.end
 	addq	$16, %rsp
 	popq	%rbp
 	retq
@@ -461,7 +461,7 @@ LBB9_2:
 	.p2align	4, 0x90
 __ZN2D1D0Ev:                            ## @_ZN2D1D0Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi30:
 	.cfi_def_cfa_offset 16
@@ -487,7 +487,7 @@ Lcfi32:
 	.p2align	4, 0x90
 __ZN2D11mEv:                            ## @_ZN2D11mEv
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi33:
 	.cfi_def_cfa_offset 16
@@ -506,7 +506,7 @@ Lcfi35:
 	.p2align	4, 0x90
 __ZN2D1D2Ev:                            ## @_ZN2D1D2Ev
 	.cfi_startproc
-## BB#0:
+## BB#0:                                ## %entry
 	pushq	%rbp
 Lcfi36:
 	.cfi_def_cfa_offset 16
@@ -526,11 +526,11 @@ Lcfi38:
 	movq	%rdi, -16(%rbp)         ## 8-byte Spill
 	movq	%rax, -24(%rbp)         ## 8-byte Spill
 	je	LBB12_2
-## BB#1:
+## BB#1:                                ## %delete.notnull
 	movq	-24(%rbp), %rax         ## 8-byte Reload
 	movq	%rax, %rdi
 	callq	__ZdaPv
-LBB12_2:
+LBB12_2:                                ## %delete.end
 	movq	-16(%rbp), %rax         ## 8-byte Reload
 	movq	%rax, %rdi
 	callq	__ZN2B1D2Ev

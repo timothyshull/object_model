@@ -64,6 +64,7 @@ function __ZN1XC2Ev() {
 }
 
 function __ZN1YC2Ei() {
+    *(int32_t *)arg0 = rsi;
     return rax;
 }
 
