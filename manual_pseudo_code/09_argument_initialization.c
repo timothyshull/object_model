@@ -5,22 +5,27 @@ typedef struct _X {
     int32_t x;
 } X;
 
-void func(X x)
-{
-    // auto y = x.x; -> optimized out
-    return;
-}
-
-X *XConstructor(X *this) {
-    return this;
-}
-
 X *XConstructorInt(X *this, int32_t i) {
     *(int32_t *)this = i;
     return this;
 }
 
+X *XConstructor(X *this) {
+    *(int32_t *)this = 0x0;
+    return this;
+}
 
+// NOTE: generates default destructor, later removed
+
+// NOTE: generates default copy constructor, later removed
+
+void func(X x)
+{
+    int32_t y = *(int32_t *)(&x);
+    return;
+}
+
+// NOTE: additional internal operations here (copy ctor, implicit casts, etc)
 int main() {
     X x1;
     XConstructorInt(&x1, 0xA);

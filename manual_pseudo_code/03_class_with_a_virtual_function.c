@@ -20,11 +20,11 @@ typedef struct _X {
 } X;
 
 typedef struct _Y {
-    method *__vptr;
+    X primary_base;
 } Y;
 
 typedef struct _Z {
-    method *__vptr;
+    X primary_base;
 } Z;
 
 void func(void *x)
@@ -48,17 +48,18 @@ X *XConstructor(X *this)
     return this;
 }
 
+// NOTE: compiler guards against the actual mechanism used for vptr assignment here
 Y *YConstructor(Y *this)
 {
     XConstructor((X *) this);
-    this->__vptr = __vtable_Y;
+    this->primary_base.__vptr = __vtable_Y;
     return this;
 }
 
 Z *ZConstructor(Z *this)
 {
     XConstructor((X *) this);
-    this->__vptr = __vtable_Z;
+    this->primary_base.__vptr = __vtable_Z;
     return this;
 }
 

@@ -19,6 +19,8 @@ typedef struct _Xyz {
     Z z;
 } Xyz;
 
+// NOTE: the default copy constructor is also generated for each of these classes
+
 X *XConstructor(X *this)
 {
     *(int16_t *) this = 0x0;
@@ -53,7 +55,7 @@ Xyz *XyzDestructor(Xyz *this)
 
 int main()
 {
-    Xyz xyz = {0x0};
+    Xyz xyz;
     XyzConstructor(&xyz);
     XyzDestructor(&xyz);
     return 0x0;
