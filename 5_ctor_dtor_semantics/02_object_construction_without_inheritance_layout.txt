@@ -8,11 +8,11 @@
            |  nvsize=24, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fe41c865658 <object_model_refined/5_ctor_dtor_semantics/02_object_construction_without_inheritance.cpp:1:1, line:5:1> line:1:8 referenced struct Point definition
-|-CXXRecordDecl 0x7fe41c865778 <col:1, col:8> col:8 implicit struct Point
-|-FieldDecl 0x7fe41c865828 <line:2:5, col:12> col:12 x 'double'
-|-FieldDecl 0x7fe41c865888 <line:3:5, col:12> col:12 y 'double'
-`-FieldDecl 0x7fe41c8658e8 <line:4:5, col:12> col:12 z 'double'
+Record: CXXRecordDecl 0x7fc0f7034e58 <object_model/5_ctor_dtor_semantics/02_object_construction_without_inheritance.cpp:1:1, line:5:1> line:1:8 referenced struct Point definition
+|-CXXRecordDecl 0x7fc0f7034f78 <col:1, col:8> col:8 implicit struct Point
+|-FieldDecl 0x7fc0f7035028 <line:2:5, col:12> col:12 x 'double'
+|-FieldDecl 0x7fc0f7035088 <line:3:5, col:12> col:12 y 'double'
+`-FieldDecl 0x7fc0f70350e8 <line:4:5, col:12> col:12 z 'double'
 
 Layout: <CGRecordLayout
   LLVMType:%struct.Point = type { double, double, double }

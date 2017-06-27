@@ -16,37 +16,37 @@
            |  nvsize=9, nvalign=4]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fc044003678 <object_model_refined/3_data/04_inheritance_without_polymorphism.cpp:37:1, line:40:1> line:37:8 referenced struct C1 definition
-|-CXXRecordDecl 0x7fc044800400 <col:1, col:8> col:8 implicit struct C1
-|-FieldDecl 0x7fc0448004b0 <line:38:5, col:9> col:9 referenced v 'int'
-|-FieldDecl 0x7fc044800508 <line:39:5, col:10> col:10 referenced b1 'char'
-|-CXXConstructorDecl 0x7fc044803138 <line:37:8> col:8 implicit used C1 'void (void) noexcept' inline default trivial
-| `-CompoundStmt 0x7fc044803a30 <col:8>
-|-CXXDestructorDecl 0x7fc044803218 <col:8> col:8 implicit ~C1 'void (void)' inline default trivial noexcept-unevaluated 0x7fc044803218
-|-CXXConstructorDecl 0x7fc044803358 <col:8> col:8 implicit constexpr C1 'void (const struct C1 &)' inline default trivial noexcept-unevaluated 0x7fc044803358
-| `-ParmVarDecl 0x7fc044803480 <col:8> col:8 'const struct C1 &'
-|-CXXConstructorDecl 0x7fc044803518 <col:8> col:8 implicit constexpr C1 'void (struct C1 &&)' inline default trivial noexcept-unevaluated 0x7fc044803518
-| `-ParmVarDecl 0x7fc044803640 <col:8> col:8 'struct C1 &&'
-|-CXXMethodDecl 0x7fc044803ee8 <col:8> col:8 implicit used constexpr operator= 'struct C1 &(const struct C1 &) noexcept' inline default trivial
-| |-ParmVarDecl 0x7fc044805800 <col:8> col:8 used 'const struct C1 &'
-| `-CompoundStmt 0x7fc044805c90 <col:8>
-|   |-BinaryOperator 0x7fc044805b28 <col:8> 'int' lvalue '='
-|   | |-MemberExpr 0x7fc044805a78 <col:8> 'int' lvalue ->v 0x7fc0448004b0
-|   | | `-CXXThisExpr 0x7fc044805a60 <col:8> 'struct C1 *' this
-|   | `-ImplicitCastExpr 0x7fc044805b10 <col:8> 'int' <LValueToRValue>
-|   |   `-MemberExpr 0x7fc044805ad8 <col:8> 'const int' lvalue .v 0x7fc0448004b0
-|   |     `-DeclRefExpr 0x7fc044805ab0 <col:8> 'const struct C1' lvalue ParmVar 0x7fc044805800 '' 'const struct C1 &'
-|   |-BinaryOperator 0x7fc044805c18 <col:8> 'char' lvalue '='
-|   | |-MemberExpr 0x7fc044805b68 <col:8> 'char' lvalue ->b1 0x7fc044800508
-|   | | `-CXXThisExpr 0x7fc044805b50 <col:8> 'struct C1 *' this
-|   | `-ImplicitCastExpr 0x7fc044805c00 <col:8> 'char' <LValueToRValue>
-|   |   `-MemberExpr 0x7fc044805bc8 <col:8> 'const char' lvalue .b1 0x7fc044800508
-|   |     `-DeclRefExpr 0x7fc044805ba0 <col:8> 'const struct C1' lvalue ParmVar 0x7fc044805800 '' 'const struct C1 &'
-|   `-ReturnStmt 0x7fc044805c78 <col:8>
-|     `-UnaryOperator 0x7fc044805c58 <col:8> 'struct C1' lvalue prefix '*'
-|       `-CXXThisExpr 0x7fc044805c40 <col:8> 'struct C1 *' this
-`-CXXMethodDecl 0x7fc044805868 <col:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct C1 &(struct C1 &&)' inline default trivial noexcept-unevaluated 0x7fc044805868
-  `-ParmVarDecl 0x7fc044805980 <col:8> col:8 'struct C1 &&'
+Record: CXXRecordDecl 0x7fb9bb896678 <object_model/3_data/04_inheritance_without_polymorphism.cpp:37:1, line:40:1> line:37:8 referenced struct C1 definition
+|-CXXRecordDecl 0x7fb9bb896c00 <col:1, col:8> col:8 implicit struct C1
+|-FieldDecl 0x7fb9bb896cb0 <line:38:5, col:9> col:9 referenced v 'int'
+|-FieldDecl 0x7fb9bb896d08 <line:39:5, col:10> col:10 referenced b1 'char'
+|-CXXConstructorDecl 0x7fb9bb899538 <line:37:8> col:8 implicit used C1 'void (void) noexcept' inline default trivial
+| `-CompoundStmt 0x7fb9bb899e30 <col:8>
+|-CXXDestructorDecl 0x7fb9bb899618 <col:8> col:8 implicit ~C1 'void (void)' inline default trivial noexcept-unevaluated 0x7fb9bb899618
+|-CXXConstructorDecl 0x7fb9bb899758 <col:8> col:8 implicit constexpr C1 'void (const struct C1 &)' inline default trivial noexcept-unevaluated 0x7fb9bb899758
+| `-ParmVarDecl 0x7fb9bb899880 <col:8> col:8 'const struct C1 &'
+|-CXXConstructorDecl 0x7fb9bb899918 <col:8> col:8 implicit constexpr C1 'void (struct C1 &&)' inline default trivial noexcept-unevaluated 0x7fb9bb899918
+| `-ParmVarDecl 0x7fb9bb899a40 <col:8> col:8 'struct C1 &&'
+|-CXXMethodDecl 0x7fb9bb89a2e8 <col:8> col:8 implicit used constexpr operator= 'struct C1 &(const struct C1 &) noexcept' inline default trivial
+| |-ParmVarDecl 0x7fb9bc001000 <col:8> col:8 used 'const struct C1 &'
+| `-CompoundStmt 0x7fb9bc001490 <col:8>
+|   |-BinaryOperator 0x7fb9bc001328 <col:8> 'int' lvalue '='
+|   | |-MemberExpr 0x7fb9bc001278 <col:8> 'int' lvalue ->v 0x7fb9bb896cb0
+|   | | `-CXXThisExpr 0x7fb9bc001260 <col:8> 'struct C1 *' this
+|   | `-ImplicitCastExpr 0x7fb9bc001310 <col:8> 'int' <LValueToRValue>
+|   |   `-MemberExpr 0x7fb9bc0012d8 <col:8> 'const int' lvalue .v 0x7fb9bb896cb0
+|   |     `-DeclRefExpr 0x7fb9bc0012b0 <col:8> 'const struct C1' lvalue ParmVar 0x7fb9bc001000 '' 'const struct C1 &'
+|   |-BinaryOperator 0x7fb9bc001418 <col:8> 'char' lvalue '='
+|   | |-MemberExpr 0x7fb9bc001368 <col:8> 'char' lvalue ->b1 0x7fb9bb896d08
+|   | | `-CXXThisExpr 0x7fb9bc001350 <col:8> 'struct C1 *' this
+|   | `-ImplicitCastExpr 0x7fb9bc001400 <col:8> 'char' <LValueToRValue>
+|   |   `-MemberExpr 0x7fb9bc0013c8 <col:8> 'const char' lvalue .b1 0x7fb9bb896d08
+|   |     `-DeclRefExpr 0x7fb9bc0013a0 <col:8> 'const struct C1' lvalue ParmVar 0x7fb9bc001000 '' 'const struct C1 &'
+|   `-ReturnStmt 0x7fb9bc001478 <col:8>
+|     `-UnaryOperator 0x7fb9bc001458 <col:8> 'struct C1' lvalue prefix '*'
+|       `-CXXThisExpr 0x7fb9bc001440 <col:8> 'struct C1 *' this
+`-CXXMethodDecl 0x7fb9bc001068 <col:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct C1 &(struct C1 &&)' inline default trivial noexcept-unevaluated 0x7fb9bc001068
+  `-ParmVarDecl 0x7fb9bc001180 <col:8> col:8 'struct C1 &&'
 
 Layout: <CGRecordLayout
   LLVMType:%struct.C1 = type { i32, i8 }
@@ -56,18 +56,18 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fc044800570 <object_model_refined/3_data/04_inheritance_without_polymorphism.cpp:42:1, line:44:1> line:42:8 referenced struct C2 definition
+Record: CXXRecordDecl 0x7fb9bb896d70 <object_model/3_data/04_inheritance_without_polymorphism.cpp:42:1, line:44:1> line:42:8 referenced struct C2 definition
 |-public 'struct C1'
-|-CXXRecordDecl 0x7fc0448006d8 <col:1, col:8> col:8 implicit struct C2
-|-FieldDecl 0x7fc044800780 <line:43:5, col:10> col:10 b2 'char'
-|-CXXConstructorDecl 0x7fc044803000 <line:42:8> col:8 implicit used C2 'void (void) noexcept' inline default trivial
+|-CXXRecordDecl 0x7fb9bb896ed8 <col:1, col:8> col:8 implicit struct C2
+|-FieldDecl 0x7fb9bb896f80 <line:43:5, col:10> col:10 b2 'char'
+|-CXXConstructorDecl 0x7fb9bb899400 <line:42:8> col:8 implicit used C2 'void (void) noexcept' inline default trivial
 | |-CXXCtorInitializer 'struct C1'
-| | `-CXXConstructExpr 0x7fc044803a48 <col:8> 'struct C1' 'void (void) noexcept'
-| `-CompoundStmt 0x7fc044803ab8 <col:8>
-|-CXXConstructorDecl 0x7fc0448036a8 <col:8> col:8 implicit constexpr C2 'void (const struct C2 &)' inline default trivial noexcept-unevaluated 0x7fc0448036a8
-| `-ParmVarDecl 0x7fc0448037d0 <col:8> col:8 'const struct C2 &'
-`-CXXConstructorDecl 0x7fc044803868 <col:8> col:8 implicit constexpr C2 'void (struct C2 &&)' inline default trivial noexcept-unevaluated 0x7fc044803868
-  `-ParmVarDecl 0x7fc044803990 <col:8> col:8 'struct C2 &&'
+| | `-CXXConstructExpr 0x7fb9bb899e48 <col:8> 'struct C1' 'void (void) noexcept'
+| `-CompoundStmt 0x7fb9bb899eb8 <col:8>
+|-CXXConstructorDecl 0x7fb9bb899aa8 <col:8> col:8 implicit constexpr C2 'void (const struct C2 &)' inline default trivial noexcept-unevaluated 0x7fb9bb899aa8
+| `-ParmVarDecl 0x7fb9bb899bd0 <col:8> col:8 'const struct C2 &'
+`-CXXConstructorDecl 0x7fb9bb899c68 <col:8> col:8 implicit constexpr C2 'void (struct C2 &&)' inline default trivial noexcept-unevaluated 0x7fb9bb899c68
+  `-ParmVarDecl 0x7fb9bb899d90 <col:8> col:8 'struct C2 &&'
 
 Layout: <CGRecordLayout
   LLVMType:%struct.C2 = type <{ %struct.C1, i8, [3 x i8] }>

@@ -7,16 +7,16 @@
            |  nvsize=16, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fa2d5868e58 <object_model_refined/6_runtime_semantics/05_default_constructors_and_arrays.cpp:1:1, line:4:1> line:1:8 referenced struct C definition
-|-CXXRecordDecl 0x7fa2d5868f78 <col:1, col:8> col:8 implicit struct C
-|-FieldDecl 0x7fa2d5869028 <line:2:5, col:12> col:12 r 'double'
-|-FieldDecl 0x7fa2d5869088 <line:3:5, col:12> col:12 i 'double'
-|-CXXConstructorDecl 0x7fa2d58692f8 <line:1:8> col:8 implicit used C 'void (void) noexcept' inline default trivial
-| `-CompoundStmt 0x7fa2d58697c0 <col:8>
-|-CXXConstructorDecl 0x7fa2d5869438 <col:8> col:8 implicit constexpr C 'void (const struct C &)' inline default trivial noexcept-unevaluated 0x7fa2d5869438
-| `-ParmVarDecl 0x7fa2d5869560 <col:8> col:8 'const struct C &'
-`-CXXConstructorDecl 0x7fa2d58695f8 <col:8> col:8 implicit constexpr C 'void (struct C &&)' inline default trivial noexcept-unevaluated 0x7fa2d58695f8
-  `-ParmVarDecl 0x7fa2d5869720 <col:8> col:8 'struct C &&'
+Record: CXXRecordDecl 0x7f89c3068058 <object_model/6_runtime_semantics/05_default_constructors_and_arrays.cpp:1:1, line:4:1> line:1:8 referenced struct C definition
+|-CXXRecordDecl 0x7f89c3068178 <col:1, col:8> col:8 implicit struct C
+|-FieldDecl 0x7f89c3068228 <line:2:5, col:12> col:12 r 'double'
+|-FieldDecl 0x7f89c3068288 <line:3:5, col:12> col:12 i 'double'
+|-CXXConstructorDecl 0x7f89c30684f8 <line:1:8> col:8 implicit used C 'void (void) noexcept' inline default trivial
+| `-CompoundStmt 0x7f89c30689c0 <col:8>
+|-CXXConstructorDecl 0x7f89c3068638 <col:8> col:8 implicit constexpr C 'void (const struct C &)' inline default trivial noexcept-unevaluated 0x7f89c3068638
+| `-ParmVarDecl 0x7f89c3068760 <col:8> col:8 'const struct C &'
+`-CXXConstructorDecl 0x7f89c30687f8 <col:8> col:8 implicit constexpr C 'void (struct C &&)' inline default trivial noexcept-unevaluated 0x7f89c30687f8
+  `-ParmVarDecl 0x7f89c3068920 <col:8> col:8 'struct C &&'
 
 Layout: <CGRecordLayout
   LLVMType:%struct.C = type { double, double }
