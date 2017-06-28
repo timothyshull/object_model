@@ -1302,57 +1302,57 @@ function imp___stubs____stack_chk_fail() {
 }
 
 function imp___stubs__fclose() {
-    rax = _fclose(rdi);
+    rax = _fclose(stream);
     return rax;
 }
 
 function imp___stubs__fflush() {
-    rax = _fflush(rdi);
+    rax = _fflush(stream);
     return rax;
 }
 
 function imp___stubs__fopen() {
-    rax = _fopen(rdi, rsi);
+    rax = _fopen(filename, mode);
     return rax;
 }
 
 function imp___stubs__fread() {
-    rax = _fread(rdi, rsi, rdx, rcx);
+    rax = _fread(ptr, size, nitems, stream);
     return rax;
 }
 
 function imp___stubs__fseek() {
-    rax = _fseek(rdi, rsi, rdx);
+    rax = _fseek(stream, offset, whence);
     return rax;
 }
 
 function imp___stubs__fseeko() {
-    rax = _fseeko(rdi, rsi, rdx);
+    rax = _fseeko(stream, offset, whence);
     return rax;
 }
 
 function imp___stubs__ftello() {
-    rax = _ftello(rdi);
+    rax = _ftello(stream);
     return rax;
 }
 
 function imp___stubs__fwrite() {
-    rax = _fwrite(rdi, rsi, rdx, rcx);
+    rax = _fwrite(ptr, size, nitems, stream);
     return rax;
 }
 
 function imp___stubs__memcpy() {
-    rax = _memcpy(rdi, rsi, rdx);
+    rax = _memcpy(dst, src, n);
     return rax;
 }
 
 function imp___stubs__memmove() {
-    rax = _memmove(rdi, rsi, rdx);
+    rax = _memmove(dst, src, len);
     return rax;
 }
 
 function imp___stubs__memset() {
-    rax = _memset(rdi, rsi, rdx);
+    rax = _memset(b, c, len);
     return rax;
 }
 
@@ -1398,8 +1398,8 @@ function sub_100004ea0() {
 }
 
 function imp___stubs___Unwind_Resume() {
-    rax = __Unwind_Resume();
-    return rax;
+    __Unwind_Resume(exception_object);
+    return;
 }
 
 function sub_100005b10() {

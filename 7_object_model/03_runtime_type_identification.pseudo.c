@@ -49,12 +49,12 @@ function imp___stubs___ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocator
 }
 
 function imp___stubs__memset() {
-    rax = _memset(rdi, rsi, rdx);
+    rax = _memset(b, c, len);
     return rax;
 }
 
 function imp___stubs__strlen() {
-    rax = _strlen(rdi);
+    rax = _strlen(s);
     return rax;
 }
 

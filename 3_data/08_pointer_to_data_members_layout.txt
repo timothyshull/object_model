@@ -6,9 +6,9 @@
            |  nvsize=4, nvalign=4]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f8e5c069e50 <object_model/3_data/08_pointer_to_data_members.cpp:12:1, line:14:1> line:12:8 referenced struct B1 definition
-|-CXXRecordDecl 0x7f8e5c094400 <col:1, col:8> col:8 implicit struct B1
-`-FieldDecl 0x7f8e5c0944b0 <line:13:5, col:9> col:9 v1 'int'
+Record: CXXRecordDecl 0x7fcf3a869e50 <object_model/3_data/08_pointer_to_data_members.cpp:12:1, line:14:1> line:12:8 referenced struct B1 definition
+|-CXXRecordDecl 0x7fcf3a894400 <col:1, col:8> col:8 implicit struct B1
+`-FieldDecl 0x7fcf3a8944b0 <line:13:5, col:9> col:9 v1 'int'
 
 Layout: <CGRecordLayout
   LLVMType:%struct.B1 = type { i32 }
@@ -24,9 +24,9 @@ Layout: <CGRecordLayout
            |  nvsize=4, nvalign=4]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f8e5c094518 <object_model/3_data/08_pointer_to_data_members.cpp:16:1, line:18:1> line:16:8 referenced struct B2 definition
-|-CXXRecordDecl 0x7f8e5c094638 <col:1, col:8> col:8 implicit struct B2
-`-FieldDecl 0x7f8e5c0946e8 <line:17:5, col:9> col:9 v2 'int'
+Record: CXXRecordDecl 0x7fcf3a894518 <object_model/3_data/08_pointer_to_data_members.cpp:16:1, line:18:1> line:16:8 referenced struct B2 definition
+|-CXXRecordDecl 0x7fcf3a894638 <col:1, col:8> col:8 implicit struct B2
+`-FieldDecl 0x7fcf3a8946e8 <line:17:5, col:9> col:9 v2 'int'
 
 Layout: <CGRecordLayout
   LLVMType:%struct.B2 = type { i32 }
@@ -45,10 +45,10 @@ Layout: <CGRecordLayout
            |  nvsize=8, nvalign=4]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f8e5c094750 <object_model/3_data/08_pointer_to_data_members.cpp:20:1, col:20> col:8 referenced struct D definition
+Record: CXXRecordDecl 0x7fcf3a894750 <object_model/3_data/08_pointer_to_data_members.cpp:20:1, col:20> col:8 referenced struct D definition
 |-public 'struct B1'
 |-public 'struct B2'
-`-CXXRecordDecl 0x7f8e5c0948f8 <col:1, col:8> col:8 implicit struct D
+`-CXXRecordDecl 0x7fcf3a8948f8 <col:1, col:8> col:8 implicit struct D
 
 Layout: <CGRecordLayout
   LLVMType:%struct.D = type { %struct.B1, %struct.B2 }

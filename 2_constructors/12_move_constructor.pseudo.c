@@ -219,12 +219,12 @@ function imp___stubs____cxa_begin_catch() {
 }
 
 function imp___stubs__memset() {
-    rax = _memset(rdi, rsi, rdx);
+    rax = _memset(b, c, len);
     return rax;
 }
 
 function imp___stubs__strlen() {
-    rax = _strlen(rdi);
+    rax = _strlen(s);
     return rax;
 }
 
@@ -242,8 +242,8 @@ function sub_1000017e0() {
 }
 
 function imp___stubs___Unwind_Resume() {
-    rax = __Unwind_Resume();
-    return rax;
+    __Unwind_Resume(exception_object);
+    return;
 }
 
 function sub_100001ed0() {

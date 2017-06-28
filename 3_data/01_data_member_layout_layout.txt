@@ -160,19 +160,19 @@
 
 *** Dumping AST Record Layout
          0 | class P1
-         0 |   float _x
-         4 |   float _y
-         8 |   float _z
-           | [sizeof=12, dsize=12, align=4,
-           |  nvsize=12, nvalign=4]
+         0 |   double _x
+         8 |   double _y
+        16 |   double _z
+           | [sizeof=24, dsize=24, align=8,
+           |  nvsize=24, nvalign=8]
 
 *** Dumping AST Record Layout
          0 | class P2
-         0 |   float _x
-         4 |   float _y
-         8 |   float _z
-           | [sizeof=12, dsize=12, align=4,
-           |  nvsize=12, nvalign=4]
+         0 |   double _x
+         8 |   double _y
+        16 |   double _z
+           | [sizeof=24, dsize=24, align=8,
+           |  nvsize=24, nvalign=8]
 
 *** Dumping AST Record Layout
          0 | struct (anonymous at /usr/local/Cellar/llvm/5.0.0/include/c++/v1/utility:1228:13)

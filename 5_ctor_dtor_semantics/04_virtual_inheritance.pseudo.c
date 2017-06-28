@@ -312,7 +312,7 @@ function sub_100001540() {
 }
 
 function imp___stubs___Unwind_Resume() {
-    rax = __Unwind_Resume();
-    return rax;
+    __Unwind_Resume(exception_object);
+    return;
 }
 

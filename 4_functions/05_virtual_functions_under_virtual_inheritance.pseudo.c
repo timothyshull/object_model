@@ -91,7 +91,7 @@ function __ZN1Z1mEv() {
 }
 
 function imp___stubs__memset() {
-    rax = _memset(rdi, rsi, rdx);
+    rax = _memset(b, c, len);
     return rax;
 }
 

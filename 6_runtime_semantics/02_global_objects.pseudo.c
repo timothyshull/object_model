@@ -20,7 +20,7 @@ function imp___stubs____stack_chk_fail() {
 }
 
 function imp___stubs__strcpy() {
-    rax = _strcpy(rdi, rsi);
+    rax = _strcpy(dst, src);
     return rax;
 }
 

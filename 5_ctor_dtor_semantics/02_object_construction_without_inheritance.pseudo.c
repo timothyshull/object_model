@@ -32,7 +32,7 @@ function imp___stubs___Znwm() {
 }
 
 function imp___stubs__memset() {
-    rax = _memset(rdi, rsi, rdx);
+    rax = _memset(b, c, len);
     return rax;
 }
 

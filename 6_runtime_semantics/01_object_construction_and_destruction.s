@@ -19,33 +19,45 @@ Lcfi2:
 	callq	__ZN1AC1Ev
 	movl	-4(%rbp), %eax
 	testl	%eax, %eax
-	movl	%eax, -12(%rbp)         ## 4-byte Spill
-	je	LBB0_1
-	jmp	LBB0_5
-LBB0_5:                                 ## %entry
-	movl	-12(%rbp), %eax         ## 4-byte Reload
-	subl	$1, %eax
 	movl	%eax, -16(%rbp)         ## 4-byte Spill
-	je	LBB0_2
-	jmp	LBB0_6
-LBB0_6:                                 ## %entry
-	movl	-12(%rbp), %eax         ## 4-byte Reload
-	subl	$2, %eax
+	je	LBB0_1
+	jmp	LBB0_8
+LBB0_8:                                 ## %entry
+	movl	-16(%rbp), %eax         ## 4-byte Reload
+	subl	$1, %eax
 	movl	%eax, -20(%rbp)         ## 4-byte Spill
+	je	LBB0_2
+	jmp	LBB0_9
+LBB0_9:                                 ## %entry
+	movl	-16(%rbp), %eax         ## 4-byte Reload
+	subl	$2, %eax
+	movl	%eax, -24(%rbp)         ## 4-byte Spill
 	je	LBB0_3
 	jmp	LBB0_4
 LBB0_1:                                 ## %sw.bb
-	jmp	LBB0_2
+	movl	$1, -12(%rbp)
+	jmp	LBB0_5
 LBB0_2:                                 ## %sw.bb1
-	jmp	LBB0_3
+	movl	$1, -12(%rbp)
+	jmp	LBB0_5
 LBB0_3:                                 ## %sw.bb2
-	jmp	LBB0_4
+	movl	$1, -12(%rbp)
+	jmp	LBB0_5
 LBB0_4:                                 ## %sw.epilog
+	movl	$0, -12(%rbp)
+LBB0_5:                                 ## %cleanup
 	leaq	-8(%rbp), %rdi
 	callq	__ZN1AD1Ev
+	movl	-12(%rbp), %eax
+	subl	$1, %eax
+	movl	%eax, -28(%rbp)         ## 4-byte Spill
+	ja	LBB0_7
+	jmp	LBB0_6
+LBB0_6:                                 ## %cleanup.cont
 	addq	$32, %rsp
 	popq	%rbp
 	retq
+LBB0_7:                                 ## %unreachable
 	.cfi_endproc
                                         ## -- End function
 	.globl	__ZN1AC1Ev              ## -- Begin function _ZN1AC1Ev

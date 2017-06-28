@@ -26,8 +26,8 @@ Lcfi2:
 	movq	$8, -80(%rbp)
 	movq	$8, -88(%rbp)
 	movq	$16, -96(%rbp)
-	movq	$12, -104(%rbp)
-	movq	$12, -112(%rbp)
+	movq	$24, -104(%rbp)
+	movq	$24, -112(%rbp)
 	popq	%rbp
 	retq
 	.cfi_endproc

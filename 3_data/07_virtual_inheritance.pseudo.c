@@ -40,7 +40,7 @@ function __ZN1VC2Ev() {
 }
 
 function imp___stubs__memset() {
-    rax = _memset(rdi, rsi, rdx);
+    rax = _memset(b, c, len);
     return rax;
 }
 

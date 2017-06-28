@@ -31,19 +31,19 @@ Lcfi4:
 	movq	%rsp, %rbp
 Lcfi5:
 	.cfi_def_cfa_register %rbp
-	subq	$64, %rsp
-	leaq	-16(%rbp), %rdi
+	subq	$96, %rsp
+	leaq	-32(%rbp), %rdi
 	movl	$0, -4(%rbp)
 	callq	__ZN2P3C1Ev
-	leaq	-32(%rbp), %rdi
+	leaq	-56(%rbp), %rdi
 	callq	__ZN2P3C1Ev
-	leaq	-48(%rbp), %rdi
+	leaq	-80(%rbp), %rdi
 	callq	__ZN2P3C1Ev
 	callq	__ZN2P312object_countEv
 	xorl	%ecx, %ecx
-	movq	%rax, -56(%rbp)
+	movq	%rax, -88(%rbp)
 	movl	%ecx, %eax
-	addq	$64, %rsp
+	addq	$96, %rsp
 	popq	%rbp
 	retq
 	.cfi_endproc
@@ -88,9 +88,9 @@ Lcfi11:
 	xorps	%xmm0, %xmm0
 	movq	%rdi, -8(%rbp)
 	movq	-8(%rbp), %rdi
-	movss	%xmm0, (%rdi)
-	movss	%xmm0, 4(%rdi)
-	movss	%xmm0, 8(%rdi)
+	movsd	%xmm0, (%rdi)
+	movsd	%xmm0, 8(%rdi)
+	movsd	%xmm0, 16(%rdi)
 	movq	__ZN2P313_object_countE(%rip), %rdi
 	addq	$1, %rdi
 	movq	%rdi, __ZN2P313_object_countE(%rip)

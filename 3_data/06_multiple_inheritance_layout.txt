@@ -50,9 +50,9 @@
            |  nvsize=8, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f8e37095380 <object_model/3_data/06_multiple_inheritance.cpp:3:1, line:5:1> line:3:8 referenced struct P1 definition
-|-CXXRecordDecl 0x7f8e370954a8 <col:1, col:8> col:8 implicit struct P1
-`-FieldDecl 0x7f8e37095558 <line:4:5, col:12> col:12 referenced x 'double'
+Record: CXXRecordDecl 0x7fc9c4912d80 <object_model/3_data/06_multiple_inheritance.cpp:3:1, line:5:1> line:3:8 referenced struct P1 definition
+|-CXXRecordDecl 0x7fc9c4912ea8 <col:1, col:8> col:8 implicit struct P1
+`-FieldDecl 0x7fc9c4912f58 <line:4:5, col:12> col:12 referenced x 'double'
 
 Layout: <CGRecordLayout
   LLVMType:%struct.P1 = type { double }
@@ -68,9 +68,9 @@ Layout: <CGRecordLayout
            |  nvsize=8, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f8e370955c0 <object_model/3_data/06_multiple_inheritance.cpp:7:1, line:9:1> line:7:8 referenced struct P2 definition
-|-CXXRecordDecl 0x7f8e370956e8 <col:1, col:8> col:8 implicit struct P2
-`-FieldDecl 0x7f8e37095798 <line:8:5, col:12> col:12 referenced y 'double'
+Record: CXXRecordDecl 0x7fc9c4912fc0 <object_model/3_data/06_multiple_inheritance.cpp:7:1, line:9:1> line:7:8 referenced struct P2 definition
+|-CXXRecordDecl 0x7fc9c49130e8 <col:1, col:8> col:8 implicit struct P2
+`-FieldDecl 0x7fc9c4913198 <line:8:5, col:12> col:12 referenced y 'double'
 
 Layout: <CGRecordLayout
   LLVMType:%struct.P2 = type { double }
@@ -90,11 +90,11 @@ Layout: <CGRecordLayout
            |  nvsize=24, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f8e37095800 <object_model/3_data/06_multiple_inheritance.cpp:11:1, line:13:1> line:11:8 referenced struct P3 definition
+Record: CXXRecordDecl 0x7fc9c4913200 <object_model/3_data/06_multiple_inheritance.cpp:11:1, line:13:1> line:11:8 referenced struct P3 definition
 |-public 'struct P1'
 |-public 'struct P2'
-|-CXXRecordDecl 0x7f8e370959a8 <col:1, col:8> col:8 implicit struct P3
-`-FieldDecl 0x7f8e37095a58 <line:12:5, col:12> col:12 z 'double'
+|-CXXRecordDecl 0x7fc9c49133a8 <col:1, col:8> col:8 implicit struct P3
+`-FieldDecl 0x7fc9c4913458 <line:12:5, col:12> col:12 z 'double'
 
 Layout: <CGRecordLayout
   LLVMType:%struct.P3 = type { %struct.P1, %struct.P2, double }

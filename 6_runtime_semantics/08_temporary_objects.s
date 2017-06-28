@@ -1,8 +1,8 @@
 	.section	__TEXT,__text,regular,pure_instructions
 	.macosx_version_min 10, 12
-	.globl	__ZplRK2T1S1_           ## -- Begin function _ZplRK2T1S1_
+	.globl	__ZplRK1TS1_            ## -- Begin function _ZplRK1TS1_
 	.p2align	4, 0x90
-__ZplRK2T1S1_:                          ## @_ZplRK2T1S1_
+__ZplRK1TS1_:                           ## @_ZplRK1TS1_
 	.cfi_startproc
 ## BB#0:                                ## %entry
 	pushq	%rbp
@@ -20,7 +20,7 @@ Lcfi2:
 	movb	$0, -17(%rbp)
 	movq	%rdi, -32(%rbp)         ## 8-byte Spill
 	movq	%rax, -40(%rbp)         ## 8-byte Spill
-	callq	__ZN2T1C1Ev
+	callq	__ZN1TC1Ev
 	movq	-8(%rbp), %rax
 	movl	(%rax), %ecx
 	movq	-16(%rbp), %rax
@@ -32,7 +32,7 @@ Lcfi2:
 	jne	LBB0_2
 ## BB#1:                                ## %nrvo.unused
 	movq	-32(%rbp), %rdi         ## 8-byte Reload
-	callq	__ZN2T1D1Ev
+	callq	__ZN1TD1Ev
 LBB0_2:                                 ## %nrvo.skipdtor
 	movq	-40(%rbp), %rax         ## 8-byte Reload
 	addq	$48, %rsp
@@ -40,10 +40,10 @@ LBB0_2:                                 ## %nrvo.skipdtor
 	retq
 	.cfi_endproc
                                         ## -- End function
-	.globl	__ZN2T1C1Ev             ## -- Begin function _ZN2T1C1Ev
-	.weak_def_can_be_hidden	__ZN2T1C1Ev
+	.globl	__ZN1TC1Ev              ## -- Begin function _ZN1TC1Ev
+	.weak_def_can_be_hidden	__ZN1TC1Ev
 	.p2align	4, 0x90
-__ZN2T1C1Ev:                            ## @_ZN2T1C1Ev
+__ZN1TC1Ev:                             ## @_ZN1TC1Ev
 	.cfi_startproc
 ## BB#0:                                ## %entry
 	pushq	%rbp
@@ -57,16 +57,16 @@ Lcfi5:
 	subq	$16, %rsp
 	movq	%rdi, -8(%rbp)
 	movq	-8(%rbp), %rdi
-	callq	__ZN2T1C2Ev
+	callq	__ZN1TC2Ev
 	addq	$16, %rsp
 	popq	%rbp
 	retq
 	.cfi_endproc
                                         ## -- End function
-	.globl	__ZN2T1D1Ev             ## -- Begin function _ZN2T1D1Ev
-	.weak_def_can_be_hidden	__ZN2T1D1Ev
+	.globl	__ZN1TD1Ev              ## -- Begin function _ZN1TD1Ev
+	.weak_def_can_be_hidden	__ZN1TD1Ev
 	.p2align	4, 0x90
-__ZN2T1D1Ev:                            ## @_ZN2T1D1Ev
+__ZN1TD1Ev:                             ## @_ZN1TD1Ev
 	.cfi_startproc
 ## BB#0:                                ## %entry
 	pushq	%rbp
@@ -80,15 +80,15 @@ Lcfi8:
 	subq	$16, %rsp
 	movq	%rdi, -8(%rbp)
 	movq	-8(%rbp), %rdi
-	callq	__ZN2T1D2Ev
+	callq	__ZN1TD2Ev
 	addq	$16, %rsp
 	popq	%rbp
 	retq
 	.cfi_endproc
                                         ## -- End function
-	.globl	__ZmiR2T1S0_            ## -- Begin function _ZmiR2T1S0_
+	.globl	__ZmiR1TS0_             ## -- Begin function _ZmiR1TS0_
 	.p2align	4, 0x90
-__ZmiR2T1S0_:                           ## @_ZmiR2T1S0_
+__ZmiR1TS0_:                            ## @_ZmiR1TS0_
 	.cfi_startproc
 ## BB#0:                                ## %entry
 	pushq	%rbp
@@ -106,7 +106,7 @@ Lcfi11:
 	movb	$0, -17(%rbp)
 	movq	%rdi, -32(%rbp)         ## 8-byte Spill
 	movq	%rax, -40(%rbp)         ## 8-byte Spill
-	callq	__ZN2T1C1Ev
+	callq	__ZN1TC1Ev
 	movq	-8(%rbp), %rax
 	movl	(%rax), %ecx
 	movq	-16(%rbp), %rax
@@ -118,7 +118,7 @@ Lcfi11:
 	jne	LBB3_2
 ## BB#1:                                ## %nrvo.unused
 	movq	-32(%rbp), %rdi         ## 8-byte Reload
-	callq	__ZN2T1D1Ev
+	callq	__ZN1TD1Ev
 LBB3_2:                                 ## %nrvo.skipdtor
 	movq	-40(%rbp), %rax         ## 8-byte Reload
 	addq	$48, %rsp
@@ -126,9 +126,9 @@ LBB3_2:                                 ## %nrvo.skipdtor
 	retq
 	.cfi_endproc
                                         ## -- End function
-	.globl	__Zml2T1S_              ## -- Begin function _Zml2T1S_
+	.globl	__Zml1TS_               ## -- Begin function _Zml1TS_
 	.p2align	4, 0x90
-__Zml2T1S_:                             ## @_Zml2T1S_
+__Zml1TS_:                              ## @_Zml1TS_
 	.cfi_startproc
 ## BB#0:                                ## %entry
 	pushq	%rbp
@@ -146,7 +146,7 @@ Lcfi14:
 	movq	%rax, -24(%rbp)         ## 8-byte Spill
 	movq	%rdx, -32(%rbp)         ## 8-byte Spill
 	movq	%rsi, -40(%rbp)         ## 8-byte Spill
-	callq	__ZN2T1C1Ev
+	callq	__ZN1TC1Ev
 	movq	-40(%rbp), %rax         ## 8-byte Reload
 	movl	(%rax), %ecx
 	movq	-32(%rbp), %rdx         ## 8-byte Reload
@@ -158,7 +158,7 @@ Lcfi14:
 	jne	LBB4_2
 ## BB#1:                                ## %nrvo.unused
 	movq	-16(%rbp), %rdi         ## 8-byte Reload
-	callq	__ZN2T1D1Ev
+	callq	__ZN1TD1Ev
 LBB4_2:                                 ## %nrvo.skipdtor
 	movq	-24(%rbp), %rax         ## 8-byte Reload
 	addq	$48, %rsp
@@ -186,11 +186,11 @@ Lcfi17:
 	movl	$0, -4(%rbp)
 	leaq	-8(%rbp), %rdi
 	movl	$1, %esi
-	callq	__ZN2T1C1Ei
+	callq	__ZN1TC1Ei
 Ltmp0:
 	leaq	-16(%rbp), %rdi
 	movl	$2, %esi
-	callq	__ZN2T1C1Ei
+	callq	__ZN1TC1Ei
 Ltmp1:
 	jmp	LBB5_1
 LBB5_1:                                 ## %invoke.cont
@@ -198,7 +198,7 @@ Ltmp3:
 	leaq	-32(%rbp), %rdi
 	leaq	-8(%rbp), %rsi
 	leaq	-16(%rbp), %rdx
-	callq	__ZplRK2T1S1_
+	callq	__ZplRK1TS1_
 Ltmp4:
 	jmp	LBB5_2
 LBB5_2:                                 ## %invoke.cont2
@@ -206,14 +206,14 @@ Ltmp6:
 	leaq	-40(%rbp), %rdi
 	leaq	-8(%rbp), %rsi
 	leaq	-16(%rbp), %rdx
-	callq	__ZmiR2T1S0_
+	callq	__ZmiR1TS0_
 Ltmp7:
 	jmp	LBB5_3
 LBB5_3:                                 ## %invoke.cont4
 	movl	-40(%rbp), %eax
 	movl	%eax, -32(%rbp)
 	leaq	-40(%rbp), %rdi
-	callq	__ZN2T1D1Ev
+	callq	__ZN1TD1Ev
 	movl	-8(%rbp), %eax
 	movl	%eax, -56(%rbp)
 	movl	-16(%rbp), %eax
@@ -222,25 +222,25 @@ Ltmp9:
 	leaq	-48(%rbp), %rdi
 	leaq	-56(%rbp), %rsi
 	leaq	-64(%rbp), %rdx
-	callq	__Zml2T1S_
+	callq	__Zml1TS_
 Ltmp10:
 	jmp	LBB5_4
 LBB5_4:                                 ## %invoke.cont8
 	leaq	-48(%rbp), %rdi
 	movl	-48(%rbp), %eax
 	movl	%eax, -32(%rbp)
-	callq	__ZN2T1D1Ev
+	callq	__ZN1TD1Ev
 	leaq	-64(%rbp), %rdi
-	callq	__ZN2T1D1Ev
+	callq	__ZN1TD1Ev
 	leaq	-56(%rbp), %rdi
-	callq	__ZN2T1D1Ev
+	callq	__ZN1TD1Ev
 	leaq	-32(%rbp), %rdi
 	movl	$0, -4(%rbp)
-	callq	__ZN2T1D1Ev
+	callq	__ZN1TD1Ev
 	leaq	-16(%rbp), %rdi
-	callq	__ZN2T1D1Ev
+	callq	__ZN1TD1Ev
 	leaq	-8(%rbp), %rdi
-	callq	__ZN2T1D1Ev
+	callq	__ZN1TD1Ev
 	movl	-4(%rbp), %eax
 	addq	$64, %rsp
 	popq	%rbp
@@ -269,18 +269,18 @@ Ltmp11:
 	movl	%edx, %ecx
 	movq	%rax, -24(%rbp)
 	movl	%ecx, -28(%rbp)
-	callq	__ZN2T1D1Ev
+	callq	__ZN1TD1Ev
 	leaq	-56(%rbp), %rdi
-	callq	__ZN2T1D1Ev
+	callq	__ZN1TD1Ev
 LBB5_9:                                 ## %ehcleanup
 	leaq	-32(%rbp), %rdi
-	callq	__ZN2T1D1Ev
+	callq	__ZN1TD1Ev
 LBB5_10:                                ## %ehcleanup9
 	leaq	-16(%rbp), %rdi
-	callq	__ZN2T1D1Ev
+	callq	__ZN1TD1Ev
 LBB5_11:                                ## %ehcleanup10
 	leaq	-8(%rbp), %rdi
-	callq	__ZN2T1D1Ev
+	callq	__ZN1TD1Ev
 ## BB#12:                               ## %eh.resume
 	movq	-24(%rbp), %rdi
 	callq	__Unwind_Resume
@@ -338,10 +338,10 @@ Lset15 = Lfunc_end0-Ltmp10              ##   Call between Ltmp10 and Lfunc_end0
 	.p2align	2
                                         ## -- End function
 	.section	__TEXT,__text,regular,pure_instructions
-	.globl	__ZN2T1C1Ei             ## -- Begin function _ZN2T1C1Ei
-	.weak_def_can_be_hidden	__ZN2T1C1Ei
+	.globl	__ZN1TC1Ei              ## -- Begin function _ZN1TC1Ei
+	.weak_def_can_be_hidden	__ZN1TC1Ei
 	.p2align	4, 0x90
-__ZN2T1C1Ei:                            ## @_ZN2T1C1Ei
+__ZN1TC1Ei:                             ## @_ZN1TC1Ei
 	.cfi_startproc
 ## BB#0:                                ## %entry
 	pushq	%rbp
@@ -357,16 +357,16 @@ Lcfi20:
 	movl	%esi, -12(%rbp)
 	movq	-8(%rbp), %rdi
 	movl	-12(%rbp), %esi
-	callq	__ZN2T1C2Ei
+	callq	__ZN1TC2Ei
 	addq	$16, %rsp
 	popq	%rbp
 	retq
 	.cfi_endproc
                                         ## -- End function
-	.globl	__ZN2T1C2Ev             ## -- Begin function _ZN2T1C2Ev
-	.weak_def_can_be_hidden	__ZN2T1C2Ev
+	.globl	__ZN1TC2Ev              ## -- Begin function _ZN1TC2Ev
+	.weak_def_can_be_hidden	__ZN1TC2Ev
 	.p2align	4, 0x90
-__ZN2T1C2Ev:                            ## @_ZN2T1C2Ev
+__ZN1TC2Ev:                             ## @_ZN1TC2Ev
 	.cfi_startproc
 ## BB#0:                                ## %entry
 	pushq	%rbp
@@ -382,10 +382,10 @@ Lcfi23:
 	retq
 	.cfi_endproc
                                         ## -- End function
-	.globl	__ZN2T1D2Ev             ## -- Begin function _ZN2T1D2Ev
-	.weak_def_can_be_hidden	__ZN2T1D2Ev
+	.globl	__ZN1TD2Ev              ## -- Begin function _ZN1TD2Ev
+	.weak_def_can_be_hidden	__ZN1TD2Ev
 	.p2align	4, 0x90
-__ZN2T1D2Ev:                            ## @_ZN2T1D2Ev
+__ZN1TD2Ev:                             ## @_ZN1TD2Ev
 	.cfi_startproc
 ## BB#0:                                ## %entry
 	pushq	%rbp
@@ -401,10 +401,10 @@ Lcfi26:
 	retq
 	.cfi_endproc
                                         ## -- End function
-	.globl	__ZN2T1C2Ei             ## -- Begin function _ZN2T1C2Ei
-	.weak_def_can_be_hidden	__ZN2T1C2Ei
+	.globl	__ZN1TC2Ei              ## -- Begin function _ZN1TC2Ei
+	.weak_def_can_be_hidden	__ZN1TC2Ei
 	.p2align	4, 0x90
-__ZN2T1C2Ei:                            ## @_ZN2T1C2Ei
+__ZN1TC2Ei:                             ## @_ZN1TC2Ei
 	.cfi_startproc
 ## BB#0:                                ## %entry
 	pushq	%rbp

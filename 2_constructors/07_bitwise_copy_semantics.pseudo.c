@@ -113,12 +113,12 @@ function imp___stubs___Znam() {
 }
 
 function imp___stubs__strlen() {
-    rax = _strlen(rdi);
+    rax = _strlen(s);
     return rax;
 }
 
 function imp___stubs__strncpy() {
-    rax = _strncpy(rdi, rsi, rdx);
+    rax = _strncpy(dst, src, n);
     return rax;
 }
 
@@ -128,8 +128,8 @@ function sub_100001c10() {
 }
 
 function imp___stubs___Unwind_Resume() {
-    rax = __Unwind_Resume();
-    return rax;
+    __Unwind_Resume(exception_object);
+    return;
 }
 
 function sub_100001f20() {

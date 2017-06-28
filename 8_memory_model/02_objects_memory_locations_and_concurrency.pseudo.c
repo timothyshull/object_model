@@ -202,22 +202,22 @@ function imp___stubs____cxa_begin_catch() {
 }
 
 function imp___stubs__memset() {
-    rax = _memset(rdi, rsi, rdx);
+    rax = _memset(b, c, len);
     return rax;
 }
 
 function imp___stubs__pthread_create() {
-    rax = _pthread_create(rdi, rsi, rdx, rcx);
+    rax = _pthread_create(thread, attr, start_routine, arg);
     return rax;
 }
 
 function imp___stubs__pthread_getspecific() {
-    rax = _pthread_getspecific(rdi);
+    rax = _pthread_getspecific(key);
     return rax;
 }
 
 function imp___stubs__pthread_setspecific() {
-    rax = _pthread_setspecific(rdi, rsi);
+    rax = _pthread_setspecific(key, value);
     return rax;
 }
 
@@ -242,8 +242,8 @@ function sub_1000013b0() {
 }
 
 function imp___stubs___Unwind_Resume() {
-    rax = __Unwind_Resume();
-    return rax;
+    __Unwind_Resume(exception_object);
+    return;
 }
 
 function sub_100001e10() {
