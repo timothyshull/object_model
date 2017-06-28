@@ -1,7 +1,7 @@
 struct P3 {
-    double _x;
-    double _y;
-    double _z;
+    double x;
+    double y;
+    double z;
 };
 
 int main()

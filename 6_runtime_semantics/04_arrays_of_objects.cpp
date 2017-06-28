@@ -5,7 +5,7 @@ struct P {
 
 int main()
 {
-    P pa1[10] = {P{}, P{1.0, 1.0}, static_cast<float>(-1.0)};
+    P pa1[10] = {P{}, P{1.0, 1.0}, static_cast<double>(-1)};
     P pa2[10];
     return 0;
 }

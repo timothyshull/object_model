@@ -20,11 +20,11 @@ typedef struct _X {
 } X;
 
 typedef struct _Y {
-    X primary_base;
+    X __primary_base;
 } Y;
 
 typedef struct _Z {
-    X primary_base;
+    X __primary_base;
 } Z;
 
 void func(void *x)
@@ -52,14 +52,14 @@ X *XConstructor(X *this)
 Y *YConstructor(Y *this)
 {
     XConstructor((X *) this);
-    this->primary_base.__vptr = __vtable_Y;
+    this->__primary_base.__vptr = __vtable_Y;
     return this;
 }
 
 Z *ZConstructor(Z *this)
 {
     XConstructor((X *) this);
-    this->primary_base.__vptr = __vtable_Z;
+    this->__primary_base.__vptr = __vtable_Z;
     return this;
 }
 

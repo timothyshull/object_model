@@ -52,24 +52,24 @@ class D : public B, public C {};
 // example 5
 class P1 {
 private:
-    float _x;
+    double _x;
     static std::vector<P1 *> &_free_list;
-    float _y;
+    double _y;
     static const int _chunk_size = 250;
-    float _z;
+    double _z;
 };
 
 // can be reordered -> most likely won't be to adhere to ABI
 // requirements
 class P2 {
 private:
-    float _x;
+    double _x;
     static std::vector<P2 *> &_free_list;
 private:
-    float _y;
+    double _y;
     static const int _chunk_size = 250;
 private:
-    float _z;
+    double _z;
 };
 
 int main() {

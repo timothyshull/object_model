@@ -11,9 +11,12 @@ void func1(Selector v)
     A a{};
 
     switch (v) {
-        case Selector::a:;
-        case Selector::b:;
-        case Selector::c:;
+        case Selector::a:
+            return;
+        case Selector::b:
+            return;
+        case Selector::c:
+            return;
     }
 }
 

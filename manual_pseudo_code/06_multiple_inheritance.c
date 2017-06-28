@@ -1,75 +1,57 @@
-#include <cmath>
+#include <math.h>
+#include <memory.h>
 
-struct P1 {
+typedef struct _P1 {
     double x;
-};
+} P1;
 
-struct P2 {
+typedef struct _P2 {
     double y;
-};
+} P2;
 
-struct P3 : public P1, public P2 {
+typedef struct _P3 {
+    P1 base1;
+    P2 base2;
     double z;
-};
+} P3;
 
-double func1(const P1 &p)
+// NOTE: default constructor, copy constructor, and move constructors
+// are generated but removed
+
+double func1(const P1 *arg0)
 {
-return p.x * p.x;
+    double __temp0 = *(double *) (arg0);
+    double __temp1 = __temp0 * *(double *) (arg0);
+    return __temp1;
 }
 
-double func2(const P2 &p)
+double func2(const P2 *arg0)
 {
-return p.y * p.y;
+    double __temp0 = *(double *) (arg0);
+    double __temp1 = __temp0 * *(double *) arg0;
+    return __temp1;
 }
 
-double func3(const P3 &p)
+double func3(const P3 *arg0)
 {
-return std::sqrt(func1(p) + func2(p));
+    func1((const P1 *) arg0);
+    double __temp0 = *(double *) arg0;
+    double __temp1 = func2((const P2 *) ((void *) arg0 + 0x8));
+    __temp0 = sqrt(__temp0 + __temp1);
+    return __temp0;
 }
 
 int main()
 {
-    P3 p3{};
-    P2 *pv = &p3;
+    P3 p3;
+    memset(&p3, 0x0, 0x18);
+    P2 *__temp0 = NULL;
+    if (&p3 != NULL) {
+        __temp0 = (void *) &p3 + 0x8;
+    }
+    P2 *pv = __temp0;
 
-    auto v = func3(p3);
+    // NOTE: the semantics here are slightly off
+    double v = func3(&p3);
     return 0;
 }
-
-
-
-
-int _main() {
-    memset(&var_20, 0x0, 0x18);
-    var_50 = 0x0;
-    if (&var_20 != 0x0) {
-        var_50 = &var_20 + 0x8;
-    }
-    func3(&var_20);
-    intrinsic_movsd(var_30, xmm0);
-    return 0x0;
-}
-
-function __Z5func1RK2P1() {
-    intrinsic_mulsd(intrinsic_movsd(xmm0, *arg0), *arg0);
-    return rax;
-}
-
-function __Z5func2RK2P2() {
-    intrinsic_mulsd(intrinsic_movsd(xmm0, *arg0), *arg0);
-    return rax;
-}
-
-function __Z5func3RK2P3() {
-    func1(arg0);
-    var_10 = intrinsic_movsd(var_10, xmm0);
-    rax = func2(arg0 + 0x8);
-    intrinsic_sqrtsd(xmm0, intrinsic_addsd(intrinsic_movsd(xmm1, var_10), xmm0));
-    return rax;
-}
-
-function imp___stubs__memset() {
-    rax = _memset(rdi, rsi, rdx);
-    return rax;
-}
-

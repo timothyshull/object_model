@@ -17,10 +17,6 @@ add_executable(03_static_member_functions_manual 03_static_member_functions.c)
 add_executable(05_virtual_functions_under_virtual_inheritance_manual 05_virtual_functions_under_virtual_inheritance.c)
 add_executable(07_inline_functions_manual 07_inline_functions.c)
 
-# Ch 5
-add_executable(05_object_copy_semantics_manual 05_object_copy_semantics.c)
-add_executable(06_object_move_semantics_manual 06_object_move_semantics.c)
-
 # Ch 6
 add_executable(01_object_construction_and_destruction_manual 01_object_construction_and_destruction.c)
 add_executable(04_arrays_of_objects_manual 04_arrays_of_objects.c)

@@ -1,61 +1,36 @@
-class P3 {
-public:
-    P3() : _x{0.0}, _y{0.0}, _z{0.0}
-    {
-        ++_object_count;
-    }
+typedef struct _P3 {
+    double _x;
+    double _y;
+    double _z;
+} P3;
 
-    static unsigned long object_count();
+// NOTE: accessed as an address to global storage
+unsigned long P3_object_count = 0;
 
-private:
-    float _x;
-    float _y;
-    float _z;
-    static unsigned long _object_count;
-};
-
-unsigned long P3::_object_count = 0;
-
-unsigned long P3::object_count()
+// NOTE: different underlying type and semantics
+unsigned long P3object_count()
 {
-    return _object_count;
+    return P3_object_count;
+}
+
+P3 *P3Constructor(P3 *this)
+{
+    *(double *) this = 0.;
+    *(double *) ((void *) this + 0x8) = 0.;
+    *(double *) ((void *) this + 0x10) = 0.;
+    P3_object_count = P3_object_count + 0x1;
+    return this;
 }
 
 int main()
 {
-    P3 p3_1{};
-    P3 p3_2{};
-    P3 p3_3{};
+    P3 p3_1;
+    P3Constructor(&p3_1);
+    P3 p3_2;
+    P3Constructor(&p3_2);
+    P3 p3_3;
+    P3Constructor(&p3_3);
 
-    const auto oc = P3::object_count();
-    return 0;
-}
-
-
-
-
-int _main() {
-    P3::P3();
-    P3::P3();
-    P3::P3();
-    P3::object_count();
+    const unsigned long oc = P3object_count();
     return 0x0;
 }
-
-function __ZN2P312object_countEv() {
-    return *P3::_object_count;
-}
-
-function __ZN2P3C1Ev() {
-    rax = P3::P3();
-    return rax;
-}
-
-function __ZN2P3C2Ev() {
-    *(int32_t *)rdi = intrinsic_movss(*(int32_t *)rdi, 0x0);
-    *(int32_t *)(rdi + 0x4) = intrinsic_movss(*(int32_t *)(rdi + 0x4), 0x0);
-    *(int32_t *)(rdi + 0x8) = intrinsic_movss(*(int32_t *)(rdi + 0x8), 0x0);
-    *P3::_object_count = *P3::_object_count + 0x1;
-    return rax;
-}
-

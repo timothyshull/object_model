@@ -8,9 +8,9 @@ public:
     static unsigned long object_count();
 
 private:
-    float _x;
-    float _y;
-    float _z;
+    double _x;
+    double _y;
+    double _z;
     static unsigned long _object_count;
 };
 

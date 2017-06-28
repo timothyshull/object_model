@@ -1,88 +1,37 @@
-#include <ostream>
-
-// value in this example is that add is not dependent on the internal representation (whereas op+ is) but does
-// not incur function call overhead due to inlined functions
-class P {
-public:
-    P(double x, double y) : _x{x}, _y{y} {}
-
-    P() = default;
-
-    ~P() = default;
-
-    double x() const
-    {
-        return _x;
-    }
-
-    void x(double x)
-    {
-        _x = x;
-    }
-
-    double y() const
-    {
-        return _y;
-    }
-
-    void y(double y)
-    {
-        _y = y;
-    }
-
-private:
+typedef struct _P {
     double _x;
     double _y;
+} P;
 
-    friend
-    P operator+(const P & lhs, const P & rhs);
-};
+P *PConstructor(P *this, const double arg0, const double arg1) {
+    *(double *)(this) = arg0;
+    *(double *)((void *)this + 0x8) = arg0;
+    return this;
+}
 
-P operator+(const P &lhs, const P &rhs)
+void P_set_x(P *this, const double arg0) {
+    *(double *)(this) = arg0;
+}
+
+double P_get_x(P *this) {
+    return *(double *)(this);
+}
+
+void P_set_y(P *this, const double arg0) {
+    *(double *)((void *)this + 0x8) = arg0;
+}
+
+double P_get_y(P *this) {
+    return *(double *)((void *)this + 0x8);
+}
+
+P operator_plus(P *this, const P *lhs, const P *rhs)
 {
     P new_pt{};
     new_pt._x = lhs._x + rhs._x;
     new_pt._y = lhs._y + rhs._y;
     return new_pt;
-}
 
-P add(const P &lhs, const P &rhs)
-{
-    P new_pt{};
-    new_pt.x(lhs.x() + rhs.x());
-    new_pt.y(lhs.y() + rhs.y());
-    return new_pt;
-}
-
-int main()
-{
-    P pt1{1.0, 1.0};
-    P pt2{2.0, 2.0};
-
-    auto pt3 = pt1 + pt2;
-    auto pt4 = add(pt1, pt2);
-    return 0;
-}
-
-
-
-
-
-int _main() {
-    xmm0 = intrinsic_movsd(xmm0, *0x100000fb0);
-    P::P(xmm0, intrinsic_movsd(xmm1, intrinsic_movsd(var_50, xmm0)));
-    xmm0 = intrinsic_movsd(xmm0, *0x100000fa8);
-    P::P(xmm0, intrinsic_movsd(xmm1, intrinsic_movsd(var_58, xmm0)));
-    operator+(&var_18, &var_28);
-    intrinsic_movsd(var_38, xmm0);
-    intrinsic_movsd(var_30, xmm1);
-    add(&var_18, &var_28);
-    intrinsic_movsd(var_48, xmm0);
-    intrinsic_movsd(var_40, xmm1);
-    return 0x0;
-}
-
-function __ZplRK1PS1_() {
     var_10 = intrinsic_movaps(var_10, 0x0);
     xmm0 = intrinsic_movsd(0x0, *arg0);
     xmm1 = intrinsic_movsd(xmm1, *arg1);
@@ -96,74 +45,40 @@ function __ZplRK1PS1_() {
     return rax;
 }
 
-function __Z3addRK1PS1_() {
-    var_10 = intrinsic_movaps(var_10, 0x0);
-    P::x(arg0);
-    var_28 = intrinsic_movsd(var_28, 0x0);
-    P::x();
-    intrinsic_movaps(0x0, intrinsic_addsd(intrinsic_movsd(xmm1, var_28), 0x0));
-    P::x();
-    P::y(arg0);
-    var_38 = intrinsic_movsd(var_38, xmm0);
-    P::y();
-    xmm0 = intrinsic_movaps(xmm0, intrinsic_addsd(intrinsic_movsd(xmm1, var_38), xmm0));
-    rax = P::y();
-    intrinsic_movsd(xmm0, var_10);
-    intrinsic_movsd(xmm1, var_8);
-    return rax;
+P add(const P &lhs, const P &rhs)
+{
+    P new_pt{};
+    new_pt.x(lhs.x() + rhs.x());
+    new_pt.y(lhs.y() + rhs.y());
+    return new_pt;
+
+
+var_10 = intrinsic_movaps(var_10, 0x0);
+P::x(arg0);
+var_28 = intrinsic_movsd(var_28, 0x0);
+P::x();
+intrinsic_movaps(0x0, intrinsic_addsd(intrinsic_movsd(xmm1, var_28), 0x0));
+P::x();
+P::y(arg0);
+var_38 = intrinsic_movsd(var_38, xmm0);
+P::y();
+xmm0 = intrinsic_movaps(xmm0, intrinsic_addsd(intrinsic_movsd(xmm1, var_38), xmm0));
+rax = P::y();
+intrinsic_movsd(xmm0, var_10);
+intrinsic_movsd(xmm1, var_8);
+return rax;
 }
 
-function __ZN1P1xEd() {
-    *rdi = intrinsic_movsd(*rdi, intrinsic_movsd(arg0, intrinsic_movsd(var_10, arg0)));
-    return rax;
-}
+int main() {
+    P pt1;
+    PConstructor(&pt1, 1., 1.);
+    P pt2;
+    PConstructor(&pt2, 2., 2.);
 
-function __ZNK1P1xEv() {
-    intrinsic_movsd(xmm0, *rdi);
-    return rax;
-}
+    P pt3;
+    operator_plus(&pt3, &pt1, &pt2);
 
-function __ZN1P1yEd() {
-    *(rdi + 0x8) = intrinsic_movsd(*(rdi + 0x8), intrinsic_movsd(arg0, intrinsic_movsd(var_10, arg0)));
-    return rax;
+    P pt4;
+    add(&pt4, &pt1, &pt2);
+    return 0x0;
 }
-
-function __ZNK1P1yEv() {
-    intrinsic_movsd(xmm0, *(rdi + 0x8));
-    return rax;
-}
-
-function __ZN1PC1Edd() {
-    rax = P::P(intrinsic_movsd(arg0, intrinsic_movsd(var_10, arg0)), intrinsic_movsd(arg1, intrinsic_movsd(var_18, arg1)));
-    return rax;
-}
-
-function __ZN1PC2Edd() {
-    var_10 = intrinsic_movsd(var_10, arg0);
-    var_18 = intrinsic_movsd(var_18, arg1);
-    xmm0 = intrinsic_movsd(arg0, var_10);
-    *rdi = intrinsic_movsd(*rdi, xmm0);
-    *(rdi + 0x8) = intrinsic_movsd(*(rdi + 0x8), intrinsic_movsd(xmm0, var_18));
-    return rax;
-}
-
-function imp___stubs___ZN1P1xEd() {
-    rax = P::x(xmm0);
-    return rax;
-}
-
-function imp___stubs___ZN1P1yEd() {
-    rax = P::y(xmm0);
-    return rax;
-}
-
-function imp___stubs___ZNK1P1xEv() {
-    rax = P::x();
-    return rax;
-}
-
-function imp___stubs___ZNK1P1yEv() {
-    rax = P::y();
-    return rax;
-}
-

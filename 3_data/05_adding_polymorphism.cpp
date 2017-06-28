@@ -1,3 +1,4 @@
+// example 1
 class P2 {
 public:
     P2(double x, double y) : _x{x}, _y{y} {};
@@ -41,10 +42,7 @@ protected:
     double _y = 0.0;
 };
 
-void func1(P2 &p1, P2 &p2)
-{
-    p1 += p2;
-}
+
 
 class P3 : public P2 {
 public:
@@ -70,6 +68,12 @@ protected:
     double _z;
 };
 
+void f(P2 &p1, P2 &p2)
+{
+    p1 += p2;
+}
+
+// example 2
 struct C {
     int d1;
     int d2;
@@ -77,7 +81,7 @@ struct C {
 
 class V : public C {
 public:
-    virtual void foo() {}
+    virtual void m() {}
     // ...
 private:
     int d3;
@@ -85,6 +89,11 @@ private:
 
 int main()
 {
+    // example 1
+    P3 p3_1{1.0, 1.0, 1.0};
+    P3 p3_2{2.0, 2.0, 2.0};
+    f(p3_1, p3_2);
+
     C *p = new V;
     return 0;
 }

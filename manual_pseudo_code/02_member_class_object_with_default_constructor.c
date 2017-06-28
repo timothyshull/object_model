@@ -42,9 +42,9 @@ Z *ZConstructor(Z *this)
 Xyz *XyzConstructor(Xyz *this)
 {
     *(int32_t *) this = 0x800; // equivalent to assigning to _v
-    XConstructor((X *) ((void *)this + 0x4));
-    YConstructor((Y *) ((void *)this + 0x8), 0x400);
-    ZConstructor((Z *) ((void *)this + 0x10));
+    XConstructor((X *) ((void *) this + 0x4));
+    YConstructor((Y *) ((void *) this + 0x8), 0x400);
+    ZConstructor((Z *) ((void *) this + 0x10));
     return this;
 }
 
