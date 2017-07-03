@@ -2,6 +2,7 @@
 
 // value in this example is that add is not dependent on the internal representation (whereas op+ is) but does
 // not incur function call overhead due to inlined functions
+// NOTE: getters and setters will not be inlined until -O2
 class P {
 public:
     P(double x, double y) : _x{x}, _y{y} {}

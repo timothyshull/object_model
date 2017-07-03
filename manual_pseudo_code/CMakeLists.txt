@@ -25,4 +25,3 @@ add_executable(08_temporary_objects_manual 08_temporary_objects.c)
 
 # memory model
 add_executable(02_objects_memory_locations_and_concurrency_manual 02_objects_memory_locations_and_concurrency.c)
-add_executable(03_atomic_operations_and_types_manual 03_atomic_operations_and_types.c)

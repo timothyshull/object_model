@@ -1,12 +1,12 @@
-#ifdef USE_EXCEPTIONS
+#ifdef NDEBUG
 #include <exception>
 #endif
 
-// #define USE_EXCEPTIONS
+// #define NDEBUG
 
 int func1(bool b);
 
-#ifdef USE_EXCEPTIONS
+#ifdef NDEBUG
 struct Error_t : public std::exception {
     const char *what() const noexcept { return "Error_t\n"; };
 };
@@ -14,11 +14,11 @@ struct Error_t : public std::exception {
 
 void func2(bool b)
 {
-#ifdef USE_EXCEPTIONS
+#ifdef NDEBUG
     try {
 #endif
         auto result = func1(b);
-#ifdef USE_EXCEPTIONS
+#ifdef NDEBUG
     }
     catch (Error_t &e) {
         const auto w = e.what();
@@ -31,7 +31,7 @@ int func1(bool b)
     if (b) {
         return 10;
     } else {
-#ifdef USE_EXCEPTIONS
+#ifdef NDEBUG
         throw Error_t{};
 #else
         return -1;

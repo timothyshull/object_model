@@ -5,7 +5,7 @@ typedef struct _X {
     int32_t x;
 } X;
 
-X *XConstructorInt(X *this, int32_t i) {
+X *XConstructori(X *this, int32_t i) {
     *(int32_t *)this = i;
     return this;
 }
@@ -28,10 +28,10 @@ void func(X x)
 // NOTE: additional internal operations here (copy ctor, implicit casts, etc)
 int main() {
     X x1;
-    XConstructorInt(&x1, 0xA);
+    XConstructori(&x1, 0xA);
     func(x1);
     X __temp0;
-    XConstructorInt(&__temp0, 0xA);
+    XConstructori(&__temp0, 0xA);
     func(__temp0);
 
     X x2;

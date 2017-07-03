@@ -1,14 +1,18 @@
-struct A {
-    A() {}
+struct P {
+    double x;
+    double y;
+    double z;
 
-    ~A() {}
+    P(double a, double b, double c) : x{a}, y{b}, z{c} {}
+
+    ~P() {}
 };
 
 enum class Selector { a, b, c };
 
 void func1(Selector v)
 {
-    A a{};
+    P a{0., 0., 0.};
 
     switch (v) {
         case Selector::a:
@@ -23,7 +27,7 @@ void func1(Selector v)
 int main()
 {
     {
-        A a{};
+        P a{0., 0., 0.};
     }
     func1(Selector::a);
     func1(Selector::b);

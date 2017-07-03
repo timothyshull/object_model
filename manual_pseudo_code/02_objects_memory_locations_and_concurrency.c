@@ -1,8 +1,19 @@
-#include <atomic>
-#include <thread>
-#include <string>
+#include <mach/mach_traps.h>
+#include <memory.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+#include <stdatomic.h>
 
-struct D {
+#define NO_EXCEPTIONS
+
+typedef pthread_t __libcpp_thread_t;
+
+typedef struct _stdthread {
+    __libcpp_thread_t __t;
+} stdthread;
+
+typedef struct _D {
     int i;
     double d;
     unsigned bf1:10;
@@ -12,295 +23,218 @@ struct D {
     int i2;
     char c1;
     char c2;
-    std::string s;
-};
-std::atomic<D *> ptr{nullptr};
+    // NOTE: std::string s simplified for exposition, see 02_objects_memory_locations_and_concurrency_layout.txt ln 594
+    char *s;
+
+} D;
+
+D *DConstructor(D *this)
+{
+    memset((void *) this + 0x28, 0x0, 0x18);
+    void *__temp0 = (void *) this + 0x28;
+    int __temp1;
+    for (int __temp2 = 0x0; __temp2 < 0x3; __temp2 = __temp1) {
+        *((char *) (__temp0 + __temp2 * 0x8)) = 0x0;
+        __temp1 = __temp2 + 0x1;
+    }
+    return this;
+}
+
+//typedef struct _AtomicD {
+//    D *__a;
+//} AtomicD;
+
+typedef _Atomic (D *) AtomicDPtr;
+AtomicDPtr ptr = NULL;
+
+typedef void (*terminate_handler)();
+
+void default_terminate_handler()
+{
+    abort();
+}
+
+static terminate_handler __terminate_handler = default_terminate_handler;
+
+terminate_handler get_terminate()
+{
+    return __terminate_handler;
+}
+
+void __cxa_new_handler()
+{
+    fprintf(stderr, "bad malloc");
+    abort();
+}
+
+void *get_new_handler()
+{
+    // synchronize access with mfence instruction
+    return (void *) __cxa_new_handler;
+}
+
+// see libcxxabi/src/cxa_exception.cpp
+// void __cxa_throw(void *thrown_object, std::type_info *tinfo, void (*dest)(void *));
+
+void __cxa_throw()
+{
+    fprintf(stderr, "__cxa_throw");
+    abort();
+}
+
+void *operator_new(unsigned long arg0)
+{
+    void *eax;
+    unsigned long edi = 0x1;
+    if (arg0 != 0x0) {
+        edi = arg0;
+    }
+    goto loc_a;
+
+    loc_a:
+    eax = malloc(edi);
+    if (eax != 0x0) {
+        goto loc_d;
+    }
+
+    loc_b:
+    eax = get_new_handler();
+    if (eax != 0x0) {
+        goto loc_e;
+    }
+
+    loc_c:
+    __cxa_throw();
+    return eax;
+
+    loc_d:
+    return eax;
+
+    loc_e:
+    ((void (*)()) eax)();
+    goto loc_a;
+}
+
+void operator_delete(void *arg0)
+{
+    void *__temp1 = arg0;
+    if (__temp1 != NULL) {
+        free(arg0);
+    }
+}
+
+int sched_yield()
+{
+    swtch_pri(0);
+    return 0;
+}
+
+// simplified and hard coded for exposition
+int stdbasic_string_char_assign(char **this, const char *arg1)
+{
+    *this = (char *) malloc(0x6);
+    return (int) memcpy(*this, arg1, 0x6);
+}
 
 void producer()
 {
-    D *p = new D;
-    p->s = "Hello";
-    ptr.store(p, std::memory_order_release);
+    D *p = (D *) operator_new(0x40);
+    DConstructor(p);
+    int *__temp0 = (int *) ((void *) p);
+    stdbasic_string_char_assign((char **) ((void *) p + 0x28), "Hello");
+    atomic_store_explicit(&ptr, p, memory_order_release);
 }
 
 void consumer()
 {
-    D *p2 = nullptr;
-    while (!(p2 = ptr.load(std::memory_order_acquire))) {
-        std::this_thread::yield();
-    }
-}
-
-int main()
-{
-    std::thread t1{producer};
-    std::thread t2{consumer};
-    t1.join();
-    t2.join();
-    return 0;
-}
-
-
-
-
-
-
-int _main() {
-    std::__1::thread::thread<void (&var_10, producer());
-    std::__1::thread::thread<void (&var_18, consumer());
-    std::__1::thread::join(&var_10);
-    std::__1::thread::join(&var_18);
-    std::__1::thread::~thread(&var_18);
-    std::__1::thread::~thread(&var_10);
-    rax = 0x0;
-    return rax;
-}
-
-function __Z8producerv() {
-    var_40 = operator new(0x40);
-    D::D();
-    std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::assign(var_40 + 0x28, "Hello");
-    var_20 = var_40;
-    var_58 = &var_20;
-    if (0x1 == 0x0) {
-        rax = 0xfffffffffffffffe;
-        if (rax != 0x0) {
-            rax = var_58;
-            *_ptr = *rax;
-        }
-        else {
-            rax = var_58;
-            *_ptr = intrinsic_xchg(*_ptr, *rax);
-        }
-    }
-    else {
-        rax = var_58;
-        *_ptr = *rax;
-    }
-    return rax;
-}
-
-function __ZN1DC1Ev() {
-    rax = D::D();
-    return rax;
-}
-
-function __Z8consumerv() {
+    D *p2 = 0x0;
     do {
-        var_30 = &var_18;
-        if (0x1 == 0x0) {
-            rax = 0xfffffffffffffffd;
-            if (rax != 0x0) {
-                *var_30 = *_ptr;
-            }
-            else {
-                *var_30 = *_ptr;
-            }
-        }
-        else {
-            *var_30 = *_ptr;
-        }
-        rax = var_18;
-        if ((((rax != 0x0 ? 0x1 : 0x0) ^ 0xff) & 0x1) == 0x0) {
+        D *__temp1 = atomic_load_explicit(&ptr, memory_order_acquire);
+        if ((((__temp1 != NULL ? 0x1 : 0x0) ^ 0xff) & 0x1) == 0x0) {
+            p2 = __temp1;
             break;
         }
         sched_yield();
-    } while (true);
-    return rax;
+    } while (0x1);
 }
 
-function __ZNSt3__16threadC1IRFvvEJEvEEOT_DpOT0_() {
-    rax = std::__1::thread::thread<void (arg0, arg1);
-    return rax;
+static void *__thread_proxy(void *arg0)
+{
+    void (*__temp0)() = (void (*)()) (arg0);
+    (__temp0)();
+    return 0x0;
 }
 
-function __ZN1DC2Ev() {
-    rax = memset(rdi + 0x28, 0x0, 0x18);
-    var_20 = rdi + 0x28;
-    for (var_24 = 0x0; var_24 < 0x3; var_24 = rax) {
-        *(var_20 + var_24 * 0x8) = 0x0;
-        rax = var_24 + 0x1;
+void __throw_system_error(int ev, const char *what_arg)
+{
+#ifndef NO_EXCEPTIONS
+    throw system_error(error_code(ev, system_category()), what_arg);
+#else
+    (void) ev;
+    (void) what_arg;
+    abort();
+#endif
+}
+
+// simplified for exposition
+stdthread *stdthreadConstructorVoid(stdthread *this, void (*arg1)(void))
+{
+    void *__temp0 = operator_new(0x8);
+    // NOTE: the constructor here is much more complex than this
+    // uses __thread_proxy and __thread_struct to manage thread local data
+    int __temp1 = pthread_create((pthread_t *) __temp0, 0x0, __thread_proxy, arg1);
+    int __temp2 = -24;
+    if (__temp1 == 0x0) {
+        *(pthread_t *) this = *(pthread_t *) __temp0;
+        __temp2 = 0x0;
+    } else {
+        __throw_system_error(__temp1, "thread constructor failed");
     }
-    return rax;
-}
-
-function ___clang_call_terminate() {
-    __cxa_begin_catch();
-    std::terminate();
-    return;
-}
-
-function __ZNSt3__16threadC2IRFvvEJEvEEOT_DpOT0_() {
-    rax = operator new(0x8, arg1);
-    *rax = arg1;
-    var_278 = rax;
-    var_2AC = pthread_create(arg0, 0x0, void* std::__1::__thread_proxy<std::__1::tuple<void (*)()> >(void*), var_278);
-    var_290 = var_2AC;
-    if (var_290 == 0x0) {
-        var_278 = 0x0;
-    }
-    else {
-        std::__1::__throw_system_error(var_290, "thread constructor failed");
-    }
-    rax = &var_278;
-    var_248 = *rax;
-    *rax = 0x0;
-    var_2C8 = rax;
-    if (var_248 != 0x0) {
-        rax = var_2C8;
-        var_2D0 = var_248;
-        if (var_248 != 0x0) {
-            rax = operator delete(var_2D0);
+    if (__temp2 != 0x0) {
+        if (this != 0x0) {
+            operator_delete(__temp0);
         }
     }
-    return rax;
+    return this;
 }
 
-function __ZNSt3__114__thread_proxyINS_5tupleIJPFvvEEEEEEPvS5_() {
-    var_190 = arg0;
-    var_1B8 = std::__1::__thread_local_data(arg0);
-    rax = operator new(0x8);
-    var_1C8 = rax;
-    std::__1::__thread_struct::__thread_struct(rax);
-    std::__1::__thread_specific_ptr<std::__1::__thread_struct>::reset(var_1B8, var_1C8);
-    var_1A8 = var_138;
-    (*var_1A8)(&var_138, &var_1A8, var_178, *var_1A8, var_190);
-    var_90 = var_1A8;
-    var_1A8 = 0x0;
-    var_1D8 = &var_1A8;
-    if (var_90 != 0x0) {
-        var_1E0 = var_90;
-        if (var_90 != 0x0) {
-            operator delete(var_1E0);
-        }
+int stdthreadJoin(stdthread *arg0)
+{
+    int __temp0 = pthread_join(*(pthread_t *) arg0, 0x0);
+    if (__temp0 == 0x0) {
+        *(pthread_t *) arg0 = 0x0;
+    } else {
+        // allocate system_error and throw with __cxa_throw
+        __cxa_throw();
+    }
+    return __temp0;
+}
+
+void terminate()
+{
+    (*get_terminate())();
+    fprintf(stderr, "terminate_handler unexpectedly returned\n");
+    abort();
+}
+
+stdthread *stdthreadDestructor(stdthread *arg0)
+{
+    if (*(pthread_t *) arg0 != 0x0) {
+        terminate();
     }
     return 0x0;
 }
 
-function __ZNSt3__121__thread_specific_ptrINS_15__thread_structEE5resetEPS1_() {
-    var_20 = pthread_getspecific(*arg0);
-    rax = pthread_setspecific(*arg0, rsi);
-    var_38 = var_20;
-    if (var_20 != 0x0) {
-        std::__1::__thread_struct::~__thread_struct(var_38);
-        rax = operator delete(var_38);
-    }
-    return rax;
+// NOTE: thread is a wrapper for __libcpp_thread_t which is a typedef for pthread_t on mac
+int main()
+{
+    stdthread t1;
+    stdthreadConstructorVoid(&t1, producer);
+    stdthread t2;
+    stdthreadConstructorVoid(&t2, consumer);
+    stdthreadJoin(&t1);
+    stdthreadJoin(&t2);
+    stdthreadDestructor(&t1);
+    stdthreadDestructor(&t2);
+    return 0x0;
 }
-
-function imp___stubs___ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc() {
-    rax = std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::assign();
-    return rax;
-}
-
-function imp___stubs___ZNSt3__115__thread_structC1Ev() {
-    rax = std::__1::__thread_struct::__thread_struct();
-    return rax;
-}
-
-function imp___stubs___ZNSt3__115__thread_structD1Ev() {
-    rax = std::__1::__thread_struct::~__thread_struct();
-    return rax;
-}
-
-function imp___stubs___ZNSt3__119__thread_local_dataEv() {
-    rax = std::__1::__thread_local_data();
-    return rax;
-}
-
-function imp___stubs___ZNSt3__120__throw_system_errorEiPKc() {
-    rax = std::__1::__throw_system_error();
-    return rax;
-}
-
-function imp___stubs___ZNSt3__121__thread_specific_ptrINS_15__thread_structEE5resetEPS1_() {
-    rax = std::__1::__thread_specific_ptr<std::__1::__thread_struct>::reset(rdi);
-    return rax;
-}
-
-function imp___stubs___ZNSt3__16thread4joinEv() {
-    rax = std::__1::thread::join();
-    return rax;
-}
-
-function imp___stubs___ZNSt3__16threadD1Ev() {
-    rax = std::__1::thread::~thread();
-    return rax;
-}
-
-function imp___stubs___ZSt9terminatev() {
-    rax = std::terminate();
-    return rax;
-}
-
-function imp___stubs___ZdlPv() {
-    rax = operator delete();
-    return rax;
-}
-
-function imp___stubs___Znwm() {
-    rax = operator new();
-    return rax;
-}
-
-function imp___stubs____cxa_begin_catch() {
-    rax = ___cxa_begin_catch();
-    return rax;
-}
-
-function imp___stubs__memset() {
-    rax = _memset(rdi, rsi, rdx);
-    return rax;
-}
-
-function imp___stubs__pthread_create() {
-    rax = _pthread_create(rdi, rsi, rdx, rcx);
-    return rax;
-}
-
-function imp___stubs__pthread_getspecific() {
-    rax = _pthread_getspecific(rdi);
-    return rax;
-}
-
-function imp___stubs__pthread_setspecific() {
-    rax = _pthread_setspecific(rdi, rsi);
-    return rax;
-}
-
-function imp___stubs__sched_yield() {
-    rax = _sched_yield();
-    return rax;
-}
-
-function sub_100001310() {
-    *(int32_t *)(rbp + 0xffffffffffffffc0) = rdx;
-    ___clang_call_terminate();
-    return;
-}
-
-function sub_1000013b0() {
-    *(rbp + 0xffffffffffffffe0) = rax;
-    *(int32_t *)(rbp + 0xffffffffffffffdc) = rdx;
-    std::__1::thread::~thread(rbp + 0xffffffffffffffe8);
-    std::__1::thread::~thread(rbp + 0xfffffffffffffff0);
-    _Unwind_Resume(*(rbp + 0xffffffffffffffe0));
-    return;
-}
-
-function imp___stubs___Unwind_Resume() {
-    rax = __Unwind_Resume();
-    return rax;
-}
-
-function sub_100001e10() {
-    rsp = rsp - 0x8;
-    dyld_stub_binder();
-    return;
-}
-
-function sub_100001e60() {
-    loc_100001dd8();
-    return;
-}
-

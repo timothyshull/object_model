@@ -1,9 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-// TODO: review and fix after regeneration
-// TODO: be sure to address object layout
-
 void __cxa_new_handler()
 {
     fprintf(stderr, "bad malloc");
@@ -47,9 +44,6 @@ void *operator_new(unsigned long arg0)
     }
 
     loc_c:
-    // eax = __cxa_allocate_exception(0x4);
-    // *eax = 0x24108;
-    // eax = __cxa_throw(eax, typeinfo_bad_alloc, bad_allocDestructor);
     __cxa_throw();
     return eax;
 
@@ -61,139 +55,113 @@ void *operator_new(unsigned long arg0)
     goto loc_a;
 }
 
-struct P2 {
+void __cxa_pure_virtual(void *this)
+{
+    fprintf(stderr, "libc++abi.dylib: Pure virtual function called!\n");
+    abort();
+};
+
+typedef struct _P2 P2;
+
+// added for syntactic convenience
+typedef void (*pmethod)(P2 *, P2 *);
+
+typedef struct _P2 {
+    pmethod *__vptr;
     double _x;
     double _y;
-};
+} P2;
 
-void func1(P2 & p1, P2 & p2)
+void P2operator_plus_equal(P2 *this, P2 *arg0)
 {
-    p1 += p2;
+    double __temp0 = *((double *) (this + 0x8));
+    double __temp1 = *((double *) (arg0 + 0x8));
+    *((double *) (this + 0x8)) = __temp0 + __temp1;
+    __temp0 = *((double *) (this + 0x10));
+    __temp1 = *((double *) (arg0 + 0x10));
+    *((double *) (this + 0x10)) = __temp0 + __temp1;
 }
 
-class P3 :public P2 {
-    public:
-    P3(
-    double x,
-    double y,
-    double z) : P2
-    { x, y }, _z
-    { z }
-    {};
+void (*__vtable_P2[1])(P2 *, P2 *) = {P2operator_plus_equal};
 
-    double z() const
-    {
-        return _z;
-    }
+// TODO: need to fix this for double
+P2 *P2Constructordd(P2 *this, double arg0, double arg1)
+{
+    *((pmethod *) this) = (void *) __vtable_P2;
+    *((double *) ((void *) this + 0x8)) = arg0;
+    *((double *) ((void *) this + 0x10)) = arg1;
+    return this;
+}
 
-    void z(double z)
-    {
-        _z = z;
-    }
-
-    void operator+=(const P2
-    &rhs)
-    {
-        P2::operator += (rhs);
-        _z += rhs.z();
-    }
-
-    protected:
+typedef struct _P3 {
+    P2 primary_base;
     double _z;
-};
+} P3;
 
-struct C {
+void P3operator_plus_equal(P2 *this, P2 *arg0)
+{
+    P2operator_plus_equal(this, arg0);
+    double __temp0 = *((double *) (this + 0x18));
+    double __temp1 = *((double *) (arg0 + 0x18));
+    *((double *) (this + 0x18)) = __temp0 + __temp1;
+}
+
+void (*__vtable_P3[1])(P2 *, P2 *) = {P3operator_plus_equal};
+
+P3 *P3Constructorddd(P3 *this, double arg0, double arg1, double arg2)
+{
+    P2Constructordd((P2 *) this, arg0, arg1);
+    *((pmethod *) this) = (void *) __vtable_P3;
+    *((double *) ((void *) this + 0x18)) = arg2;
+    return this;
+}
+
+void f(P2 *arg0, P2 *arg1)
+{
+    (*(*(pmethod **) arg0))(arg0, arg1);
+}
+
+// added for syntactic convenience
+typedef void (*vmethod)(void *);
+
+typedef struct _C {
     int d1;
     int d2;
-};
+} C;
 
-class V :public C {
-    public:
-    virtual void foo() {}
-    // ...
-    private:
+typedef struct _V {
+    vmethod *__vptr;
+    C base;
     int d3;
-};
+} V;
 
-int main()
+void Vm(void *this) {}
+
+void (*__vtable_V[1])(void *) = {Vm};
+
+V *VConstructor(V *this)
 {
-    C * p = new
-    V;
-    return 0;
+    *((vmethod *) this) = (void *) __vtable_V;
+    return this;
 }
 
 int main()
 {
-    void *__temp0 = operator_new(0x18);
-    VConstructor((V * )
-    __temp0);
-    var_20 = 0x0;
-    if (var_18 != 0x0) {
-        var_20 = var_18 + 0x8;
-    }
+    P3 p3_1;
+    P3Constructorddd(&p3_1, 1.0, 1.0, 1.0);
+    P3 p3_2;
+    P3Constructorddd(&p3_2, 2.0, 2.0, 2.0);
+    f((P2 *) &p3_1, (P2 *) &p3_2);
 
-    var_4 = 0x0;
-    rax = operator
-    new(LODWORD(0x18));
-    rdi = rax;
-    var_18 = rax;
-    rax = V::V();  // C1Ev
-    var_20 = LODWORD(0x0);
-    if (var_18 != 0x0) {
-        var_20 = var_18 + 0x8;
+    C *p;
+    void *__temp0 = operator_new(0x18);
+    void *__temp1 = __temp0;
+    __temp0 = VConstructor(__temp0);
+    void *__temp2 = 0x0;
+    if (__temp0 != 0x0) {
+        __temp2 = __temp1 + 0x8;
     }
-    var_10 = var_20;
-    LODWORD(rax) = LODWORD(0x0);
-    rsp = rsp + 0x28;
-    rbp = stack[2047];
-    return rax;
+    p = __temp2;
+    __temp0 = NULL;
     return 0x0;
 }
-
-int __ZN1VC1Ev()
-{
-    rdi = rdi;
-    rax = V::V(); // C2Ev
-    rsp = rsp + 0x18;
-    rbp = stack[2047];
-    return rax;
-}
-
-int __ZN1VC2Ev()
-{
-    *rdi = 0x100001030;
-    rsp = rsp + 0x8;
-    rbp = stack[2047];
-    return 0x100001030;
-}
-
-function __Z5func1R2P2S0_()
-{
-    rax = (*(*arg0 + 0x10))(arg0, arg1);
-    return rax;
-}
-
-function __ZN1VC1Ev()
-{
-    rax = V::V();
-    return rax;
-}
-
-function __ZN1VC2Ev()
-{
-    *rdi = 0x100001030;
-    return 0x100001030;
-}
-
-function __ZN1V3fooEv()
-{
-    return rax;
-}
-
-function imp___stubs___Znwm()
-{
-    rax = operator
-    new();
-    return rax;
-}
-

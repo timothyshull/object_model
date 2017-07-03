@@ -41,4 +41,4 @@ add_subdirectory(8_memory_model)
 
 add_subdirectory(9_profiling)
 
-# add_subdirectory(manual_pseudo_code)
+add_subdirectory(manual_pseudo_code)

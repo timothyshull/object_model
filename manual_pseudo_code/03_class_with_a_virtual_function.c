@@ -27,9 +27,9 @@ typedef struct _Z {
     X __primary_base;
 } Z;
 
-void func(void *x)
+void func(void *arg0)
 {
-    return ((X *) x)->__vptr[0](x);
+    return (*(*(method **) arg0))(arg0);
 }
 
 void Ym1(void *this) {}
@@ -44,22 +44,21 @@ void (*__vtable_Z[1])(void *) = {Zm1};
 
 X *XConstructor(X *this)
 {
-    this->__vptr = __vtable_X;
+    *((method *)this) = (void *)__vtable_X;
     return this;
 }
 
-// NOTE: compiler guards against the actual mechanism used for vptr assignment here
 Y *YConstructor(Y *this)
 {
     XConstructor((X *) this);
-    this->__primary_base.__vptr = __vtable_Y;
+    *((method *)this) = (void *)__vtable_Y;
     return this;
 }
 
 Z *ZConstructor(Z *this)
 {
     XConstructor((X *) this);
-    this->__primary_base.__vptr = __vtable_Z;
+    *((method *)this) = (void *)__vtable_Z;
     return this;
 }
 

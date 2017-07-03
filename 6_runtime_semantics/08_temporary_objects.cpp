@@ -6,7 +6,6 @@ struct T {
     explicit T(int j) : i{j} {}
 
     ~T() {}
-
 };
 
 T operator+(const T &lhs, const T &rhs)

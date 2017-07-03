@@ -1,58 +1,53 @@
-typedef struct _A {} A;
+typedef struct _P {
+    double x;
+    double y;
+    double z;
+} P;
 
-A *AConstructor(A *this)
+P *PConstructor(P *this, double arg0, double arg1, double arg2)
 {
+    *((double *) ((void *) this + 0x8)) = arg0;
+    *((double *) ((void *) this + 0x8)) = arg1;
+    *((double *) ((void *) this + 0x8)) = arg2;
     return this;
 }
 
-A *ADestructor(A *this)
+P *PDestructor(P *this)
 {
     return this;
 }
 
 void func1Selector(int arg0)
 {
-    A a;
-    AConstructor(&a);
-    int var_10 = arg0;
-    int rax;
-    int var_C;
+    P a;
+    PConstructor(&a, 0x0, 0x0, 0x0);
+    int __temp0;
     if (arg0 != 0x0) {
-        rax = var_10 - 0x1;
-        if (rax != 0x0) {
-            rax = var_10 - 0x2;
-            if (rax != 0x0) {
-                var_C = 0x0;
+        if (arg0 - 0x1 != 0x0) {
+            if (arg0 - 0x2 != 0x0) {
+                __temp0 = 0x0;
             } else {
-                var_C = 0x1;
+                __temp0 = 0x1;
             }
         } else {
-            var_C = 0x1;
+            __temp0 = 0x1;
         }
     } else {
-        var_C = 0x1;
+        __temp0 = 0x1;
     }
-
-    ADestructor(&a);
-    rax = var_C - 0x1;
-    if (rax <= 0x0) {
-        // rsp = rsp + 0x28;
-        // rbp = stack[2047];
-    } else { // fall through for switch
-        // stack[2042] = rbp;
-        // rbp = rsp - 0x8;
-        // rdi = rdi;
-        AConstructor(&a);
-        // rsp = (rsp - 0x18) + 0x18;
-        // rbp = stack[2042];
+    PDestructor(&a); // call destructor on all paths
+    if (__temp0 - 0x1 <= 0x0) {
+        // pass
+    } else {
+        PConstructor(&a, 0x0, 0x0, 0x0); // reconstruct if arg0 is not a Selector value
     }
 }
 
 int main()
 {
-    A a;
-    AConstructor(&a);
-    ADestructor(&a);
+    P a;
+    PConstructor(&a, 0x0, 0x0, 0x0);
+    PDestructor(&a);
     func1Selector(0x0);
     func1Selector(0x1);
     func1Selector(0x2);
