@@ -7,6 +7,7 @@ import os
 import glob
 import re
 import requests
+from collections import Counter
 from bs4 import BeautifulSoup
 import lxml
 
@@ -65,9 +66,16 @@ def write_class_file(root_dir, all_classes, get_description=False):
 def main():
     script_path = os.path.dirname(os.path.realpath(__file__))
     all_ast_files = get_all_ast_files(script_path)
-    all_classes = sorted({c for f in all_ast_files for c in get_classes_in_file(f)})
-    write_class_file(script_path, all_classes, True)
-    # write_class_file(script_path, all_classes)
+    all_ast_classes = [c for f in all_ast_files for c in get_classes_in_file(f)]
+    counter = Counter(all_ast_classes)
+
+    print('20 most used classes: ')
+    for ast_class in sorted([key for key, val in counter.most_common(20)]):
+        print(ast_class)
+
+    unique_classes = sorted(set(all_ast_classes))
+    write_class_file(script_path, unique_classes, True)
+    # write_class_file(script_path, unique_classes)
 
 
 if __name__ == '__main__':
