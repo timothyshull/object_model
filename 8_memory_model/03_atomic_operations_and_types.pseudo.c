@@ -54,17 +54,18 @@ function __Z5read1v() {
 }
 
 function __ZNSt3__111atomic_loadI2D1EENS_10shared_ptrIT_EEPKS4_() {
-    var_40 = arg0;
-    var_48 = arg0;
-    var_30 = std::__1::__get_sp_mut(rsi, rsi);
-    std::__1::__sp_mut::lock(var_30);
-    *var_40 = *rsi;
-    *(var_40 + 0x8) = *(rsi + 0x8);
-    var_50 = var_40;
-    if (*(var_40 + 0x8) != 0x0) {
-            std::__1::__shared_weak_count::__add_shared(*(var_50 + 0x8));
+    var_68 = arg0;
+    var_70 = arg0;
+    var_58 = std::__1::__get_sp_mut(rsi, rsi);
+    std::__1::__sp_mut::lock(var_58);
+    *var_68 = *rsi;
+    *(var_68 + 0x8) = *(rsi + 0x8);
+    var_78 = var_68;
+    if (*(var_68 + 0x8) != 0x0) {
+            rcx = *(var_78 + 0x8) + 0x8;
+            *rcx = lock intrinsic_xadd(*rcx, 0x1);
     }
-    std::__1::__sp_mut::unlock(var_30);
+    std::__1::__sp_mut::unlock(var_58);
     if (0x1 == 0x0) {
             std::__1::shared_ptr<D1>::~shared_ptr();
     }
@@ -72,15 +73,16 @@ function __ZNSt3__111atomic_loadI2D1EENS_10shared_ptrIT_EEPKS4_() {
 }
 
 function __Z6write1RKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE() {
-    std::__1::shared_ptr<D1> std::__1::shared_ptr<D1>::make_shared<>(&var_40);
-    std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::operator=(var_40, arg0);
-    var_60 = var_40;
-    *(&var_60 + 0x8) = *(&var_40 + 0x8);
-    var_78 = &var_60;
-    if (*(&var_60 + 0x8) != 0x0) {
-            std::__1::__shared_weak_count::__add_shared(*(var_78 + 0x8));
+    std::__1::shared_ptr<D1> std::__1::shared_ptr<D1>::make_shared<>(&var_68);
+    std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::operator=(var_68, arg0);
+    var_88 = var_68;
+    *(&var_88 + 0x8) = *(&var_68 + 0x8);
+    var_A0 = &var_88;
+    if (*(&var_88 + 0x8) != 0x0) {
+            rcx = *(var_A0 + 0x8) + 0x8;
+            *rcx = lock intrinsic_xadd(*rcx, 0x1);
     }
-    void std::__1::atomic_store<D1>(_p, &var_60);
+    void std::__1::atomic_store<D1>(_p, &var_88);
     std::__1::shared_ptr<D1>::~shared_ptr();
     rax = std::__1::shared_ptr<D1>::~shared_ptr();
     return rax;
@@ -98,18 +100,19 @@ function __ZNSt3__112atomic_storeI2D1EEvPNS_10shared_ptrIT_EES4_() {
 }
 
 function __Z5read2v() {
-    var_38 = &var_18;
-    if (0x0 == 0x0) {
+    rsi = 0x2;
+    var_40 = &var_18;
+    if (rsi >= 0x0) {
             rax = 0x0;
             if (rax != 0x0) {
-                    *(int32_t *)var_38 = *(int32_t *)_ad;
+                    *(int32_t *)var_40 = *(int32_t *)_ad;
             }
             else {
-                    *(int32_t *)var_38 = *(int32_t *)_ad;
+                    *(int32_t *)var_40 = *(int32_t *)_ad;
             }
     }
     else {
-            *(int32_t *)var_38 = *(int32_t *)_ad;
+            *(int32_t *)var_40 = *(int32_t *)_ad;
     }
     rax = var_18;
     var_20 = rax;
@@ -121,20 +124,21 @@ function __Z5read2v() {
 
 function __Z6write2i() {
     var_18 = arg0;
-    var_30 = &var_18;
-    if (0x0 == 0x0) {
+    rcx = 0x2;
+    var_38 = &var_18;
+    if (rcx != 0x0) {
             rax = 0x0;
             if (rax != 0x0) {
-                    rax = var_30;
+                    rax = var_38;
                     *(int32_t *)_ad = *(int32_t *)rax;
             }
             else {
-                    rax = var_30;
+                    rax = var_38;
                     *(int32_t *)_ad = intrinsic_xchg(*(int32_t *)_ad, *(int32_t *)rax);
             }
     }
     else {
-            rax = var_30;
+            rax = var_38;
             *(int32_t *)_ad = *(int32_t *)rax;
     }
     return rax;
@@ -156,50 +160,98 @@ function __ZNSt3__16threadC1IRFviEJiEvEEOT_DpOT0_() {
 }
 
 function __ZNSt3__110shared_ptrI2D1ED2Ev() {
-    var_10 = rdi;
+    var_40 = rdi;
     if (*(rdi + 0x8) != 0x0) {
-            rax = std::__1::__shared_weak_count::__release_shared(*(var_10 + 0x8));
+            rax = var_40;
+            *(*(rax + 0x8) + 0x8) = lock intrinsic_xadd(*(*(rax + 0x8) + 0x8), 0xffffffffffffffff, *(rax + 0x8), *(rax + 0x8), 0xffffffffffffffff);
+            var_48 = *(rax + 0x8);
+            var_50 = *(rax + 0x8);
+            if (0xfffffffffffffffe == 0xffffffffffffffff) {
+                    rax = (*(*var_50 + 0x10))(var_50);
+                    var_19 = 0x1;
+            }
+            else {
+                    var_19 = 0x0;
+            }
+            if ((var_19 & 0x1) != 0x0) {
+                    rax = std::__1::__shared_weak_count::__release_weak(var_48);
+            }
     }
     return rax;
 }
 
 function __ZNSt3__110shared_ptrI2D1E11make_sharedIJEEES2_DpOT_() {
-    var_450 = arg0;
-    var_458 = arg0;
-    operator new(0x30);
-    var_430 = &var_408;
-    *(&var_430 + 0x8) = 0x1;
-    var_420 = var_260;
-    *(&var_420 + 0x8) = var_250;
-    *(&var_420 + 0x10) = *(&var_250 + 0x8);
-    *var_420 = operator delete(void*);
-    *(var_420 + 0x8) = 0x0;
-    *var_420 = operator new(unsigned long);
-    *(var_420 + 0x10) = 0x0;
-    *var_420 = 0x100005170;
-    memset(var_420 + 0x18, 0x0, 0x18);
-    D1::D1();
-    *var_450 = 0x0;
-    *(var_450 + 0x8) = 0x0;
-    *var_450 = var_420 + 0x18;
-    var_420 = 0x0;
-    *(var_450 + 0x8) = var_420;
-    if (0x1 == 0x0) {
-            std::__1::shared_ptr<D1>::~shared_ptr();
+    var_370 = arg0;
+    var_378 = arg0;
+    if (0x1 > 0x555555555555555) {
+            rax = __cxa_allocate_exception(0x10);
+            var_380 = rax;
+            var_388 = rax;
+            std::logic_error::logic_error(rax, "allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size", "allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size");
+            *var_388 = operator new(unsigned long);
+            __cxa_throw(var_380, typeinfo for std::length_error, std::length_error::~length_error(), std::length_error::~length_error());
     }
-    var_3E0 = var_420;
-    var_420 = 0x0;
-    var_528 = &var_420;
-    if (var_3E0 != 0x0) {
-            operator delete(var_3E0, *(var_528 + 0x10), var_3E0, var_3E0);
+    else {
+            operator new(0x30);
+            var_350 = &var_328;
+            *(&var_350 + 0x8) = 0x1;
+            std::__1::__compressed_pair_elem<std::__1::__thread_struct*, 0, false>::__compressed_pair_elem<std::__1::__thread_struct*&, void>(&var_340);
+            std::__1::__compressed_pair_elem<std::__1::__allocator_destructor<std::__1::allocator<std::__1::__shared_ptr_emplace<D1, std::__1::allocator<D1> > > >, 1, false>::__compressed_pair_elem<std::__1::__allocator_destructor<std::__1::allocator<std::__1::__shared_ptr_emplace<D1, std::__1::allocator<D1> > > >, void>(&var_340 + 0x8);
+            rax = std::__1::__compressed_pair_elem<std::__1::__shared_ptr_emplace<D1, std::__1::allocator<D1> >*, 0, false>::__get(&var_340);
+            **rax = vtable for std::length_error;
+            *(*rax + 0x8) = 0x0;
+            **rax = operator delete(void*);
+            *(*rax + 0x10) = 0x0;
+            **rax = 0x100006220;
+            rax = *rax + 0x18;
+            std::__1::__compressed_pair_elem<std::__1::default_delete<std::__1::__thread_struct>, 1, true>::__compressed_pair_elem<std::__1::default_delete<std::__1::__thread_struct>, void>(rax);
+            std::__1::__compressed_pair_elem<D1, 1, false>::__compressed_pair_elem();
+            *var_378 = 0x0;
+            *(var_378 + 0x8) = 0x0;
+            *var_378 = std::__1::__compressed_pair_elem<D1, 1, false>::__get(*std::__1::__compressed_pair_elem<std::__1::__shared_ptr_emplace<D1, std::__1::allocator<D1> >*, 0, false>::__get(&var_340) + 0x18);
+            var_A8 = *std::__1::__compressed_pair_elem<std::__1::__shared_ptr_emplace<D1, std::__1::allocator<D1> >*, 0, false>::__get(&var_340);
+            *std::__1::__compressed_pair_elem<std::__1::__shared_ptr_emplace<D1, std::__1::allocator<D1> >*, 0, false>::__get(&var_340) = 0x0;
+            *(var_378 + 0x8) = var_A8;
+            std::__1::shared_ptr<D1>::__enable_weak_this();
+            if (0x1 == 0x0) {
+                    std::__1::shared_ptr<D1>::~shared_ptr();
+            }
+            var_3A8 = &var_340;
+            var_300 = *std::__1::__compressed_pair_elem<std::__1::__shared_ptr_emplace<D1, std::__1::allocator<D1> >*, 0, false>::__get(&var_340);
+            *std::__1::__compressed_pair_elem<std::__1::__shared_ptr_emplace<D1, std::__1::allocator<D1> >*, 0, false>::__get(var_3A8) = 0x0;
+            if (var_300 != 0x0) {
+                    std::__1::__compressed_pair_elem<std::__1::__allocator_destructor<std::__1::allocator<std::__1::__shared_ptr_emplace<D1, std::__1::allocator<D1> > > >, 1, false>::__get(var_3A8 + 0x8);
+                    operator delete(var_300);
+            }
     }
     return;
+}
+
+function __ZNSt3__110shared_ptrI2D1E18__enable_weak_thisEz() {
+    return rax;
 }
 
 function ___clang_call_terminate() {
     __cxa_begin_catch();
     std::terminate();
     return;
+}
+
+function __ZNSt3__122__compressed_pair_elemIPNS_15__thread_structELi0ELb0EEC2IRS2_vEEOT_() {
+    *arg0 = *rsi;
+    return rax;
+}
+
+function __ZNSt3__122__compressed_pair_elemINS_22__allocator_destructorINS_9allocatorINS_20__shared_ptr_emplaceI2D1NS2_IS4_EEEEEEEELi1ELb0EEC2IS8_vEEOT_() {
+    *arg0 = *rsi;
+    rax = *(rsi + 0x8);
+    *(arg0 + 0x8) = rax;
+    return rax;
+}
+
+function __ZNKSt3__122__compressed_pair_elemIPNS_20__shared_ptr_emplaceI2D1NS_9allocatorIS2_EEEELi0ELb0EE5__getEv() {
+    rax = rdi;
+    return rax;
 }
 
 function __ZNSt3__120__shared_ptr_emplaceI2D1NS_9allocatorIS1_EEED1Ev() {
@@ -214,12 +266,25 @@ function __ZNSt3__120__shared_ptr_emplaceI2D1NS_9allocatorIS1_EEED0Ev() {
 }
 
 function __ZNSt3__120__shared_ptr_emplaceI2D1NS_9allocatorIS1_EEE16__on_zero_sharedEv() {
+    std::__1::__compressed_pair_elem<D1, 1, false>::__get(rdi + 0x18);
     rax = D1::~D1();
     return rax;
 }
 
 function __ZNSt3__120__shared_ptr_emplaceI2D1NS_9allocatorIS1_EEE21__on_zero_shared_weakEv() {
+    std::__1::__compressed_pair_elem<std::__1::allocator<D1>, 0, true>::__get(rdi + 0x18);
+    std::__1::__compressed_pair_elem<std::__1::allocator<D1>, 0, true>::__get(rdi + 0x18);
     rax = operator delete(rdi);
+    return rax;
+}
+
+function __ZNSt3__122__compressed_pair_elemINS_14default_deleteINS_15__thread_structEEELi1ELb1EEC2IS3_vEEOT_() {
+    return rax;
+}
+
+function __ZNSt3__122__compressed_pair_elemI2D1Li1ELb0EEC2Ev() {
+    memset(rdi, 0x0, 0x18);
+    rax = D1::D1();
     return rax;
 }
 
@@ -229,17 +294,33 @@ function __ZN2D1C1Ev() {
 }
 
 function __ZN2D1C2Ev() {
-    rax = memset(rdi, 0x0, 0x18);
-    var_20 = rdi;
-    for (var_24 = 0x0; var_24 < 0x3; var_24 = rax) {
-            *(var_20 + var_24 * 0x8) = 0x0;
-            rax = var_24 + 0x1;
+    std::__1::__compressed_pair_elem<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__rep, 0, false>::__compressed_pair_elem();
+    std::__1::__compressed_pair_elem<std::__1::allocator<char>, 1, true>::__compressed_pair_elem();
+    rax = std::__1::__compressed_pair_elem<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__rep, 0, false>::__get(rdi);
+    var_18 = rax;
+    for (var_1C = 0x0; var_1C < 0x3; var_1C = var_1C + 0x1) {
+            rax = var_18;
+            *(rax + var_1C * 0x8) = 0x0;
     }
     return rax;
 }
 
+function __ZNSt3__122__compressed_pair_elemINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repELi0ELb0EEC2Ev() {
+    rax = memset(rdi, 0x0, 0x18);
+    return rax;
+}
+
+function __ZNSt3__122__compressed_pair_elemINS_9allocatorIcEELi1ELb1EEC2Ev() {
+    return rax;
+}
+
+function __ZNSt3__122__compressed_pair_elemINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repELi0ELb0EE5__getEv() {
+    rax = rdi;
+    return rax;
+}
+
 function __ZNSt3__120__shared_ptr_emplaceI2D1NS_9allocatorIS1_EEED2Ev() {
-    *rdi = 0x100005170;
+    *rdi = 0x100006220;
     std::__1::__compressed_pair<std::__1::allocator<D1>, D1>::~__compressed_pair();
     rax = std::__1::__shared_weak_count::~__shared_weak_count(rdi);
     return rax;
@@ -251,11 +332,11 @@ function __ZNSt3__117__compressed_pairINS_9allocatorI2D1EES2_ED1Ev() {
 }
 
 function __ZNSt3__117__compressed_pairINS_9allocatorI2D1EES2_ED2Ev() {
-    rax = std::__1::__libcpp_compressed_pair_imp<std::__1::allocator<D1>, D1, 1u>::~__libcpp_compressed_pair_imp();
+    rax = std::__1::__compressed_pair_elem<D1, 1, false>::~__compressed_pair_elem();
     return rax;
 }
 
-function __ZNSt3__128__libcpp_compressed_pair_impINS_9allocatorI2D1EES2_Lj1EED2Ev() {
+function __ZNSt3__122__compressed_pair_elemI2D1Li1ELb0EED2Ev() {
     rax = D1::~D1();
     return rax;
 }
@@ -270,76 +351,131 @@ function __ZN2D1D2Ev() {
     return rax;
 }
 
+function __ZNSt3__122__compressed_pair_elemI2D1Li1ELb0EE5__getEv() {
+    rax = rdi;
+    return rax;
+}
+
+function __ZNSt3__122__compressed_pair_elemINS_9allocatorI2D1EELi0ELb1EE5__getEv() {
+    rax = rdi;
+    return rax;
+}
+
+function __ZNSt3__122__compressed_pair_elemIPNS_20__shared_ptr_emplaceI2D1NS_9allocatorIS2_EEEELi0ELb0EE5__getEv() {
+    rax = rdi;
+    return rax;
+}
+
+function __ZNSt3__122__compressed_pair_elemINS_22__allocator_destructorINS_9allocatorINS_20__shared_ptr_emplaceI2D1NS2_IS4_EEEEEEEELi1ELb0EE5__getEv() {
+    rax = rdi;
+    return rax;
+}
+
 function __ZNSt3__16threadC2IRFvRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEJRA10_KcEvEEOT_DpOT0_() {
-    rax = operator new(0x10, arg1);
-    var_2E8 = arg1;
-    var_300 = rdx;
-    *rax = var_2E8;
-    *(rax + 0x8) = var_300;
-    var_2E0 = rax;
-    var_32C = pthread_create(arg0, 0x0, void* std::__1::__thread_proxy<std::__1::tuple<void (*)(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&), char const*> >(void*), var_2E0);
-    var_304 = var_32C;
-    if (var_304 == 0x0) {
-            var_2E0 = 0x0;
+    var_458 = arg1;
+    var_460 = rdx;
+    var_4A0 = arg0;
+    rax = operator new(0x8, arg1, arg0);
+    var_4A8 = rax;
+    std::__1::__thread_struct::__thread_struct(rax, rax, rax);
+    std::__1::__compressed_pair_elem<std::__1::__thread_struct*, 0, false>::__compressed_pair_elem<std::__1::__thread_struct*&, void>(&var_468);
+    var_4B8 = operator new(0x18);
+    var_488 = var_458;
+    var_490 = var_460;
+    var_208 = *std::__1::__compressed_pair_elem<std::__1::__thread_struct*, 0, false>::__get(&var_468, var_4B8, &var_468, var_4B8, &var_468, &var_468);
+    *std::__1::__compressed_pair_elem<std::__1::__thread_struct*, 0, false>::__get(&var_468) = 0x0;
+    std::__1::__compressed_pair_elem<std::__1::default_delete<std::__1::__thread_struct>, 1, true>::__get(&var_468);
+    std::__1::__compressed_pair_elem<std::__1::__thread_struct*, 0, false>::__compressed_pair_elem<std::__1::__thread_struct*&, void>(var_4B8);
+    std::__1::__compressed_pair_elem<std::__1::default_delete<std::__1::__thread_struct>, 1, true>::__compressed_pair_elem<std::__1::default_delete<std::__1::__thread_struct>, void>(var_4B8);
+    *(var_4B8 + 0x8) = var_488;
+    *(var_4B8 + 0x10) = var_490;
+    std::__1::__compressed_pair_elem<std::__1::__thread_struct*, 0, false>::__compressed_pair_elem<std::__1::__thread_struct*&, void>(&var_480);
+    var_504 = pthread_create(var_4A0, 0x0, void* std::__1::__thread_proxy<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (*)(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&), char const*> >(void*), *std::__1::__compressed_pair_elem<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (&var_480));
+    var_494 = var_504;
+    if (var_494 == 0x0) {
+            *std::__1::__compressed_pair_elem<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (&var_480);
+            *std::__1::__compressed_pair_elem<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (&var_480) = 0x0;
     }
     else {
-            std::__1::__throw_system_error(var_304, "thread constructor failed");
+            std::__1::__throw_system_error(var_494, "thread constructor failed");
     }
-    rax = &var_2E0;
-    var_2A8 = *rax;
+    var_530 = &var_480;
+    var_90 = *std::__1::__compressed_pair_elem<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (&var_480);
+    *std::__1::__compressed_pair_elem<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (var_530) = 0x0;
+    if (var_90 != 0x0) {
+            std::__1::__compressed_pair_elem<std::__1::default_delete<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (var_530);
+            var_540 = var_90;
+            if (var_90 != 0x0) {
+                    std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void ();
+                    operator delete(var_540);
+            }
+    }
+    var_548 = &var_468;
+    var_40 = *std::__1::__compressed_pair_elem<std::__1::__thread_struct*, 0, false>::__get(&var_468);
+    rax = std::__1::__compressed_pair_elem<std::__1::__thread_struct*, 0, false>::__get(var_548);
     *rax = 0x0;
-    var_348 = rax;
-    if (var_2A8 != 0x0) {
-            rax = var_348;
-            var_350 = var_2A8;
-            if (var_2A8 != 0x0) {
-                    rax = operator delete(var_350);
+    if (var_40 != 0x0) {
+            std::__1::__compressed_pair_elem<std::__1::default_delete<std::__1::__thread_struct>, 1, true>::__get(var_548);
+            rax = var_40;
+            var_558 = rax;
+            if (rax != 0x0) {
+                    std::__1::__thread_struct::~__thread_struct(var_558);
+                    rax = operator delete(var_558);
             }
     }
     return rax;
 }
 
-function __ZNSt3__114__thread_proxyINS_5tupleIJPFvRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEPKcEEEEEPvSF_() {
-    var_220 = arg0;
-    var_248 = std::__1::__thread_local_data(arg0);
-    rax = operator new(0x8);
-    var_258 = rax;
-    std::__1::__thread_struct::__thread_struct(rax);
-    std::__1::__thread_specific_ptr<std::__1::__thread_struct>::reset(var_248, var_258);
-    var_238 = var_1C8;
-    rcx = var_238 + 0x8;
-    *(&var_98 + 0x10) = 0x0;
-    *(&var_98 + 0x8) = 0x0;
-    var_98 = 0x0;
-    var_268 = *var_238;
-    var_270 = &var_98;
-    var_278 = *rcx;
-    var_280 = std::__1::char_traits<char>::length(*rcx, *rcx, &var_98, *var_238, var_220);
-    rsi = var_278;
-    rdx = var_280;
-    std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__init(var_270, rsi, rdx);
-    (var_268)(&var_98, rsi, rdx);
-    std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_string(&var_98);
-    var_120 = var_238;
-    var_238 = 0x0;
-    var_298 = &var_238;
-    if (var_120 != 0x0) {
-            var_2A0 = var_120;
-            if (var_120 != 0x0) {
-                    operator delete(var_2A0);
+function __ZNSt3__114__thread_proxyINS_5tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS3_EEEEPFvRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEPKcEEEEEPvSK_() {
+    std::__1::__compressed_pair_elem<std::__1::__thread_struct*, 0, false>::__compressed_pair_elem<std::__1::__thread_struct*&, void>(&var_200);
+    var_218 = std::__1::__thread_local_data();
+    rax = std::__1::__compressed_pair_elem<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (&var_200);
+    var_138 = *std::__1::__compressed_pair_elem<std::__1::__thread_struct*, 0, false>::__get(*rax);
+    *std::__1::__compressed_pair_elem<std::__1::__thread_struct*, 0, false>::__get(*rax) = 0x0;
+    std::__1::__thread_specific_ptr<std::__1::__thread_struct>::set_pointer(var_218, var_138);
+    rax = std::__1::__compressed_pair_elem<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (&var_200);
+    rcx = *rax + 0x8;
+    rcx = *rcx;
+    var_238 = rcx;
+    std::__1::__compressed_pair_elem<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__rep, 0, false>::__compressed_pair_elem();
+    std::__1::__compressed_pair_elem<std::__1::allocator<char>, 1, true>::__compressed_pair_elem();
+    rax = std::__1::char_traits<char>::length(*rdx);
+    rsi = *rdx;
+    rdx = rax;
+    std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__init(&var_D8, rsi, rdx);
+    (var_238)(&var_D8, rsi, rdx, rcx);
+    std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_string(&var_D8);
+    var_268 = &var_200;
+    var_40 = *std::__1::__compressed_pair_elem<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (&var_200);
+    *std::__1::__compressed_pair_elem<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (var_268) = 0x0;
+    if (var_40 != 0x0) {
+            std::__1::__compressed_pair_elem<std::__1::default_delete<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (var_268);
+            var_278 = var_40;
+            if (var_40 != 0x0) {
+                    std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void ();
+                    operator delete(var_278);
             }
     }
     return 0x0;
 }
 
-function __ZNSt3__121__thread_specific_ptrINS_15__thread_structEE5resetEPS1_() {
-    var_20 = pthread_getspecific(*arg0);
+function __ZNSt3__122__compressed_pair_elemIPNS_15__thread_structELi0ELb0EE5__getEv() {
+    rax = rdi;
+    return rax;
+}
+
+function __ZNSt3__122__compressed_pair_elemINS_14default_deleteINS_15__thread_structEEELi1ELb1EE5__getEv() {
+    rax = rdi;
+    return rax;
+}
+
+function __ZNSt3__121__thread_specific_ptrINS_15__thread_structEE11set_pointerEPS1_() {
     rax = pthread_setspecific(*arg0, rsi);
-    var_38 = var_20;
-    if (var_20 != 0x0) {
-            std::__1::__thread_struct::~__thread_struct(var_38);
-            rax = operator delete(var_38);
-    }
+    return rax;
+}
+
+function __ZNKSt3__122__compressed_pair_elemIPNS_5tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS3_EEEEPFvRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEPKcEEELi0ELb0EE5__getEv() {
+    rax = rdi;
     return rax;
 }
 
@@ -348,106 +484,282 @@ function __ZNSt3__111char_traitsIcE6lengthEPKc() {
     return rax;
 }
 
-function __ZNSt3__16threadC2IRFvvEJEvEEOT_DpOT0_() {
-    rax = operator new(0x8, arg1);
-    *rax = arg1;
-    var_278 = rax;
-    var_2AC = pthread_create(arg0, 0x0, void* std::__1::__thread_proxy<std::__1::tuple<void (*)()> >(void*), var_278);
-    var_290 = var_2AC;
-    if (var_290 == 0x0) {
-            var_278 = 0x0;
-    }
-    else {
-            std::__1::__throw_system_error(var_290, "thread constructor failed");
-    }
-    rax = &var_278;
-    var_248 = *rax;
+function __ZNSt3__122__compressed_pair_elemIPNS_5tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS3_EEEEPFvRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEPKcEEELi0ELb0EE5__getEv() {
+    rax = rdi;
+    return rax;
+}
+
+function __ZNSt3__122__compressed_pair_elemINS_14default_deleteINS_5tupleIJNS_10unique_ptrINS_15__thread_structENS1_IS4_EEEEPFvRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEPKcEEEEELi1ELb1EE5__getEv() {
+    rax = rdi;
+    return rax;
+}
+
+function __ZNSt3__15tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS2_EEEEPFvvEEED1Ev() {
+    rax = std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void ();
+    return rax;
+}
+
+function __ZNSt3__15tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS2_EEEEPFvvEEED2Ev() {
+    rax = std::__1::__tuple_impl<std::__1::__tuple_indices<0ul, 1ul>, std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void ();
+    return rax;
+}
+
+function __ZNSt3__112__tuple_implINS_15__tuple_indicesIJLm0ELm1EEEEJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS4_EEEEPFvvEEED1Ev() {
+    rax = std::__1::__tuple_impl<std::__1::__tuple_indices<0ul, 1ul>, std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void ();
+    return rax;
+}
+
+function __ZNSt3__112__tuple_implINS_15__tuple_indicesIJLm0ELm1EEEEJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS4_EEEEPFvvEEED2Ev() {
+    rax = std::__1::__tuple_leaf<0ul, std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, false>::~__tuple_leaf();
+    return rax;
+}
+
+function __ZNSt3__112__tuple_leafILm0ENS_10unique_ptrINS_15__thread_structENS_14default_deleteIS2_EEEELb0EED2Ev() {
+    var_60 = rdi;
+    var_40 = *std::__1::__compressed_pair_elem<std::__1::__thread_struct*, 0, false>::__get(rdi);
+    rax = std::__1::__compressed_pair_elem<std::__1::__thread_struct*, 0, false>::__get(var_60);
     *rax = 0x0;
-    var_2C8 = rax;
-    if (var_248 != 0x0) {
-            rax = var_2C8;
-            var_2D0 = var_248;
-            if (var_248 != 0x0) {
-                    rax = operator delete(var_2D0);
+    if (var_40 != 0x0) {
+            std::__1::__compressed_pair_elem<std::__1::default_delete<std::__1::__thread_struct>, 1, true>::__get(var_60);
+            rax = var_40;
+            var_70 = rax;
+            if (rax != 0x0) {
+                    std::__1::__thread_struct::~__thread_struct(var_70);
+                    rax = operator delete(var_70);
             }
     }
     return rax;
 }
 
-function __ZNSt3__114__thread_proxyINS_5tupleIJPFvvEEEEEEPvS5_() {
-    var_190 = arg0;
-    var_1B8 = std::__1::__thread_local_data(arg0);
-    rax = operator new(0x8);
-    var_1C8 = rax;
-    std::__1::__thread_struct::__thread_struct(rax);
-    std::__1::__thread_specific_ptr<std::__1::__thread_struct>::reset(var_1B8, var_1C8);
-    var_1A8 = var_138;
-    (*var_1A8)(&var_138, &var_1A8, var_178, *var_1A8, var_190);
-    var_90 = var_1A8;
-    var_1A8 = 0x0;
-    var_1D8 = &var_1A8;
+function __ZNSt3__16threadC2IRFvvEJEvEEOT_DpOT0_() {
+    var_3F8 = arg1;
+    var_430 = arg0;
+    rax = operator new(0x8, arg0);
+    var_438 = rax;
+    std::__1::__thread_struct::__thread_struct(rax, rax);
+    std::__1::__compressed_pair_elem<std::__1::__thread_struct*, 0, false>::__compressed_pair_elem<std::__1::__thread_struct*&, void>(&var_400);
+    var_448 = operator new(0x10);
+    var_420 = var_3F8;
+    var_200 = *std::__1::__compressed_pair_elem<std::__1::__thread_struct*, 0, false>::__get(&var_400, var_448, &var_400, var_448, &var_400, &var_400);
+    *std::__1::__compressed_pair_elem<std::__1::__thread_struct*, 0, false>::__get(&var_400) = 0x0;
+    std::__1::__compressed_pair_elem<std::__1::default_delete<std::__1::__thread_struct>, 1, true>::__get(&var_400);
+    std::__1::__compressed_pair_elem<std::__1::__thread_struct*, 0, false>::__compressed_pair_elem<std::__1::__thread_struct*&, void>(var_448);
+    std::__1::__compressed_pair_elem<std::__1::default_delete<std::__1::__thread_struct>, 1, true>::__compressed_pair_elem<std::__1::default_delete<std::__1::__thread_struct>, void>(var_448);
+    *(var_448 + 0x8) = var_420;
+    std::__1::__compressed_pair_elem<std::__1::__thread_struct*, 0, false>::__compressed_pair_elem<std::__1::__thread_struct*&, void>(&var_418);
+    var_48C = pthread_create(var_430, 0x0, void* std::__1::__thread_proxy<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (*)()> >(void*), *std::__1::__compressed_pair_elem<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (&var_418));
+    var_424 = var_48C;
+    if (var_424 == 0x0) {
+            *std::__1::__compressed_pair_elem<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (&var_418);
+            *std::__1::__compressed_pair_elem<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (&var_418) = 0x0;
+    }
+    else {
+            std::__1::__throw_system_error(var_424, "thread constructor failed");
+    }
+    var_4B8 = &var_418;
+    var_90 = *std::__1::__compressed_pair_elem<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (&var_418);
+    *std::__1::__compressed_pair_elem<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (var_4B8) = 0x0;
     if (var_90 != 0x0) {
-            var_1E0 = var_90;
+            std::__1::__compressed_pair_elem<std::__1::default_delete<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (var_4B8);
+            var_4C8 = var_90;
             if (var_90 != 0x0) {
-                    operator delete(var_1E0);
+                    std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void ();
+                    operator delete(var_4C8);
+            }
+    }
+    var_4D0 = &var_400;
+    var_40 = *std::__1::__compressed_pair_elem<std::__1::__thread_struct*, 0, false>::__get(&var_400);
+    rax = std::__1::__compressed_pair_elem<std::__1::__thread_struct*, 0, false>::__get(var_4D0);
+    *rax = 0x0;
+    if (var_40 != 0x0) {
+            std::__1::__compressed_pair_elem<std::__1::default_delete<std::__1::__thread_struct>, 1, true>::__get(var_4D0);
+            rax = var_40;
+            var_4E0 = rax;
+            if (rax != 0x0) {
+                    std::__1::__thread_struct::~__thread_struct(var_4E0);
+                    rax = operator delete(var_4E0);
+            }
+    }
+    return rax;
+}
+
+function __ZNSt3__114__thread_proxyINS_5tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS3_EEEEPFvvEEEEEEPvSA_() {
+    std::__1::__compressed_pair_elem<std::__1::__thread_struct*, 0, false>::__compressed_pair_elem<std::__1::__thread_struct*&, void>(&var_180);
+    var_198 = std::__1::__thread_local_data();
+    rax = std::__1::__compressed_pair_elem<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (&var_180);
+    var_B8 = *std::__1::__compressed_pair_elem<std::__1::__thread_struct*, 0, false>::__get(*rax);
+    *std::__1::__compressed_pair_elem<std::__1::__thread_struct*, 0, false>::__get(*rax) = 0x0;
+    std::__1::__thread_specific_ptr<std::__1::__thread_struct>::set_pointer(var_198, var_B8);
+    (*(*std::__1::__compressed_pair_elem<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (&var_180) + 0x8))();
+    var_1B8 = &var_180;
+    var_40 = *std::__1::__compressed_pair_elem<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (&var_180);
+    *std::__1::__compressed_pair_elem<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (var_1B8) = 0x0;
+    if (var_40 != 0x0) {
+            std::__1::__compressed_pair_elem<std::__1::default_delete<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (var_1B8);
+            var_1C8 = var_40;
+            if (var_40 != 0x0) {
+                    std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void ();
+                    operator delete(var_1C8);
             }
     }
     return 0x0;
+}
+
+function __ZNKSt3__122__compressed_pair_elemIPNS_5tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS3_EEEEPFvvEEEELi0ELb0EE5__getEv() {
+    rax = rdi;
+    return rax;
+}
+
+function __ZNSt3__122__compressed_pair_elemIPNS_5tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS3_EEEEPFvvEEEELi0ELb0EE5__getEv() {
+    rax = rdi;
+    return rax;
+}
+
+function __ZNSt3__122__compressed_pair_elemINS_14default_deleteINS_5tupleIJNS_10unique_ptrINS_15__thread_structENS1_IS4_EEEEPFvvEEEEEELi1ELb1EE5__getEv() {
+    rax = rdi;
+    return rax;
 }
 
 function __ZNSt3__16threadC2IRFviEJiEvEEOT_DpOT0_() {
-    rax = operator new(0x10, arg1);
-    var_2E8 = arg1;
-    var_2F8 = *(int32_t *)rdx;
-    *rax = var_2E8;
-    *(int32_t *)(rax + 0x8) = var_2F8;
-    var_2E0 = rax;
-    var_320 = pthread_create(arg0, 0x0, void* std::__1::__thread_proxy<std::__1::tuple<void (*)(int), int> >(void*), var_2E0);
-    var_2FC = var_320;
-    if (var_2FC == 0x0) {
-            var_2E0 = 0x0;
+    var_458 = arg1;
+    var_460 = rdx;
+    var_498 = arg0;
+    rax = operator new(0x8, arg1, arg0);
+    var_4A0 = rax;
+    std::__1::__thread_struct::__thread_struct(rax, rax, rax);
+    std::__1::__compressed_pair_elem<std::__1::__thread_struct*, 0, false>::__compressed_pair_elem<std::__1::__thread_struct*&, void>(&var_468);
+    var_4B0 = operator new(0x18);
+    var_488 = var_458;
+    var_48C = *(int32_t *)var_460;
+    var_208 = *std::__1::__compressed_pair_elem<std::__1::__thread_struct*, 0, false>::__get(&var_468, var_4B0, &var_468, var_4B0, &var_468, &var_468);
+    *std::__1::__compressed_pair_elem<std::__1::__thread_struct*, 0, false>::__get(&var_468) = 0x0;
+    std::__1::__compressed_pair_elem<std::__1::default_delete<std::__1::__thread_struct>, 1, true>::__get(&var_468);
+    std::__1::__compressed_pair_elem<std::__1::__thread_struct*, 0, false>::__compressed_pair_elem<std::__1::__thread_struct*&, void>(var_4B0);
+    std::__1::__compressed_pair_elem<std::__1::default_delete<std::__1::__thread_struct>, 1, true>::__compressed_pair_elem<std::__1::default_delete<std::__1::__thread_struct>, void>(var_4B0);
+    *(var_4B0 + 0x8) = var_488;
+    *(int32_t *)(var_4B0 + 0x10) = var_48C;
+    std::__1::__compressed_pair_elem<std::__1::__thread_struct*, 0, false>::__compressed_pair_elem<std::__1::__thread_struct*&, void>(&var_480);
+    var_4FC = pthread_create(var_498, 0x0, void* std::__1::__thread_proxy<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (*)(int), int> >(void*), *std::__1::__compressed_pair_elem<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (&var_480));
+    var_490 = var_4FC;
+    if (var_490 == 0x0) {
+            *std::__1::__compressed_pair_elem<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (&var_480);
+            *std::__1::__compressed_pair_elem<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (&var_480) = 0x0;
     }
     else {
-            std::__1::__throw_system_error(var_2FC, "thread constructor failed");
+            std::__1::__throw_system_error(var_490, "thread constructor failed");
     }
-    rax = &var_2E0;
-    var_2A8 = *rax;
+    var_528 = &var_480;
+    var_90 = *std::__1::__compressed_pair_elem<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (&var_480);
+    *std::__1::__compressed_pair_elem<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (var_528) = 0x0;
+    if (var_90 != 0x0) {
+            std::__1::__compressed_pair_elem<std::__1::default_delete<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (var_528);
+            var_538 = var_90;
+            if (var_90 != 0x0) {
+                    std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void ();
+                    operator delete(var_538);
+            }
+    }
+    var_540 = &var_468;
+    var_40 = *std::__1::__compressed_pair_elem<std::__1::__thread_struct*, 0, false>::__get(&var_468);
+    rax = std::__1::__compressed_pair_elem<std::__1::__thread_struct*, 0, false>::__get(var_540);
     *rax = 0x0;
-    var_338 = rax;
-    if (var_2A8 != 0x0) {
-            rax = var_338;
-            var_340 = var_2A8;
-            if (var_2A8 != 0x0) {
-                    rax = operator delete(var_340);
+    if (var_40 != 0x0) {
+            std::__1::__compressed_pair_elem<std::__1::default_delete<std::__1::__thread_struct>, 1, true>::__get(var_540);
+            rax = var_40;
+            var_550 = rax;
+            if (rax != 0x0) {
+                    std::__1::__thread_struct::~__thread_struct(var_550);
+                    rax = operator delete(var_550);
             }
     }
     return rax;
 }
 
-function __ZNSt3__114__thread_proxyINS_5tupleIJPFviEiEEEEEPvS5_() {
-    var_1B8 = arg0;
-    var_1E0 = std::__1::__thread_local_data(arg0);
-    rax = operator new(0x8);
-    var_1F0 = rax;
-    std::__1::__thread_struct::__thread_struct(rax);
-    std::__1::__thread_specific_ptr<std::__1::__thread_struct>::reset(var_1E0, var_1F0);
-    var_1D0 = var_160;
-    rcx = var_1D0 + 0x8;
-    (*var_1D0)(*(int32_t *)rcx, &var_1D0, rcx, *var_1D0, var_1B8);
-    var_B8 = var_1D0;
-    var_1D0 = 0x0;
-    var_200 = &var_1D0;
-    if (var_B8 != 0x0) {
-            var_208 = var_B8;
-            if (var_B8 != 0x0) {
-                    operator delete(var_208);
+function __ZNSt3__114__thread_proxyINS_5tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS3_EEEEPFviEiEEEEEPvSA_() {
+    std::__1::__compressed_pair_elem<std::__1::__thread_struct*, 0, false>::__compressed_pair_elem<std::__1::__thread_struct*&, void>(&var_1A8);
+    var_1C0 = std::__1::__thread_local_data();
+    rax = std::__1::__compressed_pair_elem<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (&var_1A8);
+    var_E0 = *std::__1::__compressed_pair_elem<std::__1::__thread_struct*, 0, false>::__get(*rax);
+    *std::__1::__compressed_pair_elem<std::__1::__thread_struct*, 0, false>::__get(*rax) = 0x0;
+    std::__1::__thread_specific_ptr<std::__1::__thread_struct>::set_pointer(var_1C0, var_E0);
+    rax = std::__1::__compressed_pair_elem<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (&var_1A8);
+    (*(*rax + 0x8))(*(int32_t *)(*rax + 0x10));
+    var_1E0 = &var_1A8;
+    var_40 = *std::__1::__compressed_pair_elem<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (&var_1A8);
+    *std::__1::__compressed_pair_elem<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (var_1E0) = 0x0;
+    if (var_40 != 0x0) {
+            std::__1::__compressed_pair_elem<std::__1::default_delete<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (var_1E0);
+            var_1F0 = var_40;
+            if (var_40 != 0x0) {
+                    std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void ();
+                    operator delete(var_1F0);
             }
     }
     return 0x0;
+}
+
+function __ZNKSt3__122__compressed_pair_elemIPNS_5tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS3_EEEEPFviEiEEELi0ELb0EE5__getEv() {
+    rax = rdi;
+    return rax;
+}
+
+function __ZNSt3__122__compressed_pair_elemIPNS_5tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS3_EEEEPFviEiEEELi0ELb0EE5__getEv() {
+    rax = rdi;
+    return rax;
+}
+
+function __ZNSt3__122__compressed_pair_elemINS_14default_deleteINS_5tupleIJNS_10unique_ptrINS_15__thread_structENS1_IS4_EEEEPFviEiEEEEELi1ELb1EE5__getEv() {
+    rax = rdi;
+    return rax;
+}
+
+function __ZNSt3__15tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS2_EEEEPFviEiEED1Ev() {
+    rax = std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void ();
+    return rax;
+}
+
+function __ZNSt3__15tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS2_EEEEPFviEiEED2Ev() {
+    rax = std::__1::__tuple_impl<std::__1::__tuple_indices<0ul, 1ul, 2ul>, std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void ();
+    return rax;
+}
+
+function __ZNSt3__112__tuple_implINS_15__tuple_indicesIJLm0ELm1ELm2EEEEJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS4_EEEEPFviEiEED1Ev() {
+    rax = std::__1::__tuple_impl<std::__1::__tuple_indices<0ul, 1ul, 2ul>, std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void ();
+    return rax;
+}
+
+function __ZNSt3__112__tuple_implINS_15__tuple_indicesIJLm0ELm1ELm2EEEEJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS4_EEEEPFviEiEED2Ev() {
+    rax = std::__1::__tuple_leaf<0ul, std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, false>::~__tuple_leaf();
+    return rax;
 }
 
 function ___cxx_global_var_init() {
     rax = __cxa_atexit(std::__1::shared_ptr<D1>::~shared_ptr(), _p, __mh_execute_header, _p);
+    return rax;
+}
+
+function imp___stubs___ZNKSt3__122__compressed_pair_elemIPNS_20__shared_ptr_emplaceI2D1NS_9allocatorIS2_EEEELi0ELb0EE5__getEv() {
+    rax = std::__1::__compressed_pair_elem<std::__1::__shared_ptr_emplace<D1, std::__1::allocator<D1> >*, 0, false>::__get();
+    return rax;
+}
+
+function imp___stubs___ZNKSt3__122__compressed_pair_elemIPNS_5tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS3_EEEEPFvRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEPKcEEELi0ELb0EE5__getEv() {
+    rax = std::__1::__compressed_pair_elem<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void ();
+    return rax;
+}
+
+function imp___stubs___ZNKSt3__122__compressed_pair_elemIPNS_5tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS3_EEEEPFviEiEEELi0ELb0EE5__getEv() {
+    rax = std::__1::__compressed_pair_elem<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void ();
+    return rax;
+}
+
+function imp___stubs___ZNKSt3__122__compressed_pair_elemIPNS_5tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS3_EEEEPFvvEEEELi0ELb0EE5__getEv() {
+    rax = std::__1::__compressed_pair_elem<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void ();
+    return rax;
+}
+
+function imp___stubs___ZNSt11logic_errorC2EPKc() {
+    rax = std::logic_error::logic_error();
     return rax;
 }
 
@@ -506,13 +818,8 @@ function imp___stubs___ZNSt3__115__thread_structD1Ev() {
     return rax;
 }
 
-function imp___stubs___ZNSt3__119__shared_weak_count12__add_sharedEv() {
-    rax = std::__1::__shared_weak_count::__add_shared();
-    return rax;
-}
-
-function imp___stubs___ZNSt3__119__shared_weak_count16__release_sharedEv() {
-    rax = std::__1::__shared_weak_count::__release_shared();
+function imp___stubs___ZNSt3__119__shared_weak_count14__release_weakEv() {
+    rax = std::__1::__shared_weak_count::__release_weak();
     return rax;
 }
 
@@ -531,8 +838,73 @@ function imp___stubs___ZNSt3__120__throw_system_errorEiPKc() {
     return rax;
 }
 
-function imp___stubs___ZNSt3__121__thread_specific_ptrINS_15__thread_structEE5resetEPS1_() {
-    rax = std::__1::__thread_specific_ptr<std::__1::__thread_struct>::reset(rdi);
+function imp___stubs___ZNSt3__121__thread_specific_ptrINS_15__thread_structEE11set_pointerEPS1_() {
+    rax = std::__1::__thread_specific_ptr<std::__1::__thread_struct>::set_pointer(rdi);
+    return rax;
+}
+
+function imp___stubs___ZNSt3__122__compressed_pair_elemI2D1Li1ELb0EE5__getEv() {
+    rax = std::__1::__compressed_pair_elem<D1, 1, false>::__get();
+    return rax;
+}
+
+function imp___stubs___ZNSt3__122__compressed_pair_elemINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repELi0ELb0EE5__getEv() {
+    rax = std::__1::__compressed_pair_elem<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__rep, 0, false>::__get();
+    return rax;
+}
+
+function imp___stubs___ZNSt3__122__compressed_pair_elemINS_14default_deleteINS_15__thread_structEEELi1ELb1EE5__getEv() {
+    rax = std::__1::__compressed_pair_elem<std::__1::default_delete<std::__1::__thread_struct>, 1, true>::__get();
+    return rax;
+}
+
+function imp___stubs___ZNSt3__122__compressed_pair_elemINS_14default_deleteINS_5tupleIJNS_10unique_ptrINS_15__thread_structENS1_IS4_EEEEPFvRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEPKcEEEEELi1ELb1EE5__getEv() {
+    rax = std::__1::__compressed_pair_elem<std::__1::default_delete<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void ();
+    return rax;
+}
+
+function imp___stubs___ZNSt3__122__compressed_pair_elemINS_14default_deleteINS_5tupleIJNS_10unique_ptrINS_15__thread_structENS1_IS4_EEEEPFviEiEEEEELi1ELb1EE5__getEv() {
+    rax = std::__1::__compressed_pair_elem<std::__1::default_delete<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void ();
+    return rax;
+}
+
+function imp___stubs___ZNSt3__122__compressed_pair_elemINS_14default_deleteINS_5tupleIJNS_10unique_ptrINS_15__thread_structENS1_IS4_EEEEPFvvEEEEEELi1ELb1EE5__getEv() {
+    rax = std::__1::__compressed_pair_elem<std::__1::default_delete<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void ();
+    return rax;
+}
+
+function imp___stubs___ZNSt3__122__compressed_pair_elemINS_22__allocator_destructorINS_9allocatorINS_20__shared_ptr_emplaceI2D1NS2_IS4_EEEEEEEELi1ELb0EE5__getEv() {
+    rax = std::__1::__compressed_pair_elem<std::__1::__allocator_destructor<std::__1::allocator<std::__1::__shared_ptr_emplace<D1, std::__1::allocator<D1> > > >, 1, false>::__get();
+    return rax;
+}
+
+function imp___stubs___ZNSt3__122__compressed_pair_elemINS_9allocatorI2D1EELi0ELb1EE5__getEv() {
+    rax = std::__1::__compressed_pair_elem<std::__1::allocator<D1>, 0, true>::__get();
+    return rax;
+}
+
+function imp___stubs___ZNSt3__122__compressed_pair_elemIPNS_15__thread_structELi0ELb0EE5__getEv() {
+    rax = std::__1::__compressed_pair_elem<std::__1::__thread_struct*, 0, false>::__get();
+    return rax;
+}
+
+function imp___stubs___ZNSt3__122__compressed_pair_elemIPNS_20__shared_ptr_emplaceI2D1NS_9allocatorIS2_EEEELi0ELb0EE5__getEv() {
+    rax = std::__1::__compressed_pair_elem<std::__1::__shared_ptr_emplace<D1, std::__1::allocator<D1> >*, 0, false>::__get();
+    return rax;
+}
+
+function imp___stubs___ZNSt3__122__compressed_pair_elemIPNS_5tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS3_EEEEPFvRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEPKcEEELi0ELb0EE5__getEv() {
+    rax = std::__1::__compressed_pair_elem<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void ();
+    return rax;
+}
+
+function imp___stubs___ZNSt3__122__compressed_pair_elemIPNS_5tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS3_EEEEPFviEiEEELi0ELb0EE5__getEv() {
+    rax = std::__1::__compressed_pair_elem<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void ();
+    return rax;
+}
+
+function imp___stubs___ZNSt3__122__compressed_pair_elemIPNS_5tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS3_EEEEPFvvEEEELi0ELb0EE5__getEv() {
+    rax = std::__1::__compressed_pair_elem<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void ();
     return rax;
 }
 
@@ -571,6 +943,11 @@ function imp___stubs___Znwm() {
     return rax;
 }
 
+function imp___stubs____cxa_allocate_exception() {
+    rax = ___cxa_allocate_exception();
+    return rax;
+}
+
 function imp___stubs____cxa_atexit() {
     rax = ___cxa_atexit();
     return rax;
@@ -578,6 +955,11 @@ function imp___stubs____cxa_atexit() {
 
 function imp___stubs____cxa_begin_catch() {
     rax = ___cxa_begin_catch();
+    return rax;
+}
+
+function imp___stubs____cxa_throw() {
+    rax = ___cxa_throw();
     return rax;
 }
 
@@ -591,11 +973,6 @@ function imp___stubs__pthread_create() {
     return rax;
 }
 
-function imp___stubs__pthread_getspecific() {
-    rax = _pthread_getspecific(key);
-    return rax;
-}
-
 function imp___stubs__pthread_setspecific() {
     rax = _pthread_setspecific(key, value);
     return rax;
@@ -606,51 +983,33 @@ function imp___stubs__strlen() {
     return rax;
 }
 
-function sub_100001c80() {
-    *(rbp + 0xffffffffffffffb8) = rax;
-    *(int32_t *)(rbp + 0xffffffffffffffb4) = rdx;
-    std::__1::shared_ptr<D1>::~shared_ptr();
-    _Unwind_Resume(*(rbp + 0xffffffffffffffb8));
-    return;
-}
-
-function sub_1000036a0() {
-    *(rbp + 0xfffffffffffffdd8) = rax;
-    *(int32_t *)(rbp + 0xfffffffffffffdd4) = rdx;
-    operator delete(*(rbp + 0xfffffffffffffdb0));
-    _Unwind_Resume(*(rbp + 0xfffffffffffffdd8));
-    return;
-}
-
-function sub_1000036c0() {
-    *(rbp + 0xfffffffffffffd78) = rax;
-    *(int32_t *)(rbp + 0xfffffffffffffd74) = rdx;
-    *(rbp + 0xfffffffffffffdd8) = *(rbp + 0xfffffffffffffd78);
-    *(int32_t *)(rbp + 0xfffffffffffffdd4) = *(int32_t *)(rbp + 0xfffffffffffffd74);
-    *(rbp + 0xfffffffffffffe50) = rbp + 0xfffffffffffffdc8;
-    *(rbp + 0xfffffffffffffe58) = *(rbp + 0xfffffffffffffe50);
-    *(rbp + 0xfffffffffffffe70) = *(rbp + 0xfffffffffffffe58);
-    *(rbp + 0xfffffffffffffe68) = 0x0;
-    *(rbp + 0xfffffffffffffe78) = *(rbp + 0xfffffffffffffe70);
+function sub_100003750() {
+    *(rbp + 0xfffffffffffffda8) = rax;
+    *(int32_t *)(rbp + 0xfffffffffffffda4) = rdx;
+    *(rbp + 0xfffffffffffffdf8) = *(rbp + 0xfffffffffffffda8);
+    *(int32_t *)(rbp + 0xfffffffffffffdf4) = *(int32_t *)(rbp + 0xfffffffffffffda4);
+    *(rbp + 0xfffffffffffffe78) = rbp + 0xfffffffffffffe00;
     *(rbp + 0xfffffffffffffe80) = *(rbp + 0xfffffffffffffe78);
-    *(rbp + 0xfffffffffffffe60) = **(rbp + 0xfffffffffffffe80);
-    *(rbp + 0xfffffffffffffe98) = *(rbp + 0xfffffffffffffe70);
+    *(rbp + 0xfffffffffffffe98) = *(rbp + 0xfffffffffffffe80);
+    *(rbp + 0xfffffffffffffe90) = 0x0;
     *(rbp + 0xfffffffffffffea0) = *(rbp + 0xfffffffffffffe98);
-    **(rbp + 0xfffffffffffffea0) = *(rbp + 0xfffffffffffffe68);
-    COND = *(rbp + 0xfffffffffffffe60) == 0x0;
-    *(rbp + 0xfffffffffffffd58) = *(rbp + 0xfffffffffffffe70);
-    if (!COND) {
-            *(rbp + 0xfffffffffffffea8) = *(rbp + 0xfffffffffffffd58);
-            *(rbp + 0xfffffffffffffeb0) = *(rbp + 0xfffffffffffffea8);
-            *(rbp + 0xfffffffffffffe90) = *(rbp + 0xfffffffffffffeb0);
-            *(rbp + 0xfffffffffffffe88) = *(rbp + 0xfffffffffffffe60);
-            COND = *(rbp + 0xfffffffffffffe88) == 0x0;
-            *(rbp + 0xfffffffffffffd50) = *(rbp + 0xfffffffffffffe88);
+    *(rbp + 0xfffffffffffffd80) = *(rbp + 0xfffffffffffffe98);
+    *(rbp + 0xfffffffffffffe88) = *std::__1::__compressed_pair_elem<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (*(rbp + 0xfffffffffffffea0));
+    *(rbp + 0xfffffffffffffea8) = *(rbp + 0xfffffffffffffd80);
+    *(rbp + 0xfffffffffffffd78) = *(rbp + 0xfffffffffffffe90);
+    *std::__1::__compressed_pair_elem<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (*(rbp + 0xfffffffffffffea8)) = *(rbp + 0xfffffffffffffd78);
+    if (*(rbp + 0xfffffffffffffe88) != 0x0) {
+            *(rbp + 0xfffffffffffffeb0) = *(rbp + 0xfffffffffffffd80);
+            *(rbp + 0xfffffffffffffec0) = std::__1::__compressed_pair_elem<std::__1::default_delete<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (*(rbp + 0xfffffffffffffeb0));
+            *(rbp + 0xfffffffffffffeb8) = *(rbp + 0xfffffffffffffe88);
+            COND = *(rbp + 0xfffffffffffffeb8) == 0x0;
+            *(rbp + 0xfffffffffffffd70) = *(rbp + 0xfffffffffffffeb8);
             if (!COND) {
-                    operator delete(*(rbp + 0xfffffffffffffd50));
+                    std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void ();
+                    operator delete(*(rbp + 0xfffffffffffffd70));
             }
     }
-    rax = loc_1000037f4();
+    rax = _Unwind_Resume(*(rbp + 0xfffffffffffffdf8));
     return rax;
 }
 
@@ -659,12 +1018,13 @@ function imp___stubs___Unwind_Resume() {
     return;
 }
 
-function sub_100001ad0() {
-    _Unwind_Resume(*(rbp + 0xffffffffffffffa8));
+function sub_100001600() {
+    std::__1::shared_ptr<D1>::~shared_ptr();
+    _Unwind_Resume(*(rbp + 0xffffffffffffff90));
     return;
 }
 
-function sub_100002160() {
+function sub_100001ac0() {
     *(rbp + 0xffffffffffffffe0) = rax;
     *(int32_t *)(rbp + 0xffffffffffffffdc) = rdx;
     std::__1::thread::~thread(rbp + 0xffffffffffffffa8);
@@ -678,19 +1038,42 @@ function sub_100002160() {
     return;
 }
 
-function sub_100004b50() {
+function sub_1000032a0() {
+    *rax = *(rbp + 0xfffffffffffffa98);
+    if (*(rbp + 0xfffffffffffffc18) != 0x0) {
+            *(rbp + 0xfffffffffffffc40) = *(rbp + 0xfffffffffffffaa0);
+            *(rbp + 0xfffffffffffffc50) = std::__1::__compressed_pair_elem<std::__1::default_delete<std::__1::__thread_struct>, 1, true>::__get(*(rbp + 0xfffffffffffffc40));
+            *(rbp + 0xfffffffffffffc48) = *(rbp + 0xfffffffffffffc18);
+            COND = *(rbp + 0xfffffffffffffc48) == 0x0;
+            *(rbp + 0xfffffffffffffa90) = *(rbp + 0xfffffffffffffc48);
+            if (!COND) {
+                    std::__1::__thread_struct::~__thread_struct(*(rbp + 0xfffffffffffffa90));
+                    operator delete(*(rbp + 0xfffffffffffffa90));
+            }
+    }
+    _Unwind_Resume(*(rbp + 0xfffffffffffffb90));
+    return;
+}
+
+function sub_1000048c0() {
+    operator delete(*(rbp + 0xfffffffffffffe20));
+    _Unwind_Resume(*(rbp + 0xfffffffffffffe78));
+    return;
+}
+
+function sub_100005b20() {
     rsp = rsp - 0x8;
     dyld_stub_binder();
     return;
 }
 
-function sub_100004ba0() {
-    loc_100004b2c();
+function sub_100005b70() {
+    loc_100005ac0();
     return;
 }
 
-function sub_100004bf0() {
-    loc_100004b2c();
+function sub_100005bc0() {
+    loc_100005ac0();
     return;
 }
 

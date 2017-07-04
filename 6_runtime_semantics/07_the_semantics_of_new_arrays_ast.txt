@@ -1,60 +1,60 @@
-TranslationUnitDecl 0x7f8f960326d0 <<invalid sloc>> <invalid sloc>
-|-TypedefDecl 0x7f8f96032c60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
-| `-BuiltinType 0x7f8f96032940 '__int128'
-|-TypedefDecl 0x7f8f96032cd0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
-| `-BuiltinType 0x7f8f96032960 'unsigned __int128'
-|-TypedefDecl 0x7f8f96033018 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
-| `-RecordType 0x7f8f96032dc0 'struct __NSConstantString_tag'
-|   `-CXXRecord 0x7f8f96032d28 '__NSConstantString_tag'
-|-TypedefDecl 0x7f8f960330b0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
-| `-PointerType 0x7f8f96033070 'char *'
-|   `-BuiltinType 0x7f8f96032760 'char'
-|-TypedefDecl 0x7f8f96065c00 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
-| `-ConstantArrayType 0x7f8f96033390 'struct __va_list_tag [1]' 1 
-|   `-RecordType 0x7f8f960331a0 'struct __va_list_tag'
-|     `-CXXRecord 0x7f8f96033108 '__va_list_tag'
-|-CXXRecordDecl 0x7f8f96065c58 <object_model/6_runtime_semantics/07_the_semantics_of_new_arrays.cpp:1:1, line:5:1> line:1:8 referenced struct P3 definition
-| |-CXXRecordDecl 0x7f8f96065d78 <col:1, col:8> col:8 implicit struct P3
-| |-FieldDecl 0x7f8f96065e28 <line:2:5, col:12> col:12 _x 'double'
-| |-FieldDecl 0x7f8f96065e88 <line:3:5, col:12> col:12 _y 'double'
-| |-FieldDecl 0x7f8f96065ee8 <line:4:5, col:12> col:12 _z 'double'
-| |-CXXConstructorDecl 0x7f8f96074400 <line:1:8> col:8 implicit used P3 'void (void) noexcept' inline default trivial
-| | `-CompoundStmt 0x7f8f960748d0 <col:8>
-| |-CXXConstructorDecl 0x7f8f96074548 <col:8> col:8 implicit constexpr P3 'void (const struct P3 &)' inline default trivial noexcept-unevaluated 0x7f8f96074548
-| | `-ParmVarDecl 0x7f8f96074670 <col:8> col:8 'const struct P3 &'
-| |-CXXConstructorDecl 0x7f8f96074708 <col:8> col:8 implicit constexpr P3 'void (struct P3 &&)' inline default trivial noexcept-unevaluated 0x7f8f96074708
-| | `-ParmVarDecl 0x7f8f96074830 <col:8> col:8 'struct P3 &&'
-| `-CXXDestructorDecl 0x7f8f96074918 <col:8> col:8 implicit referenced ~P3 'void (void) noexcept' inline default trivial
-|-FunctionDecl 0x7f8f96065fa8 <line:7:1, line:16:1> line:7:5 main 'int (void)'
-| `-CompoundStmt 0x7f8f96074ba8 <line:8:1, line:16:1>
-|   |-DeclStmt 0x7f8f960668f0 <line:9:5, col:27>
-|   | `-VarDecl 0x7f8f960660e0 <col:5, col:26> col:10 used pia 'int *':'int *' cinit
-|   |   `-CXXNewExpr 0x7f8f960667d8 <col:16, col:26> 'int *' array Function 0x7f8f96066340 'operator new[]' 'void *(unsigned long)'
-|   |     `-ImplicitCastExpr 0x7f8f960661a8 <col:24> 'unsigned long' <IntegralCast>
-|   |       `-IntegerLiteral 0x7f8f96066140 <col:24> 'int' 10
-|   |-CXXDeleteExpr 0x7f8f96066948 <line:10:5, col:14> 'void' array Function 0x7f8f96066650 'operator delete[]' 'void (void *) noexcept'
-|   | `-ImplicitCastExpr 0x7f8f96066930 <col:14> 'int *':'int *' <LValueToRValue>
-|   |   `-DeclRefExpr 0x7f8f96066908 <col:14> 'int *':'int *' lvalue Var 0x7f8f960660e0 'pia' 'int *':'int *'
-|   |-DeclStmt 0x7f8f96074af0 <line:12:5, col:26>
-|   | `-VarDecl 0x7f8f96066980 <col:5, col:25> col:10 used ppa 'struct P3 *':'struct P3 *' cinit
-|   |   `-CXXNewExpr 0x7f8f960749f8 <col:16, col:25> 'struct P3 *' array Function 0x7f8f96066340 'operator new[]' 'void *(unsigned long)'
-|   |     |-ImplicitCastExpr 0x7f8f96066a38 <col:23> 'unsigned long' <IntegralCast>
-|   |     | `-IntegerLiteral 0x7f8f960669e0 <col:23> 'int' 10
-|   |     `-CXXConstructExpr 0x7f8f960748e8 <col:20> 'struct P3 [10]' 'void (void) noexcept'
-|   |-CXXDeleteExpr 0x7f8f96074b48 <line:13:5, col:14> 'void' array Function 0x7f8f96066650 'operator delete[]' 'void (void *) noexcept'
-|   | `-ImplicitCastExpr 0x7f8f96074b30 <col:14> 'struct P3 *':'struct P3 *' <LValueToRValue>
-|   |   `-DeclRefExpr 0x7f8f96074b08 <col:14> 'struct P3 *':'struct P3 *' lvalue Var 0x7f8f96066980 'ppa' 'struct P3 *':'struct P3 *'
-|   `-ReturnStmt 0x7f8f96074b90 <line:15:5, col:12>
-|     `-IntegerLiteral 0x7f8f96074b70 <col:12> 'int' 0
-|-FunctionDecl 0x7f8f960661f8 <<invalid sloc>> <invalid sloc> implicit operator new 'void *(unsigned long)'
-| |-ParmVarDecl 0x7f8f960662d8 <<invalid sloc>> <invalid sloc> implicit 'unsigned long'
-| `-VisibilityAttr 0x7f8f96066290 <<invalid sloc>> Implicit Default
-|-FunctionDecl 0x7f8f96066340 <<invalid sloc>> <invalid sloc> implicit used operator new[] 'void *(unsigned long)'
-| |-ParmVarDecl 0x7f8f96066420 <<invalid sloc>> <invalid sloc> implicit 'unsigned long'
-| `-VisibilityAttr 0x7f8f960663d8 <<invalid sloc>> Implicit Default
-|-FunctionDecl 0x7f8f96066508 <<invalid sloc>> <invalid sloc> implicit operator delete 'void (void *) noexcept'
-| |-ParmVarDecl 0x7f8f960665e8 <<invalid sloc>> <invalid sloc> implicit 'void *'
-| `-VisibilityAttr 0x7f8f960665a0 <<invalid sloc>> Implicit Default
-`-FunctionDecl 0x7f8f96066650 <<invalid sloc>> <invalid sloc> implicit used operator delete[] 'void (void *) noexcept'
-  |-ParmVarDecl 0x7f8f96066730 <<invalid sloc>> <invalid sloc> implicit 'void *'
-  `-VisibilityAttr 0x7f8f960666e8 <<invalid sloc>> Implicit Default
+TranslationUnitDecl 0x7f89348316d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8934831c60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8934831940 '__int128'
+|-TypedefDecl 0x7f8934831cd0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8934831960 'unsigned __int128'
+|-TypedefDecl 0x7f8934832018 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8934831dc0 'struct __NSConstantString_tag'
+|   `-CXXRecord 0x7f8934831d28 '__NSConstantString_tag'
+|-TypedefDecl 0x7f89348320b0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8934832070 'char *'
+|   `-BuiltinType 0x7f8934831760 'char'
+|-TypedefDecl 0x7f8935001a00 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8934832390 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f89348321a0 'struct __va_list_tag'
+|     `-CXXRecord 0x7f8934832108 '__va_list_tag'
+|-CXXRecordDecl 0x7f8935001a58 </Users/tskull/Documents/Programming/Cpp/object_model_refined/6_runtime_semantics/07_the_semantics_of_new_arrays.cpp:1:1, line:5:1> line:1:8 referenced struct P3 definition
+| |-CXXRecordDecl 0x7f8935001b78 <col:1, col:8> col:8 implicit struct P3
+| |-FieldDecl 0x7f8935001c28 <line:2:5, col:12> col:12 _x 'double'
+| |-FieldDecl 0x7f8935001c88 <line:3:5, col:12> col:12 _y 'double'
+| |-FieldDecl 0x7f8935001ce8 <line:4:5, col:12> col:12 _z 'double'
+| |-CXXConstructorDecl 0x7f8935030e00 <line:1:8> col:8 implicit used P3 'void (void) noexcept' inline default trivial
+| | `-CompoundStmt 0x7f89350312d0 <col:8>
+| |-CXXConstructorDecl 0x7f8935030f48 <col:8> col:8 implicit constexpr P3 'void (const struct P3 &)' inline default trivial noexcept-unevaluated 0x7f8935030f48
+| | `-ParmVarDecl 0x7f8935031070 <col:8> col:8 'const struct P3 &'
+| |-CXXConstructorDecl 0x7f8935031108 <col:8> col:8 implicit constexpr P3 'void (struct P3 &&)' inline default trivial noexcept-unevaluated 0x7f8935031108
+| | `-ParmVarDecl 0x7f8935031230 <col:8> col:8 'struct P3 &&'
+| `-CXXDestructorDecl 0x7f8935031318 <col:8> col:8 implicit referenced ~P3 'void (void) noexcept' inline default trivial
+|-FunctionDecl 0x7f8935001da8 <line:7:1, line:16:1> line:7:5 main 'int (void)'
+| `-CompoundStmt 0x7f89350315a8 <line:8:1, line:16:1>
+|   |-DeclStmt 0x7f89350026f0 <line:9:5, col:27>
+|   | `-VarDecl 0x7f8935001ee0 <col:5, col:26> col:10 used pia 'int *':'int *' cinit
+|   |   `-CXXNewExpr 0x7f89350025d8 <col:16, col:26> 'int *' array Function 0x7f8935002140 'operator new[]' 'void *(unsigned long)'
+|   |     `-ImplicitCastExpr 0x7f8935001fa8 <col:24> 'unsigned long' <IntegralCast>
+|   |       `-IntegerLiteral 0x7f8935001f40 <col:24> 'int' 10
+|   |-CXXDeleteExpr 0x7f8935002748 <line:10:5, col:14> 'void' array Function 0x7f8935002450 'operator delete[]' 'void (void *) noexcept'
+|   | `-ImplicitCastExpr 0x7f8935002730 <col:14> 'int *':'int *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f8935002708 <col:14> 'int *':'int *' lvalue Var 0x7f8935001ee0 'pia' 'int *':'int *'
+|   |-DeclStmt 0x7f89350314f0 <line:12:5, col:26>
+|   | `-VarDecl 0x7f8935002780 <col:5, col:25> col:10 used ppa 'struct P3 *':'struct P3 *' cinit
+|   |   `-CXXNewExpr 0x7f89350313f8 <col:16, col:25> 'struct P3 *' array Function 0x7f8935002140 'operator new[]' 'void *(unsigned long)'
+|   |     |-ImplicitCastExpr 0x7f8935002838 <col:23> 'unsigned long' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7f89350027e0 <col:23> 'int' 10
+|   |     `-CXXConstructExpr 0x7f89350312e8 <col:20> 'struct P3 [10]' 'void (void) noexcept'
+|   |-CXXDeleteExpr 0x7f8935031548 <line:13:5, col:14> 'void' array Function 0x7f8935002450 'operator delete[]' 'void (void *) noexcept'
+|   | `-ImplicitCastExpr 0x7f8935031530 <col:14> 'struct P3 *':'struct P3 *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f8935031508 <col:14> 'struct P3 *':'struct P3 *' lvalue Var 0x7f8935002780 'ppa' 'struct P3 *':'struct P3 *'
+|   `-ReturnStmt 0x7f8935031590 <line:15:5, col:12>
+|     `-IntegerLiteral 0x7f8935031570 <col:12> 'int' 0
+|-FunctionDecl 0x7f8935001ff8 <<invalid sloc>> <invalid sloc> implicit operator new 'void *(unsigned long)'
+| |-ParmVarDecl 0x7f89350020d8 <<invalid sloc>> <invalid sloc> implicit 'unsigned long'
+| `-VisibilityAttr 0x7f8935002090 <<invalid sloc>> Implicit Default
+|-FunctionDecl 0x7f8935002140 <<invalid sloc>> <invalid sloc> implicit used operator new[] 'void *(unsigned long)'
+| |-ParmVarDecl 0x7f8935002220 <<invalid sloc>> <invalid sloc> implicit 'unsigned long'
+| `-VisibilityAttr 0x7f89350021d8 <<invalid sloc>> Implicit Default
+|-FunctionDecl 0x7f8935002308 <<invalid sloc>> <invalid sloc> implicit operator delete 'void (void *) noexcept'
+| |-ParmVarDecl 0x7f89350023e8 <<invalid sloc>> <invalid sloc> implicit 'void *'
+| `-VisibilityAttr 0x7f89350023a0 <<invalid sloc>> Implicit Default
+`-FunctionDecl 0x7f8935002450 <<invalid sloc>> <invalid sloc> implicit used operator delete[] 'void (void *) noexcept'
+  |-ParmVarDecl 0x7f8935002530 <<invalid sloc>> <invalid sloc> implicit 'void *'
+  `-VisibilityAttr 0x7f89350024e8 <<invalid sloc>> Implicit Default

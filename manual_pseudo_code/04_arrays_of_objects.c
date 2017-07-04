@@ -20,7 +20,7 @@ int __stack_chk_fail()
 {
     fprintf(stderr, "[PID] stack overflow\n");
     // abort();
-    return 0xFFFFFFFFFFFFFFFF;
+    return 0xFFFFFFFF;
 }
 
 typedef struct _P {

@@ -99,17 +99,17 @@ function build_exes () {
 
     mkdir ${build_dir_name}
     cd ${build_dir_name}
-    cmake -DCMAKE_BUILD_TYPE=Release ..
+    cmake -DCMAKE_C_COMPILER="${clang_path}/clang" -DCMAKE_CXX_COMPILER="${clang_path}/clang++" -DCMAKE_BUILD_TYPE=Release ..
     if [ $? -ne 0 ]
     then
-        printf "An error occurred while running cmake...not running make" >&2
+        printf "An error occurred while running cmake...not running make\n" >&2
         exit 2
     fi
 
-    make
+    make -j12
     if [ $? -ne 0 ]
     then
-        printf "An error occurred while running make...exiting" >&2
+        printf "An error occurred while running make...exiting\n" >&2
         exit 2
     fi
 }

@@ -1,84 +1,84 @@
-TranslationUnitDecl 0x7f96f30176d0 <<invalid sloc>> <invalid sloc>
-|-TypedefDecl 0x7f96f3017c60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
-| `-BuiltinType 0x7f96f3017940 '__int128'
-|-TypedefDecl 0x7f96f3017cd0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
-| `-BuiltinType 0x7f96f3017960 'unsigned __int128'
-|-TypedefDecl 0x7f96f3018018 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
-| `-RecordType 0x7f96f3017dc0 'struct __NSConstantString_tag'
-|   `-CXXRecord 0x7f96f3017d28 '__NSConstantString_tag'
-|-TypedefDecl 0x7f96f30180b0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
-| `-PointerType 0x7f96f3018070 'char *'
-|   `-BuiltinType 0x7f96f3017760 'char'
-|-TypedefDecl 0x7f96f304b200 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
-| `-ConstantArrayType 0x7f96f3018390 'struct __va_list_tag [1]' 1 
-|   `-RecordType 0x7f96f30181a0 'struct __va_list_tag'
-|     `-CXXRecord 0x7f96f3018108 '__va_list_tag'
-|-CXXRecordDecl 0x7f96f304b288 <object_model/2_constructors/08_explicit_initialization.cpp:15:1, line:23:1> line:15:8 referenced struct X definition
-| |-FullComment 0x7f96f30771f0 <line:2:3, line:12:81>
-| | |-ParagraphComment 0x7f96f3077030 <line:2:3, col:24>
-| | | `-TextComment 0x7f96f3077000 <col:3, col:24> Text=" from cppreference.com"
-| | |-ParagraphComment 0x7f96f30770d0 <line:4:3, line:6:92>
-| | | |-TextComment 0x7f96f3077050 <line:4:3, col:91> Text=" The explicit specifier specifies that a constructor or conversion function (since C++11)"
-| | | |-TextComment 0x7f96f3077070 <line:5:3, col:87> Text=" doesn't allow implicit conversions or copy-initialization. It may only appear within"
-| | | `-TextComment 0x7f96f3077090 <line:6:3, col:92> Text=" the decl-specifier-seq of the declaration of such a function within its class definition."
-| | |-ParagraphComment 0x7f96f3077140 <line:8:3, line:9:70>
-| | | |-TextComment 0x7f96f30770f0 <line:8:3, col:91> Text=" A constructor with a single non-default parameter (until C++11) that is declared without"
-| | | `-TextComment 0x7f96f3077110 <line:9:3, col:70> Text=" the function specifier explicit is called a converting constructor."
-| | `-ParagraphComment 0x7f96f30771b0 <line:11:3, line:12:81>
-| |   |-TextComment 0x7f96f3077160 <line:11:3, col:91> Text=" Copy-initialization is less permissive than direct-initialization: explicit constructors"
-| |   `-TextComment 0x7f96f3077180 <line:12:3, col:81> Text=" are not converting constructors and are not considered for copy-initialization"
-| |-CXXRecordDecl 0x7f96f304b3a8 <line:15:1, col:8> col:8 implicit referenced struct X
-| |-FieldDecl 0x7f96f304b458 <line:16:5, col:13> col:9 referenced x 'int'
-| | `-IntegerLiteral 0x7f96f304b8e8 <col:13> 'int' 0
-| |-CXXConstructorDecl 0x7f96f304b5d0 <line:18:5, col:22> col:5 used X 'void (int)'
-| | |-ParmVarDecl 0x7f96f304b4b8 <col:7, col:11> col:11 used a 'int'
-| | |-CXXCtorInitializer Field 0x7f96f304b458 'x' 'int'
-| | | `-InitListExpr 0x7f96f304b9b0 <col:17, col:19> 'int'
-| | |   `-ImplicitCastExpr 0x7f96f304b9f0 <col:18> 'int' <LValueToRValue>
-| | |     `-DeclRefExpr 0x7f96f304b940 <col:18> 'int' lvalue ParmVar 0x7f96f304b4b8 'a' 'int'
-| | `-CompoundStmt 0x7f96f304ba40 <col:21, col:22>
-| |-CXXConstructorDecl 0x7f96f304b6d0 <line:20:5, col:17> col:5 constexpr X 'void (void)' default noexcept-unevaluated 0x7f96f304b6d0
-| |-CXXDestructorDecl 0x7f96f304b7c8 <line:22:5, col:18> col:5 referenced ~X 'void (void) noexcept' default trivial
-| `-CXXConstructorDecl 0x7f96f3076808 <line:15:8> col:8 implicit used constexpr X 'void (const struct X &) noexcept' inline default trivial
-|   |-ParmVarDecl 0x7f96f3076930 <col:8> col:8 used 'const struct X &'
-|   |-CXXCtorInitializer Field 0x7f96f304b458 'x' 'int'
-|   | `-ImplicitCastExpr 0x7f96f3076b98 <col:8> 'int' <LValueToRValue>
-|   |   `-MemberExpr 0x7f96f3076b60 <col:8> 'const int' lvalue .x 0x7f96f304b458
-|   |     `-DeclRefExpr 0x7f96f3076b38 <col:8> 'const struct X' lvalue ParmVar 0x7f96f3076930 '' 'const struct X &'
-|   `-CompoundStmt 0x7f96f3076be0 <col:8>
-|-CXXRecordDecl 0x7f96f304ba58 <line:25:1, line:33:1> line:25:8 referenced struct Y definition
-| |-CXXRecordDecl 0x7f96f304bb78 <col:1, col:8> col:8 implicit referenced struct Y
-| |-FieldDecl 0x7f96f304bc28 <line:26:5, col:13> col:9 y 'int'
-| | `-IntegerLiteral 0x7f96f304c048 <col:13> 'int' 0
-| |-CXXConstructorDecl 0x7f96f304bd60 <line:28:5, col:31> col:14 used Y 'void (int)'
-| | |-ParmVarDecl 0x7f96f304bc88 <col:16, col:20> col:20 used a 'int'
-| | |-CXXCtorInitializer Field 0x7f96f304bc28 'y' 'int'
-| | | `-InitListExpr 0x7f96f304c0d8 <col:26, col:28> 'int'
-| | |   `-ImplicitCastExpr 0x7f96f304c118 <col:27> 'int' <LValueToRValue>
-| | |     `-DeclRefExpr 0x7f96f304c068 <col:27> 'int' lvalue ParmVar 0x7f96f304bc88 'a' 'int'
-| | `-CompoundStmt 0x7f96f304c168 <col:30, col:31>
-| |-CXXConstructorDecl 0x7f96f304be30 <line:30:5, col:17> col:5 constexpr Y 'void (void)' default noexcept-unevaluated 0x7f96f304be30
-| |-CXXDestructorDecl 0x7f96f304bf28 <line:32:5, col:18> col:5 ~Y 'void (void) noexcept' default trivial
-| `-CXXConstructorDecl 0x7f96f3076d68 <line:25:8> col:8 implicit constexpr Y 'void (const struct Y &)' inline default trivial noexcept-unevaluated 0x7f96f3076d68
-|   `-ParmVarDecl 0x7f96f3076e90 <col:8> col:8 'const struct Y &'
-`-FunctionDecl 0x7f96f3076600 <line:35:1, line:42:1> line:35:5 main 'int (void)'
-  `-CompoundStmt 0x7f96f3076f80 <col:12, line:42:1>
-    |-DeclStmt 0x7f96f30769d0 <line:36:5, col:12>
-    | `-VarDecl 0x7f96f3076718 <col:5, col:11> col:7 x1 'struct X' listinit
-    |   `-CXXConstructExpr 0x7f96f3076998 <col:7, col:11> 'struct X' 'void (int)'
-    |     `-IntegerLiteral 0x7f96f3076778 <col:10> 'int' 1
-    |-DeclStmt 0x7f96f3076c48 <line:37:5, col:13>
-    | `-VarDecl 0x7f96f30769f8 <col:5, col:12> col:7 x2 'struct X' cinit
-    |   `-ExprWithCleanups 0x7f96f3076c30 <col:7, col:12> 'struct X'
-    |     `-CXXConstructExpr 0x7f96f3076bf8 <col:7, col:12> 'struct X' 'void (const struct X &) noexcept' elidable
-    |       `-MaterializeTemporaryExpr 0x7f96f3076ae0 <col:12> 'const struct X' lvalue
-    |         `-ImplicitCastExpr 0x7f96f3076ac8 <col:12> 'const struct X' <NoOp>
-    |           `-ImplicitCastExpr 0x7f96f3076ab0 <col:12> 'struct X' <ConstructorConversion>
-    |             `-CXXConstructExpr 0x7f96f3076a78 <col:12> 'struct X' 'void (int)'
-    |               `-IntegerLiteral 0x7f96f3076a58 <col:12> 'int' 2
-    |-DeclStmt 0x7f96f3076f30 <line:39:5, col:12>
-    | `-VarDecl 0x7f96f3076c70 <col:5, col:11> col:7 y1 'struct Y' listinit
-    |   `-CXXConstructExpr 0x7f96f3076ef8 <col:7, col:11> 'struct Y' 'void (int)'
-    |     `-IntegerLiteral 0x7f96f3076cd0 <col:10> 'int' 1
-    `-ReturnStmt 0x7f96f3076f68 <line:41:5, col:12>
-      `-IntegerLiteral 0x7f96f3076f48 <col:12> 'int' 0
+TranslationUnitDecl 0x7fa55d8186d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa55d818c60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa55d818940 '__int128'
+|-TypedefDecl 0x7fa55d818cd0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa55d818960 'unsigned __int128'
+|-TypedefDecl 0x7fa55d819018 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa55d818dc0 'struct __NSConstantString_tag'
+|   `-CXXRecord 0x7fa55d818d28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa55d8190b0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa55d819070 'char *'
+|   `-BuiltinType 0x7fa55d818760 'char'
+|-TypedefDecl 0x7fa55d84c200 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa55d819390 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa55d8191a0 'struct __va_list_tag'
+|     `-CXXRecord 0x7fa55d819108 '__va_list_tag'
+|-CXXRecordDecl 0x7fa55d84c288 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/08_explicit_initialization.cpp:15:1, line:23:1> line:15:8 referenced struct X definition
+| |-FullComment 0x7fa55e0091f0 <line:2:3, line:12:81>
+| | |-ParagraphComment 0x7fa55e009030 <line:2:3, col:24>
+| | | `-TextComment 0x7fa55e009000 <col:3, col:24> Text=" from cppreference.com"
+| | |-ParagraphComment 0x7fa55e0090d0 <line:4:3, line:6:92>
+| | | |-TextComment 0x7fa55e009050 <line:4:3, col:91> Text=" The explicit specifier specifies that a constructor or conversion function (since C++11)"
+| | | |-TextComment 0x7fa55e009070 <line:5:3, col:87> Text=" doesn't allow implicit conversions or copy-initialization. It may only appear within"
+| | | `-TextComment 0x7fa55e009090 <line:6:3, col:92> Text=" the decl-specifier-seq of the declaration of such a function within its class definition."
+| | |-ParagraphComment 0x7fa55e009140 <line:8:3, line:9:70>
+| | | |-TextComment 0x7fa55e0090f0 <line:8:3, col:91> Text=" A constructor with a single non-default parameter (until C++11) that is declared without"
+| | | `-TextComment 0x7fa55e009110 <line:9:3, col:70> Text=" the function specifier explicit is called a converting constructor."
+| | `-ParagraphComment 0x7fa55e0091b0 <line:11:3, line:12:81>
+| |   |-TextComment 0x7fa55e009160 <line:11:3, col:91> Text=" Copy-initialization is less permissive than direct-initialization: explicit constructors"
+| |   `-TextComment 0x7fa55e009180 <line:12:3, col:81> Text=" are not converting constructors and are not considered for copy-initialization"
+| |-CXXRecordDecl 0x7fa55d84c3a8 <line:15:1, col:8> col:8 implicit referenced struct X
+| |-FieldDecl 0x7fa55d84c458 <line:16:5, col:13> col:9 referenced x 'int'
+| | `-IntegerLiteral 0x7fa55d84c8e8 <col:13> 'int' 0
+| |-CXXConstructorDecl 0x7fa55d84c5d0 <line:18:5, col:22> col:5 used X 'void (int)'
+| | |-ParmVarDecl 0x7fa55d84c4b8 <col:7, col:11> col:11 used a 'int'
+| | |-CXXCtorInitializer Field 0x7fa55d84c458 'x' 'int'
+| | | `-InitListExpr 0x7fa55d84c9b0 <col:17, col:19> 'int'
+| | |   `-ImplicitCastExpr 0x7fa55d84c9f0 <col:18> 'int' <LValueToRValue>
+| | |     `-DeclRefExpr 0x7fa55d84c940 <col:18> 'int' lvalue ParmVar 0x7fa55d84c4b8 'a' 'int'
+| | `-CompoundStmt 0x7fa55d84ca40 <col:21, col:22>
+| |-CXXConstructorDecl 0x7fa55d84c6d0 <line:20:5, col:17> col:5 constexpr X 'void (void)' default noexcept-unevaluated 0x7fa55d84c6d0
+| |-CXXDestructorDecl 0x7fa55d84c7c8 <line:22:5, col:18> col:5 referenced ~X 'void (void) noexcept' default trivial
+| `-CXXConstructorDecl 0x7fa55e008808 <line:15:8> col:8 implicit used constexpr X 'void (const struct X &) noexcept' inline default trivial
+|   |-ParmVarDecl 0x7fa55e008930 <col:8> col:8 used 'const struct X &'
+|   |-CXXCtorInitializer Field 0x7fa55d84c458 'x' 'int'
+|   | `-ImplicitCastExpr 0x7fa55e008b98 <col:8> 'int' <LValueToRValue>
+|   |   `-MemberExpr 0x7fa55e008b60 <col:8> 'const int' lvalue .x 0x7fa55d84c458
+|   |     `-DeclRefExpr 0x7fa55e008b38 <col:8> 'const struct X' lvalue ParmVar 0x7fa55e008930 '' 'const struct X &'
+|   `-CompoundStmt 0x7fa55e008be0 <col:8>
+|-CXXRecordDecl 0x7fa55d84ca58 <line:25:1, line:33:1> line:25:8 referenced struct Y definition
+| |-CXXRecordDecl 0x7fa55d84cb78 <col:1, col:8> col:8 implicit referenced struct Y
+| |-FieldDecl 0x7fa55d84cc28 <line:26:5, col:13> col:9 y 'int'
+| | `-IntegerLiteral 0x7fa55d84d048 <col:13> 'int' 0
+| |-CXXConstructorDecl 0x7fa55d84cd60 <line:28:5, col:31> col:14 used Y 'void (int)'
+| | |-ParmVarDecl 0x7fa55d84cc88 <col:16, col:20> col:20 used a 'int'
+| | |-CXXCtorInitializer Field 0x7fa55d84cc28 'y' 'int'
+| | | `-InitListExpr 0x7fa55d84d0d8 <col:26, col:28> 'int'
+| | |   `-ImplicitCastExpr 0x7fa55d84d118 <col:27> 'int' <LValueToRValue>
+| | |     `-DeclRefExpr 0x7fa55d84d068 <col:27> 'int' lvalue ParmVar 0x7fa55d84cc88 'a' 'int'
+| | `-CompoundStmt 0x7fa55d84d168 <col:30, col:31>
+| |-CXXConstructorDecl 0x7fa55d84ce30 <line:30:5, col:17> col:5 constexpr Y 'void (void)' default noexcept-unevaluated 0x7fa55d84ce30
+| |-CXXDestructorDecl 0x7fa55d84cf28 <line:32:5, col:18> col:5 ~Y 'void (void) noexcept' default trivial
+| `-CXXConstructorDecl 0x7fa55e008d68 <line:25:8> col:8 implicit constexpr Y 'void (const struct Y &)' inline default trivial noexcept-unevaluated 0x7fa55e008d68
+|   `-ParmVarDecl 0x7fa55e008e90 <col:8> col:8 'const struct Y &'
+`-FunctionDecl 0x7fa55e008600 <line:35:1, line:42:1> line:35:5 main 'int (void)'
+  `-CompoundStmt 0x7fa55e008f80 <col:12, line:42:1>
+    |-DeclStmt 0x7fa55e0089d0 <line:36:5, col:12>
+    | `-VarDecl 0x7fa55e008718 <col:5, col:11> col:7 x1 'struct X' listinit
+    |   `-CXXConstructExpr 0x7fa55e008998 <col:7, col:11> 'struct X' 'void (int)'
+    |     `-IntegerLiteral 0x7fa55e008778 <col:10> 'int' 1
+    |-DeclStmt 0x7fa55e008c48 <line:37:5, col:13>
+    | `-VarDecl 0x7fa55e0089f8 <col:5, col:12> col:7 x2 'struct X' cinit
+    |   `-ExprWithCleanups 0x7fa55e008c30 <col:7, col:12> 'struct X'
+    |     `-CXXConstructExpr 0x7fa55e008bf8 <col:7, col:12> 'struct X' 'void (const struct X &) noexcept' elidable
+    |       `-MaterializeTemporaryExpr 0x7fa55e008ae0 <col:12> 'const struct X' lvalue
+    |         `-ImplicitCastExpr 0x7fa55e008ac8 <col:12> 'const struct X' <NoOp>
+    |           `-ImplicitCastExpr 0x7fa55e008ab0 <col:12> 'struct X' <ConstructorConversion>
+    |             `-CXXConstructExpr 0x7fa55e008a78 <col:12> 'struct X' 'void (int)'
+    |               `-IntegerLiteral 0x7fa55e008a58 <col:12> 'int' 2
+    |-DeclStmt 0x7fa55e008f30 <line:39:5, col:12>
+    | `-VarDecl 0x7fa55e008c70 <col:5, col:11> col:7 y1 'struct Y' listinit
+    |   `-CXXConstructExpr 0x7fa55e008ef8 <col:7, col:11> 'struct Y' 'void (int)'
+    |     `-IntegerLiteral 0x7fa55e008cd0 <col:10> 'int' 1
+    `-ReturnStmt 0x7fa55e008f68 <line:41:5, col:12>
+      `-IntegerLiteral 0x7fa55e008f48 <col:12> 'int' 0

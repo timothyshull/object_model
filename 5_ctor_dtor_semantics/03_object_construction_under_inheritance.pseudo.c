@@ -17,13 +17,13 @@ function __ZN2D1D1Ev() {
 }
 
 function __ZN2D2C1Ev() {
-    var_28 = rdi;
+    var_20 = rdi;
     B1::B1();
     B4::B4();
     B4::B4();
-    *var_28 = 0x1000021c8;
-    *var_28 = 0x1000021c8;
-    *(var_28 + 0x8) = 0x1000021f8;
+    *var_20 = 0x1000021c8;
+    *var_20 = 0x1000021c8;
+    *(var_20 + 0x8) = 0x1000021f8;
     return 0x1000021c8;
 }
 
@@ -34,11 +34,11 @@ function __ZN2D2D1Ev() {
 }
 
 function __ZN2D1C2Ev() {
-    var_28 = rdi;
+    var_20 = rdi;
     B1::B1();
     B2::B2();
-    *var_28 = 0x100002080;
-    *(var_28 + 0x8) = 0x1000020a0;
+    *var_20 = 0x100002080;
+    *(var_20 + 0x8) = 0x1000020a0;
     X::X();
     rax = Y::Y();
     return rax;

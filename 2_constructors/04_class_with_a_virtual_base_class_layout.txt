@@ -15,14 +15,14 @@
            |  nvsize=12, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fa319069058 <object_model/2_constructors/04_class_with_a_virtual_base_class.cpp:1:1, line:3:1> line:1:8 referenced struct X definition
-|-CXXRecordDecl 0x7fa319069178 <col:1, col:8> col:8 implicit struct X
-|-FieldDecl 0x7fa319069228 <line:2:5, col:9> col:9 referenced i 'int'
-|-CXXMethodDecl 0x7fa319069748 <line:1:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct X &(const struct X &)' inline default trivial noexcept-unevaluated 0x7fa319069748
-| `-ParmVarDecl 0x7fa319069860 <col:8> col:8 'const struct X &'
-|-CXXMethodDecl 0x7fa3190698f8 <col:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct X &(struct X &&)' inline default trivial noexcept-unevaluated 0x7fa3190698f8
-| `-ParmVarDecl 0x7fa319069a10 <col:8> col:8 'struct X &&'
-`-CXXDestructorDecl 0x7fa319069d58 <col:8> col:8 implicit ~X 'void (void)' inline default trivial noexcept-unevaluated 0x7fa319069d58
+Record: CXXRecordDecl 0x7fdb5e869058 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/04_class_with_a_virtual_base_class.cpp:1:1, line:3:1> line:1:8 referenced struct X definition
+|-CXXRecordDecl 0x7fdb5e869178 <col:1, col:8> col:8 implicit struct X
+|-FieldDecl 0x7fdb5e869228 <line:2:5, col:9> col:9 referenced i 'int'
+|-CXXMethodDecl 0x7fdb5e869748 <line:1:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct X &(const struct X &)' inline default trivial noexcept-unevaluated 0x7fdb5e869748
+| `-ParmVarDecl 0x7fdb5e869860 <col:8> col:8 'const struct X &'
+|-CXXMethodDecl 0x7fdb5e8698f8 <col:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct X &(struct X &&)' inline default trivial noexcept-unevaluated 0x7fdb5e8698f8
+| `-ParmVarDecl 0x7fdb5e869a10 <col:8> col:8 'struct X &&'
+`-CXXDestructorDecl 0x7fdb5e869d58 <col:8> col:8 implicit ~X 'void (void)' inline default trivial noexcept-unevaluated 0x7fdb5e869d58
 
 Layout: <CGRecordLayout
   LLVMType:%struct.X = type { i32 }
@@ -32,15 +32,15 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fa319069290 <object_model/2_constructors/04_class_with_a_virtual_base_class.cpp:5:1, line:7:1> line:5:8 referenced struct A definition
+Record: CXXRecordDecl 0x7fdb5e869290 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/04_class_with_a_virtual_base_class.cpp:5:1, line:7:1> line:5:8 referenced struct A definition
 |-virtual public 'struct X'
-|-CXXRecordDecl 0x7fa319069410 <col:1, col:8> col:8 implicit struct A
-|-FieldDecl 0x7fa3190694c0 <line:6:5, col:9> col:9 j 'int'
-|-CXXMethodDecl 0x7fa319069568 <line:5:8, <invalid sloc>> col:8 implicit operator= 'struct A &(const struct A &)' inline default noexcept-unevaluated 0x7fa319069568
-| `-ParmVarDecl 0x7fa319069680 <col:8> col:8 'const struct A &'
-|-CXXMethodDecl 0x7fa319069aa8 <col:8, <invalid sloc>> col:8 implicit operator= 'struct A &(struct A &&)' inline default noexcept-unevaluated 0x7fa319069aa8
-| `-ParmVarDecl 0x7fa319069bc0 <col:8> col:8 'struct A &&'
-`-CXXDestructorDecl 0x7fa319069c48 <col:8> col:8 implicit ~A 'void (void)' inline default trivial noexcept-unevaluated 0x7fa319069c48
+|-CXXRecordDecl 0x7fdb5e869410 <col:1, col:8> col:8 implicit struct A
+|-FieldDecl 0x7fdb5e8694c0 <line:6:5, col:9> col:9 j 'int'
+|-CXXMethodDecl 0x7fdb5e869568 <line:5:8, <invalid sloc>> col:8 implicit operator= 'struct A &(const struct A &)' inline default noexcept-unevaluated 0x7fdb5e869568
+| `-ParmVarDecl 0x7fdb5e869680 <col:8> col:8 'const struct A &'
+|-CXXMethodDecl 0x7fdb5e869aa8 <col:8, <invalid sloc>> col:8 implicit operator= 'struct A &(struct A &&)' inline default noexcept-unevaluated 0x7fdb5e869aa8
+| `-ParmVarDecl 0x7fdb5e869bc0 <col:8> col:8 'struct A &&'
+`-CXXDestructorDecl 0x7fdb5e869c48 <col:8> col:8 implicit ~A 'void (void)' inline default trivial noexcept-unevaluated 0x7fdb5e869c48
 
 Layout: <CGRecordLayout
   LLVMType:%struct.A = type <{ i32 (...)**, i32, %struct.X }>
@@ -73,23 +73,23 @@ Layout: <CGRecordLayout
            |  nvsize=36, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fa319069e38 <object_model/2_constructors/04_class_with_a_virtual_base_class.cpp:9:1, line:11:1> line:9:8 referenced struct B definition
+Record: CXXRecordDecl 0x7fdb5e869e38 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/04_class_with_a_virtual_base_class.cpp:9:1, line:11:1> line:9:8 referenced struct B definition
 |-virtual public 'struct X'
-|-CXXRecordDecl 0x7fa319094800 <col:1, col:8> col:8 implicit struct B
-|-FieldDecl 0x7fa3190948b0 <line:10:5, col:12> col:12 d 'double'
-|-CXXMethodDecl 0x7fa319094958 <line:9:8, <invalid sloc>> col:8 implicit operator= 'struct B &(const struct B &)' inline default noexcept-unevaluated 0x7fa319094958
-| `-ParmVarDecl 0x7fa319094a70 <col:8> col:8 'const struct B &'
-|-CXXMethodDecl 0x7fa319094b08 <col:8, <invalid sloc>> col:8 implicit operator= 'struct B &(struct B &&)' inline default noexcept-unevaluated 0x7fa319094b08
-| `-ParmVarDecl 0x7fa319094c20 <col:8> col:8 'struct B &&'
-|-CXXDestructorDecl 0x7fa319094ca8 <col:8> col:8 implicit ~B 'void (void)' inline default trivial noexcept-unevaluated 0x7fa319094ca8
-|-CXXConstructorDecl 0x7fa31909dc00 <col:8> col:8 implicit used B 'void (void) noexcept' inline default
+|-CXXRecordDecl 0x7fdb5e894800 <col:1, col:8> col:8 implicit struct B
+|-FieldDecl 0x7fdb5e8948b0 <line:10:5, col:12> col:12 d 'double'
+|-CXXMethodDecl 0x7fdb5e894958 <line:9:8, <invalid sloc>> col:8 implicit operator= 'struct B &(const struct B &)' inline default noexcept-unevaluated 0x7fdb5e894958
+| `-ParmVarDecl 0x7fdb5e894a70 <col:8> col:8 'const struct B &'
+|-CXXMethodDecl 0x7fdb5e894b08 <col:8, <invalid sloc>> col:8 implicit operator= 'struct B &(struct B &&)' inline default noexcept-unevaluated 0x7fdb5e894b08
+| `-ParmVarDecl 0x7fdb5e894c20 <col:8> col:8 'struct B &&'
+|-CXXDestructorDecl 0x7fdb5e894ca8 <col:8> col:8 implicit ~B 'void (void)' inline default trivial noexcept-unevaluated 0x7fdb5e894ca8
+|-CXXConstructorDecl 0x7fdb5f000e00 <col:8> col:8 implicit used B 'void (void) noexcept' inline default
 | |-CXXCtorInitializer 'struct X'
-| | `-CXXConstructExpr 0x7fa31909e3f8 <col:8> 'struct X' 'void (void) noexcept'
-| `-CompoundStmt 0x7fa31909e468 <col:8>
-|-CXXConstructorDecl 0x7fa31909de78 <col:8> col:8 implicit B 'void (const struct B &)' inline default noexcept-unevaluated 0x7fa31909de78
-| `-ParmVarDecl 0x7fa31909dfa0 <col:8> col:8 'const struct B &'
-`-CXXConstructorDecl 0x7fa31909e008 <col:8> col:8 implicit B 'void (struct B &&)' inline default noexcept-unevaluated 0x7fa31909e008
-  `-ParmVarDecl 0x7fa31909e130 <col:8> col:8 'struct B &&'
+| | `-CXXConstructExpr 0x7fdb5f0015f8 <col:8> 'struct X' 'void (void) noexcept'
+| `-CompoundStmt 0x7fdb5f001668 <col:8>
+|-CXXConstructorDecl 0x7fdb5f001078 <col:8> col:8 implicit B 'void (const struct B &)' inline default noexcept-unevaluated 0x7fdb5f001078
+| `-ParmVarDecl 0x7fdb5f0011a0 <col:8> col:8 'const struct B &'
+`-CXXConstructorDecl 0x7fdb5f001208 <col:8> col:8 implicit B 'void (struct B &&)' inline default noexcept-unevaluated 0x7fdb5f001208
+  `-ParmVarDecl 0x7fdb5f001330 <col:8> col:8 'struct B &&'
 
 Layout: <CGRecordLayout
   LLVMType:%struct.B = type { i32 (...)**, double, %struct.X }
@@ -99,28 +99,28 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fa319094d88 <object_model/2_constructors/04_class_with_a_virtual_base_class.cpp:13:1, line:15:1> line:13:8 referenced struct C definition
+Record: CXXRecordDecl 0x7fdb5e894d88 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/04_class_with_a_virtual_base_class.cpp:13:1, line:15:1> line:13:8 referenced struct C definition
 |-public 'struct A'
 |-public 'struct B'
-|-CXXRecordDecl 0x7fa319094f40 <col:1, col:8> col:8 implicit struct C
-|-FieldDecl 0x7fa319094ff0 <line:14:5, col:9> col:9 k 'int'
-|-CXXMethodDecl 0x7fa319095098 <line:13:8, <invalid sloc>> col:8 implicit operator= 'struct C &(const struct C &)' inline default noexcept-unevaluated 0x7fa319095098
-| `-ParmVarDecl 0x7fa3190951b0 <col:8> col:8 'const struct C &'
-|-CXXMethodDecl 0x7fa319095248 <col:8, <invalid sloc>> col:8 implicit operator= 'struct C &(struct C &&)' inline default noexcept-unevaluated 0x7fa319095248
-| `-ParmVarDecl 0x7fa319095360 <col:8> col:8 'struct C &&'
-|-CXXDestructorDecl 0x7fa3190953e8 <col:8> col:8 implicit ~C 'void (void)' inline default trivial noexcept-unevaluated 0x7fa3190953e8
-|-CXXConstructorDecl 0x7fa319096eb0 <col:8> col:8 implicit used C 'void (void) noexcept' inline default
+|-CXXRecordDecl 0x7fdb5e894f40 <col:1, col:8> col:8 implicit struct C
+|-FieldDecl 0x7fdb5e894ff0 <line:14:5, col:9> col:9 k 'int'
+|-CXXMethodDecl 0x7fdb5e895098 <line:13:8, <invalid sloc>> col:8 implicit operator= 'struct C &(const struct C &)' inline default noexcept-unevaluated 0x7fdb5e895098
+| `-ParmVarDecl 0x7fdb5e8951b0 <col:8> col:8 'const struct C &'
+|-CXXMethodDecl 0x7fdb5e895248 <col:8, <invalid sloc>> col:8 implicit operator= 'struct C &(struct C &&)' inline default noexcept-unevaluated 0x7fdb5e895248
+| `-ParmVarDecl 0x7fdb5e895360 <col:8> col:8 'struct C &&'
+|-CXXDestructorDecl 0x7fdb5e8953e8 <col:8> col:8 implicit ~C 'void (void)' inline default trivial noexcept-unevaluated 0x7fdb5e8953e8
+|-CXXConstructorDecl 0x7fdb5e896eb0 <col:8> col:8 implicit used C 'void (void) noexcept' inline default
 | |-CXXCtorInitializer 'struct X'
-| | `-CXXConstructExpr 0x7fa31909e328 <col:8> 'struct X' 'void (void) noexcept'
+| | `-CXXConstructExpr 0x7fdb5f001528 <col:8> 'struct X' 'void (void) noexcept'
 | |-CXXCtorInitializer 'struct A'
-| | `-CXXConstructExpr 0x7fa31909e390 <col:8> 'struct A' 'void (void) noexcept'
+| | `-CXXConstructExpr 0x7fdb5f001590 <col:8> 'struct A' 'void (void) noexcept'
 | |-CXXCtorInitializer 'struct B'
-| | `-CXXConstructExpr 0x7fa31909e480 <col:8> 'struct B' 'void (void) noexcept'
-| `-CompoundStmt 0x7fa31909e500 <col:8>
-|-CXXConstructorDecl 0x7fa31909dce8 <col:8> col:8 implicit C 'void (const struct C &)' inline default noexcept-unevaluated 0x7fa31909dce8
-| `-ParmVarDecl 0x7fa31909de10 <col:8> col:8 'const struct C &'
-`-CXXConstructorDecl 0x7fa31909e198 <col:8> col:8 implicit C 'void (struct C &&)' inline default noexcept-unevaluated 0x7fa31909e198
-  `-ParmVarDecl 0x7fa31909e2c0 <col:8> col:8 'struct C &&'
+| | `-CXXConstructExpr 0x7fdb5f001680 <col:8> 'struct B' 'void (void) noexcept'
+| `-CompoundStmt 0x7fdb5f001700 <col:8>
+|-CXXConstructorDecl 0x7fdb5f000ee8 <col:8> col:8 implicit C 'void (const struct C &)' inline default noexcept-unevaluated 0x7fdb5f000ee8
+| `-ParmVarDecl 0x7fdb5f001010 <col:8> col:8 'const struct C &'
+`-CXXConstructorDecl 0x7fdb5f001398 <col:8> col:8 implicit C 'void (struct C &&)' inline default noexcept-unevaluated 0x7fdb5f001398
+  `-ParmVarDecl 0x7fdb5f0014c0 <col:8> col:8 'struct C &&'
 
 Layout: <CGRecordLayout
   LLVMType:%struct.C = type <{ %struct.A.base, [4 x i8], %struct.B.base, i32, %struct.X }>

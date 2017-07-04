@@ -13,57 +13,63 @@ Lcfi1:
 	movq	%rsp, %rbp
 Lcfi2:
 	.cfi_def_cfa_register %rbp
-	subq	$32, %rsp
+	subq	$64, %rsp
 	movl	%edi, -4(%rbp)
-	leaq	-8(%rbp), %rdi
-	callq	__ZN1AC1Ev
+	leaq	-32(%rbp), %rdi
+	xorps	%xmm0, %xmm0
+	movsd	%xmm0, -48(%rbp)        ## 8-byte Spill
+	movsd	-48(%rbp), %xmm1        ## 8-byte Reload
+                                        ## xmm1 = mem[0],zero
+	movsd	-48(%rbp), %xmm2        ## 8-byte Reload
+                                        ## xmm2 = mem[0],zero
+	callq	__ZN1PC1Eddd
 	movl	-4(%rbp), %eax
 	testl	%eax, %eax
-	movl	%eax, -16(%rbp)         ## 4-byte Spill
+	movl	%eax, -52(%rbp)         ## 4-byte Spill
 	je	LBB0_1
 	jmp	LBB0_8
 LBB0_8:                                 ## %entry
-	movl	-16(%rbp), %eax         ## 4-byte Reload
+	movl	-52(%rbp), %eax         ## 4-byte Reload
 	subl	$1, %eax
-	movl	%eax, -20(%rbp)         ## 4-byte Spill
+	movl	%eax, -56(%rbp)         ## 4-byte Spill
 	je	LBB0_2
 	jmp	LBB0_9
 LBB0_9:                                 ## %entry
-	movl	-16(%rbp), %eax         ## 4-byte Reload
+	movl	-52(%rbp), %eax         ## 4-byte Reload
 	subl	$2, %eax
-	movl	%eax, -24(%rbp)         ## 4-byte Spill
+	movl	%eax, -60(%rbp)         ## 4-byte Spill
 	je	LBB0_3
 	jmp	LBB0_4
 LBB0_1:                                 ## %sw.bb
-	movl	$1, -12(%rbp)
+	movl	$1, -36(%rbp)
 	jmp	LBB0_5
 LBB0_2:                                 ## %sw.bb1
-	movl	$1, -12(%rbp)
+	movl	$1, -36(%rbp)
 	jmp	LBB0_5
 LBB0_3:                                 ## %sw.bb2
-	movl	$1, -12(%rbp)
+	movl	$1, -36(%rbp)
 	jmp	LBB0_5
 LBB0_4:                                 ## %sw.epilog
-	movl	$0, -12(%rbp)
+	movl	$0, -36(%rbp)
 LBB0_5:                                 ## %cleanup
-	leaq	-8(%rbp), %rdi
-	callq	__ZN1AD1Ev
-	movl	-12(%rbp), %eax
+	leaq	-32(%rbp), %rdi
+	callq	__ZN1PD1Ev
+	movl	-36(%rbp), %eax
 	subl	$1, %eax
-	movl	%eax, -28(%rbp)         ## 4-byte Spill
+	movl	%eax, -64(%rbp)         ## 4-byte Spill
 	ja	LBB0_7
 	jmp	LBB0_6
 LBB0_6:                                 ## %cleanup.cont
-	addq	$32, %rsp
+	addq	$64, %rsp
 	popq	%rbp
 	retq
 LBB0_7:                                 ## %unreachable
 	.cfi_endproc
                                         ## -- End function
-	.globl	__ZN1AC1Ev              ## -- Begin function _ZN1AC1Ev
-	.weak_def_can_be_hidden	__ZN1AC1Ev
+	.globl	__ZN1PC1Eddd            ## -- Begin function _ZN1PC1Eddd
+	.weak_def_can_be_hidden	__ZN1PC1Eddd
 	.p2align	4, 0x90
-__ZN1AC1Ev:                             ## @_ZN1AC1Ev
+__ZN1PC1Eddd:                           ## @_ZN1PC1Eddd
 	.cfi_startproc
 ## BB#0:                                ## %entry
 	pushq	%rbp
@@ -74,19 +80,25 @@ Lcfi4:
 	movq	%rsp, %rbp
 Lcfi5:
 	.cfi_def_cfa_register %rbp
-	subq	$16, %rsp
+	subq	$32, %rsp
 	movq	%rdi, -8(%rbp)
+	movsd	%xmm0, -16(%rbp)
+	movsd	%xmm1, -24(%rbp)
+	movsd	%xmm2, -32(%rbp)
 	movq	-8(%rbp), %rdi
-	callq	__ZN1AC2Ev
-	addq	$16, %rsp
+	movsd	-16(%rbp), %xmm0        ## xmm0 = mem[0],zero
+	movsd	-24(%rbp), %xmm1        ## xmm1 = mem[0],zero
+	movsd	-32(%rbp), %xmm2        ## xmm2 = mem[0],zero
+	callq	__ZN1PC2Eddd
+	addq	$32, %rsp
 	popq	%rbp
 	retq
 	.cfi_endproc
                                         ## -- End function
-	.globl	__ZN1AD1Ev              ## -- Begin function _ZN1AD1Ev
-	.weak_def_can_be_hidden	__ZN1AD1Ev
+	.globl	__ZN1PD1Ev              ## -- Begin function _ZN1PD1Ev
+	.weak_def_can_be_hidden	__ZN1PD1Ev
 	.p2align	4, 0x90
-__ZN1AD1Ev:                             ## @_ZN1AD1Ev
+__ZN1PD1Ev:                             ## @_ZN1PD1Ev
 	.cfi_startproc
 ## BB#0:                                ## %entry
 	pushq	%rbp
@@ -100,7 +112,7 @@ Lcfi8:
 	subq	$16, %rsp
 	movq	%rdi, -8(%rbp)
 	movq	-8(%rbp), %rdi
-	callq	__ZN1AD2Ev
+	callq	__ZN1PD2Ev
 	addq	$16, %rsp
 	popq	%rbp
 	retq
@@ -119,12 +131,18 @@ Lcfi10:
 	movq	%rsp, %rbp
 Lcfi11:
 	.cfi_def_cfa_register %rbp
-	subq	$16, %rsp
-	leaq	-8(%rbp), %rdi
+	subq	$48, %rsp
+	leaq	-32(%rbp), %rdi
+	xorps	%xmm0, %xmm0
 	movl	$0, -4(%rbp)
-	callq	__ZN1AC1Ev
-	leaq	-8(%rbp), %rdi
-	callq	__ZN1AD1Ev
+	movsd	%xmm0, -40(%rbp)        ## 8-byte Spill
+	movsd	-40(%rbp), %xmm1        ## 8-byte Reload
+                                        ## xmm1 = mem[0],zero
+	movsd	-40(%rbp), %xmm2        ## 8-byte Reload
+                                        ## xmm2 = mem[0],zero
+	callq	__ZN1PC1Eddd
+	leaq	-32(%rbp), %rdi
+	callq	__ZN1PD1Ev
 	xorl	%edi, %edi
 	callq	__Z5func18Selector
 	movl	$1, %edi
@@ -132,15 +150,15 @@ Lcfi11:
 	movl	$2, %edi
 	callq	__Z5func18Selector
 	xorl	%eax, %eax
-	addq	$16, %rsp
+	addq	$48, %rsp
 	popq	%rbp
 	retq
 	.cfi_endproc
                                         ## -- End function
-	.globl	__ZN1AC2Ev              ## -- Begin function _ZN1AC2Ev
-	.weak_def_can_be_hidden	__ZN1AC2Ev
+	.globl	__ZN1PC2Eddd            ## -- Begin function _ZN1PC2Eddd
+	.weak_def_can_be_hidden	__ZN1PC2Eddd
 	.p2align	4, 0x90
-__ZN1AC2Ev:                             ## @_ZN1AC2Ev
+__ZN1PC2Eddd:                           ## @_ZN1PC2Eddd
 	.cfi_startproc
 ## BB#0:                                ## %entry
 	pushq	%rbp
@@ -152,14 +170,24 @@ Lcfi13:
 Lcfi14:
 	.cfi_def_cfa_register %rbp
 	movq	%rdi, -8(%rbp)
+	movsd	%xmm0, -16(%rbp)
+	movsd	%xmm1, -24(%rbp)
+	movsd	%xmm2, -32(%rbp)
+	movq	-8(%rbp), %rdi
+	movsd	-16(%rbp), %xmm0        ## xmm0 = mem[0],zero
+	movsd	%xmm0, (%rdi)
+	movsd	-24(%rbp), %xmm0        ## xmm0 = mem[0],zero
+	movsd	%xmm0, 8(%rdi)
+	movsd	-32(%rbp), %xmm0        ## xmm0 = mem[0],zero
+	movsd	%xmm0, 16(%rdi)
 	popq	%rbp
 	retq
 	.cfi_endproc
                                         ## -- End function
-	.globl	__ZN1AD2Ev              ## -- Begin function _ZN1AD2Ev
-	.weak_def_can_be_hidden	__ZN1AD2Ev
+	.globl	__ZN1PD2Ev              ## -- Begin function _ZN1PD2Ev
+	.weak_def_can_be_hidden	__ZN1PD2Ev
 	.p2align	4, 0x90
-__ZN1AD2Ev:                             ## @_ZN1AD2Ev
+__ZN1PD2Ev:                             ## @_ZN1PD2Ev
 	.cfi_startproc
 ## BB#0:                                ## %entry
 	pushq	%rbp

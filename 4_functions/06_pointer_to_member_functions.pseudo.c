@@ -1,4 +1,5 @@
 int _main() {
+    var_20 = *(int8_t *)0x100001f8a;
     var_A0 = &var_20 + 0x0;
     if ((B1::m() & 0x1) != 0x0) {
             var_A8 = *(*var_A0 + 0x100001d4f);
@@ -6,23 +7,22 @@ int _main() {
     else {
             var_A8 = B1::m();
     }
-    var_B0 = &var_38;
     (var_A8)(var_A0);
+    var_38 = 0x0;
     D2::D2();
     var_B8 = 0x1;
-    var_C0 = var_B0 + 0x0;
+    var_C0 = &var_38 + 0x0;
     if (0x1 != 0x0) {
             var_C8 = *(*var_C0 + (var_B8 - 0x1));
     }
     else {
             var_C8 = var_B8;
     }
-    var_D0 = &var_70;
     (var_C8)(var_C0);
     var_70 = intrinsic_movaps(var_70, 0x0);
     D3::D3();
     var_D8 = 0x1;
-    var_E0 = var_D0 + 0x0;
+    var_E0 = &var_70 + 0x0;
     if (0x1 != 0x0) {
             var_E8 = *(*var_E0 + (var_D8 - 0x1));
     }
@@ -30,27 +30,26 @@ int _main() {
             var_E8 = var_D8;
     }
     (var_E8)(var_E0);
-    var_F8 = 0x1;
-    var_100 = &var_70 + 0x8;
+    var_F0 = 0x1;
+    var_F8 = &var_68 + 0x0;
     if (0x1 != 0x0) {
-            var_108 = *(*var_100 + (var_F8 - 0x1));
+            var_100 = *(*var_F8 + (var_F0 - 0x1));
     }
     else {
-            var_108 = var_F8;
+            var_100 = var_F0;
     }
-    var_110 = &var_90;
-    (var_108)(var_100);
+    (var_100)(var_F8);
     var_90 = intrinsic_movaps(var_90, 0x0);
     D4::D4();
-    var_118 = 0x1;
-    var_120 = 0x0 + var_110 + *(var_90 + 0xffffffffffffffe0);
+    var_108 = 0x1;
+    var_110 = rbp + *(var_90 + 0xffffffffffffffe0) + 0xffffffffffffff70;
     if (0x1 != 0x0) {
-            var_128 = *(*var_120 + (var_118 - 0x1));
+            var_118 = *(*var_110 + (var_108 - 0x1));
     }
     else {
-            var_128 = var_118;
+            var_118 = var_108;
     }
-    (var_128)(var_120);
+    (var_118)(var_110);
     return 0x0;
 }
 

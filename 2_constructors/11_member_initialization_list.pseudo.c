@@ -1,7 +1,7 @@
 int _main() {
     C::C();
     C::C(&var_9C8);
-    C::C(intrinsic_movsd(xmm0, *0x100005c10));
+    C::C(intrinsic_movsd(xmm0, *0x100006c10));
     C::~C();
     C::~C();
     C::~C();
@@ -41,63 +41,63 @@ function __ZN1CC2Ev() {
     *(int8_t *)(var_170 + 0x4) = 0x0;
     *(int8_t *)(var_170 + 0x5) = 0x0;
     *(var_170 + 0x8) = 0x32aaaba7;
+    *(var_170 + 0x10) = 0x0;
     *(var_170 + 0x40) = 0x0;
     *(var_170 + 0x38) = 0x0;
     *(var_170 + 0x30) = 0x0;
     *(var_170 + 0x28) = 0x0;
     *(var_170 + 0x20) = 0x0;
     *(var_170 + 0x18) = 0x0;
-    *(var_170 + 0x10) = 0x0;
     *(int8_t *)(var_170 + 0x10) = 0x0;
     *(var_170 + 0x48) = var_170 + 0x8;
-    std::__1::mutex::lock(var_170 + 0x8);
+    std::__1::mutex::lock(*(var_170 + 0x48), var_170 + 0x8, var_170 + 0x48, var_170 + 0x48);
     *(var_170 + 0x200) = non-virtual thunk to std::__1::basic_iostream<char, std::__1::char_traits<char> >::~basic_iostream();
     *(var_170 + 0x200) = non-virtual thunk to std::__1::basic_iostream<char, std::__1::char_traits<char> >::~basic_iostream();
-    *(var_170 + 0x50) = 0x1000061f8;
-    *(var_170 + 0x200) = 0x100006248;
-    *(var_170 + 0x60) = 0x100006220;
-    *(var_170 + 0x50) = *0x100006270;
-    *(*(*0x100006270 + 0xffffffffffffffe8) + var_170 + 0x50) = *0x100006278;
+    *(var_170 + 0x50) = 0x100007208;
+    *(var_170 + 0x200) = 0x100007258;
+    *(var_170 + 0x60) = 0x100007230;
+    *(var_170 + 0x50) = *0x100007280;
+    *(*(*(var_170 + 0x50) + 0xffffffffffffffe8) + var_170 + 0x50) = *0x100007288;
     *(var_170 + 0x58) = 0x0;
-    rsi = *(*(var_170 + 0x50) + 0xffffffffffffffe8) + var_170 + 0x50;
-    var_190 = rsi;
-    var_198 = var_170 + 0x50;
+    rdi = *(*(var_170 + 0x50) + 0xffffffffffffffe8) + var_170 + 0x50;
+    var_188 = rdi;
+    var_1A0 = var_170 + 0x50;
     var_1A8 = var_170 + 0x50;
-    std::__1::ios_base::init(rsi, var_170 + 0x68, var_170 + 0x50, var_170 + 0x50, var_170 + 0x68, *(*0x100006270 + 0xffffffffffffffe8));
-    *(var_190 + 0x88) = 0x0;
-    *(int32_t *)(var_190 + 0x90) = std::__1::char_traits<char>::eof();
-    *(var_1A8 + 0x10) = *0x100006280;
-    *(*(*0x100006280 + 0xffffffffffffffe8) + var_1A8 + 0x10) = *0x100006288;
-    *var_1A8 = *0x100006268;
-    *(var_1A8 + *(*0x100006268 + 0xffffffffffffffe8)) = *0x100006290;
-    *(var_1A8 + 0x10) = *0x100006298;
-    *var_198 = 0x1000061f8;
-    *(var_198 + 0x1b0) = 0x100006248;
-    *(var_198 + 0x10) = 0x100006220;
+    std::__1::ios_base::init(rdi, var_170 + 0x68, var_170 + 0x50, var_170 + 0x50, var_170 + 0x68, *(*(var_170 + 0x50) + 0xffffffffffffffe8));
+    *(var_188 + 0x88) = 0x0;
+    *(int32_t *)(var_188 + 0x90) = std::__1::char_traits<char>::eof();
+    *(var_1A8 + 0x10) = *0x100007290;
+    *(*(*(var_1A8 + 0x10) + 0xffffffffffffffe8) + var_1A8 + 0x10) = *0x100007298;
+    *var_1A8 = *0x100007278;
+    *(var_1A8 + *(*var_1A8 + 0xffffffffffffffe8)) = *0x1000072a0;
+    *(var_1A8 + 0x10) = *0x1000072a8;
+    *var_1A0 = 0x100007208;
+    *(var_1A0 + 0x1b0) = 0x100007258;
+    *(var_1A0 + 0x10) = 0x100007230;
     std::__1::basic_filebuf<char, std::__1::char_traits<char> >::basic_filebuf();
     *(var_170 + 0x448) = non-virtual thunk to std::__1::basic_iostream<char, std::__1::char_traits<char> >::~basic_iostream();
     *(var_170 + 0x448) = non-virtual thunk to std::__1::basic_iostream<char, std::__1::char_traits<char> >::~basic_iostream();
-    *(var_170 + 0x298) = 0x1000061f8;
-    *(var_170 + 0x448) = 0x100006248;
-    *(var_170 + 0x2a8) = 0x100006220;
-    *(var_170 + 0x298) = *0x100006270;
-    *(*(*0x100006270 + 0xffffffffffffffe8) + var_170 + 0x298) = *0x100006278;
+    *(var_170 + 0x298) = 0x100007208;
+    *(var_170 + 0x448) = 0x100007258;
+    *(var_170 + 0x2a8) = 0x100007230;
+    *(var_170 + 0x298) = *0x100007280;
+    *(*(*(var_170 + 0x298) + 0xffffffffffffffe8) + var_170 + 0x298) = *0x100007288;
     *(var_170 + 0x2a0) = 0x0;
-    rdx = *(*(var_170 + 0x298) + 0xffffffffffffffe8) + var_170 + 0x298;
+    rsi = *(*(var_170 + 0x298) + 0xffffffffffffffe8) + var_170 + 0x298;
+    var_1C8 = rsi;
     var_1D0 = var_170 + 0x298;
     var_1D8 = var_170 + 0x298;
-    var_1E0 = rdx;
-    std::__1::ios_base::init(rdx, var_170 + 0x2b0, rdx, var_170 + 0x298, var_170 + 0x2b0);
-    *(var_1E0 + 0x88) = 0x0;
-    *(int32_t *)(var_1E0 + 0x90) = std::__1::char_traits<char>::eof();
-    *(var_1D8 + 0x10) = *0x100006280;
-    *(*(*0x100006280 + 0xffffffffffffffe8) + var_1D8 + 0x10) = *0x100006288;
-    *var_1D8 = *0x100006268;
-    *(var_1D8 + *(*0x100006268 + 0xffffffffffffffe8)) = *0x100006290;
-    *(var_1D8 + 0x10) = *0x100006298;
-    *var_1D0 = 0x1000061f8;
-    *(var_1D0 + 0x1b0) = 0x100006248;
-    *(var_1D0 + 0x10) = 0x100006220;
+    std::__1::ios_base::init(rsi, var_170 + 0x2b0, 0x100007278, var_170 + 0x298, var_170 + 0x2b0);
+    *(var_1C8 + 0x88) = 0x0;
+    *(int32_t *)(var_1C8 + 0x90) = std::__1::char_traits<char>::eof();
+    *(var_1D8 + 0x10) = *0x100007290;
+    *(*(*(var_1D8 + 0x10) + 0xffffffffffffffe8) + var_1D8 + 0x10) = *0x100007298;
+    *var_1D8 = *0x100007278;
+    *(var_1D8 + *(*var_1D8 + 0xffffffffffffffe8)) = *0x1000072a0;
+    *(var_1D8 + 0x10) = *0x1000072a8;
+    *var_1D0 = 0x100007208;
+    *(var_1D0 + 0x1b0) = 0x100007258;
+    *(var_1D0 + 0x10) = 0x100007230;
     rax = std::__1::basic_filebuf<char, std::__1::char_traits<char> >::basic_filebuf();
     return rax;
 }
@@ -157,7 +157,7 @@ function __ZNSt3__111char_traitsIcE3eofEv() {
 function __ZNSt3__113basic_filebufIcNS_11char_traitsIcEEEC2Ev() {
     var_58 = rdi;
     std::__1::basic_streambuf<char, std::__1::char_traits<char> >::basic_streambuf(rdi);
-    *var_58 = 0x1000063f8;
+    *var_58 = 0x100007408;
     *(var_58 + 0x40) = 0x0;
     *(var_58 + 0x48) = 0x0;
     *(var_58 + 0x50) = 0x0;
@@ -322,36 +322,36 @@ function __ZNSt3__113basic_filebufIcNS_11char_traitsIcEEE7seekoffExNS_8ios_base7
     var_248 = arg0;
     var_250 = arg0;
     var_258 = arg1;
-    if (*(arg1 + 0x80) != 0x0) goto loc_1000020ea;
+    if (*(arg1 + 0x80) != 0x0) goto loc_100002f9a;
 
-loc_1000020a1:
+loc_100002f51:
     rax = __cxa_allocate_exception(0x8);
     std::bad_cast::bad_cast(rax);
     rax = __cxa_throw(rax, typeinfo for std::bad_cast, std::bad_cast::~bad_cast(), rax);
     return rax;
 
-loc_1000020ea:
+loc_100002f9a:
     var_23C = (*(**(var_258 + 0x80) + 0x30))(*(var_258 + 0x80));
-    if (((*(var_258 + 0x78) == 0x0) || ((var_23C <= 0x0) && (var_230 != 0x0))) || ((*(*var_258 + 0x30))(var_258) != 0x0)) goto loc_10000215b;
+    if (((*(var_258 + 0x78) == 0x0) || ((var_23C <= 0x0) && (var_230 != 0x0))) || ((*(*var_258 + 0x30))(var_258) != 0x0)) goto loc_10000300b;
 
-loc_1000021cc:
+loc_10000307c:
     var_274 = var_234;
-    if (var_234 == 0x0) goto loc_100002219;
+    if (var_234 == 0x0) goto loc_1000030c9;
 
-loc_1000021e0:
+loc_100003090:
     rax = var_274 - 0x1;
-    if (rax == 0x0) goto loc_100002228;
+    if (rax == 0x0) goto loc_1000030d8;
 
-loc_1000021ff:
+loc_1000030af:
     rax = var_274 - 0x2;
-    if (rax == 0x0) goto loc_100002237;
+    if (rax == 0x0) goto loc_1000030e7;
 
-loc_100002246:
+loc_1000030f6:
     memset(var_250, 0x0, 0x80);
     *(var_250 + 0x80) = 0xffffffffffffffff;
-    goto loc_1000024e1;
+    goto loc_100003391;
 
-loc_1000024e1:
+loc_100003391:
     if (*___stack_chk_guard == *___stack_chk_guard) {
             rax = var_248;
     }
@@ -360,11 +360,11 @@ loc_1000024e1:
     }
     return rax;
 
-loc_100002237:
+loc_1000030e7:
     var_240 = 0x2;
-    goto loc_1000022b7;
+    goto loc_100003167;
 
-loc_1000022b7:
+loc_100003167:
     var_290 = *(var_258 + 0x78);
     if (var_23C > 0x0) {
             var_298 = sign_extend_64(var_23C) * var_230;
@@ -377,28 +377,28 @@ loc_1000022b7:
             *(var_250 + 0x80) = 0xffffffffffffffff;
     }
     else {
-            var_1E0 = ftello(*(var_258 + 0x78));
+            var_1A0 = ftello(*(var_258 + 0x78));
             memset(&var_110, 0x0, 0x80);
-            *(&var_110 + 0x80) = var_1E0;
+            *(&var_110 + 0x80) = var_1A0;
             memcpy(&var_190, var_258 + 0x88, 0x80);
             memcpy(&var_88, &var_190, 0x80);
             memcpy(&var_110, &var_88, 0x80);
             memcpy(var_250, &var_110, 0x88);
     }
-    goto loc_1000024e1;
+    goto loc_100003391;
 
-loc_100002228:
+loc_1000030d8:
     var_240 = 0x1;
-    goto loc_1000022b7;
+    goto loc_100003167;
 
-loc_100002219:
+loc_1000030c9:
     var_240 = 0x0;
-    goto loc_1000022b7;
+    goto loc_100003167;
 
-loc_10000215b:
+loc_10000300b:
     memset(var_250, 0x0, 0x80);
     *(var_250 + 0x80) = 0xffffffffffffffff;
-    goto loc_1000024e1;
+    goto loc_100003391;
 }
 
 function __ZNSt3__113basic_filebufIcNS_11char_traitsIcEEE7seekposENS_4fposI11__mbstate_tEEj() {
@@ -432,13 +432,13 @@ function __ZNSt3__113basic_filebufIcNS_11char_traitsIcEEE7seekposENS_4fposI11__m
 
 function __ZNSt3__113basic_filebufIcNS_11char_traitsIcEEE4syncEv() {
     var_198 = rdi;
-    if (*(rdi + 0x78) != 0x0) goto loc_1000027b8;
+    if (*(rdi + 0x78) != 0x0) goto loc_100003658;
 
-loc_1000027a9:
+loc_100003649:
     var_154 = 0x0;
-    goto loc_100002d88;
+    goto loc_100003c28;
 
-loc_100002d88:
+loc_100003c28:
     var_1DC = var_154;
     if (*___stack_chk_guard == *___stack_chk_guard) {
             rax = var_1DC;
@@ -448,38 +448,38 @@ loc_100002d88:
     }
     return rax;
 
-loc_1000027b8:
-    if (*(var_198 + 0x80) != 0x0) goto loc_100002816;
+loc_100003658:
+    if (*(var_198 + 0x80) != 0x0) goto loc_1000036b6;
 
-loc_1000027cd:
+loc_10000366d:
     rax = __cxa_allocate_exception(0x8);
     std::bad_cast::bad_cast(rax);
     rax = __cxa_throw(rax, typeinfo for std::bad_cast, std::bad_cast::~bad_cast(), rax);
     return rax;
 
-loc_100002816:
-    if ((*(int32_t *)(var_198 + 0x18c) & 0x10) == 0x0) goto loc_100002a23;
+loc_1000036b6:
+    if ((*(int32_t *)(var_198 + 0x18c) & 0x10) == 0x0) goto loc_1000038c3;
 
-loc_10000282f:
-    if ((*(var_198 + 0x30) == *(var_198 + 0x28)) || ((*(*var_198 + 0x68))(var_198, std::__1::char_traits<char>::eof()) != std::__1::char_traits<char>::eof())) goto loc_1000028c5;
+loc_1000036cf:
+    if ((*(var_198 + 0x30) == *(var_198 + 0x28)) || ((*(*var_198 + 0x68))(var_198, std::__1::char_traits<char>::eof()) != std::__1::char_traits<char>::eof())) goto loc_100003765;
 
-loc_1000028ac:
+loc_10000374c:
     var_154 = 0xffffffff;
-    goto loc_100002d88;
+    goto loc_100003c28;
 
-loc_1000028c5:
+loc_100003765:
     var_164 = (*(**(var_198 + 0x80) + 0x28))(*(var_198 + 0x80), var_198 + 0x88, *(var_198 + 0x40), *(var_198 + 0x40) + *(var_198 + 0x60), &var_170, *(**(var_198 + 0x80) + 0x28));
     var_178 = var_170 - *(var_198 + 0x40);
-    if (fwrite(*(var_198 + 0x40), 0x1, var_178, *(var_198 + 0x78)) == var_178) goto loc_1000029c8;
+    if (fwrite(*(var_198 + 0x40), 0x1, var_178, *(var_198 + 0x78)) == var_178) goto loc_100003868;
 
-loc_1000029b9:
+loc_100003859:
     var_154 = 0xffffffff;
-    goto loc_100002d88;
+    goto loc_100003c28;
 
-loc_1000029c8:
-    if (var_164 == 0x1) goto loc_1000028c5;
+loc_100003868:
+    if (var_164 == 0x1) goto loc_100003765;
 
-loc_1000029da:
+loc_10000387a:
     if (var_164 == 0x2) {
             var_154 = 0xffffffff;
     }
@@ -491,12 +491,12 @@ loc_1000029da:
                     var_154 = 0x0;
             }
     }
-    goto loc_100002d88;
+    goto loc_100003c28;
 
-loc_100002a23:
-    if ((*(int32_t *)(var_198 + 0x18c) & 0x8) == 0x0) goto loc_100002d7e;
+loc_1000038c3:
+    if ((*(int32_t *)(var_198 + 0x18c) & 0x8) == 0x0) goto loc_100003c1e;
 
-loc_100002a3c:
+loc_1000038dc:
     memcpy(&var_88, var_198 + 0x108, 0x80);
     var_181 = 0x0;
     if ((*(int8_t *)(var_198 + 0x192) & 0x1) != 0x0) {
@@ -515,13 +515,13 @@ loc_100002a3c:
                     }
             }
     }
-    if (fseeko(*(var_198 + 0x78), 0x0 - var_180, 0x1) == 0x0) goto loc_100002cd1;
+    if (fseeko(*(var_198 + 0x78), 0x0 - var_180, 0x1) == 0x0) goto loc_100003b71;
 
-loc_100002cc2:
+loc_100003b62:
     var_154 = 0xffffffff;
-    goto loc_100002d88;
+    goto loc_100003c28;
 
-loc_100002cd1:
+loc_100003b71:
     if ((var_181 & 0x1) != 0x0) {
             memcpy(var_198 + 0x88, &var_88, 0x80);
     }
@@ -531,26 +531,26 @@ loc_100002cd1:
     *(var_198 + 0x18) = 0x0;
     *(var_198 + 0x20) = 0x0;
     *(int32_t *)(var_198 + 0x18c) = 0x0;
-    goto loc_100002d7e;
+    goto loc_100003c1e;
 
-loc_100002d7e:
+loc_100003c1e:
     var_154 = 0x0;
-    goto loc_100002d88;
+    goto loc_100003c28;
 }
 
 function __ZNSt3__113basic_filebufIcNS_11char_traitsIcEEE9underflowEv() {
     var_2A8 = rdi;
-    if (*(rdi + 0x78) != 0x0) goto loc_100002dfc;
+    if (*(rdi + 0x78) != 0x0) goto loc_100003c9c;
 
-loc_100002dec:
+loc_100003c8c:
     var_234 = std::__1::char_traits<char>::eof();
-    goto loc_10000375e;
+    goto loc_100004605;
 
-loc_10000375e:
+loc_100004605:
     rax = var_234;
     return rax;
 
-loc_100002dfc:
+loc_100003c9c:
     var_241 = std::__1::basic_filebuf<char, std::__1::char_traits<char> >::__read_mode(var_2A8) & 0x1;
     if (*(var_2A8 + 0x18) == 0x0) {
             *(var_2A8 + 0x10) = &var_242;
@@ -573,13 +573,13 @@ loc_100002dfc:
     }
     var_250 = var_2B0;
     var_264 = std::__1::char_traits<char>::eof();
-    if (*(var_2A8 + 0x18) != *(var_2A8 + 0x20)) goto loc_1000036ae;
+    if (*(var_2A8 + 0x18) != *(var_2A8 + 0x20)) goto loc_100004555;
 
-loc_100003012:
+loc_100003ebe:
     memmove(*(var_2A8 + 0x10), *(var_2A8 + 0x20) + (0x0 - var_250), var_250 << 0x0);
-    if ((*(int8_t *)(var_2A8 + 0x192) & 0x1) == 0x0) goto loc_1000031a8;
+    if ((*(int8_t *)(var_2A8 + 0x192) & 0x1) == 0x0) goto loc_10000405a;
 
-loc_100003077:
+loc_100003f29:
     var_270 = fread(*(var_2A8 + 0x10) + var_250, 0x1, *(var_2A8 + 0x20) - *(var_2A8 + 0x10) - var_250, *(var_2A8 + 0x78));
     if (var_270 != 0x0) {
             rdx = *(var_2A8 + 0x10) + var_250;
@@ -589,19 +589,21 @@ loc_100003077:
             *(var_2A8 + 0x20) = rsi + var_270;
             var_264 = std::__1::char_traits<char>::to_int_type(sign_extend_64(*(int8_t *)*(var_2A8 + 0x18)), rsi + var_270, rdx, rsi + var_270);
     }
-    goto loc_1000036d5;
+    goto loc_10000457c;
 
-loc_1000036d5:
+loc_10000457c:
     if (*(var_2A8 + 0x10) == &var_242) {
             *(var_2A8 + 0x10) = 0x0;
             *(var_2A8 + 0x18) = 0x0;
             *(var_2A8 + 0x20) = 0x0;
     }
     var_234 = var_264;
-    goto loc_10000375e;
+    goto loc_100004605;
 
-loc_1000031a8:
-    memmove(*(var_2A8 + 0x40), *(var_2A8 + 0x48), *(var_2A8 + 0x50) - *(var_2A8 + 0x48));
+loc_10000405a:
+    if (*(var_2A8 + 0x50) != *(var_2A8 + 0x48)) {
+            memmove(*(var_2A8 + 0x40), *(var_2A8 + 0x48), *(var_2A8 + 0x50) - *(var_2A8 + 0x48));
+    }
     *(var_2A8 + 0x48) = *(var_2A8 + 0x40) + (*(var_2A8 + 0x50) - *(var_2A8 + 0x48));
     COND = *(var_2A8 + 0x40) != var_2A8 + 0x58;
     var_2E0 = *(var_2A8 + 0x40);
@@ -612,28 +614,28 @@ loc_1000031a8:
             var_2E8 = *(var_2A8 + 0x60);
     }
     *(var_2A8 + 0x50) = var_2E0 + var_2E8;
-    var_A8 = &var_280;
-    var_B0 = &var_288;
-    if (*var_B0 < *var_A8) {
-            var_2F0 = var_B0;
+    var_90 = &var_280;
+    var_98 = &var_288;
+    if (*var_98 < *var_90) {
+            var_2F0 = var_98;
     }
     else {
-            var_2F0 = var_A8;
+            var_2F0 = var_90;
     }
     memcpy(var_2A8 + 0x108, var_2A8 + 0x88, 0x80);
     var_298 = fread(*(var_2A8 + 0x48), 0x1, *var_2F0, *(var_2A8 + 0x78));
-    if (var_298 == 0x0) goto loc_1000036d5;
+    if (var_298 == 0x0) goto loc_10000457c;
 
-loc_10000339d:
-    if (*(var_2A8 + 0x80) != 0x0) goto loc_1000033fb;
+loc_100004244:
+    if (*(var_2A8 + 0x80) != 0x0) goto loc_1000042a2;
 
-loc_1000033b2:
+loc_100004259:
     rax = __cxa_allocate_exception(0x8);
     std::bad_cast::bad_cast(rax);
     rax = __cxa_throw(rax, typeinfo for std::bad_cast, std::bad_cast::~bad_cast(), rax);
     return rax;
 
-loc_1000033fb:
+loc_1000042a2:
     *(var_2A8 + 0x50) = *(var_2A8 + 0x48) + var_298;
     if ((*(**(var_2A8 + 0x80) + 0x20))(*(var_2A8 + 0x80), var_2A8 + 0x88, *(var_2A8 + 0x40), *(var_2A8 + 0x50), var_2A8 + 0x48, *(var_2A8 + 0x10) + var_250, *(var_2A8 + 0x10) + *(var_2A8 + 0x70), &var_2A0) == 0x3) {
             *(var_2A8 + 0x10) = *(var_2A8 + 0x40);
@@ -650,11 +652,11 @@ loc_1000033fb:
                     var_264 = std::__1::char_traits<char>::to_int_type(sign_extend_64(*(int8_t *)*(var_2A8 + 0x18)), var_2A0, rdx, var_2A0);
             }
     }
-    goto loc_1000036d5;
+    goto loc_10000457c;
 
-loc_1000036ae:
+loc_100004555:
     var_264 = std::__1::char_traits<char>::to_int_type(sign_extend_64(*(int8_t *)*(var_2A8 + 0x18)));
-    goto loc_1000036d5;
+    goto loc_10000457c;
 }
 
 function __ZNSt3__113basic_filebufIcNS_11char_traitsIcEEE9pbackfailEi() {
@@ -688,17 +690,17 @@ function __ZNSt3__113basic_filebufIcNS_11char_traitsIcEEE9pbackfailEi() {
 function __ZNSt3__113basic_filebufIcNS_11char_traitsIcEEE8overflowEi() {
     var_14C = rsi;
     var_198 = arg0;
-    if (*(arg0 + 0x78) != 0x0) goto loc_100003901;
+    if (*(arg0 + 0x78) != 0x0) goto loc_1000047b1;
 
-loc_1000038f1:
+loc_1000047a1:
     var_13C = std::__1::char_traits<char>::eof();
-    goto loc_100003ee5;
+    goto loc_100004d95;
 
-loc_100003ee5:
+loc_100004d95:
     rax = var_13C;
     return rax;
 
-loc_100003901:
+loc_1000047b1:
     std::__1::basic_filebuf<char, std::__1::char_traits<char> >::__write_mode(var_198);
     var_158 = *(var_198 + 0x28);
     var_160 = *(var_198 + 0x38);
@@ -711,94 +713,94 @@ loc_100003901:
             *(int8_t *)*(var_198 + 0x30) = std::__1::char_traits<char>::to_char_type(var_14C);
             *(var_198 + 0x30) = *(var_198 + 0x30) + sign_extend_64(0x1);
     }
-    if (*(var_198 + 0x30) == *(var_198 + 0x28)) goto loc_100003ed4;
+    if (*(var_198 + 0x30) == *(var_198 + 0x28)) goto loc_100004d84;
 
-loc_100003a63:
-    if ((*(int8_t *)(var_198 + 0x192) & 0x1) == 0x0) goto loc_100003afa;
+loc_100004913:
+    if ((*(int8_t *)(var_198 + 0x192) & 0x1) == 0x0) goto loc_1000049aa;
 
-loc_100003a77:
+loc_100004927:
     var_168 = *(var_198 + 0x30) - *(var_198 + 0x28);
-    if (fwrite(*(var_198 + 0x28), 0x1, var_168, *(var_198 + 0x78)) == var_168) goto loc_100003e89;
+    if (fwrite(*(var_198 + 0x28), 0x1, var_168, *(var_198 + 0x78)) == var_168) goto loc_100004d39;
 
-loc_100003ae5:
+loc_100004995:
     var_13C = std::__1::char_traits<char>::eof();
-    goto loc_100003ee5;
+    goto loc_100004d95;
 
-loc_100003e89:
+loc_100004d39:
     *(var_198 + 0x30) = var_158;
     *(var_198 + 0x28) = var_158;
     *(var_198 + 0x38) = var_160;
-    goto loc_100003ed4;
+    goto loc_100004d84;
 
-loc_100003ed4:
+loc_100004d84:
     var_13C = std::__1::char_traits<char>::not_eof(var_14C);
-    goto loc_100003ee5;
+    goto loc_100004d95;
 
-loc_100003afa:
+loc_1000049aa:
     var_170 = *(var_198 + 0x40);
-    goto loc_100003b0c;
+    goto loc_1000049bc;
 
-loc_100003b0c:
-    if (*(var_198 + 0x80) != 0x0) goto loc_100003b6a;
+loc_1000049bc:
+    if (*(var_198 + 0x80) != 0x0) goto loc_100004a1a;
 
-loc_100003b21:
+loc_1000049d1:
     rax = __cxa_allocate_exception(0x8);
     std::bad_cast::bad_cast(rax);
     rax = __cxa_throw(rax, typeinfo for std::bad_cast, std::bad_cast::~bad_cast(), rax);
     return rax;
 
-loc_100003b6a:
+loc_100004a1a:
     var_174 = (*(**(var_198 + 0x80) + 0x18))(*(var_198 + 0x80), var_198 + 0x88, *(var_198 + 0x28), *(var_198 + 0x30), &var_180, *(var_198 + 0x40), *(var_198 + 0x40) + *(var_198 + 0x60), &var_170);
-    if (var_180 != *(var_198 + 0x28)) goto loc_100003c71;
+    if (var_180 != *(var_198 + 0x28)) goto loc_100004b21;
 
-loc_100003c61:
+loc_100004b11:
     var_13C = std::__1::char_traits<char>::eof();
-    goto loc_100003ee5;
+    goto loc_100004d95;
 
-loc_100003c71:
-    if (var_174 != 0x3) goto loc_100003d13;
+loc_100004b21:
+    if (var_174 != 0x3) goto loc_100004bc3;
 
-loc_100003c7e:
+loc_100004b2e:
     var_188 = *(var_198 + 0x30) - *(var_198 + 0x28);
-    if (fwrite(*(var_198 + 0x28), 0x1, var_188, *(var_198 + 0x78)) == var_188) goto loc_100003e77;
+    if (fwrite(*(var_198 + 0x28), 0x1, var_188, *(var_198 + 0x78)) == var_188) goto loc_100004d27;
 
-loc_100003cfe:
+loc_100004bae:
     var_13C = std::__1::char_traits<char>::eof();
-    goto loc_100003ee5;
+    goto loc_100004d95;
 
-loc_100003e77:
-    if (var_174 == 0x1) goto loc_100003b0c;
-    goto loc_100003e89;
+loc_100004d27:
+    if (var_174 == 0x1) goto loc_1000049bc;
+    goto loc_100004d39;
 
-loc_100003d13:
-    if ((var_174 == 0x0) || (var_174 == 0x1)) goto loc_100003d2d;
+loc_100004bc3:
+    if ((var_174 == 0x0) || (var_174 == 0x1)) goto loc_100004bdd;
 
-loc_100003e5d:
+loc_100004d0d:
     var_13C = std::__1::char_traits<char>::eof();
-    goto loc_100003ee5;
+    goto loc_100004d95;
 
-loc_100003d2d:
+loc_100004bdd:
     var_190 = var_170 - *(var_198 + 0x40);
-    if (fwrite(*(var_198 + 0x40), 0x1, var_190, *(var_198 + 0x78)) == var_190) goto loc_100003d88;
+    if (fwrite(*(var_198 + 0x40), 0x1, var_190, *(var_198 + 0x78)) == var_190) goto loc_100004c38;
 
-loc_100003d78:
+loc_100004c28:
     var_13C = std::__1::char_traits<char>::eof();
-    goto loc_100003ee5;
+    goto loc_100004d95;
 
-loc_100003d88:
+loc_100004c38:
     if (var_174 == 0x1) {
             *(var_198 + 0x30) = var_180;
             *(var_198 + 0x28) = var_180;
             *(var_198 + 0x38) = *(var_198 + 0x30);
             *(var_198 + 0x30) = *(var_198 + 0x30) + sign_extend_64(*(var_198 + 0x38) - *(var_198 + 0x28));
     }
-    goto loc_100003e77;
+    goto loc_100004d27;
 }
 
 function __ZNSt3__113basic_filebufIcNS_11char_traitsIcEEED2Ev() {
-    *rdi = 0x1000063f8;
+    *rdi = 0x100007408;
     var_20 = rdi;
-    std::__1::basic_filebuf<char, std::__1::char_traits<char> >::close();
+    std::__1::basic_filebuf<char, std::__1::char_traits<char> >::close(rdi);
     if ((*(int8_t *)(var_20 + 0x190) & 0x1) != 0x0) {
             COND = *(var_20 + 0x40) == 0x0;
             var_38 = *(var_20 + 0x40);
@@ -818,32 +820,48 @@ function __ZNSt3__113basic_filebufIcNS_11char_traitsIcEEED2Ev() {
 }
 
 function __ZNSt3__113basic_filebufIcNS_11char_traitsIcEEE5closeEv() {
-    var_190 = 0x0;
-    var_1C0 = rdi;
+    var_128 = 0x0;
+    var_158 = rdi;
     if (*(rdi + 0x78) != 0x0) {
-            var_190 = var_1C0;
-            var_1A0 = *(var_1C0 + 0x78);
-            *(&var_1A0 + 0x8) = _fclose;
-            var_1C4 = (*(*var_1C0 + 0x30))(var_1C0, _fclose, _fclose, *(*var_1C0 + 0x30));
-            if (var_1C4 != 0x0) {
-                    var_190 = 0x0;
+            var_128 = var_158;
+            std::__1::__compressed_pair_elem<int (&var_138);
+            std::__1::__compressed_pair_elem<int (&var_138 + 0x8);
+            var_164 = (*(*var_158 + 0x30))(var_158);
+            if (var_164 != 0x0) {
+                    var_128 = 0x0;
             }
-            var_1DC = fclose(var_1A0);
-            if (var_1DC == 0x0) {
-                    *(var_1C0 + 0x78) = 0x0;
+            var_60 = *std::__1::__compressed_pair_elem<__sFILE*, 0, false>::__get(&var_138);
+            *std::__1::__compressed_pair_elem<__sFILE*, 0, false>::__get(&var_138) = 0x0;
+            var_18C = fclose(var_60);
+            if (var_18C == 0x0) {
+                    *(var_158 + 0x78) = 0x0;
             }
             else {
-                    var_190 = 0x0;
+                    var_128 = 0x0;
             }
-            var_1A0 = 0x0;
-            var_D0 = var_1A0;
-            var_1A0 = 0x0;
-            var_1E8 = &var_1A0;
-            if (var_D0 != 0x0) {
-                    (*(var_1E8 + 0x8))(var_D0);
+            var_198 = &var_138;
+            var_30 = *std::__1::__compressed_pair_elem<__sFILE*, 0, false>::__get(&var_138);
+            *std::__1::__compressed_pair_elem<__sFILE*, 0, false>::__get(var_198) = 0x0;
+            if (var_30 != 0x0) {
+                    (*std::__1::__compressed_pair_elem<int (var_198 + 0x8))(var_30);
             }
     }
-    rax = var_190;
+    rax = var_128;
+    return rax;
+}
+
+function __ZNSt3__122__compressed_pair_elemIPFiP7__sFILEELi1ELb0EEC2IS4_vEEOT_() {
+    *arg0 = *rsi;
+    return rax;
+}
+
+function __ZNSt3__122__compressed_pair_elemIP7__sFILELi0ELb0EE5__getEv() {
+    rax = rdi;
+    return rax;
+}
+
+function __ZNSt3__122__compressed_pair_elemIPFiP7__sFILEELi1ELb0EE5__getEv() {
+    rax = rdi;
     return rax;
 }
 
@@ -955,7 +973,6 @@ function __ZN1CC2Ei() {
     B::B(arg0);
     *(int8_t *)(var_1D8 + 0x4) = rsi;
     *(int8_t *)(var_1D8 + 0x5) = 0x0;
-    *(var_1D8 + 0x8) = 0x32aaaba7;
     *(var_1D8 + 0x40) = 0x0;
     *(var_1D8 + 0x38) = 0x0;
     *(var_1D8 + 0x30) = 0x0;
@@ -963,32 +980,41 @@ function __ZN1CC2Ei() {
     *(var_1D8 + 0x20) = 0x0;
     *(var_1D8 + 0x18) = 0x0;
     *(var_1D8 + 0x10) = 0x0;
+    *(var_1D8 + 0x8) = 0x0;
+    *(var_1D8 + 0x8) = 0x32aaaba7;
+    *(var_1D8 + 0x10) = 0x0;
+    *(var_1D8 + 0x40) = 0x0;
+    *(var_1D8 + 0x38) = 0x0;
+    *(var_1D8 + 0x30) = 0x0;
+    *(var_1D8 + 0x28) = 0x0;
+    *(var_1D8 + 0x20) = 0x0;
+    *(var_1D8 + 0x18) = 0x0;
     *(int8_t *)(var_1D8 + 0x10) = 0x0;
     *(var_1D8 + 0x48) = var_1D8 + 0x8;
-    std::__1::mutex::lock(var_1D8 + 0x8);
+    std::__1::mutex::lock(*(var_1D8 + 0x48));
     *(var_1D8 + 0x200) = non-virtual thunk to std::__1::basic_iostream<char, std::__1::char_traits<char> >::~basic_iostream();
     *(var_1D8 + 0x200) = non-virtual thunk to std::__1::basic_iostream<char, std::__1::char_traits<char> >::~basic_iostream();
-    *(var_1D8 + 0x50) = 0x1000061f8;
-    *(var_1D8 + 0x200) = 0x100006248;
-    *(var_1D8 + 0x60) = 0x100006220;
-    *(var_1D8 + 0x50) = *0x100006270;
-    *(*(*0x100006270 + 0xffffffffffffffe8) + var_1D8 + 0x50) = *0x100006278;
+    *(var_1D8 + 0x50) = 0x100007208;
+    *(var_1D8 + 0x200) = 0x100007258;
+    *(var_1D8 + 0x60) = 0x100007230;
+    *(var_1D8 + 0x50) = *0x100007280;
+    *(*(*(var_1D8 + 0x50) + 0xffffffffffffffe8) + var_1D8 + 0x50) = *0x100007288;
     *(var_1D8 + 0x58) = 0x0;
-    rdx = *(*(var_1D8 + 0x50) + 0xffffffffffffffe8) + var_1D8 + 0x50;
-    var_1F8 = var_1D8 + 0x50;
+    rdi = *(*(var_1D8 + 0x50) + 0xffffffffffffffe8) + var_1D8 + 0x50;
+    var_1F0 = rdi;
     var_208 = var_1D8 + 0x50;
-    var_210 = rdx;
-    std::__1::ios_base::init(rdx, var_1D8 + 0x68, rdx, var_1D8 + 0x50, var_1D8 + 0x68, *(*0x100006270 + 0xffffffffffffffe8));
-    *(var_210 + 0x88) = 0x0;
-    *(int32_t *)(var_210 + 0x90) = std::__1::char_traits<char>::eof();
-    *(var_1F8 + 0x10) = *0x100006280;
-    *(*(*0x100006280 + 0xffffffffffffffe8) + var_1F8 + 0x10) = *0x100006288;
-    *var_1F8 = *0x100006268;
-    *(var_1F8 + *(*0x100006268 + 0xffffffffffffffe8)) = *0x100006290;
-    *(var_1F8 + 0x10) = *0x100006298;
-    *var_208 = 0x1000061f8;
-    *(var_208 + 0x1b0) = 0x100006248;
-    *(var_208 + 0x10) = 0x100006220;
+    var_210 = var_1D8 + 0x50;
+    std::__1::ios_base::init(rdi, var_1D8 + 0x68, var_1D8 + 0x50, var_1D8 + 0x50, var_1D8 + 0x68, *(*(var_1D8 + 0x50) + 0xffffffffffffffe8));
+    *(var_1F0 + 0x88) = 0x0;
+    *(int32_t *)(var_1F0 + 0x90) = std::__1::char_traits<char>::eof();
+    *(var_210 + 0x10) = *0x100007290;
+    *(*(*(var_210 + 0x10) + 0xffffffffffffffe8) + var_210 + 0x10) = *0x100007298;
+    *var_210 = *0x100007278;
+    *(var_210 + *(*var_210 + 0xffffffffffffffe8)) = *0x1000072a0;
+    *(var_210 + 0x10) = *0x1000072a8;
+    *var_208 = 0x100007208;
+    *(var_208 + 0x1b0) = 0x100007258;
+    *(var_208 + 0x10) = 0x100007230;
     std::__1::basic_filebuf<char, std::__1::char_traits<char> >::basic_filebuf();
     var_220 = std::__1::basic_filebuf<char, std::__1::char_traits<char> >::open(var_208 + 0x18, "test.cc", 0x1);
     if (var_220 == 0x0) {
@@ -998,27 +1024,27 @@ function __ZN1CC2Ei() {
     }
     *(var_1D8 + 0x448) = non-virtual thunk to std::__1::basic_iostream<char, std::__1::char_traits<char> >::~basic_iostream();
     *(var_1D8 + 0x448) = non-virtual thunk to std::__1::basic_iostream<char, std::__1::char_traits<char> >::~basic_iostream();
-    *(var_1D8 + 0x298) = 0x1000061f8;
-    *(var_1D8 + 0x448) = 0x100006248;
-    *(var_1D8 + 0x2a8) = 0x100006220;
-    *(var_1D8 + 0x298) = *0x100006270;
-    *(*(*0x100006270 + 0xffffffffffffffe8) + var_1D8 + 0x298) = *0x100006278;
+    *(var_1D8 + 0x298) = 0x100007208;
+    *(var_1D8 + 0x448) = 0x100007258;
+    *(var_1D8 + 0x2a8) = 0x100007230;
+    *(var_1D8 + 0x298) = *0x100007280;
+    *(*(*(var_1D8 + 0x298) + 0xffffffffffffffe8) + var_1D8 + 0x298) = *0x100007288;
     *(var_1D8 + 0x2a0) = 0x0;
-    rcx = *(*(var_1D8 + 0x298) + 0xffffffffffffffe8) + var_1D8 + 0x298;
+    rsi = *(*(var_1D8 + 0x298) + 0xffffffffffffffe8) + var_1D8 + 0x298;
+    var_240 = rsi;
     var_248 = var_1D8 + 0x298;
     var_250 = var_1D8 + 0x298;
-    var_258 = rcx;
-    std::__1::ios_base::init(rcx, var_1D8 + 0x2b0, var_1D8 + 0x298, rcx, var_1D8 + 0x2b0);
-    *(var_258 + 0x88) = 0x0;
-    *(int32_t *)(var_258 + 0x90) = std::__1::char_traits<char>::eof();
-    *(var_250 + 0x10) = *0x100006280;
-    *(*(*0x100006280 + 0xffffffffffffffe8) + var_250 + 0x10) = *0x100006288;
-    *var_250 = *0x100006268;
-    *(var_250 + *(*0x100006268 + 0xffffffffffffffe8)) = *0x100006290;
-    *(var_250 + 0x10) = *0x100006298;
-    *var_248 = 0x1000061f8;
-    *(var_248 + 0x1b0) = 0x100006248;
-    *(var_248 + 0x10) = 0x100006220;
+    std::__1::ios_base::init(rsi, var_1D8 + 0x2b0, 0x100007278, var_1D8 + 0x298, var_1D8 + 0x2b0);
+    *(var_240 + 0x88) = 0x0;
+    *(int32_t *)(var_240 + 0x90) = std::__1::char_traits<char>::eof();
+    *(var_250 + 0x10) = *0x100007290;
+    *(*(*(var_250 + 0x10) + 0xffffffffffffffe8) + var_250 + 0x10) = *0x100007298;
+    *var_250 = *0x100007278;
+    *(var_250 + *(*var_250 + 0xffffffffffffffe8)) = *0x1000072a0;
+    *(var_250 + 0x10) = *0x1000072a8;
+    *var_248 = 0x100007208;
+    *(var_248 + 0x1b0) = 0x100007258;
+    *(var_248 + 0x10) = 0x100007230;
     std::__1::basic_filebuf<char, std::__1::char_traits<char> >::basic_filebuf();
     var_268 = std::__1::basic_filebuf<char, std::__1::char_traits<char> >::open(var_248 + 0x18, "test.bin", 0x5);
     rax = var_268;
@@ -1034,18 +1060,18 @@ function __ZNSt3__113basic_filebufIcNS_11char_traitsIcEEE4openEPKcj() {
     var_10 = arg1;
     var_14 = rdx;
     var_30 = arg0;
-    if (*(arg0 + 0x78) != 0x0) goto loc_100005192;
+    if (*(arg0 + 0x78) != 0x0) goto loc_100006142;
 
-loc_100004fee:
+loc_100005f9e:
     rcx = (var_14 & 0xfffffffd) - 0x3c;
     var_38 = (var_14 & 0xfffffffd) - 0x1;
-    if (rcx > 0x0) goto loc_1000050e4;
+    if (rcx > 0x0) goto loc_100006094;
 
-loc_100005010:
-    rax = (sign_extend_64(*(int32_t *)(0x10000519c + var_38 * 0x4)) + 0x10000519c)();
+loc_100005fc0:
+    rax = (sign_extend_64(*(int32_t *)(0x10000614c + var_38 * 0x4)) + 0x10000614c)();
     return rax;
 
-loc_1000050e4:
+loc_100006094:
     if (0x0 != 0x0) {
             *(var_30 + 0x78) = fopen(var_10, var_28);
             if (*(var_30 + 0x78) != 0x0) {
@@ -1058,9 +1084,9 @@ loc_1000050e4:
                     }
             }
     }
-    goto loc_100005192;
+    goto loc_100006142;
 
-loc_100005192:
+loc_100006142:
     rax = 0x0;
     return rax;
 }
@@ -1070,65 +1096,65 @@ function __ZN1CC2Ed() {
     var_178 = rdi;
     B::B(rdi);
     *(int8_t *)(var_178 + 0x4) = *(int8_t *)(var_178 + 0x5);
-    *(int8_t *)(var_178 + 0x5) = intrinsic_cvttsd2si(0x0, intrinsic_addsd(intrinsic_movsd(arg0, var_160), intrinsic_movsd(xmm1, *0x100005c18)));
+    *(int8_t *)(var_178 + 0x5) = intrinsic_cvttsd2si(0x0, intrinsic_addsd(intrinsic_movsd(arg0, var_160), intrinsic_movsd(xmm1, *0x100006c18)));
     *(var_178 + 0x8) = 0x32aaaba7;
+    *(var_178 + 0x10) = 0x0;
     *(var_178 + 0x40) = 0x0;
     *(var_178 + 0x38) = 0x0;
     *(var_178 + 0x30) = 0x0;
     *(var_178 + 0x28) = 0x0;
     *(var_178 + 0x20) = 0x0;
     *(var_178 + 0x18) = 0x0;
-    *(var_178 + 0x10) = 0x0;
     *(int8_t *)(var_178 + 0x10) = 0x0;
     *(var_178 + 0x48) = var_178 + 0x8;
-    std::__1::mutex::lock(var_178 + 0x8);
+    std::__1::mutex::lock(*(var_178 + 0x48));
     *(var_178 + 0x200) = non-virtual thunk to std::__1::basic_iostream<char, std::__1::char_traits<char> >::~basic_iostream();
     *(var_178 + 0x200) = non-virtual thunk to std::__1::basic_iostream<char, std::__1::char_traits<char> >::~basic_iostream();
-    *(var_178 + 0x50) = 0x1000061f8;
-    *(var_178 + 0x200) = 0x100006248;
-    *(var_178 + 0x60) = 0x100006220;
-    *(var_178 + 0x50) = *0x100006270;
-    *(*(*0x100006270 + 0xffffffffffffffe8) + var_178 + 0x50) = *0x100006278;
+    *(var_178 + 0x50) = 0x100007208;
+    *(var_178 + 0x200) = 0x100007258;
+    *(var_178 + 0x60) = 0x100007230;
+    *(var_178 + 0x50) = *0x100007280;
+    *(*(*(var_178 + 0x50) + 0xffffffffffffffe8) + var_178 + 0x50) = *0x100007288;
     *(var_178 + 0x58) = 0x0;
-    rsi = *(*(var_178 + 0x50) + 0xffffffffffffffe8) + var_178 + 0x50;
-    var_198 = rsi;
-    var_1A0 = var_178 + 0x50;
+    rdi = *(*(var_178 + 0x50) + 0xffffffffffffffe8) + var_178 + 0x50;
+    var_190 = rdi;
+    var_1A8 = var_178 + 0x50;
     var_1B0 = var_178 + 0x50;
-    std::__1::ios_base::init(rsi, var_178 + 0x68, var_178 + 0x50, var_178 + 0x50, var_178 + 0x68, *(*0x100006270 + 0xffffffffffffffe8));
-    *(var_198 + 0x88) = 0x0;
-    *(int32_t *)(var_198 + 0x90) = std::__1::char_traits<char>::eof();
-    *(var_1B0 + 0x10) = *0x100006280;
-    *(*(*0x100006280 + 0xffffffffffffffe8) + var_1B0 + 0x10) = *0x100006288;
-    *var_1B0 = *0x100006268;
-    *(var_1B0 + *(*0x100006268 + 0xffffffffffffffe8)) = *0x100006290;
-    *(var_1B0 + 0x10) = *0x100006298;
-    *var_1A0 = 0x1000061f8;
-    *(var_1A0 + 0x1b0) = 0x100006248;
-    *(var_1A0 + 0x10) = 0x100006220;
+    std::__1::ios_base::init(rdi, var_178 + 0x68, var_178 + 0x50, var_178 + 0x50, var_178 + 0x68, *(*(var_178 + 0x50) + 0xffffffffffffffe8));
+    *(var_190 + 0x88) = 0x0;
+    *(int32_t *)(var_190 + 0x90) = std::__1::char_traits<char>::eof();
+    *(var_1B0 + 0x10) = *0x100007290;
+    *(*(*(var_1B0 + 0x10) + 0xffffffffffffffe8) + var_1B0 + 0x10) = *0x100007298;
+    *var_1B0 = *0x100007278;
+    *(var_1B0 + *(*var_1B0 + 0xffffffffffffffe8)) = *0x1000072a0;
+    *(var_1B0 + 0x10) = *0x1000072a8;
+    *var_1A8 = 0x100007208;
+    *(var_1A8 + 0x1b0) = 0x100007258;
+    *(var_1A8 + 0x10) = 0x100007230;
     std::__1::basic_filebuf<char, std::__1::char_traits<char> >::basic_filebuf();
     *(var_178 + 0x448) = non-virtual thunk to std::__1::basic_iostream<char, std::__1::char_traits<char> >::~basic_iostream();
     *(var_178 + 0x448) = non-virtual thunk to std::__1::basic_iostream<char, std::__1::char_traits<char> >::~basic_iostream();
-    *(var_178 + 0x298) = 0x1000061f8;
-    *(var_178 + 0x448) = 0x100006248;
-    *(var_178 + 0x2a8) = 0x100006220;
-    *(var_178 + 0x298) = *0x100006270;
-    *(*(*0x100006270 + 0xffffffffffffffe8) + var_178 + 0x298) = *0x100006278;
+    *(var_178 + 0x298) = 0x100007208;
+    *(var_178 + 0x448) = 0x100007258;
+    *(var_178 + 0x2a8) = 0x100007230;
+    *(var_178 + 0x298) = *0x100007280;
+    *(*(*(var_178 + 0x298) + 0xffffffffffffffe8) + var_178 + 0x298) = *0x100007288;
     *(var_178 + 0x2a0) = 0x0;
-    rdx = *(*(var_178 + 0x298) + 0xffffffffffffffe8) + var_178 + 0x298;
+    rsi = *(*(var_178 + 0x298) + 0xffffffffffffffe8) + var_178 + 0x298;
+    var_1D0 = rsi;
     var_1D8 = var_178 + 0x298;
     var_1E0 = var_178 + 0x298;
-    var_1E8 = rdx;
-    std::__1::ios_base::init(rdx, var_178 + 0x2b0, rdx, var_178 + 0x298, var_178 + 0x2b0);
-    *(var_1E8 + 0x88) = 0x0;
-    *(int32_t *)(var_1E8 + 0x90) = std::__1::char_traits<char>::eof();
-    *(var_1E0 + 0x10) = *0x100006280;
-    *(*(*0x100006280 + 0xffffffffffffffe8) + var_1E0 + 0x10) = *0x100006288;
-    *var_1E0 = *0x100006268;
-    *(var_1E0 + *(*0x100006268 + 0xffffffffffffffe8)) = *0x100006290;
-    *(var_1E0 + 0x10) = *0x100006298;
-    *var_1D8 = 0x1000061f8;
-    *(var_1D8 + 0x1b0) = 0x100006248;
-    *(var_1D8 + 0x10) = 0x100006220;
+    std::__1::ios_base::init(rsi, var_178 + 0x2b0, 0x100007278, var_178 + 0x298, var_178 + 0x2b0);
+    *(var_1D0 + 0x88) = 0x0;
+    *(int32_t *)(var_1D0 + 0x90) = std::__1::char_traits<char>::eof();
+    *(var_1E0 + 0x10) = *0x100007290;
+    *(*(*(var_1E0 + 0x10) + 0xffffffffffffffe8) + var_1E0 + 0x10) = *0x100007298;
+    *var_1E0 = *0x100007278;
+    *(var_1E0 + *(*var_1E0 + 0xffffffffffffffe8)) = *0x1000072a0;
+    *(var_1E0 + 0x10) = *0x1000072a8;
+    *var_1D8 = 0x100007208;
+    *(var_1D8 + 0x1b0) = 0x100007258;
+    *(var_1D8 + 0x10) = 0x100007230;
     rax = std::__1::basic_filebuf<char, std::__1::char_traits<char> >::basic_filebuf();
     return rax;
 }
@@ -1213,6 +1239,16 @@ function imp___stubs___ZNSt3__115basic_streambufIcNS_11char_traitsIcEEEC2Ev() {
 
 function imp___stubs___ZNSt3__115basic_streambufIcNS_11char_traitsIcEEED2Ev() {
     rax = std::__1::basic_streambuf<char, std::__1::char_traits<char> >::~basic_streambuf();
+    return rax;
+}
+
+function imp___stubs___ZNSt3__122__compressed_pair_elemIP7__sFILELi0ELb0EE5__getEv() {
+    rax = std::__1::__compressed_pair_elem<__sFILE*, 0, false>::__get();
+    return rax;
+}
+
+function imp___stubs___ZNSt3__122__compressed_pair_elemIPFiP7__sFILEELi1ELb0EE5__getEv() {
+    rax = std::__1::__compressed_pair_elem<int ();
     return rax;
 }
 
@@ -1356,44 +1392,29 @@ function imp___stubs__memset() {
     return rax;
 }
 
-function sub_100001990() {
-    *(int32_t *)(rbp + 0xffffffffffffff8c) = rdx;
-    ___clang_call_terminate();
+function sub_1000024d0() {
+    *(rbp + 0xfffffffffffffea0) = rax;
+    *(int32_t *)(rbp + 0xfffffffffffffe9c) = rdx;
+    *(rbp + 0xfffffffffffffe08) = __cxa_begin_catch(*(rbp + 0xfffffffffffffea0));
+    __cxa_rethrow();
     return;
 }
 
-function sub_1000043a0() {
-    *(int32_t *)(rbp + 0xfffffffffffffe10) = rdx;
-    ___clang_call_terminate();
+function sub_100002580() {
+    *(rbp + 0xfffffffffffffea0) = rax;
+    *(int32_t *)(rbp + 0xfffffffffffffe9c) = rdx;
+    __cxa_end_catch();
+    _Unwind_Resume(*(rbp + 0xfffffffffffffea0));
     return;
 }
 
-function sub_100004b90() {
-    std::__1::basic_iostream<char, std::__1::char_traits<char> >::~basic_iostream(*(rbp + 0xfffffffffffffdf8), 0x100006268);
-    std::__1::basic_ios<char, std::__1::char_traits<char> >::~basic_ios(*(rbp + 0xfffffffffffffdf8) + 0x1b0);
-    *(rbp + 0xfffffffffffffdd8) = *(rbp + 0xfffffffffffffe98);
-    *(int32_t *)(rbp + 0xfffffffffffffdd4) = *(int32_t *)(rbp + 0xfffffffffffffe94);
-    *(rbp + 0xfffffffffffffe38) = *(rbp + 0xfffffffffffffdd8);
-    *(int32_t *)(rbp + 0xfffffffffffffe34) = *(int32_t *)(rbp + 0xfffffffffffffdd4);
-    *(rbp + 0xfffffffffffffe60) = *(rbp + 0xfffffffffffffe18);
-    *(rbp + 0xfffffffffffffe68) = *(rbp + 0xfffffffffffffe60);
-    std::__1::mutex::unlock(**(rbp + 0xfffffffffffffe68));
-    std::__1::mutex::~mutex(*(rbp + 0xfffffffffffffe20));
-    rax = _Unwind_Resume(*(rbp + 0xfffffffffffffe38));
+function imp___stubs____cxa_rethrow() {
+    rax = ___cxa_rethrow();
     return rax;
 }
 
-function sub_100004ea0() {
-    *(rbp + 0xffffffffffffff50) = rax;
-    *(int32_t *)(rbp + 0xffffffffffffff4c) = rdx;
-    std::__1::basic_filebuf<char, std::__1::char_traits<char> >::~basic_filebuf();
-    std::__1::basic_iostream<char, std::__1::char_traits<char> >::~basic_iostream(*(rbp + 0xfffffffffffffdb8), 0x100006268);
-    std::__1::basic_ios<char, std::__1::char_traits<char> >::~basic_ios(*(rbp + 0xfffffffffffffdb8) + 0x1b0);
-    *(rbp + 0xfffffffffffffd90) = *(rbp + 0xffffffffffffff50);
-    *(int32_t *)(rbp + 0xfffffffffffffd8c) = *(int32_t *)(rbp + 0xffffffffffffff4c);
-    *(rbp + 0xfffffffffffffe38) = *(rbp + 0xfffffffffffffd90);
-    *(int32_t *)(rbp + 0xfffffffffffffe34) = *(int32_t *)(rbp + 0xfffffffffffffd8c);
-    rax = std::__1::basic_fstream<char, std::__1::char_traits<char> >::~basic_fstream();
+function imp___stubs____cxa_end_catch() {
+    rax = ___cxa_end_catch();
     return rax;
 }
 
@@ -1402,24 +1423,63 @@ function imp___stubs___Unwind_Resume() {
     return;
 }
 
-function sub_100005b10() {
+function sub_100004ea0() {
+    ___clang_call_terminate();
+    return;
+}
+
+function sub_100004e00() {
+    loc_100004e0a();
+    return;
+}
+
+function sub_1000050d0() {
+    *rax = *(rbp + 0xfffffffffffffe88);
+    if (*(rbp + 0xffffffffffffff70) != 0x0) {
+            *(rbp + 0xffffffffffffff98) = *(rbp + 0xfffffffffffffe90);
+            *(int32_t *)(rbp + 0xfffffffffffffe84) = (*std::__1::__compressed_pair_elem<int (*(rbp + 0xffffffffffffff98) + 0x8))(*(rbp + 0xffffffffffffff70));
+    }
+    _Unwind_Resume(*(rbp + 0xfffffffffffffeb8));
+    return;
+}
+
+function sub_100005f00() {
+    *(rbp + 0xfffffffffffffe38) = *(rbp + 0xfffffffffffffd90);
+    *(int32_t *)(rbp + 0xfffffffffffffe34) = *(int32_t *)(rbp + 0xfffffffffffffd8c);
+    std::__1::basic_fstream<char, std::__1::char_traits<char> >::~basic_fstream();
+    *(rbp + 0xfffffffffffffe60) = *(rbp + 0xfffffffffffffe18);
+    *(rbp + 0xfffffffffffffe68) = *(rbp + 0xfffffffffffffe60);
+    std::__1::mutex::unlock(**(rbp + 0xfffffffffffffe68));
+    std::__1::mutex::~mutex(*(rbp + 0xfffffffffffffe20));
+    rax = _Unwind_Resume(*(rbp + 0xfffffffffffffe38));
+    return rax;
+}
+
+function sub_100006ad0() {
     rsp = rsp - 0x8;
     dyld_stub_binder();
     return;
 }
 
-function sub_100005b60() {
-    loc_100005ab0();
+function sub_100006b20() {
+    loc_100006aac();
     return;
 }
 
-function sub_100005bb0() {
-    loc_100005ab0();
+function sub_100006b70() {
+    loc_100006aac();
     return;
 }
 
-function sub_100005c00() {
-    loc_100005ab0();
+function sub_100006bc0() {
+    loc_100006aac();
     return;
+}
+
+function sub_100005ea0() {
+    *(rbp + 0xfffffffffffffd90) = *(rbp + 0xffffffffffffff50);
+    *(int32_t *)(rbp + 0xfffffffffffffd8c) = *(int32_t *)(rbp + 0xffffffffffffff4c);
+    rax = sub_100005f00();
+    return rax;
 }
 

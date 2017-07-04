@@ -13,17 +13,17 @@
            |  nvsize=4, nvalign=4]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7ff300069058 <object_model/2_constructors/02_member_class_object_with_default_constructor.cpp:2:1, line:10:1> line:2:8 referenced struct A definition
-|-CXXRecordDecl 0x7ff300069178 <col:1, col:8> col:8 implicit referenced struct A
-|-FieldDecl 0x7ff300069228 <line:3:5, col:9> col:9 a 'int'
-|-CXXConstructorDecl 0x7ff300069310 <line:5:5, col:10> col:5 used A 'void (void)'
-| `-CompoundStmt 0x7ff3000696a0 <col:9, col:10>
-|-CXXDestructorDecl 0x7ff300069408 <line:7:5, col:18> col:5 ~A 'void (void) noexcept' default trivial
-|-CXXConstructorDecl 0x7ff300069580 <line:9:5, col:22> col:14 A 'void (int)'
-| |-ParmVarDecl 0x7ff3000694c0 <col:16> col:19 'int'
-| `-CompoundStmt 0x7ff3000696b8 <col:21, col:22>
-`-CXXConstructorDecl 0x7ff300069b58 <line:2:8> col:8 implicit constexpr A 'void (const struct A &)' inline default trivial noexcept-unevaluated 0x7ff300069b58
-  `-ParmVarDecl 0x7ff300069c80 <col:8> col:8 'const struct A &'
+Record: CXXRecordDecl 0x7fd967069058 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/02_member_class_object_with_default_constructor.cpp:2:1, line:10:1> line:2:8 referenced struct A definition
+|-CXXRecordDecl 0x7fd967069178 <col:1, col:8> col:8 implicit referenced struct A
+|-FieldDecl 0x7fd967069228 <line:3:5, col:9> col:9 a 'int'
+|-CXXConstructorDecl 0x7fd967069310 <line:5:5, col:10> col:5 used A 'void (void)'
+| `-CompoundStmt 0x7fd9670696a0 <col:9, col:10>
+|-CXXDestructorDecl 0x7fd967069408 <line:7:5, col:18> col:5 ~A 'void (void) noexcept' default trivial
+|-CXXConstructorDecl 0x7fd967069580 <line:9:5, col:22> col:14 A 'void (int)'
+| |-ParmVarDecl 0x7fd9670694c0 <col:16> col:19 'int'
+| `-CompoundStmt 0x7fd9670696b8 <col:21, col:22>
+`-CXXConstructorDecl 0x7fd967069b58 <line:2:8> col:8 implicit constexpr A 'void (const struct A &)' inline default trivial noexcept-unevaluated 0x7fd967069b58
+  `-ParmVarDecl 0x7fd967069c80 <col:8> col:8 'const struct A &'
 
 Layout: <CGRecordLayout
   LLVMType:%struct.A = type { i32 }
@@ -33,16 +33,16 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7ff3000696d0 <object_model/2_constructors/02_member_class_object_with_default_constructor.cpp:12:1, line:18:1> line:12:8 referenced struct B definition
-|-CXXRecordDecl 0x7ff3000697f8 <col:1, col:8> col:8 implicit referenced struct B
-|-FieldDecl 0x7ff3000698a0 <line:13:5, col:7> col:7 a 'struct A'
-|-CXXConstructorDecl 0x7ff300069958 <line:15:5, col:10> col:5 used B 'void (void)'
-| |-CXXCtorInitializer Field 0x7ff3000698a0 'a' 'struct A'
-| | `-CXXConstructExpr 0x7ff300069ce8 <col:5> 'struct A' 'void (void)'
-| `-CompoundStmt 0x7ff300069d48 <col:9, col:10>
-|-CXXDestructorDecl 0x7ff300069a50 <line:17:5, col:18> col:5 ~B 'void (void) noexcept' default trivial
-`-CXXConstructorDecl 0x7ff301003400 <line:12:8> col:8 implicit constexpr B 'void (const struct B &)' inline default trivial noexcept-unevaluated 0x7ff301003400
-  `-ParmVarDecl 0x7ff301003530 <col:8> col:8 'const struct B &'
+Record: CXXRecordDecl 0x7fd9670696d0 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/02_member_class_object_with_default_constructor.cpp:12:1, line:18:1> line:12:8 referenced struct B definition
+|-CXXRecordDecl 0x7fd9670697f8 <col:1, col:8> col:8 implicit referenced struct B
+|-FieldDecl 0x7fd9670698a0 <line:13:5, col:7> col:7 a 'struct A'
+|-CXXConstructorDecl 0x7fd967069958 <line:15:5, col:10> col:5 used B 'void (void)'
+| |-CXXCtorInitializer Field 0x7fd9670698a0 'a' 'struct A'
+| | `-CXXConstructExpr 0x7fd967069ce8 <col:5> 'struct A' 'void (void)'
+| `-CompoundStmt 0x7fd967069d48 <col:9, col:10>
+|-CXXDestructorDecl 0x7fd967069a50 <line:17:5, col:18> col:5 ~B 'void (void) noexcept' default trivial
+`-CXXConstructorDecl 0x7fd967098c00 <line:12:8> col:8 implicit constexpr B 'void (const struct B &)' inline default trivial noexcept-unevaluated 0x7fd967098c00
+  `-ParmVarDecl 0x7fd967098d30 <col:8> col:8 'const struct B &'
 
 Layout: <CGRecordLayout
   LLVMType:%struct.B = type { %struct.A }
@@ -82,18 +82,18 @@ Layout: <CGRecordLayout
            |  nvsize=24, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7ff300069d60 <object_model/2_constructors/02_member_class_object_with_default_constructor.cpp:21:1, line:27:1> line:21:8 referenced struct X definition
-|-CXXRecordDecl 0x7ff300069e88 <col:1, col:8> col:8 implicit referenced struct X
-|-FieldDecl 0x7ff300069f38 <line:22:5, col:11> col:11 x 'short'
-|-CXXConstructorDecl 0x7ff300094400 <line:24:5, col:17> col:5 used X 'void (void)'
-| |-CXXCtorInitializer Field 0x7ff300069f38 'x' 'short'
-| | `-InitListExpr 0x7ff300094640 <col:12, col:14> 'short'
-| |   `-ImplicitCastExpr 0x7ff300094680 <col:13> 'short' <IntegralCast>
-| |     `-IntegerLiteral 0x7ff3000945d8 <col:13> 'int' 0
-| `-CompoundStmt 0x7ff3000946d0 <col:16, col:17>
-|-CXXDestructorDecl 0x7ff3000944f8 <line:26:5, col:18> col:5 ~X 'void (void) noexcept' default trivial
-`-CXXConstructorDecl 0x7ff301002948 <line:21:8> col:8 implicit constexpr X 'void (const struct X &)' inline default trivial noexcept-unevaluated 0x7ff301002948
-  `-ParmVarDecl 0x7ff301002a70 <col:8> col:8 'const struct X &'
+Record: CXXRecordDecl 0x7fd967069d60 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/02_member_class_object_with_default_constructor.cpp:21:1, line:27:1> line:21:8 referenced struct X definition
+|-CXXRecordDecl 0x7fd967069e88 <col:1, col:8> col:8 implicit referenced struct X
+|-FieldDecl 0x7fd967069f38 <line:22:5, col:11> col:11 x 'short'
+|-CXXConstructorDecl 0x7fd967095800 <line:24:5, col:17> col:5 used X 'void (void)'
+| |-CXXCtorInitializer Field 0x7fd967069f38 'x' 'short'
+| | `-InitListExpr 0x7fd967095a40 <col:12, col:14> 'short'
+| |   `-ImplicitCastExpr 0x7fd967095a80 <col:13> 'short' <IntegralCast>
+| |     `-IntegerLiteral 0x7fd9670959d8 <col:13> 'int' 0
+| `-CompoundStmt 0x7fd967095ad0 <col:16, col:17>
+|-CXXDestructorDecl 0x7fd9670958f8 <line:26:5, col:18> col:5 ~X 'void (void) noexcept' default trivial
+`-CXXConstructorDecl 0x7fd967098148 <line:21:8> col:8 implicit constexpr X 'void (const struct X &)' inline default trivial noexcept-unevaluated 0x7fd967098148
+  `-ParmVarDecl 0x7fd967098270 <col:8> col:8 'const struct X &'
 
 Layout: <CGRecordLayout
   LLVMType:%struct.X = type { i16 }
@@ -103,24 +103,24 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7ff3000946e8 <object_model/2_constructors/02_member_class_object_with_default_constructor.cpp:29:1, line:37:1> line:29:8 referenced struct Y definition
-|-CXXRecordDecl 0x7ff300094808 <col:1, col:8> col:8 implicit referenced struct Y
-|-FieldDecl 0x7ff3000948b8 <line:30:5, col:9> col:9 y 'int'
-|-CXXConstructorDecl 0x7ff300094968 <line:32:5, col:17> col:5 Y 'void (void)'
-| |-CXXCtorInitializer Field 0x7ff3000948b8 'y' 'int'
-| | `-InitListExpr 0x7ff300094cf0 <col:12, col:14> 'int'
-| |   `-IntegerLiteral 0x7ff300094c88 <col:13> 'int' 0
-| `-CompoundStmt 0x7ff300094d68 <col:16, col:17>
-|-CXXConstructorDecl 0x7ff300094ab0 <line:34:5, col:31> col:14 used Y 'void (int)'
-| |-ParmVarDecl 0x7ff300094a28 <col:16, col:20> col:20 used i 'int'
-| |-CXXCtorInitializer Field 0x7ff3000948b8 'y' 'int'
-| | `-InitListExpr 0x7ff300094df0 <col:26, col:28> 'int'
-| |   `-ImplicitCastExpr 0x7ff300094e30 <col:27> 'int' <LValueToRValue>
-| |     `-DeclRefExpr 0x7ff300094d80 <col:27> 'int' lvalue ParmVar 0x7ff300094a28 'i' 'int'
-| `-CompoundStmt 0x7ff300094e80 <col:30, col:31>
-|-CXXDestructorDecl 0x7ff300094bb0 <line:36:5, col:18> col:5 ~Y 'void (void) noexcept' default trivial
-`-CXXConstructorDecl 0x7ff301002728 <line:29:8> col:8 implicit constexpr Y 'void (const struct Y &)' inline default trivial noexcept-unevaluated 0x7ff301002728
-  `-ParmVarDecl 0x7ff301002850 <col:8> col:8 'const struct Y &'
+Record: CXXRecordDecl 0x7fd967095ae8 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/02_member_class_object_with_default_constructor.cpp:29:1, line:37:1> line:29:8 referenced struct Y definition
+|-CXXRecordDecl 0x7fd967095c08 <col:1, col:8> col:8 implicit referenced struct Y
+|-FieldDecl 0x7fd967095cb8 <line:30:5, col:9> col:9 y 'int'
+|-CXXConstructorDecl 0x7fd967095d68 <line:32:5, col:17> col:5 Y 'void (void)'
+| |-CXXCtorInitializer Field 0x7fd967095cb8 'y' 'int'
+| | `-InitListExpr 0x7fd9670960f0 <col:12, col:14> 'int'
+| |   `-IntegerLiteral 0x7fd967096088 <col:13> 'int' 0
+| `-CompoundStmt 0x7fd967096168 <col:16, col:17>
+|-CXXConstructorDecl 0x7fd967095eb0 <line:34:5, col:31> col:14 used Y 'void (int)'
+| |-ParmVarDecl 0x7fd967095e28 <col:16, col:20> col:20 used i 'int'
+| |-CXXCtorInitializer Field 0x7fd967095cb8 'y' 'int'
+| | `-InitListExpr 0x7fd9670961f0 <col:26, col:28> 'int'
+| |   `-ImplicitCastExpr 0x7fd967096230 <col:27> 'int' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fd967096180 <col:27> 'int' lvalue ParmVar 0x7fd967095e28 'i' 'int'
+| `-CompoundStmt 0x7fd967096280 <col:30, col:31>
+|-CXXDestructorDecl 0x7fd967095fb0 <line:36:5, col:18> col:5 ~Y 'void (void) noexcept' default trivial
+`-CXXConstructorDecl 0x7fd967097f28 <line:29:8> col:8 implicit constexpr Y 'void (const struct Y &)' inline default trivial noexcept-unevaluated 0x7fd967097f28
+  `-ParmVarDecl 0x7fd967098050 <col:8> col:8 'const struct Y &'
 
 Layout: <CGRecordLayout
   LLVMType:%struct.Y = type { i32 }
@@ -130,18 +130,18 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7ff300094e98 <object_model/2_constructors/02_member_class_object_with_default_constructor.cpp:39:1, line:45:1> line:39:8 referenced struct Z definition
-|-CXXRecordDecl 0x7ff300094fb8 <col:1, col:8> col:8 implicit referenced struct Z
-|-FieldDecl 0x7ff300095068 <line:40:5, col:10> col:10 z 'long'
-|-CXXConstructorDecl 0x7ff300095118 <line:42:5, col:17> col:5 used Z 'void (void)'
-| |-CXXCtorInitializer Field 0x7ff300095068 'z' 'long'
-| | `-InitListExpr 0x7ff300095350 <col:12, col:14> 'long'
-| |   `-ImplicitCastExpr 0x7ff300095390 <col:13> 'long' <IntegralCast>
-| |     `-IntegerLiteral 0x7ff3000952e8 <col:13> 'int' 0
-| `-CompoundStmt 0x7ff3000953e0 <col:16, col:17>
-|-CXXDestructorDecl 0x7ff300095210 <line:44:5, col:18> col:5 ~Z 'void (void) noexcept' default trivial
-`-CXXConstructorDecl 0x7ff301002b58 <line:39:8> col:8 implicit constexpr Z 'void (const struct Z &)' inline default trivial noexcept-unevaluated 0x7ff301002b58
-  `-ParmVarDecl 0x7ff301002c80 <col:8> col:8 'const struct Z &'
+Record: CXXRecordDecl 0x7fd967096298 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/02_member_class_object_with_default_constructor.cpp:39:1, line:45:1> line:39:8 referenced struct Z definition
+|-CXXRecordDecl 0x7fd9670963b8 <col:1, col:8> col:8 implicit referenced struct Z
+|-FieldDecl 0x7fd967096468 <line:40:5, col:10> col:10 z 'long'
+|-CXXConstructorDecl 0x7fd967096518 <line:42:5, col:17> col:5 used Z 'void (void)'
+| |-CXXCtorInitializer Field 0x7fd967096468 'z' 'long'
+| | `-InitListExpr 0x7fd967096750 <col:12, col:14> 'long'
+| |   `-ImplicitCastExpr 0x7fd967096790 <col:13> 'long' <IntegralCast>
+| |     `-IntegerLiteral 0x7fd9670966e8 <col:13> 'int' 0
+| `-CompoundStmt 0x7fd9670967e0 <col:16, col:17>
+|-CXXDestructorDecl 0x7fd967096610 <line:44:5, col:18> col:5 ~Z 'void (void) noexcept' default trivial
+`-CXXConstructorDecl 0x7fd967098358 <line:39:8> col:8 implicit constexpr Z 'void (const struct Z &)' inline default trivial noexcept-unevaluated 0x7fd967098358
+  `-ParmVarDecl 0x7fd967098480 <col:8> col:8 'const struct Z &'
 
 Layout: <CGRecordLayout
   LLVMType:%struct.Z = type { i64 }
@@ -151,30 +151,30 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7ff301002000 <object_model/2_constructors/02_member_class_object_with_default_constructor.cpp:47:1, line:59:1> line:47:7 referenced class Xyz definition
-|-CXXRecordDecl 0x7ff301002128 <col:1, col:7> col:7 implicit referenced class Xyz
-|-AccessSpecDecl 0x7ff3010021c0 <line:48:1, col:8> col:1 private
-|-FieldDecl 0x7ff301002200 <line:49:5, col:9> col:9 _v 'int'
-|-AccessSpecDecl 0x7ff301002248 <line:51:1, col:7> col:1 public
-|-FieldDecl 0x7ff301002280 <line:52:5, col:7> col:7 x 'struct X'
-|-FieldDecl 0x7ff3010022d8 <line:53:5, col:7> col:7 y 'struct Y'
-|-FieldDecl 0x7ff301002330 <line:54:5, col:7> col:7 z 'struct Z'
-|-CXXConstructorDecl 0x7ff3010023e8 <line:56:5, col:32> col:5 used Xyz 'void (void)'
-| |-CXXCtorInitializer Field 0x7ff301002200 '_v' 'int'
-| | `-InitListExpr 0x7ff301002620 <col:15, col:20> 'int'
-| |   `-IntegerLiteral 0x7ff3010025b8 <col:16> 'int' 2048
-| |-CXXCtorInitializer Field 0x7ff301002280 'x' 'struct X'
-| | `-CXXConstructExpr 0x7ff301002ad8 <col:5> 'struct X' 'void (void)'
-| |-CXXCtorInitializer Field 0x7ff3010022d8 'y' 'struct Y'
-| | `-CXXConstructExpr 0x7ff3010028b8 <col:23, col:29> 'struct Y' 'void (int)'
-| |   `-IntegerLiteral 0x7ff301002690 <col:25> 'int' 1024
-| |-CXXCtorInitializer Field 0x7ff301002330 'z' 'struct Z'
-| | `-CXXConstructExpr 0x7ff301002ce8 <col:5> 'struct Z' 'void (void)'
-| `-CompoundStmt 0x7ff301002d60 <col:31, col:32>
-|-CXXDestructorDecl 0x7ff3010024e0 <line:58:5, col:13> col:5 used ~Xyz 'void (void) noexcept'
-| `-CompoundStmt 0x7ff301002d78 <col:12, col:13>
-`-CXXConstructorDecl 0x7ff3010036b8 <line:47:7> col:7 implicit constexpr Xyz 'void (const class Xyz &)' inline default trivial noexcept-unevaluated 0x7ff3010036b8
-  `-ParmVarDecl 0x7ff3010037e0 <col:7> col:7 'const class Xyz &'
+Record: CXXRecordDecl 0x7fd967097800 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/02_member_class_object_with_default_constructor.cpp:47:1, line:59:1> line:47:7 referenced class Xyz definition
+|-CXXRecordDecl 0x7fd967097928 <col:1, col:7> col:7 implicit referenced class Xyz
+|-AccessSpecDecl 0x7fd9670979c0 <line:48:1, col:8> col:1 private
+|-FieldDecl 0x7fd967097a00 <line:49:5, col:9> col:9 _v 'int'
+|-AccessSpecDecl 0x7fd967097a48 <line:51:1, col:7> col:1 public
+|-FieldDecl 0x7fd967097a80 <line:52:5, col:7> col:7 x 'struct X'
+|-FieldDecl 0x7fd967097ad8 <line:53:5, col:7> col:7 y 'struct Y'
+|-FieldDecl 0x7fd967097b30 <line:54:5, col:7> col:7 z 'struct Z'
+|-CXXConstructorDecl 0x7fd967097be8 <line:56:5, col:32> col:5 used Xyz 'void (void)'
+| |-CXXCtorInitializer Field 0x7fd967097a00 '_v' 'int'
+| | `-InitListExpr 0x7fd967097e20 <col:15, col:20> 'int'
+| |   `-IntegerLiteral 0x7fd967097db8 <col:16> 'int' 2048
+| |-CXXCtorInitializer Field 0x7fd967097a80 'x' 'struct X'
+| | `-CXXConstructExpr 0x7fd9670982d8 <col:5> 'struct X' 'void (void)'
+| |-CXXCtorInitializer Field 0x7fd967097ad8 'y' 'struct Y'
+| | `-CXXConstructExpr 0x7fd9670980b8 <col:23, col:29> 'struct Y' 'void (int)'
+| |   `-IntegerLiteral 0x7fd967097e90 <col:25> 'int' 1024
+| |-CXXCtorInitializer Field 0x7fd967097b30 'z' 'struct Z'
+| | `-CXXConstructExpr 0x7fd9670984e8 <col:5> 'struct Z' 'void (void)'
+| `-CompoundStmt 0x7fd967098560 <col:31, col:32>
+|-CXXDestructorDecl 0x7fd967097ce0 <line:58:5, col:13> col:5 used ~Xyz 'void (void) noexcept'
+| `-CompoundStmt 0x7fd967098578 <col:12, col:13>
+`-CXXConstructorDecl 0x7fd967098eb8 <line:47:7> col:7 implicit constexpr Xyz 'void (const class Xyz &)' inline default trivial noexcept-unevaluated 0x7fd967098eb8
+  `-ParmVarDecl 0x7fd967098fe0 <col:7> col:7 'const class Xyz &'
 
 Layout: <CGRecordLayout
   LLVMType:%class.Xyz = type { i32, %struct.X, %struct.Y, %struct.Z }

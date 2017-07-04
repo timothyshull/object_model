@@ -57,13 +57,13 @@ function __ZN2B1D0Ev() {
 }
 
 function __ZN2D1C2Ev() {
-    var_28 = rdi;
+    var_20 = rdi;
     B1::B1();
-    *rdi = 0x100002098;
-    *(rdi + 0x10) = 0x0;
-    var_30 = operator new[](0x28);
-    rax = var_30;
-    *(var_28 + 0x10) = rax;
+    *var_20 = 0x100002098;
+    *(var_20 + 0x10) = 0x0;
+    var_28 = operator new[](0x28);
+    rax = var_28;
+    *(var_20 + 0x10) = rax;
     return rax;
 }
 

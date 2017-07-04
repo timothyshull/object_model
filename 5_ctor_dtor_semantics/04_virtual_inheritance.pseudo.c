@@ -7,13 +7,13 @@ int _main() {
 }
 
 function __ZN2D2C1Ev() {
-    var_28 = rdi;
+    var_20 = rdi;
     B1::B1();
     B3::B3();
     B3::B3();
-    *var_28 = 0x1000020a0;
-    *var_28 = 0x1000020a0;
-    *(var_28 + 0x8) = 0x1000020d0;
+    *var_20 = 0x1000020a0;
+    *var_20 = 0x1000020a0;
+    *(var_20 + 0x8) = 0x1000020d0;
     return 0x1000020a0;
 }
 
@@ -24,12 +24,12 @@ function __ZN2D2D1Ev() {
 }
 
 function __ZN2PVC1Ev() {
-    var_28 = rdi;
+    var_20 = rdi;
     P::P();
     V3::V3();
-    *var_28 = 0x100002310;
-    *(var_28 + 0x18) = 0x100002368;
-    *(var_28 + 0x10) = 0x100002340;
+    *var_20 = 0x100002310;
+    *(var_20 + 0x18) = 0x100002368;
+    *(var_20 + 0x10) = 0x100002340;
     return 0x100002310;
 }
 
@@ -154,14 +154,14 @@ function __ZN1PC2Ev() {
 }
 
 function __ZN2V3C2Ev() {
-    var_28 = rdi;
-    var_38 = rsi;
+    var_28 = rsi;
+    var_30 = rdi;
     P3::P3();
     V::V();
-    rax = var_38;
-    *var_28 = *rax;
-    *(var_28 + *(*var_28 + 0xffffffffffffffe8)) = *(rax + 0x28);
-    *(var_28 + 0x10) = *(rax + 0x30);
+    rax = var_28;
+    *var_30 = *rax;
+    *(var_30 + *(*var_30 + 0xffffffffffffffe8)) = *(rax + 0x28);
+    *(var_30 + 0x10) = *(rax + 0x30);
     return rax;
 }
 
@@ -301,18 +301,5 @@ function __ZN2PVD2Ev() {
 function imp___stubs___ZdlPv() {
     rax = operator delete();
     return rax;
-}
-
-function sub_100001540() {
-    *(rbp + 0xfffffffffffffff0) = rax;
-    *(int32_t *)(rbp + 0xffffffffffffffec) = rdx;
-    P::~P();
-    rax = _Unwind_Resume(*(rbp + 0xfffffffffffffff0));
-    return rax;
-}
-
-function imp___stubs___Unwind_Resume() {
-    __Unwind_Resume(exception_object);
-    return;
 }
 

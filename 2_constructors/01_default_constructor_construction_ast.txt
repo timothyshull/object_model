@@ -1,66 +1,66 @@
-TranslationUnitDecl 0x7faf53009ad0 <<invalid sloc>> <invalid sloc>
-|-TypedefDecl 0x7faf5300a060 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
-| `-BuiltinType 0x7faf53009d40 '__int128'
-|-TypedefDecl 0x7faf5300a0d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
-| `-BuiltinType 0x7faf53009d60 'unsigned __int128'
-|-TypedefDecl 0x7faf5300a418 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
-| `-RecordType 0x7faf5300a1c0 'struct __NSConstantString_tag'
-|   `-CXXRecord 0x7faf5300a128 '__NSConstantString_tag'
-|-TypedefDecl 0x7faf5300a4b0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
-| `-PointerType 0x7faf5300a470 'char *'
-|   `-BuiltinType 0x7faf53009b60 'char'
-|-TypedefDecl 0x7faf52034800 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
-| `-ConstantArrayType 0x7faf5300a790 'struct __va_list_tag [1]' 1 
-|   `-RecordType 0x7faf5300a5a0 'struct __va_list_tag'
-|     `-CXXRecord 0x7faf5300a508 '__va_list_tag'
-|-CXXRecordDecl 0x7faf52034858 <object_model/2_constructors/01_default_constructor_construction.cpp:1:1, line:4:1> line:1:8 referenced struct X definition
-| |-CXXRecordDecl 0x7faf52034978 <col:1, col:8> col:8 implicit struct X
-| |-FieldDecl 0x7faf52034a28 <line:2:5, col:12> col:12 x 'double'
-| |-FieldDecl 0x7faf52034a88 <line:3:5, col:12> col:12 y 'double'
-| |-CXXConstructorDecl 0x7faf52034f98 <line:1:8> col:8 implicit used X 'void (void) noexcept' inline default trivial
-| | `-CompoundStmt 0x7faf52035460 <col:8>
-| |-CXXConstructorDecl 0x7faf520350d8 <col:8> col:8 implicit constexpr X 'void (const struct X &)' inline default trivial noexcept-unevaluated 0x7faf520350d8
-| | `-ParmVarDecl 0x7faf52035200 <col:8> col:8 'const struct X &'
-| `-CXXConstructorDecl 0x7faf52035298 <col:8> col:8 implicit constexpr X 'void (struct X &&)' inline default trivial noexcept-unevaluated 0x7faf52035298
-|   `-ParmVarDecl 0x7faf520353c0 <col:8> col:8 'struct X &&'
-|-CXXRecordDecl 0x7faf52034af0 <line:6:1, line:9:1> line:6:8 referenced struct Y definition
-| |-CXXRecordDecl 0x7faf52034c18 <col:1, col:8> col:8 implicit referenced struct Y
-| |-FieldDecl 0x7faf52034cc8 <line:7:5, col:12> col:12 v 'double'
-| |-FieldDecl 0x7faf52034d48 <line:8:5, col:8> col:8 n 'struct Y *'
-| |-CXXConstructorDecl 0x7faf52035550 <line:6:8> col:8 implicit used Y 'void (void) noexcept' inline default trivial
-| | `-CompoundStmt 0x7faf528043b8 <col:8>
-| |-CXXConstructorDecl 0x7faf52035668 <col:8> col:8 implicit constexpr Y 'void (const struct Y &)' inline default trivial noexcept-unevaluated 0x7faf52035668
-| | `-ParmVarDecl 0x7faf52035790 <col:8> col:8 'const struct Y &'
-| `-CXXConstructorDecl 0x7faf52804228 <col:8> col:8 implicit constexpr Y 'void (struct Y &&)' inline default trivial noexcept-unevaluated 0x7faf52804228
-|   `-ParmVarDecl 0x7faf52804350 <col:8> col:8 'struct Y &&'
-`-FunctionDecl 0x7faf52034e08 <line:11:1, line:27:1> line:11:5 main 'int (void)'
-  `-CompoundStmt 0x7faf52804b48 <line:12:1, line:27:1>
-    |-DeclStmt 0x7faf520354a8 <line:15:5, col:9>
-    | `-VarDecl 0x7faf52034f18 <col:5, col:7> col:7 x1 'struct X' callinit
-    |   `-CXXConstructExpr 0x7faf52035478 <col:7> 'struct X' 'void (void) noexcept'
-    |-DeclStmt 0x7faf52804400 <line:16:5, col:9>
-    | `-VarDecl 0x7faf520354d0 <col:5, col:7> col:7 y1 'struct Y' callinit
-    |   `-CXXConstructExpr 0x7faf528043d0 <col:7> 'struct Y' 'void (void) noexcept'
-    |-DeclStmt 0x7faf52804600 <line:20:5, col:11>
-    | `-VarDecl 0x7faf52804428 <col:5, col:10> col:7 x2 'struct X' listinit
-    |   `-InitListExpr 0x7faf528044c8 <col:9, col:10> 'struct X'
-    |     |-ImplicitValueInitExpr 0x7faf52804518 <<invalid sloc>> 'double'
-    |     `-ImplicitValueInitExpr 0x7faf52804528 <<invalid sloc>> 'double'
-    |-DeclStmt 0x7faf52804800 <line:21:5, col:11>
-    | `-VarDecl 0x7faf52804628 <col:5, col:10> col:7 used y2 'struct Y' listinit
-    |   `-InitListExpr 0x7faf528046c8 <col:9, col:10> 'struct Y'
-    |     |-ImplicitValueInitExpr 0x7faf52804718 <<invalid sloc>> 'double'
-    |     `-ImplicitValueInitExpr 0x7faf52804728 <<invalid sloc>> 'struct Y *'
-    |-DeclStmt 0x7faf52804968 <line:24:5, col:19>
-    | `-VarDecl 0x7faf52804828 <col:5, col:18> col:7 x3 'struct X' listinit
-    |   `-InitListExpr 0x7faf52804918 <col:9, col:18> 'struct X'
-    |     |-FloatingLiteral 0x7faf52804888 <col:10> 'double' 1.000000e+00
-    |     `-FloatingLiteral 0x7faf528048a8 <col:15> 'double' 2.000000e+00
-    |-DeclStmt 0x7faf52804af8 <line:25:5, col:19>
-    | `-VarDecl 0x7faf52804990 <col:5, col:18> col:7 y3 'struct Y' listinit
-    |   `-InitListExpr 0x7faf52804aa8 <col:9, col:18> 'struct Y'
-    |     |-FloatingLiteral 0x7faf528049f0 <col:10> 'double' 3.000000e+00
-    |     `-UnaryOperator 0x7faf52804a38 <col:15, col:16> 'struct Y *' prefix '&'
-    |       `-DeclRefExpr 0x7faf52804a10 <col:16> 'struct Y' lvalue Var 0x7faf52804628 'y2' 'struct Y'
-    `-ReturnStmt 0x7faf52804b30 <line:26:5, col:12>
-      `-IntegerLiteral 0x7faf52804b10 <col:12> 'int' 0
+TranslationUnitDecl 0x7facfb0074d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7facfb007a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7facfb007740 '__int128'
+|-TypedefDecl 0x7facfb007ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7facfb007760 'unsigned __int128'
+|-TypedefDecl 0x7facfb007e18 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7facfb007bc0 'struct __NSConstantString_tag'
+|   `-CXXRecord 0x7facfb007b28 '__NSConstantString_tag'
+|-TypedefDecl 0x7facfb007eb0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7facfb007e70 'char *'
+|   `-BuiltinType 0x7facfb007560 'char'
+|-TypedefDecl 0x7facfa825800 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7facfb008190 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7facfb007fa0 'struct __va_list_tag'
+|     `-CXXRecord 0x7facfb007f08 '__va_list_tag'
+|-CXXRecordDecl 0x7facfa825858 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/01_default_constructor_construction.cpp:1:1, line:4:1> line:1:8 referenced struct X definition
+| |-CXXRecordDecl 0x7facfa825978 <col:1, col:8> col:8 implicit struct X
+| |-FieldDecl 0x7facfa825a28 <line:2:5, col:12> col:12 x 'double'
+| |-FieldDecl 0x7facfa825a88 <line:3:5, col:12> col:12 y 'double'
+| |-CXXConstructorDecl 0x7facfa825f98 <line:1:8> col:8 implicit used X 'void (void) noexcept' inline default trivial
+| | `-CompoundStmt 0x7facfa826460 <col:8>
+| |-CXXConstructorDecl 0x7facfa8260d8 <col:8> col:8 implicit constexpr X 'void (const struct X &)' inline default trivial noexcept-unevaluated 0x7facfa8260d8
+| | `-ParmVarDecl 0x7facfa826200 <col:8> col:8 'const struct X &'
+| `-CXXConstructorDecl 0x7facfa826298 <col:8> col:8 implicit constexpr X 'void (struct X &&)' inline default trivial noexcept-unevaluated 0x7facfa826298
+|   `-ParmVarDecl 0x7facfa8263c0 <col:8> col:8 'struct X &&'
+|-CXXRecordDecl 0x7facfa825af0 <line:6:1, line:9:1> line:6:8 referenced struct Y definition
+| |-CXXRecordDecl 0x7facfa825c18 <col:1, col:8> col:8 implicit referenced struct Y
+| |-FieldDecl 0x7facfa825cc8 <line:7:5, col:12> col:12 v 'double'
+| |-FieldDecl 0x7facfa825d48 <line:8:5, col:8> col:8 n 'struct Y *'
+| |-CXXConstructorDecl 0x7facfa826550 <line:6:8> col:8 implicit used Y 'void (void) noexcept' inline default trivial
+| | `-CompoundStmt 0x7facfa8271b8 <col:8>
+| |-CXXConstructorDecl 0x7facfa826668 <col:8> col:8 implicit constexpr Y 'void (const struct Y &)' inline default trivial noexcept-unevaluated 0x7facfa826668
+| | `-ParmVarDecl 0x7facfa826790 <col:8> col:8 'const struct Y &'
+| `-CXXConstructorDecl 0x7facfa827028 <col:8> col:8 implicit constexpr Y 'void (struct Y &&)' inline default trivial noexcept-unevaluated 0x7facfa827028
+|   `-ParmVarDecl 0x7facfa827150 <col:8> col:8 'struct Y &&'
+`-FunctionDecl 0x7facfa825e08 <line:11:1, line:27:1> line:11:5 main 'int (void)'
+  `-CompoundStmt 0x7facfa827948 <line:12:1, line:27:1>
+    |-DeclStmt 0x7facfa8264a8 <line:15:5, col:9>
+    | `-VarDecl 0x7facfa825f18 <col:5, col:7> col:7 x1 'struct X' callinit
+    |   `-CXXConstructExpr 0x7facfa826478 <col:7> 'struct X' 'void (void) noexcept'
+    |-DeclStmt 0x7facfa827200 <line:16:5, col:9>
+    | `-VarDecl 0x7facfa8264d0 <col:5, col:7> col:7 y1 'struct Y' callinit
+    |   `-CXXConstructExpr 0x7facfa8271d0 <col:7> 'struct Y' 'void (void) noexcept'
+    |-DeclStmt 0x7facfa827400 <line:20:5, col:11>
+    | `-VarDecl 0x7facfa827228 <col:5, col:10> col:7 x2 'struct X' listinit
+    |   `-InitListExpr 0x7facfa8272c8 <col:9, col:10> 'struct X'
+    |     |-ImplicitValueInitExpr 0x7facfa827318 <<invalid sloc>> 'double'
+    |     `-ImplicitValueInitExpr 0x7facfa827328 <<invalid sloc>> 'double'
+    |-DeclStmt 0x7facfa827600 <line:21:5, col:11>
+    | `-VarDecl 0x7facfa827428 <col:5, col:10> col:7 used y2 'struct Y' listinit
+    |   `-InitListExpr 0x7facfa8274c8 <col:9, col:10> 'struct Y'
+    |     |-ImplicitValueInitExpr 0x7facfa827518 <<invalid sloc>> 'double'
+    |     `-ImplicitValueInitExpr 0x7facfa827528 <<invalid sloc>> 'struct Y *'
+    |-DeclStmt 0x7facfa827768 <line:24:5, col:19>
+    | `-VarDecl 0x7facfa827628 <col:5, col:18> col:7 x3 'struct X' listinit
+    |   `-InitListExpr 0x7facfa827718 <col:9, col:18> 'struct X'
+    |     |-FloatingLiteral 0x7facfa827688 <col:10> 'double' 1.000000e+00
+    |     `-FloatingLiteral 0x7facfa8276a8 <col:15> 'double' 2.000000e+00
+    |-DeclStmt 0x7facfa8278f8 <line:25:5, col:19>
+    | `-VarDecl 0x7facfa827790 <col:5, col:18> col:7 y3 'struct Y' listinit
+    |   `-InitListExpr 0x7facfa8278a8 <col:9, col:18> 'struct Y'
+    |     |-FloatingLiteral 0x7facfa8277f0 <col:10> 'double' 3.000000e+00
+    |     `-UnaryOperator 0x7facfa827838 <col:15, col:16> 'struct Y *' prefix '&'
+    |       `-DeclRefExpr 0x7facfa827810 <col:16> 'struct Y' lvalue Var 0x7facfa827428 'y2' 'struct Y'
+    `-ReturnStmt 0x7facfa827930 <line:26:5, col:12>
+      `-IntegerLiteral 0x7facfa827910 <col:12> 'int' 0

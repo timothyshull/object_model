@@ -71,7 +71,7 @@ function __ZN2P2C2Edd() {
     return 0x100002158;
 }
 
-function __ZN2P2D2Ev() {
+function __ZN2P1D2Ev() {
     return rax;
 }
 
@@ -107,14 +107,9 @@ function __ZThn16_N2P32m1Ed() {
     return xmm0;
 }
 
-function __ZN2P2D1Ev() {
-    rax = P2::~P2();
-    return rax;
-}
-
-function __ZN2P2D0Ev() {
-    P2::~P2();
-    rax = operator delete(rdi);
+function __ZN2P1D0Ev() {
+    asm { ud2 };
+    rax = loc_100001e6a();
     return rax;
 }
 
@@ -125,7 +120,11 @@ function __ZN2P22m1Ed() {
 
 function __ZN2P3D2Ev() {
     P2::~P2();
-    rax = P2::~P2();
+    rax = P1::~P1();
+    return rax;
+}
+
+function __ZN2P2D2Ev() {
     return rax;
 }
 

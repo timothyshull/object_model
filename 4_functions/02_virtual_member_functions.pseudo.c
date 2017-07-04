@@ -5,7 +5,7 @@ int _main() {
     var_60 = intrinsic_movsd(var_60, xmm0);
     xmm0 = intrinsic_movsd(xmm0, var_60);
     intrinsic_movsd(var_30, xmm0);
-    (*(var_28 + 0x10))(&var_28);
+    P2::y();
     var_68 = intrinsic_movsd(var_68, xmm0);
     xmm0 = intrinsic_movsd(xmm0, var_68);
     intrinsic_movsd(var_48, xmm0);
@@ -24,6 +24,11 @@ function __ZN2P3C1Eddd() {
 
 function __ZNK2P11xEv() {
     intrinsic_movsd(xmm0, *(rdi + 0x8));
+    return rax;
+}
+
+function __ZNK2P21yEv() {
+    intrinsic_movsd(xmm0, *(rdi + 0x10));
     return rax;
 }
 
@@ -59,11 +64,6 @@ function __ZN2P2C2Edd() {
 function __ZN2P3D0Ev() {
     P3::~P3();
     rax = operator delete(rdi);
-    return rax;
-}
-
-function __ZNK2P21yEv() {
-    intrinsic_movsd(xmm0, *(rdi + 0x10));
     return rax;
 }
 

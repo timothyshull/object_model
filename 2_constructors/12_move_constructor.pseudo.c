@@ -92,17 +92,23 @@ function __ZN1AC2EOS_() {
     *arg0 = *rsi;
     *(arg0 + 0x8) = *(rsi + 0x8);
     *(arg0 + 0x10) = *(rsi + 0x10);
-    rax = rsi;
-    var_20 = rax;
-    for (var_24 = 0x0; var_24 < 0x3; var_24 = rax) {
-            *(var_20 + var_24 * 0x8) = 0x0;
-            rax = var_24 + 0x1;
+    rax = std::__1::__compressed_pair_elem<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__rep, 0, false>::__get(rsi, arg0);
+    var_18 = rax;
+    for (var_1C = 0x0; var_1C < 0x3; var_1C = var_1C + 0x1) {
+            rax = var_18;
+            *(rax + var_1C * 0x8) = 0x0;
     }
     return rax;
 }
 
+function __ZNSt3__122__compressed_pair_elemINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repELi0ELb0EE5__getEv() {
+    rax = rdi;
+    return rax;
+}
+
 function __ZN1AC2Ev() {
-    memset(rdi, 0x0, 0x18);
+    std::__1::__compressed_pair_elem<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__rep, 0, false>::__compressed_pair_elem();
+    std::__1::__compressed_pair_elem<std::__1::allocator<char>, 1, true>::__compressed_pair_elem();
     rax = std::__1::char_traits<char>::length("test", "test");
     rax = std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__init(rdi, "test", rax);
     return rax;
@@ -113,6 +119,15 @@ function __ZNSt3__111char_traitsIcE6lengthEPKc() {
     return rax;
 }
 
+function __ZNSt3__122__compressed_pair_elemINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repELi0ELb0EEC2Ev() {
+    rax = memset(rdi, 0x0, 0x18);
+    return rax;
+}
+
+function __ZNSt3__122__compressed_pair_elemINS_9allocatorIcEELi1ELb1EEC2Ev() {
+    return rax;
+}
+
 function __ZN1AD2Ev() {
     rax = std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_string(rdi);
     return rax;
@@ -120,12 +135,13 @@ function __ZN1AD2Ev() {
 
 function __ZN1BC2Ev() {
     A::A();
-    memset(rdi + 0x18, 0x0, 0x18);
-    rax = rdi + 0x18;
-    var_20 = rax;
-    for (var_24 = 0x0; var_24 < 0x3; var_24 = rax) {
-            *(var_20 + var_24 * 0x8) = 0x0;
-            rax = var_24 + 0x1;
+    std::__1::__compressed_pair_elem<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__rep, 0, false>::__compressed_pair_elem();
+    std::__1::__compressed_pair_elem<std::__1::allocator<char>, 1, true>::__compressed_pair_elem();
+    rax = std::__1::__compressed_pair_elem<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__rep, 0, false>::__get(rdi + 0x18);
+    var_18 = rax;
+    for (var_1C = 0x0; var_1C < 0x3; var_1C = var_1C + 0x1) {
+            rax = var_18;
+            *(rax + var_1C * 0x8) = 0x0;
     }
     return rax;
 }
@@ -137,18 +153,18 @@ function ___clang_call_terminate() {
 }
 
 function __ZN1BC2EOS_() {
-    var_60 = rsi;
-    var_68 = arg0;
+    var_58 = rsi;
+    var_60 = arg0;
     A::A(arg0);
-    *(var_68 + 0x18) = *(var_60 + 0x18);
-    *(var_68 + 0x20) = *(var_60 + 0x20);
-    *(var_68 + 0x28) = *(var_60 + 0x28);
-    var_20 = var_60 + 0x18;
-    for (var_24 = 0x0; var_24 < 0x3; var_24 = var_24 + 0x1) {
-            *(var_20 + var_24 * 0x8) = 0x0;
+    *(var_60 + 0x18) = *(var_58 + 0x18);
+    *(var_60 + 0x20) = *(var_58 + 0x20);
+    *(var_60 + 0x28) = *(var_58 + 0x28);
+    var_18 = std::__1::__compressed_pair_elem<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__rep, 0, false>::__get(var_58 + 0x18, *(var_58 + 0x28));
+    for (var_1C = 0x0; var_1C < 0x3; var_1C = var_1C + 0x1) {
+            *(var_18 + var_1C * 0x8) = 0x0;
     }
-    rax = var_68;
-    *(int32_t *)(rax + 0x30) = *(int32_t *)(var_60 + 0x30);
+    rax = var_60;
+    *(int32_t *)(rax + 0x30) = *(int32_t *)(var_58 + 0x30);
     return rax;
 }
 
@@ -159,10 +175,10 @@ function __ZN1CC2ERKS_() {
 
 function __ZN1BC2ERKS_() {
     var_10 = rsi;
-    var_28 = arg0;
+    var_30 = arg0;
     A::A(arg0);
-    std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::basic_string(var_28 + 0x18, var_10 + 0x18);
-    rax = var_28;
+    std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::basic_string(var_30 + 0x18, var_10 + 0x18);
+    rax = var_30;
     *(int32_t *)(rax + 0x30) = *(int32_t *)(var_10 + 0x30);
     return rax;
 }
@@ -208,6 +224,11 @@ function imp___stubs___ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocator
     return rax;
 }
 
+function imp___stubs___ZNSt3__122__compressed_pair_elemINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repELi0ELb0EE5__getEv() {
+    rax = std::__1::__compressed_pair_elem<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__rep, 0, false>::__get();
+    return rax;
+}
+
 function imp___stubs___ZSt9terminatev() {
     rax = std::terminate();
     return rax;
@@ -228,17 +249,12 @@ function imp___stubs__strlen() {
     return rax;
 }
 
-function sub_1000017e0() {
-    *(rbp + 0xffffffffffffffa0) = rax;
-    *(int32_t *)(rbp + 0xffffffffffffff9c) = rdx;
-    C::~C();
-    C::~C();
-    D::~D();
-    D::~D();
+function sub_100001d70() {
+    *(rbp + 0xffffffffffffffe8) = rax;
+    *(int32_t *)(rbp + 0xffffffffffffffe4) = rdx;
     A::~A();
-    A::~A();
-    _Unwind_Resume(*(rbp + 0xffffffffffffffa0));
-    return;
+    rax = _Unwind_Resume(*(rbp + 0xffffffffffffffe8));
+    return rax;
 }
 
 function imp___stubs___Unwind_Resume() {
@@ -246,7 +262,12 @@ function imp___stubs___Unwind_Resume() {
     return;
 }
 
-function sub_100001ed0() {
+function sub_1000017c0() {
+    _Unwind_Resume(*(rbp + 0xffffffffffffffa0));
+    return;
+}
+
+function sub_100001ec0() {
     rsp = rsp - 0x8;
     dyld_stub_binder();
     return;
