@@ -13,7 +13,7 @@ TranslationUnitDecl 0x7f80120326d0 <<invalid sloc>> <invalid sloc>
 | `-ConstantArrayType 0x7f8012033390 'struct __va_list_tag [1]' 1 
 |   `-RecordType 0x7f80120331a0 'struct __va_list_tag'
 |     `-CXXRecord 0x7f8012033108 '__va_list_tag'
-|-CXXRecordDecl 0x7f8012065c58 </Users/tskull/Documents/Programming/Cpp/object_model_refined/3_data/08_pointer_to_data_members.cpp:1:1, line:10:1> line:1:8 struct P3 definition
+|-CXXRecordDecl 0x7f8012065c58 <object_model/3_data/08_pointer_to_data_members.cpp:1:1, line:10:1> line:1:8 struct P3 definition
 | |-CXXRecordDecl 0x7f8012065d78 <col:1, col:8> col:8 implicit referenced struct P3
 | |-VarDecl 0x7f8012065e20 <line:2:5, col:15> col:15 o 'struct P3' static
 | |-FieldDecl 0x7f8012065e98 <line:3:5, col:12> col:12 referenced x 'double'

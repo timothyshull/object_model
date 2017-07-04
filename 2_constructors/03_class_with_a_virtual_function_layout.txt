@@ -6,7 +6,7 @@
            |  nvsize=8, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fad6b069058 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/03_class_with_a_virtual_function.cpp:1:1, line:3:1> line:1:8 referenced struct X definition
+Record: CXXRecordDecl 0x7fad6b069058 <object_model/2_constructors/03_class_with_a_virtual_function.cpp:1:1, line:3:1> line:1:8 referenced struct X definition
 |-CXXRecordDecl 0x7fad6b069178 <col:1, col:8> col:8 implicit struct X
 |-CXXMethodDecl 0x7fad6b069290 <line:2:5, col:31> col:18 referenced m1 'void (void) const' virtual pure
 |-CXXMethodDecl 0x7fad6b069388 <line:1:8, <invalid sloc>> col:8 implicit constexpr operator= 'struct X &(const struct X &)' inline default noexcept-unevaluated 0x7fad6b069388
@@ -37,7 +37,7 @@ Layout: <CGRecordLayout
            |  nvsize=8, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fad6b069b28 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/03_class_with_a_virtual_function.cpp:9:1, line:11:1> line:9:8 referenced struct Y definition
+Record: CXXRecordDecl 0x7fad6b069b28 <object_model/2_constructors/03_class_with_a_virtual_function.cpp:9:1, line:11:1> line:9:8 referenced struct Y definition
 |-public 'struct X'
 |-CXXRecordDecl 0x7fad6b069c88 <col:1, col:8> col:8 implicit struct Y
 |-CXXMethodDecl 0x7fad6b069d68 <line:10:5, col:31> col:10 m1 'void (void) const'
@@ -65,7 +65,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fad6b09a560 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/03_class_with_a_virtual_function.cpp:13:1, line:15:1> line:13:8 referenced struct Z definition
+Record: CXXRecordDecl 0x7fad6b09a560 <object_model/2_constructors/03_class_with_a_virtual_function.cpp:13:1, line:15:1> line:13:8 referenced struct Z definition
 |-public 'struct X'
 |-CXXRecordDecl 0x7fad6b09a6c8 <col:1, col:8> col:8 implicit struct Z
 |-CXXMethodDecl 0x7fad6b09a7a8 <line:14:5, col:31> col:10 m1 'void (void) const'

@@ -713,7 +713,7 @@
            |  nvsize=16, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f9ca140e218 </Users/tskull/Documents/Programming/Cpp/object_model_refined/4_functions/07_inline_functions.cpp:6:1, line:40:1> line:6:7 referenced class P definition
+Record: CXXRecordDecl 0x7f9ca140e218 <object_model/4_functions/07_inline_functions.cpp:6:1, line:40:1> line:6:7 referenced class P definition
 |-CXXRecordDecl 0x7f9ca140e338 <col:1, col:7> col:7 implicit referenced class P
 |-AccessSpecDecl 0x7f9ca140e3d0 <line:7:1, col:7> col:1 public
 |-CXXConstructorDecl 0x7f9ca140e5b0 <line:8:5, col:43> col:5 P 'void (double, double)'

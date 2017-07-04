@@ -8,7 +8,7 @@
            |  nvsize=24, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f8148069058 </Users/tskull/Documents/Programming/Cpp/object_model_refined/5_ctor_dtor_semantics/02_object_construction_without_inheritance.cpp:1:1, line:5:1> line:1:8 referenced struct Point definition
+Record: CXXRecordDecl 0x7f8148069058 <object_model/5_ctor_dtor_semantics/02_object_construction_without_inheritance.cpp:1:1, line:5:1> line:1:8 referenced struct Point definition
 |-CXXRecordDecl 0x7f8148069178 <col:1, col:8> col:8 implicit struct Point
 |-FieldDecl 0x7f8148069228 <line:2:5, col:12> col:12 x 'double'
 |-FieldDecl 0x7f8148069288 <line:3:5, col:12> col:12 y 'double'

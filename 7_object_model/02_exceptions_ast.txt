@@ -13,7 +13,7 @@ TranslationUnitDecl 0x7ff7ff0326d0 <<invalid sloc>> <invalid sloc>
 | `-ConstantArrayType 0x7ff7ff033390 'struct __va_list_tag [1]' 1 
 |   `-RecordType 0x7ff7ff0331a0 'struct __va_list_tag'
 |     `-CXXRecord 0x7ff7ff033108 '__va_list_tag'
-|-FunctionDecl 0x7ff7ff065d38 </Users/tskull/Documents/Programming/Cpp/object_model_refined/7_object_model/02_exceptions.cpp:7:1, col:17> col:5 used func1 'int (_Bool)'
+|-FunctionDecl 0x7ff7ff065d38 <object_model/7_object_model/02_exceptions.cpp:7:1, col:17> col:5 used func1 'int (_Bool)'
 | `-ParmVarDecl 0x7ff7ff065c68 <col:11, col:16> col:16 b '_Bool'
 |-FunctionDecl 0x7ff7ff065ef0 <line:15:1, line:27:1> line:15:6 used func2 'void (_Bool)'
 | |-ParmVarDecl 0x7ff7ff065e28 <col:12, col:17> col:17 used b '_Bool'

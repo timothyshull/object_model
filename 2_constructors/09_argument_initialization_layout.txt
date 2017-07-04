@@ -6,7 +6,7 @@
            |  nvsize=4, nvalign=4]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fb3cd869058 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/09_argument_initialization.cpp:1:1, line:9:1> line:1:8 referenced struct X definition
+Record: CXXRecordDecl 0x7fb3cd869058 <object_model/2_constructors/09_argument_initialization.cpp:1:1, line:9:1> line:1:8 referenced struct X definition
 |-CXXRecordDecl 0x7fb3cd869178 <col:1, col:8> col:8 implicit referenced struct X
 |-FieldDecl 0x7fb3cd869228 <line:2:5, col:13> col:9 referenced x 'int'
 | `-IntegerLiteral 0x7fb3cd8696b8 <col:13> 'int' 0

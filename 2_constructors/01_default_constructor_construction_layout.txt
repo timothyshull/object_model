@@ -14,7 +14,7 @@
            |  nvsize=16, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fa8b9869058 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/01_default_constructor_construction.cpp:1:1, line:4:1> line:1:8 referenced struct X definition
+Record: CXXRecordDecl 0x7fa8b9869058 <object_model/2_constructors/01_default_constructor_construction.cpp:1:1, line:4:1> line:1:8 referenced struct X definition
 |-CXXRecordDecl 0x7fa8b9869178 <col:1, col:8> col:8 implicit struct X
 |-FieldDecl 0x7fa8b9869228 <line:2:5, col:12> col:12 x 'double'
 |-FieldDecl 0x7fa8b9869288 <line:3:5, col:12> col:12 y 'double'
@@ -33,7 +33,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fa8b98692f0 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/01_default_constructor_construction.cpp:6:1, line:9:1> line:6:8 referenced struct Y definition
+Record: CXXRecordDecl 0x7fa8b98692f0 <object_model/2_constructors/01_default_constructor_construction.cpp:6:1, line:9:1> line:6:8 referenced struct Y definition
 |-CXXRecordDecl 0x7fa8b9869418 <col:1, col:8> col:8 implicit referenced struct Y
 |-FieldDecl 0x7fa8b98694c8 <line:7:5, col:12> col:12 v 'double'
 |-FieldDecl 0x7fa8b9869548 <line:8:5, col:8> col:8 n 'struct Y *'

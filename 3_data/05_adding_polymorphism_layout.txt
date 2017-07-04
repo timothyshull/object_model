@@ -8,7 +8,7 @@
            |  nvsize=24, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7ffe5b80de58 </Users/tskull/Documents/Programming/Cpp/object_model_refined/3_data/05_adding_polymorphism.cpp:2:1, line:43:1> line:2:7 referenced class P2 definition
+Record: CXXRecordDecl 0x7ffe5b80de58 <object_model/3_data/05_adding_polymorphism.cpp:2:1, line:43:1> line:2:7 referenced class P2 definition
 |-CXXRecordDecl 0x7ffe5b80df78 <col:1, col:7> col:7 implicit referenced class P2
 |-AccessSpecDecl 0x7ffe5b80e010 <line:3:1, col:7> col:1 public
 |-CXXConstructorDecl 0x7ffe5b80e1f0 <line:4:5, col:44> col:5 used P2 'void (double, double)'
@@ -123,7 +123,7 @@ Layout: <CGRecordLayout
            |  nvsize=32, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7ffe5b821098 </Users/tskull/Documents/Programming/Cpp/object_model_refined/3_data/05_adding_polymorphism.cpp:47:1, line:69:1> line:47:7 referenced class P3 definition
+Record: CXXRecordDecl 0x7ffe5b821098 <object_model/3_data/05_adding_polymorphism.cpp:47:1, line:69:1> line:47:7 referenced class P3 definition
 |-public 'class P2'
 |-CXXRecordDecl 0x7ffe5b8211f8 <col:1, col:7> col:7 implicit referenced class P3
 |-AccessSpecDecl 0x7ffe5b821290 <line:48:1, col:7> col:1 public
@@ -190,7 +190,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7ffe5c000e20 </Users/tskull/Documents/Programming/Cpp/object_model_refined/3_data/05_adding_polymorphism.cpp:77:1, line:80:1> line:77:8 referenced struct C definition
+Record: CXXRecordDecl 0x7ffe5c000e20 <object_model/3_data/05_adding_polymorphism.cpp:77:1, line:80:1> line:77:8 referenced struct C definition
 |-CXXRecordDecl 0x7ffe5c000f48 <col:1, col:8> col:8 implicit struct C
 |-FieldDecl 0x7ffe5c000ff8 <line:78:5, col:9> col:9 d1 'int'
 |-FieldDecl 0x7ffe5c001058 <line:79:5, col:9> col:9 d2 'int'
@@ -214,7 +214,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7ffe5c0010c0 </Users/tskull/Documents/Programming/Cpp/object_model_refined/3_data/05_adding_polymorphism.cpp:82:1, line:88:1> line:82:7 referenced class V definition
+Record: CXXRecordDecl 0x7ffe5c0010c0 <object_model/3_data/05_adding_polymorphism.cpp:82:1, line:88:1> line:82:7 referenced class V definition
 |-public 'struct C'
 |-CXXRecordDecl 0x7ffe5c001228 <col:1, col:7> col:7 implicit class V
 |-AccessSpecDecl 0x7ffe5c0012c0 <line:83:1, col:7> col:1 public

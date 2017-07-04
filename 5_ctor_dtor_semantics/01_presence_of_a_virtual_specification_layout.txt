@@ -16,7 +16,7 @@
            |  nvsize=24, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f965b069658 </Users/tskull/Documents/Programming/Cpp/object_model_refined/5_ctor_dtor_semantics/01_presence_of_a_virtual_specification.cpp:1:1, line:29:1> line:1:8 referenced struct B1 definition
+Record: CXXRecordDecl 0x7f965b069658 <object_model/5_ctor_dtor_semantics/01_presence_of_a_virtual_specification.cpp:1:1, line:29:1> line:1:8 referenced struct B1 definition
 |-CXXRecordDecl 0x7f965b069778 <col:1, col:8> col:8 implicit referenced struct B1
 |-FieldDecl 0x7f965b069828 <line:2:5, col:16> col:11 referenced cp 'char *'
 | `-ImplicitCastExpr 0x7f965b06a230 <col:16> 'char *' <NullToPointer>
@@ -70,7 +70,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f965b095098 </Users/tskull/Documents/Programming/Cpp/object_model_refined/5_ctor_dtor_semantics/01_presence_of_a_virtual_specification.cpp:31:1, line:59:1> line:31:8 referenced struct D1 definition
+Record: CXXRecordDecl 0x7f965b095098 <object_model/5_ctor_dtor_semantics/01_presence_of_a_virtual_specification.cpp:31:1, line:59:1> line:31:8 referenced struct D1 definition
 |-public 'struct B1'
 |-CXXRecordDecl 0x7f965b0951f8 <col:1, col:8> col:8 implicit referenced struct D1
 |-FieldDecl 0x7f965b0952d0 <line:32:5, col:15> col:10 referenced ip 'int *'

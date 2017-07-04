@@ -6,7 +6,7 @@
            |  nvsize=4, nvalign=4]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fb3fc066458 </Users/tskull/Documents/Programming/Cpp/object_model_refined/6_runtime_semantics/08_temporary_objects.cpp:1:1, line:9:1> line:1:8 referenced struct T definition
+Record: CXXRecordDecl 0x7fb3fc066458 <object_model/6_runtime_semantics/08_temporary_objects.cpp:1:1, line:9:1> line:1:8 referenced struct T definition
 |-CXXRecordDecl 0x7fb3fc066578 <col:1, col:8> col:8 implicit referenced struct T
 |-FieldDecl 0x7fb3fc066628 <line:2:5, col:9> col:9 referenced i 'int'
 |-CXXConstructorDecl 0x7fb3fc066710 <line:4:5, col:10> col:5 used T 'void (void)'

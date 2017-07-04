@@ -13,7 +13,7 @@ TranslationUnitDecl 0x7fa7360326d0 <<invalid sloc>> <invalid sloc>
 | `-ConstantArrayType 0x7fa736033390 'struct __va_list_tag [1]' 1 
 |   `-RecordType 0x7fa7360331a0 'struct __va_list_tag'
 |     `-CXXRecord 0x7fa736033108 '__va_list_tag'
-|-CXXRecordDecl 0x7fa736805658 </Users/tskull/Documents/Programming/Cpp/object_model_refined/3_data/04_inheritance_without_polymorphism.cpp:1:1, line:14:1> line:1:7 referenced class P2 definition
+|-CXXRecordDecl 0x7fa736805658 <object_model/3_data/04_inheritance_without_polymorphism.cpp:1:1, line:14:1> line:1:7 referenced class P2 definition
 | |-CXXRecordDecl 0x7fa736805778 <col:1, col:7> col:7 implicit referenced class P2
 | |-AccessSpecDecl 0x7fa736805810 <line:2:1, col:7> col:1 public
 | |-CXXConstructorDecl 0x7fa7368059f0 <line:3:5, col:44> col:5 used P2 'void (double, double)'

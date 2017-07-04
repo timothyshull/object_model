@@ -13,7 +13,7 @@
            |  nvsize=4, nvalign=4]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fd967069058 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/02_member_class_object_with_default_constructor.cpp:2:1, line:10:1> line:2:8 referenced struct A definition
+Record: CXXRecordDecl 0x7fd967069058 <object_model/2_constructors/02_member_class_object_with_default_constructor.cpp:2:1, line:10:1> line:2:8 referenced struct A definition
 |-CXXRecordDecl 0x7fd967069178 <col:1, col:8> col:8 implicit referenced struct A
 |-FieldDecl 0x7fd967069228 <line:3:5, col:9> col:9 a 'int'
 |-CXXConstructorDecl 0x7fd967069310 <line:5:5, col:10> col:5 used A 'void (void)'
@@ -33,7 +33,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fd9670696d0 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/02_member_class_object_with_default_constructor.cpp:12:1, line:18:1> line:12:8 referenced struct B definition
+Record: CXXRecordDecl 0x7fd9670696d0 <object_model/2_constructors/02_member_class_object_with_default_constructor.cpp:12:1, line:18:1> line:12:8 referenced struct B definition
 |-CXXRecordDecl 0x7fd9670697f8 <col:1, col:8> col:8 implicit referenced struct B
 |-FieldDecl 0x7fd9670698a0 <line:13:5, col:7> col:7 a 'struct A'
 |-CXXConstructorDecl 0x7fd967069958 <line:15:5, col:10> col:5 used B 'void (void)'
@@ -82,7 +82,7 @@ Layout: <CGRecordLayout
            |  nvsize=24, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fd967069d60 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/02_member_class_object_with_default_constructor.cpp:21:1, line:27:1> line:21:8 referenced struct X definition
+Record: CXXRecordDecl 0x7fd967069d60 <object_model/2_constructors/02_member_class_object_with_default_constructor.cpp:21:1, line:27:1> line:21:8 referenced struct X definition
 |-CXXRecordDecl 0x7fd967069e88 <col:1, col:8> col:8 implicit referenced struct X
 |-FieldDecl 0x7fd967069f38 <line:22:5, col:11> col:11 x 'short'
 |-CXXConstructorDecl 0x7fd967095800 <line:24:5, col:17> col:5 used X 'void (void)'
@@ -103,7 +103,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fd967095ae8 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/02_member_class_object_with_default_constructor.cpp:29:1, line:37:1> line:29:8 referenced struct Y definition
+Record: CXXRecordDecl 0x7fd967095ae8 <object_model/2_constructors/02_member_class_object_with_default_constructor.cpp:29:1, line:37:1> line:29:8 referenced struct Y definition
 |-CXXRecordDecl 0x7fd967095c08 <col:1, col:8> col:8 implicit referenced struct Y
 |-FieldDecl 0x7fd967095cb8 <line:30:5, col:9> col:9 y 'int'
 |-CXXConstructorDecl 0x7fd967095d68 <line:32:5, col:17> col:5 Y 'void (void)'
@@ -130,7 +130,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fd967096298 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/02_member_class_object_with_default_constructor.cpp:39:1, line:45:1> line:39:8 referenced struct Z definition
+Record: CXXRecordDecl 0x7fd967096298 <object_model/2_constructors/02_member_class_object_with_default_constructor.cpp:39:1, line:45:1> line:39:8 referenced struct Z definition
 |-CXXRecordDecl 0x7fd9670963b8 <col:1, col:8> col:8 implicit referenced struct Z
 |-FieldDecl 0x7fd967096468 <line:40:5, col:10> col:10 z 'long'
 |-CXXConstructorDecl 0x7fd967096518 <line:42:5, col:17> col:5 used Z 'void (void)'
@@ -151,7 +151,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fd967097800 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/02_member_class_object_with_default_constructor.cpp:47:1, line:59:1> line:47:7 referenced class Xyz definition
+Record: CXXRecordDecl 0x7fd967097800 <object_model/2_constructors/02_member_class_object_with_default_constructor.cpp:47:1, line:59:1> line:47:7 referenced class Xyz definition
 |-CXXRecordDecl 0x7fd967097928 <col:1, col:7> col:7 implicit referenced class Xyz
 |-AccessSpecDecl 0x7fd9670979c0 <line:48:1, col:8> col:1 private
 |-FieldDecl 0x7fd967097a00 <line:49:5, col:9> col:9 _v 'int'

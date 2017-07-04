@@ -1845,7 +1845,7 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fb6a6acfa10 </Users/tskull/Documents/Programming/Cpp/object_model_refined/2_constructors/06_default_memberwise_initialization.cpp:3:1, line:10:1> line:3:8 referenced struct S definition
+Record: CXXRecordDecl 0x7fb6a6acfa10 <object_model/2_constructors/06_default_memberwise_initialization.cpp:3:1, line:10:1> line:3:8 referenced struct S definition
 |-CXXRecordDecl 0x7fb6a6acfb38 <col:1, col:8> col:8 implicit referenced struct S
 |-FieldDecl 0x7fb6a6acfc50 <line:4:5, col:17> col:17 referenced n 'std::size_t':'unsigned long'
 |-FieldDecl 0x7fb6a6acfd20 <line:5:5, col:17> col:17 referenced s 'std::string':'class std::__1::basic_string<char>'

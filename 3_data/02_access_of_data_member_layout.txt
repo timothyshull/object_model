@@ -6,7 +6,7 @@
            |  nvsize=4, nvalign=4]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f9633869400 </Users/tskull/Documents/Programming/Cpp/object_model_refined/3_data/02_access_of_data_member.cpp:7:1, line:14:1> line:7:8 referenced struct S2 definition
+Record: CXXRecordDecl 0x7f9633869400 <object_model/3_data/02_access_of_data_member.cpp:7:1, line:14:1> line:7:8 referenced struct S2 definition
 |-CXXRecordDecl 0x7f9633869528 <col:1, col:8> col:8 implicit referenced struct S2
 |-FieldDecl 0x7f96338695d8 <line:8:5, col:9> col:9 referenced m 'int'
 `-CXXMethodDecl 0x7f9633869750 <line:10:5, line:13:5> line:10:10 used add 'void (const struct S2 &)'
