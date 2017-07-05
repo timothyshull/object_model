@@ -15,9 +15,9 @@ Lcfi2:
 	.cfi_def_cfa_register %rbp
 	xorl	%eax, %eax
 	movl	$0, -4(%rbp)
-	movq	$112, -16(%rbp)
-	movq	$112, -24(%rbp)
-	movq	$112, -32(%rbp)
+	movq	$12, -16(%rbp)
+	movq	$8, -24(%rbp)
+	movq	$8, -32(%rbp)
 	movq	$112, -40(%rbp)
 	movq	$136, -48(%rbp)
 	movq	$136, -56(%rbp)

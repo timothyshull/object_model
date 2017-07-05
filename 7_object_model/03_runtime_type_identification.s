@@ -13,82 +13,136 @@ Lcfi1:
 	movq	%rsp, %rbp
 Lcfi2:
 	.cfi_def_cfa_register %rbp
+	pushq	%r15
 	pushq	%r14
 	pushq	%rbx
-	subq	$208, %rsp
+	subq	$392, %rsp              ## imm = 0x188
 Lcfi3:
-	.cfi_offset %rbx, -32
+	.cfi_offset %rbx, -40
 Lcfi4:
-	.cfi_offset %r14, -24
+	.cfi_offset %r14, -32
+Lcfi5:
+	.cfi_offset %r15, -24
 	leaq	L_.str(%rip), %rax
-	leaq	-96(%rbp), %rcx
-	movl	$0, -68(%rbp)
-	movl	$50, -72(%rbp)
-	movq	%rcx, -56(%rbp)
-	movq	%rax, -64(%rbp)
-	movq	-56(%rbp), %rax
-	movq	-64(%rbp), %rcx
-	movq	%rax, -40(%rbp)
-	movq	%rcx, -48(%rbp)
-	movq	-40(%rbp), %rax
-	movq	%rax, -32(%rbp)
-	movq	-32(%rbp), %rcx
-	movq	%rcx, -24(%rbp)
-	movq	-24(%rbp), %rcx
+	leaq	-200(%rbp), %rcx
+	movl	$0, -172(%rbp)
+	movl	$50, -176(%rbp)
+	movq	%rcx, -160(%rbp)
+	movq	%rax, -168(%rbp)
+	movq	-160(%rbp), %rax
+	movq	-168(%rbp), %rcx
+	movq	%rax, -144(%rbp)
+	movq	%rcx, -152(%rbp)
+	movq	-144(%rbp), %rax
+	movq	%rax, -136(%rbp)
+	movq	-136(%rbp), %rcx
+	movq	%rcx, -128(%rbp)
+	movq	-128(%rbp), %rcx
 	movq	%rcx, %rdx
 	movq	%rdx, %rdi
-	movq	%rax, -192(%rbp)        ## 8-byte Spill
-	movq	%rcx, -200(%rbp)        ## 8-byte Spill
+	movq	%rax, -392(%rbp)        ## 8-byte Spill
+	movq	%rcx, -400(%rbp)        ## 8-byte Spill
 	callq	__ZNSt3__122__compressed_pair_elemINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repELi0ELb0EEC2Ev
-	movq	-200(%rbp), %rax        ## 8-byte Reload
+	movq	-400(%rbp), %rax        ## 8-byte Reload
 	movq	%rax, %rdi
 	callq	__ZNSt3__122__compressed_pair_elemINS_9allocatorIcEELi1ELb1EEC2Ev
-	movq	-48(%rbp), %rsi
-	movq	-48(%rbp), %rdi
-	movq	%rsi, -208(%rbp)        ## 8-byte Spill
+	movq	-152(%rbp), %rsi
+	movq	-152(%rbp), %rdi
+	movq	%rsi, -408(%rbp)        ## 8-byte Spill
 	callq	__ZNSt3__111char_traitsIcE6lengthEPKc
-	movq	-192(%rbp), %rdi        ## 8-byte Reload
-	movq	-208(%rbp), %rsi        ## 8-byte Reload
+	movq	-392(%rbp), %rdi        ## 8-byte Reload
+	movq	-408(%rbp), %rsi        ## 8-byte Reload
 	movq	%rax, %rdx
 	callq	__ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6__initEPKcm
-	leaq	-168(%rbp), %rax
+	leaq	-352(%rbp), %rax
 	xorl	%esi, %esi
 	movl	$8, %r8d
 	movl	%r8d, %edx
 	movq	__ZTI1B@GOTPCREL(%rip), %rcx
-	leaq	-144(%rbp), %rdi
+	leaq	-312(%rbp), %rdi
 	movq	__ZTId@GOTPCREL(%rip), %r9
 	movq	__ZTIPd@GOTPCREL(%rip), %r10
 	movq	__ZTINSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE@GOTPCREL(%rip), %r11
 	movq	__ZTIi@GOTPCREL(%rip), %rbx
-	movq	$0, -104(%rbp)
+	movq	$0, -208(%rbp)
+	movq	%rbx, -216(%rbp)
+	movq	%rbx, -120(%rbp)
+	movq	-120(%rbp), %r14
+	movq	8(%r14), %r14
+	movq	%r14, -224(%rbp)
 	movq	%rbx, -112(%rbp)
-	movq	%r11, -120(%rbp)
-	movq	%r10, -128(%rbp)
-	movq	%r9, -136(%rbp)
-	movb	l__ZZ4mainE2d1(%rip), %r14b
-	movb	%r14b, -144(%rbp)
-	movq	%rdi, -152(%rbp)
-	movq	%rcx, -160(%rbp)
+	movq	-112(%rbp), %rbx
+	movq	8(%rbx), %rbx
+	movq	%rbx, -232(%rbp)
+	movq	%r11, -240(%rbp)
+	movq	%r11, -104(%rbp)
+	movq	-104(%rbp), %rbx
+	movq	8(%rbx), %rbx
+	movq	%rbx, -248(%rbp)
+	movq	%r11, -96(%rbp)
+	movq	-96(%rbp), %r11
+	movq	8(%r11), %r11
+	movq	%r11, -256(%rbp)
+	movq	%r10, -264(%rbp)
+	movq	%r10, -72(%rbp)
+	movq	-72(%rbp), %r11
+	movq	8(%r11), %r11
+	movq	%r11, -272(%rbp)
+	movq	%r10, -32(%rbp)
+	movq	-32(%rbp), %r10
+	movq	8(%r10), %r10
+	movq	%r10, -280(%rbp)
+	movq	%r9, -288(%rbp)
+	movq	%r9, -40(%rbp)
+	movq	-40(%rbp), %r10
+	movq	8(%r10), %r10
+	movq	%r10, -296(%rbp)
+	movq	%r9, -48(%rbp)
+	movq	-48(%rbp), %r9
+	movq	8(%r9), %r9
+	movq	%r9, -304(%rbp)
+	movb	l__ZZ4mainE2d1(%rip), %r15b
+	movb	%r15b, -312(%rbp)
+	movq	%rdi, -320(%rbp)
+	movq	%rcx, -328(%rbp)
+	movq	%rcx, -56(%rbp)
+	movq	-56(%rbp), %rdi
+	movq	8(%rdi), %rdi
+	movq	%rdi, -336(%rbp)
+	movq	%rcx, -64(%rbp)
+	movq	-64(%rbp), %rcx
+	movq	8(%rcx), %rcx
+	movq	%rcx, -344(%rbp)
 	movq	%rax, %rcx
 	movq	%rcx, %rdi
-	movq	%rax, -216(%rbp)        ## 8-byte Spill
+	movq	%rax, -416(%rbp)        ## 8-byte Spill
 	callq	_memset
-	movq	-216(%rbp), %rdi        ## 8-byte Reload
+	movq	-416(%rbp), %rdi        ## 8-byte Reload
 	callq	__ZN8Derived2C1Ev
-	leaq	-96(%rbp), %rdi
-	leaq	-168(%rbp), %rax
-	movq	%rax, -176(%rbp)
-	movq	-176(%rbp), %rax
+	leaq	-200(%rbp), %rdi
+	leaq	-352(%rbp), %rax
+	movq	%rax, -360(%rbp)
+	movq	-360(%rbp), %rax
 	movq	(%rax), %rax
 	movq	-8(%rax), %rax
-	movq	%rax, -184(%rbp)
-	movl	$0, -68(%rbp)
+	movq	%rax, -368(%rbp)
+	movq	-368(%rbp), %rax
+	movq	%rax, -80(%rbp)
+	movq	-80(%rbp), %rax
+	movq	8(%rax), %rax
+	movq	%rax, -376(%rbp)
+	movq	-368(%rbp), %rax
+	movq	%rax, -88(%rbp)
+	movq	-88(%rbp), %rax
+	movq	8(%rax), %rax
+	movq	%rax, -384(%rbp)
+	movl	$0, -172(%rbp)
 	callq	__ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev
-	movl	-68(%rbp), %eax
-	addq	$208, %rsp
+	movl	-172(%rbp), %eax
+	addq	$392, %rsp              ## imm = 0x188
 	popq	%rbx
 	popq	%r14
+	popq	%r15
 	popq	%rbp
 	retq
 	.cfi_endproc
@@ -100,12 +154,12 @@ __ZN8Derived2C1Ev:                      ## @_ZN8Derived2C1Ev
 	.cfi_startproc
 ## BB#0:                                ## %entry
 	pushq	%rbp
-Lcfi5:
-	.cfi_def_cfa_offset 16
 Lcfi6:
+	.cfi_def_cfa_offset 16
+Lcfi7:
 	.cfi_offset %rbp, -16
 	movq	%rsp, %rbp
-Lcfi7:
+Lcfi8:
 	.cfi_def_cfa_register %rbp
 	subq	$16, %rsp
 	movq	%rdi, -8(%rbp)
@@ -123,12 +177,12 @@ __ZN8Derived2C2Ev:                      ## @_ZN8Derived2C2Ev
 	.cfi_startproc
 ## BB#0:                                ## %entry
 	pushq	%rbp
-Lcfi8:
-	.cfi_def_cfa_offset 16
 Lcfi9:
+	.cfi_def_cfa_offset 16
+Lcfi10:
 	.cfi_offset %rbp, -16
 	movq	%rsp, %rbp
-Lcfi10:
+Lcfi11:
 	.cfi_def_cfa_register %rbp
 	subq	$16, %rsp
 	movq	%rdi, -8(%rbp)
@@ -153,12 +207,12 @@ __ZN2B2C2Ev:                            ## @_ZN2B2C2Ev
 	.cfi_startproc
 ## BB#0:                                ## %entry
 	pushq	%rbp
-Lcfi11:
-	.cfi_def_cfa_offset 16
 Lcfi12:
+	.cfi_def_cfa_offset 16
+Lcfi13:
 	.cfi_offset %rbp, -16
 	movq	%rsp, %rbp
-Lcfi13:
+Lcfi14:
 	.cfi_def_cfa_register %rbp
 	movq	__ZTV2B2@GOTPCREL(%rip), %rax
 	addq	$16, %rax
@@ -176,12 +230,12 @@ __ZN2B23fooEv:                          ## @_ZN2B23fooEv
 	.cfi_startproc
 ## BB#0:                                ## %entry
 	pushq	%rbp
-Lcfi14:
-	.cfi_def_cfa_offset 16
 Lcfi15:
+	.cfi_def_cfa_offset 16
+Lcfi16:
 	.cfi_offset %rbp, -16
 	movq	%rsp, %rbp
-Lcfi16:
+Lcfi17:
 	.cfi_def_cfa_register %rbp
 	movq	%rdi, -8(%rbp)
 	popq	%rbp
@@ -195,12 +249,12 @@ __ZNSt3__111char_traitsIcE6lengthEPKc:  ## @_ZNSt3__111char_traitsIcE6lengthEPKc
 	.cfi_startproc
 ## BB#0:                                ## %entry
 	pushq	%rbp
-Lcfi17:
-	.cfi_def_cfa_offset 16
 Lcfi18:
+	.cfi_def_cfa_offset 16
+Lcfi19:
 	.cfi_offset %rbp, -16
 	movq	%rsp, %rbp
-Lcfi19:
+Lcfi20:
 	.cfi_def_cfa_register %rbp
 	subq	$16, %rsp
 	movq	%rdi, -8(%rbp)
@@ -218,12 +272,12 @@ __ZNSt3__122__compressed_pair_elemINS_12basic_stringIcNS_11char_traitsIcEENS_9al
 	.cfi_startproc
 ## BB#0:                                ## %entry
 	pushq	%rbp
-Lcfi20:
-	.cfi_def_cfa_offset 16
 Lcfi21:
+	.cfi_def_cfa_offset 16
+Lcfi22:
 	.cfi_offset %rbp, -16
 	movq	%rsp, %rbp
-Lcfi22:
+Lcfi23:
 	.cfi_def_cfa_register %rbp
 	subq	$16, %rsp
 	xorl	%esi, %esi
@@ -244,12 +298,12 @@ __ZNSt3__122__compressed_pair_elemINS_9allocatorIcEELi1ELb1EEC2Ev: ## @_ZNSt3__1
 	.cfi_startproc
 ## BB#0:                                ## %entry
 	pushq	%rbp
-Lcfi23:
-	.cfi_def_cfa_offset 16
 Lcfi24:
+	.cfi_def_cfa_offset 16
+Lcfi25:
 	.cfi_offset %rbp, -16
 	movq	%rsp, %rbp
-Lcfi25:
+Lcfi26:
 	.cfi_def_cfa_register %rbp
 	movq	%rdi, -16(%rbp)
 	movq	-16(%rbp), %rdi

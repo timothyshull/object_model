@@ -16,51 +16,51 @@
            |  nvsize=24, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f965b069658 <object_model/5_ctor_dtor_semantics/01_presence_of_a_virtual_specification.cpp:1:1, line:29:1> line:1:8 referenced struct B1 definition
-|-CXXRecordDecl 0x7f965b069778 <col:1, col:8> col:8 implicit referenced struct B1
-|-FieldDecl 0x7f965b069828 <line:2:5, col:16> col:11 referenced cp 'char *'
-| `-ImplicitCastExpr 0x7f965b06a230 <col:16> 'char *' <NullToPointer>
-|   `-CXXNullPtrLiteralExpr 0x7f965b06a218 <col:16> 'nullptr_t'
-|-CXXConstructorDecl 0x7f965b069910 <line:4:5, line:7:5> line:4:5 used B1 'void (void)'
-| |-CXXCtorInitializer Field 0x7f965b069828 'cp' 'char *'
-| | `-CXXDefaultInitExpr 0x7f965b06a248 <col:5> 'char *'
-| `-CompoundStmt 0x7f965b094dc8 <line:5:5, line:7:5>
-|   `-BinaryOperator 0x7f965b094da0 <line:6:9, col:25> 'char *' lvalue '='
-|     |-MemberExpr 0x7f965b06a2b0 <col:9> 'char *' lvalue ->cp 0x7f965b069828
-|     | `-CXXThisExpr 0x7f965b06a298 <col:9> 'struct B1 *' this
-|     `-CXXNewExpr 0x7f965b094d48 <col:14, col:25> 'char *' array Function 0x7f965b06a4b0 'operator new[]' 'void *(unsigned long)'
-|       `-ImplicitCastExpr 0x7f965b06a318 <col:23> 'unsigned long' <IntegralCast>
-|         `-IntegerLiteral 0x7f965b06a2e8 <col:23> 'int' 10
-|-CXXConstructorDecl 0x7f965b069ac0 <line:9:5, col:24> col:5 B1 'void (const struct B1 &)'
-| |-ParmVarDecl 0x7f965b0699f8 <col:8, col:18> col:18 rhs 'const struct B1 &'
-| |-CXXCtorInitializer Field 0x7f965b069828 'cp' 'char *'
-| | `-CXXDefaultInitExpr 0x7f965b094de8 <col:5> 'char *'
-| `-CompoundStmt 0x7f965b094e38 <col:23, col:24>
-|-CXXConstructorDecl 0x7f965b069c70 <line:11:5, col:19> col:5 B1 'void (struct B1 &&)'
-| |-ParmVarDecl 0x7f965b069ba8 <col:8, col:13> col:13 rhs 'struct B1 &&'
-| |-CXXCtorInitializer Field 0x7f965b069828 'cp' 'char *'
-| | `-CXXDefaultInitExpr 0x7f965b094e50 <col:5> 'char *'
-| `-CompoundStmt 0x7f965b094ea0 <col:18, col:19>
-|-CXXDestructorDecl 0x7f965b069d70 <line:13:5, line:16:5> line:13:13 used ~B1 'void (void) noexcept' virtual
-| `-CompoundStmt 0x7f965b094f80 <line:14:5, line:16:5>
-|   `-CXXDeleteExpr 0x7f965b094f58 <line:15:9, col:18> 'void' array Function 0x7f965b094bc0 'operator delete[]' 'void (void *) noexcept'
-|     `-ImplicitCastExpr 0x7f965b094f40 <col:18> 'char *' <LValueToRValue>
-|       `-MemberExpr 0x7f965b094f08 <col:18> 'char *' lvalue ->cp 0x7f965b069828
-|         `-CXXThisExpr 0x7f965b094ef0 <col:18> 'struct B1 *' this
-|-CXXMethodDecl 0x7f965b069f10 <line:18:5, line:21:5> line:18:9 operator= 'struct B1 &(const struct B1 &)'
-| |-ParmVarDecl 0x7f965b069e20 <col:19, col:29> col:29 rhs 'const struct B1 &'
-| `-CompoundStmt 0x7f965b094ff0 <line:19:5, line:21:5>
-|   `-ReturnStmt 0x7f965b094fd8 <line:20:9, col:17>
-|     `-UnaryOperator 0x7f965b094fb8 <col:16, col:17> 'struct B1' lvalue prefix '*'
-|       `-CXXThisExpr 0x7f965b094fa0 <col:17> 'struct B1 *' this
-|-CXXMethodDecl 0x7f965b06a080 <line:23:5, line:26:5> line:23:9 operator= 'struct B1 &(struct B1 &&)'
-| |-ParmVarDecl 0x7f965b069fc0 <col:19, col:24> col:24 rhs 'struct B1 &&'
-| `-CompoundStmt 0x7f965b095060 <line:24:5, line:26:5>
-|   `-ReturnStmt 0x7f965b095048 <line:25:9, col:17>
-|     `-UnaryOperator 0x7f965b095028 <col:16, col:17> 'struct B1' lvalue prefix '*'
-|       `-CXXThisExpr 0x7f965b095010 <col:17> 'struct B1 *' this
-`-CXXMethodDecl 0x7f965b06a140 <line:28:5, col:23> col:18 used m 'void (void)' virtual
-  `-CompoundStmt 0x7f965b095080 <col:22, col:23>
+Record: CXXRecordDecl 0x7fbc23869658 <object_model/5_ctor_dtor_semantics/01_presence_of_a_virtual_specification.cpp:1:1, line:29:1> line:1:8 referenced struct B1 definition
+|-CXXRecordDecl 0x7fbc23869778 <col:1, col:8> col:8 implicit referenced struct B1
+|-FieldDecl 0x7fbc23869828 <line:2:5, col:16> col:11 referenced cp 'char *'
+| `-ImplicitCastExpr 0x7fbc2386a230 <col:16> 'char *' <NullToPointer>
+|   `-CXXNullPtrLiteralExpr 0x7fbc2386a218 <col:16> 'nullptr_t'
+|-CXXConstructorDecl 0x7fbc23869910 <line:4:5, line:7:5> line:4:5 used B1 'void (void)'
+| |-CXXCtorInitializer Field 0x7fbc23869828 'cp' 'char *'
+| | `-CXXDefaultInitExpr 0x7fbc2386a248 <col:5> 'char *'
+| `-CompoundStmt 0x7fbc23894dc8 <line:5:5, line:7:5>
+|   `-BinaryOperator 0x7fbc23894da0 <line:6:9, col:25> 'char *' lvalue '='
+|     |-MemberExpr 0x7fbc2386a2b0 <col:9> 'char *' lvalue ->cp 0x7fbc23869828
+|     | `-CXXThisExpr 0x7fbc2386a298 <col:9> 'struct B1 *' this
+|     `-CXXNewExpr 0x7fbc23894d48 <col:14, col:25> 'char *' array Function 0x7fbc2386a4b0 'operator new[]' 'void *(unsigned long)'
+|       `-ImplicitCastExpr 0x7fbc2386a318 <col:23> 'unsigned long' <IntegralCast>
+|         `-IntegerLiteral 0x7fbc2386a2e8 <col:23> 'int' 10
+|-CXXConstructorDecl 0x7fbc23869ac0 <line:9:5, col:24> col:5 B1 'void (const struct B1 &)'
+| |-ParmVarDecl 0x7fbc238699f8 <col:8, col:18> col:18 rhs 'const struct B1 &'
+| |-CXXCtorInitializer Field 0x7fbc23869828 'cp' 'char *'
+| | `-CXXDefaultInitExpr 0x7fbc23894de8 <col:5> 'char *'
+| `-CompoundStmt 0x7fbc23894e38 <col:23, col:24>
+|-CXXConstructorDecl 0x7fbc23869c70 <line:11:5, col:19> col:5 B1 'void (struct B1 &&)'
+| |-ParmVarDecl 0x7fbc23869ba8 <col:8, col:13> col:13 rhs 'struct B1 &&'
+| |-CXXCtorInitializer Field 0x7fbc23869828 'cp' 'char *'
+| | `-CXXDefaultInitExpr 0x7fbc23894e50 <col:5> 'char *'
+| `-CompoundStmt 0x7fbc23894ea0 <col:18, col:19>
+|-CXXDestructorDecl 0x7fbc23869d70 <line:13:5, line:16:5> line:13:13 used ~B1 'void (void) noexcept' virtual
+| `-CompoundStmt 0x7fbc23894f80 <line:14:5, line:16:5>
+|   `-CXXDeleteExpr 0x7fbc23894f58 <line:15:9, col:18> 'void' array Function 0x7fbc23894bc0 'operator delete[]' 'void (void *) noexcept'
+|     `-ImplicitCastExpr 0x7fbc23894f40 <col:18> 'char *' <LValueToRValue>
+|       `-MemberExpr 0x7fbc23894f08 <col:18> 'char *' lvalue ->cp 0x7fbc23869828
+|         `-CXXThisExpr 0x7fbc23894ef0 <col:18> 'struct B1 *' this
+|-CXXMethodDecl 0x7fbc23869f10 <line:18:5, line:21:5> line:18:9 operator= 'struct B1 &(const struct B1 &)'
+| |-ParmVarDecl 0x7fbc23869e20 <col:19, col:29> col:29 rhs 'const struct B1 &'
+| `-CompoundStmt 0x7fbc23894ff0 <line:19:5, line:21:5>
+|   `-ReturnStmt 0x7fbc23894fd8 <line:20:9, col:17>
+|     `-UnaryOperator 0x7fbc23894fb8 <col:16, col:17> 'struct B1' lvalue prefix '*'
+|       `-CXXThisExpr 0x7fbc23894fa0 <col:17> 'struct B1 *' this
+|-CXXMethodDecl 0x7fbc2386a080 <line:23:5, line:26:5> line:23:9 operator= 'struct B1 &(struct B1 &&)'
+| |-ParmVarDecl 0x7fbc23869fc0 <col:19, col:24> col:24 rhs 'struct B1 &&'
+| `-CompoundStmt 0x7fbc23895060 <line:24:5, line:26:5>
+|   `-ReturnStmt 0x7fbc23895048 <line:25:9, col:17>
+|     `-UnaryOperator 0x7fbc23895028 <col:16, col:17> 'struct B1' lvalue prefix '*'
+|       `-CXXThisExpr 0x7fbc23895010 <col:17> 'struct B1 *' this
+`-CXXMethodDecl 0x7fbc2386a140 <line:28:5, col:23> col:18 used m 'void (void)' virtual
+  `-CompoundStmt 0x7fbc23895080 <col:22, col:23>
 
 Layout: <CGRecordLayout
   LLVMType:%struct.B1 = type { i32 (...)**, i8* }
@@ -70,59 +70,59 @@ Layout: <CGRecordLayout
 ]>
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f965b095098 <object_model/5_ctor_dtor_semantics/01_presence_of_a_virtual_specification.cpp:31:1, line:59:1> line:31:8 referenced struct D1 definition
+Record: CXXRecordDecl 0x7fbc23895098 <object_model/5_ctor_dtor_semantics/01_presence_of_a_virtual_specification.cpp:31:1, line:59:1> line:31:8 referenced struct D1 definition
 |-public 'struct B1'
-|-CXXRecordDecl 0x7f965b0951f8 <col:1, col:8> col:8 implicit referenced struct D1
-|-FieldDecl 0x7f965b0952d0 <line:32:5, col:15> col:10 referenced ip 'int *'
-| `-ImplicitCastExpr 0x7f965b097560 <col:15> 'int *' <NullToPointer>
-|   `-CXXNullPtrLiteralExpr 0x7f965b097548 <col:15> 'nullptr_t'
-|-CXXConstructorDecl 0x7f965b095388 <line:34:5, line:37:5> line:34:5 used D1 'void (void)'
+|-CXXRecordDecl 0x7fbc238951f8 <col:1, col:8> col:8 implicit referenced struct D1
+|-FieldDecl 0x7fbc238952d0 <line:32:5, col:15> col:10 referenced ip 'int *'
+| `-ImplicitCastExpr 0x7fbc23897560 <col:15> 'int *' <NullToPointer>
+|   `-CXXNullPtrLiteralExpr 0x7fbc23897548 <col:15> 'nullptr_t'
+|-CXXConstructorDecl 0x7fbc23895388 <line:34:5, line:37:5> line:34:5 used D1 'void (void)'
 | |-CXXCtorInitializer 'struct B1'
-| | `-CXXConstructExpr 0x7f965b097578 <col:5> 'struct B1' 'void (void)'
-| |-CXXCtorInitializer Field 0x7f965b0952d0 'ip' 'int *'
-| | `-CXXDefaultInitExpr 0x7f965b0975e0 <col:5> 'int *'
-| `-CompoundStmt 0x7f965b097798 <line:35:5, line:37:5>
-|   `-BinaryOperator 0x7f965b097770 <line:36:9, col:24> 'int *' lvalue '='
-|     |-MemberExpr 0x7f965b097650 <col:9> 'int *' lvalue ->ip 0x7f965b0952d0
-|     | `-CXXThisExpr 0x7f965b097638 <col:9> 'struct D1 *' this
-|     `-CXXNewExpr 0x7f965b097718 <col:14, col:24> 'int *' array Function 0x7f965b06a4b0 'operator new[]' 'void *(unsigned long)'
-|       `-ImplicitCastExpr 0x7f965b0976c0 <col:22> 'unsigned long' <IntegralCast>
-|         `-IntegerLiteral 0x7f965b097688 <col:22> 'int' 10
-|-CXXConstructorDecl 0x7f965b095530 <line:39:5, col:24> col:5 D1 'void (const struct D1 &)'
-| |-ParmVarDecl 0x7f965b095468 <col:8, col:18> col:18 rhs 'const struct D1 &'
+| | `-CXXConstructExpr 0x7fbc23897578 <col:5> 'struct B1' 'void (void)'
+| |-CXXCtorInitializer Field 0x7fbc238952d0 'ip' 'int *'
+| | `-CXXDefaultInitExpr 0x7fbc238975e0 <col:5> 'int *'
+| `-CompoundStmt 0x7fbc23897798 <line:35:5, line:37:5>
+|   `-BinaryOperator 0x7fbc23897770 <line:36:9, col:24> 'int *' lvalue '='
+|     |-MemberExpr 0x7fbc23897650 <col:9> 'int *' lvalue ->ip 0x7fbc238952d0
+|     | `-CXXThisExpr 0x7fbc23897638 <col:9> 'struct D1 *' this
+|     `-CXXNewExpr 0x7fbc23897718 <col:14, col:24> 'int *' array Function 0x7fbc2386a4b0 'operator new[]' 'void *(unsigned long)'
+|       `-ImplicitCastExpr 0x7fbc238976c0 <col:22> 'unsigned long' <IntegralCast>
+|         `-IntegerLiteral 0x7fbc23897688 <col:22> 'int' 10
+|-CXXConstructorDecl 0x7fbc23895530 <line:39:5, col:24> col:5 D1 'void (const struct D1 &)'
+| |-ParmVarDecl 0x7fbc23895468 <col:8, col:18> col:18 rhs 'const struct D1 &'
 | |-CXXCtorInitializer 'struct B1'
-| | `-CXXConstructExpr 0x7f965b0977b8 <col:5> 'struct B1' 'void (void)'
-| |-CXXCtorInitializer Field 0x7f965b0952d0 'ip' 'int *'
-| | `-CXXDefaultInitExpr 0x7f965b097820 <col:5> 'int *'
-| `-CompoundStmt 0x7f965b097878 <col:23, col:24>
-|-CXXConstructorDecl 0x7f965b0956e0 <line:41:5, col:19> col:5 D1 'void (struct D1 &&)'
-| |-ParmVarDecl 0x7f965b095618 <col:8, col:13> col:13 rhs 'struct D1 &&'
+| | `-CXXConstructExpr 0x7fbc238977b8 <col:5> 'struct B1' 'void (void)'
+| |-CXXCtorInitializer Field 0x7fbc238952d0 'ip' 'int *'
+| | `-CXXDefaultInitExpr 0x7fbc23897820 <col:5> 'int *'
+| `-CompoundStmt 0x7fbc23897878 <col:23, col:24>
+|-CXXConstructorDecl 0x7fbc238956e0 <line:41:5, col:19> col:5 D1 'void (struct D1 &&)'
+| |-ParmVarDecl 0x7fbc23895618 <col:8, col:13> col:13 rhs 'struct D1 &&'
 | |-CXXCtorInitializer 'struct B1'
-| | `-CXXConstructExpr 0x7f965b097890 <col:5> 'struct B1' 'void (void)'
-| |-CXXCtorInitializer Field 0x7f965b0952d0 'ip' 'int *'
-| | `-CXXDefaultInitExpr 0x7f965b0978f8 <col:5> 'int *'
-| `-CompoundStmt 0x7f965b097950 <col:18, col:19>
-|-CXXDestructorDecl 0x7f965b0957e0 <line:43:5, line:46:5> line:43:13 used ~D1 'void (void) noexcept' virtual
-| `-CompoundStmt 0x7f965b0979f8 <line:44:5, line:46:5>
-|   `-CXXDeleteExpr 0x7f965b0979d0 <line:45:9, col:18> 'void' array Function 0x7f965b094bc0 'operator delete[]' 'void (void *) noexcept'
-|     `-ImplicitCastExpr 0x7f965b0979b8 <col:18> 'int *' <LValueToRValue>
-|       `-MemberExpr 0x7f965b097980 <col:18> 'int *' lvalue ->ip 0x7f965b0952d0
-|         `-CXXThisExpr 0x7f965b097968 <col:18> 'struct D1 *' this
-|-CXXMethodDecl 0x7f965b097200 <line:48:5, line:51:5> line:48:9 operator= 'struct D1 &(const struct D1 &)'
-| |-ParmVarDecl 0x7f965b095890 <col:19, col:29> col:29 rhs 'const struct D1 &'
-| `-CompoundStmt 0x7f965b097a68 <line:49:5, line:51:5>
-|   `-ReturnStmt 0x7f965b097a50 <line:50:9, col:17>
-|     `-UnaryOperator 0x7f965b097a30 <col:16, col:17> 'struct D1' lvalue prefix '*'
-|       `-CXXThisExpr 0x7f965b097a18 <col:17> 'struct D1 *' this
-|-CXXMethodDecl 0x7f965b097370 <line:53:5, line:56:5> line:53:9 operator= 'struct D1 &(struct D1 &&)'
-| |-ParmVarDecl 0x7f965b0972b0 <col:19, col:24> col:24 rhs 'struct D1 &&'
-| `-CompoundStmt 0x7f965b097ad8 <line:54:5, line:56:5>
-|   `-ReturnStmt 0x7f965b097ac0 <line:55:9, col:17>
-|     `-UnaryOperator 0x7f965b097aa0 <col:16, col:17> 'struct D1' lvalue prefix '*'
-|       `-CXXThisExpr 0x7f965b097a88 <col:17> 'struct D1 *' this
-`-CXXMethodDecl 0x7f965b097430 <line:58:5, col:24> col:10 m 'void (void)'
-  |-CompoundStmt 0x7f965b097af8 <col:23, col:24>
-  `-OverrideAttr 0x7f965b0974c8 <col:14>
+| | `-CXXConstructExpr 0x7fbc23897890 <col:5> 'struct B1' 'void (void)'
+| |-CXXCtorInitializer Field 0x7fbc238952d0 'ip' 'int *'
+| | `-CXXDefaultInitExpr 0x7fbc238978f8 <col:5> 'int *'
+| `-CompoundStmt 0x7fbc23897950 <col:18, col:19>
+|-CXXDestructorDecl 0x7fbc238957e0 <line:43:5, line:46:5> line:43:13 used ~D1 'void (void) noexcept' virtual
+| `-CompoundStmt 0x7fbc238979f8 <line:44:5, line:46:5>
+|   `-CXXDeleteExpr 0x7fbc238979d0 <line:45:9, col:18> 'void' array Function 0x7fbc23894bc0 'operator delete[]' 'void (void *) noexcept'
+|     `-ImplicitCastExpr 0x7fbc238979b8 <col:18> 'int *' <LValueToRValue>
+|       `-MemberExpr 0x7fbc23897980 <col:18> 'int *' lvalue ->ip 0x7fbc238952d0
+|         `-CXXThisExpr 0x7fbc23897968 <col:18> 'struct D1 *' this
+|-CXXMethodDecl 0x7fbc23897200 <line:48:5, line:51:5> line:48:9 operator= 'struct D1 &(const struct D1 &)'
+| |-ParmVarDecl 0x7fbc23895890 <col:19, col:29> col:29 rhs 'const struct D1 &'
+| `-CompoundStmt 0x7fbc23897a68 <line:49:5, line:51:5>
+|   `-ReturnStmt 0x7fbc23897a50 <line:50:9, col:17>
+|     `-UnaryOperator 0x7fbc23897a30 <col:16, col:17> 'struct D1' lvalue prefix '*'
+|       `-CXXThisExpr 0x7fbc23897a18 <col:17> 'struct D1 *' this
+|-CXXMethodDecl 0x7fbc23897370 <line:53:5, line:56:5> line:53:9 operator= 'struct D1 &(struct D1 &&)'
+| |-ParmVarDecl 0x7fbc238972b0 <col:19, col:24> col:24 rhs 'struct D1 &&'
+| `-CompoundStmt 0x7fbc23897ad8 <line:54:5, line:56:5>
+|   `-ReturnStmt 0x7fbc23897ac0 <line:55:9, col:17>
+|     `-UnaryOperator 0x7fbc23897aa0 <col:16, col:17> 'struct D1' lvalue prefix '*'
+|       `-CXXThisExpr 0x7fbc23897a88 <col:17> 'struct D1 *' this
+`-CXXMethodDecl 0x7fbc23897430 <line:58:5, col:24> col:10 m 'void (void)'
+  |-CompoundStmt 0x7fbc23897af8 <col:23, col:24>
+  `-OverrideAttr 0x7fbc238974c8 <col:14>
 
 Layout: <CGRecordLayout
   LLVMType:%struct.D1 = type { %struct.B1, i32* }

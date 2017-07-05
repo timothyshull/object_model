@@ -713,69 +713,69 @@
            |  nvsize=16, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7f9ca140e218 <object_model/4_functions/07_inline_functions.cpp:6:1, line:40:1> line:6:7 referenced class P definition
-|-CXXRecordDecl 0x7f9ca140e338 <col:1, col:7> col:7 implicit referenced class P
-|-AccessSpecDecl 0x7f9ca140e3d0 <line:7:1, col:7> col:1 public
-|-CXXConstructorDecl 0x7f9ca140e5b0 <line:8:5, col:43> col:5 P 'void (double, double)'
-| |-ParmVarDecl 0x7f9ca140e410 <col:7, col:14> col:14 used x 'double'
-| |-ParmVarDecl 0x7f9ca140e488 <col:17, col:24> col:24 used y 'double'
-| |-CXXCtorInitializer Field 0x7f9ca140ed00 '_x' 'double'
-| | `-InitListExpr 0x7f9ca140f108 <col:31, col:33> 'double'
-| |   `-ImplicitCastExpr 0x7f9ca140f148 <col:32> 'double' <LValueToRValue>
-| |     `-DeclRefExpr 0x7f9ca140f098 <col:32> 'double' lvalue ParmVar 0x7f9ca140e410 'x' 'double'
-| |-CXXCtorInitializer Field 0x7f9ca140ed60 '_y' 'double'
-| | `-InitListExpr 0x7f9ca140f200 <col:38, col:40> 'double'
-| |   `-ImplicitCastExpr 0x7f9ca140f240 <col:39> 'double' <LValueToRValue>
-| |     `-DeclRefExpr 0x7f9ca140f190 <col:39> 'double' lvalue ParmVar 0x7f9ca140e488 'y' 'double'
-| `-CompoundStmt 0x7f9ca140f298 <col:42, col:43>
-|-CXXConstructorDecl 0x7f9ca140e688 <line:10:5, col:17> col:5 referenced P 'void (void) noexcept' default trivial
-|-CXXDestructorDecl 0x7f9ca140e780 <line:12:5, col:18> col:5 ~P 'void (void) noexcept' default trivial
-|-CXXMethodDecl 0x7f9ca140e8a8 <line:14:5, line:17:5> line:14:12 x 'double (void) const'
-| `-CompoundStmt 0x7f9ca140f330 <line:15:5, line:17:5>
-|   `-ReturnStmt 0x7f9ca140f318 <line:16:9, col:16>
-|     `-ImplicitCastExpr 0x7f9ca140f300 <col:16> 'double' <LValueToRValue>
-|       `-MemberExpr 0x7f9ca140f2c8 <col:16> 'const double' lvalue ->_x 0x7f9ca140ed00
-|         `-CXXThisExpr 0x7f9ca140f2b0 <col:16> 'const class P *' this
-|-CXXMethodDecl 0x7f9ca140ea20 <line:19:5, line:22:5> line:19:10 x 'void (double)'
-| |-ParmVarDecl 0x7f9ca140e958 <col:12, col:19> col:19 used x 'double'
-| `-CompoundStmt 0x7f9ca140f408 <line:20:5, line:22:5>
-|   `-BinaryOperator 0x7f9ca140f3e0 <line:21:9, col:14> 'double' lvalue '='
-|     |-MemberExpr 0x7f9ca140f368 <col:9> 'double' lvalue ->_x 0x7f9ca140ed00
-|     | `-CXXThisExpr 0x7f9ca140f350 <col:9> 'class P *' this
-|     `-ImplicitCastExpr 0x7f9ca140f3c8 <col:14> 'double' <LValueToRValue>
-|       `-DeclRefExpr 0x7f9ca140f3a0 <col:14> 'double' lvalue ParmVar 0x7f9ca140e958 'x' 'double'
-|-CXXMethodDecl 0x7f9ca140eae8 <line:24:5, line:27:5> line:24:12 y 'double (void) const'
-| `-CompoundStmt 0x7f9ca140f4a8 <line:25:5, line:27:5>
-|   `-ReturnStmt 0x7f9ca140f490 <line:26:9, col:16>
-|     `-ImplicitCastExpr 0x7f9ca140f478 <col:16> 'double' <LValueToRValue>
-|       `-MemberExpr 0x7f9ca140f440 <col:16> 'const double' lvalue ->_y 0x7f9ca140ed60
-|         `-CXXThisExpr 0x7f9ca140f428 <col:16> 'const class P *' this
-|-CXXMethodDecl 0x7f9ca140ec20 <line:29:5, line:32:5> line:29:10 y 'void (double)'
-| |-ParmVarDecl 0x7f9ca140eb98 <col:12, col:19> col:19 used y 'double'
-| `-CompoundStmt 0x7f9ca140f580 <line:30:5, line:32:5>
-|   `-BinaryOperator 0x7f9ca140f558 <line:31:9, col:14> 'double' lvalue '='
-|     |-MemberExpr 0x7f9ca140f4e0 <col:9> 'double' lvalue ->_y 0x7f9ca140ed60
-|     | `-CXXThisExpr 0x7f9ca140f4c8 <col:9> 'class P *' this
-|     `-ImplicitCastExpr 0x7f9ca140f540 <col:14> 'double' <LValueToRValue>
-|       `-DeclRefExpr 0x7f9ca140f518 <col:14> 'double' lvalue ParmVar 0x7f9ca140eb98 'y' 'double'
-|-AccessSpecDecl 0x7f9ca140ecc0 <line:34:1, col:8> col:1 private
-|-FieldDecl 0x7f9ca140ed00 <line:35:5, col:12> col:12 referenced _x 'double'
-|-FieldDecl 0x7f9ca140ed60 <line:36:5, col:12> col:12 referenced _y 'double'
-|-FriendDecl 0x7f9ca140efe8 <line:38:5, line:39:45> col:7
-| `-FunctionDecl 0x7f9ca140ef30 parent 0x7f9ca1033ad0 <line:38:5, line:39:45> col:7 operator+ 'class P (const class P &, const class P &)'
-|   |-ParmVarDecl 0x7f9ca140ede8 <col:17, col:27> col:27 lhs 'const class P &'
-|   `-ParmVarDecl 0x7f9ca140ee58 <col:32, col:42> col:42 rhs 'const class P &'
-`-CXXConstructorDecl 0x7f9ca140f808 <line:6:7> col:7 implicit used constexpr P 'void (const class P &) noexcept' inline default trivial
-  |-ParmVarDecl 0x7f9ca140f930 <col:7> col:7 used 'const class P &'
-  |-CXXCtorInitializer Field 0x7f9ca140ed00 '_x' 'double'
-  | `-ImplicitCastExpr 0x7f9ca140fee0 <col:7> 'double' <LValueToRValue>
-  |   `-MemberExpr 0x7f9ca140fe90 <col:7> 'const double' lvalue ._x 0x7f9ca140ed00
-  |     `-DeclRefExpr 0x7f9ca140fe68 <col:7> 'const class P' lvalue ParmVar 0x7f9ca140f930 '' 'const class P &'
-  |-CXXCtorInitializer Field 0x7f9ca140ed60 '_y' 'double'
-  | `-ImplicitCastExpr 0x7f9ca140ff98 <col:7> 'double' <LValueToRValue>
-  |   `-MemberExpr 0x7f9ca140ff48 <col:7> 'const double' lvalue ._y 0x7f9ca140ed60
-  |     `-DeclRefExpr 0x7f9ca140ff20 <col:7> 'const class P' lvalue ParmVar 0x7f9ca140f930 '' 'const class P &'
-  `-CompoundStmt 0x7f9ca140ffe8 <col:7>
+Record: CXXRecordDecl 0x7fe0913cb018 <object_model/4_functions/07_inline_functions.cpp:6:1, line:40:1> line:6:7 referenced class P definition
+|-CXXRecordDecl 0x7fe0913cb138 <col:1, col:7> col:7 implicit referenced class P
+|-AccessSpecDecl 0x7fe0913cb1d0 <line:7:1, col:7> col:1 public
+|-CXXConstructorDecl 0x7fe0913cb3b0 <line:8:5, col:43> col:5 P 'void (double, double)'
+| |-ParmVarDecl 0x7fe0913cb210 <col:7, col:14> col:14 used x 'double'
+| |-ParmVarDecl 0x7fe0913cb288 <col:17, col:24> col:24 used y 'double'
+| |-CXXCtorInitializer Field 0x7fe0913cbb00 '_x' 'double'
+| | `-InitListExpr 0x7fe0913cbf08 <col:31, col:33> 'double'
+| |   `-ImplicitCastExpr 0x7fe0913cbf48 <col:32> 'double' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fe0913cbe98 <col:32> 'double' lvalue ParmVar 0x7fe0913cb210 'x' 'double'
+| |-CXXCtorInitializer Field 0x7fe0913cbb60 '_y' 'double'
+| | `-InitListExpr 0x7fe0913cc000 <col:38, col:40> 'double'
+| |   `-ImplicitCastExpr 0x7fe0913cc040 <col:39> 'double' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fe0913cbf90 <col:39> 'double' lvalue ParmVar 0x7fe0913cb288 'y' 'double'
+| `-CompoundStmt 0x7fe0913cc098 <col:42, col:43>
+|-CXXConstructorDecl 0x7fe0913cb488 <line:10:5, col:17> col:5 referenced P 'void (void) noexcept' default trivial
+|-CXXDestructorDecl 0x7fe0913cb580 <line:12:5, col:18> col:5 ~P 'void (void) noexcept' default trivial
+|-CXXMethodDecl 0x7fe0913cb6a8 <line:14:5, line:17:5> line:14:12 x 'double (void) const'
+| `-CompoundStmt 0x7fe0913cc130 <line:15:5, line:17:5>
+|   `-ReturnStmt 0x7fe0913cc118 <line:16:9, col:16>
+|     `-ImplicitCastExpr 0x7fe0913cc100 <col:16> 'double' <LValueToRValue>
+|       `-MemberExpr 0x7fe0913cc0c8 <col:16> 'const double' lvalue ->_x 0x7fe0913cbb00
+|         `-CXXThisExpr 0x7fe0913cc0b0 <col:16> 'const class P *' this
+|-CXXMethodDecl 0x7fe0913cb820 <line:19:5, line:22:5> line:19:10 x 'void (double)'
+| |-ParmVarDecl 0x7fe0913cb758 <col:12, col:19> col:19 used x 'double'
+| `-CompoundStmt 0x7fe0913cc208 <line:20:5, line:22:5>
+|   `-BinaryOperator 0x7fe0913cc1e0 <line:21:9, col:14> 'double' lvalue '='
+|     |-MemberExpr 0x7fe0913cc168 <col:9> 'double' lvalue ->_x 0x7fe0913cbb00
+|     | `-CXXThisExpr 0x7fe0913cc150 <col:9> 'class P *' this
+|     `-ImplicitCastExpr 0x7fe0913cc1c8 <col:14> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fe0913cc1a0 <col:14> 'double' lvalue ParmVar 0x7fe0913cb758 'x' 'double'
+|-CXXMethodDecl 0x7fe0913cb8e8 <line:24:5, line:27:5> line:24:12 y 'double (void) const'
+| `-CompoundStmt 0x7fe0913cc2a8 <line:25:5, line:27:5>
+|   `-ReturnStmt 0x7fe0913cc290 <line:26:9, col:16>
+|     `-ImplicitCastExpr 0x7fe0913cc278 <col:16> 'double' <LValueToRValue>
+|       `-MemberExpr 0x7fe0913cc240 <col:16> 'const double' lvalue ->_y 0x7fe0913cbb60
+|         `-CXXThisExpr 0x7fe0913cc228 <col:16> 'const class P *' this
+|-CXXMethodDecl 0x7fe0913cba20 <line:29:5, line:32:5> line:29:10 y 'void (double)'
+| |-ParmVarDecl 0x7fe0913cb998 <col:12, col:19> col:19 used y 'double'
+| `-CompoundStmt 0x7fe0913cc380 <line:30:5, line:32:5>
+|   `-BinaryOperator 0x7fe0913cc358 <line:31:9, col:14> 'double' lvalue '='
+|     |-MemberExpr 0x7fe0913cc2e0 <col:9> 'double' lvalue ->_y 0x7fe0913cbb60
+|     | `-CXXThisExpr 0x7fe0913cc2c8 <col:9> 'class P *' this
+|     `-ImplicitCastExpr 0x7fe0913cc340 <col:14> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fe0913cc318 <col:14> 'double' lvalue ParmVar 0x7fe0913cb998 'y' 'double'
+|-AccessSpecDecl 0x7fe0913cbac0 <line:34:1, col:8> col:1 private
+|-FieldDecl 0x7fe0913cbb00 <line:35:5, col:12> col:12 referenced _x 'double'
+|-FieldDecl 0x7fe0913cbb60 <line:36:5, col:12> col:12 referenced _y 'double'
+|-FriendDecl 0x7fe0913cbde8 <line:38:5, line:39:45> col:7
+| `-FunctionDecl 0x7fe0913cbd30 parent 0x7fe090833ad0 <line:38:5, line:39:45> col:7 operator+ 'class P (const class P &, const class P &)'
+|   |-ParmVarDecl 0x7fe0913cbbe8 <col:17, col:27> col:27 lhs 'const class P &'
+|   `-ParmVarDecl 0x7fe0913cbc58 <col:32, col:42> col:42 rhs 'const class P &'
+`-CXXConstructorDecl 0x7fe0913cc608 <line:6:7> col:7 implicit used constexpr P 'void (const class P &) noexcept' inline default trivial
+  |-ParmVarDecl 0x7fe0913cc730 <col:7> col:7 used 'const class P &'
+  |-CXXCtorInitializer Field 0x7fe0913cbb00 '_x' 'double'
+  | `-ImplicitCastExpr 0x7fe0913ccce0 <col:7> 'double' <LValueToRValue>
+  |   `-MemberExpr 0x7fe0913ccc90 <col:7> 'const double' lvalue ._x 0x7fe0913cbb00
+  |     `-DeclRefExpr 0x7fe0913ccc68 <col:7> 'const class P' lvalue ParmVar 0x7fe0913cc730 '' 'const class P &'
+  |-CXXCtorInitializer Field 0x7fe0913cbb60 '_y' 'double'
+  | `-ImplicitCastExpr 0x7fe0913ccd98 <col:7> 'double' <LValueToRValue>
+  |   `-MemberExpr 0x7fe0913ccd48 <col:7> 'const double' lvalue ._y 0x7fe0913cbb60
+  |     `-DeclRefExpr 0x7fe0913ccd20 <col:7> 'const class P' lvalue ParmVar 0x7fe0913cc730 '' 'const class P &'
+  `-CompoundStmt 0x7fe0913ccde8 <col:7>
 
 Layout: <CGRecordLayout
   LLVMType:%class.P = type { double, double }

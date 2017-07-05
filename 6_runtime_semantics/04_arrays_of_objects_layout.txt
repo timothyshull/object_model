@@ -7,28 +7,28 @@
            |  nvsize=16, nvalign=8]
 
 *** Dumping IRgen Record Layout
-Record: CXXRecordDecl 0x7fb832861a58 <object_model/6_runtime_semantics/04_arrays_of_objects.cpp:1:1, line:4:1> line:1:8 referenced struct P definition
-|-CXXRecordDecl 0x7fb832861b78 <col:1, col:8> col:8 implicit struct P
-|-FieldDecl 0x7fb832861c28 <line:2:5, col:12> col:12 referenced x 'double'
-|-FieldDecl 0x7fb832861c88 <line:3:5, col:12> col:12 referenced y 'double'
-|-CXXDestructorDecl 0x7fb8328620a8 <line:1:8> col:8 implicit referenced ~P 'void (void) noexcept' inline default trivial
-|-CXXConstructorDecl 0x7fb832862448 <col:8> col:8 implicit used P 'void (void) noexcept' inline default trivial
-| `-CompoundStmt 0x7fb83288e5d0 <col:8>
-|-CXXConstructorDecl 0x7fb832862558 <col:8> col:8 implicit constexpr P 'void (const struct P &)' inline default trivial noexcept-unevaluated 0x7fb832862558
-| `-ParmVarDecl 0x7fb832862680 <col:8> col:8 'const struct P &'
-`-CXXConstructorDecl 0x7fb832862718 <col:8> col:8 implicit used constexpr P 'void (struct P &&) noexcept' inline default trivial
-  |-ParmVarDecl 0x7fb832862840 <col:8> col:8 used 'struct P &&'
-  |-CXXCtorInitializer Field 0x7fb832861c28 'x' 'double'
-  | `-ImplicitCastExpr 0x7fb8328629d8 <col:8> 'double' <LValueToRValue>
-  |   `-MemberExpr 0x7fb8328629a0 <col:8> 'double' xvalue .x 0x7fb832861c28
-  |     `-CXXStaticCastExpr 0x7fb832862970 <col:8> 'struct P' xvalue static_cast<struct P &&> <NoOp>
-  |       `-DeclRefExpr 0x7fb832862938 <col:8> 'struct P' lvalue ParmVar 0x7fb832862840 '' 'struct P &&'
-  |-CXXCtorInitializer Field 0x7fb832861c88 'y' 'double'
-  | `-ImplicitCastExpr 0x7fb83288e2c8 <col:8> 'double' <LValueToRValue>
-  |   `-MemberExpr 0x7fb83288e290 <col:8> 'double' xvalue .y 0x7fb832861c88
-  |     `-CXXStaticCastExpr 0x7fb83288e260 <col:8> 'struct P' xvalue static_cast<struct P &&> <NoOp>
-  |       `-DeclRefExpr 0x7fb83288e228 <col:8> 'struct P' lvalue ParmVar 0x7fb832862840 '' 'struct P &&'
-  `-CompoundStmt 0x7fb83288e318 <col:8>
+Record: CXXRecordDecl 0x7fb91a069058 <object_model/6_runtime_semantics/04_arrays_of_objects.cpp:1:1, line:4:1> line:1:8 referenced struct P definition
+|-CXXRecordDecl 0x7fb91a069178 <col:1, col:8> col:8 implicit struct P
+|-FieldDecl 0x7fb91a069228 <line:2:5, col:12> col:12 referenced x 'double'
+|-FieldDecl 0x7fb91a069288 <line:3:5, col:12> col:12 referenced y 'double'
+|-CXXDestructorDecl 0x7fb91a0696a8 <line:1:8> col:8 implicit referenced ~P 'void (void) noexcept' inline default trivial
+|-CXXConstructorDecl 0x7fb91a069a48 <col:8> col:8 implicit used P 'void (void) noexcept' inline default trivial
+| `-CompoundStmt 0x7fb91a095bd0 <col:8>
+|-CXXConstructorDecl 0x7fb91a069b58 <col:8> col:8 implicit constexpr P 'void (const struct P &)' inline default trivial noexcept-unevaluated 0x7fb91a069b58
+| `-ParmVarDecl 0x7fb91a069c80 <col:8> col:8 'const struct P &'
+`-CXXConstructorDecl 0x7fb91a069d18 <col:8> col:8 implicit used constexpr P 'void (struct P &&) noexcept' inline default trivial
+  |-ParmVarDecl 0x7fb91a069e40 <col:8> col:8 used 'struct P &&'
+  |-CXXCtorInitializer Field 0x7fb91a069228 'x' 'double'
+  | `-ImplicitCastExpr 0x7fb91a069fd8 <col:8> 'double' <LValueToRValue>
+  |   `-MemberExpr 0x7fb91a069fa0 <col:8> 'double' xvalue .x 0x7fb91a069228
+  |     `-CXXStaticCastExpr 0x7fb91a069f70 <col:8> 'struct P' xvalue static_cast<struct P &&> <NoOp>
+  |       `-DeclRefExpr 0x7fb91a069f38 <col:8> 'struct P' lvalue ParmVar 0x7fb91a069e40 '' 'struct P &&'
+  |-CXXCtorInitializer Field 0x7fb91a069288 'y' 'double'
+  | `-ImplicitCastExpr 0x7fb91a0958c8 <col:8> 'double' <LValueToRValue>
+  |   `-MemberExpr 0x7fb91a095890 <col:8> 'double' xvalue .y 0x7fb91a069288
+  |     `-CXXStaticCastExpr 0x7fb91a095860 <col:8> 'struct P' xvalue static_cast<struct P &&> <NoOp>
+  |       `-DeclRefExpr 0x7fb91a095828 <col:8> 'struct P' lvalue ParmVar 0x7fb91a069e40 '' 'struct P &&'
+  `-CompoundStmt 0x7fb91a095918 <col:8>
 
 Layout: <CGRecordLayout
   LLVMType:%struct.P = type { double, double }

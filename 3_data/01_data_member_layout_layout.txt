@@ -101,6 +101,30 @@
            |  nvsize=64, nvalign=64]
 
 *** Dumping AST Record Layout
+         0 | struct S1
+         0 |   char c
+         4 |   int i
+         8 |   short s
+           | [sizeof=12, dsize=12, align=4,
+           |  nvsize=12, nvalign=4]
+
+*** Dumping AST Record Layout
+         0 | struct S2
+         0 |   int i
+         4 |   short s
+         6 |   char c
+           | [sizeof=8, dsize=8, align=4,
+           |  nvsize=8, nvalign=4]
+
+*** Dumping AST Record Layout
+         0 | struct S3
+         0 |   int i
+         4 |   short s
+         6 |   char c
+           | [sizeof=8, dsize=8, align=4,
+           |  nvsize=8, nvalign=4]
+
+*** Dumping AST Record Layout
          0 | struct X
          0 |   std::int64_t [13] a
        104 |   std::int32_t b

@@ -75,25 +75,25 @@ private:
 int main() {
     // example 1
     const auto s1 = sizeof(S1);
-    const auto s1 = sizeof(S2);
-    const auto s1 = sizeof(S3);
+    const auto s2 = sizeof(S2);
+    const auto s3 = sizeof(S3);
 
     // example 2
-    const auto s3 = sizeof(X);
-    const auto s4 = sizeof(Y);
-    const auto s5 = sizeof(Z);
+    const auto x = sizeof(X);
+    const auto y = sizeof(Y);
+    const auto z = sizeof(Z);
 
     // example 3
-    const auto s6 = sizeof(S64);
+    const auto s64 = sizeof(S64);
 
     // example 4
-    const auto s7 = sizeof(A);
-    const auto s8 = sizeof(B);
-    const auto s9 = sizeof(C);
-    const auto s10 = sizeof(D);
+    const auto a = sizeof(A);
+    const auto b = sizeof(B);
+    const auto c = sizeof(C);
+    const auto d = sizeof(D);
 
     // example 5
-    const auto s11 = sizeof(P1);
-    const auto s12 = sizeof(P2);
+    const auto p1 = sizeof(P1);
+    const auto p2 = sizeof(P2);
     return 0;
 }

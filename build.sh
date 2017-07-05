@@ -342,19 +342,21 @@ function print_usage () {
 }
 
 function copy_py_script () {
-    local default="n"
-    local prompt="Update the \"Generate Pseudo Code.py\" script for Hopper? (y/N): "
-    local answer
-
-    read -p "$prompt" answer
-
-    case "$answer" in
-        [yY1] ) cp "${root_dir}/Generate Pseudo Code.py" "${HOME}/Library/Application Support/Hopper/Scripts/"
-            ;;
-        [nN0] ) printf "Not updating the script."
-            ;;
-        *     ) printf "%b" "Invalid answer '$answer'." >&2 ;;
-    esac
+    cp "${root_dir}/Generate Pseudo Code.py" "${HOME}/Library/Application Support/Hopper/Scripts/"
+#    local default="n"
+#    local prompt="Update the \"Generate Pseudo Code.py\" script for Hopper? (y/N): "
+#    local answer
+#
+#
+#    read -p "$prompt" answer
+#
+#    case "$answer" in
+#        [yY1] ) cp "${root_dir}/Generate Pseudo Code.py" "${HOME}/Library/Application Support/Hopper/Scripts/"
+#            ;;
+#        [nN0] ) printf "Not updating the script."
+#            ;;
+#        *     ) printf "%b" "Invalid answer '$answer'." >&2 ;;
+#    esac
 }
 
 function remove_a_out () {

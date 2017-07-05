@@ -1,10 +1,10 @@
 int _main() {
     std::__1::__compressed_pair_elem<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__rep, 0, false>::__compressed_pair_elem();
     std::__1::__compressed_pair_elem<std::__1::allocator<char>, 1, true>::__compressed_pair_elem();
-    std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__init(&var_60, "string", std::__1::char_traits<char>::length("string", "string"));
-    memset(&var_A8, 0x0, 0x8);
+    std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__init(&var_C8, "string", std::__1::char_traits<char>::length("string", "string"));
+    memset(&var_160, 0x0, 0x8);
     Derived2::Derived2();
-    std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_string(&var_60);
+    std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_string(&var_C8);
     rax = 0x0;
     return rax;
 }
