@@ -29,7 +29,6 @@ void consumer()
     while (!(p2 = ptr.load(std::memory_order_acquire))) {
         std::this_thread::yield();
     }
-    // std::cout << p2->s << "\n";
 }
 
 int main()

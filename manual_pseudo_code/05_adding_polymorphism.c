@@ -84,7 +84,6 @@ void P2operator_plus_equal(P2 *this, P2 *arg0)
 
 void (*__vtable_P2[1])(P2 *, P2 *) = {P2operator_plus_equal};
 
-// TODO: need to fix this for double
 P2 *P2Constructordd(P2 *this, double arg0, double arg1)
 {
     *((pmethod *) this) = (void *) __vtable_P2;
@@ -162,6 +161,6 @@ int main()
         __temp2 = __temp1 + 0x8;
     }
     p = __temp2;
-    __temp0 = NULL;
+    __temp0 = 0x0;
     return 0x0;
 }

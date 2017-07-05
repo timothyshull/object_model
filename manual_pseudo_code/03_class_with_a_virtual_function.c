@@ -6,9 +6,10 @@
 // compiled with -fno-rtti
 
 // extern void __cxa_pure_virtual()
-void __cxa_pure_virtual(void *this)
+void __cxa_pure_virtual()
 {
-    fprintf(stderr, "libc++abi.dylib: Pure virtual function called!\n");
+    fprintf(stderr,
+            "libc++abi.dylib: Pure virtual function called!\n");
     abort();
 };
 

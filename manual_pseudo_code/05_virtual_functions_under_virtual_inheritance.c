@@ -9,62 +9,47 @@ typedef struct _B {
     int32_t n;
 } B;
 
-void Bm(void *this) {
-    *((int32_t *)(this + 0x8)) = 0x1;
+void Bm(void *this)
+{
+    *((int32_t *) (this + 0x8)) = 0x1;
 }
 
 void (*__vtable_B[1])(void *) = {Bm};
 
-B *BConstructor(B *this) {
-    *((method *) this) = (void *) __vtable_B;
+B *BConstructor(B *this)
+{
+    *((method **) this) = (void *) __vtable_B;
     return this;
 }
-
-//struct B {
-//    int n;
-//
-//    virtual void m() {
-//        n = 1;
-//    }
-//};
 
 typedef struct _X {
     method *__vtable;
     B virtual_base;
 } X;
 
-void Xm(void *this) {
-    *((int32_t *)(this + 0x10)) = 0x2;
+void Xm(void *this)
+{
+    *((int32_t *) (this + 0x10)) = 0x2;
 }
 
 void (*__vtable_X[1])(void *) = {Xm};
-
-//class X : public virtual B {
-//    virtual void m() override {
-//        B::n = 2;
-//    }
-//};
 
 typedef struct _Y {
     method *__vtable;
     B virtual_base;
 } Y;
 
-void Ym(void *this) {
-    *((int32_t *)(this + 0x10)) = 0x3;
+void Ym(void *this)
+{
+    *((int32_t *) (this + 0x10)) = 0x3;
 }
 
 void (*__vtable_Y[1])(void *) = {Ym};
 
-//class Y : virtual public B {
-//    virtual void m() override {
-//        B::n = 3;
-//    }
-//};
-
-Y *YConstructor(Y *this, void *arg0) {
-    *((method *) this) = arg0;
-    *((method *) (void *)this + 0x8) = (void *) __vtable_B;
+Y *YConstructor(Y *this, void *arg0)
+{
+    *((method **) this) = (void *) arg0;
+    *((method **) (void *) this + 0x8) = (void *) __vtable_B;
     return this;
 }
 
@@ -72,17 +57,18 @@ typedef struct _Z {
     B virtual_base;
 } Z;
 
-void Zm(void *this) {
-    *((int32_t *)(this + 0x8)) = 0x4;
+void Zm(void *this)
+{
+    *((int32_t *) (this + 0x8)) = 0x4;
 }
 
 void (*__vtable_Z[1])(void *) = {Zm};
 
-//class Z : public B {
-//    virtual void m() override {
-//        B::n = 4;
-//    }
-//};
+Z *ZConstructor(Z *this)
+{
+    *((method **) this) = (void *) __vtable_Z;
+    return this;
+}
 
 typedef struct _XinAA {
     method *__vtable;
@@ -99,35 +85,49 @@ typedef struct _AA {
     B virtual_base;
 } AA;
 
-//struct AA : X, Y, Z {
-//    void m() override
-//    {
-//        X::n = 5; // modifies the virtual B subobject's member
-//        Y::n = 6; // modifies the same virtual B subobject's member
-//        Z::n = 7; // modifies the non-virtual B subobject's member
-//    }
-//};
-
-AA * AAConstructor(AA *this) {
-    // rdi = rdi + 0x20;
-    BConstructor((B *)((void *)this + 0x20)); // called with this + 0x20
-    // Xin AA
-    YConstructor((Y *)(this), __vtable_X);
-    rdi = var_10 + 0x8;
-    // Yin AA
-    YConstructor((Y *)((void *)this + 0x8), __vtable_Y);
-    ZConstructor((Z *)((void *)this + 0x10), __vtable_X);
-    *var_10 = 0x100002058;
-    *(var_10 + 0x20) = 0x1000020b0;
-    *(var_10 + 0x8) = 0x100002078;
-    *(var_10 + 0x10) = 0x100002090;
+void AAm(AA *this)
+{
+    *(int32_t *) ((void *) this + 0x28) = 0x5; // does more arithmetic under hood
+    *(int32_t *) ((void *) this + 0x28) = 0x6; // does more arithmetic under hood
+    *(int32_t *) ((void *) this + 0x18) = 0x7;
 }
 
-void AAm(AA *this) {
-    *(int32_t *)(rdi + *(*rdi + 0xffffffffffffffe8) + 0x8) = 0x5;
-    rax = *(*(rdi + 0x8) + 0xffffffffffffffe8);
-    *(int32_t *)(rdi + rax + 0x10) = 0x6;
-    *(int32_t *)(rdi + 0x18) = 0x7;
+// virtual-thunk to AA::m()
+void virtual_thunk_AAm(void *arg0)
+{
+    arg0 = arg0 - 0x20; // simplified
+    AAm(arg0);
+}
+
+// non-virtual thunk to AA::m() 1
+void nv_thunk_AAm1(void *arg0)
+{
+    arg0 = arg0 - 0x8;
+    AAm((AA *) arg0);
+    return;
+}
+
+// non-virtual thunk to AA::m() 2
+void nv_thunk_AAm2(void *arg0)
+{
+    arg0 = arg0 - 0x10;
+    AAm((AA *) arg0);
+    return;
+}
+
+AA *AAConstructor(AA *this)
+{
+    BConstructor((B *) ((void *) this + 0x20)); // called with this + 0x20
+    // XinAA
+    YConstructor((Y *) (this), __vtable_X);
+    // YinAA
+    YConstructor((Y *) ((void *) this + 0x8), __vtable_Y);
+    ZConstructor((Z *) ((void *) this + 0x10));
+
+    *((method **) this) = (void *) AAm;
+    *(method **) ((void *) this + 0x20) = virtual_thunk_AAm; // virtual thunk to AA::m()
+    *(method **) ((void *) this + 0x8) = nv_thunk_AAm1; // non-virtual thunk to AA::m()
+    *(method **) ((void *) this + 0x10) = nv_thunk_AAm1; // non-virtual thunk to AA::m()
 }
 
 int main()

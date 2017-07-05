@@ -42,11 +42,10 @@ int main()
 {
     P3 p3;
     memset(&p3, 0x0, 0x18);
-    P2 *__temp0 = NULL;
-    if (&p3 != NULL) {
-        __temp0 = (void *) &p3 + 0x8;
+    P2 *pv = 0x0;
+    if (&p3 != 0x0) {
+        pv = (void *) &p3 + 0x8;
     }
-    P2 *pv = __temp0;
 
     double v = func3(&p3);
     return 0;

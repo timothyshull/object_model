@@ -94,6 +94,7 @@ int main()
     P3 p3_2{2.0, 2.0, 2.0};
     f(p3_1, p3_2);
 
+    // example 2
     C *p = new V;
     return 0;
 }

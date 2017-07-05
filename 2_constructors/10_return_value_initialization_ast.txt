@@ -10,7 +10,7 @@ TranslationUnitDecl 0x7ffccd8326d0 <<invalid sloc>> <invalid sloc>
 | `-PointerType 0x7ffccd833070 'char *'
 |   `-BuiltinType 0x7ffccd832760 'char'
 |-TypedefDecl 0x7ffccd865c00 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
-| `-ConstantArrayType 0x7ffccd833390 'struct __va_list_tag [1]' 1 
+| `-ConstantArrayType 0x7ffccd833390 'struct __va_list_tag [1]' 1
 |   `-RecordType 0x7ffccd8331a0 'struct __va_list_tag'
 |     `-CXXRecord 0x7ffccd833108 '__va_list_tag'
 |-CXXRecordDecl 0x7ffccd865c58 <object_model/2_constructors/10_return_value_initialization.cpp:1:1, line:9:1> line:1:8 referenced struct X definition
