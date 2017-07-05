@@ -1,70 +1,70 @@
-TranslationUnitDecl 0x7ffeed0326d0 <<invalid sloc>> <invalid sloc>
-|-TypedefDecl 0x7ffeed032c60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
-| `-BuiltinType 0x7ffeed032940 '__int128'
-|-TypedefDecl 0x7ffeed032cd0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
-| `-BuiltinType 0x7ffeed032960 'unsigned __int128'
-|-TypedefDecl 0x7ffeed033018 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
-| `-RecordType 0x7ffeed032dc0 'struct __NSConstantString_tag'
-|   `-CXXRecord 0x7ffeed032d28 '__NSConstantString_tag'
-|-TypedefDecl 0x7ffeed0330b0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
-| `-PointerType 0x7ffeed033070 'char *'
-|   `-BuiltinType 0x7ffeed032760 'char'
-|-TypedefDecl 0x7ffeed805800 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
-| `-ConstantArrayType 0x7ffeed033390 'struct __va_list_tag [1]' 1 
-|   `-RecordType 0x7ffeed0331a0 'struct __va_list_tag'
-|     `-CXXRecord 0x7ffeed033108 '__va_list_tag'
-|-CXXRecordDecl 0x7ffeed805858 <object_model/6_runtime_semantics/04_arrays_of_objects.cpp:1:1, line:4:1> line:1:8 referenced struct P definition
-| |-CXXRecordDecl 0x7ffeed805978 <col:1, col:8> col:8 implicit struct P
-| |-FieldDecl 0x7ffeed805a28 <line:2:5, col:12> col:12 referenced x 'double'
-| |-FieldDecl 0x7ffeed805a88 <line:3:5, col:12> col:12 referenced y 'double'
-| |-CXXDestructorDecl 0x7ffeed805ea8 <line:1:8> col:8 implicit referenced ~P 'void (void) noexcept' inline default trivial
-| |-CXXConstructorDecl 0x7ffeed806248 <col:8> col:8 implicit used P 'void (void) noexcept' inline default trivial
-| | `-CompoundStmt 0x7ffeed835fd0 <col:8>
-| |-CXXConstructorDecl 0x7ffeed806358 <col:8> col:8 implicit constexpr P 'void (const struct P &)' inline default trivial noexcept-unevaluated 0x7ffeed806358
-| | `-ParmVarDecl 0x7ffeed806480 <col:8> col:8 'const struct P &'
-| `-CXXConstructorDecl 0x7ffeed806518 <col:8> col:8 implicit used constexpr P 'void (struct P &&) noexcept' inline default trivial
-|   |-ParmVarDecl 0x7ffeed806640 <col:8> col:8 used 'struct P &&'
+TranslationUnitDecl 0x7ffeed0326d0
+|-TypedefDecl implicit __int128_t '__int128'
+| `-BuiltinType '__int128'
+|-TypedefDecl implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 'unsigned __int128'
+|-TypedefDecl implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 'struct __NSConstantString_tag'
+|   `-CXXRecord '__NSConstantString_tag'
+|-TypedefDecl implicit __builtin_ms_va_list 'char *'
+| `-PointerType 'char *'
+|   `-BuiltinType 'char'
+|-TypedefDecl implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 'struct __va_list_tag [1]' 1
+|   `-RecordType 'struct __va_list_tag'
+|     `-CXXRecord '__va_list_tag'
+|-CXXRecordDecl referenced struct P definition
+| |-CXXRecordDecl implicit struct P
+| |-FieldDecl referenced x 'double'
+| |-FieldDecl referenced y 'double'
+| |-CXXDestructorDecl implicit referenced ~P 'void (void) noexcept' inline default trivial
+| |-CXXConstructorDecl implicit used P 'void (void) noexcept' inline default trivial
+| | `-CompoundStmt
+| |-CXXConstructorDecl implicit constexpr P 'void (const struct P &)' inline default trivial noexcept-unevaluated 0x7ffeed806358
+| | `-ParmVarDecl 'const struct P &'
+| `-CXXConstructorDecl implicit used constexpr P 'void (struct P &&) noexcept' inline default trivial
+|   |-ParmVarDecl used 'struct P &&'
 |   |-CXXCtorInitializer Field 0x7ffeed805a28 'x' 'double'
-|   | `-ImplicitCastExpr 0x7ffeed8067d8 <col:8> 'double' <LValueToRValue>
-|   |   `-MemberExpr 0x7ffeed8067a0 <col:8> 'double' xvalue .x 0x7ffeed805a28
-|   |     `-CXXStaticCastExpr 0x7ffeed806770 <col:8> 'struct P' xvalue static_cast<struct P &&> <NoOp>
-|   |       `-DeclRefExpr 0x7ffeed806738 <col:8> 'struct P' lvalue ParmVar 0x7ffeed806640 '' 'struct P &&'
+|   | `-ImplicitCastExpr 'double' <LValueToRValue>
+|   |   `-MemberExpr 'double' xvalue .x 0x7ffeed805a28
+|   |     `-CXXStaticCastExpr 'struct P' xvalue static_cast<struct P &&> <NoOp>
+|   |       `-DeclRefExpr 'struct P' lvalue ParmVar 0x7ffeed806640 '' 'struct P &&'
 |   |-CXXCtorInitializer Field 0x7ffeed805a88 'y' 'double'
-|   | `-ImplicitCastExpr 0x7ffeed835cc8 <col:8> 'double' <LValueToRValue>
-|   |   `-MemberExpr 0x7ffeed835c90 <col:8> 'double' xvalue .y 0x7ffeed805a88
-|   |     `-CXXStaticCastExpr 0x7ffeed835c60 <col:8> 'struct P' xvalue static_cast<struct P &&> <NoOp>
-|   |       `-DeclRefExpr 0x7ffeed835c28 <col:8> 'struct P' lvalue ParmVar 0x7ffeed806640 '' 'struct P &&'
-|   `-CompoundStmt 0x7ffeed835d18 <col:8>
-`-FunctionDecl 0x7ffeed805b48 <line:6:1, line:11:1> line:6:5 main 'int (void)'
-  `-CompoundStmt 0x7ffeed836068 <line:7:1, line:11:1>
-    |-DeclStmt 0x7ffeed835f18 <line:8:5, col:60>
-    | `-VarDecl 0x7ffeed805d88 <col:5, col:59> col:7 pa1 'struct P [10]' cinit
-    |   `-ExprWithCleanups 0x7ffeed835f00 <col:17, col:59> 'struct P [10]'
-    |     `-InitListExpr 0x7ffeed8066a8 <col:17, col:59> 'struct P [10]'
+|   | `-ImplicitCastExpr 'double' <LValueToRValue>
+|   |   `-MemberExpr 'double' xvalue .y 0x7ffeed805a88
+|   |     `-CXXStaticCastExpr 'struct P' xvalue static_cast<struct P &&> <NoOp>
+|   |       `-DeclRefExpr 'struct P' lvalue ParmVar 0x7ffeed806640 '' 'struct P &&'
+|   `-CompoundStmt
+`-FunctionDecl main 'int (void)'
+  `-CompoundStmt
+    |-DeclStmt
+    | `-VarDecl pa1 'struct P [10]' cinit
+    |   `-ExprWithCleanups 'struct P [10]'
+    |     `-InitListExpr 'struct P [10]'
     |       |-array filler
-    |       | `-InitListExpr 0x7ffeed835e90 <col:59> 'struct P'
-    |       |   |-ImplicitValueInitExpr 0x7ffeed835ee0 <<invalid sloc>> 'double'
-    |       |   `-ImplicitValueInitExpr 0x7ffeed835ef0 <<invalid sloc>> 'double'
-    |       |-CXXConstructExpr 0x7ffeed835d30 <col:18, col:20> 'struct P' 'void (struct P &&) noexcept' elidable
-    |       | `-MaterializeTemporaryExpr 0x7ffeed8066e8 <col:18, col:20> 'struct P' xvalue
-    |       |   `-CXXFunctionalCastExpr 0x7ffeed805ff0 <col:18, col:20> 'struct P' functional cast to struct P <NoOp>
-    |       |     `-InitListExpr 0x7ffeed805e38 <col:19, col:20> 'struct P'
-    |       |       |-ImplicitValueInitExpr 0x7ffeed805e88 <<invalid sloc>> 'double'
-    |       |       `-ImplicitValueInitExpr 0x7ffeed805e98 <<invalid sloc>> 'double'
-    |       |-CXXConstructExpr 0x7ffeed835d88 <col:23, col:33> 'struct P' 'void (struct P &&) noexcept' elidable
-    |       | `-MaterializeTemporaryExpr 0x7ffeed835d70 <col:23, col:33> 'struct P' xvalue
-    |       |   `-CXXFunctionalCastExpr 0x7ffeed806108 <col:23, col:33> 'struct P' functional cast to struct P <NoOp>
-    |       |     `-InitListExpr 0x7ffeed8060b8 <col:24, col:33> 'struct P'
-    |       |       |-FloatingLiteral 0x7ffeed806028 <col:25> 'double' 1.000000e+00
-    |       |       `-FloatingLiteral 0x7ffeed806048 <col:30> 'double' 1.000000e+00
-    |       `-InitListExpr 0x7ffeed835dd0 <col:36, col:58> 'struct P'
-    |         |-CXXStaticCastExpr 0x7ffeed8061a0 <col:36, col:58> 'double' static_cast<double> <NoOp>
-    |         | `-ImplicitCastExpr 0x7ffeed806188 <col:56, col:57> 'double' <IntegralToFloating>
-    |         |   `-UnaryOperator 0x7ffeed806150 <col:56, col:57> 'int' prefix '-'
-    |         |     `-IntegerLiteral 0x7ffeed806130 <col:57> 'int' 1
-    |         `-ImplicitValueInitExpr 0x7ffeed835e40 <<invalid sloc>> 'double'
-    |-DeclStmt 0x7ffeed836018 <line:9:5, col:14>
-    | `-VarDecl 0x7ffeed835f70 <col:5, col:13> col:7 pa2 'struct P [10]' callinit
-    |   `-CXXConstructExpr 0x7ffeed835fe8 <col:7> 'struct P [10]' 'void (void) noexcept'
-    `-ReturnStmt 0x7ffeed836050 <line:10:5, col:12>
-      `-IntegerLiteral 0x7ffeed836030 <col:12> 'int' 0
+    |       | `-InitListExpr 'struct P'
+    |       |   |-ImplicitValueInitExpr 'double'
+    |       |   `-ImplicitValueInitExpr 'double'
+    |       |-CXXConstructExpr 'struct P' 'void (struct P &&) noexcept' elidable
+    |       | `-MaterializeTemporaryExpr 'struct P' xvalue
+    |       |   `-CXXFunctionalCastExpr 'struct P' functional cast to struct P <NoOp>
+    |       |     `-InitListExpr 'struct P'
+    |       |       |-ImplicitValueInitExpr 'double'
+    |       |       `-ImplicitValueInitExpr 'double'
+    |       |-CXXConstructExpr 'struct P' 'void (struct P &&) noexcept' elidable
+    |       | `-MaterializeTemporaryExpr 'struct P' xvalue
+    |       |   `-CXXFunctionalCastExpr 'struct P' functional cast to struct P <NoOp>
+    |       |     `-InitListExpr 'struct P'
+    |       |       |-FloatingLiteral 'double' 1.000000e+00
+    |       |       `-FloatingLiteral 'double' 1.000000e+00
+    |       `-InitListExpr 'struct P'
+    |         |-CXXStaticCastExpr 'double' static_cast<double> <NoOp>
+    |         | `-ImplicitCastExpr 'double' <IntegralToFloating>
+    |         |   `-UnaryOperator 'int' prefix '-'
+    |         |     `-IntegerLiteral 'int' 1
+    |         `-ImplicitValueInitExpr 'double'
+    |-DeclStmt
+    | `-VarDecl pa2 'struct P [10]' callinit
+    |   `-CXXConstructExpr 'struct P [10]' 'void (void) noexcept'
+    `-ReturnStmt
+      `-IntegerLiteral 'int' 0

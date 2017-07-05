@@ -1,95 +1,95 @@
-TranslationUnitDecl 0x7f9c290326d0 <<invalid sloc>> <invalid sloc>
-|-TypedefDecl 0x7f9c29032c60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
-| `-BuiltinType 0x7f9c29032940 '__int128'
-|-TypedefDecl 0x7f9c29032cd0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
-| `-BuiltinType 0x7f9c29032960 'unsigned __int128'
-|-TypedefDecl 0x7f9c29033018 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
-| `-RecordType 0x7f9c29032dc0 'struct __NSConstantString_tag'
-|   `-CXXRecord 0x7f9c29032d28 '__NSConstantString_tag'
-|-TypedefDecl 0x7f9c290330b0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
-| `-PointerType 0x7f9c29033070 'char *'
-|   `-BuiltinType 0x7f9c29032760 'char'
-|-TypedefDecl 0x7f9c29065c00 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
-| `-ConstantArrayType 0x7f9c29033390 'struct __va_list_tag [1]' 1 
-|   `-RecordType 0x7f9c290331a0 'struct __va_list_tag'
-|     `-CXXRecord 0x7f9c29033108 '__va_list_tag'
-|-CXXRecordDecl 0x7f9c29065c58 <object_model/6_runtime_semantics/01_object_construction_and_destruction.cpp:1:1, line:9:1> line:1:8 referenced struct P definition
-| |-CXXRecordDecl 0x7f9c29065d78 <col:1, col:8> col:8 implicit referenced struct P
-| |-FieldDecl 0x7f9c29065e28 <line:2:5, col:12> col:12 x 'double'
-| |-FieldDecl 0x7f9c29065e88 <line:3:5, col:12> col:12 y 'double'
-| |-FieldDecl 0x7f9c29065ee8 <line:4:5, col:12> col:12 z 'double'
-| |-CXXConstructorDecl 0x7f9c29066170 <line:6:5, col:57> col:5 used P 'void (double, double, double)'
-| | |-ParmVarDecl 0x7f9c29065f48 <col:7, col:14> col:14 used a 'double'
-| | |-ParmVarDecl 0x7f9c29065fc0 <col:17, col:24> col:24 used b 'double'
-| | |-ParmVarDecl 0x7f9c29066038 <col:27, col:34> col:34 used c 'double'
+TranslationUnitDecl 0x7f9c290326d0
+|-TypedefDecl implicit __int128_t '__int128'
+| `-BuiltinType '__int128'
+|-TypedefDecl implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 'unsigned __int128'
+|-TypedefDecl implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 'struct __NSConstantString_tag'
+|   `-CXXRecord '__NSConstantString_tag'
+|-TypedefDecl implicit __builtin_ms_va_list 'char *'
+| `-PointerType 'char *'
+|   `-BuiltinType 'char'
+|-TypedefDecl implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 'struct __va_list_tag [1]' 1
+|   `-RecordType 'struct __va_list_tag'
+|     `-CXXRecord '__va_list_tag'
+|-CXXRecordDecl referenced struct P definition
+| |-CXXRecordDecl implicit referenced struct P
+| |-FieldDecl x 'double'
+| |-FieldDecl y 'double'
+| |-FieldDecl z 'double'
+| |-CXXConstructorDecl used P 'void (double, double, double)'
+| | |-ParmVarDecl used a 'double'
+| | |-ParmVarDecl used b 'double'
+| | |-ParmVarDecl used c 'double'
 | | |-CXXCtorInitializer Field 0x7f9c29065e28 'x' 'double'
-| | | `-InitListExpr 0x7f9c290663f8 <col:40, col:42> 'double'
-| | |   `-ImplicitCastExpr 0x7f9c29066438 <col:41> 'double' <LValueToRValue>
-| | |     `-DeclRefExpr 0x7f9c29066388 <col:41> 'double' lvalue ParmVar 0x7f9c29065f48 'a' 'double'
+| | | `-InitListExpr 'double'
+| | |   `-ImplicitCastExpr 'double' <LValueToRValue>
+| | |     `-DeclRefExpr 'double' lvalue ParmVar 0x7f9c29065f48 'a' 'double'
 | | |-CXXCtorInitializer Field 0x7f9c29065e88 'y' 'double'
-| | | `-InitListExpr 0x7f9c290664f0 <col:46, col:48> 'double'
-| | |   `-ImplicitCastExpr 0x7f9c29066530 <col:47> 'double' <LValueToRValue>
-| | |     `-DeclRefExpr 0x7f9c29066480 <col:47> 'double' lvalue ParmVar 0x7f9c29065fc0 'b' 'double'
+| | | `-InitListExpr 'double'
+| | |   `-ImplicitCastExpr 'double' <LValueToRValue>
+| | |     `-DeclRefExpr 'double' lvalue ParmVar 0x7f9c29065fc0 'b' 'double'
 | | |-CXXCtorInitializer Field 0x7f9c29065ee8 'z' 'double'
-| | | `-InitListExpr 0x7f9c290665e8 <col:52, col:54> 'double'
-| | |   `-ImplicitCastExpr 0x7f9c29066628 <col:53> 'double' <LValueToRValue>
-| | |     `-DeclRefExpr 0x7f9c29066578 <col:53> 'double' lvalue ParmVar 0x7f9c29066038 'c' 'double'
-| | `-CompoundStmt 0x7f9c29066688 <col:56, col:57>
-| |-CXXDestructorDecl 0x7f9c290662b0 <line:8:5, col:11> col:5 used ~P 'void (void) noexcept'
-| | `-CompoundStmt 0x7f9c290666d0 <col:10, col:11>
-| `-CXXConstructorDecl 0x7f9c29091000 <line:1:8> col:8 implicit constexpr P 'void (const struct P &)' inline default trivial noexcept-unevaluated 0x7f9c29091000
-|   `-ParmVarDecl 0x7f9c29091130 <col:8> col:8 'const struct P &'
-|-EnumDecl 0x7f9c290666e8 <line:11:1, col:31> col:12 referenced class Selector 'int'
-| |-EnumConstantDecl 0x7f9c290667a0 <col:23> col:23 referenced a 'enum Selector'
-| |-EnumConstantDecl 0x7f9c290667e8 <col:26> col:26 referenced b 'enum Selector'
-| `-EnumConstantDecl 0x7f9c29066830 <col:29> col:29 referenced c 'enum Selector'
-|-FunctionDecl 0x7f9c29066950 <line:13:1, line:25:1> line:13:6 used func1 'void (enum Selector)'
-| |-ParmVarDecl 0x7f9c29066888 <col:12, col:21> col:21 used v 'enum Selector'
-| `-CompoundStmt 0x7f9c290914f0 <line:14:1, line:25:1>
-|   |-DeclStmt 0x7f9c290911e0 <line:15:5, col:20>
-|   | `-VarDecl 0x7f9c29066a40 <col:5, col:19> col:7 a 'struct P' listinit
-|   |   `-CXXConstructExpr 0x7f9c29091198 <col:7, col:19> 'struct P' 'void (double, double, double)'
-|   |     |-FloatingLiteral 0x7f9c29066aa0 <col:9> 'double' 0.000000e+00
-|   |     |-FloatingLiteral 0x7f9c29066ac0 <col:13> 'double' 0.000000e+00
-|   |     `-FloatingLiteral 0x7f9c29066ae0 <col:17> 'double' 0.000000e+00
-|   `-SwitchStmt 0x7f9c29091238 <line:17:5, line:24:5>
+| | | `-InitListExpr 'double'
+| | |   `-ImplicitCastExpr 'double' <LValueToRValue>
+| | |     `-DeclRefExpr 'double' lvalue ParmVar 0x7f9c29066038 'c' 'double'
+| | `-CompoundStmt
+| |-CXXDestructorDecl used ~P 'void (void) noexcept'
+| | `-CompoundStmt
+| `-CXXConstructorDecl implicit constexpr P 'void (const struct P &)' inline default trivial noexcept-unevaluated 0x7f9c29091000
+|   `-ParmVarDecl 'const struct P &'
+|-EnumDecl referenced class Selector 'int'
+| |-EnumConstantDecl referenced a 'enum Selector'
+| |-EnumConstantDecl referenced b 'enum Selector'
+| `-EnumConstantDecl referenced c 'enum Selector'
+|-FunctionDecl used func1 'void (enum Selector)'
+| |-ParmVarDecl used v 'enum Selector'
+| `-CompoundStmt
+|   |-DeclStmt
+|   | `-VarDecl a 'struct P' listinit
+|   |   `-CXXConstructExpr 'struct P' 'void (double, double, double)'
+|   |     |-FloatingLiteral 'double' 0.000000e+00
+|   |     |-FloatingLiteral 'double' 0.000000e+00
+|   |     `-FloatingLiteral 'double' 0.000000e+00
+|   `-SwitchStmt
 |     |-<<<NULL>>>
 |     |-<<<NULL>>>
-|     |-ImplicitCastExpr 0x7f9c29091220 <line:17:13> 'enum Selector' <LValueToRValue>
-|     | `-DeclRefExpr 0x7f9c290911f8 <col:13> 'enum Selector' lvalue ParmVar 0x7f9c29066888 'v' 'enum Selector'
-|     `-CompoundStmt 0x7f9c290914c0 <col:16, line:24:5>
-|       |-CaseStmt 0x7f9c290912f0 <line:18:9, line:19:13>
-|       | |-DeclRefExpr 0x7f9c290912b8 <line:18:14, col:24> 'enum Selector' EnumConstant 0x7f9c290667a0 'a' 'enum Selector'
+|     |-ImplicitCastExpr 'enum Selector' <LValueToRValue>
+|     | `-DeclRefExpr 'enum Selector' lvalue ParmVar 0x7f9c29066888 'v' 'enum Selector'
+|     `-CompoundStmt
+|       |-CaseStmt
+|       | |-DeclRefExpr 'enum Selector' EnumConstant 0x7f9c290667a0 'a' 'enum Selector'
 |       | |-<<<NULL>>>
-|       | `-ReturnStmt 0x7f9c29091328 <line:19:13>
-|       |-CaseStmt 0x7f9c290913b0 <line:20:9, line:21:13>
-|       | |-DeclRefExpr 0x7f9c29091378 <line:20:14, col:24> 'enum Selector' EnumConstant 0x7f9c290667e8 'b' 'enum Selector'
+|       | `-ReturnStmt
+|       |-CaseStmt
+|       | |-DeclRefExpr 'enum Selector' EnumConstant 0x7f9c290667e8 'b' 'enum Selector'
 |       | |-<<<NULL>>>
-|       | `-ReturnStmt 0x7f9c290913e8 <line:21:13>
-|       `-CaseStmt 0x7f9c29091470 <line:22:9, line:23:13>
-|         |-DeclRefExpr 0x7f9c29091438 <line:22:14, col:24> 'enum Selector' EnumConstant 0x7f9c29066830 'c' 'enum Selector'
+|       | `-ReturnStmt
+|       `-CaseStmt
+|         |-DeclRefExpr 'enum Selector' EnumConstant 0x7f9c29066830 'c' 'enum Selector'
 |         |-<<<NULL>>>
-|         `-ReturnStmt 0x7f9c290914a8 <line:23:13>
-`-FunctionDecl 0x7f9c29091578 <line:27:1, line:36:1> line:27:5 main 'int (void)'
-  `-CompoundStmt 0x7f9c29091be8 <line:28:1, line:36:1>
-    |-CompoundStmt 0x7f9c290917c0 <line:29:5, line:31:5>
-    | `-DeclStmt 0x7f9c290917a8 <line:30:9, col:24>
-    |   `-VarDecl 0x7f9c29091648 <col:9, col:23> col:11 a 'struct P' listinit
-    |     `-CXXConstructExpr 0x7f9c29091760 <col:11, col:23> 'struct P' 'void (double, double, double)'
-    |       |-FloatingLiteral 0x7f9c290916a8 <col:13> 'double' 0.000000e+00
-    |       |-FloatingLiteral 0x7f9c290916c8 <col:17> 'double' 0.000000e+00
-    |       `-FloatingLiteral 0x7f9c290916e8 <col:21> 'double' 0.000000e+00
-    |-CallExpr 0x7f9c29091910 <line:32:5, col:22> 'void'
-    | |-ImplicitCastExpr 0x7f9c290918f8 <col:5> 'void (*)(enum Selector)' <FunctionToPointerDecay>
-    | | `-DeclRefExpr 0x7f9c290918a8 <col:5> 'void (enum Selector)' lvalue Function 0x7f9c29066950 'func1' 'void (enum Selector)'
-    | `-DeclRefExpr 0x7f9c29091870 <col:11, col:21> 'enum Selector' EnumConstant 0x7f9c290667a0 'a' 'enum Selector'
-    |-CallExpr 0x7f9c29091a48 <line:33:5, col:22> 'void'
-    | |-ImplicitCastExpr 0x7f9c29091a30 <col:5> 'void (*)(enum Selector)' <FunctionToPointerDecay>
-    | | `-DeclRefExpr 0x7f9c29091a08 <col:5> 'void (enum Selector)' lvalue Function 0x7f9c29066950 'func1' 'void (enum Selector)'
-    | `-DeclRefExpr 0x7f9c290919d0 <col:11, col:21> 'enum Selector' EnumConstant 0x7f9c290667e8 'b' 'enum Selector'
-    |-CallExpr 0x7f9c29091b80 <line:34:5, col:22> 'void'
-    | |-ImplicitCastExpr 0x7f9c29091b68 <col:5> 'void (*)(enum Selector)' <FunctionToPointerDecay>
-    | | `-DeclRefExpr 0x7f9c29091b40 <col:5> 'void (enum Selector)' lvalue Function 0x7f9c29066950 'func1' 'void (enum Selector)'
-    | `-DeclRefExpr 0x7f9c29091b08 <col:11, col:21> 'enum Selector' EnumConstant 0x7f9c29066830 'c' 'enum Selector'
-    `-ReturnStmt 0x7f9c29091bd0 <line:35:5, col:12>
-      `-IntegerLiteral 0x7f9c29091bb0 <col:12> 'int' 0
+|         `-ReturnStmt
+`-FunctionDecl main 'int (void)'
+  `-CompoundStmt
+    |-CompoundStmt
+    | `-DeclStmt
+    |   `-VarDecl a 'struct P' listinit
+    |     `-CXXConstructExpr 'struct P' 'void (double, double, double)'
+    |       |-FloatingLiteral 'double' 0.000000e+00
+    |       |-FloatingLiteral 'double' 0.000000e+00
+    |       `-FloatingLiteral 'double' 0.000000e+00
+    |-CallExpr 'void'
+    | |-ImplicitCastExpr 'void (*)(enum Selector)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 'void (enum Selector)' lvalue Function 0x7f9c29066950 'func1' 'void (enum Selector)'
+    | `-DeclRefExpr 'enum Selector' EnumConstant 0x7f9c290667a0 'a' 'enum Selector'
+    |-CallExpr 'void'
+    | |-ImplicitCastExpr 'void (*)(enum Selector)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 'void (enum Selector)' lvalue Function 0x7f9c29066950 'func1' 'void (enum Selector)'
+    | `-DeclRefExpr 'enum Selector' EnumConstant 0x7f9c290667e8 'b' 'enum Selector'
+    |-CallExpr 'void'
+    | |-ImplicitCastExpr 'void (*)(enum Selector)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 'void (enum Selector)' lvalue Function 0x7f9c29066950 'func1' 'void (enum Selector)'
+    | `-DeclRefExpr 'enum Selector' EnumConstant 0x7f9c29066830 'c' 'enum Selector'
+    `-ReturnStmt
+      `-IntegerLiteral 'int' 0

@@ -1,88 +1,88 @@
-TranslationUnitDecl 0x7f94cd0326d0 <<invalid sloc>> <invalid sloc>
-|-TypedefDecl 0x7f94cd032c60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
-| `-BuiltinType 0x7f94cd032940 '__int128'
-|-TypedefDecl 0x7f94cd032cd0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
-| `-BuiltinType 0x7f94cd032960 'unsigned __int128'
-|-TypedefDecl 0x7f94cd033018 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
-| `-RecordType 0x7f94cd032dc0 'struct __NSConstantString_tag'
-|   `-CXXRecord 0x7f94cd032d28 '__NSConstantString_tag'
-|-TypedefDecl 0x7f94cd0330b0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
-| `-PointerType 0x7f94cd033070 'char *'
-|   `-BuiltinType 0x7f94cd032760 'char'
-|-TypedefDecl 0x7f94cd065c00 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
-| `-ConstantArrayType 0x7f94cd033390 'struct __va_list_tag [1]' 1 
-|   `-RecordType 0x7f94cd0331a0 'struct __va_list_tag'
-|     `-CXXRecord 0x7f94cd033108 '__va_list_tag'
-|-CXXRecordDecl 0x7f94cd065c58 <object_model/2_constructors/09_argument_initialization.cpp:1:1, line:9:1> line:1:8 referenced struct X definition
-| |-CXXRecordDecl 0x7f94cd065d78 <col:1, col:8> col:8 implicit referenced struct X
-| |-FieldDecl 0x7f94cd065e28 <line:2:5, col:13> col:9 referenced x 'int'
-| | `-IntegerLiteral 0x7f94cd0662b8 <col:13> 'int' 0
-| |-CXXConstructorDecl 0x7f94cd065fa0 <line:4:5, col:22> col:5 used X 'void (int)'
-| | |-ParmVarDecl 0x7f94cd065e88 <col:7, col:11> col:11 used a 'int'
+TranslationUnitDecl 0x7f94cd0326d0
+|-TypedefDecl implicit __int128_t '__int128'
+| `-BuiltinType '__int128'
+|-TypedefDecl implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 'unsigned __int128'
+|-TypedefDecl implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 'struct __NSConstantString_tag'
+|   `-CXXRecord '__NSConstantString_tag'
+|-TypedefDecl implicit __builtin_ms_va_list 'char *'
+| `-PointerType 'char *'
+|   `-BuiltinType 'char'
+|-TypedefDecl implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 'struct __va_list_tag [1]' 1
+|   `-RecordType 'struct __va_list_tag'
+|     `-CXXRecord '__va_list_tag'
+|-CXXRecordDecl referenced struct X definition
+| |-CXXRecordDecl implicit referenced struct X
+| |-FieldDecl referenced x 'int'
+| | `-IntegerLiteral 'int' 0
+| |-CXXConstructorDecl used X 'void (int)'
+| | |-ParmVarDecl used a 'int'
 | | |-CXXCtorInitializer Field 0x7f94cd065e28 'x' 'int'
-| | | `-InitListExpr 0x7f94cd066380 <col:17, col:19> 'int'
-| | |   `-ImplicitCastExpr 0x7f94cd0663c0 <col:18> 'int' <LValueToRValue>
-| | |     `-DeclRefExpr 0x7f94cd066310 <col:18> 'int' lvalue ParmVar 0x7f94cd065e88 'a' 'int'
-| | `-CompoundStmt 0x7f94cd066410 <col:21, col:22>
-| |-CXXConstructorDecl 0x7f94cd0660a0 <line:6:5, col:17> col:5 used constexpr X 'void (void) noexcept' default
+| | | `-InitListExpr 'int'
+| | |   `-ImplicitCastExpr 'int' <LValueToRValue>
+| | |     `-DeclRefExpr 'int' lvalue ParmVar 0x7f94cd065e88 'a' 'int'
+| | `-CompoundStmt
+| |-CXXConstructorDecl used constexpr X 'void (void) noexcept' default
 | | |-CXXCtorInitializer Field 0x7f94cd065e28 'x' 'int'
-| | | `-CXXDefaultInitExpr 0x7f94cd800dc8 <col:5> 'int'
-| | `-CompoundStmt 0x7f94cd800e18 <col:17>
-| |-CXXDestructorDecl 0x7f94cd066198 <line:8:5, col:18> col:5 referenced ~X 'void (void) noexcept' default trivial
-| `-CXXConstructorDecl 0x7f94cd066a78 <line:1:8> col:8 implicit used constexpr X 'void (const struct X &) noexcept' inline default trivial
-|   |-ParmVarDecl 0x7f94cd066ba0 <col:8> col:8 used 'const struct X &'
+| | | `-CXXDefaultInitExpr 'int'
+| | `-CompoundStmt
+| |-CXXDestructorDecl referenced ~X 'void (void) noexcept' default trivial
+| `-CXXConstructorDecl implicit used constexpr X 'void (const struct X &) noexcept' inline default trivial
+|   |-ParmVarDecl used 'const struct X &'
 |   |-CXXCtorInitializer Field 0x7f94cd065e28 'x' 'int'
-|   | `-ImplicitCastExpr 0x7f94cd800928 <col:8> 'int' <LValueToRValue>
-|   |   `-MemberExpr 0x7f94cd8008f0 <col:8> 'const int' lvalue .x 0x7f94cd065e28
-|   |     `-DeclRefExpr 0x7f94cd8008c8 <col:8> 'const struct X' lvalue ParmVar 0x7f94cd066ba0 '' 'const struct X &'
-|   `-CompoundStmt 0x7f94cd800970 <col:8>
-|-FunctionDecl 0x7f94cd066500 <line:11:1, line:14:1> line:11:6 used func 'void (struct X)'
-| |-ParmVarDecl 0x7f94cd066438 <col:11, col:13> col:13 used x 'struct X'
-| `-CompoundStmt 0x7f94cd066880 <line:12:1, line:14:1>
-|   `-DeclStmt 0x7f94cd066868 <line:13:5, col:17>
-|     `-VarDecl 0x7f94cd066610 <col:5, col:16> col:10 y 'int':'int' cinit
-|       `-ImplicitCastExpr 0x7f94cd066790 <col:14, col:16> 'int' <LValueToRValue>
-|         `-MemberExpr 0x7f94cd066698 <col:14, col:16> 'int' lvalue .x 0x7f94cd065e28
-|           `-DeclRefExpr 0x7f94cd066670 <col:14> 'struct X' lvalue ParmVar 0x7f94cd066438 'x' 'struct X'
-`-FunctionDecl 0x7f94cd0668f8 <line:16:1, line:27:1> line:16:5 main 'int (void)'
-  `-CompoundStmt 0x7f94cd801128 <line:17:1, line:27:1>
-    |-DeclStmt 0x7f94cd8009d8 <line:19:5, col:14>
-    | `-VarDecl 0x7f94cd0669c8 <col:5, col:12> col:7 used x1 'struct X' cinit
-    |   `-ExprWithCleanups 0x7f94cd8009c0 <col:7, col:12> 'struct X'
-    |     `-CXXConstructExpr 0x7f94cd800988 <col:7, col:12> 'struct X' 'void (const struct X &) noexcept' elidable
-    |       `-MaterializeTemporaryExpr 0x7f94cd800870 <col:12> 'const struct X' lvalue
-    |         `-ImplicitCastExpr 0x7f94cd800858 <col:12> 'const struct X' <NoOp>
-    |           `-ImplicitCastExpr 0x7f94cd800840 <col:12> 'struct X' <ConstructorConversion>
-    |             `-CXXConstructExpr 0x7f94cd800808 <col:12> 'struct X' 'void (int)'
-    |               `-IntegerLiteral 0x7f94cd066a28 <col:12> 'int' 10
-    |-CallExpr 0x7f94cd800ae0 <line:20:5, col:12> 'void'
-    | |-ImplicitCastExpr 0x7f94cd800ac8 <col:5> 'void (*)(struct X)' <FunctionToPointerDecay>
-    | | `-DeclRefExpr 0x7f94cd800a70 <col:5> 'void (struct X)' lvalue Function 0x7f94cd066500 'func' 'void (struct X)'
-    | `-CXXConstructExpr 0x7f94cd800b28 <col:10> 'struct X' 'void (const struct X &) noexcept'
-    |   `-ImplicitCastExpr 0x7f94cd800b10 <col:10> 'const struct X' lvalue <NoOp>
-    |     `-DeclRefExpr 0x7f94cd800a48 <col:10> 'struct X' lvalue Var 0x7f94cd0669c8 'x1' 'struct X'
-    |-ExprWithCleanups 0x7f94cd800d00 <line:21:5, col:12> 'void'
-    | `-CallExpr 0x7f94cd800c18 <col:5, col:12> 'void'
-    |   |-ImplicitCastExpr 0x7f94cd800c00 <col:5> 'void (*)(struct X)' <FunctionToPointerDecay>
-    |   | `-DeclRefExpr 0x7f94cd800bd8 <col:5> 'void (struct X)' lvalue Function 0x7f94cd066500 'func' 'void (struct X)'
-    |   `-CXXConstructExpr 0x7f94cd800cc8 <col:10> 'struct X' 'void (const struct X &) noexcept' elidable
-    |     `-MaterializeTemporaryExpr 0x7f94cd800cb0 <col:10> 'const struct X' lvalue
-    |       `-ImplicitCastExpr 0x7f94cd800c98 <col:10> 'const struct X' <NoOp>
-    |         `-ImplicitCastExpr 0x7f94cd800c80 <col:10> 'struct X' <ConstructorConversion>
-    |           `-CXXConstructExpr 0x7f94cd800c48 <col:10> 'struct X' 'void (int)'
-    |             `-IntegerLiteral 0x7f94cd800bb8 <col:10> 'int' 10
-    |-DeclStmt 0x7f94cd800e60 <line:23:5, col:11>
-    | `-VarDecl 0x7f94cd800d28 <col:5, col:10> col:7 used x2 'struct X' listinit
-    |   `-CXXConstructExpr 0x7f94cd800e30 <col:7, col:10> 'struct X' 'void (void) noexcept' zeroing
-    |-CallExpr 0x7f94cd800f38 <line:24:5, col:12> 'void'
-    | |-ImplicitCastExpr 0x7f94cd800f20 <col:5> 'void (*)(struct X)' <FunctionToPointerDecay>
-    | | `-DeclRefExpr 0x7f94cd800ef8 <col:5> 'void (struct X)' lvalue Function 0x7f94cd066500 'func' 'void (struct X)'
-    | `-CXXConstructExpr 0x7f94cd800f80 <col:10> 'struct X' 'void (const struct X &) noexcept'
-    |   `-ImplicitCastExpr 0x7f94cd800f68 <col:10> 'const struct X' lvalue <NoOp>
-    |     `-DeclRefExpr 0x7f94cd800ed0 <col:10> 'struct X' lvalue Var 0x7f94cd800d28 'x2' 'struct X'
-    |-CallExpr 0x7f94cd801090 <line:25:5, col:12> 'void'
-    | |-ImplicitCastExpr 0x7f94cd801078 <col:5> 'void (*)(struct X)' <FunctionToPointerDecay>
-    | | `-DeclRefExpr 0x7f94cd801050 <col:5> 'void (struct X)' lvalue Function 0x7f94cd066500 'func' 'void (struct X)'
-    | `-CXXConstructExpr 0x7f94cd8010c0 <col:10, col:11> 'struct X' 'void (void) noexcept' zeroing
-    `-ReturnStmt 0x7f94cd801110 <line:26:5, col:12>
-      `-IntegerLiteral 0x7f94cd8010f0 <col:12> 'int' 0
+|   | `-ImplicitCastExpr 'int' <LValueToRValue>
+|   |   `-MemberExpr 'const int' lvalue .x 0x7f94cd065e28
+|   |     `-DeclRefExpr 'const struct X' lvalue ParmVar 0x7f94cd066ba0 '' 'const struct X &'
+|   `-CompoundStmt
+|-FunctionDecl used func 'void (struct X)'
+| |-ParmVarDecl used x 'struct X'
+| `-CompoundStmt
+|   `-DeclStmt
+|     `-VarDecl y 'int':'int' cinit
+|       `-ImplicitCastExpr 'int' <LValueToRValue>
+|         `-MemberExpr 'int' lvalue .x 0x7f94cd065e28
+|           `-DeclRefExpr 'struct X' lvalue ParmVar 0x7f94cd066438 'x' 'struct X'
+`-FunctionDecl main 'int (void)'
+  `-CompoundStmt
+    |-DeclStmt
+    | `-VarDecl used x1 'struct X' cinit
+    |   `-ExprWithCleanups 'struct X'
+    |     `-CXXConstructExpr 'struct X' 'void (const struct X &) noexcept' elidable
+    |       `-MaterializeTemporaryExpr 'const struct X' lvalue
+    |         `-ImplicitCastExpr 'const struct X' <NoOp>
+    |           `-ImplicitCastExpr 'struct X' <ConstructorConversion>
+    |             `-CXXConstructExpr 'struct X' 'void (int)'
+    |               `-IntegerLiteral 'int' 10
+    |-CallExpr 'void'
+    | |-ImplicitCastExpr 'void (*)(struct X)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 'void (struct X)' lvalue Function 0x7f94cd066500 'func' 'void (struct X)'
+    | `-CXXConstructExpr 'struct X' 'void (const struct X &) noexcept'
+    |   `-ImplicitCastExpr 'const struct X' lvalue <NoOp>
+    |     `-DeclRefExpr 'struct X' lvalue Var 0x7f94cd0669c8 'x1' 'struct X'
+    |-ExprWithCleanups 'void'
+    | `-CallExpr 'void'
+    |   |-ImplicitCastExpr 'void (*)(struct X)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 'void (struct X)' lvalue Function 0x7f94cd066500 'func' 'void (struct X)'
+    |   `-CXXConstructExpr 'struct X' 'void (const struct X &) noexcept' elidable
+    |     `-MaterializeTemporaryExpr 'const struct X' lvalue
+    |       `-ImplicitCastExpr 'const struct X' <NoOp>
+    |         `-ImplicitCastExpr 'struct X' <ConstructorConversion>
+    |           `-CXXConstructExpr 'struct X' 'void (int)'
+    |             `-IntegerLiteral 'int' 10
+    |-DeclStmt
+    | `-VarDecl used x2 'struct X' listinit
+    |   `-CXXConstructExpr 'struct X' 'void (void) noexcept' zeroing
+    |-CallExpr 'void'
+    | |-ImplicitCastExpr 'void (*)(struct X)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 'void (struct X)' lvalue Function 0x7f94cd066500 'func' 'void (struct X)'
+    | `-CXXConstructExpr 'struct X' 'void (const struct X &) noexcept'
+    |   `-ImplicitCastExpr 'const struct X' lvalue <NoOp>
+    |     `-DeclRefExpr 'struct X' lvalue Var 0x7f94cd800d28 'x2' 'struct X'
+    |-CallExpr 'void'
+    | |-ImplicitCastExpr 'void (*)(struct X)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 'void (struct X)' lvalue Function 0x7f94cd066500 'func' 'void (struct X)'
+    | `-CXXConstructExpr 'struct X' 'void (void) noexcept' zeroing
+    `-ReturnStmt
+      `-IntegerLiteral 'int' 0
