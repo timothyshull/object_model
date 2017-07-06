@@ -5,8 +5,6 @@
 #include <pthread.h>
 #include <stdatomic.h>
 
-#define NO_EXCEPTIONS
-
 typedef pthread_t __libcpp_thread_t;
 
 typedef struct _stdthread {
